@@ -168,13 +168,38 @@
       </div>
     </div>
     <div class="charts">
-      <div class="chartcard"><h3 id="leagueTitle">按联赛</h3><div class="cwrap"><canvas id="leagueChart"></canvas></div></div>
       <div class="chartcard">
-        <div class="chead"><h3 id="clubTitle">按俱乐部 · 前15</h3>
-          <select id="clubLeagueSel" class="miniSel"></select></div>
+        <div class="chead"><h3 id="leagueTitle">按联赛</h3>
+          <select class="miniSel topn" id="topLeagueSel">
+            <option value="10" selected>Top 10</option>
+            <option value="15">Top 15</option>
+            <option value="20">Top 20</option>
+            <option value="all">全部 All</option>
+          </select></div>
+        <div class="cwrap"><canvas id="leagueChart"></canvas></div>
+      </div>
+      <div class="chartcard">
+        <div class="chead"><h3 id="clubTitle">按俱乐部</h3>
+          <span style="display:flex;gap:6px">
+          <select id="clubLeagueSel" class="miniSel"></select>
+          <select class="miniSel topn" id="topClubSel">
+            <option value="10" selected>Top 10</option>
+            <option value="15">Top 15</option>
+            <option value="20">Top 20</option>
+            <option value="all">全部 All</option>
+          </select></span></div>
         <div class="cwrap"><canvas id="clubChart"></canvas></div>
       </div>
-      <div class="chartcard"><h3 id="natTitle">按国家队</h3><div class="cwrap"><canvas id="natChart"></canvas></div></div>
+      <div class="chartcard">
+        <div class="chead"><h3 id="natTitle">按国家队</h3>
+          <select class="miniSel topn" id="topNatSel">
+            <option value="10" selected>Top 10</option>
+            <option value="15">Top 15</option>
+            <option value="20">Top 20</option>
+            <option value="all">全部 All</option>
+          </select></div>
+        <div class="cwrap"><canvas id="natChart"></canvas></div>
+      </div>
     </div>
   </div>
 </section>
@@ -492,7 +517,8 @@ function leagueClick(evt,els){
   },0);
 }
 function renderCharts(){
-  const L=topEntries(byLeague,metric,leagues.length);
+  const capV=(id,total)=>{const v=document.getElementById(id).value;return v==='all'?total:Math.min(+v,total);};
+  const L=topEntries(byLeague,metric,capV("topLeagueSel",leagues.length));
   currentL=L;
   // 俱乐部图：若选了联赛则只看该联赛内各队，否则看总榜前15
   const mword = metric==="goals" ? "进球数 Goals" : "进球人数 Scorers";
@@ -500,11 +526,12 @@ function renderCharts(){
   let C;
   if(fL){
     C=Object.entries(byClub).filter(([c])=>clubLeague[c]===fL)
-        .sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals).slice(0,25);
+        .sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals)
+        .slice(0,capV("topClubSel",clubs.length));
     document.getElementById("clubTitle").textContent="按俱乐部 By Club · "+fL+(LEN[fL]?" "+LEN[fL]:"")+" · "+mword;
   }else{
-    C=topEntries(byClub,metric,15);
-    document.getElementById("clubTitle").textContent="按俱乐部 By Club · 前15 Top 15 · "+mword;
+    C=topEntries(byClub,metric,capV("topClubSel",clubs.length));
+    document.getElementById("clubTitle").textContent="按俱乐部 By Club · "+mword;
   }
   document.getElementById("leagueTitle").textContent="按联赛 By League · "+mword;
   document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
@@ -518,7 +545,7 @@ function renderCharts(){
     const f=lfl(clubLeague[e[0]]);
     return [[(f?f+" ":"")+cz(e[0]), e[0]], e[1]];
   }),metric));
-  const N=topEntries(byNation,metric,15);
+  const N=topEntries(byNation,metric,capV("topNatSel",Object.keys(byNation).length));
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
   document.getElementById("natTitle").textContent="按国家队 By Nation · "+mword;
   natCh&&natCh.destroy();
@@ -584,6 +611,7 @@ function populateClubLeague(){
   if([...csel.options].some(o=>o.value===cur)) csel.value=cur;
 }
 document.getElementById("clubLeagueSel").addEventListener("change",renderCharts);
+["topLeagueSel","topClubSel","topNatSel"].forEach(id=>document.getElementById(id).addEventListener("change",renderCharts));
 function renderFooter(){
   const d = lastUpdated || new Date();
   const zh = d.toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"});
