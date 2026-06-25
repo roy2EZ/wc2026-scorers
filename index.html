@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯 · 进球榜</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#0A0E1A; --bg2:#0E1424; --card:#141B30; --card2:#1A2238;
+    --line:#2c3754; --ink:#F4F6FB; --mut:#B4BCD4; --mut2:#8b95b0;
+    --pink:#FF2D78; --amber:#FFB02E; --cyan:#19E0C8;
+    --grad:linear-gradient(90deg,#FF2D78 0%,#FF6B3D 55%,#FFB02E 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#0A0E1A}
+  body{background:var(--bg);color:var(--ink);
+    font-family:'Noto Sans SC',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+  header{position:relative;padding:46px 0 30px;border-bottom:1px solid var(--line);
+    background:#0A0E1A;
+    background:radial-gradient(1100px 360px at 82% -130px, rgba(255,45,120,.12), transparent 60%),
+               radial-gradient(880px 300px at 0% -90px, rgba(25,224,200,.08), transparent 55%),
+               #0A0E1A;}
+  .eyebrow{display:flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;
+    font-size:12px;letter-spacing:.12em;color:#DCE2F0;text-transform:uppercase;flex-wrap:wrap;font-weight:700}
+  .live{display:inline-flex;align-items:center;gap:6px;color:var(--pink);font-weight:700;font-family:'Noto Sans SC'}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,45,120,.6)}70%{box-shadow:0 0 0 9px rgba(255,45,120,0)}100%{box-shadow:0 0 0 0 rgba(255,45,120,0)}}
+  h1{font-family:'Anton',sans-serif;font-weight:400;line-height:.96;letter-spacing:.01em;
+    font-size:clamp(40px,8.5vw,82px);margin:14px 0 8px}
+  h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .zh-title{font-family:'Noto Sans SC';font-weight:900;font-size:clamp(22px,5vw,34px);
+    letter-spacing:.04em;margin-bottom:10px}
+  .sub{color:#CBD2E4;font-size:15px;max-width:600px}
+  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:6px}
+
+  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+  .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
+    border-radius:14px;padding:18px 16px;position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+  .stat .num{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1}
+  .stat .lab{font-size:12px;letter-spacing:.06em;color:var(--mut);margin-top:8px}
+
+  section{padding:38px 0;background:var(--bg)}
+  .shead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+  .shead h2{font-family:'Noto Sans SC';font-weight:900;font-size:clamp(22px,4vw,30px);letter-spacing:.02em}
+  .shead h2 b{color:var(--pink);font-weight:900}
+  .enh{font-family:'Noto Sans SC';font-size:.62em;font-weight:400;color:#9aa3bd;letter-spacing:.01em;margin-left:6px}
+  .sub .en{display:block;color:#9aa3bd;font-size:13.5px;margin-top:3px}
+  .note{font-size:13px;color:var(--mut)}
+
+  .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:10px}
+  .row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:11px 14px;transition:transform .15s,border-color .15s}
+  .row:hover{transform:translateY(-2px);border-color:#3a456b}
+  .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px}
+  .flag{font-size:21px;line-height:1}
+  .who{flex:1;min-width:0}
+  .who .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .who .cl{font-size:12px;color:#C0C8DD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .balls{font-family:'Space Mono',monospace;font-weight:700;font-size:18px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .toggle{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .toggle button{font-family:'Noto Sans SC';font-size:13px;font-weight:700;color:var(--mut);background:none;border:none;
+    padding:7px 16px;border-radius:999px;cursor:pointer;transition:.15s}
+  .toggle button.on{background:var(--grad);color:#180a12}
+  .charts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .chartcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px 10px}
+  .chartcard h3{font-size:14px;color:var(--mut);margin-bottom:6px;font-weight:700}
+  .chead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+  .chead h3{margin:0}
+  .miniSel{background:var(--card2);border:1px solid var(--line);color:var(--ink);
+    font-family:'Noto Sans SC';font-size:12px;border-radius:8px;padding:5px 9px;outline:none;cursor:pointer;max-width:58%}
+  .chartcard .cwrap{position:relative;width:100%}
+
+  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+  .search{flex:1;min-width:180px;display:flex;align-items:center;gap:8px;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:0 12px}
+  .search input{flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:'Noto Sans SC';font-size:14px;padding:11px 0}
+  .search input::placeholder{color:var(--mut)}
+  .search svg{flex:0 0 16px;stroke:var(--mut)}
+  select{background:var(--card);border:1px solid var(--line);color:var(--ink);font-family:'Noto Sans SC';
+    font-size:13px;border-radius:10px;padding:10px 12px;outline:none;cursor:pointer;max-width:46vw}
+  .chips{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px}
+  .chips button{font-family:'Space Mono',monospace;font-size:13px;color:var(--mut);background:none;border:none;
+    padding:8px 13px;border-radius:8px;cursor:pointer;transition:.15s}
+  .chips button.on{background:var(--card2);color:var(--ink)}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:14px}
+  .tbl thead th{position:sticky;top:0;background:var(--bg2);text-align:left;font-size:12px;
+    color:var(--mut);font-weight:700;padding:12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
+  .tbl thead th .ar{color:var(--pink);font-size:9px}
+  .tbl tbody td{padding:11px 12px;border-bottom:1px solid rgba(39,48,75,.55);vertical-align:middle}
+  .tbl tbody tr:hover{background:rgba(26,34,56,.5)}
+  .tbl .gv{font-family:'Space Mono',monospace;font-weight:700;text-align:center;width:48px}
+  .g3{color:var(--amber)} .g2{color:var(--cyan)}
+  .pname{font-weight:700}
+  .cmut{color:#CBD2E4}
+  .psub{font-size:11px;color:#9aa3bd;font-weight:400;margin-top:1px;letter-spacing:.01em}
+  .ensm{font-size:11px;color:#9aa3bd;font-weight:400}
+  .tablecard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .scroller{max-height:580px;overflow:auto}
+  .count{font-size:12px;color:var(--mut);font-family:'Space Mono',monospace;padding:12px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 50px;color:#C0C8DD;font-size:13px;line-height:1.85;background:var(--bg)}
+  footer b{color:var(--ink)}
+
+  @media(max-width:760px){
+    .scoreboard{grid-template-columns:1fr 1fr}
+    .charts{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">
+      <span>2026国际足联世界杯 FIFA World Cup · 🇺🇸🇲🇽🇨🇦</span>
+      <span class="live"><span class="dot"></span>实时追踪 Live</span>
+    </div>
+    <h1>GOAL<span class="g">SCORERS</span></h1>
+    <div class="zh-title">2026世界杯 · 进球榜　World Cup 2026 · Goalscorers</div>
+    <p class="sub">本届世界杯每一位进球球员，以及他所属的俱乐部与联赛。下方可按联赛、按俱乐部看进球分布，也可在表格里搜索筛选。<span class="en">Every goalscorer of the 2026 World Cup — with their club and league. See goals by league and by club below, or search and filter the table.</span></p>
+    <p class="updated" id="updated"></p>
+
+    <div class="scoreboard">
+      <div class="stat"><div class="num" id="s-goals">0</div><div class="lab">总进球 Goals</div></div>
+      <div class="stat"><div class="num" id="s-players">0</div><div class="lab">进球球员 Scorers</div></div>
+      <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab">俱乐部 Clubs</div></div>
+      <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab">联赛 Leagues</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2><span class="note">2球及以上 · 2+ goals</span></div>
+    <div class="board" id="board"></div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="shead">
+      <h2>进球<b>来自哪里</b><span class="enh">Goal Origins</span></h2>
+      <div class="toggle" id="metric">
+        <button class="on" data-m="goals">进球数 Goals</button>
+        <button data-m="scorers">进球人数 Scorers</button>
+      </div>
+    </div>
+    <div class="charts">
+      <div class="chartcard"><h3 id="leagueTitle">按联赛</h3><div class="cwrap"><canvas id="leagueChart"></canvas></div></div>
+      <div class="chartcard">
+        <div class="chead"><h3 id="clubTitle">按俱乐部 · 前15</h3>
+          <select id="clubLeagueSel" class="miniSel"></select></div>
+        <div class="cwrap"><canvas id="clubChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="shead"><h2>全部<b>进球者</b><span class="enh">All Scorers</span></h2></div>
+    <div class="filters">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input id="q" type="search" placeholder="搜索 Search：球员 / 俱乐部 / 联赛 / 国家…" autocomplete="off">
+      </label>
+      <select id="leagueSel"></select>
+      <div class="chips" id="minchips">
+        <button class="on" data-min="1">全部 All</button>
+        <button data-min="2">2+</button>
+        <button data-min="3">3+</button>
+      </div>
+    </div>
+    <div class="tablecard">
+      <div class="scroller">
+        <table class="tbl">
+          <thead><tr>
+            <th data-k="player">球员 Player</th>
+            <th data-k="teamZh">国家队 Nation</th>
+            <th data-k="goals" style="text-align:center">球 G <span class="ar">▼</span></th>
+            <th data-k="club">俱乐部 Club</th>
+            <th data-k="league">联赛 League</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="count" id="rowcount"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
+  </div>
+</footer>
+
+<script>
+// [球员, 国家队(英), 进球, 俱乐部, 联赛(中), 国家队(中)]
+const RAW = [
+ ["Lionel Messi","Argentina",5,"Inter Miami","美职联","阿根廷"],
+ ["Kylian Mbappe","France",4,"Real Madrid","西甲","法国"],
+ ["Erling Haaland","Norway",4,"Manchester City","英超","挪威"],
+ ["Jonathan David","Canada",3,"Juventus","意甲","加拿大"],
+ ["Denis Undav","Germany",3,"VfB Stuttgart","德甲","德国"],
+ ["Johan Manzambi","Switzerland",3,"SC Freiburg","德甲","瑞士"],
+ ["Folarin Balogun","USA",2,"AS Monaco","法甲","美国"],
+ ["Kai Havertz","Germany",2,"Arsenal","英超","德国"],
+ ["Yasin Ayari","Sweden",2,"Brighton & Hove Albion","英超","瑞典"],
+ ["Elijah Just","New Zealand",2,"Motherwell","苏超","新西兰"],
+ ["Harry Kane","England",2,"Bayern Munich","德甲","英格兰"],
+ ["Cyle Larin","Canada",2,"Southampton","英冠","加拿大"],
+ ["Ismael Saibari","Morocco",3,"PSV Eindhoven","荷甲","摩洛哥"],
+ ["Matheus Cunha","Brazil",3,"Manchester United","英超","巴西"],
+ ["Vinicius Junior","Brazil",4,"Real Madrid","西甲","巴西"],
+ ["Crysencio Summerville","Netherlands",2,"West Ham United","英超","荷兰"],
+ ["Brian Brobbey","Netherlands",2,"Sunderland","英超","荷兰"],
+ ["Cody Gakpo","Netherlands",2,"Liverpool","英超","荷兰"],
+ ["Daichi Kamada","Japan",2,"Crystal Palace","英超","日本"],
+ ["Ayase Ueda","Japan",2,"Feyenoord","荷甲","日本"],
+ ["Mikel Oyarzabal","Spain",2,"Real Sociedad","西甲","西班牙"],
+ ["Maximiliano Araujo","Uruguay",2,"Sporting CP","葡超","乌拉圭"],
+ ["Ismaila Sarr","Senegal",2,"Crystal Palace","英超","塞内加尔"],
+ ["Cristiano Ronaldo","Portugal",2,"Al-Nassr","沙特职业联赛","葡萄牙"],
+ ["Ruben Vargas","Switzerland",2,"Sevilla","西甲","瑞士"],
+ ["Ermin Mahmic","Bosnia & Herzegovina",2,"Slovan Liberec","捷克甲级","波黑"],
+ ["Julian Quinones","Mexico",2,"Al-Qadsiah","沙特职业联赛","墨西哥"],
+ ["Raul Jimenez","Mexico",1,"Fulham","英超","墨西哥"],
+ ["Ladislav Krejci","Czechia",1,"Wolverhampton Wanderers","英超","捷克"],
+ ["Hwang In-beom","South Korea",1,"Feyenoord","荷甲","韩国"],
+ ["Oh Hyeon-gyu","South Korea",1,"Besiktas","土超","韩国"],
+ ["Jovo Lukic","Bosnia & Herzegovina",1,"Universitatea Cluj","罗马尼亚甲级","波黑"],
+ ["Mauricio","Paraguay",1,"Palmeiras","巴西甲级","巴拉圭"],
+ ["Gio Reyna","USA",1,"Borussia Monchengladbach","德甲","美国"],
+ ["Breel Embolo","Switzerland",1,"Stade Rennais","法甲","瑞士"],
+ ["Boualem Khoukhi","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
+ ["John McGinn","Scotland",1,"Aston Villa","英超","苏格兰"],
+ ["Nestory Irankunda","Australia",1,"Watford","英冠","澳大利亚"],
+ ["Connor Metcalfe","Australia",1,"FC St. Pauli","德甲","澳大利亚"],
+ ["Felix Nmecha","Germany",1,"Borussia Dortmund","德甲","德国"],
+ ["Nico Schlotterbeck","Germany",1,"Borussia Dortmund","德甲","德国"],
+ ["Livano Comenencia","Curacao",1,"FC Zurich","瑞士超","库拉索"],
+ ["Jamal Musiala","Germany",1,"Bayern Munich","德甲","德国"],
+ ["Nathaniel Brown","Germany",1,"Eintracht Frankfurt","德甲","德国"],
+ ["Virgil van Dijk","Netherlands",1,"Liverpool","英超","荷兰"],
+ ["Keito Nakamura","Japan",1,"Stade Reims","法乙","日本"],
+ ["Amad Diallo","Ivory Coast",1,"Manchester United","英超","科特迪瓦"],
+ ["Alexander Isak","Sweden",1,"Liverpool","英超","瑞典"],
+ ["Omar Rekik","Tunisia",1,"NK Maribor","斯洛文尼亚甲级","突尼斯"],
+ ["Viktor Gyokeres","Sweden",1,"Arsenal","英超","瑞典"],
+ ["Mattias Svanberg","Sweden",1,"VfL Wolfsburg","德甲","瑞典"],
+ ["Abdulelah Al-Amri","Saudi Arabia",1,"Al-Nassr","沙特职业联赛","沙特阿拉伯"],
+ ["Aymen Hussein","Iraq",1,"Al-Karma","伊拉克星级联赛","伊拉克"],
+ ["Bradley Barcola","France",1,"Paris Saint-Germain","法甲","法国"],
+ ["Emam Ashour","Egypt",1,"Al Ahly","埃及超","埃及"],
+ ["Ibrahim Mbaye","Senegal",1,"Paris Saint-Germain","法甲","塞内加尔"],
+ ["Leo Ostigard","Norway",1,"Genoa","意甲","挪威"],
+ ["Mohamed Mohebi","Iran",1,"FC Rostov","俄超","伊朗"],
+ ["Ramin Rezaeian","Iran",1,"Foolad","伊朗波斯湾联赛","伊朗"],
+ ["Romano Schmid","Austria",1,"Werder Bremen","德甲","奥地利"],
+ ["Marko Arnautovic","Austria",1,"Red Star Belgrade","塞尔维亚超","奥地利"],
+ ["Ali Olwan","Jordan",1,"Al-Sailiya","卡塔尔星级联赛","约旦"],
+ ["Joao Neves","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
+ ["Yoane Wissa","DR Congo",1,"Newcastle United","英超","刚果(金)"],
+ ["Martin Baturina","Croatia",1,"Como","意甲","克罗地亚"],
+ ["Petar Musa","Croatia",1,"FC Dallas","美职联","克罗地亚"],
+ ["Jude Bellingham","England",1,"Real Madrid","西甲","英格兰"],
+ ["Marcus Rashford","England",1,"Barcelona","西甲","英格兰"],
+ ["Caleb Yirenkyi","Ghana",1,"FC Nordsjaelland","丹麦超","加纳"],
+ ["Daniel Munoz","Colombia",1,"Crystal Palace","英超","哥伦比亚"],
+ ["Abbosbek Fayzullaev","Uzbekistan",1,"Istanbul Basaksehir","土超","乌兹别克斯坦"],
+ ["Luis Diaz","Colombia",1,"Bayern Munich","德甲","哥伦比亚"],
+ ["Jaminton Campaz","Colombia",1,"Rosario Central","阿甲","哥伦比亚"],
+ ["Michal Sadilek","Czechia",1,"Slavia Prague","捷克甲级","捷克"],
+ ["Granit Xhaka","Switzerland",1,"Sunderland","英超","瑞士"],
+ ["Nathan Saliba","Canada",1,"Anderlecht","比利时甲级","加拿大"],
+ ["Luis Romo","Mexico",1,"Guadalajara","墨超","墨西哥"],
+ ["Alex Freeman","USA",1,"Villarreal","西甲","美国"],
+ ["Matias Galarza","Paraguay",1,"Atlanta United","美职联","巴拉圭"],
+ ["Anthony Elanga","Sweden",1,"Newcastle United","英超","瑞典"],
+ ["Agustin Canobbio","Uruguay",1,"Fluminense","巴西甲级","乌拉圭"],
+ ["Kevin Pina","Cape Verde",1,"FC Krasnodar","俄超","佛得角"],
+ ["Helio Varela","Cape Verde",1,"Maccabi Tel Aviv","以色列超","佛得角"],
+ ["Junya Ito","Japan",1,"KRC Genk","比利时甲级","日本"],
+ ["Finn Surman","New Zealand",1,"Portland Timbers","美职联","新西兰"],
+ ["Lamine Yamal","Spain",1,"Barcelona","西甲","西班牙"],
+ ["Franck Kessie","Ivory Coast",1,"Al-Ahli","沙特职业联赛","科特迪瓦"],
+ ["Mohamed Salah","Egypt",1,"Liverpool","英超","埃及"],
+ ["Trezeguet","Egypt",1,"Al Ahly","埃及超","埃及"],
+ ["Mostafa Ziko","Egypt",1,"Pyramids","埃及超","埃及"],
+ ["Ousmane Dembele","France",1,"Paris Saint-Germain","法甲","法国"],
+ ["Marcus Holmgren Pedersen","Norway",1,"Torino","意甲","挪威"],
+ ["Amine Gouiri","Algeria",1,"Marseille","法甲","阿尔及利亚"],
+ ["Nadhir Benbouali","Algeria",1,"Gyori ETO","匈牙利甲级","阿尔及利亚"],
+ ["Nizar Al-Rashdan","Jordan",1,"Qatar SC","卡塔尔星级联赛","约旦"],
+ ["Nuno Mendes","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
+ ["Rafael Leao","Portugal",1,"AC Milan","意甲","葡萄牙"],
+ ["Ante Budimir","Croatia",1,"Osasuna","西甲","克罗地亚"],
+ ["Kerim Alajbegovic","Bosnia & Herzegovina",1,"RB Salzburg","奥地利甲级","波黑"],
+ ["Hassan Al Haidos","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
+ ["Promise David","Canada",1,"Union Saint-Gilloise","比利时甲级","加拿大"],
+ ["Achraf Hakimi","Morocco",1,"Paris Saint-Germain","法甲","摩洛哥"],
+ ["Soufiane Rahimi","Morocco",1,"Al Ain","阿联酋联赛","摩洛哥"],
+ ["Gessime Yassine","Morocco",1,"Strasbourg","法甲","摩洛哥"],
+ ["Mateo Chavez","Mexico",1,"AZ Alkmaar","荷甲","墨西哥"],
+ ["Alvaro Fidalgo","Mexico",1,"Real Betis","西甲","墨西哥"],
+ ["Thapelo Maseko","South Africa",1,"AEL Limassol","塞浦路斯甲级","南非"],
+ ["Wilson Isidor","Haiti",1,"Sunderland","英超","海地"]
+];
+const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
+let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
+const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
+
+const FLAG={ "Argentina":"🇦🇷","Canada":"🇨🇦","USA":"🇺🇸","Germany":"🇩🇪","Sweden":"🇸🇪","New Zealand":"🇳🇿",
+ "Norway":"🇳🇴","France":"🇫🇷","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Switzerland":"🇨🇭","Morocco":"🇲🇦","Brazil":"🇧🇷","Netherlands":"🇳🇱",
+ "Spain":"🇪🇸","Uruguay":"🇺🇾","Japan":"🇯🇵","Mexico":"🇲🇽","Czechia":"🇨🇿","South Korea":"🇰🇷",
+ "Bosnia & Herzegovina":"🇧🇦","Paraguay":"🇵🇾","Qatar":"🇶🇦","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","Australia":"🇦🇺","Curacao":"🇨🇼",
+ "Ivory Coast":"🇨🇮","Tunisia":"🇹🇳","Saudi Arabia":"🇸🇦","Iraq":"🇮🇶","Egypt":"🇪🇬","Senegal":"🇸🇳","Iran":"🇮🇷",
+ "Austria":"🇦🇹","Jordan":"🇯🇴","Portugal":"🇵🇹","DR Congo":"🇨🇩","Croatia":"🇭🇷","Ghana":"🇬🇭","Colombia":"🇨🇴",
+ "Uzbekistan":"🇺🇿","Cape Verde":"🇨🇻","Algeria":"🇩🇿","South Africa":"🇿🇦","Haiti":"🇭🇹"};
+const fl=t=>FLAG[t]||"🏳️";
+const PZH={"Lionel Messi": "梅西", "Kylian Mbappe": "姆巴佩", "Erling Haaland": "哈兰德", "Jonathan David": "戴维", "Denis Undav": "翁达夫", "Johan Manzambi": "曼赞比", "Folarin Balogun": "巴洛贡", "Kai Havertz": "哈弗茨", "Yasin Ayari": "阿亚里", "Elijah Just": "贾斯特", "Harry Kane": "凯恩", "Cyle Larin": "拉林", "Ismael Saibari": "赛巴里", "Matheus Cunha": "库尼亚", "Vinicius Junior": "维尼修斯", "Crysencio Summerville": "萨默维尔", "Brian Brobbey": "布罗比", "Cody Gakpo": "加克波", "Daichi Kamada": "镰田大地", "Ayase Ueda": "上田绫世", "Mikel Oyarzabal": "奥亚萨瓦尔", "Maximiliano Araujo": "阿劳霍", "Ismaila Sarr": "萨尔", "Cristiano Ronaldo": "C罗", "Ruben Vargas": "巴尔加斯", "Ermin Mahmic": "马赫米奇", "Julian Quinones": "基尼奥内斯", "Raul Jimenez": "希门尼斯", "Ladislav Krejci": "克雷伊奇", "Hwang In-beom": "黄仁范", "Oh Hyeon-gyu": "吴贤奎", "Jovo Lukic": "卢基奇", "Mauricio": "毛里西奥", "Gio Reyna": "雷纳", "Breel Embolo": "恩博洛", "Boualem Khoukhi": "库基", "John McGinn": "麦金", "Nestory Irankunda": "伊兰昆达", "Connor Metcalfe": "梅特卡夫", "Felix Nmecha": "恩梅查", "Nico Schlotterbeck": "施洛特贝克", "Livano Comenencia": "科梅嫩西亚", "Jamal Musiala": "穆西亚拉", "Nathaniel Brown": "布朗", "Virgil van Dijk": "范戴克", "Keito Nakamura": "中村敬斗", "Amad Diallo": "阿马德", "Alexander Isak": "伊萨克", "Omar Rekik": "雷基克", "Viktor Gyokeres": "约凯雷斯", "Mattias Svanberg": "斯万贝里", "Abdulelah Al-Amri": "阿姆里", "Aymen Hussein": "侯赛因", "Bradley Barcola": "巴尔科拉", "Emam Ashour": "阿舒尔", "Ibrahim Mbaye": "姆巴耶", "Leo Ostigard": "厄斯蒂高", "Mohamed Mohebi": "莫赫比", "Ramin Rezaeian": "雷扎埃安", "Romano Schmid": "施密德", "Marko Arnautovic": "阿瑙托维奇", "Ali Olwan": "奥尔万", "Joao Neves": "若昂·内维斯", "Yoane Wissa": "维萨", "Martin Baturina": "巴图里纳", "Petar Musa": "穆萨", "Jude Bellingham": "贝林厄姆", "Marcus Rashford": "拉什福德", "Caleb Yirenkyi": "伊伦基", "Daniel Munoz": "穆尼奥斯", "Abbosbek Fayzullaev": "法伊祖拉耶夫", "Luis Diaz": "路易斯·迪亚斯", "Jaminton Campaz": "坎帕斯", "Michal Sadilek": "萨迪莱克", "Granit Xhaka": "扎卡", "Nathan Saliba": "萨利巴", "Luis Romo": "罗莫", "Alex Freeman": "弗里曼", "Matias Galarza": "加拉萨", "Anthony Elanga": "埃兰加", "Agustin Canobbio": "卡诺比奥", "Kevin Pina": "皮纳", "Helio Varela": "巴雷拉", "Junya Ito": "伊东纯也", "Finn Surman": "瑟曼", "Lamine Yamal": "亚马尔", "Franck Kessie": "凯西埃", "Mohamed Salah": "萨拉赫", "Trezeguet": "特雷泽盖", "Mostafa Ziko": "齐科", "Ousmane Dembele": "登贝莱", "Marcus Holmgren Pedersen": "佩德森", "Amine Gouiri": "古伊里", "Nadhir Benbouali": "本布阿利", "Nizar Al-Rashdan": "拉什丹", "Nuno Mendes": "努诺·门德斯", "Rafael Leao": "莱奥", "Ante Budimir": "布迪米尔", "Kerim Alajbegovic": "阿拉伊贝戈维奇", "Hassan Al Haidos": "海多斯", "Promise David": "普罗米斯·戴维", "Achraf Hakimi": "哈基米", "Soufiane Rahimi": "拉希米", "Gessime Yassine": "盖西姆·亚辛", "Mateo Chavez": "查韦斯", "Alvaro Fidalgo": "菲达尔戈", "Thapelo Maseko": "马塞科", "Wilson Isidor": "伊西多尔"};
+const CZH={"Inter Miami": "迈阿密国际", "Real Madrid": "皇马", "Manchester City": "曼城", "Juventus": "尤文图斯", "VfB Stuttgart": "斯图加特", "SC Freiburg": "弗赖堡", "AS Monaco": "摩纳哥", "Arsenal": "阿森纳", "Brighton & Hove Albion": "布莱顿", "Motherwell": "马瑟韦尔", "Bayern Munich": "拜仁慕尼黑", "Southampton": "南安普顿", "PSV Eindhoven": "埃因霍温", "Manchester United": "曼联", "West Ham United": "西汉姆", "Sunderland": "桑德兰", "Liverpool": "利物浦", "Crystal Palace": "水晶宫", "Feyenoord": "费耶诺德", "Real Sociedad": "皇家社会", "Sporting CP": "葡萄牙体育", "Al-Nassr": "利雅得胜利", "Sevilla": "塞维利亚", "Slovan Liberec": "利贝雷茨", "Al-Qadsiah": "卡迪西亚", "Fulham": "富勒姆", "Wolverhampton Wanderers": "狼队", "Besiktas": "贝西克塔斯", "Universitatea Cluj": "克卢日大学", "Palmeiras": "帕尔梅拉斯", "Borussia Monchengladbach": "门兴", "Stade Rennais": "雷恩", "Al-Sadd": "萨德", "Aston Villa": "阿斯顿维拉", "Watford": "沃特福德", "FC St. Pauli": "圣保利", "Borussia Dortmund": "多特蒙德", "FC Zurich": "苏黎世", "Eintracht Frankfurt": "法兰克福", "Stade Reims": "兰斯", "NK Maribor": "马里博尔", "VfL Wolfsburg": "沃尔夫斯堡", "Al-Karma": "卡尔马", "Paris Saint-Germain": "巴黎圣日耳曼", "Al Ahly": "阿赫利(埃)", "Genoa": "热那亚", "FC Rostov": "罗斯托夫", "Foolad": "福拉德", "Werder Bremen": "云达不来梅", "Red Star Belgrade": "贝尔格莱德红星", "Al-Sailiya": "赛利亚", "Newcastle United": "纽卡斯尔", "Como": "科莫", "FC Dallas": "达拉斯", "Barcelona": "巴萨", "FC Nordsjaelland": "北西兰", "Istanbul Basaksehir": "巴萨克谢希尔", "Rosario Central": "罗萨里奥中央", "Slavia Prague": "布拉格斯拉维亚", "Anderlecht": "安德莱赫特", "Guadalajara": "瓜达拉哈拉", "Villarreal": "比利亚雷亚尔", "Atlanta United": "亚特兰大联", "Fluminense": "弗鲁米嫩塞", "FC Krasnodar": "克拉斯诺达尔", "Maccabi Tel Aviv": "特拉维夫马卡比", "KRC Genk": "亨克", "Portland Timbers": "波特兰伐木者", "Al-Ahli": "吉达阿赫利", "Pyramids": "金字塔", "Torino": "都灵", "Marseille": "马赛", "Gyori ETO": "杰尔ETO", "Qatar SC": "卡塔尔SC", "AC Milan": "AC米兰", "Osasuna": "奥萨苏纳", "RB Salzburg": "萨尔茨堡", "Union Saint-Gilloise": "圣吉卢瓦联", "Al Ain": "艾因", "Strasbourg": "斯特拉斯堡", "AZ Alkmaar": "阿尔克马尔", "Real Betis": "贝蒂斯", "AEL Limassol": "利马索尔AEL"};
+const pz=n=>PZH[n]||n;
+const cz=n=>CZH[n]||n;
+const LEN={"美职联": "MLS", "意甲": "Serie A", "西甲": "La Liga", "英超": "EPL", "德甲": "Bundesliga", "法甲": "Ligue 1", "法乙": "Ligue 2", "英冠": "Championship", "荷甲": "Eredivisie", "葡超": "Primeira Liga", "苏超": "SPFL", "沙特职业联赛": "SPL", "卡塔尔星级联赛": "QSL", "土超": "Süper Lig", "埃及超": "EPL (Egypt)", "俄超": "RPL", "伊朗波斯湾联赛": "PGPL", "塞尔维亚超": "SuperLiga", "阿甲": "Primera (ARG)", "捷克甲级": "Czech 1.", "丹麦超": "Superliga", "罗马尼亚甲级": "Liga I", "斯洛文尼亚甲级": "PrvaLiga", "巴西甲级": "Série A (BRA)", "瑞士超": "Swiss SL", "比利时甲级": "Pro League", "以色列超": "Israeli PL", "伊拉克星级联赛": "Iraqi SL", "奥地利甲级": "Austrian BL", "匈牙利甲级": "NB I", "墨超": "Liga MX", "塞浦路斯甲级": "Cypriot 1.", "阿联酋联赛": "UAE PL"};
+const lab=n=>LEN[n]?[n,LEN[n]]:n;
+
+
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let totalGoals=0, clubs=[], leagues=[], byLeague={}, byClub={}, clubLeague={}, currentL=[];
+
+function countUp(el,to){
+  if(reduce){el.textContent=to;return;}
+  const dur=900,t0=performance.now();
+  (function tick(now){const p=Math.min(1,(now-t0)/dur);
+    el.textContent=Math.round((1-Math.pow(1-p,3))*to);
+    if(p<1)requestAnimationFrame(tick);})(t0);
+}
+function agg(key){
+  const m={};
+  DATA.forEach(d=>{(m[d[key]]??=({goals:0,scorers:0}));
+    m[d[key]].goals+=d.goals;m[d[key]].scorers++;});
+  return m;
+}
+function recompute(){
+  totalGoals=DATA.reduce((s,d)=>s+d.goals,0);
+  clubs=[...new Set(DATA.map(d=>d.club))];
+  leagues=[...new Set(DATA.map(d=>d.league))];
+  byLeague=agg("league"); byClub=agg("club");
+  clubLeague={}; DATA.forEach(d=>{clubLeague[d.club]=d.league;});
+}
+function leaguesByGoals(){
+  return Object.entries(byLeague)
+    .sort((a,b)=>b[1].goals-a[1].goals||b[1].scorers-a[1].scorers||a[0].localeCompare(b[0],"zh"))
+    .map(e=>e[0]);
+}
+function renderStats(){
+  countUp(document.getElementById("s-goals"),totalGoals);
+  countUp(document.getElementById("s-players"),DATA.length);
+  countUp(document.getElementById("s-clubs"),clubs.length);
+  countUp(document.getElementById("s-leagues"),leagues.length);
+}
+let lastUpdated=null;
+function setUpdated(ts,live){
+  lastUpdated = ts?new Date(ts):new Date();
+  const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
+  document.getElementById("updated").textContent=
+    "更新于 Updated "+lastUpdated.toLocaleString("zh-CN",{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"})+tag;
+  if(typeof renderFooter==="function") renderFooter();
+}
+function renderBoard(){
+  document.getElementById("board").innerHTML=
+    DATA.filter(d=>d.goals>=2).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player))
+    .map((d,i)=>`<div class="row">
+       <span class="rank">${String(i+1).padStart(2,"0")}</span>
+       <span class="flag">${fl(d.teamEn)}</span>
+       <span class="who"><div class="nm">${pz(d.player)} <span class="ensm">${d.player}</span></div><div class="cl">${cz(d.club)} <span class="ensm">${d.club}</span></div></span>
+       <span class="balls">${d.goals}</span></div>`).join("");
+}
+
+const FONT="'Noto Sans SC', sans-serif";
+Chart.defaults.font.family=FONT; Chart.defaults.color="#C4CBDE";
+function gradFor(ctx){
+  const c=ctx.chart.ctx;
+  const g=c.createLinearGradient(0,0,ctx.chart.width||500,0);
+  g.addColorStop(0,"#FF2D78");g.addColorStop(1,"#FFB02E");return g;
+}
+function topEntries(obj,metric,n){
+  return Object.entries(obj).sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals).slice(0,n);
+}
+const valueLabel={
+  id:"valueLabel",
+  afterDatasetsDraw(chart){
+    const ctx=chart.ctx, meta=chart.getDatasetMeta(0);
+    ctx.save();
+    ctx.font="700 12px 'Space Mono', monospace";
+    ctx.fillStyle="#F4F6FB";
+    ctx.textBaseline="middle";
+    ctx.textAlign="left";
+    meta.data.forEach((bar,i)=>{
+      const v=chart.data.datasets[0].data[i];
+      if(v!=null) ctx.fillText(v, bar.x+7, bar.y+1);
+    });
+    ctx.restore();
+  }
+};
+function barCfg(entries,metric,onClick){
+  return {type:"bar",
+    plugins:[valueLabel],
+    data:{labels:entries.map(e=>e[0]),
+      datasets:[{data:entries.map(e=>e[1][metric]),
+        backgroundColor:c=>gradFor(c),borderRadius:5,maxBarThickness:22,categoryPercentage:.82}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      onClick:onClick||null,
+      layout:{padding:{right:28}},
+      animation:reduce?false:{duration:800,easing:"easeOutQuart"},
+      plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:10,
+          titleColor:"#EAEEF7",bodyColor:"#8A93AB",
+          callbacks:{label:c=>` ${c.parsed.x} ${metric==="goals"?"球":"人"}`}}},
+      scales:{
+        x:{beginAtZero:true,grace:"6%",ticks:{precision:0,font:{family:"'Space Mono'"}},grid:{color:"rgba(39,48,75,.5)"}},
+        y:{ticks:{font:{size:11,family:FONT},autoSkip:false},grid:{display:false}}}}};
+}
+let metric="goals", leagueCh, clubCh;
+function heightFor(n){return Math.max(220,n*30+40);}
+function leagueClick(evt,els){
+  if(!els||!els.length) return;
+  const item = currentL[els[0].index];
+  const lg = item && item[0];
+  if(!lg) return;
+  // 延后到本次点击事件处理完毕后再重建图表，避免在图表自身的点击回调里销毁它而报错
+  setTimeout(()=>{
+    document.getElementById("clubLeagueSel").value=lg;
+    renderCharts();
+    document.querySelector(".charts").scrollIntoView({behavior:"smooth",block:"nearest"});
+  },0);
+}
+function renderCharts(){
+  const L=topEntries(byLeague,metric,leagues.length);
+  currentL=L;
+  // 俱乐部图：若选了联赛则只看该联赛内各队，否则看总榜前15
+  const mword = metric==="goals" ? "进球数 Goals" : "进球人数 Scorers";
+  const fL=document.getElementById("clubLeagueSel").value;
+  let C;
+  if(fL){
+    C=Object.entries(byClub).filter(([c])=>clubLeague[c]===fL)
+        .sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals).slice(0,25);
+    document.getElementById("clubTitle").textContent="按俱乐部 By Club · "+fL+(LEN[fL]?" "+LEN[fL]:"")+" · "+mword;
+  }else{
+    C=topEntries(byClub,metric,15);
+    document.getElementById("clubTitle").textContent="按俱乐部 By Club · 前15 Top 15 · "+mword;
+  }
+  document.getElementById("leagueTitle").textContent="按联赛 By League · "+mword;
+  document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
+  document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
+  leagueCh&&leagueCh.destroy(); clubCh&&clubCh.destroy();
+  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map(e=>[lab(e[0]),e[1]]),metric,leagueClick));
+  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map(e=>[[cz(e[0]),e[0]],e[1]]),metric));
+}
+document.getElementById("metric").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  metric=b.dataset.m;
+  [...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));
+  renderCharts();
+});
+
+const tbody=document.getElementById("tbody"), rowcount=document.getElementById("rowcount");
+const sel=document.getElementById("leagueSel");
+function populateLeagueFilter(){
+  const cur=sel.value;
+  sel.innerHTML='<option value="">全部联赛 All leagues</option>'+
+    leaguesByGoals().map(l=>`<option>${l}</option>`).join("");
+  if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
+}
+let q="",leagueF="",minG=1,sortK="goals",sortDir=-1;
+
+function render(){
+  let rows=DATA.filter(d=>d.goals>=minG)
+    .filter(d=>!leagueF||d.league===leagueF)
+    .filter(d=>{if(!q)return true;const s=q.toLowerCase();
+      return [d.player,d.club,d.league,d.teamZh,d.teamEn,pz(d.player),cz(d.club)].some(v=>v.toLowerCase().includes(s));});
+  rows.sort((a,b)=>{
+    let r; if(sortK==="goals")r=a.goals-b.goals;
+    else r=String(a[sortK]).localeCompare(String(b[sortK]),"zh");
+    return r*sortDir || b.goals-a.goals || a.player.localeCompare(b.player);
+  });
+  tbody.innerHTML=rows.map(d=>`<tr>
+    <td><div class="pname">${pz(d.player)}</div><div class="psub">${d.player}</div></td>
+    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span></td>
+    <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}</td>
+    <td>${cz(d.club)}<div class="psub">${d.club}</div></td>
+    <td class="cmut">${d.league}</td></tr>`).join("");
+  rowcount.textContent=rows.length+" / "+DATA.length+" 名进球者 scorers";
+}
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
+sel.addEventListener("change",e=>{leagueF=e.target.value;render();});
+document.getElementById("minchips").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  minG=+b.dataset.min;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));render();
+});
+document.querySelectorAll(".tbl thead th").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(sortK===k)sortDir*=-1; else {sortK=k;sortDir=(k==="goals")?-1:1;}
+    document.querySelectorAll(".tbl thead th .ar").forEach(a=>a.remove());
+    const ar=document.createElement("span");ar.className="ar";ar.textContent=sortDir<0?" ▼":" ▲";
+    th.appendChild(ar);render();
+  });
+});
+
+function populateClubLeague(){
+  const csel=document.getElementById("clubLeagueSel"); const cur=csel.value;
+  csel.innerHTML='<option value="">全部联赛 All leagues</option>'+leaguesByGoals().map(l=>`<option>${l}</option>`).join("");
+  if([...csel.options].some(o=>o.value===cur)) csel.value=cur;
+}
+document.getElementById("clubLeagueSel").addEventListener("change",renderCharts);
+function renderFooter(){
+  const d = lastUpdated || new Date();
+  const zh = d.toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"});
+  const en = d.toLocaleDateString("en-GB",{year:"numeric",month:"short",day:"numeric"});
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set("footDate",zh); set("footDateEn",en);
+  set("footPlayers",DATA.length); set("footPlayersEn",DATA.length);
+  set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
+}
+function renderAll(){ recompute(); renderStats(); renderBoard(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
+
+// 读取自动生成的 data.json；失败则保留内置快照
+async function refresh(){
+  try{
+    const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"});
+    if(!r.ok) return false;
+    const j=await r.json();
+    if(j && Array.isArray(j.scorers) && j.scorers.length){
+      DATA = j.scorers.map(x=>({
+        player:x.player, teamEn:x.nation,
+        teamZh:x.nationZh || NATIONZH[x.nation] || x.nation,
+        goals:x.goals, club:x.club||"—", league:x.league||"—"
+      }));
+      renderAll(); setUpdated(j.updated, true);
+      return true;
+    }
+  }catch(e){/* 离线或无 data.json：用内置快照 */}
+  return false;
+}
+
+// 首屏先用内置快照即时渲染，再尝试拉取最新
+renderAll(); setUpdated(null,false);
+refresh();
+// 标签页重新可见时再拉一次（便于长期开着的页面拿到当天更新）
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) refresh(); });
+
+</script>
+</body>
+</html>
