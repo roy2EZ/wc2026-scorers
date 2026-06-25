@@ -4,8 +4,11 @@ def api(path, **p):
     url = "https://v3.football.api-sports.io"+path+"?"+urllib.parse.urlencode(p)
     req = urllib.request.Request(url, headers={"x-apisports-key": KEY})
     return json.load(urllib.request.urlopen(req))
-# 列出名字带 World Cup 的联赛
-r = api("/leagues", search="World Cup")
-for x in r.get("response", []):
-    lg = x["league"]; seasons = [s["year"] for s in x.get("seasons", [])]
-    print(lg["id"], "|", lg["name"], "|", lg.get("type"), "| seasons:", seasons[-6:])
+
+for season in ("2026", "2022"):
+    r = api("/fixtures", league="1", season=season)
+    fx = r.get("response", [])
+    print(f"season={season}: errors={r.get('errors')} results={r.get('results')} fixtures={len(fx)}")
+    for f in fx[:5]:
+        print("   ", f["fixture"]["date"], "|", f["fixture"]["status"]["short"],
+              "|", f["teams"]["home"]["name"], "vs", f["teams"]["away"]["name"])
