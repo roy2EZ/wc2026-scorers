@@ -1,0 +1,45 @@
+name: Update WC2026 scorers
+
+# 每天更新一次。cron 用 UTC：
+#   13:00 UTC = 美西 06:00（PDT），此时美国当天晚场比赛已全部结束。
+# 想多保一道险，可再加一行不同时间的 cron。
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}   # 也可在 Actions 页面手动点 "Run workflow"
+
+permissions:
+  contents: write          # 允许工作流把 data.json 提交回仓库
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest goals
+        env:
+          APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+          WC_LEAGUE_ID: "1"     # 世界杯 league id（如不对，见 README 如何查）
+          WC_SEASON: "2026"
+        run: python update_data.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "wc-bot"
+          git config user.email "wc-bot@users.noreply.github.com"
+          git add data.json state.json club_overrides.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "data: auto update $(date -u +%F)"
+            git push
+          fi
