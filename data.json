@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-26T09:23:05+00:00",
+ "updated": "2026-06-26T09:39:27+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists, auto-generated",
  "count": 120,
  "totalGoals": 165,
@@ -966,7 +966,7 @@
    "league": "英超"
   }
  ],
- "rosterCount": 1272,
+ "rosterCount": 1271,
  "roster": [
   {
    "player": "Lionel Messi",
@@ -1173,9 +1173,9 @@
    "goals": 2,
    "club": "Slovan Liberec",
    "league": "捷克甲级",
-   "num": null,
-   "pos": "",
-   "posZh": ""
+   "num": 26,
+   "pos": "MF",
+   "posZh": "中场"
   },
   {
    "player": "Folarin Balogun",
@@ -1712,9 +1712,9 @@
    "goals": 1,
    "club": "Universitatea Cluj",
    "league": "罗马尼亚甲级",
-   "num": null,
-   "pos": "",
-   "posZh": ""
+   "num": 25,
+   "pos": "FW",
+   "posZh": "前锋"
   },
   {
    "player": "Jude Bellingham",
@@ -1767,9 +1767,9 @@
    "goals": 1,
    "club": "RB Salzburg",
    "league": "奥地利甲级",
-   "num": null,
-   "pos": "",
-   "posZh": ""
+   "num": 19,
+   "pos": "FW",
+   "posZh": "前锋"
   },
   {
    "player": "Kevin Pina",
@@ -1789,9 +1789,9 @@
    "goals": 1,
    "club": "Wolverhampton Wanderers",
    "league": "英超",
-   "num": 7,
-   "pos": "DF",
-   "posZh": "后卫"
+   "num": null,
+   "pos": "",
+   "posZh": ""
   },
   {
    "player": "Lamine Yamal",
@@ -1954,9 +1954,9 @@
    "goals": 1,
    "club": "Slavia Prague",
    "league": "捷克甲级",
-   "num": 18,
-   "pos": "MF",
-   "posZh": "中场"
+   "num": null,
+   "pos": "",
+   "posZh": ""
   },
   {
    "player": "Mohamed Mohebi",
@@ -2399,9 +2399,9 @@
    "posZh": "后卫"
   },
   {
-   "player": "Abdulkerim Abdülkeri̇m",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Abdulkerim",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -2488,7 +2488,7 @@
   },
   {
    "player": "Adam Hložek",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "TSG Hoffenheim",
@@ -2961,7 +2961,7 @@
   },
   {
    "player": "Alexandr Sojka",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "FC Viktoria Plzeň",
@@ -3017,7 +3017,7 @@
   {
    "player": "Alexis Saelemaekers",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "AC Milan",
    "league": "意甲",
@@ -3214,8 +3214,8 @@
   },
   {
    "player": "Altay",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Manchester United FC",
    "league": "英超",
@@ -3248,7 +3248,7 @@
   {
    "player": "Amadou Onana",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Aston Villa FC",
    "league": "英超",
@@ -3258,8 +3258,8 @@
   },
   {
    "player": "Amar Dedić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "SL Ben\u0000ca",
    "league": "葡超",
@@ -3269,8 +3269,8 @@
   },
   {
    "player": "Amar Memić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FC Viktoria Plzeň",
    "league": "捷克甲级",
@@ -3324,8 +3324,8 @@
   },
   {
    "player": "Amir Hadžiahmetović",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Hull City FC",
    "league": "英超",
@@ -3632,8 +3632,8 @@
   },
   {
    "player": "Arda Güler",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Real Madrid C. F.",
    "league": "西甲",
@@ -3654,8 +3654,8 @@
   },
   {
    "player": "Arjan Malić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "SK Sturm Graz",
    "league": "奥地利甲级",
@@ -3698,8 +3698,8 @@
   },
   {
    "player": "Armin Gigović",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "BSC Young Boys",
    "league": "瑞士超",
@@ -3721,7 +3721,7 @@
   {
    "player": "Arthur Theate",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Eintracht Frankfurt",
    "league": "德甲",
@@ -3853,7 +3853,7 @@
   {
    "player": "Axel Witsel",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Girona FC",
    "league": "西甲",
@@ -4049,9 +4049,9 @@
    "posZh": "中场"
   },
   {
-   "player": "Baris Bariş",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Baris",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -4149,8 +4149,8 @@
   },
   {
    "player": "Benjamin Tahirović",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Brøndby IF",
    "league": "丹麦超",
@@ -4282,7 +4282,7 @@
   {
    "player": "Brandon Mechele",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Club Brugge",
    "league": "比利时甲级",
@@ -4390,9 +4390,9 @@
    "posZh": "门将"
   },
   {
-   "player": "Caglar Çağlar",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Caglar",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Fenerbahçe SK",
    "league": "土超",
@@ -4446,8 +4446,8 @@
   },
   {
    "player": "Can Uzun",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Eintracht Frankfurt",
    "league": "德甲",
@@ -4656,7 +4656,7 @@
   {
    "player": "Charles De Ketelaere",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Atalanta Bergamo",
    "league": "意甲",
@@ -4698,7 +4698,7 @@
    "posZh": "中场"
   },
   {
-   "player": "Cherif Chérif",
+   "player": "Cherif",
    "nation": "Senegal",
    "nationZh": "塞内加尔",
    "goals": 0,
@@ -5018,7 +5018,7 @@
   },
   {
    "player": "David Douděra",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -5029,7 +5029,7 @@
   },
   {
    "player": "David Jurásek",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -5084,7 +5084,7 @@
   },
   {
    "player": "David Zima",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -5183,7 +5183,7 @@
   },
   {
    "player": "Denis Višinský",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "FC Viktoria Plzeň",
@@ -5204,9 +5204,9 @@
    "posZh": "中场"
   },
   {
-   "player": "Deniz Deni̇z Gül",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Deniz Gül",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "FC Porto",
    "league": "葡超",
@@ -5227,8 +5227,8 @@
   },
   {
    "player": "Dennis Hadžikadunić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "UC Sampdoria",
    "league": "意甲",
@@ -5327,7 +5327,7 @@
   {
    "player": "Diego Moreira Jr",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "RC Strasbourg",
    "league": "法甲",
@@ -5371,7 +5371,7 @@
   {
    "player": "Dodi Lukebakio",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "SL Ben\u0000ca",
    "league": "葡超",
@@ -5513,8 +5513,8 @@
   },
   {
    "player": "Dzenis Burnić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Karlsruher SC",
    "league": "德甲",
@@ -5579,8 +5579,8 @@
   },
   {
    "player": "Edin Džeko",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FC Schalke 04",
    "league": "德甲",
@@ -5854,8 +5854,8 @@
   },
   {
    "player": "Eren Elmali",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -5909,25 +5909,14 @@
   },
   {
    "player": "Ermedin Demirović",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "VfB Stuttgart",
    "league": "德甲",
    "num": 10,
    "pos": "FW",
    "posZh": "前锋"
-  },
-  {
-   "player": "Ermin Mahmić",
-   "nation": "BIH",
-   "nationZh": "",
-   "goals": 0,
-   "club": "FC Slovan Liberec",
-   "league": "捷克甲级",
-   "num": 26,
-   "pos": "MF",
-   "posZh": "中场"
   },
   {
    "player": "Ernest Nuamah",
@@ -5942,8 +5931,8 @@
   },
   {
    "player": "Esmir Bajraktarević",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "PSV Eindhoven",
    "league": "荷甲",
@@ -6007,6 +5996,17 @@
    "posZh": "后卫"
   },
   {
+   "player": "Fabian",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 0,
+   "club": "Paris Saint-Germain",
+   "league": "法甲",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场"
+  },
+  {
    "player": "Fabian Balbuena",
    "nation": "Paraguay",
    "nationZh": "巴拉圭",
@@ -6016,17 +6016,6 @@
    "num": 5,
    "pos": "DF",
    "posZh": "后卫"
-  },
-  {
-   "player": "Fabian Fabián",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 0,
-   "club": "Paris Saint-Germain",
-   "league": "法甲",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场"
   },
   {
    "player": "Fabian Rieder",
@@ -6162,8 +6151,8 @@
   },
   {
    "player": "Ferdi F. Kadioğlu",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Brighton & Hove Albion FC",
    "league": "英超",
@@ -6866,8 +6855,8 @@
   },
   {
    "player": "Hakan Çalhanoğlu",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "FC Internazionale Milano",
    "league": "意甲",
@@ -6933,7 +6922,7 @@
   {
    "player": "Hans Vanaken",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Club Brugge",
    "league": "比利时甲级",
@@ -6943,8 +6932,8 @@
   },
   {
    "player": "Haris Tabaković",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Borussia Mönchengladbach",
    "league": "德甲",
@@ -7141,7 +7130,7 @@
   },
   {
    "player": "Hugo Sochůrek",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "AC Sparta Praha",
@@ -7382,9 +7371,9 @@
    "posZh": "前锋"
   },
   {
-   "player": "Irfan Kahveci̇",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Irfan Kahveci",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Kasımpaşa SK",
    "league": "土超",
@@ -7448,6 +7437,17 @@
    "posZh": "中场"
   },
   {
+   "player": "Ismail",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
+   "goals": 0,
+   "club": "Fenerbahçe SK",
+   "league": "土超",
+   "num": 16,
+   "pos": "MF",
+   "posZh": "中场"
+  },
+  {
    "player": "Ismail Jakobs",
    "nation": "Senegal",
    "nationZh": "塞内加尔",
@@ -7459,18 +7459,7 @@
    "posZh": "后卫"
   },
   {
-   "player": "Ismail İsmai̇l",
-   "nation": "TUR",
-   "nationZh": "",
-   "goals": 0,
-   "club": "Fenerbahçe SK",
-   "league": "土超",
-   "num": 16,
-   "pos": "MF",
-   "posZh": "中场"
-  },
-  {
-   "player": "Ismaila Ismaïla",
+   "player": "Ismaila",
    "nation": "Senegal",
    "nationZh": "塞内加尔",
    "goals": 0,
@@ -7504,8 +7493,8 @@
   },
   {
    "player": "Ivan Bašić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FC Astana",
    "league": "其他联赛",
@@ -7537,8 +7526,8 @@
   },
   {
    "player": "Ivan Šunjić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Pafos FC",
    "league": "塞浦路斯甲级",
@@ -7724,7 +7713,7 @@
   },
   {
    "player": "Jan Kuchta",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "AC Sparta Praha",
@@ -7757,7 +7746,7 @@
   },
   {
    "player": "Jaroslav Zelený",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "AC Sparta Praha",
@@ -7934,7 +7923,7 @@
   {
    "player": "Jeremy Doku",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Manchester City FC",
    "league": "英超",
@@ -8021,7 +8010,7 @@
   },
   {
    "player": "Jindrich Staněk",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -8099,7 +8088,7 @@
   {
    "player": "Joaquin Seys",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Club Brugge",
    "league": "比利时甲级",
@@ -8581,17 +8570,6 @@
    "posZh": "中场"
   },
   {
-   "player": "Jovo Lukić",
-   "nation": "BIH",
-   "nationZh": "",
-   "goals": 0,
-   "club": "Universitatea Cluj",
-   "league": "罗马尼亚甲级",
-   "num": 25,
-   "pos": "FW",
-   "posZh": "前锋"
-  },
-  {
    "player": "João Cancelo",
    "nation": "Portugal",
    "nationZh": "葡萄牙",
@@ -8802,8 +8780,8 @@
   },
   {
    "player": "Kaan",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -8956,8 +8934,8 @@
   },
   {
    "player": "Kenan Yildiz",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Juventus FC",
    "league": "意甲",
@@ -9000,23 +8978,12 @@
   },
   {
    "player": "Kerem Aktürkoğlu",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Fenerbahçe SK",
    "league": "土超",
    "num": 7,
-   "pos": "FW",
-   "posZh": "前锋"
-  },
-  {
-   "player": "Kerim Alajbegović",
-   "nation": "BIH",
-   "nationZh": "",
-   "goals": 0,
-   "club": "FC Red Bull Salzburg",
-   "league": "奥地利甲级",
-   "num": 19,
    "pos": "FW",
    "posZh": "前锋"
   },
@@ -9045,7 +9012,7 @@
   {
    "player": "Kevin De Bruyne",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "SSC Napoli",
    "league": "意甲",
@@ -9199,7 +9166,7 @@
   {
    "player": "Koni De Winter",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "AC Milan",
    "league": "意甲",
@@ -9318,6 +9285,17 @@
    "posZh": "中场"
   },
   {
+   "player": "Ladislav Krejčí",
+   "nation": "Czechia",
+   "nationZh": "捷克",
+   "goals": 0,
+   "club": "Wolverhampton Wanderers FC",
+   "league": "英超",
+   "num": 7,
+   "pos": "DF",
+   "posZh": "后卫"
+  },
+  {
    "player": "Lamine",
    "nation": "Senegal",
    "nationZh": "塞内加尔",
@@ -9397,7 +9375,7 @@
   {
    "player": "Leandro Trossard",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Arsenal FC",
    "league": "英超",
@@ -9726,7 +9704,7 @@
   },
   {
    "player": "Lukas Horníček",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SC Braga",
@@ -9737,7 +9715,7 @@
   },
   {
    "player": "Lukas Provod",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -9748,7 +9726,7 @@
   },
   {
    "player": "Lukas Červ",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "FC Viktoria Plzeň",
@@ -10155,8 +10133,8 @@
   },
   {
    "player": "Martin Zlomislić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "HNK Rijeka",
    "league": "克罗地亚甲级",
@@ -10221,7 +10199,7 @@
   },
   {
    "player": "Matej Kovář",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "PSV Eindhoven",
@@ -10299,7 +10277,7 @@
   {
    "player": "Matias Fernandez-Pardo",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Lille OSC",
    "league": "法甲",
@@ -10409,7 +10387,7 @@
   {
    "player": "Maxim De Cuyper",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Brighton & Hove Albion FC",
    "league": "英超",
@@ -10583,9 +10561,9 @@
    "posZh": "后卫"
   },
   {
-   "player": "Merih Demi̇ral",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Merih Demiral",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Al Ahli FC",
    "league": "沙特职业联赛",
@@ -10595,8 +10573,8 @@
   },
   {
    "player": "Mert",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Fenerbahçe SK",
    "league": "土超",
@@ -10606,8 +10584,8 @@
   },
   {
    "player": "Mert Müldür",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Fenerbahçe SK",
    "league": "土超",
@@ -10693,6 +10671,17 @@
    "posZh": "门将"
   },
   {
+   "player": "Michal Sadílek",
+   "nation": "Czechia",
+   "nationZh": "捷克",
+   "goals": 0,
+   "club": "SK Slavia Praha",
+   "league": "捷克甲级",
+   "num": 18,
+   "pos": "MF",
+   "posZh": "中场"
+  },
+  {
    "player": "Michel Aebischer",
    "nation": "Switzerland",
    "nationZh": "瑞士",
@@ -10739,7 +10728,7 @@
   {
    "player": "Mike Penders",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "RC Strasbourg",
    "league": "法甲",
@@ -10815,8 +10804,8 @@
   },
   {
    "player": "Mladen Jurkas",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FK Borac Banja Luka",
    "league": "其他联赛",
@@ -11134,7 +11123,7 @@
   },
   {
    "player": "Mojmir Chytil",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -11331,7 +11320,7 @@
    "posZh": "后卫"
   },
   {
-   "player": "Márcio Marcio",
+   "player": "Márcio",
    "nation": "Cape Verde",
    "nationZh": "佛得角",
    "goals": 0,
@@ -11421,7 +11410,7 @@
   {
    "player": "Nathan Ngoy",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Lille OSC",
    "league": "法甲",
@@ -11619,7 +11608,7 @@
   {
    "player": "Nicolas Raskin",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Rangers FC",
    "league": "苏超",
@@ -11651,8 +11640,8 @@
   },
   {
    "player": "Nihad Mujakić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Gaziantep FK",
    "league": "土超",
@@ -11673,8 +11662,8 @@
   },
   {
    "player": "Nikola Katić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FC Schalke 04",
    "league": "德甲",
@@ -11695,8 +11684,8 @@
   },
   {
    "player": "Nikola Vasilj",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "FC St. Pauli",
    "league": "德甲",
@@ -11892,9 +11881,9 @@
    "posZh": "后卫"
   },
   {
-   "player": "Oguz Oğuz",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Oguz",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Fenerbahçe SK",
    "league": "土超",
@@ -11958,7 +11947,7 @@
    "posZh": "前锋"
   },
   {
-   "player": "Orbelin Orbelín",
+   "player": "Orbelin",
    "nation": "Mexico",
    "nationZh": "墨西哥",
    "goals": 0,
@@ -11981,8 +11970,8 @@
   },
   {
    "player": "Orkun Kökçü",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Beşiktaş JK",
    "league": "土超",
@@ -12102,8 +12091,8 @@
   },
   {
    "player": "Ozan Kabak",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "TSG Hoffenheim",
    "league": "德甲",
@@ -12223,7 +12212,7 @@
   },
   {
    "player": "Patrik Schick",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "Bayer 04 Leverkusen",
@@ -12278,7 +12267,7 @@
   },
   {
    "player": "Pavel Šulc",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "Olympique Lyonnais",
@@ -12552,6 +12541,17 @@
    "posZh": "前锋"
   },
   {
+   "player": "Raul",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 0,
+   "club": "Fulham FC",
+   "league": "英超",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋"
+  },
+  {
    "player": "Raul R. Rangel",
    "nation": "Mexico",
    "nationZh": "墨西哥",
@@ -12561,17 +12561,6 @@
    "num": 1,
    "pos": "GK",
    "posZh": "门将"
-  },
-  {
-   "player": "Raul Raúl",
-   "nation": "Mexico",
-   "nationZh": "墨西哥",
-   "goals": 0,
-   "club": "Fulham FC",
-   "league": "英超",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋"
   },
   {
    "player": "Rayan",
@@ -12806,7 +12795,7 @@
   },
   {
    "player": "Robin Hranáč",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "TSG Hoffenheim",
@@ -12917,7 +12906,7 @@
   {
    "player": "Romelu Lukaku",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "SSC Napoli",
    "league": "意甲",
@@ -13180,8 +13169,8 @@
   },
   {
    "player": "Salih Özcan",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Borussia Dortmund",
    "league": "德甲",
@@ -13202,8 +13191,8 @@
   },
   {
    "player": "Samed Baždar",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Jagiellonia Białystok",
    "league": "波兰甲级",
@@ -13213,8 +13202,8 @@
   },
   {
    "player": "Samet Akaydin",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Çaykur Rizespor",
    "league": "土超",
@@ -13378,8 +13367,8 @@
   },
   {
    "player": "Sead Kolašinac",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "Atalanta Bergamo",
    "league": "意甲",
@@ -13423,7 +13412,7 @@
   {
    "player": "Senne Lammens",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Manchester United FC",
    "league": "英超",
@@ -13675,7 +13664,7 @@
   },
   {
    "player": "Stepan Chaloupek",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -13719,8 +13708,8 @@
   },
   {
    "player": "Stjepan Radeljić",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "HNK Rijeka",
    "league": "克罗地亚甲级",
@@ -13862,8 +13851,8 @@
   },
   {
    "player": "Tarik Muharemović",
-   "nation": "BIH",
-   "nationZh": "",
+   "nation": "Bosnia & Herzegovina",
+   "nationZh": "波黑",
    "goals": 0,
    "club": "US Sassuolo",
    "league": "意甲",
@@ -13984,7 +13973,7 @@
   {
    "player": "Thibaut Courtois",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Real Madrid C. F.",
    "league": "西甲",
@@ -13995,7 +13984,7 @@
   {
    "player": "Thomas Meunier",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Lille OSC",
    "league": "法甲",
@@ -14050,7 +14039,7 @@
   {
    "player": "Timothy Castagne",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Fulham FC",
    "league": "英超",
@@ -14082,7 +14071,7 @@
   },
   {
    "player": "Tomas Chorý",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -14093,7 +14082,7 @@
   },
   {
    "player": "Tomas Holeš",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "SK Slavia Praha",
@@ -14104,7 +14093,7 @@
   },
   {
    "player": "Tomas Souček",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "West Ham United FC",
@@ -14279,9 +14268,9 @@
    "posZh": "门将"
   },
   {
-   "player": "Ugurcan Uğurcan",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Ugurcan",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -14401,7 +14390,7 @@
   },
   {
    "player": "Vladimir Coufal",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "TSG Hoffenheim",
@@ -14412,7 +14401,7 @@
   },
   {
    "player": "Vladimir Darida",
-   "nation": "Czech Republic",
+   "nation": "Czechia",
    "nationZh": "捷克",
    "goals": 0,
    "club": "FC Hradec Králové",
@@ -14732,7 +14721,7 @@
   {
    "player": "Youri Tielemans",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Aston Villa FC",
    "league": "英超",
@@ -14786,8 +14775,8 @@
   },
   {
    "player": "Yunus",
-   "nation": "TUR",
-   "nationZh": "",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "Galatasaray SK",
    "league": "土超",
@@ -14873,9 +14862,9 @@
    "posZh": "前锋"
   },
   {
-   "player": "Zeki Zeki̇ Çeli̇k",
-   "nation": "TUR",
-   "nationZh": "",
+   "player": "Zeki Çelik",
+   "nation": "Türkiye",
+   "nationZh": "土耳其",
    "goals": 0,
    "club": "AS Roma",
    "league": "意甲",
@@ -14886,7 +14875,7 @@
   {
    "player": "Zeno Debast",
    "nation": "Belgium",
-   "nationZh": "",
+   "nationZh": "比利时",
    "goals": 0,
    "club": "Sporting CP",
    "league": "葡超",
