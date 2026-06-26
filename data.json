@@ -1,8 +1,8 @@
 {
- "updated": "2026-06-26T00:43:55+00:00",
+ "updated": "2026-06-26T01:25:00+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists, auto-generated",
- "count": 112,
- "totalGoals": 155,
+ "count": 115,
+ "totalGoals": 160,
  "scorers": [
   {
    "player": "Lionel Messi",
@@ -35,6 +35,14 @@
    "goals": 4,
    "club": "Real Madrid",
    "league": "西甲"
+  },
+  {
+   "player": "Brian Brobbey",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 3,
+   "club": "Sunderland",
+   "league": "英超"
   },
   {
    "player": "Denis Undav",
@@ -77,20 +85,20 @@
    "league": "英超"
   },
   {
+   "player": "Anthony Elanga",
+   "nation": "Sweden",
+   "nationZh": "瑞典",
+   "goals": 2,
+   "club": "Newcastle United",
+   "league": "英超"
+  },
+  {
    "player": "Ayase Ueda",
    "nation": "Japan",
    "nationZh": "日本",
    "goals": 2,
    "club": "Feyenoord",
    "league": "荷甲"
-  },
-  {
-   "player": "Brian Brobbey",
-   "nation": "Netherlands",
-   "nationZh": "荷兰",
-   "goals": 2,
-   "club": "Sunderland",
-   "league": "英超"
   },
   {
    "player": "Cody Gakpo",
@@ -325,14 +333,6 @@
    "league": "西甲"
   },
   {
-   "player": "Anthony Elanga",
-   "nation": "Sweden",
-   "nationZh": "瑞典",
-   "goals": 1,
-   "club": "Newcastle United",
-   "league": "英超"
-  },
-  {
    "player": "Aymen Hussein",
    "nation": "Iraq",
    "nationZh": "伊拉克",
@@ -371,6 +371,14 @@
    "goals": 1,
    "club": "FC St. Pauli",
    "league": "德甲"
+  },
+  {
+   "player": "Daizen Maeda",
+   "nation": "Japan",
+   "nationZh": "日本",
+   "goals": 1,
+   "club": "Celtic FC",
+   "league": "苏超"
   },
   {
    "player": "Emam Ashour",
@@ -445,6 +453,14 @@
    "league": "卡塔尔星级联赛"
   },
   {
+   "player": "Hazem Mastouri",
+   "nation": "Tunisia",
+   "nationZh": "突尼斯",
+   "goals": 1,
+   "club": "FC Dynamo Makhachkala",
+   "league": "俄超"
+  },
+  {
    "player": "Helio Varela",
    "nation": "Cape Verde",
    "nationZh": "佛得角",
@@ -483,6 +499,14 @@
    "goals": 1,
    "club": "Rosario Central",
    "league": "阿甲"
+  },
+  {
+   "player": "Jan Paul van Hecke",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 1,
+   "club": "Brighton & Hove Albion FC",
+   "league": "英超"
   },
   {
    "player": "Joao Neves",
