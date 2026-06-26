@@ -180,6 +180,18 @@
     </div>
     <div class="charts">
       <div class="chartcard">
+        <div class="chead stack"><h3 id="natTitle">按国家队</h3>
+          <div class="selrow">
+            <select class="miniSel topn" id="topNatSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
+        <div class="cwrap"><div class="ylabels" id="natLabels"></div><canvas id="natChart"></canvas></div>
+      </div>
+      <div class="chartcard">
         <div class="chead stack"><h3 id="leagueTitle">按联赛</h3>
           <div class="selrow">
             <select class="miniSel topn" id="topLeagueSel">
@@ -203,18 +215,6 @@
             </select>
           </div></div>
         <div class="cwrap"><div class="ylabels" id="clubLabels"></div><canvas id="clubChart"></canvas></div>
-      </div>
-      <div class="chartcard">
-        <div class="chead stack"><h3 id="natTitle">按国家队</h3>
-          <div class="selrow">
-            <select class="miniSel topn" id="topNatSel">
-              <option value="10" selected>Top 10</option>
-              <option value="15">Top 15</option>
-              <option value="20">Top 20</option>
-              <option value="all">All</option>
-            </select>
-          </div></div>
-        <div class="cwrap"><div class="ylabels" id="natLabels"></div><canvas id="natChart"></canvas></div>
       </div>
     </div>
   </div>
