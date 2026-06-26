@@ -19,30 +19,35 @@ At-a-glance totals: goals, scorers, clubs, leagues, and matches with goals.
 
 ### Top Scorers / 射手榜领跑者
 Goal ranking with All / 2+ / 3+ / 4+ / 5+ filters. Each row is auto-colored by its goal tier — the color scale rescales to the current max, so tiers never clash.
+
 进球数排名，可按 全部 / 2+ / 3+ / 4+ / 5+ 筛选。每行按进球档位自动上色，色阶随最高进球数动态调整，进多少球都不撞色。
 
 ![Top Scorers](screenshots/top-scorers.png)
 
 ### Goal Origins — by Goals / 进球来自哪里（进球数口径）
 Three charts side by side: by Nation / League / Club. Each has its own Top 10 / 15 / 20 / All selector; the club chart can drill down by league.
+
 三张图并排：按国家队 / 联赛 / 俱乐部。每张图各自可选 Top 10 / 15 / 20 / 全部，俱乐部图还能按联赛下钻。
 
 ![Charts by goals](screenshots/charts-goals.png)
 
 ### Goal Origins — by Scorers / 进球来自哪里（进球人数口径）
 One toggle switches all three charts between "Goals" and "Scorers" (number of distinct players).
+
 顶部一键切换，三张图同时在「进球数」与「进球人数」之间切换。
 
 ![Charts by scorers](screenshots/charts-scorers.png)
 
 ### All Scorers table / 全部进球者总表
 The full sortable table — Player / Nation / Goals / Club / League, every column bilingual.
+
 完整可排序表格——球员 / 国家队 / 进球数 / 俱乐部 / 联赛，每列都中英双语。
 
 ![All Scorers table](screenshots/table.png)
 
 ### Search in either language / 中英文均可搜索
 Type in English or Chinese — searching "德国" (Chinese) and "Germany" (English) return the same results, across player / club / league / nation.
+
 中英文都能搜——输入「德国」或「Germany」结果一致，球员 / 俱乐部 / 联赛 / 国家队 全字段匹配。
 
 | 搜「德国」(Chinese) | Search "Germany" (English) |
@@ -51,18 +56,21 @@ Type in English or Chinese — searching "德国" (Chinese) and "Germany" (Engli
 
 ### Search by club / 按俱乐部搜索
 Searching "Paris" surfaces every Paris Saint-Germain scorer at once.
+
 搜索 "Paris" 即可一次列出所有巴黎圣日耳曼的进球者。
 
 ![Search by club](screenshots/search-club.png)
 
 ### Filter by league / 按联赛筛选
 The league dropdown narrows the table to one competition (e.g. Serie A).
+
 联赛下拉框可把表格筛到单个联赛（如意甲 Serie A）。
 
 ![Filter by league](screenshots/filter-league.png)
 
 ### Combine search + filters / 组合搜索与筛选
 Search and the league filter stack — e.g. "Netherland" + EPL shows only Dutch scorers playing in the Premier League.
+
 搜索词与联赛筛选可叠加——例如 "Netherland" + 英超，只显示在英超效力的荷兰进球者。
 
 ![Combine filters](screenshots/filter-combo.png)
