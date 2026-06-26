@@ -80,6 +80,14 @@
   .miniSel{background:var(--card2);border:1px solid var(--line);color:var(--ink);
     font-family:'Noto Sans SC';font-size:12px;border-radius:8px;padding:5px 9px;outline:none;cursor:pointer;max-width:58%}
   .chartcard .cwrap{position:relative;width:100%}
+  .ylabels{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2}
+  .ylabels .yl{position:absolute;left:0;transform:translateY(-50%);
+    display:flex;align-items:center;gap:5px;justify-content:flex-end;text-align:right}
+  .ylabels .yl .fl{font-size:14px;flex:none}
+  .ylabels .yl .tx{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+  .ylabels .yl .zh{font-size:11.5px;color:#E6EAF4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ylabels .yl .ens{font-size:9.5px;color:#8A93AB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(max-width:620px){ .ylabels .yl .zh{font-size:11px} .ylabels .yl .ens{font-size:9px} }
 
   .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
   .search{flex:1;min-width:180px;display:flex;align-items:center;gap:8px;background:var(--card);
@@ -171,34 +179,34 @@
       <div class="chartcard">
         <div class="chead"><h3 id="leagueTitle">按联赛</h3>
           <select class="miniSel topn" id="topLeagueSel">
-            <option value="10" selected>Top 10</option>
-            <option value="15">Top 15</option>
-            <option value="20">Top 20</option>
+            <option value="10" selected>前10 Top 10</option>
+            <option value="15">前15 Top 15</option>
+            <option value="20">前20 Top 20</option>
             <option value="all">全部 All</option>
           </select></div>
-        <div class="cwrap"><canvas id="leagueChart"></canvas></div>
+        <div class="cwrap"><div class="ylabels" id="leagueLabels"></div><canvas id="leagueChart"></canvas></div>
       </div>
       <div class="chartcard">
         <div class="chead"><h3 id="clubTitle">按俱乐部</h3>
           <span style="display:flex;gap:6px">
           <select id="clubLeagueSel" class="miniSel"></select>
           <select class="miniSel topn" id="topClubSel">
-            <option value="10" selected>Top 10</option>
-            <option value="15">Top 15</option>
-            <option value="20">Top 20</option>
+            <option value="10" selected>前10 Top 10</option>
+            <option value="15">前15 Top 15</option>
+            <option value="20">前20 Top 20</option>
             <option value="all">全部 All</option>
           </select></span></div>
-        <div class="cwrap"><canvas id="clubChart"></canvas></div>
+        <div class="cwrap"><div class="ylabels" id="clubLabels"></div><canvas id="clubChart"></canvas></div>
       </div>
       <div class="chartcard">
         <div class="chead"><h3 id="natTitle">按国家队</h3>
           <select class="miniSel topn" id="topNatSel">
-            <option value="10" selected>Top 10</option>
-            <option value="15">Top 15</option>
-            <option value="20">Top 20</option>
+            <option value="10" selected>前10 Top 10</option>
+            <option value="15">前15 Top 15</option>
+            <option value="20">前20 Top 20</option>
             <option value="all">全部 All</option>
           </select></div>
-        <div class="cwrap"><canvas id="natChart"></canvas></div>
+        <div class="cwrap"><div class="ylabels" id="natLabels"></div><canvas id="natChart"></canvas></div>
       </div>
     </div>
   </div>
@@ -225,7 +233,7 @@
           <thead><tr>
             <th data-k="player">球员 Player</th>
             <th data-k="teamZh">国家队 Nation</th>
-            <th data-k="goals" style="text-align:center">球 G <span class="ar">▼</span></th>
+            <th data-k="goals" style="text-align:center">进球数 Goals <span class="ar">▼</span></th>
             <th data-k="club">俱乐部 Club</th>
             <th data-k="league">联赛 League</th>
           </tr></thead>
@@ -371,6 +379,8 @@ const PZH={"Lionel Messi": "梅西", "Kylian Mbappe": "姆巴佩", "Erling Haala
 const CZH={"Inter Miami": "迈阿密国际", "Real Madrid": "皇马", "Manchester City": "曼城", "Juventus": "尤文图斯", "VfB Stuttgart": "斯图加特", "SC Freiburg": "弗赖堡", "AS Monaco": "摩纳哥", "Arsenal": "阿森纳", "Brighton & Hove Albion": "布莱顿", "Motherwell": "马瑟韦尔", "Bayern Munich": "拜仁慕尼黑", "Southampton": "南安普顿", "PSV Eindhoven": "埃因霍温", "Manchester United": "曼联", "West Ham United": "西汉姆", "Sunderland": "桑德兰", "Liverpool": "利物浦", "Crystal Palace": "水晶宫", "Feyenoord": "费耶诺德", "Real Sociedad": "皇家社会", "Sporting CP": "葡萄牙体育", "Al-Nassr": "利雅得胜利", "Sevilla": "塞维利亚", "Slovan Liberec": "利贝雷茨", "Al-Qadsiah": "卡迪西亚", "Fulham": "富勒姆", "Wolverhampton Wanderers": "狼队", "Besiktas": "贝西克塔斯", "Universitatea Cluj": "克卢日大学", "Palmeiras": "帕尔梅拉斯", "Borussia Monchengladbach": "门兴", "Stade Rennais": "雷恩", "Al-Sadd": "萨德", "Aston Villa": "阿斯顿维拉", "Watford": "沃特福德", "FC St. Pauli": "圣保利", "Borussia Dortmund": "多特蒙德", "FC Zurich": "苏黎世", "Eintracht Frankfurt": "法兰克福", "Stade Reims": "兰斯", "NK Maribor": "马里博尔", "VfL Wolfsburg": "沃尔夫斯堡", "Al-Karma": "卡尔马", "Paris Saint-Germain": "巴黎圣日耳曼", "Al Ahly": "阿赫利(埃)", "Genoa": "热那亚", "FC Rostov": "罗斯托夫", "Foolad": "福拉德", "Werder Bremen": "云达不来梅", "Red Star Belgrade": "贝尔格莱德红星", "Al-Sailiya": "赛利亚", "Newcastle United": "纽卡斯尔", "Como": "科莫", "FC Dallas": "达拉斯", "Barcelona": "巴萨", "FC Nordsjaelland": "北西兰", "Istanbul Basaksehir": "巴萨克谢希尔", "Rosario Central": "罗萨里奥中央", "Slavia Prague": "布拉格斯拉维亚", "Anderlecht": "安德莱赫特", "Guadalajara": "瓜达拉哈拉", "Villarreal": "比利亚雷亚尔", "Atlanta United": "亚特兰大联", "Fluminense": "弗鲁米嫩塞", "FC Krasnodar": "克拉斯诺达尔", "Maccabi Tel Aviv": "特拉维夫马卡比", "KRC Genk": "亨克", "Portland Timbers": "波特兰伐木者", "Al-Ahli": "吉达阿赫利", "Pyramids": "金字塔", "Torino": "都灵", "Marseille": "马赛", "Gyori ETO": "杰尔ETO", "Qatar SC": "卡塔尔SC", "AC Milan": "AC米兰", "Osasuna": "奥萨苏纳", "RB Salzburg": "萨尔茨堡", "Union Saint-Gilloise": "圣吉卢瓦联", "Al Ain": "艾因", "Strasbourg": "斯特拉斯堡", "AZ Alkmaar": "阿尔克马尔", "Real Betis": "贝蒂斯", "AEL Limassol": "利马索尔AEL"};
 const pz=n=>PZH[n]||n;
 const cz=n=>CZH[n]||n;
+const CLUBABBR={"Paris Saint-Germain":"PSG","Manchester City":"Man City","Manchester United":"Man Utd","Brighton & Hove Albion":"Brighton","Wolverhampton Wanderers":"Wolves","Borussia Monchengladbach":"M'gladbach","Borussia Dortmund":"Dortmund","Eintracht Frankfurt":"Frankfurt","Newcastle United":"Newcastle","West Ham United":"West Ham","Union Saint-Gilloise":"USG","Red Star Belgrade":"Red Star","Istanbul Basaksehir":"Basaksehir","Maccabi Tel Aviv":"Maccabi TA","Universitatea Cluj":"U. Cluj","Slavia Prague":"Slavia","RB Salzburg":"Salzburg","Atlanta United":"Atlanta Utd","Portland Timbers":"Portland","Real Sociedad":"Real Soc."};
+const cabbr=n=>CLUBABBR[n]||n;
 const LEN={"美职联": "MLS", "意甲": "Serie A", "西甲": "La Liga", "英超": "EPL", "德甲": "Bundesliga", "法甲": "Ligue 1", "法乙": "Ligue 2", "英冠": "Championship", "荷甲": "Eredivisie", "葡超": "Primeira Liga", "苏超": "SPFL", "沙特职业联赛": "SPL", "卡塔尔星级联赛": "QSL", "土超": "Süper Lig", "埃及超": "EPL (Egypt)", "俄超": "RPL", "伊朗波斯湾联赛": "PGPL", "塞尔维亚超": "SuperLiga", "阿甲": "Primera (ARG)", "捷克甲级": "Czech 1.", "丹麦超": "Superliga", "罗马尼亚甲级": "Liga I", "斯洛文尼亚甲级": "PrvaLiga", "巴西甲级": "Série A (BRA)", "瑞士超": "Swiss SL", "比利时甲级": "Pro League", "以色列超": "Israeli PL", "伊拉克星级联赛": "Iraqi SL", "奥地利甲级": "Austrian BL", "匈牙利甲级": "NB I", "墨超": "Liga MX", "塞浦路斯甲级": "Cypriot 1.", "阿联酋联赛": "UAE PL"};
 const lab=n=>LEN[n]?[n,LEN[n]]:n;
 const LEAGUEFLAG={"美职联":"🇺🇸","意甲":"🇮🇹","西甲":"🇪🇸","英超":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","德甲":"🇩🇪","法甲":"🇫🇷","法乙":"🇫🇷","英冠":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","荷甲":"🇳🇱","葡超":"🇵🇹","苏超":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","沙特职业联赛":"🇸🇦","卡塔尔星级联赛":"🇶🇦","土超":"🇹🇷","埃及超":"🇪🇬","俄超":"🇷🇺","伊朗波斯湾联赛":"🇮🇷","塞尔维亚超":"🇷🇸","阿甲":"🇦🇷","捷克甲级":"🇨🇿","丹麦超":"🇩🇰","罗马尼亚甲级":"🇷🇴","斯洛文尼亚甲级":"🇸🇮","巴西甲级":"🇧🇷","瑞士超":"🇨🇭","比利时甲级":"🇧🇪","以色列超":"🇮🇱","伊拉克星级联赛":"🇮🇶","奥地利甲级":"🇦🇹","匈牙利甲级":"🇭🇺","墨超":"🇲🇽","塞浦路斯甲级":"🇨🇾","阿联酋联赛":"🇦🇪","南非超":"🇿🇦","摩洛哥联赛":"🇲🇦","突尼斯联赛":"🇹🇳","阿尔及利亚联赛":"🇩🇿","哥伦比亚甲级":"🇨🇴","乌拉圭甲级":"🇺🇾","厄瓜多尔甲级":"🇪🇨","巴拉圭甲级":"🇵🇾","希腊超":"🇬🇷","挪威超":"🇳🇴","瑞典超":"🇸🇪","波兰甲级":"🇵🇱","乌克兰超":"🇺🇦","斯洛伐克甲级":"🇸🇰","保加利亚甲级":"🇧🇬","韩K联":"🇰🇷","日职联":"🇯🇵","澳超":"🇦🇺","刚果联赛":"🇨🇩","约旦联赛":"🇯🇴"};
@@ -456,12 +466,19 @@ function renderBoard(){
        <span class="balls">${d.goals}</span></div>`;}).join("");
 }
 
-const FONT="'Noto Sans SC', sans-serif";
+const FONT="'Noto Sans SC',system-ui,sans-serif";
 Chart.defaults.font.family=FONT; Chart.defaults.color="#C4CBDE";
 function gradFor(ctx){
+  const data=ctx.dataset?ctx.dataset.data:null, v=ctx.raw;
   const c=ctx.chart.ctx;
   const g=c.createLinearGradient(0,0,ctx.chart.width||500,0);
-  g.addColorStop(0,"#FF2D78");g.addColorStop(1,"#FFB02E");return g;
+  if(data==null || v==null){ g.addColorStop(0,"#FF2D78");g.addColorStop(1,"#FFB02E");return g; }
+  const max=Math.max.apply(null,data.filter(x=>x!=null)); 
+  const t=max>0 ? v/max : 0;
+  const h=Math.round(265 - t*240);            // 值越大→越暖(橙)，越小→越冷(紫)
+  g.addColorStop(0,`hsl(${h},78%,46%)`);
+  g.addColorStop(1,`hsl(${h},88%,62%)`);
+  return g;
 }
 function topEntries(obj,metric,n){
   return Object.entries(obj).sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals).slice(0,n);
@@ -487,10 +504,10 @@ function barCfg(entries,metric,onClick){
     plugins:[valueLabel],
     data:{labels:entries.map(e=>e[0]),
       datasets:[{data:entries.map(e=>e[1][metric]),
-        backgroundColor:c=>gradFor(c),borderRadius:5,maxBarThickness:22,categoryPercentage:.82}]},
+        backgroundColor:c=>gradFor(c),borderRadius:6,maxBarThickness:26,categoryPercentage:.66,barPercentage:.9}]},
     options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
       onClick:onClick||null,
-      layout:{padding:{right:28}},
+      layout:{padding:{right:28,left:(window.innerWidth<620?112:134)}},
       animation:reduce?false:{duration:800,easing:"easeOutQuart"},
       plugins:{legend:{display:false},
         tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:10,
@@ -498,12 +515,25 @@ function barCfg(entries,metric,onClick){
           callbacks:{label:c=>` ${c.parsed.x} ${metric==="goals"?"球":"人"}`}}},
       scales:{
         x:{beginAtZero:true,grace:"6%",ticks:{precision:0,font:{family:"'Space Mono'"}},grid:{color:"rgba(39,48,75,.5)"}},
-        y:{ticks:{font:{size:11,family:FONT},autoSkip:false},grid:{display:false}}}}};
+        y:{ticks:{display:false},grid:{display:false},border:{display:false}}}}};
 }
 let metric="goals", leagueCh, clubCh, natCh;
 let boardMin=2;
 document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
-function heightFor(n){return Math.max(220,n*30+40);}
+function heightFor(n){return Math.max(240,n*40+54);}
+function lblW(){return window.innerWidth<620?112:134;}
+function drawYLabels(chart,htmlLabels,overlayId){
+  const ov=document.getElementById(overlayId); if(!ov) return;
+  ov.innerHTML="";
+  const meta=chart.getDatasetMeta(0); if(!meta||!meta.data) return;
+  const w=lblW()-10;
+  meta.data.forEach((bar,i)=>{
+    const d=document.createElement("div");
+    d.className="yl"; d.style.top=bar.y+"px"; d.style.width=w+"px";
+    d.innerHTML=htmlLabels[i]||"";
+    ov.appendChild(d);
+  });
+}
 function leagueClick(evt,els){
   if(!els||!els.length) return;
   const item = currentL[els[0].index];
@@ -537,22 +567,23 @@ function renderCharts(){
   document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
   document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
   leagueCh&&leagueCh.destroy(); clubCh&&clubCh.destroy();
-  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map(e=>{
-    const zh=e[0],f=lfl(zh),en=LEN[zh],first=(f?f+" ":"")+zh;
-    return [en?[first,en]:first, e[1]];
-  }),metric,leagueClick));
-  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map(e=>{
-    const f=lfl(clubLeague[e[0]]);
-    return [[(f?f+" ":"")+cz(e[0]), e[0]], e[1]];
-  }),metric));
+  const mob = window.innerWidth < 620;
+  const Lrows=L.map(e=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
+    return {plain:zh+(en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),metric,leagueClick));
+  drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
+  const Crows=C.map(e=>{const zh=cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
+    return {plain:zh+(zh!==en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),metric));
+  drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
   const N=topEntries(byNation,metric,capV("topNatSel",Object.keys(byNation).length));
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
   document.getElementById("natTitle").textContent="按国家队 By Nation · "+mword;
   natCh&&natCh.destroy();
-  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map(e=>{
-    const f=fl(e[0]);
-    return [[(f?f+" ":"")+(e[1].zh||e[0]), e[0]], e[1]];
-  }),metric));
+  const Nrows=N.map(e=>{const zh=e[1].zh||e[0],en=e[0],f=fl(e[0]);
+    return {plain:zh+(zh!==en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric));
+  drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
 }
 document.getElementById("metric").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;
@@ -566,7 +597,7 @@ const sel=document.getElementById("leagueSel");
 function populateLeagueFilter(){
   const cur=sel.value;
   sel.innerHTML='<option value="">全部联赛 All leagues</option>'+
-    leaguesByGoals().map(l=>`<option>${l}</option>`).join("");
+    leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
   if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
 }
 let q="",leagueF="",minG=1,sortK="goals",sortDir=-1;
@@ -583,10 +614,10 @@ function render(){
   });
   tbody.innerHTML=rows.map(d=>`<tr>
     <td><div class="pname">${pz(d.player)}</div><div class="psub">${d.player}</div></td>
-    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span></td>
+    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div></td>
     <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}</td>
     <td>${cz(d.club)}<div class="psub">${d.club}</div></td>
-    <td class="cmut">${d.league}</td></tr>`).join("");
+    <td><div class="cmut">${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
   rowcount.textContent=rows.length+" / "+DATA.length+" 名进球者 scorers";
 }
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
@@ -607,7 +638,7 @@ document.querySelectorAll(".tbl thead th").forEach(th=>{
 
 function populateClubLeague(){
   const csel=document.getElementById("clubLeagueSel"); const cur=csel.value;
-  csel.innerHTML='<option value="">全部联赛 All leagues</option>'+leaguesByGoals().map(l=>`<option>${l}</option>`).join("");
+  csel.innerHTML='<option value="">全部联赛 All leagues</option>'+leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
   if([...csel.options].some(o=>o.value===cur)) csel.value=cur;
 }
 document.getElementById("clubLeagueSel").addEventListener("change",renderCharts);
@@ -647,6 +678,8 @@ renderAll(); setUpdated(null,false);
 refresh();
 // 标签页重新可见时再拉一次（便于长期开着的页面拿到当天更新）
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden) refresh(); });
+if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(()=>{ try{renderCharts();}catch(e){} }); }
+let _rsz; window.addEventListener("resize",()=>{ clearTimeout(_rsz); _rsz=setTimeout(()=>{ try{renderCharts();}catch(e){} },250); });
 
 </script>
 </body>
