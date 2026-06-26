@@ -273,6 +273,9 @@
 <footer>
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
+    <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
+      <span id="buildVer">v1.3.0</span> · build <span id="buildTime">—</span> · 全员数据库 1248 players · data <span id="dataVer">—</span>
+    </div>
   </div>
 </footer>
 
@@ -390,6 +393,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
+const APP_VERSION="v1.3.0", BUILD_TIME="2026-06-26 09:32";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -455,9 +459,10 @@ function renderStats(){
   countUp(document.getElementById("s-leagues"),leagues.length);
   countUp(document.getElementById("s-matches"),matchesCount);
 }
-let lastUpdated=null;
+let lastUpdated=null, dataUpdatedRaw=null;
 let matchesCount=54;
 function setUpdated(ts,live){
+  dataUpdatedRaw = ts || null;
   lastUpdated = ts?new Date(ts):new Date();
   const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
   document.getElementById("updated").textContent=
@@ -741,6 +746,8 @@ function renderFooter(){
   set("footPlayers",DATA.length); set("footPlayersEn",DATA.length);
   set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
   set("footMatches",matchesCount); set("footMatchesEn",matchesCount);
+  set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
+  set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot"));
 }
 function renderAll(){ recompute(); renderStats(); renderBoard(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); buildACIndex(); }
 
