@@ -113,17 +113,19 @@ def main():
     for r in roster_base:
         key=(r["nation"], surn(r["player"]))
         sc=scored.get(key)
+        base={"num":r.get("num"),"pos":r.get("pos"),"posZh":r.get("posZh")}
         if sc and key not in used:
             roster.append({"player":sc["player"],"nation":sc["nation"],"nationZh":sc["nationZh"],
-                "goals":sc["goals"],"club":sc["club"] or r["club"],"league":sc["league"] or r["league"]})
+                "goals":sc["goals"],"club":sc["club"] or r["club"],"league":sc["league"] or r["league"],
+                **base})
             used.add(key)
         else:
             roster.append({"player":r["player"],"nation":r["nation"],"nationZh":r["nationZh"],
-                "goals":0,"club":r["club"],"league":r["league"]})
+                "goals":0,"club":r["club"],"league":r["league"],**base})
     for s in scorers:
         key=(s["nation"], surn(s["player"]))
         if key not in used:
-            roster.append(dict(s)); used.add(key)
+            roster.append({**s,"num":None,"pos":"","posZh":""}); used.add(key)
     roster.sort(key=lambda x:(-x["goals"], x["player"]))
 
     out={"updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
