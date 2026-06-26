@@ -1,9 +1,9 @@
 {
- "updated": "2026-06-26T02:56:28+00:00",
+ "updated": "2026-06-26T04:32:37+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists, auto-generated",
- "count": 115,
- "totalGoals": 160,
- "matchesWithGoals": 54,
+ "count": 120,
+ "totalGoals": 165,
+ "matchesWithGoals": 55,
  "scorers": [
   {
    "player": "Lionel Messi",
@@ -334,12 +334,36 @@
    "league": "西甲"
   },
   {
+   "player": "Arda Güler",
+   "nation": "Turkey",
+   "nationZh": "Turkey",
+   "goals": 1,
+   "club": "Real Madrid C. F.",
+   "league": "西甲"
+  },
+  {
+   "player": "Auston Trusty",
+   "nation": "USA",
+   "nationZh": "美国",
+   "goals": 1,
+   "club": "Celtic FC",
+   "league": "苏超"
+  },
+  {
    "player": "Aymen Hussein",
    "nation": "Iraq",
    "nationZh": "伊拉克",
    "goals": 1,
    "club": "Al-Karma",
    "league": "伊拉克星级联赛"
+  },
+  {
+   "player": "Baris Alper Yilmaz",
+   "nation": "Turkey",
+   "nationZh": "Turkey",
+   "goals": 1,
+   "club": "Galatasaray SK",
+   "league": "土超"
   },
   {
    "player": "Bradley Barcola",
@@ -548,6 +572,14 @@
    "goals": 1,
    "club": "KRC Genk",
    "league": "比利时甲级"
+  },
+  {
+   "player": "Kaan Ayhan",
+   "nation": "Turkey",
+   "nationZh": "Turkey",
+   "goals": 1,
+   "club": "Galatasaray SK",
+   "league": "土超"
   },
   {
    "player": "Keito Nakamura",
@@ -860,6 +892,14 @@
    "goals": 1,
    "club": "Werder Bremen",
    "league": "德甲"
+  },
+  {
+   "player": "Sebastian Berhalter",
+   "nation": "USA",
+   "nationZh": "美国",
+   "goals": 1,
+   "club": "Vancouver Whitecaps FC",
+   "league": ""
   },
   {
    "player": "Soufiane Rahimi",
