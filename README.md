@@ -1,4 +1,4 @@
-# wc2026-scorers · 2026 世界杯射手榜
+# FIFA-World-Cup-2026-scorers · 2026 世界杯射手榜
 
 一个**中英双语**的 2026 美加墨世界杯（FIFA World Cup 2026）进球榜网站，数据**每天自动更新**，托管在 GitHub Pages 上，零成本、零维护。
 
