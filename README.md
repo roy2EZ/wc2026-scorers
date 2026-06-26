@@ -152,7 +152,7 @@ GitHub Actions (定时)  ->  update_data.py 抓取数据  ->  写入 data.json  
 
 ---
 
-## Run it manually
+## Update the result manually
 
 Repo top -> **Actions** -> **Update WC2026 scorers** -> **Run workflow**. After it finishes, the `Fetch latest goals` step prints something like:
 
@@ -163,7 +163,7 @@ This run added 3 goal(s):
   + 1 more goal: Brian Brobbey
 ```
 
-## 手动跑一次（想立刻更新时）
+## 手动跑一次数据更新（想立刻更新时）
 
 仓库顶部 Actions -> 左侧 Update WC2026 scorers -> Run workflow。跑完点进运行记录，Fetch latest goals 步骤会打印类似上面的输出。
 
