@@ -11,8 +11,9 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 ## Screenshots / 截图
 
 ### Hero & stats overview / 顶部与统计概览
-At-a-glance totals: goals, scorers, clubs, leagues, and matches with goals. The header shows whether data is `Live` (synced) or `Snapshot` (fallback).
-一眼掌握总数：总进球、进球球员、俱乐部、联赛、进球场次。抬头会显示数据是 `自动同步 Live` 还是 `内置快照 Snapshot`。
+At-a-glance totals: goals, scorers, clubs, leagues, and matches with goals. 
+
+一眼掌握总数：总进球、进球球员、俱乐部、联赛、进球场次。
 
 ![Hero & stats](screenshots/hero.png)
 
