@@ -1,9 +1,9 @@
 {
- "updated": "2026-06-26T19:53:50+00:00",
+ "updated": "2026-06-26T21:22:08+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists, auto-generated",
- "count": 120,
- "totalGoals": 165,
- "matchesWithGoals": 55,
+ "count": 125,
+ "totalGoals": 175,
+ "matchesWithGoals": 57,
  "scorers": [
   {
    "player": "Lionel Messi",
@@ -28,6 +28,14 @@
    "goals": 4,
    "club": "Real Madrid",
    "league": "西甲"
+  },
+  {
+   "player": "Ousmane Dembele",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 4,
+   "club": "Paris Saint-Germain",
+   "league": "法甲"
   },
   {
    "player": "Vinicius Junior",
@@ -60,6 +68,14 @@
    "goals": 3,
    "club": "PSV Eindhoven",
    "league": "荷甲"
+  },
+  {
+   "player": "Ismaila Sarr",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 3,
+   "club": "Crystal Palace",
+   "league": "英超"
   },
   {
    "player": "Johan Manzambi",
@@ -182,14 +198,6 @@
    "league": "德甲"
   },
   {
-   "player": "Ismaila Sarr",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 2,
-   "club": "Crystal Palace",
-   "league": "英超"
-  },
-  {
    "player": "Julian Quinones",
    "nation": "Mexico",
    "nationZh": "墨西哥",
@@ -227,6 +235,14 @@
    "nationZh": "科特迪瓦",
    "goals": 2,
    "club": "Villarreal",
+   "league": "西甲"
+  },
+  {
+   "player": "Pape Gueye",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 2,
+   "club": "Villarreal CF",
    "league": "西甲"
   },
   {
@@ -406,6 +422,14 @@
    "league": "苏超"
   },
   {
+   "player": "Désiré Doué",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 1,
+   "club": "Paris Saint-Germain",
+   "league": "法甲"
+  },
+  {
    "player": "Emam Ashour",
    "nation": "Egypt",
    "nationZh": "埃及",
@@ -470,6 +494,14 @@
    "league": "英超"
   },
   {
+   "player": "Habib Diarra",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 1,
+   "club": "Sunderland AFC",
+   "league": "英超"
+  },
+  {
    "player": "Hassan Al Haidos",
    "nation": "Qatar",
    "nationZh": "卡塔尔",
@@ -508,6 +540,14 @@
    "goals": 1,
    "club": "Paris Saint-Germain",
    "league": "法甲"
+  },
+  {
+   "player": "Iliman Ndiaye",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 1,
+   "club": "FC Bayern München",
+   "league": "德甲"
   },
   {
    "player": "Jamal Musiala",
@@ -838,14 +878,6 @@
    "league": "斯洛文尼亚甲级"
   },
   {
-   "player": "Ousmane Dembele",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 1,
-   "club": "Paris Saint-Germain",
-   "league": "法甲"
-  },
-  {
    "player": "Petar Musa",
    "nation": "Croatia",
    "nationZh": "克罗地亚",
@@ -926,6 +958,14 @@
    "league": "塞浦路斯甲级"
   },
   {
+   "player": "Thelo Aasgaard",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "club": "Rangers FC",
+   "league": "苏超"
+  },
+  {
    "player": "Trezeguet",
    "nation": "Egypt",
    "nationZh": "埃及",
@@ -1002,6 +1042,17 @@
    "posZh": "前锋"
   },
   {
+   "player": "Ousmane Dembele",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 4,
+   "club": "Paris Saint-Germain",
+   "league": "法甲",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋"
+  },
+  {
    "player": "Vinicius Junior",
    "nation": "Brazil",
    "nationZh": "巴西",
@@ -1044,6 +1095,17 @@
    "num": 11,
    "pos": "MF",
    "posZh": "中场"
+  },
+  {
+   "player": "Ismaila Sarr",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 3,
+   "club": "Crystal Palace",
+   "league": "英超",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫"
   },
   {
    "player": "Johan Manzambi",
@@ -1200,17 +1262,6 @@
    "posZh": "前锋"
   },
   {
-   "player": "Ismaila Sarr",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 2,
-   "club": "Crystal Palace",
-   "league": "英超",
-   "num": 2,
-   "pos": "DF",
-   "posZh": "后卫"
-  },
-  {
    "player": "Julian Quinones",
    "nation": "Mexico",
    "nationZh": "墨西哥",
@@ -1264,6 +1315,17 @@
    "num": 19,
    "pos": "FW",
    "posZh": "前锋"
+  },
+  {
+   "player": "Pape Gueye",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 2,
+   "club": "Villarreal CF",
+   "league": "西甲",
+   "num": 26,
+   "pos": "MF",
+   "posZh": "中场"
   },
   {
    "player": "Ruben Vargas",
@@ -1508,6 +1570,17 @@
    "posZh": ""
   },
   {
+   "player": "Désiré Doué",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 1,
+   "club": "Paris Saint-Germain",
+   "league": "法甲",
+   "num": 20,
+   "pos": "FW",
+   "posZh": "前锋"
+  },
+  {
    "player": "Emam Ashour",
    "nation": "Egypt",
    "nationZh": "埃及",
@@ -1596,6 +1669,17 @@
    "posZh": "中场"
   },
   {
+   "player": "Habib Diarra",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 1,
+   "club": "Sunderland AFC",
+   "league": "英超",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场"
+  },
+  {
    "player": "Hassan Al Haidos",
    "nation": "Qatar",
    "nationZh": "卡塔尔",
@@ -1647,6 +1731,17 @@
    "club": "Paris Saint-Germain",
    "league": "法甲",
    "num": 20,
+   "pos": "FW",
+   "posZh": "前锋"
+  },
+  {
+   "player": "Iliman Ndiaye",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 1,
+   "club": "FC Bayern München",
+   "league": "德甲",
+   "num": 13,
    "pos": "FW",
    "posZh": "前锋"
   },
@@ -2102,17 +2197,6 @@
    "posZh": "后卫"
   },
   {
-   "player": "Ousmane Dembele",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 1,
-   "club": "Paris Saint-Germain",
-   "league": "法甲",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋"
-  },
-  {
    "player": "Petar Musa",
    "nation": "Croatia",
    "nationZh": "克罗地亚",
@@ -2221,6 +2305,17 @@
    "num": 12,
    "pos": "FW",
    "posZh": "前锋"
+  },
+  {
+   "player": "Thelo Aasgaard",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "club": "Rangers FC",
+   "league": "苏超",
+   "num": 19,
+   "pos": "MF",
+   "posZh": "中场"
   },
   {
    "player": "Trezeguet",
@@ -5292,17 +5387,6 @@
    "posZh": "后卫"
   },
   {
-   "player": "Desire Doue",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 0,
-   "club": "Paris Saint-Germain",
-   "league": "法甲",
-   "num": 20,
-   "pos": "FW",
-   "posZh": "前锋"
-  },
-  {
    "player": "Deveron Fonville",
    "nation": "Curaçao",
    "nationZh": "库拉索",
@@ -6821,17 +6905,6 @@
    "posZh": "中场"
   },
   {
-   "player": "Habib H. Diarra",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 0,
-   "club": "Sunderland AFC",
-   "league": "英超",
-   "num": 21,
-   "pos": "MF",
-   "posZh": "中场"
-  },
-  {
    "player": "Haissem H. Hassan",
    "nation": "Egypt",
    "nationZh": "埃及",
@@ -7312,17 +7385,6 @@
    "club": "Brentford FC",
    "league": "英超",
    "num": 25,
-   "pos": "FW",
-   "posZh": "前锋"
-  },
-  {
-   "player": "Iliman Ndiaye",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 0,
-   "club": "Everton FC",
-   "league": "英超",
-   "num": 13,
    "pos": "FW",
    "posZh": "前锋"
   },
@@ -12112,17 +12174,6 @@
    "posZh": "中场"
   },
   {
-   "player": "Pape Gueye",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 0,
-   "club": "Villarreal CF",
-   "league": "西甲",
-   "num": 26,
-   "pos": "MF",
-   "posZh": "中场"
-  },
-  {
    "player": "Pape P.m. Sarr",
    "nation": "Senegal",
    "nationZh": "塞内加尔",
@@ -13912,17 +13963,6 @@
    "club": "Orlando Pirates FC",
    "league": "南非超",
    "num": 5,
-   "pos": "MF",
-   "posZh": "中场"
-  },
-  {
-   "player": "Thelo Aasgaard",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 0,
-   "club": "Rangers FC",
-   "league": "苏超",
-   "num": 19,
    "pos": "MF",
    "posZh": "中场"
   },
