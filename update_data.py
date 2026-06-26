@@ -77,15 +77,23 @@ def main():
         club,lg=from_db(std,team)
         return std,club,lg
 
+    # 读取上一次的 data.json，用于对比本次新增
+    prev=load(DATA_F,{})
+    prev_goals={s["player"]:s["goals"] for s in prev.get("scorers",[])}
+
     tally={}
+    matches_with_goals=0
     for mt in wc.get("matches",[]):
         if not mt.get("score",{}).get("ft"): continue
+        had_goal=False
         for side,team in (("goals1",mt.get("team1")),("goals2",mt.get("team2"))):
             for g in mt.get(side,[]):
                 if g.get("owngoal") or not g.get("name"): continue
+                had_goal=True
                 std,club,lg=resolve(g["name"],team)
                 rec=tally.setdefault(std,{"goals":0,"nation":team,"club":club,"league":lg})
                 rec["goals"]+=1
+        if had_goal: matches_with_goals+=1
 
     scorers=[]
     for std,rec in tally.items():
@@ -96,9 +104,25 @@ def main():
     scorers.sort(key=lambda x:(-x["goals"],x["player"]))
     out={"updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists, auto-generated",
-         "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),"scorers":scorers}
+         "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
+         "matchesWithGoals":matches_with_goals,"scorers":scorers}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     miss=[s["player"] for s in scorers if not s["club"]]
-    print(f"OK: {len(scorers)} scorers, {out['totalGoals']} goals. 无俱乐部 {len(miss)} 人: {miss if miss else '无'}")
+    # 对比上次：新晋进球者 + 进球数增加的球员
+    new_scorers=[s for s in scorers if s["player"] not in prev_goals]
+    up_scorers=[(s["player"], s["goals"]-prev_goals[s["player"]])
+                for s in scorers if s["player"] in prev_goals and s["goals"]>prev_goals[s["player"]]]
+    added_goals=sum(n for _,n in up_scorers)+sum(s["goals"] for s in new_scorers)
+    print(f"OK: {len(scorers)} scorers, {out['totalGoals']} goals, "
+          f"{matches_with_goals} matches with goals. 无俱乐部 {len(miss)} 人: {miss if miss else '无'}")
+    if prev_goals:
+        if new_scorers or up_scorers:
+            print(f"本次新增 {added_goals} 球：")
+            for s in new_scorers:
+                print(f"  + 新进球者 {s['player']} ({s['nationZh']}) {s['goals']} 球")
+            for name,n in up_scorers:
+                print(f"  ↑ {name} +{n} 球")
+        else:
+            print("本次无新增进球。")
 
 if __name__=="__main__": main()

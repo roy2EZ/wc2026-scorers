@@ -41,7 +41,7 @@
   .sub{color:#CBD2E4;font-size:15px;max-width:600px}
   .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:6px}
 
-  .scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+  .scoreboard{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
   .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
     border-radius:14px;padding:18px 16px;position:relative;overflow:hidden}
   .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
@@ -126,7 +126,7 @@
 
   @media(max-width:1024px) and (min-width:761px){ .charts{grid-template-columns:1fr 1fr} }
   @media(max-width:760px){
-    .scoreboard{grid-template-columns:1fr 1fr}
+    .scoreboard{grid-template-columns:repeat(3,1fr)}
     .charts{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -150,6 +150,7 @@
       <div class="stat"><div class="num" id="s-players">0</div><div class="lab">进球球员 Scorers</div></div>
       <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab">俱乐部 Clubs</div></div>
       <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab">联赛 Leagues</div></div>
+      <div class="stat"><div class="num" id="s-matches">0</div><div class="lab">进球场次 Matches</div></div>
     </div>
   </div>
 </header>
@@ -255,7 +256,7 @@
 
 <footer>
   <div class="wrap">
-    数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
+    数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
   </div>
 </footer>
 
@@ -434,8 +435,10 @@ function renderStats(){
   countUp(document.getElementById("s-players"),DATA.length);
   countUp(document.getElementById("s-clubs"),clubs.length);
   countUp(document.getElementById("s-leagues"),leagues.length);
+  countUp(document.getElementById("s-matches"),matchesCount);
 }
 let lastUpdated=null;
+let matchesCount=54;
 function setUpdated(ts,live){
   lastUpdated = ts?new Date(ts):new Date();
   const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
@@ -659,6 +662,7 @@ function renderFooter(){
   set("footDate",zh); set("footDateEn",en);
   set("footPlayers",DATA.length); set("footPlayersEn",DATA.length);
   set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
+  set("footMatches",matchesCount); set("footMatchesEn",matchesCount);
 }
 function renderAll(){ recompute(); renderStats(); renderBoard(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
 
@@ -674,6 +678,7 @@ async function refresh(){
         teamZh:x.nationZh || NATIONZH[x.nation] || x.nation,
         goals:x.goals, club:x.club||"—", league:x.league||"—"
       }));
+      if(typeof j.matchesWithGoals==="number") matchesCount=j.matchesWithGoals;
       renderAll(); setUpdated(j.updated, true);
       return true;
     }

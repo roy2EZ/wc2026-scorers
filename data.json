@@ -1,8 +1,9 @@
 {
- "updated": "2026-06-26T01:31:21+00:00",
+ "updated": "2026-06-26T01:31:07+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists, auto-generated",
  "count": 115,
  "totalGoals": 160,
+ "matchesWithGoals": 54,
  "scorers": [
   {
    "player": "Lionel Messi",
@@ -221,11 +222,11 @@
    "league": "西甲"
   },
   {
-   "player": "Nicolas Pépé",
+   "player": "Nicolas Pepe",
    "nation": "Ivory Coast",
    "nationZh": "科特迪瓦",
    "goals": 2,
-   "club": "Villarreal CF",
+   "club": "Villarreal",
    "league": "西甲"
   },
   {
@@ -431,10 +432,10 @@
   {
    "player": "Gonzalo Plata",
    "nation": "Ecuador",
-   "nationZh": "厄瓜多尔",
+   "nationZh": "乌拉圭",
    "goals": 1,
-   "club": "CR Flamengo",
-   "league": "巴西甲级"
+   "club": "Al-Ittihad",
+   "league": "沙特职业联赛"
   },
   {
    "player": "Granit Xhaka",
@@ -597,11 +598,11 @@
    "league": "意甲"
   },
   {
-   "player": "Leroy Sané",
+   "player": "Leroy Sane",
    "nation": "Germany",
    "nationZh": "德国",
    "goals": 1,
-   "club": "Galatasaray SK",
+   "club": "Galatasaray",
    "league": "土超"
   },
   {
@@ -769,8 +770,8 @@
    "nation": "Ecuador",
    "nationZh": "厄瓜多尔",
    "goals": 1,
-   "club": "Sunderland AFC",
-   "league": "英超"
+   "club": "Anderlecht",
+   "league": "比利时甲级"
   },
   {
    "player": "Nizar Al-Rashdan",
@@ -873,7 +874,7 @@
    "nation": "South Africa",
    "nationZh": "南非",
    "goals": 1,
-   "club": "Mamelodi Sundowns FC",
+   "club": "Mamelodi Sundowns",
    "league": "南非超"
   },
   {
