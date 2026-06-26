@@ -112,7 +112,7 @@
   .chips{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px}
   .chips button{font-family:'Space Mono',monospace;font-size:13px;color:var(--mut);background:none;border:none;
     padding:8px 13px;border-radius:8px;cursor:pointer;transition:.15s}
-  .chips button.on{background:var(--card2);color:var(--ink)}
+  .chips button.on{background:var(--grad);color:#180a12;font-weight:700;box-shadow:0 2px 10px rgba(255,45,120,.35)}
 
   .tbl{width:100%;border-collapse:collapse;font-size:14px}
   .tbl thead th{position:sticky;top:0;background:var(--bg2);text-align:left;font-size:12px;
@@ -274,7 +274,7 @@
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
     <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.3.1</span> · build <span id="buildTime">—</span> · 全员数据库 1248 players · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.3.2</span> · build <span id="buildTime">—</span> · 全员数据库 1248 players · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -393,7 +393,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.3.1", BUILD_TIME="2026-06-26 09:39";
+const APP_VERSION="v1.3.2", BUILD_TIME="2026-06-26 09:43";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -634,13 +634,21 @@ function populateLeagueFilter(){
     leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
   if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
 }
-let q="",leagueF="",minG=1,sortK="goals",sortDir=-1;
+let q="",leagueF="",minG=1,sortK="goals",sortDir=-1,acExact=null;
 
 function render(){
   let rows=TABLE_DATA.filter(d=>d.goals>=minG)
     .filter(d=>!leagueF||d.league===leagueF)
-    .filter(d=>{if(!q)return true;const s=q.toLowerCase();
-      return [d.player,d.club,d.league,d.teamZh,d.teamEn,pz(d.player),cz(d.club)].some(v=>v.toLowerCase().includes(s));});
+    .filter(d=>{
+      if(acExact){  // 从下拉精确选择：按字段精确匹配，避免"葡萄牙"误含"葡萄牙体育"
+        if(acExact.type==="nat") return d.teamZh===acExact.value || d.teamEn===acExact.value;
+        if(acExact.type==="club") return cz(d.club)===acExact.value || d.club===acExact.value;
+        if(acExact.type==="player") return pz(d.player)===acExact.value || d.player===acExact.value;
+      }
+      if(!q)return true;
+      const s=q.toLowerCase();
+      return [d.player,d.club,d.league,d.teamZh,d.teamEn,pz(d.player),cz(d.club)].some(v=>v.toLowerCase().includes(s));
+    });
   rows.sort((a,b)=>{
     let r; if(sortK==="goals")r=a.goals-b.goals;
     else r=String(a[sortK]).localeCompare(String(b[sortK]),"zh");
@@ -687,30 +695,34 @@ function renderAC(){
   });
   const top=hits.slice(0,10);
   if(!top.length){ box.style.display="none"; box.innerHTML=""; acSel=-1; return; }
-  box.innerHTML=top.map((it,i)=>`<div class="acitem${i===acSel?' sel':''}" data-term="${it.term.replace(/"/g,'&quot;')}">
+  box.innerHTML=top.map((it,i)=>{
+    const tcode=it.type.startsWith("国家队")?"nat":it.type.startsWith("俱乐部")?"club":"player";
+    return `<div class="acitem${i===acSel?' sel':''}" data-term="${it.term.replace(/"/g,'&quot;')}" data-type="${tcode}">
     ${it.flag?`<span class="acflag">${it.flag}</span>`:''}<span>${it.label}${it.sub&&it.sub!==it.label?` <span class="acsub">${it.sub}</span>`:''}</span>
-    <span class="tag">${it.type}</span></div>`).join("");
+    <span class="tag">${it.type}</span></div>`;
+  }).join("");
   box.style.display="block";
 }
-function pickAC(term){
-  q=term; const inp=document.getElementById("q"); inp.value=term;
+function pickAC(term,type){
+  acExact = type ? {type,value:term} : null;   // 精确字段筛选
+  q=""; const inp=document.getElementById("q"); inp.value=term;
   document.getElementById("acbox").style.display="none"; acSel=-1;
   render();
 }
-document.getElementById("q").addEventListener("input",e=>{q=e.target.value;acSel=-1;render();renderAC();});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;acExact=null;acSel=-1;render();renderAC();});
 document.getElementById("q").addEventListener("keydown",e=>{
   const box=document.getElementById("acbox"); if(box.style.display==="none")return;
   const items=[...box.querySelectorAll(".acitem")];
   if(e.key==="ArrowDown"){e.preventDefault();acSel=Math.min(acSel+1,items.length-1);}
   else if(e.key==="ArrowUp"){e.preventDefault();acSel=Math.max(acSel-1,0);}
-  else if(e.key==="Enter"){if(acSel>=0&&items[acSel]){e.preventDefault();pickAC(items[acSel].dataset.term);}return;}
+  else if(e.key==="Enter"){if(acSel>=0&&items[acSel]){e.preventDefault();pickAC(items[acSel].dataset.term,items[acSel].dataset.type);}return;}
   else if(e.key==="Escape"){box.style.display="none";acSel=-1;return;}
   else return;
   items.forEach((it,i)=>it.classList.toggle("sel",i===acSel));
   if(items[acSel])items[acSel].scrollIntoView({block:"nearest"});
 });
 document.getElementById("acbox").addEventListener("mousedown",e=>{
-  const it=e.target.closest(".acitem"); if(it){e.preventDefault();pickAC(it.dataset.term);}
+  const it=e.target.closest(".acitem"); if(it){e.preventDefault();pickAC(it.dataset.term,it.dataset.type);}
 });
 document.addEventListener("click",e=>{
   if(!e.target.closest(".search")) document.getElementById("acbox").style.display="none";
