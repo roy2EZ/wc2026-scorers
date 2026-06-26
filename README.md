@@ -153,10 +153,10 @@ GitHub Actions (定时)  ->  update_data.py 抓取数据  ->  写入 data.json  
 Repo top -> **Actions** -> **Update WC2026 scorers** -> **Run workflow**. After it finishes, the `Fetch latest goals` step prints something like:
 
 ```
-OK: 115 scorers, 160 goals, 54 matches with goals. 无俱乐部 0 人: 无
-本次新增 3 球：
-  + 新进球者 前田大然 (日本) 1 球
-  ↑ Brian Brobbey +1 球
+OK: 120 scorers, 165 goals, 55 matches with goals. Clubs missing: 0.
+This run added 3 goal(s):
+  + New scorer Daizen Maeda (Japan) 1 goal
+  + 1 more goal: Brian Brobbey
 ```
 
 ## 手动跑一次（想立刻更新时）

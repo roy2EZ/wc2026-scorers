@@ -114,15 +114,17 @@ def main():
                 for s in scorers if s["player"] in prev_goals and s["goals"]>prev_goals[s["player"]]]
     added_goals=sum(n for _,n in up_scorers)+sum(s["goals"] for s in new_scorers)
     print(f"OK: {len(scorers)} scorers, {out['totalGoals']} goals, "
-          f"{matches_with_goals} matches with goals. 无俱乐部 {len(miss)} 人: {miss if miss else '无'}")
+          f"{matches_with_goals} matches with goals. Clubs missing: {len(miss)}"
+          + (f" -> {miss}" if miss else "."))
     if prev_goals:
         if new_scorers or up_scorers:
-            print(f"本次新增 {added_goals} 球：")
+            print(f"This run added {added_goals} goal(s):")
             for s in new_scorers:
-                print(f"  + 新进球者 {s['player']} ({s['nationZh']}) {s['goals']} 球")
+                g=s['goals']
+                print(f"  + New scorer {s['player']} ({s['nation']}) {g} goal{'s' if g!=1 else ''}")
             for name,n in up_scorers:
-                print(f"  ↑ {name} +{n} 球")
+                print(f"  + {n} more goal{'s' if n!=1 else ''}: {name}")
         else:
-            print("本次无新增进球。")
+            print("No new goals this run.")
 
 if __name__=="__main__": main()
