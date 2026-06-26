@@ -102,10 +102,35 @@ def main():
         scorers.append({"player":std,"nation":rec["nation"],"nationZh":nationZh,
             "goals":rec["goals"],"club":rec["club"],"league":rec["league"]})
     scorers.sort(key=lambda x:(-x["goals"],x["player"]))
+
+    # ---- 全员名册（roster）：1248 名参赛球员，没进球的进球数为 0 ----
+    # 表格"全部(含0)"用它；统计与图表仍只用 scorers，不被稀释。
+    roster_base=load("roster.json",[])
+    def surn(n):
+        p=n.split(); return sa(p[-1]).lower() if p else ""
+    scored={(s["nation"], surn(s["player"])):s for s in scorers}
+    roster=[]; used=set()
+    for r in roster_base:
+        key=(r["nation"], surn(r["player"]))
+        sc=scored.get(key)
+        if sc and key not in used:
+            roster.append({"player":sc["player"],"nation":sc["nation"],"nationZh":sc["nationZh"],
+                "goals":sc["goals"],"club":sc["club"] or r["club"],"league":sc["league"] or r["league"]})
+            used.add(key)
+        else:
+            roster.append({"player":r["player"],"nation":r["nation"],"nationZh":r["nationZh"],
+                "goals":0,"club":r["club"],"league":r["league"]})
+    for s in scorers:
+        key=(s["nation"], surn(s["player"]))
+        if key not in used:
+            roster.append(dict(s)); used.add(key)
+    roster.sort(key=lambda x:(-x["goals"], x["player"]))
+
     out={"updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists, auto-generated",
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
-         "matchesWithGoals":matches_with_goals,"scorers":scorers}
+         "matchesWithGoals":matches_with_goals,"scorers":scorers,
+         "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
     miss=[s["player"] for s in scorers if not s["club"]]
     # 对比上次：新晋进球者 + 进球数增加的球员

@@ -231,9 +231,12 @@
       </label>
       <select id="leagueSel"></select>
       <div class="chips" id="minchips">
-        <button class="on" data-min="1">全部 All</button>
+        <button data-min="0">全部 All</button>
+        <button class="on" data-min="1">1+</button>
         <button data-min="2">2+</button>
         <button data-min="3">3+</button>
+        <button data-min="4">4+</button>
+        <button data-min="5">5+</button>
       </div>
     </div>
     <div class="tablecard">
@@ -374,6 +377,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
+let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
 const FLAG={ "Argentina":"🇦🇷","Canada":"🇨🇦","USA":"🇺🇸","Germany":"🇩🇪","Sweden":"🇸🇪","New Zealand":"🇳🇿",
@@ -614,7 +618,7 @@ function populateLeagueFilter(){
 let q="",leagueF="",minG=1,sortK="goals",sortDir=-1;
 
 function render(){
-  let rows=DATA.filter(d=>d.goals>=minG)
+  let rows=TABLE_DATA.filter(d=>d.goals>=minG)
     .filter(d=>!leagueF||d.league===leagueF)
     .filter(d=>{if(!q)return true;const s=q.toLowerCase();
       return [d.player,d.club,d.league,d.teamZh,d.teamEn,pz(d.player),cz(d.club)].some(v=>v.toLowerCase().includes(s));});
@@ -629,7 +633,8 @@ function render(){
     <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}</td>
     <td>${cz(d.club)}<div class="psub">${d.club}</div></td>
     <td><div class="cmut">${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
-  rowcount.textContent=rows.length+" / "+DATA.length+" 名进球者 scorers";
+  const totalN=(minG<=0?TABLE_DATA.length:TABLE_DATA.filter(d=>d.goals>=1).length);
+  rowcount.textContent=rows.length+" / "+totalN+(minG<=0?" 名球员 players":" 名进球者 scorers");
 }
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
 sel.addEventListener("change",e=>{leagueF=e.target.value;render();});
@@ -679,6 +684,9 @@ async function refresh(){
         goals:x.goals, club:x.club||"—", league:x.league||"—"
       }));
       if(typeof j.matchesWithGoals==="number") matchesCount=j.matchesWithGoals;
+      if(Array.isArray(j.roster) && j.roster.length){
+        TABLE_DATA = j.roster.map(x=>({player:x.player,teamEn:x.nation,goals:x.goals,club:x.club,league:x.league,teamZh:x.nationZh}));
+      } else { TABLE_DATA = DATA; }
       renderAll(); setUpdated(j.updated, true);
       return true;
     }
