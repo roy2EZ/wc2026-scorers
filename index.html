@@ -77,6 +77,9 @@
   .chartcard h3{font-size:14px;color:var(--mut);margin-bottom:6px;font-weight:700}
   .chead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
   .chead h3{margin:0}
+  .chead.stack{flex-direction:column;align-items:stretch;gap:8px}
+  .chead.stack .selrow{display:flex;gap:6px;justify-content:flex-start;flex-wrap:wrap}
+  .chead.stack .selrow .miniSel{max-width:none;flex:1;min-width:120px}
   .miniSel{background:var(--card2);border:1px solid var(--line);color:var(--ink);
     font-family:'Noto Sans SC';font-size:12px;border-radius:8px;padding:5px 9px;outline:none;cursor:pointer;max-width:58%}
   .chartcard .cwrap{position:relative;width:100%}
@@ -138,7 +141,7 @@
       <span class="live"><span class="dot"></span>实时追踪 Live</span>
     </div>
     <h1>GOAL<span class="g">SCORERS</span></h1>
-    <div class="zh-title">2026世界杯 · 进球榜　World Cup 2026 · Goalscorers</div>
+    <div class="zh-title">2026世界杯 · 进球榜</div>
     <p class="sub">本届世界杯每一位进球球员，以及他所属的俱乐部与联赛。下方可按联赛、按俱乐部看进球分布，也可在表格里搜索筛选。<span class="en">Every goalscorer of the 2026 World Cup — with their club and league. See goals by league and by club below, or search and filter the table.</span></p>
     <p class="updated" id="updated"></p>
 
@@ -177,35 +180,40 @@
     </div>
     <div class="charts">
       <div class="chartcard">
-        <div class="chead"><h3 id="leagueTitle">按联赛</h3>
-          <select class="miniSel topn" id="topLeagueSel">
-            <option value="10" selected>前10 Top 10</option>
-            <option value="15">前15 Top 15</option>
-            <option value="20">前20 Top 20</option>
-            <option value="all">全部 All</option>
-          </select></div>
+        <div class="chead stack"><h3 id="leagueTitle">按联赛</h3>
+          <div class="selrow">
+            <select class="miniSel topn" id="topLeagueSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
         <div class="cwrap"><div class="ylabels" id="leagueLabels"></div><canvas id="leagueChart"></canvas></div>
       </div>
       <div class="chartcard">
-        <div class="chead"><h3 id="clubTitle">按俱乐部</h3>
-          <span style="display:flex;gap:6px">
-          <select id="clubLeagueSel" class="miniSel"></select>
-          <select class="miniSel topn" id="topClubSel">
-            <option value="10" selected>前10 Top 10</option>
-            <option value="15">前15 Top 15</option>
-            <option value="20">前20 Top 20</option>
-            <option value="all">全部 All</option>
-          </select></span></div>
+        <div class="chead stack"><h3 id="clubTitle">按俱乐部</h3>
+          <div class="selrow">
+            <select id="clubLeagueSel" class="miniSel"></select>
+            <select class="miniSel topn" id="topClubSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
         <div class="cwrap"><div class="ylabels" id="clubLabels"></div><canvas id="clubChart"></canvas></div>
       </div>
       <div class="chartcard">
-        <div class="chead"><h3 id="natTitle">按国家队</h3>
-          <select class="miniSel topn" id="topNatSel">
-            <option value="10" selected>前10 Top 10</option>
-            <option value="15">前15 Top 15</option>
-            <option value="20">前20 Top 20</option>
-            <option value="all">全部 All</option>
-          </select></div>
+        <div class="chead stack"><h3 id="natTitle">按国家队</h3>
+          <div class="selrow">
+            <select class="miniSel topn" id="topNatSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
         <div class="cwrap"><div class="ylabels" id="natLabels"></div><canvas id="natChart"></canvas></div>
       </div>
     </div>
