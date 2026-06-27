@@ -95,10 +95,25 @@ openfootball 进球 → 解析 player id → 按 id 累加 → JOIN clubs/nation
 
 ---
 
+## data.json 自动更新与冲突处理（push 本地改动时照此做）
+
+`data.json` 是**产物**，GitHub Actions 每天会自动重生成并 commit 到 `main`。机器人对自己永远 fast-forward，不会冲突。冲突只在**本地有改动要 push、而机器人在这期间也 push 过**时出现（分支分叉）。这不是 bug，按下面固定流程处理即可，对作者无感：
+
+1. **动手前先同步**：改任何东西前 `git pull`（或 `git fetch`），基于最新 `main` 工作。
+2. **push 前再同步一次**：`git fetch` 后若已分叉，用 `git rebase origin/main`。
+3. **data.json 冲突一律以"重新生成"解决，不手动拼 JSON**：
+   - 冲突时随便取一侧结束 rebase（`git checkout --ours data.json && git add data.json && git rebase --continue`），
+   - 然后重跑 `python update_data.py` 用线上最新数据覆盖生成，再 `git add data.json` amend 进发布提交。
+   - 产物永远以 `update_data.py` 的输出为准——**绝不手工合并 scorers/roster**。
+4. **本地跑 update_data.py 报 SSL 证书错**（sandbox 限制）：先 `export SSL_CERT_FILE=$(python -c "import certifi;print(certifi.where())")` 再跑。CI 环境无此问题。
+5. 重生成后照常 `python validate_db.py` 必须全绿，再 push。
+
+---
+
 ## 已知边界 / 待办
 
 - **长尾俱乐部中文名**：457 家中约 320+ 家冷门队无中文名（显示英文）。不影响一致性（不会重复），仅缺翻译。有进球者的俱乐部已全部有中文名。若长尾队出现进球者，校验会提示，补一个即可。
-- **机器人会自动 commit data.json**：本地/网页改动前先 `git pull`，避免冲突。
+- **机器人会自动 commit data.json**：本地/网页改动前先 `git pull`；冲突处理见上方「data.json 自动更新与冲突处理」。
 - **workflow 已升级到 Node 24 兼容版**（checkout v5 / setup-python v6）。
 
 ---
