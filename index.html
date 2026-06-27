@@ -39,14 +39,19 @@
   .zh-title{font-family:'Noto Sans SC';font-weight:900;font-size:clamp(22px,5vw,34px);
     letter-spacing:.04em;margin-bottom:10px}
   .sub{color:#CBD2E4;font-size:15px;max-width:600px}
-  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:6px}
+  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:10px}
+  .updated .upday{font-size:19px;font-weight:700;color:#EAEEF7;letter-spacing:.01em}
+  .updated .uptime{color:#8a93ab}
 
-  .scoreboard{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
+  .scoreboard{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
   .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
     border-radius:14px;padding:18px 16px;position:relative;overflow:hidden}
   .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
   .stat .num{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1}
   .stat .lab{font-size:12px;letter-spacing:.06em;color:var(--mut);margin-top:8px}
+  .stat.sched .num{font-size:clamp(20px,3vw,30px);letter-spacing:-.02em;white-space:normal;line-height:1.05}
+  .stat.sched .schzh{display:block;color:#dfe4f0;font-weight:700;font-size:12.5px;margin-bottom:2px;letter-spacing:.02em}
+  .stat.sched::before{background:linear-gradient(180deg,#37e0a0,#19b4d8)}
 
   section{padding:38px 0;background:var(--bg)}
   .shead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
@@ -56,22 +61,23 @@
   .sub .en{display:block;color:#9aa3bd;font-size:13.5px;margin-top:3px}
   .note{font-size:13px;color:var(--mut)}
 
-  .board{display:grid;grid-template-columns:1fr;gap:10px}
+  .board{display:grid;grid-template-columns:1fr;gap:10px;max-width:880px;margin-inline:auto}
   .row{position:relative;overflow:hidden;display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
     border-radius:12px;padding:11px 14px;transition:transform .15s,border-color .15s}
   .row:hover{transform:translateY(-2px);filter:brightness(1.08)}
-  .row>.fill{position:absolute;left:0;top:0;bottom:0;width:0;z-index:0;border-radius:11px 0 0 11px;transition:width .7s cubic-bezier(.22,1,.36,1)}
-  .row>.rank,.row>.flag,.row>.who,.row>.balls{position:relative;z-index:1}
-  .row.top3{border-width:1px;box-shadow:0 0 0 1px rgba(255,176,46,.12),0 6px 18px -10px rgba(255,45,120,.4)}
+  .row.top3{box-shadow:0 0 0 1px rgba(255,176,46,.12),0 6px 18px -10px rgba(255,45,120,.4)}
   .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px;text-align:center}
   .rank.medal{font-size:20px;width:26px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
   .flag{font-size:21px;line-height:1}
   .who{flex:1;min-width:0}
   .who .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .who .cl{font-size:12px;color:#C0C8DD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .balls{font-family:'Space Mono',monospace;font-weight:700;font-size:18px;
+  .team{display:flex;flex-direction:column;align-items:center;gap:3px;width:50px;flex:none}
+  .team .flag{font-size:25px;line-height:1}
+  .team .tnm{font-size:10px;color:#d2d8e8;font-weight:600;white-space:nowrap;letter-spacing:.01em}
+  .balls{font-family:'Space Mono',monospace;font-weight:700;font-size:22px;min-width:1.4em;text-align:right;
     background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .score{display:flex;align-items:center;gap:9px}
+  .score{display:flex;align-items:center;gap:10px}
   .pips{display:inline-flex;flex-wrap:wrap;gap:3px;max-width:108px;justify-content:flex-end;align-items:center}
   .pip{font-style:normal;font-size:13px;line-height:1;width:18px;height:18px;
     display:inline-flex;align-items:center;justify-content:center}
@@ -136,6 +142,7 @@
   .tbl tbody tr:hover{background:rgba(26,34,56,.5)}
   .tbl .gv{font-family:'Space Mono',monospace;font-weight:700;text-align:center;width:48px}
   .g3{color:var(--amber)} .g2{color:var(--cyan)}
+  .penmk{color:var(--pink);font-size:9px;font-weight:800;vertical-align:super;margin-left:1px;letter-spacing:.02em}
   .pname{font-weight:700}
   .cmut{color:#CBD2E4}
   .psub{font-size:11px;color:#9aa3bd;font-weight:400;margin-top:1px;letter-spacing:.01em}
@@ -169,6 +176,7 @@
     <p class="updated" id="updated"></p>
 
     <div class="scoreboard">
+      <div class="stat sched"><div class="num" id="s-stage">—</div><div class="lab" id="s-sched">赛程 Schedule</div></div>
       <div class="stat"><div class="num" id="s-goals">0</div><div class="lab">总进球 Goals</div></div>
       <div class="stat"><div class="num" id="s-players">0</div><div class="lab">进球球员 Scorers</div></div>
       <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab">俱乐部 Clubs</div></div>
@@ -251,7 +259,7 @@
 <section style="padding-top:6px">
   <div class="wrap">
     <div class="shead"><h2>全部<b>球员查询</b><span class="enh">All Players</span></h2></div>
-    <p class="subnote">完整收录本届世界杯全部 48 队 1248 名参赛球员，可查询每位球员的国家队、号码、位置、所属俱乐部与联赛——包含尚未/没有进球的球员（进球数记为 0）。默认仅显示已进球球员，点「全部 All」查看全部名单。<span style="display:block;margin-top:3px;color:#8a93ab">A full searchable database of all 1,248 players across 48 teams — including those with 0 goals. Default view shows scorers only.</span></p>
+    <p class="subnote">完整收录本届世界杯全部 48 队 1248 名参赛球员，可查询每位球员的国家队、号码、位置、所属俱乐部与联赛——包含尚未/没有进球的球员（进球数记为 0）。默认仅显示已进球球员，点「全部 All」查看全部名单。进球数右上角的 <sup class="penmk">P</sup> 表示其中的点球数。<span style="display:block;margin-top:3px;color:#8a93ab">A full searchable database of all 1,248 players across 48 teams — including those with 0 goals. A <sup class="penmk">P</sup> next to a goal tally marks penalty goals.</span></p>
     <div class="filters">
       <label class="search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
@@ -274,9 +282,9 @@
           <thead><tr>
             <th data-k="player">球员 Player</th>
             <th data-k="teamZh">国家队 Nation</th>
+            <th data-k="goals" style="text-align:center">进球数 Goals <span class="ar">▼</span></th>
             <th data-k="num" style="text-align:center">号码 No.</th>
             <th data-k="posZh">位置 Pos.</th>
-            <th data-k="goals" style="text-align:center">进球数 Goals <span class="ar">▼</span></th>
             <th data-k="club">俱乐部 Club</th>
             <th data-k="league">联赛 League</th>
           </tr></thead>
@@ -292,7 +300,7 @@
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
     <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.5.3</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.5.4</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -411,7 +419,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.5.3", BUILD_TIME="2026-06-27 08:26";
+const APP_VERSION="v1.5.4", BUILD_TIME="2026-06-27 11:09";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -481,15 +489,31 @@ function renderStats(){
   countUp(document.getElementById("s-clubs"),clubs.length);
   countUp(document.getElementById("s-leagues"),leagues.length);
   countUp(document.getElementById("s-matches"),matchesCount);
+  renderSchedule();
+}
+function renderSchedule(){
+  const stageEl=document.getElementById("s-stage"), schEl=document.getElementById("s-sched");
+  if(!stageEl||!schEl) return;
+  const today=new Date().toLocaleDateString("zh-CN",{month:"long",day:"numeric"});
+  if(SCHEDULE){
+    stageEl.textContent=SCHEDULE.stageEn||"—";
+    schEl.innerHTML=`<span class="schzh">${SCHEDULE.stageZh||""}</span>已赛 ${SCHEDULE.played}/${SCHEDULE.total} · ${today}`;
+  }else{
+    stageEl.textContent="—";
+    schEl.textContent=today;
+  }
 }
 let lastUpdated=null, dataUpdatedRaw=null, dataVersion=null;
 let matchesCount=54;
+let SCHEDULE=null;
 function setUpdated(ts,live){
   dataUpdatedRaw = ts || null;
   lastUpdated = ts?new Date(ts):new Date();
   const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
-  document.getElementById("updated").textContent=
-    "更新于 Updated "+lastUpdated.toLocaleString("zh-CN",{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"})+tag;
+  const dayStr = lastUpdated.toLocaleString("zh-CN",{month:"long",day:"numeric"});
+  const timeStr = lastUpdated.toLocaleString("zh-CN",{hour:"2-digit",minute:"2-digit"});
+  document.getElementById("updated").innerHTML=
+    "数据更新于 Updated <span class=\"upday\">"+dayStr+"</span> <span class=\"uptime\">"+timeStr+tag+"</span>";
   if(typeof renderFooter==="function") renderFooter();
 }
 // 按进球数生成颜色：从青(低)→品红→琥珀(高)的连续色相，最高进球数决定色阶范围
@@ -515,20 +539,22 @@ function renderBoard(){
   const el=document.getElementById("board");
   if(!rows.length){ el.innerHTML='<div class="note" style="padding:8px">暂无达到 '+boardMin+'+ 球的球员 · No players with '+boardMin+'+ goals yet</div>'; return; }
   const maxG=DATA.reduce((m,d)=>Math.max(m,d.goals),0);
+  // 奖牌按进球档位发放（并列同档同牌）：最高档=金、次高档=银、第三档=铜
+  const tiers=[...new Set(DATA.filter(d=>d.goals>0).map(d=>d.goals))].sort((a,b)=>b-a);
   el.innerHTML=rows.map((d,i)=>{
     const st=tierStyle(d.goals,maxG);
-    const pct=maxG?Math.round(d.goals/maxG*100):0;
-    const rankCell = i<3
-      ? `<span class="rank medal">${MEDALS[i]}</span>`
+    const mi=tiers.indexOf(d.goals);
+    const rankCell = (mi>=0 && mi<3)
+      ? `<span class="rank medal">${MEDALS[mi]}</span>`
       : `<span class="rank" style="color:${st.strong}">${i+1}</span>`;
+    const team = `<span class="team"><span class="flag">${fl(d.teamEn)}</span><span class="tnm">${d.teamZh}</span></span>`;
     const pens=d.pens||0, open=d.goals-pens;
     let pips="";
     for(let k=0;k<open;k++) pips+=`<i class="pip" title="运动战进球 Open play">⚽</i>`;
     for(let k=0;k<pens;k++)  pips+=`<i class="pip pen" title="点球 Penalty">⚽</i>`;
-    return `<div class="row${i<3?' top3':''}" style="border-color:${st.border}">
-       <span class="fill" style="width:${pct}%;background:${st.bg}"></span>
+    return `<div class="row${mi===0?' top3':''}" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
        ${rankCell}
-       <span class="flag">${fl(d.teamEn)}</span>
+       ${team}
        <span class="who"><div class="nm">${pzr(d)} <span class="ensm">${d.player}</span></div><div class="cl">${czr(d)} <span class="ensm">${d.club}</span></div></span>
        <span class="score"><span class="pips">${pips}</span><b class="balls">${d.goals}</b></span></div>`;}).join("");
 }
@@ -699,9 +725,9 @@ function render(){
   tbody.innerHTML=rows.map(d=>`<tr style="${rowTint(d.goals,maxG)}">
     <td><div class="pname">${pzr(d)}</div><div class="psub">${d.player}</div></td>
     <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div></td>
+    <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}${d.pens>0?`<sup class="penmk" title="含 ${d.pens} 个点球 · incl. ${d.pens} penalty">P${d.pens>1?d.pens:''}</sup>`:''}</td>
     <td style="text-align:center;font-family:'Space Mono',monospace;color:#cfd6ea">${d.num||"—"}</td>
     <td><span class="cmut">${d.posZh||"—"}</span><div class="psub">${d.pos||""}</div></td>
-    <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}</td>
     <td>${czr(d)}<div class="psub">${d.club}</div></td>
     <td><div class="cmut">${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
   const scorersN=TABLE_DATA.filter(d=>d.goals>=1).length, allN=TABLE_DATA.length;
@@ -815,11 +841,12 @@ async function refresh(){
       DATA = j.scorers.map(x=>({
         player:x.player, nameZh:x.nameZh||"", teamEn:x.nation,
         teamZh:x.nationZh || NATIONZH[x.nation] || x.nation,
-        goals:x.goals, club:x.club||"—", clubZh:x.clubZh||"", league:x.league||"—"
+        goals:x.goals, pens:x.pens||0, club:x.club||"—", clubZh:x.clubZh||"", league:x.league||"—"
       }));
       if(typeof j.matchesWithGoals==="number") matchesCount=j.matchesWithGoals;
+      if(j.schedule) SCHEDULE=j.schedule;
       if(Array.isArray(j.roster) && j.roster.length){
-        TABLE_DATA = j.roster.map(x=>({player:x.player,nameZh:x.nameZh||"",teamEn:x.nation,goals:x.goals,club:x.club,clubZh:x.clubZh||"",league:x.league,teamZh:x.nationZh,num:x.num,pos:x.pos,posZh:x.posZh}));
+        TABLE_DATA = j.roster.map(x=>({player:x.player,nameZh:x.nameZh||"",teamEn:x.nation,goals:x.goals,pens:x.pens||0,club:x.club,clubZh:x.clubZh||"",league:x.league,teamZh:x.nationZh,num:x.num,pos:x.pos,posZh:x.posZh}));
       } else { TABLE_DATA = DATA; }
       dataVersion = j.version || null;
       renderAll(); setUpdated(j.updated, true);

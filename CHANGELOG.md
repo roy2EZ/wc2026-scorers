@@ -8,6 +8,26 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.5.4
+
+**Tournament progress card / 赛程进展卡片**
+- The header scoreboard gains a **Schedule** card showing the current stage (e.g. *Group R3 / 小组赛第3轮*, knockout rounds, or *Completed / 已结束*) and matches played vs. total (e.g. 66/104). Stage is derived in `update_data.py` from the openfootball fixture list — group rounds are inferred per group, knockout rounds mapped bilingually — and written to a new `schedule` block in `data.json`.
+  顶部数据条新增 **赛程 Schedule** 卡片，显示当前阶段（如 *小组赛第3轮 / Group R3*、淘汰赛轮次，或 *已结束 / Completed*）与已踢/总场次（如 66/104）。阶段由 `update_data.py` 从 openfootball 赛程推断（小组赛按各组分轮、淘汰赛中英对照），写入 `data.json` 新增的 `schedule` 字段。
+
+**Top Scorers board redesign / 射手榜改版**
+- Replaced the per-row progress bar with a cleaner **tier-tinted full row** plus a left accent bar, and added a dedicated **nation column** (flag + Chinese name) so the country reads at a glance. Medals are now awarded **by goal tier** — players tied on goals share the same medal — and the goal tally is larger and right-aligned.
+  移除每行进度条，改为更克制的**整行档位底色** + 左侧强调条，并新增独立**国家列**（国旗 + 中文名）让国别一目了然。奖牌改为**按进球档位发放**——同球数并列同牌——进球数字加大并右对齐。
+
+**All Players table / 全部球员表**
+- Goal totals now carry a small magenta **“P” superscript** marking penalty goals (e.g. `3ᴾ²` = 3 goals incl. 2 penalties), with a bilingual note. The **Goals column moved up** next to Nation for faster scanning.
+  进球数右上角新增品红 **“P” 角标**标注点球（如 `3ᴾ²` 表示 3 球含 2 点球），并加双语说明。**进球数列前移**至国家队旁，更易扫读。
+
+**Misc / 杂项**
+- The "Updated" line now shows the date prominently with a muted time. Fixed Jonathan David's Chinese name (乔纳森·戴维). Consistency check green (1248 / 457 / 48 / 133).
+  "数据更新于" 一行突出日期、弱化时间。修正 Jonathan David 中文名（乔纳森·戴维）。一致性校验全绿（1248 / 457 / 48 / 133）。
+
+---
+
 ## v1.5.3
 
 **Top Scorers visual upgrade / 射手榜可视化升级**

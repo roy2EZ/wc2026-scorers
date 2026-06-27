@@ -160,12 +160,49 @@ def main():
     roster=[expand(p, goals_by_id.get(p["id"],0), pens_by_id.get(p["id"],0)) for p in players]
     roster.sort(key=lambda x:(-x["goals"], x["player"]))
 
+    # 赛程进展：总场次 / 已踢 / 当前阶段（按"下一场未踢"的轮次判定；全部踢完=已结束）
+    STAGE_ZH={"Round of 32":"32强","Round of 16":"16强","Quarter-final":"八强",
+              "Semi-final":"四强","Match for third place":"季军赛","Final":"决赛"}
+    STAGE_EN={"Round of 32":"Round of 32","Round of 16":"Round of 16","Quarter-final":"Quarter-finals",
+              "Semi-final":"Semi-finals","Match for third place":"Third place","Final":"Final"}
+    all_matches=wc.get("matches",[])
+    total_m=len(all_matches)
+    played_m=sum(1 for m in all_matches if m.get("score",{}).get("ft"))
+    # 小组赛轮次：把每个小组的比赛按日期排序，每 2 场为一轮 → 小组赛第1/2/3轮
+    def is_group(m):
+        r=m.get("round","")
+        return bool(m.get("group")) and (not r or r.startswith("Matchday"))
+    group_round={}  # id(match) -> 1/2/3
+    by_group={}
+    for m in all_matches:
+        if is_group(m): by_group.setdefault(m.get("group"),[]).append(m)
+    for ms in by_group.values():
+        for i,m in enumerate(sorted(ms,key=lambda x:(x.get("date",""),x.get("time","")))):
+            group_round[id(m)]=i//2+1
+    def stage_of(m):
+        r=m.get("round","")
+        if is_group(m):
+            gr=group_round.get(id(m))
+            return (f"Group R{gr}" if gr else "Group Stage",
+                    f"小组赛第{gr}轮" if gr else "小组赛")
+        if not r or r.startswith("Matchday"): return ("Group Stage","小组赛")
+        return (STAGE_EN.get(r, r), STAGE_ZH.get(r, r))
+    unplayed=sorted([m for m in all_matches if not m.get("score",{}).get("ft") and m.get("date")],
+                    key=lambda m:(m.get("date",""),m.get("time","")))
+    if unplayed:
+        st_en,st_zh=stage_of(unplayed[0]); next_date=unplayed[0].get("date","")
+    else:
+        st_en,st_zh=("Completed","已结束"); next_date=""
+    last_date=max((m.get("date","") for m in all_matches if m.get("score",{}).get("ft")), default="")
+    schedule={"total":total_m,"played":played_m,"stageEn":st_en,"stageZh":st_zh,
+              "lastDate":last_date,"nextDate":next_date}
+
     out={"version":read_version(),
          "updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
          "totalPens":sum(s["pens"] for s in scorers),
-         "matchesWithGoals":matches_with_goals,"scorers":scorers,
+         "matchesWithGoals":matches_with_goals,"schedule":schedule,"scorers":scorers,
          "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 
