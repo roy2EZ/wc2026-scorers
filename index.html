@@ -461,7 +461,7 @@ function renderStats(){
   countUp(document.getElementById("s-leagues"),leagues.length);
   countUp(document.getElementById("s-matches"),matchesCount);
 }
-let lastUpdated=null, dataUpdatedRaw=null;
+let lastUpdated=null, dataUpdatedRaw=null, dataVersion=null;
 let matchesCount=54;
 function setUpdated(ts,live){
   dataUpdatedRaw = ts || null;
@@ -761,7 +761,7 @@ function renderFooter(){
   set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
   set("footMatches",matchesCount); set("footMatchesEn",matchesCount);
   set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
-  set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot"));
+  set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot") + (dataVersion? " · "+dataVersion : ""));
 }
 function renderAll(){ recompute(); renderStats(); renderBoard(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); buildACIndex(); }
 
@@ -781,6 +781,7 @@ async function refresh(){
       if(Array.isArray(j.roster) && j.roster.length){
         TABLE_DATA = j.roster.map(x=>({player:x.player,nameZh:x.nameZh||"",teamEn:x.nation,goals:x.goals,club:x.club,league:x.league,teamZh:x.nationZh,num:x.num,pos:x.pos,posZh:x.posZh}));
       } else { TABLE_DATA = DATA; }
+      dataVersion = j.version || null;
       renderAll(); setUpdated(j.updated, true);
       return true;
     }

@@ -16,7 +16,14 @@ import json, sys, unicodedata, urllib.request, re
 from datetime import datetime, timezone
 
 SRC="https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
-DATA_F="data.json"; PLAYERS_F="players.json"; SMAP_F="scorer_map.json"
+DATA_F="data.json"; PLAYERS_F="players.json"; SMAP_F="scorer_map.json"; VERSION_F="VERSION"
+
+def read_version():
+    """从 VERSION 文件读版本号（单一事实来源）。读不到则回退 'unknown'。"""
+    try:
+        return open(VERSION_F, encoding="utf-8").read().strip() or "unknown"
+    except Exception:
+        return "unknown"
 
 ALIASES={"Deniz Undav":"Denis Undav","Giovanni Reyna":"Gio Reyna","Maxi Araújo":"Maximiliano Araujo",
  "Leo Østigard":"Leo Ostigard","Mostafa Zico":"Mostafa Ziko","Hassan Al-Haydos":"Hassan Al Haidos",
@@ -69,22 +76,44 @@ def main():
     by_id={p["id"]:p for p in players}
     by_nat={}
     for i,p in enumerate(players): by_nat.setdefault(p["nationZh"],[]).append(i)
+    # 国家英文名 -> 中文名：直接从 players.json 动态构建（权威），NATION_ZH 仅作补充。
+    # 这样任何参赛国都不会因为映射表漏条目而匹配失败。
+    NAT_EN2ZH=dict(NATION_ZH)
+    for p in players: NAT_EN2ZH.setdefault(p["nation"], p["nationZh"])
 
-    def nat_zh(team): return NATION_ZH.get(team, team)
+    def nat_zh(team): return NAT_EN2ZH.get(team, NATION_ZH.get(team, team))
 
     def fuzzy_id(name, team):
-        """map 里没有的新进球者：按 中文国名+名字token+俱乐部 兜底匹配到某个球员id。
-        门槛较高（需姓氏一致或多token重叠），避免误配同名/门将。"""
-        nz=nat_zh(team); st=set(toks(name)); ssur=toks(name)[-1] if toks(name) else ""
-        best=None; bestsc=0
+        """map 里没有的新进球者：在该国队内按名字相似度自动匹配球员id。
+        策略：算每名同国球员的相似度，取最高分；只要最高分明显领先第二名
+        （唯一性强，不会误配同名），就自动采用。能自动解决绝大多数新进球者。"""
+        nz=nat_zh(team); st=set(toks(name))
+        if not st: return None
+        ssur=toks(name)[-1]; sgiven=toks(name)[0]
+        ranked=[]
         for pi in by_nat.get(nz,[]):
-            p=players[pi]; pt=set(toks(p["name"]))
-            ov=len(st&pt); psur=toks(p["name"])[-1] if toks(p["name"]) else ""
-            sur_ok = ssur and ssur==psur
-            score=ov*10+(20 if sur_ok else 0)
-            if score>bestsc: bestsc=score; best=p
-        # 需要：姓氏一致(>=20) 或 至少2个token重叠(>=20)
-        return (best["id"] if best and bestsc>=20 else None)
+            p=players[pi]; ptk=toks(p["name"]); pt=set(ptk)
+            if not pt: continue
+            ov=len(st&pt)
+            if ov==0: continue
+            psur=ptk[-1]; pgiven=ptk[0]
+            # 相似度：token重叠为主，姓一致/名一致加权
+            score=ov*10 + (15 if ssur==psur else 0) + (6 if sgiven==pgiven else 0)
+            # 覆盖率：进球者名的 token 有多少被该球员覆盖（Baena 的姓没解析全时，名覆盖也算）
+            cover=ov/len(st)
+            score += int(cover*8)
+            ranked.append((score,p["id"]))
+        if not ranked: return None
+        ranked.sort(reverse=True)
+        top=ranked[0]
+        second=ranked[1][0] if len(ranked)>1 else 0
+        # 自动采用条件：最高分>=12 且 明显领先第二名(>=8分差，即唯一性强)
+        if top[0]>=12 and (top[0]-second)>=8:
+            return top[1]
+        # 次强：最高分很高(姓一致+重叠)即使有并列也采用
+        if top[0]>=25:
+            return top[1]
+        return None
 
     prev=load(DATA_F,{})
     prev_goals={s["player"]:s["goals"] for s in prev.get("scorers",[])}
@@ -122,7 +151,8 @@ def main():
             "goals":goals_by_id.get(p["id"],0),"club":p["club"],"league":p["league"],"id":p["id"]})
     roster.sort(key=lambda x:(-x["goals"], x["player"]))
 
-    out={"updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
+    out={"version":read_version(),
+         "updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
          "matchesWithGoals":matches_with_goals,"scorers":scorers,
@@ -134,7 +164,7 @@ def main():
     up=[(s["player"],s["goals"]-prev_goals[s["player"]]) for s in scorers
         if s["player"] in prev_goals and s["goals"]>prev_goals[s["player"]]]
     added=sum(n for _,n in up)+sum(s["goals"] for s in new_scorers)
-    print(f"OK: {len(scorers)} scorers, {out['totalGoals']} goals, {matches_with_goals} matches with goals.")
+    print(f"[{out['version']}] OK: {len(scorers)} scorers, {out['totalGoals']} goals, {matches_with_goals} matches with goals.")
     if unresolved:
         print(f"WARNING: {len(unresolved)} unresolved scorer name(s) -> add to scorer_map.json: {sorted(unresolved)}")
     if prev_goals:
