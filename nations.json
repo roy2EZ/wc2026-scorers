@@ -1,0 +1,338 @@
+[
+ {
+  "code": "ALG",
+  "en": "Algeria",
+  "zh": "阿尔及利亚",
+  "flag": "🇩🇿",
+  "aliases": []
+ },
+ {
+  "code": "ARG",
+  "en": "Argentina",
+  "zh": "阿根廷",
+  "flag": "🇦🇷",
+  "aliases": []
+ },
+ {
+  "code": "AUS",
+  "en": "Australia",
+  "zh": "澳大利亚",
+  "flag": "🇦🇺",
+  "aliases": []
+ },
+ {
+  "code": "AUT",
+  "en": "Austria",
+  "zh": "奥地利",
+  "flag": "🇦🇹",
+  "aliases": []
+ },
+ {
+  "code": "BEL",
+  "en": "Belgium",
+  "zh": "比利时",
+  "flag": "🇧🇪",
+  "aliases": []
+ },
+ {
+  "code": "BIH",
+  "en": "Bosnia & Herzegovina",
+  "zh": "波黑",
+  "flag": "🇧🇦",
+  "aliases": []
+ },
+ {
+  "code": "BRA",
+  "en": "Brazil",
+  "zh": "巴西",
+  "flag": "🇧🇷",
+  "aliases": []
+ },
+ {
+  "code": "CPV",
+  "en": "Cape Verde",
+  "zh": "佛得角",
+  "flag": "🇨🇻",
+  "aliases": []
+ },
+ {
+  "code": "CAN",
+  "en": "Canada",
+  "zh": "加拿大",
+  "flag": "🇨🇦",
+  "aliases": []
+ },
+ {
+  "code": "COL",
+  "en": "Colombia",
+  "zh": "哥伦比亚",
+  "flag": "🇨🇴",
+  "aliases": []
+ },
+ {
+  "code": "COD",
+  "en": "DR Congo",
+  "zh": "刚果(金)",
+  "flag": "🇨🇩",
+  "aliases": []
+ },
+ {
+  "code": "CIV",
+  "en": "Ivory Coast",
+  "zh": "科特迪瓦",
+  "flag": "🇨🇮",
+  "aliases": []
+ },
+ {
+  "code": "CRO",
+  "en": "Croatia",
+  "zh": "克罗地亚",
+  "flag": "🇭🇷",
+  "aliases": []
+ },
+ {
+  "code": "CUW",
+  "en": "Curaçao",
+  "zh": "库拉索",
+  "flag": "🇨🇼",
+  "aliases": []
+ },
+ {
+  "code": "CZE",
+  "en": "Czechia",
+  "zh": "捷克",
+  "flag": "🇨🇿",
+  "aliases": []
+ },
+ {
+  "code": "ECU",
+  "en": "Ecuador",
+  "zh": "厄瓜多尔",
+  "flag": "🇪🇨",
+  "aliases": []
+ },
+ {
+  "code": "EGY",
+  "en": "Egypt",
+  "zh": "埃及",
+  "flag": "🇪🇬",
+  "aliases": []
+ },
+ {
+  "code": "ENG",
+  "en": "England",
+  "zh": "英格兰",
+  "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "aliases": []
+ },
+ {
+  "code": "FRA",
+  "en": "France",
+  "zh": "法国",
+  "flag": "🇫🇷",
+  "aliases": []
+ },
+ {
+  "code": "GER",
+  "en": "Germany",
+  "zh": "德国",
+  "flag": "🇩🇪",
+  "aliases": []
+ },
+ {
+  "code": "GHA",
+  "en": "Ghana",
+  "zh": "加纳",
+  "flag": "🇬🇭",
+  "aliases": []
+ },
+ {
+  "code": "HAI",
+  "en": "Haiti",
+  "zh": "海地",
+  "flag": "🇭🇹",
+  "aliases": []
+ },
+ {
+  "code": "IRN",
+  "en": "Iran",
+  "zh": "伊朗",
+  "flag": "🇮🇷",
+  "aliases": []
+ },
+ {
+  "code": "IRQ",
+  "en": "Iraq",
+  "zh": "伊拉克",
+  "flag": "🇮🇶",
+  "aliases": []
+ },
+ {
+  "code": "JPN",
+  "en": "Japan",
+  "zh": "日本",
+  "flag": "🇯🇵",
+  "aliases": []
+ },
+ {
+  "code": "JOR",
+  "en": "Jordan",
+  "zh": "约旦",
+  "flag": "🇯🇴",
+  "aliases": []
+ },
+ {
+  "code": "KOR",
+  "en": "South Korea",
+  "zh": "韩国",
+  "flag": "🇰🇷",
+  "aliases": []
+ },
+ {
+  "code": "MEX",
+  "en": "Mexico",
+  "zh": "墨西哥",
+  "flag": "🇲🇽",
+  "aliases": []
+ },
+ {
+  "code": "MAR",
+  "en": "Morocco",
+  "zh": "摩洛哥",
+  "flag": "🇲🇦",
+  "aliases": []
+ },
+ {
+  "code": "NED",
+  "en": "Netherlands",
+  "zh": "荷兰",
+  "flag": "🇳🇱",
+  "aliases": []
+ },
+ {
+  "code": "NZL",
+  "en": "New Zealand",
+  "zh": "新西兰",
+  "flag": "🇳🇿",
+  "aliases": []
+ },
+ {
+  "code": "NOR",
+  "en": "Norway",
+  "zh": "挪威",
+  "flag": "🇳🇴",
+  "aliases": []
+ },
+ {
+  "code": "PAN",
+  "en": "Panama",
+  "zh": "巴拿马",
+  "flag": "🇵🇦",
+  "aliases": []
+ },
+ {
+  "code": "PAR",
+  "en": "Paraguay",
+  "zh": "巴拉圭",
+  "flag": "🇵🇾",
+  "aliases": []
+ },
+ {
+  "code": "POR",
+  "en": "Portugal",
+  "zh": "葡萄牙",
+  "flag": "🇵🇹",
+  "aliases": []
+ },
+ {
+  "code": "QAT",
+  "en": "Qatar",
+  "zh": "卡塔尔",
+  "flag": "🇶🇦",
+  "aliases": []
+ },
+ {
+  "code": "KSA",
+  "en": "Saudi Arabia",
+  "zh": "沙特阿拉伯",
+  "flag": "🇸🇦",
+  "aliases": []
+ },
+ {
+  "code": "SCO",
+  "en": "Scotland",
+  "zh": "苏格兰",
+  "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "aliases": []
+ },
+ {
+  "code": "SEN",
+  "en": "Senegal",
+  "zh": "塞内加尔",
+  "flag": "🇸🇳",
+  "aliases": []
+ },
+ {
+  "code": "RSA",
+  "en": "South Africa",
+  "zh": "南非",
+  "flag": "🇿🇦",
+  "aliases": []
+ },
+ {
+  "code": "ESP",
+  "en": "Spain",
+  "zh": "西班牙",
+  "flag": "🇪🇸",
+  "aliases": []
+ },
+ {
+  "code": "SWE",
+  "en": "Sweden",
+  "zh": "瑞典",
+  "flag": "🇸🇪",
+  "aliases": []
+ },
+ {
+  "code": "SUI",
+  "en": "Switzerland",
+  "zh": "瑞士",
+  "flag": "🇨🇭",
+  "aliases": []
+ },
+ {
+  "code": "TUN",
+  "en": "Tunisia",
+  "zh": "突尼斯",
+  "flag": "🇹🇳",
+  "aliases": []
+ },
+ {
+  "code": "TUR",
+  "en": "Türkiye",
+  "zh": "土耳其",
+  "flag": "🇹🇷",
+  "aliases": []
+ },
+ {
+  "code": "URU",
+  "en": "Uruguay",
+  "zh": "乌拉圭",
+  "flag": "🇺🇾",
+  "aliases": []
+ },
+ {
+  "code": "USA",
+  "en": "USA",
+  "zh": "美国",
+  "flag": "🇺🇸",
+  "aliases": []
+ },
+ {
+  "code": "UZB",
+  "en": "Uzbekistan",
+  "zh": "乌兹别克斯坦",
+  "flag": "🇺🇿",
+  "aliases": []
+ }
+]

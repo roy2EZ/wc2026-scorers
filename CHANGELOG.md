@@ -8,6 +8,26 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.5.0
+
+**Architecture / 架构升级（根治多语言与重复问题）**
+- Introduced a proper relational design with **master tables**: `clubs.json` (every club once, with a canonical English name, Chinese name, and all alias spellings) and `nations.json` (code, EN, ZH, flag). Players now reference a club via `club_id` instead of storing a club-name string, so a club's name and Chinese translation are defined in exactly one place.
+  引入规范的关系型设计与**主表**：`clubs.json`（每家俱乐部仅一条，含标准英文名、中文名、所有别名写法）与 `nations.json`（国家码、英文、中文、国旗）。球员通过 `club_id` 关联俱乐部，不再各自存俱乐部名字符串——俱乐部名与中文译名只在一处定义。
+- This permanently fixes the recurring "same club shown under two names" problem (e.g. 皇马 / 皇家马德里). Real Madrid now consistently displays its full name **皇家马德里** everywhere.
+  这从根本上修复了反复出现的「同一俱乐部两个名字」问题（如 皇马 / 皇家马德里）。皇马现在各处统一显示全称**皇家马德里**。
+- Added `validate_db.py`, a **build-time consistency check** that must pass before data ships: it enforces unique ids, no orphan `club_id`, no duplicate clubs (by normalized name), full nation coverage, and Chinese-name coverage for everyone who has scored. If anything is inconsistent it errors out instead of shipping bad data.
+  新增 `validate_db.py`，**构建时强制一致性校验**，数据上线前必须通过：检查 id 唯一、无孤儿 `club_id`、无重复俱乐部（按归一名）、国家完整、所有进球者有中文名。任何不一致就直接报错，绝不带病上线。
+- `update_data.py` now JOINs player → `club_id` → `clubs.json` to expand club name / Chinese name / league at build time; the front end reads these expanded fields directly (no more runtime name-guessing).
+  `update_data.py` 现在做 球员 → `club_id` → `clubs.json` 的 JOIN，在构建时展开俱乐部名/中文/联赛；前端直接读取展开字段（不再运行时猜名字）。
+
+## v1.4.2
+
+**Fixes / 修复**
+- Unified duplicate club names: the same club no longer appears under two different names (e.g. 皇马 / 皇家马德里, FC Barcelona / Barcelona). All club English names are normalized to one canonical form in `players.json`, and Chinese names are deduplicated — so the "by Club" chart and the table now aggregate each club correctly.
+  统一重复的俱乐部名：同一家俱乐部不再出现两个名字（如 皇马 / 皇家马德里、FC Barcelona / Barcelona）。`players.json` 里所有俱乐部英文名归一为唯一标准写法，中文名也去重——「按俱乐部」图表与表格现在能正确合并同一俱乐部。
+- Added accurate Chinese names for all clubs that have scorers (28 more, e.g. 马德里竞技, 尤文图斯, 曼城, 狼队).
+  为所有有进球者的俱乐部补全准确中文名（新增 28 个，如 马德里竞技、尤文图斯、曼城、狼队）。
+
 ## v1.4.1
 
 **Fixes / 修复**

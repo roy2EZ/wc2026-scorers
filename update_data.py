@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 
 SRC="https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json"
 DATA_F="data.json"; PLAYERS_F="players.json"; SMAP_F="scorer_map.json"; VERSION_F="VERSION"
+CLUBS_F="clubs.json"; NATIONS_F="nations.json"
 
 def read_version():
     """从 VERSION 文件读版本号（单一事实来源）。读不到则回退 'unknown'。"""
@@ -71,17 +72,30 @@ def main():
 
     players=load(PLAYERS_F,[])
     if not players: sys.exit("ERROR: players.json 缺失或为空")
+    clubs_list=load(CLUBS_F,[])
+    if not clubs_list: sys.exit("ERROR: clubs.json 缺失或为空")
+    club_by_id={c["id"]:c for c in clubs_list}
+    nations_list=load(NATIONS_F,[])
+    nat_by_zh={n["zh"]:n for n in nations_list}
     smap=load(SMAP_F,{})                       # 进球者名 -> 球员id（固定映射）
     smap_ci={sa(k).lower():v for k,v in smap.items()}   # 大小写/音标无关查找
     by_id={p["id"]:p for p in players}
     by_nat={}
     for i,p in enumerate(players): by_nat.setdefault(p["nationZh"],[]).append(i)
     # 国家英文名 -> 中文名：直接从 players.json 动态构建（权威），NATION_ZH 仅作补充。
-    # 这样任何参赛国都不会因为映射表漏条目而匹配失败。
     NAT_EN2ZH=dict(NATION_ZH)
     for p in players: NAT_EN2ZH.setdefault(p["nation"], p["nationZh"])
 
     def nat_zh(team): return NAT_EN2ZH.get(team, NATION_ZH.get(team, team))
+
+    def expand(p, goals):
+        """把球员档案 JOIN clubs.json，展开成 data.json 用的完整记录。"""
+        c=club_by_id.get(p.get("club_id"), {})
+        return {"player":p["name"],"nameZh":p.get("nameZh",""),"num":p["num"],
+            "pos":p["pos"],"posZh":p["posZh"],"nation":p["nation"],"nationZh":p["nationZh"],
+            "goals":goals,
+            "club":c.get("name","—"),"clubZh":c.get("nameZh",""),"league":c.get("league","—"),
+            "club_id":p.get("club_id",""),"id":p["id"]}
 
     def fuzzy_id(name, team):
         """map 里没有的新进球者：在该国队内按名字相似度自动匹配球员id。
@@ -134,21 +148,15 @@ def main():
                 goals_by_id[pid]=goals_by_id.get(pid,0)+1
         if had: matches_with_goals+=1
 
-    # 组装 scorers（有进球的球员完整档案）与 roster（全员）
+    # 组装 scorers（有进球的球员完整档案）与 roster（全员）—— 用 expand() JOIN clubs.json
     scorers=[]
     for pid,g in goals_by_id.items():
         p=by_id.get(pid)
         if not p: continue
-        scorers.append({"player":p["name"],"nameZh":p.get("nameZh",""),"num":p["num"],
-            "pos":p["pos"],"posZh":p["posZh"],"nation":p["nation"],"nationZh":p["nationZh"],
-            "goals":g,"club":p["club"],"league":p["league"],"id":pid})
+        scorers.append(expand(p,g))
     scorers.sort(key=lambda x:(-x["goals"],x["player"]))
 
-    roster=[]
-    for p in players:
-        roster.append({"player":p["name"],"nameZh":p.get("nameZh",""),"num":p["num"],
-            "pos":p["pos"],"posZh":p["posZh"],"nation":p["nation"],"nationZh":p["nationZh"],
-            "goals":goals_by_id.get(p["id"],0),"club":p["club"],"league":p["league"],"id":p["id"]})
+    roster=[expand(p, goals_by_id.get(p["id"],0)) for p in players]
     roster.sort(key=lambda x:(-x["goals"], x["player"]))
 
     out={"version":read_version(),

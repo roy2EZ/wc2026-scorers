@@ -165,7 +165,10 @@ GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  
 | File | Description |
 |---|---|
 | `index.html` | The site itself (front end + built-in snapshot + data.json loading) |
-| `players.json` | **Master player database** — all 1,248 players, each with a stable id, Chinese & English name, number, position, nation, club, league |
+| `players.json` | **Player master table** — all 1,248 players; each references its club via `club_id` |
+| `clubs.json` | **Club master table** — every club once: canonical English name, Chinese name, league, and alias spellings |
+| `nations.json` | **Nation master table** — code, English, Chinese, flag |
+| `validate_db.py` | Build-time consistency check (run before shipping data) |
 | `scorer_map.json` | Verified map from goalscorer name → player id (resolved once, locked in) |
 | `data.json` | Current data, auto-generated each run (`scorers` = players who scored; `roster` = all players) |
 | `update_data.py` | Script that fetches goals and generates data.json, attaching goals by player id |
@@ -178,7 +181,10 @@ GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  
 | 文件 | 说明 |
 |---|---|
 | `index.html` | 网站本体（前端 + 内置快照 + 读取 data.json 逻辑） |
-| `players.json` | **权威球员数据库**——全部 1248 人，每人含稳定 id、中英文名、号码、位置、国家队、俱乐部、联赛 |
+| `players.json` | **球员主表**——全部 1248 人；每人通过 `club_id` 关联俱乐部 |
+| `clubs.json` | **俱乐部主表**——每家仅一条：标准英文名、中文名、联赛、别名写法 |
+| `nations.json` | **国家主表**——国家码、英文、中文、国旗 |
+| `validate_db.py` | 构建时一致性校验（数据上线前运行） |
 | `scorer_map.json` | 进球者名 → 球员 id 的验证映射（解析一次，锁定） |
 | `data.json` | 当前数据，每次运行自动生成（`scorers` = 有进球的球员；`roster` = 全员） |
 | `update_data.py` | 抓取进球并生成 data.json 的脚本，按球员 id 叠加进球 |
