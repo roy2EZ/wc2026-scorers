@@ -1,6 +1,6 @@
 {
- "version": "v1.5.5",
- "updated": "2026-06-27T18:45:21+00:00",
+ "version": "v1.5.6",
+ "updated": "2026-06-27T12:18:18-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 131,
  "totalGoals": 184,
@@ -12878,7 +12878,7 @@
    "pens": 0,
    "club": "FC Juárez",
    "clubZh": "",
-   "league": "墨西哥联赛",
+   "league": "墨超",
    "club_id": "fc-juarez",
    "id": "PAN-7"
   },

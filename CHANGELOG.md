@@ -8,6 +8,22 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.5.6
+
+**Responsive overhaul: Top Scorers, All Players table & charts / 响应式大改：领跑榜、球员表与图表**
+- **Top Scorers board** now stacks each scorer over four lines — Chinese name (largest) / English name / Chinese club / English club — so long names and clubs are never truncated on narrow phones.
+  **领跑榜**每位球员改为四行堆叠——中文名（最大）/ 英文名 / 中文俱乐部 / 英文俱乐部——窄屏手机上长名字和俱乐部不再被省略号截断。
+- **All Players table** merges Nation + squad number + position into one column (number·position shown as a small line under the nation), narrows the Goals column, and uses a best-practice responsive width: fills the container with proportioned columns (Player 25% · Nation 18% · Goals 7% · Club 30% · League 20%), capped at the 1180px content width and scaling down to phones.
+  **全部球员表**把国家队+号码+位置合并为一列（号码·位置作为国家队下方小字），收窄进球列，并采用最佳实践的响应式宽度：按比例填满容器（球员 25%·国家队 18%·进球 7%·俱乐部 30%·联赛 20%），上限 1180px 并向手机等比缩放。
+- **The three bar charts** ("goals by nation / league / club") now adapt cleanly to any width: the left-label gutter steps down across four breakpoints, an `onResize` hook re-positions the overlay labels instantly, value numbers flip inside the bar when there's no room, and a CSS grid `min-width:0` fix stops the cards from overflowing narrow phones.
+  **三个柱状图**（按国家队/联赛/俱乐部）现可干净适配任意宽度：左侧标签留白按四档收窄、`onResize` 即时重定位叠加标签、柱尾数字没空间时翻入柱内、并以 grid `min-width:0` 修复窄屏卡片溢出。
+
+**Data / 数据**
+- Added English names/abbreviations for all 25 previously-unmapped leagues (Algeria, South Africa, A-League, J1, K League, Eredivisie-tier, etc.) — every league now shows a bilingual label. Normalized a stray "墨西哥联赛" club to the canonical "墨超" (Liga MX) in `clubs.json`. Consistency check green (1248 / 457 / 48 / 133).
+  为此前缺失的 25 个联赛全部补上英文名/缩写（阿尔及利亚、南非、澳超、日职联、韩K联等）——所有联赛均显示双语标签。把 `clubs.json` 中游离的「墨西哥联赛」归一为标准「墨超」(Liga MX)。一致性校验全绿（1248 / 457 / 48 / 133）。
+
+---
+
 ## v1.5.5
 
 **"Updated" date now bilingual with year / "更新于"日期改为中英双语带年份**
