@@ -1,6 +1,6 @@
 {
  "version": "v1.5.1",
- "updated": "2026-06-27T07:36:19+00:00",
+ "updated": "2026-06-27T07:22:05+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 131,
  "totalGoals": 184,
@@ -1381,7 +1381,7 @@
    "nationZh": "埃及",
    "goals": 1,
    "club": "ZED FC",
-   "clubZh": "",
+   "clubZh": "齐德",
    "league": "埃及超",
    "club_id": "zed-fc",
    "id": "EGY-21"
@@ -3349,7 +3349,7 @@
    "nationZh": "埃及",
    "goals": 1,
    "club": "ZED FC",
-   "clubZh": "",
+   "clubZh": "齐德",
    "league": "埃及超",
    "club_id": "zed-fc",
    "id": "EGY-21"
@@ -19234,7 +19234,7 @@
    "nationZh": "埃及",
    "goals": 0,
    "club": "ZED FC",
-   "clubZh": "",
+   "clubZh": "齐德",
    "league": "埃及超",
    "club_id": "zed-fc",
    "id": "EGY-24"
