@@ -1,9 +1,9 @@
 {
- "updated": "2026-06-27T02:04:49+00:00",
+ "updated": "2026-06-27T06:34:14+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 125,
- "totalGoals": 175,
- "matchesWithGoals": 57,
+ "count": 131,
+ "totalGoals": 184,
+ "matchesWithGoals": 60,
  "scorers": [
   {
    "player": "Lionel Messi",
@@ -95,6 +95,19 @@
    "club": "VfB Stuttgart",
    "league": "德甲",
    "id": "GER-26"
+  },
+  {
+   "player": "Elijah Just",
+   "nameZh": "贾斯特",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "New Zealand",
+   "nationZh": "新西兰",
+   "goals": 3,
+   "club": "Motherwell",
+   "league": "苏超",
+   "id": "NZL-11"
   },
   {
    "player": "Ismael Saibari",
@@ -266,19 +279,6 @@
    "id": "COL-2"
   },
   {
-   "player": "Elijah Just",
-   "nameZh": "贾斯特",
-   "num": 11,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "New Zealand",
-   "nationZh": "新西兰",
-   "goals": 2,
-   "club": "Motherwell",
-   "league": "苏超",
-   "id": "NZL-11"
-  },
-  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -344,6 +344,19 @@
    "id": "GER-7"
   },
   {
+   "player": "Leandro Trossard",
+   "nameZh": "莱安德罗·特罗萨德",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 2,
+   "club": "Arsenal FC",
+   "league": "英超",
+   "id": "BEL-10"
+  },
+  {
    "player": "Maximiliano Araujo",
    "nameZh": "马克西·阿劳霍",
    "num": 20,
@@ -394,6 +407,19 @@
    "club": "Villarreal CF",
    "league": "西甲",
    "id": "SEN-26"
+  },
+  {
+   "player": "Ramin Rezaeian",
+   "nameZh": "拉明",
+   "num": 23,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Iran",
+   "nationZh": "伊朗",
+   "goals": 2,
+   "club": "Foolad Khuzestan FC",
+   "league": "伊朗波斯湾联赛",
+   "id": "IRN-23"
   },
   {
    "player": "Ruben Vargas",
@@ -498,6 +524,19 @@
    "club": "Liverpool",
    "league": "英超",
    "id": "SWE-9"
+  },
+  {
+   "player": "Alexis Saelemaekers",
+   "nameZh": "亚历克西斯·赛勒梅克斯",
+   "num": 22,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "AC Milan",
+   "league": "意甲",
+   "id": "BEL-22"
   },
   {
    "player": "Ali Olwan",
@@ -1033,6 +1072,19 @@
    "id": "BIH-19"
   },
   {
+   "player": "Kevin De Bruyne",
+   "nameZh": "德布劳内",
+   "num": 7,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "SSC Napoli",
+   "league": "意甲",
+   "id": "BEL-7"
+  },
+  {
    "player": "Kevin Pina",
    "nameZh": "凯文",
    "num": 6,
@@ -1135,6 +1187,19 @@
    "club": "CD Guadalajara",
    "league": "墨超",
    "id": "MEX-7"
+  },
+  {
+   "player": "Mahmoud M. Saber",
+   "nameZh": "马哈茂德·萨贝尔",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 1,
+   "club": "ZED FC",
+   "league": "埃及超",
+   "id": "EGY-21"
   },
   {
    "player": "Marcus Holmgren Pedersen",
@@ -1462,19 +1527,6 @@
    "id": "POR-17"
   },
   {
-   "player": "Ramin Rezaeian",
-   "nameZh": "拉明",
-   "num": 23,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Iran",
-   "nationZh": "伊朗",
-   "goals": 1,
-   "club": "Foolad Khuzestan FC",
-   "league": "伊朗波斯湾联赛",
-   "id": "IRN-23"
-  },
-  {
    "player": "Raul Jimenez",
    "nameZh": "劳尔",
    "num": 9,
@@ -1499,6 +1551,19 @@
    "club": "Werder Bremen",
    "league": "德甲",
    "id": "AUT-18"
+  },
+  {
+   "player": "Romelu Lukaku",
+   "nameZh": "罗梅卢·卢卡库",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "SSC Napoli",
+   "league": "意甲",
+   "id": "BEL-9"
   },
   {
    "player": "Sebastian Berhalter",
@@ -1629,6 +1694,19 @@
    "club": "Newcastle United",
    "league": "英超",
    "id": "COD-20"
+  },
+  {
+   "player": "Álex Baena",
+   "nameZh": "巴埃纳",
+   "num": 15,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "club": "Atlético De Madrid",
+   "league": "西甲",
+   "id": "ESP-15"
   }
  ],
  "rosterCount": 1248,
@@ -1725,6 +1803,19 @@
    "id": "GER-26"
   },
   {
+   "player": "Elijah Just",
+   "nameZh": "贾斯特",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "New Zealand",
+   "nationZh": "新西兰",
+   "goals": 3,
+   "club": "Motherwell",
+   "league": "苏超",
+   "id": "NZL-11"
+  },
+  {
    "player": "Ismael Saibari",
    "nameZh": "赛巴里",
    "num": 11,
@@ -1894,19 +1985,6 @@
    "id": "COL-2"
   },
   {
-   "player": "Elijah Just",
-   "nameZh": "贾斯特",
-   "num": 11,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "New Zealand",
-   "nationZh": "新西兰",
-   "goals": 2,
-   "club": "Motherwell",
-   "league": "苏超",
-   "id": "NZL-11"
-  },
-  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -1972,6 +2050,19 @@
    "id": "GER-7"
   },
   {
+   "player": "Leandro Trossard",
+   "nameZh": "莱安德罗·特罗萨德",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 2,
+   "club": "Arsenal FC",
+   "league": "英超",
+   "id": "BEL-10"
+  },
+  {
    "player": "Maximiliano Araujo",
    "nameZh": "马克西·阿劳霍",
    "num": 20,
@@ -2022,6 +2113,19 @@
    "club": "Villarreal CF",
    "league": "西甲",
    "id": "SEN-26"
+  },
+  {
+   "player": "Ramin Rezaeian",
+   "nameZh": "拉明",
+   "num": 23,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Iran",
+   "nationZh": "伊朗",
+   "goals": 2,
+   "club": "Foolad Khuzestan FC",
+   "league": "伊朗波斯湾联赛",
+   "id": "IRN-23"
   },
   {
    "player": "Ruben Vargas",
@@ -2126,6 +2230,19 @@
    "club": "Liverpool",
    "league": "英超",
    "id": "SWE-9"
+  },
+  {
+   "player": "Alexis Saelemaekers",
+   "nameZh": "亚历克西斯·赛勒梅克斯",
+   "num": 22,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "AC Milan",
+   "league": "意甲",
+   "id": "BEL-22"
   },
   {
    "player": "Ali Olwan",
@@ -2661,6 +2778,19 @@
    "id": "BIH-19"
   },
   {
+   "player": "Kevin De Bruyne",
+   "nameZh": "德布劳内",
+   "num": 7,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "SSC Napoli",
+   "league": "意甲",
+   "id": "BEL-7"
+  },
+  {
    "player": "Kevin Pina",
    "nameZh": "凯文",
    "num": 6,
@@ -2763,6 +2893,19 @@
    "club": "CD Guadalajara",
    "league": "墨超",
    "id": "MEX-7"
+  },
+  {
+   "player": "Mahmoud M. Saber",
+   "nameZh": "马哈茂德·萨贝尔",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 1,
+   "club": "ZED FC",
+   "league": "埃及超",
+   "id": "EGY-21"
   },
   {
    "player": "Marcus Holmgren Pedersen",
@@ -3090,19 +3233,6 @@
    "id": "POR-17"
   },
   {
-   "player": "Ramin Rezaeian",
-   "nameZh": "拉明",
-   "num": 23,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Iran",
-   "nationZh": "伊朗",
-   "goals": 1,
-   "club": "Foolad Khuzestan FC",
-   "league": "伊朗波斯湾联赛",
-   "id": "IRN-23"
-  },
-  {
    "player": "Raul Jimenez",
    "nameZh": "劳尔",
    "num": 9,
@@ -3127,6 +3257,19 @@
    "club": "Werder Bremen",
    "league": "德甲",
    "id": "AUT-18"
+  },
+  {
+   "player": "Romelu Lukaku",
+   "nameZh": "罗梅卢·卢卡库",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "club": "SSC Napoli",
+   "league": "意甲",
+   "id": "BEL-9"
   },
   {
    "player": "Sebastian Berhalter",
@@ -3257,6 +3400,19 @@
    "club": "Newcastle United",
    "league": "英超",
    "id": "COD-20"
+  },
+  {
+   "player": "Álex Baena",
+   "nameZh": "巴埃纳",
+   "num": 15,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "club": "Atlético De Madrid",
+   "league": "西甲",
+   "id": "ESP-15"
   },
   {
    "player": "Aaron Hickey",
@@ -3896,19 +4052,6 @@
    "id": "AUT-26"
   },
   {
-   "player": "Alex",
-   "nameZh": "亚历克斯",
-   "num": 15,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 0,
-   "club": "Atlético De Madrid",
-   "league": "西甲",
-   "id": "ESP-15"
-  },
-  {
    "player": "Alex Arce",
    "nameZh": "亚历克斯·阿尔塞",
    "num": 18,
@@ -4115,19 +4258,6 @@
    "club": "Liverpool FC",
    "league": "英超",
    "id": "ARG-20"
-  },
-  {
-   "player": "Alexis Saelemaekers",
-   "nameZh": "亚历克西斯·赛勒梅克斯",
-   "num": 22,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 0,
-   "club": "AC Milan",
-   "league": "意甲",
-   "id": "BEL-22"
   },
   {
    "player": "Alhashmi",
@@ -11007,19 +11137,6 @@
    "id": "AUT-3"
   },
   {
-   "player": "Kevin De Bruyne",
-   "nameZh": "德布劳内",
-   "num": 7,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 0,
-   "club": "SSC Napoli",
-   "league": "意甲",
-   "id": "BEL-7"
-  },
-  {
    "player": "Kevin Felida",
    "nameZh": "凯文·菲利达",
    "num": 22,
@@ -11421,19 +11538,6 @@
    "club": "CA Boca Juniors",
    "league": "阿甲",
    "id": "ARG-5"
-  },
-  {
-   "player": "Leandro Trossard",
-   "nameZh": "莱安德罗·特罗萨德",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 0,
-   "club": "Arsenal FC",
-   "league": "英超",
-   "id": "BEL-10"
   },
   {
    "player": "Lenny Joseph",
@@ -11928,19 +12032,6 @@
    "club": "Al Hussein SC",
    "league": "约旦联赛",
    "id": "JOR-13"
-  },
-  {
-   "player": "Mahmoud M. Saber",
-   "nameZh": "马哈茂德·萨贝尔",
-   "num": 21,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 0,
-   "club": "ZED FC",
-   "league": "埃及超",
-   "id": "EGY-21"
   },
   {
    "player": "Malick Thiaw",
@@ -15464,19 +15555,6 @@
    "club": "Al Ahli FC",
    "league": "沙特职业联赛",
    "id": "BRA-24"
-  },
-  {
-   "player": "Romelu Lukaku",
-   "nameZh": "罗梅卢·卢卡库",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 0,
-   "club": "SSC Napoli",
-   "league": "意甲",
-   "id": "BEL-9"
   },
   {
    "player": "Ronald R. Araujo",
