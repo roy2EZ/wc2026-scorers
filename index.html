@@ -169,8 +169,8 @@
     <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2>
       <div class="chips" id="boardchips">
         <button data-bmin="1">全部 All</button>
-        <button class="on" data-bmin="2">2+</button>
-        <button data-bmin="3">3+</button>
+        <button data-bmin="2">2+</button>
+        <button class="on" data-bmin="3">3+</button>
         <button data-bmin="4">4+</button>
         <button data-bmin="5">5+</button>
       </div>
@@ -274,7 +274,7 @@
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
     <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.5.1</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.5.2</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -393,7 +393,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.5.1", BUILD_TIME="2026-06-27 07:19";
+const APP_VERSION="v1.5.2", BUILD_TIME="2026-06-27 07:42";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -557,7 +557,7 @@ function barCfg(entries,metric,onClick){
         y:{ticks:{display:false},grid:{display:false},border:{display:false}}}}};
 }
 let metric="goals", leagueCh, clubCh, natCh;
-let boardMin=2;
+let boardMin=3;
 document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
 function heightFor(n){return Math.max(240,n*40+54);}
 function lblW(){return window.innerWidth<620?112:134;}
