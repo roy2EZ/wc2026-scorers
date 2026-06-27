@@ -8,6 +8,22 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.5.3
+
+**Top Scorers visual upgrade / 射手榜可视化升级**
+- The Top Scorers board now renders each player's goals as actual football ⚽ icons (one per goal), with **medals** (🥇🥈🥉) for the top three and a **progress bar** in each row scaled to the leader's tally. Default threshold stays 3+ with the existing All / 2+ / 3+ / 4+ / 5+ chips.
+  射手榜领跑者现在把每位球员的进球渲染成真实足球 ⚽ 图案（一球一个），前三名加**奖牌**（🥇🥈🥉），每行加按领跑者标定的**进度条**。默认仍为 3+，保留 全部/2+/3+/4+/5+ 筹码切换。
+- **Penalty goals are now distinguished** with a magenta ring and a “P” badge, plus a bilingual legend below the board.
+  **点球单独区分**：品红圆环 + “P” 角标，榜下附双语图例。
+- The All Players table gains a subtle goal-tier **background gradient** for rows with 2+ goals (0–1 goal rows stay clean), echoing the board's color system.
+  全部球员查询表为进球 ≥2 的行加了克制的档位**背景渐变**（0–1 球保持干净），与领跑榜配色呼应。
+
+**Data / 数据**
+- `update_data.py` now captures penalty goals from the openfootball source into a new `pens` field per player (plus a `totalPens` summary); `data.json` regenerated accordingly. Consistency check still green (1248 players / 457 clubs / 48 nations / 133 scorer-map).
+  `update_data.py` 从 openfootball 源采集点球，写入每名球员的新字段 `pens`（并汇总 `totalPens`）；`data.json` 已重新生成。一致性校验仍全绿（1248 球员 / 457 俱乐部 / 48 国 / 133 映射）。
+- Removed a stray duplicate `update.yml` from the repository root; the active workflow lives only at `.github/workflows/update.yml`.
+  删除仓库根目录冗余的 `update.yml` 副本；生效的工作流仅在 `.github/workflows/update.yml`。
+
 ## v1.5.0
 
 **Architecture / 架构升级（根治多语言与重复问题）**

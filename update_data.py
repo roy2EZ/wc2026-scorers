@@ -88,12 +88,12 @@ def main():
 
     def nat_zh(team): return NAT_EN2ZH.get(team, NATION_ZH.get(team, team))
 
-    def expand(p, goals):
-        """把球员档案 JOIN clubs.json，展开成 data.json 用的完整记录。"""
+    def expand(p, goals, pens=0):
+        """把球员档案 JOIN clubs.json，展开成 data.json 用的完整记录。pens=其中的点球数。"""
         c=club_by_id.get(p.get("club_id"), {})
         return {"player":p["name"],"nameZh":p.get("nameZh",""),"num":p["num"],
             "pos":p["pos"],"posZh":p["posZh"],"nation":p["nation"],"nationZh":p["nationZh"],
-            "goals":goals,
+            "goals":goals,"pens":pens,
             "club":c.get("name","—"),"clubZh":c.get("nameZh",""),"league":c.get("league","—"),
             "club_id":p.get("club_id",""),"id":p["id"]}
 
@@ -133,7 +133,7 @@ def main():
     prev_goals={s["player"]:s["goals"] for s in prev.get("scorers",[])}
 
     # 抓进球，按 球员id 累加
-    goals_by_id={}; matches_with_goals=0; unresolved=set()
+    goals_by_id={}; pens_by_id={}; matches_with_goals=0; unresolved=set()
     for mt in wc.get("matches",[]):
         if not mt.get("score",{}).get("ft"): continue
         had=False
@@ -146,6 +146,7 @@ def main():
                 if not pid:
                     unresolved.add(g["name"]); continue
                 goals_by_id[pid]=goals_by_id.get(pid,0)+1
+                if g.get("penalty"): pens_by_id[pid]=pens_by_id.get(pid,0)+1
         if had: matches_with_goals+=1
 
     # 组装 scorers（有进球的球员完整档案）与 roster（全员）—— 用 expand() JOIN clubs.json
@@ -153,16 +154,17 @@ def main():
     for pid,g in goals_by_id.items():
         p=by_id.get(pid)
         if not p: continue
-        scorers.append(expand(p,g))
+        scorers.append(expand(p,g,pens_by_id.get(pid,0)))
     scorers.sort(key=lambda x:(-x["goals"],x["player"]))
 
-    roster=[expand(p, goals_by_id.get(p["id"],0)) for p in players]
+    roster=[expand(p, goals_by_id.get(p["id"],0), pens_by_id.get(p["id"],0)) for p in players]
     roster.sort(key=lambda x:(-x["goals"], x["player"]))
 
     out={"version":read_version(),
          "updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
+         "totalPens":sum(s["pens"] for s in scorers),
          "matchesWithGoals":matches_with_goals,"scorers":scorers,
          "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)

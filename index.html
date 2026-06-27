@@ -57,16 +57,30 @@
   .note{font-size:13px;color:var(--mut)}
 
   .board{display:grid;grid-template-columns:1fr;gap:10px}
-  .row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+  .row{position:relative;overflow:hidden;display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
     border-radius:12px;padding:11px 14px;transition:transform .15s,border-color .15s}
   .row:hover{transform:translateY(-2px);filter:brightness(1.08)}
-  .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px}
+  .row>.fill{position:absolute;left:0;top:0;bottom:0;width:0;z-index:0;border-radius:11px 0 0 11px;transition:width .7s cubic-bezier(.22,1,.36,1)}
+  .row>.rank,.row>.flag,.row>.who,.row>.balls{position:relative;z-index:1}
+  .row.top3{border-width:1px;box-shadow:0 0 0 1px rgba(255,176,46,.12),0 6px 18px -10px rgba(255,45,120,.4)}
+  .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px;text-align:center}
+  .rank.medal{font-size:20px;width:26px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
   .flag{font-size:21px;line-height:1}
   .who{flex:1;min-width:0}
   .who .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .who .cl{font-size:12px;color:#C0C8DD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .balls{font-family:'Space Mono',monospace;font-weight:700;font-size:18px;
     background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .score{display:flex;align-items:center;gap:9px}
+  .pips{display:inline-flex;flex-wrap:wrap;gap:3px;max-width:108px;justify-content:flex-end;align-items:center}
+  .pip{font-style:normal;font-size:13px;line-height:1;width:18px;height:18px;
+    display:inline-flex;align-items:center;justify-content:center}
+  .pip.pen{position:relative;border-radius:50%;background:rgba(255,45,120,.16);box-shadow:0 0 0 1.6px var(--pink)}
+  .pip.pen::after{content:"P";position:absolute;right:-4px;top:-5px;font-family:'Space Mono',monospace;
+    font-size:8px;font-weight:800;color:var(--pink);text-shadow:0 1px 2px #0b0f1c}
+  .boardlegend{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:12px;
+    font-family:'Noto Sans SC';font-size:12px;color:#9aa3bd}
+  .boardlegend span{display:inline-flex;align-items:center;gap:8px}
 
   .toggle{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
   .toggle button{font-family:'Noto Sans SC';font-size:13px;font-weight:700;color:var(--mut);background:none;border:none;
@@ -176,6 +190,10 @@
       </div>
     </div>
     <div class="board" id="board"></div>
+    <div class="boardlegend">
+      <span><i class="pip">⚽</i> 运动战进球 Open play</span>
+      <span><i class="pip pen">⚽</i> 点球 Penalty</span>
+    </div>
   </div>
 </section>
 
@@ -274,7 +292,7 @@
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
     <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.5.2</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.5.3</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -393,7 +411,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.5.2", BUILD_TIME="2026-06-27 07:42";
+const APP_VERSION="v1.5.3", BUILD_TIME="2026-06-27 08:26";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -491,18 +509,28 @@ function tierStyle(goals, maxG){
     bar:`hsl(${h},88%,58%)`
   };
 }
+const MEDALS=["🥇","🥈","🥉"];
 function renderBoard(){
   const rows=DATA.filter(d=>d.goals>=boardMin).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player));
   const el=document.getElementById("board");
-  const maxG=DATA.reduce((m,d)=>Math.max(m,d.goals),0);
   if(!rows.length){ el.innerHTML='<div class="note" style="padding:8px">暂无达到 '+boardMin+'+ 球的球员 · No players with '+boardMin+'+ goals yet</div>'; return; }
+  const maxG=DATA.reduce((m,d)=>Math.max(m,d.goals),0);
   el.innerHTML=rows.map((d,i)=>{
     const st=tierStyle(d.goals,maxG);
-    return `<div class="row" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
-       <span class="rank" style="color:${st.strong}">${String(i+1).padStart(2,"0")}</span>
+    const pct=maxG?Math.round(d.goals/maxG*100):0;
+    const rankCell = i<3
+      ? `<span class="rank medal">${MEDALS[i]}</span>`
+      : `<span class="rank" style="color:${st.strong}">${i+1}</span>`;
+    const pens=d.pens||0, open=d.goals-pens;
+    let pips="";
+    for(let k=0;k<open;k++) pips+=`<i class="pip" title="运动战进球 Open play">⚽</i>`;
+    for(let k=0;k<pens;k++)  pips+=`<i class="pip pen" title="点球 Penalty">⚽</i>`;
+    return `<div class="row${i<3?' top3':''}" style="border-color:${st.border}">
+       <span class="fill" style="width:${pct}%;background:${st.bg}"></span>
+       ${rankCell}
        <span class="flag">${fl(d.teamEn)}</span>
        <span class="who"><div class="nm">${pzr(d)} <span class="ensm">${d.player}</span></div><div class="cl">${czr(d)} <span class="ensm">${d.club}</span></div></span>
-       <span class="balls">${d.goals}</span></div>`;}).join("");
+       <span class="score"><span class="pips">${pips}</span><b class="balls">${d.goals}</b></span></div>`;}).join("");
 }
 
 const FONT="'Noto Sans SC',system-ui,sans-serif";
@@ -641,7 +669,16 @@ function populateLeagueFilter(){
 }
 let q="",leagueF="",minG=0,sortK="goals",sortDir=-1,acExact=null;
 
+// 表格行背景：进球≥2 时按档位上一层淡渐变，与领跑榜同色系但更克制；0–1 球保持干净
+function rowTint(goals,maxG){
+  if(goals<=1) return "";
+  const h=tierHue(goals,maxG);
+  const t=Math.min(1,Math.max(0,(goals-2)/Math.max(1,maxG-2)));
+  const a1=(0.11+t*0.17).toFixed(3), a2=(0.03+t*0.06).toFixed(3);
+  return `background-image:linear-gradient(90deg,hsla(${h},82%,52%,${a1}) 0%,hsla(${h},78%,48%,${a2}) 46%,transparent 80%)`;
+}
 function render(){
+  const maxG=TABLE_DATA.reduce((m,d)=>Math.max(m,d.goals),0);
   let rows=TABLE_DATA.filter(d=>d.goals>=minG)
     .filter(d=>!leagueF||d.league===leagueF)
     .filter(d=>{
@@ -659,7 +696,7 @@ function render(){
     else r=String(a[sortK]).localeCompare(String(b[sortK]),"zh");
     return r*sortDir || b.goals-a.goals || a.player.localeCompare(b.player);
   });
-  tbody.innerHTML=rows.map(d=>`<tr>
+  tbody.innerHTML=rows.map(d=>`<tr style="${rowTint(d.goals,maxG)}">
     <td><div class="pname">${pzr(d)}</div><div class="psub">${d.player}</div></td>
     <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div></td>
     <td style="text-align:center;font-family:'Space Mono',monospace;color:#cfd6ea">${d.num||"—"}</td>
