@@ -41,6 +41,7 @@
   .sub{color:#CBD2E4;font-size:15px;max-width:600px}
   .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:10px}
   .updated .upday{font-size:19px;font-weight:700;color:#EAEEF7;letter-spacing:.01em}
+  .updated .upday-en{font-size:13.5px;font-weight:600;color:#9aa3bd;letter-spacing:.01em}
   .updated .uptime{color:#8a93ab}
 
   .scoreboard{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
@@ -300,7 +301,7 @@
   <div class="wrap">
     数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
     <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.5.4</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.5.5</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 457 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -419,7 +420,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.5.4", BUILD_TIME="2026-06-27 11:09";
+const APP_VERSION="v1.5.5", BUILD_TIME="2026-06-27 11:25";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -510,10 +511,13 @@ function setUpdated(ts,live){
   dataUpdatedRaw = ts || null;
   lastUpdated = ts?new Date(ts):new Date();
   const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
-  const dayStr = lastUpdated.toLocaleString("zh-CN",{month:"long",day:"numeric"});
+  const y=lastUpdated.getFullYear(), d=lastUpdated.getDate();
+  const ord=n=>{const a=["th","st","nd","rd"],v=n%100;return n+(a[(v-20)%10]||a[v]||"th");};
+  const dayZh = y+"年"+(lastUpdated.getMonth()+1)+"月"+d+"日";
+  const dayEn = lastUpdated.toLocaleString("en-US",{month:"short"})+" "+ord(d)+", "+y;
   const timeStr = lastUpdated.toLocaleString("zh-CN",{hour:"2-digit",minute:"2-digit"});
   document.getElementById("updated").innerHTML=
-    "数据更新于 Updated <span class=\"upday\">"+dayStr+"</span> <span class=\"uptime\">"+timeStr+tag+"</span>";
+    "数据更新于 Updated <span class=\"upday\">"+dayZh+"</span> <span class=\"upday-en\">"+dayEn+"</span> <span class=\"uptime\">"+timeStr+tag+"</span>";
   if(typeof renderFooter==="function") renderFooter();
 }
 // 按进球数生成颜色：从青(低)→品红→琥珀(高)的连续色相，最高进球数决定色阶范围

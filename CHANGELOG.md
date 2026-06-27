@@ -8,6 +8,14 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.5.5
+
+**"Updated" date now bilingual with year / "更新于"日期改为中英双语带年份**
+- The header's *Updated* line now shows the full date in both languages — Chinese **2026年6月27日** (prominent) followed by English **Jun 27th, 2026** (with the correct ordinal suffix, auto 1st/2nd/3rd/…) — instead of the previous month-day-only `6月27日`. Time and Live/Snapshot tag unchanged.
+  顶部"数据更新于"一行改为中英双语完整日期——中文 **2026年6月27日**（醒目）+ 英文 **Jun 27th, 2026**（自动正确的序数后缀 1st/2nd/3rd…），取代原先只有月日的 `6月27日`。时间与 Live/Snapshot 标记不变。
+
+---
+
 ## v1.5.4
 
 **Tournament progress card / 赛程进展卡片**
