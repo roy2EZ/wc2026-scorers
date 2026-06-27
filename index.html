@@ -1,230 +1,800 @@
-# FIFA-World-Cup-2026-Scorers · 2026 世界杯射手榜
-
-A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World Cup, backed by a full **1,248-player database**. Data updates automatically every day, hosted on GitHub Pages — zero cost, zero maintenance.
-
-一个**中英双语**的 2026 美加墨世界杯（FIFA World Cup 2026）进球榜网站，背后是一个**1248 名球员的完整数据库**。数据每天自动更新，托管在 GitHub Pages 上，零成本、零维护。
-
-🔗 **Live site / 在线地址**: https://roy2ez.github.io/wc2026-scorers/
-
-![App preview](screenshots/promo-en.png)
-
-![应用预览](screenshots/promo-cn.png)
-
----
-
-## Screenshots / 截图
-
-### Hero & stats overview / 顶部与统计概览
-At-a-glance totals: goals, scorers, clubs, leagues, and matches with goals. The header shows whether data is `Live` (synced) or `Snapshot` (fallback).
-一眼掌握总数：总进球、进球球员、俱乐部、联赛、进球场次。抬头会显示数据是 `自动同步 Live` 还是 `内置快照 Snapshot`。
-
-![Hero & stats](screenshots/hero.png)
-
-### Top Scorers / 射手榜领跑者
-Goal ranking with All / 2+ / 3+ / 4+ / 5+ filters. Each row is auto-colored by its goal tier — the color scale rescales to the current max, so tiers never clash.
-进球数排名，可按 全部 / 2+ / 3+ / 4+ / 5+ 筛选。每行按进球档位自动上色，色阶随最高进球数动态调整，进多少球都不撞色。
-
-![Top Scorers](screenshots/top-scorers.png)
-
-### Goal Origins — by Goals / 进球来自哪里（进球数口径）
-Three charts side by side: by Nation / League / Club. Each has its own Top 10 / 15 / 20 / All selector; the club chart can drill down by league.
-三张图并排：按国家队 / 联赛 / 俱乐部。每张图各自可选 Top 10 / 15 / 20 / 全部，俱乐部图还能按联赛下钻。
-
-![Charts by goals](screenshots/charts-goals.png)
-
-### Goal Origins — by Scorers / 进球来自哪里（进球人数口径）
-One toggle switches all three charts between "Goals" and "Scorers" (number of distinct players).
-顶部一键切换，三张图同时在「进球数」与「进球人数」之间切换。
-
-![Charts by scorers](screenshots/charts-scorers.png)
-
-### All Players database / 全部球员查询数据库
-A complete, searchable database of **all 1,248 players** across 48 teams — Chinese name, English name, squad number, position, nation, club and league for every player, **including those with 0 goals**. Filter by All / 1+ / 2+ / 3+ / 4+ / 5+ goals; sort any column.
-覆盖 48 队**全部 1248 名球员**的可查询数据库——每人都有中文名、英文名、号码、位置、国家队、俱乐部、联赛，**包含尚未/没有进球的球员**（进球数记为 0）。可按 全部 / 1+ / 2+ / 3+ / 4+ / 5+ 进球筛选，任意列可排序。
-
-![All Players table](screenshots/table.png)
-
-### Search in either language, with autocomplete / 中英文搜索 + 自动补全
-Type in English or Chinese — searching "德国" and "Germany" return the same results. As you type, an autocomplete dropdown suggests matching nations, clubs and players; picking one applies an exact filter (so "葡萄牙" the nation won't pull in "葡萄牙体育" the club).
-中英文都能搜——输入「德国」或「Germany」结果一致。输入时会弹出自动补全下拉，提示匹配的国家队 / 俱乐部 / 球员；点选某项即精确筛选（所以选「葡萄牙」国家队不会混入「葡萄牙体育」俱乐部）。
-
-| 搜「德国」(Chinese) | Search "Germany" (English) |
-|:---:|:---:|
-| ![Search in Chinese](screenshots/search-cn.png) | ![Search in English](screenshots/search-en.png) |
-
-### Search by club / 按俱乐部搜索
-Searching "Paris" surfaces every Paris Saint-Germain player at once.
-搜索 "Paris" 即可一次列出所有巴黎圣日耳曼的球员。
-
-![Search by club](screenshots/search-club.png)
-
-### Filter by league / 按联赛筛选
-The league dropdown narrows the table to one competition (e.g. Serie A).
-联赛下拉框可把表格筛到单个联赛（如意甲 Serie A）。
-
-![Filter by league](screenshots/filter-league.png)
-
-### Combine search + filters / 组合搜索与筛选
-Search, league filter and goal filter all stack — e.g. "Netherland" + EPL shows only Dutch players at Premier League clubs.
-搜索词、联赛筛选、进球筛选可叠加——例如 "Netherland" + 英超，只显示在英超效力的荷兰球员。
-
-![Combine filters](screenshots/filter-combo.png)
-
----
-
-## Features
-
-- **Top Scorers** — goal ranking, filterable by All / 2+ / 3+ / 4+ / 5+ goals; each row is auto-colored by its goal tier (the color scale adjusts to the current max, so tiers never clash no matter how high the count goes).
-- **Goal Origins** — three bar charts: by **Nation** / by **League** / by **Club**, with a Goals / Scorers toggle, a Top 10 / 15 / 20 / All selector per chart, and league drill-down on the club chart.
-- **All Players database** — every one of the **1,248 players** is searchable, with squad number, position, nation, club and league; players with 0 goals are included so you can look up anyone. Searchable, league-filterable, goal-filterable and sortable; all columns bilingual.
-- **Search with autocomplete** — works in English and Chinese; a live dropdown suggests nations / clubs / players, and picking a suggestion applies an exact filter.
-- **Stats overview** — total goals, scorers, clubs, leagues, and matches with goals.
-- **Fully bilingual**, responsive across phone / tablet / desktop. A version tag in the footer (e.g. `v1.4.0 · build … · data …`) makes it easy to confirm the live site is up to date.
-
-## 功能一览
-
-- **射手榜领跑者**：进球数排名，可按 全部 / 2+ / 3+ / 4+ / 5+ 球筛选；每行按进球档位自动上色（色阶随最高进球数动态调整，进多少球都不撞色）。
-- **进球来自哪里**：三张柱状图——按国家队 / 按联赛 / 按俱乐部，可切换「进球数 / 进球人数」口径，每张图可选 Top 10 / 15 / 20 / 全部，俱乐部图还能按联赛下钻。
-- **全部球员查询数据库**：**1248 名球员**逐一可查，含号码、位置、国家队、俱乐部、联赛；没进球的球员也收录，任意球员都能查到。可搜索、可按联赛筛选、可按进球数筛选、可排序，所有列中英双语。
-- **搜索 + 自动补全**：中英文均可；输入时弹出下拉，提示国家队 / 俱乐部 / 球员，点选即精确筛选。
-- **统计概览**：总进球、进球球员、俱乐部、联赛、进球场次。
-- **全站中英双语**，自适应手机 / 平板 / 电脑。页脚有版本标记（如 `v1.4.0 · build … · data …`），方便确认线上是否为最新版。
-
----
-
-## Data architecture / 数据架构
-
-The site is built on a **single source of truth**: one master player database with stable IDs. Goal data is attached to players **by ID**, never by guessing names — so a player's number, position, club and Chinese name can never get lost or mismatched.
-
-网站建立在**单一数据源**之上：一个带稳定 ID 的权威球员数据库。进球数据通过 **ID** 精确叠加到球员上，绝不靠"猜名字"——所以球员的号码、位置、俱乐部、中文名不会丢失或错配。
-
-```
-players.json (1,248 players, each with a stable id like "BRA-7")
-        |
-        |  update_data.py  +  scorer_map.json (scorer name -> player id)
-        v
-openfootball goals  --resolved by id-->  goals added to each player
-        |
-        v
-     data.json  (scorers = players who scored; roster = all 1,248 players)
-        |
-        v
-   index.html  reads data.json and renders everything
-```
-
-1. **`players.json`** — the master database. One record per player: `id` (nation-code + shirt number, e.g. `BRA-7`), English name, Chinese name, number, position, nation, club, league. Built once for the tournament from official FIFA squad lists + curated Chinese names.
-2. **`scorer_map.json`** — a verified map from each goalscorer's name (as it appears upstream) to a player `id`. Resolved once and locked in, so the same player is never mismatched again (this is what fixed earlier issues like duplicate names or a forward matched to a goalkeeper).
-3. **`update_data.py`** — fetches goals, resolves each scorer to an `id` (via the map; case/accent-insensitive, with a conservative fuzzy fallback for brand-new names), tallies goals by `id`, and writes `data.json`. Any name it can't resolve is logged so it can be added to the map.
-4. **`index.html`** — reads `data.json` and renders the dashboard; Chinese names come straight from the database (`nameZh`).
-
-1. **`players.json`**：权威数据库。每名球员一条记录：`id`（国家码 + 球衣号，如 `BRA-7`）、英文名、中文名、号码、位置、国家队、俱乐部、联赛。整届赛事构建一次，数据来自 FIFA 官方名单 + 人工校对的中文名。
-2. **`scorer_map.json`**：进球者名（上游写法）→ 球员 `id` 的验证映射。解析一次后锁定，同一球员不会再错配（之前"同名撞车""前锋被配成门将"等问题就是靠它根治的）。
-3. **`update_data.py`**：抓取进球，把每个进球者解析成 `id`（走映射表，大小写/音标无关，新球员有保守的兜底匹配），按 `id` 累加进球，写出 `data.json`。解析不了的名字会打印到日志，便于加进映射表。
-4. **`index.html`**：读取 `data.json` 渲染页面；中文名直接取自数据库（`nameZh`）。
-
----
-
-## How auto-update works
-
-```
-GitHub Actions (scheduled)  ->  update_data.py fetches goals  ->  writes data.json  ->  auto-commit
-                                                                       |
-                                                                       v
-                       index.html reads data.json on load and shows the latest data
-```
-
-1. **Goal source**: [openfootball/worldcup.json](https://github.com/openfootball/worldcup.json) — public domain, free, no API key, with per-match goalscorers (updated by the author after each match).
-2. **Player database**: `players.json`, built from the official FIFA 26-man squad lists (1,248 players).
-3. **Fetch script** `update_data.py`: downloads the goal JSON, resolves each scorer to a player id, tallies goals (own goals excluded from individuals), and writes `data.json`.
-4. **Scheduled job** `.github/workflows/update.yml`: on match days, runs every 30 minutes between 9:00–23:00 US Pacific (cron uses UTC). Commits only when data changes.
-5. **Front end** `index.html`: ships a built-in snapshot for offline/instant display, then fetches `data.json` to overwrite with the latest; the "Updated…" line shows `Live` or `Snapshot`.
-
-> Data freshness depends on how quickly the upstream author logs each match; once a job succeeds, the site syncs within 30 minutes.
-
-## 自动更新是怎么跑的
-
-```
-GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  ->  自动提交
-                                                              |
-                                                              v
-                          网页 index.html 加载时读取 data.json 显示最新数据
-```
-
-1. **进球来源**：[openfootball/worldcup.json](https://github.com/openfootball/worldcup.json) —— 公共领域、免费、无需 API key，含每场逐个进球者（作者每场赛后更新）。
-2. **球员数据库**：`players.json`，由 FIFA 官方 26 人名单构建（1248 人）。
-3. **抓取脚本** `update_data.py`：下载进球 JSON，把每个进球者解析成球员 id，统计进球数（乌龙球不计入个人），写出 `data.json`。
-4. **定时任务** `.github/workflows/update.yml`：比赛日美西 9:00–23:00 之间每 30 分钟跑一次（cron 用 UTC）。数据有变化才提交，无变化不提交。
-5. **前端** `index.html`：内置一份快照可离线/秒显，加载时再抓取 `data.json` 覆盖为最新；页面顶部「更新于…」结尾会显示 自动同步 Live 或 内置快照 Snapshot。
-
-> 数据新鲜度取决于上游作者多久录入；任务跑成功后，最多 30 分钟内同步到网站。
-
----
-
-## File structure
-
-| File | Description |
-|---|---|
-| `index.html` | The site itself (front end + built-in snapshot + data.json loading) |
-| `players.json` | **Master player database** — all 1,248 players, each with a stable id, Chinese & English name, number, position, nation, club, league |
-| `scorer_map.json` | Verified map from goalscorer name -> player id (resolved once, locked in) |
-| `data.json` | Current data, auto-generated each run (`scorers` = players who scored; `roster` = all players) |
-| `update_data.py` | Script that fetches goals and generates data.json, attaching goals by player id |
-| `.github/workflows/update.yml` | GitHub Actions schedule config |
-
-> Earlier builds used `club_overrides.json` / `squad_db.json` / `roster.json` / `names_zh.json` to resolve clubs and names at runtime. From v1.4.0 these are consolidated into `players.json` (the single source of truth); they may remain in the repo for reference but are no longer required by the pipeline.
-
-## 文件结构
-
-| 文件 | 说明 |
-|---|---|
-| `index.html` | 网站本体（前端 + 内置快照 + 读取 data.json 逻辑） |
-| `players.json` | **权威球员数据库**——全部 1248 人，每人含稳定 id、中英文名、号码、位置、国家队、俱乐部、联赛 |
-| `scorer_map.json` | 进球者名 -> 球员 id 的验证映射（解析一次，锁定） |
-| `data.json` | 当前数据，每次运行自动生成（`scorers` = 有进球的球员；`roster` = 全员） |
-| `update_data.py` | 抓取进球并生成 data.json 的脚本，按球员 id 叠加进球 |
-| `.github/workflows/update.yml` | GitHub Actions 定时任务配置 |
-
-> 早期版本用 `club_overrides.json` / `squad_db.json` / `roster.json` / `names_zh.json` 在运行时解析俱乐部和译名。自 v1.4.0 起，这些已合并进 `players.json`（单一数据源）；它们可能仍保留在仓库中供参考，但管线已不再依赖。
-
----
-
-## Update the result manually
-
-Repo top -> **Actions** -> **Update WC2026 scorers** -> **Run workflow**. After it finishes, the `Fetch latest goals` step prints something like:
-
-```
-OK: 125 scorers, 175 goals, 57 matches with goals.
-This run added 3 goal(s):
-  + New scorer Daizen Maeda (Japan) 1 goal
-  + 1 more goal: Brian Brobbey
-```
-
-If a brand-new scorer's name can't be matched automatically, the log shows a `WARNING: unresolved scorer name(s)` line — add that name to `scorer_map.json` (one line: `"Name": "player-id"`) and it's fixed for good.
-
-## 手动跑一次数据更新（想立刻更新时）
-
-仓库顶部 Actions -> 左侧 Update WC2026 scorers -> Run workflow。跑完点进运行记录，`Fetch latest goals` 步骤会打印类似上面的输出。
-
-若某个全新进球者无法自动匹配，日志会出现 `WARNING: unresolved scorer name(s)` —— 把该名字加进 `scorer_map.json`（一行：`"名字": "球员id"`）即可永久修复。
-
----
-
-## Data notes
-
-- Goal data sourced from official FIFA match data and post-match reports (compiled via openfootball).
-- Club = the player's registered club in their national-team squad.
-- Own goals are **not** credited to individuals.
-
-## 数据口径
-
-- 进球数据来源：FIFA 官方比赛数据与赛后报道（经 openfootball 整理）。
-- 俱乐部 = 球员在各国 26 人名单中登记的所属球会。
-- 乌龙球不计入个人进球。
-
----
-
-## Tech stack / 技术栈
-
-A pure static site: HTML + vanilla JavaScript + [Chart.js](https://www.chartjs.org/); data pipeline in Python (standard library, no third-party deps); GitHub Actions + GitHub Pages. No backend, no database, no API key.
-
-纯静态站点：HTML + 原生 JavaScript + Chart.js；数据管线 Python（标准库，无第三方依赖）；GitHub Actions + GitHub Pages。无后端、无数据库、无 API key。
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 FIFA World Cup Top Scorers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#0A0E1A; --bg2:#0E1424; --card:#141B30; --card2:#1A2238;
+    --line:#2c3754; --ink:#F4F6FB; --mut:#B4BCD4; --mut2:#8b95b0;
+    --pink:#FF2D78; --amber:#FFB02E; --cyan:#19E0C8;
+    --grad:linear-gradient(90deg,#FF2D78 0%,#FF6B3D 55%,#FFB02E 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#0A0E1A}
+  body{background:var(--bg);color:var(--ink);
+    font-family:'Noto Sans SC',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+  header{position:relative;padding:46px 0 30px;border-bottom:1px solid var(--line);
+    background:#0A0E1A;
+    background:radial-gradient(1100px 360px at 82% -130px, rgba(255,45,120,.12), transparent 60%),
+               radial-gradient(880px 300px at 0% -90px, rgba(25,224,200,.08), transparent 55%),
+               #0A0E1A;}
+  .eyebrow{display:flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;
+    font-size:12px;letter-spacing:.12em;color:#DCE2F0;text-transform:uppercase;flex-wrap:wrap;font-weight:700}
+  .live{display:inline-flex;align-items:center;gap:6px;color:var(--pink);font-weight:700;font-family:'Noto Sans SC'}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,45,120,.6)}70%{box-shadow:0 0 0 9px rgba(255,45,120,0)}100%{box-shadow:0 0 0 0 rgba(255,45,120,0)}}
+  h1{font-family:'Anton',sans-serif;font-weight:400;line-height:.96;letter-spacing:.01em;
+    font-size:clamp(40px,8.5vw,82px);margin:14px 0 8px}
+  h1 .g, .zh-title .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .zh-title{font-family:'Noto Sans SC';font-weight:900;font-size:clamp(22px,5vw,34px);
+    letter-spacing:.04em;margin-bottom:10px}
+  .sub{color:#CBD2E4;font-size:15px;max-width:600px}
+  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:6px}
+
+  .scoreboard{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
+  .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
+    border-radius:14px;padding:18px 16px;position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+  .stat .num{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1}
+  .stat .lab{font-size:12px;letter-spacing:.06em;color:var(--mut);margin-top:8px}
+
+  section{padding:38px 0;background:var(--bg)}
+  .shead{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+  .shead h2{font-family:'Noto Sans SC';font-weight:900;font-size:clamp(22px,4vw,30px);letter-spacing:.02em}
+  .shead h2 b{color:var(--pink);font-weight:900}
+  .enh{font-family:'Noto Sans SC';font-size:.62em;font-weight:400;color:#9aa3bd;letter-spacing:.01em;margin-left:6px}
+  .sub .en{display:block;color:#9aa3bd;font-size:13.5px;margin-top:3px}
+  .note{font-size:13px;color:var(--mut)}
+
+  .board{display:grid;grid-template-columns:1fr;gap:10px}
+  .row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:11px 14px;transition:transform .15s,border-color .15s}
+  .row:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px}
+  .flag{font-size:21px;line-height:1}
+  .who{flex:1;min-width:0}
+  .who .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .who .cl{font-size:12px;color:#C0C8DD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .balls{font-family:'Space Mono',monospace;font-weight:700;font-size:18px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .toggle{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .toggle button{font-family:'Noto Sans SC';font-size:13px;font-weight:700;color:var(--mut);background:none;border:none;
+    padding:7px 16px;border-radius:999px;cursor:pointer;transition:.15s}
+  .toggle button.on{background:var(--grad);color:#180a12}
+  .charts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .chartcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px 10px}
+  .chartcard h3{font-size:14px;color:var(--mut);margin-bottom:6px;font-weight:700}
+  .chead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+  .chead h3{margin:0}
+  .chead.stack{flex-direction:column;align-items:stretch;gap:8px}
+  .chead.stack .selrow{display:flex;gap:6px;justify-content:flex-start;flex-wrap:wrap}
+  .chead.stack .selrow .miniSel{max-width:none;flex:1;min-width:120px}
+  .miniSel{background:var(--card2);border:1px solid var(--line);color:var(--ink);
+    font-family:'Noto Sans SC';font-size:12px;border-radius:8px;padding:5px 9px;outline:none;cursor:pointer;max-width:58%}
+  .chartcard .cwrap{position:relative;width:100%}
+  .ylabels{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2}
+  .ylabels .yl{position:absolute;left:0;transform:translateY(-50%);
+    display:flex;align-items:center;gap:5px;justify-content:flex-end;text-align:right}
+  .ylabels .yl .fl{font-size:14px;flex:none}
+  .ylabels .yl .tx{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+  .ylabels .yl .zh{font-size:11.5px;color:#E6EAF4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ylabels .yl .ens{font-size:9.5px;color:#8A93AB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(max-width:620px){ .ylabels .yl .zh{font-size:11px} .ylabels .yl .ens{font-size:9px} }
+
+  .subnote{margin:-8px 0 18px;font-size:13px;line-height:1.55;color:#aab2cb;max-width:760px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+  .search{position:relative}
+  .acbox{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:30;background:#121a30;border:1px solid #2a3550;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.5);overflow:hidden;max-height:320px;overflow-y:auto}
+  .acitem{display:flex;align-items:center;gap:9px;padding:9px 12px;cursor:pointer;font-size:14px;border-bottom:1px solid rgba(255,255,255,.04)}
+  .acitem:last-child{border-bottom:0}
+  .acitem:hover,.acitem.sel{background:rgba(255,45,120,.14)}
+  .acitem .tag{margin-left:auto;font-size:11px;color:#8a93ab;font-family:'Space Mono',monospace;border:1px solid #2a3550;border-radius:6px;padding:1px 7px}
+  .acitem .acflag{font-size:16px}
+  .acitem .acsub{color:#8a93ab;font-size:12px}
+  .search{flex:1;min-width:180px;display:flex;align-items:center;gap:8px;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;padding:0 12px}
+  .search input{flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:'Noto Sans SC';font-size:14px;padding:11px 0}
+  .search input::placeholder{color:var(--mut)}
+  .search svg{flex:0 0 16px;stroke:var(--mut)}
+  select{background:var(--card);border:1px solid var(--line);color:var(--ink);font-family:'Noto Sans SC';
+    font-size:13px;border-radius:10px;padding:10px 12px;outline:none;cursor:pointer;max-width:46vw}
+  .chips{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px}
+  .chips button{font-family:'Space Mono',monospace;font-size:13px;color:var(--mut);background:none;border:none;
+    padding:8px 13px;border-radius:8px;cursor:pointer;transition:.15s}
+  .chips button.on{background:var(--grad);color:#180a12;font-weight:700;box-shadow:0 2px 10px rgba(255,45,120,.35)}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:14px}
+  .tbl thead th{position:sticky;top:0;background:var(--bg2);text-align:left;font-size:12px;
+    color:var(--mut);font-weight:700;padding:12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
+  .tbl thead th .ar{color:var(--pink);font-size:9px}
+  .tbl tbody td{padding:11px 12px;border-bottom:1px solid rgba(39,48,75,.55);vertical-align:middle}
+  .tbl tbody tr:hover{background:rgba(26,34,56,.5)}
+  .tbl .gv{font-family:'Space Mono',monospace;font-weight:700;text-align:center;width:48px}
+  .g3{color:var(--amber)} .g2{color:var(--cyan)}
+  .pname{font-weight:700}
+  .cmut{color:#CBD2E4}
+  .psub{font-size:11px;color:#9aa3bd;font-weight:400;margin-top:1px;letter-spacing:.01em}
+  .ensm{font-size:11px;color:#9aa3bd;font-weight:400}
+  .tablecard{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .scroller{max-height:580px;overflow:auto}
+  .count{font-size:12px;color:var(--mut);font-family:'Space Mono',monospace;padding:12px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 50px;color:#C0C8DD;font-size:13px;line-height:1.85;background:var(--bg)}
+  footer b{color:var(--ink)}
+
+  @media(max-width:1024px) and (min-width:761px){ .charts{grid-template-columns:1fr 1fr} }
+  @media(max-width:760px){
+    .scoreboard{grid-template-columns:repeat(3,1fr)}
+    .charts{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">
+      <span>2026 美加墨世界杯 FIFA World Cup 🇺🇸 🇲🇽 🇨🇦 </span>
+      <span class="live"><span class="dot"></span>实时追踪 Live</span>
+    </div>
+    <h1>GOAL<span class="g">SCORERS</span></h1>
+    <div class="zh-title">2026世界杯<span class="g">射手榜</span></div>
+    <p class="sub">本届世界杯每一位进球球员，以及他所属的俱乐部与联赛。下方可按联赛、按俱乐部看进球分布，也可在表格里搜索筛选。<span class="en">Every goalscorer of the 2026 World Cup — with their club and league. See goals by league and by club below, or search and filter the table.</span></p>
+    <p class="updated" id="updated"></p>
+
+    <div class="scoreboard">
+      <div class="stat"><div class="num" id="s-goals">0</div><div class="lab">总进球 Goals</div></div>
+      <div class="stat"><div class="num" id="s-players">0</div><div class="lab">进球球员 Scorers</div></div>
+      <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab">俱乐部 Clubs</div></div>
+      <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab">联赛 Leagues</div></div>
+      <div class="stat"><div class="num" id="s-matches">0</div><div class="lab">进球场次 Matches</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2>
+      <div class="chips" id="boardchips">
+        <button data-bmin="1">全部 All</button>
+        <button class="on" data-bmin="2">2+</button>
+        <button data-bmin="3">3+</button>
+        <button data-bmin="4">4+</button>
+        <button data-bmin="5">5+</button>
+      </div>
+    </div>
+    <div class="board" id="board"></div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="shead">
+      <h2>进球<b>来自哪里</b><span class="enh">Goal Origins</span></h2>
+      <div class="toggle" id="metric">
+        <button class="on" data-m="goals">进球数 Goals</button>
+        <button data-m="scorers">进球人数 Scorers</button>
+      </div>
+    </div>
+    <div class="charts">
+      <div class="chartcard">
+        <div class="chead stack"><h3 id="natTitle">按国家队</h3>
+          <div class="selrow">
+            <select class="miniSel topn" id="topNatSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
+        <div class="cwrap"><div class="ylabels" id="natLabels"></div><canvas id="natChart"></canvas></div>
+      </div>
+      <div class="chartcard">
+        <div class="chead stack"><h3 id="leagueTitle">按联赛</h3>
+          <div class="selrow">
+            <select class="miniSel topn" id="topLeagueSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
+        <div class="cwrap"><div class="ylabels" id="leagueLabels"></div><canvas id="leagueChart"></canvas></div>
+      </div>
+      <div class="chartcard">
+        <div class="chead stack"><h3 id="clubTitle">按俱乐部</h3>
+          <div class="selrow">
+            <select id="clubLeagueSel" class="miniSel"></select>
+            <select class="miniSel topn" id="topClubSel">
+              <option value="10" selected>Top 10</option>
+              <option value="15">Top 15</option>
+              <option value="20">Top 20</option>
+              <option value="all">All</option>
+            </select>
+          </div></div>
+        <div class="cwrap"><div class="ylabels" id="clubLabels"></div><canvas id="clubChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="shead"><h2>全部<b>球员查询</b><span class="enh">All Players</span></h2></div>
+    <p class="subnote">完整收录本届世界杯全部 48 队 1248 名参赛球员，可查询每位球员的国家队、号码、位置、所属俱乐部与联赛——包含尚未/没有进球的球员（进球数记为 0）。默认仅显示已进球球员，点「全部 All」查看全部名单。<span style="display:block;margin-top:3px;color:#8a93ab">A full searchable database of all 1,248 players across 48 teams — including those with 0 goals. Default view shows scorers only.</span></p>
+    <div class="filters">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input id="q" type="search" placeholder="搜索球员 / 俱乐部 / 国家 Search players, clubs, nations…" autocomplete="off">
+        <div id="acbox" class="acbox" style="display:none"></div>
+      </label>
+      <select id="leagueSel"></select>
+      <div class="chips" id="minchips">
+        <button class="on" data-min="0">全部 All</button>
+        <button data-min="1">1+</button>
+        <button data-min="2">2+</button>
+        <button data-min="3">3+</button>
+        <button data-min="4">4+</button>
+        <button data-min="5">5+</button>
+      </div>
+    </div>
+    <div class="tablecard">
+      <div class="scroller">
+        <table class="tbl">
+          <thead><tr>
+            <th data-k="player">球员 Player</th>
+            <th data-k="teamZh">国家队 Nation</th>
+            <th data-k="num" style="text-align:center">号码 No.</th>
+            <th data-k="posZh">位置 Pos.</th>
+            <th data-k="goals" style="text-align:center">进球数 Goals <span class="ar">▼</span></th>
+            <th data-k="club">俱乐部 Club</th>
+            <th data-k="league">联赛 League</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="count" id="rowcount"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    数据更新于 <span id="footDate">—</span>，共 <span id="footPlayers">—</span> 名进球者、<span id="footGoals">—</span> 粒进球，来自 <span id="footMatches">—</span> 场比赛。来源：FIFA 官方比赛数据与赛后报道；俱乐部为各国 26 人名单中登记的所属球会。乌龙球不计入个人进球。 <span style="display:block;margin-top:8px;color:#9aa3bd">Updated <span id="footDateEn">—</span> · <span id="footPlayersEn">—</span> scorers, <span id="footGoalsEn">—</span> goals from <span id="footMatchesEn">—</span> matches. Sources: official FIFA match data and reports; club = the player\'s registered club in their national-team squad. Own goals are not credited to individuals.</span>
+    <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
+      <span id="buildVer">v1.4.0</span> · build <span id="buildTime">—</span> · 全员数据库 1248 players · data <span id="dataVer">—</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// [球员, 国家队(英), 进球, 俱乐部, 联赛(中), 国家队(中)]
+const RAW = [
+ ["Lionel Messi","Argentina",5,"Inter Miami","美职联","阿根廷"],
+ ["Kylian Mbappe","France",4,"Real Madrid","西甲","法国"],
+ ["Erling Haaland","Norway",4,"Manchester City","英超","挪威"],
+ ["Jonathan David","Canada",3,"Juventus","意甲","加拿大"],
+ ["Denis Undav","Germany",3,"VfB Stuttgart","德甲","德国"],
+ ["Johan Manzambi","Switzerland",3,"SC Freiburg","德甲","瑞士"],
+ ["Folarin Balogun","USA",2,"AS Monaco","法甲","美国"],
+ ["Kai Havertz","Germany",2,"Arsenal","英超","德国"],
+ ["Yasin Ayari","Sweden",2,"Brighton & Hove Albion","英超","瑞典"],
+ ["Elijah Just","New Zealand",2,"Motherwell","苏超","新西兰"],
+ ["Harry Kane","England",2,"Bayern Munich","德甲","英格兰"],
+ ["Cyle Larin","Canada",2,"Southampton","英冠","加拿大"],
+ ["Ismael Saibari","Morocco",3,"PSV Eindhoven","荷甲","摩洛哥"],
+ ["Matheus Cunha","Brazil",3,"Manchester United","英超","巴西"],
+ ["Vinicius Junior","Brazil",4,"Real Madrid","西甲","巴西"],
+ ["Crysencio Summerville","Netherlands",2,"West Ham United","英超","荷兰"],
+ ["Brian Brobbey","Netherlands",2,"Sunderland","英超","荷兰"],
+ ["Cody Gakpo","Netherlands",2,"Liverpool","英超","荷兰"],
+ ["Daichi Kamada","Japan",2,"Crystal Palace","英超","日本"],
+ ["Ayase Ueda","Japan",2,"Feyenoord","荷甲","日本"],
+ ["Mikel Oyarzabal","Spain",2,"Real Sociedad","西甲","西班牙"],
+ ["Maximiliano Araujo","Uruguay",2,"Sporting CP","葡超","乌拉圭"],
+ ["Ismaila Sarr","Senegal",2,"Crystal Palace","英超","塞内加尔"],
+ ["Cristiano Ronaldo","Portugal",2,"Al-Nassr","沙特职业联赛","葡萄牙"],
+ ["Ruben Vargas","Switzerland",2,"Sevilla","西甲","瑞士"],
+ ["Ermin Mahmic","Bosnia & Herzegovina",2,"Slovan Liberec","捷克甲级","波黑"],
+ ["Julian Quinones","Mexico",2,"Al-Qadsiah","沙特职业联赛","墨西哥"],
+ ["Raul Jimenez","Mexico",1,"Fulham","英超","墨西哥"],
+ ["Ladislav Krejci","Czechia",1,"Wolverhampton Wanderers","英超","捷克"],
+ ["Hwang In-beom","South Korea",1,"Feyenoord","荷甲","韩国"],
+ ["Oh Hyeon-gyu","South Korea",1,"Besiktas","土超","韩国"],
+ ["Jovo Lukic","Bosnia & Herzegovina",1,"Universitatea Cluj","罗马尼亚甲级","波黑"],
+ ["Mauricio","Paraguay",1,"Palmeiras","巴西甲级","巴拉圭"],
+ ["Gio Reyna","USA",1,"Borussia Monchengladbach","德甲","美国"],
+ ["Breel Embolo","Switzerland",1,"Stade Rennais","法甲","瑞士"],
+ ["Boualem Khoukhi","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
+ ["John McGinn","Scotland",1,"Aston Villa","英超","苏格兰"],
+ ["Nestory Irankunda","Australia",1,"Watford","英冠","澳大利亚"],
+ ["Connor Metcalfe","Australia",1,"FC St. Pauli","德甲","澳大利亚"],
+ ["Felix Nmecha","Germany",1,"Borussia Dortmund","德甲","德国"],
+ ["Nico Schlotterbeck","Germany",1,"Borussia Dortmund","德甲","德国"],
+ ["Livano Comenencia","Curacao",1,"FC Zurich","瑞士超","库拉索"],
+ ["Jamal Musiala","Germany",1,"Bayern Munich","德甲","德国"],
+ ["Nathaniel Brown","Germany",1,"Eintracht Frankfurt","德甲","德国"],
+ ["Virgil van Dijk","Netherlands",1,"Liverpool","英超","荷兰"],
+ ["Keito Nakamura","Japan",1,"Stade Reims","法乙","日本"],
+ ["Amad Diallo","Ivory Coast",1,"Manchester United","英超","科特迪瓦"],
+ ["Alexander Isak","Sweden",1,"Liverpool","英超","瑞典"],
+ ["Omar Rekik","Tunisia",1,"NK Maribor","斯洛文尼亚甲级","突尼斯"],
+ ["Viktor Gyokeres","Sweden",1,"Arsenal","英超","瑞典"],
+ ["Mattias Svanberg","Sweden",1,"VfL Wolfsburg","德甲","瑞典"],
+ ["Abdulelah Al-Amri","Saudi Arabia",1,"Al-Nassr","沙特职业联赛","沙特阿拉伯"],
+ ["Aymen Hussein","Iraq",1,"Al-Karma","伊拉克星级联赛","伊拉克"],
+ ["Bradley Barcola","France",1,"Paris Saint-Germain","法甲","法国"],
+ ["Emam Ashour","Egypt",1,"Al Ahly","埃及超","埃及"],
+ ["Ibrahim Mbaye","Senegal",1,"Paris Saint-Germain","法甲","塞内加尔"],
+ ["Leo Ostigard","Norway",1,"Genoa","意甲","挪威"],
+ ["Mohamed Mohebi","Iran",1,"FC Rostov","俄超","伊朗"],
+ ["Ramin Rezaeian","Iran",1,"Foolad","伊朗波斯湾联赛","伊朗"],
+ ["Romano Schmid","Austria",1,"Werder Bremen","德甲","奥地利"],
+ ["Marko Arnautovic","Austria",1,"Red Star Belgrade","塞尔维亚超","奥地利"],
+ ["Ali Olwan","Jordan",1,"Al-Sailiya","卡塔尔星级联赛","约旦"],
+ ["Joao Neves","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
+ ["Yoane Wissa","DR Congo",1,"Newcastle United","英超","刚果(金)"],
+ ["Martin Baturina","Croatia",1,"Como","意甲","克罗地亚"],
+ ["Petar Musa","Croatia",1,"FC Dallas","美职联","克罗地亚"],
+ ["Jude Bellingham","England",1,"Real Madrid","西甲","英格兰"],
+ ["Marcus Rashford","England",1,"Barcelona","西甲","英格兰"],
+ ["Caleb Yirenkyi","Ghana",1,"FC Nordsjaelland","丹麦超","加纳"],
+ ["Daniel Munoz","Colombia",1,"Crystal Palace","英超","哥伦比亚"],
+ ["Abbosbek Fayzullaev","Uzbekistan",1,"Istanbul Basaksehir","土超","乌兹别克斯坦"],
+ ["Luis Diaz","Colombia",1,"Bayern Munich","德甲","哥伦比亚"],
+ ["Jaminton Campaz","Colombia",1,"Rosario Central","阿甲","哥伦比亚"],
+ ["Michal Sadilek","Czechia",1,"Slavia Prague","捷克甲级","捷克"],
+ ["Granit Xhaka","Switzerland",1,"Sunderland","英超","瑞士"],
+ ["Nathan Saliba","Canada",1,"Anderlecht","比利时甲级","加拿大"],
+ ["Luis Romo","Mexico",1,"Guadalajara","墨超","墨西哥"],
+ ["Alex Freeman","USA",1,"Villarreal","西甲","美国"],
+ ["Matias Galarza","Paraguay",1,"Atlanta United","美职联","巴拉圭"],
+ ["Anthony Elanga","Sweden",1,"Newcastle United","英超","瑞典"],
+ ["Agustin Canobbio","Uruguay",1,"Fluminense","巴西甲级","乌拉圭"],
+ ["Kevin Pina","Cape Verde",1,"FC Krasnodar","俄超","佛得角"],
+ ["Helio Varela","Cape Verde",1,"Maccabi Tel Aviv","以色列超","佛得角"],
+ ["Junya Ito","Japan",1,"KRC Genk","比利时甲级","日本"],
+ ["Finn Surman","New Zealand",1,"Portland Timbers","美职联","新西兰"],
+ ["Lamine Yamal","Spain",1,"Barcelona","西甲","西班牙"],
+ ["Franck Kessie","Ivory Coast",1,"Al-Ahli","沙特职业联赛","科特迪瓦"],
+ ["Mohamed Salah","Egypt",1,"Liverpool","英超","埃及"],
+ ["Trezeguet","Egypt",1,"Al Ahly","埃及超","埃及"],
+ ["Mostafa Ziko","Egypt",1,"Pyramids","埃及超","埃及"],
+ ["Ousmane Dembele","France",1,"Paris Saint-Germain","法甲","法国"],
+ ["Marcus Holmgren Pedersen","Norway",1,"Torino","意甲","挪威"],
+ ["Amine Gouiri","Algeria",1,"Marseille","法甲","阿尔及利亚"],
+ ["Nadhir Benbouali","Algeria",1,"Gyori ETO","匈牙利甲级","阿尔及利亚"],
+ ["Nizar Al-Rashdan","Jordan",1,"Qatar SC","卡塔尔星级联赛","约旦"],
+ ["Nuno Mendes","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
+ ["Rafael Leao","Portugal",1,"AC Milan","意甲","葡萄牙"],
+ ["Ante Budimir","Croatia",1,"Osasuna","西甲","克罗地亚"],
+ ["Kerim Alajbegovic","Bosnia & Herzegovina",1,"RB Salzburg","奥地利甲级","波黑"],
+ ["Hassan Al Haidos","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
+ ["Promise David","Canada",1,"Union Saint-Gilloise","比利时甲级","加拿大"],
+ ["Achraf Hakimi","Morocco",1,"Paris Saint-Germain","法甲","摩洛哥"],
+ ["Soufiane Rahimi","Morocco",1,"Al Ain","阿联酋联赛","摩洛哥"],
+ ["Gessime Yassine","Morocco",1,"Strasbourg","法甲","摩洛哥"],
+ ["Mateo Chavez","Mexico",1,"AZ Alkmaar","荷甲","墨西哥"],
+ ["Alvaro Fidalgo","Mexico",1,"Real Betis","西甲","墨西哥"],
+ ["Thapelo Maseko","South Africa",1,"AEL Limassol","塞浦路斯甲级","南非"],
+ ["Wilson Isidor","Haiti",1,"Sunderland","英超","海地"]
+];
+const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
+let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
+const APP_VERSION="v1.4.0", BUILD_TIME="2026-06-27 02:05";
+let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
+const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
+
+const FLAG={ "Argentina":"🇦🇷","Canada":"🇨🇦","USA":"🇺🇸","Germany":"🇩🇪","Sweden":"🇸🇪","New Zealand":"🇳🇿",
+ "Norway":"🇳🇴","France":"🇫🇷","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Switzerland":"🇨🇭","Morocco":"🇲🇦","Brazil":"🇧🇷","Netherlands":"🇳🇱",
+ "Spain":"🇪🇸","Uruguay":"🇺🇾","Japan":"🇯🇵","Mexico":"🇲🇽","Czechia":"🇨🇿","South Korea":"🇰🇷",
+ "Bosnia & Herzegovina":"🇧🇦","Paraguay":"🇵🇾","Qatar":"🇶🇦","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","Australia":"🇦🇺","Curacao":"🇨🇼",
+ "Ivory Coast":"🇨🇮","Tunisia":"🇹🇳","Saudi Arabia":"🇸🇦","Iraq":"🇮🇶","Egypt":"🇪🇬","Senegal":"🇸🇳","Iran":"🇮🇷",
+ "Austria":"🇦🇹","Jordan":"🇯🇴","Portugal":"🇵🇹","DR Congo":"🇨🇩","Croatia":"🇭🇷","Ghana":"🇬🇭","Colombia":"🇨🇴",
+ "Uzbekistan":"🇺🇿","Cape Verde":"🇨🇻","Algeria":"🇩🇿","South Africa":"🇿🇦","Haiti":"🇭🇹"};
+const fl=t=>FLAG[t]||"🏳️";
+const PZH={"Lionel Messi": "梅西", "Kylian Mbappe": "姆巴佩", "Erling Haaland": "哈兰德", "Jonathan David": "戴维", "Denis Undav": "翁达夫", "Johan Manzambi": "曼赞比", "Folarin Balogun": "巴洛贡", "Kai Havertz": "哈弗茨", "Yasin Ayari": "阿亚里", "Elijah Just": "贾斯特", "Harry Kane": "凯恩", "Cyle Larin": "拉林", "Ismael Saibari": "赛巴里", "Matheus Cunha": "库尼亚", "Vinicius Junior": "维尼修斯", "Crysencio Summerville": "萨默维尔", "Brian Brobbey": "布罗比", "Cody Gakpo": "加克波", "Daichi Kamada": "镰田大地", "Ayase Ueda": "上田绫世", "Mikel Oyarzabal": "奥亚萨瓦尔", "Maximiliano Araujo": "阿劳霍", "Ismaila Sarr": "萨尔", "Cristiano Ronaldo": "C罗", "Ruben Vargas": "巴尔加斯", "Ermin Mahmic": "马赫米奇", "Julian Quinones": "基尼奥内斯", "Raul Jimenez": "希门尼斯", "Ladislav Krejci": "克雷伊奇", "Hwang In-beom": "黄仁范", "Oh Hyeon-gyu": "吴贤奎", "Jovo Lukic": "卢基奇", "Mauricio": "毛里西奥", "Gio Reyna": "雷纳", "Breel Embolo": "恩博洛", "Boualem Khoukhi": "库基", "John McGinn": "麦金", "Nestory Irankunda": "伊兰昆达", "Connor Metcalfe": "梅特卡夫", "Felix Nmecha": "恩梅查", "Nico Schlotterbeck": "施洛特贝克", "Livano Comenencia": "科梅嫩西亚", "Jamal Musiala": "穆西亚拉", "Nathaniel Brown": "布朗", "Virgil van Dijk": "范戴克", "Keito Nakamura": "中村敬斗", "Amad Diallo": "阿马德", "Alexander Isak": "伊萨克", "Omar Rekik": "雷基克", "Viktor Gyokeres": "约凯雷斯", "Mattias Svanberg": "斯万贝里", "Abdulelah Al-Amri": "阿姆里", "Aymen Hussein": "侯赛因", "Bradley Barcola": "巴尔科拉", "Emam Ashour": "阿舒尔", "Ibrahim Mbaye": "姆巴耶", "Leo Ostigard": "厄斯蒂高", "Mohamed Mohebi": "莫赫比", "Ramin Rezaeian": "雷扎埃安", "Romano Schmid": "施密德", "Marko Arnautovic": "阿瑙托维奇", "Ali Olwan": "奥尔万", "Joao Neves": "若昂·内维斯", "Yoane Wissa": "维萨", "Martin Baturina": "巴图里纳", "Petar Musa": "穆萨", "Jude Bellingham": "贝林厄姆", "Marcus Rashford": "拉什福德", "Caleb Yirenkyi": "伊伦基", "Daniel Munoz": "穆尼奥斯", "Abbosbek Fayzullaev": "法伊祖拉耶夫", "Luis Diaz": "路易斯·迪亚斯", "Jaminton Campaz": "坎帕斯", "Michal Sadilek": "萨迪莱克", "Granit Xhaka": "扎卡", "Nathan Saliba": "萨利巴", "Luis Romo": "罗莫", "Alex Freeman": "弗里曼", "Matias Galarza": "加拉萨", "Anthony Elanga": "埃兰加", "Agustin Canobbio": "卡诺比奥", "Kevin Pina": "皮纳", "Helio Varela": "巴雷拉", "Junya Ito": "伊东纯也", "Finn Surman": "瑟曼", "Lamine Yamal": "亚马尔", "Franck Kessie": "凯西埃", "Mohamed Salah": "萨拉赫", "Trezeguet": "特雷泽盖", "Mostafa Ziko": "齐科", "Ousmane Dembele": "登贝莱", "Marcus Holmgren Pedersen": "佩德森", "Amine Gouiri": "古伊里", "Nadhir Benbouali": "本布阿利", "Nizar Al-Rashdan": "拉什丹", "Nuno Mendes": "努诺·门德斯", "Rafael Leao": "莱奥", "Ante Budimir": "布迪米尔", "Kerim Alajbegovic": "阿拉伊贝戈维奇", "Hassan Al Haidos": "海多斯", "Promise David": "普罗米斯·戴维", "Achraf Hakimi": "哈基米", "Soufiane Rahimi": "拉希米", "Gessime Yassine": "盖西姆·亚辛", "Mateo Chavez": "查韦斯", "Alvaro Fidalgo": "菲达尔戈", "Thapelo Maseko": "马塞科", "Wilson Isidor": "伊西多尔","Nicolas Pepe":"佩佩","Daizen Maeda":"前田大然","Gonzalo Plata":"普拉塔","Hazem Mastouri":"马斯图里","Jan Paul van Hecke":"范赫克","Leroy Sane":"萨内","Nilson Angulo":"安古洛","Teboho Mokoena":"莫凯纳","Arda Güler":"居莱尔","Auston Trusty":"特拉斯蒂","Baris Alper Yilmaz":"耶尔马兹","Kaan Ayhan":"阿伊汉","Sebastian Berhalter":"贝哈尔特",};
+const CZH={"Inter Miami": "迈阿密国际", "Real Madrid": "皇马", "Manchester City": "曼城", "Juventus": "尤文图斯", "VfB Stuttgart": "斯图加特", "SC Freiburg": "弗赖堡", "AS Monaco": "摩纳哥", "Arsenal": "阿森纳", "Brighton & Hove Albion": "布莱顿", "Motherwell": "马瑟韦尔", "Bayern Munich": "拜仁慕尼黑", "Southampton": "南安普顿", "PSV Eindhoven": "埃因霍温", "Manchester United": "曼联", "West Ham United": "西汉姆", "Sunderland": "桑德兰", "Liverpool": "利物浦", "Crystal Palace": "水晶宫", "Feyenoord": "费耶诺德", "Real Sociedad": "皇家社会", "Sporting CP": "葡萄牙体育", "Al-Nassr": "利雅得胜利", "Sevilla": "塞维利亚", "Slovan Liberec": "利贝雷茨", "Al-Qadsiah": "卡迪西亚", "Fulham": "富勒姆", "Wolverhampton Wanderers": "狼队", "Besiktas": "贝西克塔斯", "Universitatea Cluj": "克卢日大学", "Palmeiras": "帕尔梅拉斯", "Borussia Monchengladbach": "门兴", "Stade Rennais": "雷恩", "Al-Sadd": "萨德", "Aston Villa": "阿斯顿维拉", "Watford": "沃特福德", "FC St. Pauli": "圣保利", "Borussia Dortmund": "多特蒙德", "FC Zurich": "苏黎世", "Eintracht Frankfurt": "法兰克福", "Stade Reims": "兰斯", "NK Maribor": "马里博尔", "VfL Wolfsburg": "沃尔夫斯堡", "Al-Karma": "卡尔马", "Paris Saint-Germain": "巴黎圣日耳曼", "Al Ahly": "阿赫利(埃)", "Genoa": "热那亚", "FC Rostov": "罗斯托夫", "Foolad": "福拉德", "Werder Bremen": "云达不来梅", "Red Star Belgrade": "贝尔格莱德红星", "Al-Sailiya": "赛利亚", "Newcastle United": "纽卡斯尔", "Como": "科莫", "FC Dallas": "达拉斯", "Barcelona": "巴萨", "FC Nordsjaelland": "北西兰", "Istanbul Basaksehir": "巴萨克谢希尔", "Rosario Central": "罗萨里奥中央", "Slavia Prague": "布拉格斯拉维亚", "Anderlecht": "安德莱赫特", "Guadalajara": "瓜达拉哈拉", "Villarreal": "比利亚雷亚尔", "Atlanta United": "亚特兰大联", "Fluminense": "弗鲁米嫩塞", "FC Krasnodar": "克拉斯诺达尔", "Maccabi Tel Aviv": "特拉维夫马卡比", "KRC Genk": "亨克", "Portland Timbers": "波特兰伐木者", "Al-Ahli": "吉达阿赫利", "Pyramids": "金字塔", "Torino": "都灵", "Marseille": "马赛", "Gyori ETO": "杰尔ETO", "Qatar SC": "卡塔尔SC", "AC Milan": "AC米兰", "Osasuna": "奥萨苏纳", "RB Salzburg": "萨尔茨堡", "Union Saint-Gilloise": "圣吉卢瓦联", "Al Ain": "艾因", "Strasbourg": "斯特拉斯堡", "AZ Alkmaar": "阿尔克马尔", "Real Betis": "贝蒂斯", "AEL Limassol": "利马索尔AEL","Al-Ittihad":"吉达联合","Brighton & Hove Albion FC":"布莱顿","Celtic FC":"凯尔特人","FC Dynamo Makhachkala":"马哈奇卡拉迪纳摩","Galatasaray":"加拉塔萨雷","Mamelodi Sundowns":"马梅洛迪日落","Galatasaray SK":"加拉塔萨雷","Real Madrid C. F.":"皇家马德里","Vancouver Whitecaps FC":"温哥华白帽",};
+const NAMES_ZH={"Aaron Hickey":"亚伦·希基","Aaron Tshibola":"亚伦·齐博拉","Aaron Wan Bissaka":"亚伦·万·比萨卡","Abbosbek Fayzullaev":"阿博斯别克·法伊祖拉耶夫","Abdallah Alfakhori":"阿卜杜拉·阿尔法科里","Abdallah Nasib":"阿卜杜拉·纳西卜","Abdelaziz A. Aziz":"阿卜杜拉齐兹·阿齐兹","Abdoulaye Seck":"阿卜杜拉耶·塞克","Abdukodir Khusanov":"阿卜杜科迪尔·库萨诺夫","Abdul A. Fatawu":"阿卜杜勒·法塔乌","Abdul A. Mumin":"阿卜杜勒·穆明","Abdulelah Alamri":"阿卜杜拉·阿拉姆里","Abdulkerim Abdülkeri̇m":"阿卜杜勒克里姆·阿卜都勒克里姆","Abdulla Abdullaev":"阿卜杜拉·阿卜杜拉耶夫","Abdullah Alhamddan":"阿卜杜拉·阿尔哈姆丹","Abdullah Alkhaibari":"阿卜杜拉·阿尔海巴里","Abduvohid Nematov":"阿卜杜沃希德·内马托夫","Achraf Hakimi":"哈基米","Achref Abada":"阿赫里夫·阿巴达","Adalberto Carrasquilla":"阿达尔贝托·卡拉斯奎拉","Adam Arous":"亚当·阿鲁斯","Adam Hložek":"亚当·赫洛泽克","Adil Boulbina":"阿迪尔·布尔比纳","Adrien Rabiot":"阿德里安·拉比奥特","Agustin A. Canobbio":"奥古斯丁·卡诺比奥","Ahmed":"艾哈迈德","Ahmed A. Alganehi":"艾哈迈德·阿尔加内希","Ahmed A. Fathy":"艾哈迈德·法蒂","Ahmed A. Fatouh":"艾哈迈德·法图赫","Ahmed Alaaeldin":"艾哈迈德·阿拉丁","Ahmed Alkassar":"艾哈迈德·阿尔卡萨尔","Ahmed Tagnaouti":"艾哈迈德·塔格纳乌蒂","Ahmed Zizo":"艾哈迈德·齐佐","Aiden O'Neill":"艾登·奥尼尔","Aiman":"艾曼","Aimar":"艾马尔","Aissa Mandi":"艾莎·曼迪","Ajdin Hrustic":"阿吉丁·赫鲁斯蒂克","Akam":"阿卡姆","Akmal Mozgovoy":"阿克迈勒·莫兹戈沃伊","Akram Afif":"阿克拉姆·阿菲夫","Al\u0000e Jones":"艾尔·琼斯","Ala Alhajji":"阿拉·阿尔哈吉","Alan Franco":"艾伦·佛朗哥","Alan Minda":"艾伦·明达","Alban Lafont":"阿尔班·拉丰","Alberto Quintero":"阿尔贝托·金特罗","Alejandro R. Gamarra":"亚历杭德罗·加马拉","Aleksandar Pavlović":"亚历山大·帕夫洛维奇","Alessandro Circati":"亚历山德罗·瑟卡蒂","Alessandro Schöpf":"亚历山德罗·舍普夫","Alex":"亚历克斯","Alex Arce":"亚历克斯·阿尔塞","Alex Freeman":"亚历克斯·弗里曼","Alex Grimaldo":"亚历克斯·格里马尔多","Alex Paulsen":"亚历克斯·保尔森","Alex Rufer":"亚历克斯·鲁弗","Alex Sandro":"亚历克斯·桑德罗","Alex Zendejas":"亚历克斯·赞德哈斯","Alexander Bernhardsson":"亚历山大·伯恩哈德森","Alexander Isak":"伊萨克","Alexander Nübel":"亚历山大·努贝尔","Alexander Prass":"亚历山大·普拉斯","Alexander Schlager":"亚历山大·施拉格","Alexander Sørloth":"亚历山大·索洛斯","Alexandr Sojka":"亚历山大·索伊卡","Alexandre A. Pierre":"亚历山大·皮埃尔","Alexandro Maidana":"亚历山德罗·迈达纳","Alexis A. Vega":"亚历克西斯·维加","Alexis Mac Allister":"麦卡利斯特","Alexis Saelemaekers":"亚历克西斯·赛勒梅克斯","Alhashmi":"哈什米","Ali":"阿里","Ali A. Alipour":"阿里·阿利普尔","Ali Abdi":"阿里·阿布迪","Ali Ahmed":"阿里·艾哈迈德","Ali Al-Hamadi":"阿里·哈马迪","Ali Azaizeh":"阿里·阿扎伊泽","Ali Lajami":"阿里·拉贾米","Ali Majrashi":"阿里·马吉拉希","Ali Olwan":"阿里·奥尔万","Alidu Seidu":"阿里杜·塞杜","Alireza A. Jahanbakhsh":"阿里雷萨·贾汉巴赫什","Alireza Beiranvand":"阿里雷扎·贝兰万德","Alistair Johnston":"阿利斯泰尔约翰斯顿","Almoez":"阿尔莫兹","Alphonso Davies":"阿方索·戴维斯","Altay":"阿勒泰","Alvaro Fidalgo":"阿尔瓦罗·菲达尔戈","Alvaro Montero":"阿尔瓦罗·蒙特罗","Amad":"阿马德","Amadou Onana":"阿马杜·奥纳纳","Amar Dedić":"阿马尔·德迪奇","Amar Memić":"阿马尔·梅米奇","Amer Jamous":"阿米尔·贾姆斯","Amine Gouiri":"阿明·古伊里","Amine Sbaï":"阿明·斯拜","Amir A. Murillo":"阿米尔·穆里略","Amir Al-Ammari":"阿米尔·阿马里","Amir Hadžiahmetović":"阿米尔·哈季亚梅托维奇","Amirhossein":"阿米尔侯赛因","Amirmohammad Razagh":"阿米尔·穆罕默德·拉扎格","Anas Badawi":"阿纳斯·巴达维","Anass Salah-Eddine":"阿纳斯·萨拉赫-埃丁","Andreas Schjelderup":"安德烈亚斯·谢尔德鲁普","Andrej Kramarić":"安德烈·克拉马里奇","Andres A. Gomez":"安德烈斯·戈麦斯","Andres Andrade":"安德烈斯·安德拉德","Andres Cubas":"安德烈斯·库巴斯","Andy Robertson":"安迪·罗伯逊","Ange-Yoan Bonny":"安格·尤安·邦尼","Angelo Preciado":"安吉洛·普雷西亚多","Angelo Stiller":"安吉洛·斯蒂勒","Angus Gunn":"安格斯·古恩","Anibal Godoy":"阿尼巴尔·戈多伊","Anis Hadj Moussa":"阿尼斯·哈吉·穆萨","Anis Slimane":"阿尼斯·斯莱曼","Ante Budimir":"安特·布迪米尔","Anthony A. Valencia":"安东尼·瓦伦西亚","Anthony Elanga":"安东尼·埃兰加","Anthony Gordon":"安东尼·戈登","Anthony Ralston":"安东尼·罗尔斯顿","Antoine A. Mendy":"安托万·门迪","Antoine Semenyo":"安托万·塞梅尼奥","Antonee A. Robinson":"安东尼·罗宾逊","Antonio Nusa":"安东尼奥·努萨","Antonio Rüdiger":"安东尼奥·吕迪格","Antonio Sanabria":"安东尼奥·萨纳布里亚","Ao Tanaka":"田中碧","Arda Güler":"阿尔达·居勒","Ardon Jashari":"阿尔登·贾沙里","Arjan Malić":"阿尔扬·马利奇","Arjany Martha":"阿贾尼·玛莎","Armando A. González":"阿曼多·冈萨雷斯","Armando Obispo":"阿曼多·奥比斯波","Armin Gigović":"阿明·吉戈维奇","Arthur Masuaku":"亚瑟·马苏阿库","Arthur Theate":"亚瑟剧院","Arya":"艾莉亚","Assan Ouédraogo":"阿桑·韦德拉奥戈","Assane A. Diao":"阿萨内·迪奥","Assim Madibo":"阿西姆·马迪博","Aubrey Modiba":"奥布里·莫迪巴","Augustine Boakye":"奥古斯丁·博阿基","Aurele Amenda":"奥雷尔·阿门达","Aurelien Tchouameni":"楚阿梅尼","Auston Trusty":"奥斯顿·可信赖","Avazbek Ulmasaliyev":"阿瓦兹别克·乌尔马萨利耶夫","Awer Mabil":"阿维尔·马比尔","Axel Tuanzebe":"阿克塞尔·图安泽贝","Axel Witsel":"阿克塞尔·维特塞尔","Ayase":"上田绮世","Aymen":"艾门","Aymen Dahmen":"艾门·达门","Aymeric Laporte":"艾默里克·拉波尔特","Ayoub":"阿尤布","Ayoub El Kaabi":"阿尤布·埃尔·卡比","Ayoube Amaimouni":"阿尤贝·阿迈莫尼","Ayumu Seko":"濑古步梦","Ayyoub Bouaddi":"阿尤布·布阿迪","Azarias Londoño":"阿扎里亚斯·隆多尼奥","Aziz Behich":"阿齐兹·贝希奇","Azizbek Amonov":"阿齐兹别克·阿莫诺夫","Azizjon Ganiev":"阿齐容·加尼耶夫","Azzedine Ounahi":"阿泽丁·欧纳希","Baba":"巴巴","Bamba":"班巴","Bara":"巴拉","Baris Bariş":"巴里斯·巴里斯","Bart Verbruggen":"巴特·维尔布鲁根","Bazoumana Toure":"巴祖马纳·杜尔","Behruzjon Karimov":"贝鲁兹琼·卡里莫夫","Ben Gannon Doak":"本·甘农·多克","Ben Old":"本·奥德","Ben Waine":"本·韦恩","Benjamin B. Asare":"本杰明·阿萨雷","Benjamin Nygren":"本杰明·尼格伦","Benjamin Tahirović":"本杰明·塔希罗维奇","Bernardo":"贝尔纳多","Besfort Zeneli":"贝斯福特泽尼利","Bilal El Khannouss":"比拉尔·埃尔·卡努斯","Borja B. Iglesias":"博尔哈·伊格莱西亚斯","Botirali Ergashev":"波提拉利·埃尔加舍夫","Boualem Khoukhi":"布阿莱姆·库希","Bradley Barcola":"布拉德利·巴克拉","Bradley Cross":"布拉德利·克罗斯","Brahim":"卜拉欣","Braian Ojeda":"布莱恩·奥赫达","Brandley Kuwas":"布兰德利·库瓦斯","Brandon Asante":"布兰登·阿桑特","Brandon Mechele":"布兰登·梅切勒","Breel Embolo":"布雷尔·恩博洛","Brenden Aaronson":"布伦登阿伦森","Brian B. Gutiérrez":"布莱恩·古铁雷斯","Brian B. Rodriguez":"布莱恩·罗德里格斯","Brian Brobbey":"布赖恩·布罗比","Brian Cipenga":"布赖恩·西彭加","Brice Samba":"布莱斯·桑巴","Bruno":"布鲁诺","Bruno B. Fernandes":"布鲁诺·费尔南德斯","Bukayo Saka":"萨卡","Bumkeun":"宋范根","Caglar Çağlar":"卡格拉尔·恰格拉尔","Caleb Yirenkyi":"卡莱布·伊伦基","Callan Elliot":"卡兰·埃利奥特","Cameron Burgess":"卡梅伦·伯吉斯","Cameron Devlin":"卡梅伦·德夫林","Camilo C. Vargas":"卡米洛·巴尔加斯","Can Uzun":"坎乌尊","Carl Sainte":"卡尔·桑特","Carl Starfelt":"卡尔·斯塔菲尔特","Carlens Arcus":"卡伦斯·阿库斯","Carlos C. Acevedo":"卡洛斯·阿塞维多","Carlos Casemiro":"卡塞米罗","Carlos Dos Santos":"卡洛斯·多斯桑托斯","Carlos Harvey":"卡洛斯·哈维","Cecilio Waterman":"塞西里奥·沃特曼","Cedric Bakambu":"塞德里克·巴坎布","Cedric Itten":"塞德里克·伊滕","Cesar C. Huerta":"塞萨尔·韦尔塔","Cesar C. Montes":"塞萨尔·蒙特斯","Cesar Samudio":"塞萨尔·萨穆迪奥","Cesar Yanis":"塞萨尔·亚尼斯","Chadi Riad":"查迪里亚德","Chancel Mbemba":"尚塞尔·姆本巴","Charles De Ketelaere":"查尔斯·德·克特拉雷","Charles Pickel":"查尔斯·皮克尔","Che Adams":"切·亚当斯","Chemsdine Talbi":"凯姆斯丁·塔尔比","Cherif Chérif":"谢里夫谢里夫","Chris Brady":"克里斯·布雷迪","Chris Richards":"克里斯·理查兹","Chris Wood":"克里斯·伍德","Christ Inao":"基督伊纳奥","Christian Fassnacht":"克里斯蒂安·法斯纳赫特","Christian Pulisic":"克里斯蒂安·普利西克","Christopher Bonsu Baah":"克里斯托弗·邦苏·巴赫","Christopher Operi":"克里斯托弗·奥佩里","Cody Gakpo":"加克波","Connor Metcalfe":"康纳·梅特卡夫","Craig Gordon":"克雷格·戈登","Cristian Martínez":"克里斯蒂安·马丁内斯","Cristian Roldan":"克里斯蒂安·罗丹","Cristian Romero":"克里斯蒂安·罗梅罗","Cristian Volpato":"克里斯蒂安·沃尔帕托","Cristiano Ronaldo":"C罗","Crysencio Summerville":"克里森西奥·萨默维尔","Cucho C. Hernandez":"库乔·埃尔南德斯","Carney Chukwuemeka":"卡尼·楚库梅卡","Cesar Blackman":"塞萨尔·布莱克曼","Cyle Larin":"赛尔·拉林","Daichi Kamada":"镰田大地","Dailon Livramento":"戴隆·利夫拉门托","Daizen":"前田大然","Damian Bobadilla":"达米安·博巴迪拉","Dan Burn":"丹·伯恩","Dan Ndoye":"丹·恩多耶","Dani Olmo":"达尼·奥尔莫","Danial":"丹尼尔","Daniel D. Muñoz":"丹尼尔·穆尼奥斯","Daniel Svensson":"丹尼尔·斯文森","Danilo":"达尼洛","Danley Jean-Jacques":"丹利·让·雅克","Darwin D. Nuñez":"达尔文·努涅斯","David Affengruber":"大卫·阿芬鲁伯","David Alaba":"大卫·阿拉巴","David Douděra":"大卫·杜德拉","David Jurásek":"大卫·尤拉塞克","David Møller Wolfe":"大卫·默勒·沃尔夫","David Ospina":"大卫·奥斯皮纳","David Raum":"大卫·劳姆","David Raya":"大卫·拉亚","David Zima":"大卫·齐玛","Davinson Sanchez":"戴维森·桑切斯","Dayne St. Clair":"戴恩·圣克莱尔","Dayot Upamecano":"达约特·乌帕梅卡诺","Dean D. Henderson":"迪恩·亨德森","Declan Rice":"赖斯","Deiver Machado":"德伊弗·马查多","Dejan Ljubicic":"德扬·柳比西奇","Denil Castillo":"丹尼尔·卡斯蒂略","Denis Višinský":"丹尼斯·维辛斯基","Denis Zakaria":"丹尼斯·扎卡里亚","Deniz Deni̇z Gül":"德尼兹·德尼兹·居尔","Deniz Undav":"德尼兹·昂达夫","Dennis Dargahi":"丹尼斯·达尔加希","Dennis Hadžikadunić":"丹尼斯·哈吉卡杜尼奇","Denzel Dumfries":"邓弗里斯","Derek Cornelius":"德里克·科尼利厄斯","Deroy D. Duarte":"德罗伊·杜阿尔特","Derrick Etienne Jr":"小德里克·艾蒂安","Derrick Luckassen":"德里克·卢卡森","Desire Doue":"德西尔·杜埃","Deveron Fonville":"德弗伦·丰维尔","Diego D. Gómez":"迭戈·戈麦斯","Diego Moreira Jr":"小迭戈·莫雷拉","Diogo Costa":"迪奥戈·科斯塔","Djed Spence":"杰德·斯彭斯","Djibril Sow":"吉布里尔·索乌","Dodi Lukebakio":"多迪·卢克巴基奥","Dominic Hyam":"多米尼克·海姆","Dominik Kotarski":"多米尼克·科塔斯基","Dominik Livaković":"多米尼克·利瓦科维奇","Dominique Simon":"多米尼克·西蒙","Donggyeong":"李东炅","Donyell Malen":"唐耶尔·马伦","Dostonbek Khamdamov":"多斯顿别克·坎达莫夫","Douglas":"道格拉斯","Duckens Nazon":"杜肯斯·纳森","Duje Ćaleta-Car":"杜杰·阿莱塔-汽车","Dylan Batubinsika":"迪伦·巴图宾斯卡","Dylan Bronn":"迪伦·布朗","Dzenis Burnić":"泽尼斯·布尔尼克","Eberechi Eze":"埃贝雷奇·埃兹","Ederson":"埃德森","Edgar Bárcenas":"埃德加·巴尔塞纳斯","Edgardo Fariña":"埃德加多·法里尼亚","Edilson Borges":"爱迪尔森·博尔赫斯","Edin Džeko":"艾丁哲科","Edmilson Jr.":"小埃德米尔森","Edo E. Kayembe":"埃多·卡延贝","Edouard Mendy":"爱德华·门迪","Edson E. Álvarez":"埃德森·阿尔瓦雷斯","Egil Selvik":"埃吉尔·塞尔维克","Ehsan":"埃桑","Ehsan E. Hajisafi":"埃桑·哈吉萨菲","El Diouf":"埃尔迪乌夫","Eldor Shomurodov":"埃尔多·肖穆罗多夫","Elias Achouri":"埃利亚斯·阿乔里","Elias Saad":"埃利亚斯·萨阿德","Elijah Just":"伊利亚·贾斯特","Elisha Owusu":"伊丽莎·奥乌苏","Elliot Anderson":"艾略特·安德森","Elliot Stroud":"埃利奥特·斯特劳德","Ellyes Skhiri":"埃利斯·斯基里","Eloy Room":"埃洛伊室","Elye Wahi":"伊莱·瓦希","Emam E. Ashour":"埃玛姆·阿舒尔","Emiliano E. Martinez":"埃米利亚诺·马丁内斯","Emmanuel Agbadou":"伊曼纽尔·阿巴杜","Endrick":"恩德里克","Enner E. Valencia":"恩纳·巴伦西亚","Enzo E. Fernandez":"恩佐·费尔南德斯","Eray Cömert":"埃雷·科默特","Eren Elmali":"埃伦·埃尔马利","Eric":"埃里克","Eric Davis":"埃里克·戴维斯","Eric Smith":"埃里克·史密斯","Erik E. Lira":"埃里克·里拉","Erling Braut Haaland":"哈兰德","Ermedin Demirović":"埃尔梅丁·德米罗维奇","Ermin Mahmić":"埃尔敏·马赫米奇","Ernest Nuamah":"欧内斯特·努阿玛","Esmir Bajraktarević":"埃斯米尔·巴伊拉克塔雷维奇","Evan Ndicka":"埃文·恩迪卡","Evann Guessand":"埃文·盖桑","Evidence Makgpa":"证据玛格巴","Exequiel Palacios":"埃克塞奎尔·帕拉西奥斯","Ezri Konsa":"埃兹里·孔萨","Fabian Balbuena":"法比安·巴尔布埃纳","Fabian Fabián":"法比安·法比安","Fabian Rieder":"法比安·里德尔","Fabio Fabinho":"法比奥·法比尼奥","Facundo F. Pellistri":"法昆多·佩里斯特里","Facundo Medina":"法昆多·梅迪纳","Fahad":"法赫德","Fares Chaibi":"票价柴比","Fares Ghedjemis":"费雷斯·盖吉米斯","Farrukh Sayfiev":"法鲁克·赛菲耶夫","Federico F. Valverde":"费德里科·巴尔韦德","Federico F. Viñas":"费德里科·维尼亚斯","Felix Nmecha":"菲利克斯·恩梅查","Felix Torres":"菲利克斯·托雷斯","Feras":"费拉斯","Ferdi F. Kadioğlu":"费迪·卡迪奥卢","Fernando F. Muslera":"费尔南多·穆斯莱拉","Ferran":"费兰","Fidel F. Escobar":"菲德尔·埃斯科巴","Findlay Curtis":"芬德利柯蒂斯","Finn Surman":"芬·苏尔曼","Firas Chaouat":"菲拉斯·查瓦特","Fiston Mayele":"菲斯顿·马耶勒","Florian Grillitsch":"弗洛里安·格里里奇","Florian Wiegele":"弗洛里安·维格勒","Florian Wirtz":"维尔茨","Folarin Balogun":"福拉林·巴洛贡","Francis De Vries":"弗朗西斯·德弗里斯","Francisco F. Conceição":"弗朗西斯科·康塞桑","Francisco Trincão":"弗朗西斯科·特林康","Franck Kessie":"弗兰克·凯西","Frans":"弗兰斯","Frantzdy Pierrot":"弗朗兹迪·皮埃罗","Fredrik Aursnes":"弗雷德里克·奥斯内斯","Fredrik Bjørkan":"弗雷德里克·比约坎","Frenkie F. De Jong":"弗兰基·德容","Gabriel":"加布里埃尔","Gabriel Avalos":"加布里埃尔·阿瓦洛斯","Gabriel Gudmundsson":"加布里埃尔·古德蒙森","Gabriel Martinelli":"马丁内利","Gael Kakuta":"盖尔·卡库塔","Garry Rodrigues":"加里·罗德里格斯","Garven Metusala":"加文·梅图萨拉","Gaston Olveira":"加斯顿·奥尔维拉","Gatito Fernández":"加蒂托·费尔南德斯","Gedeon Kalulu":"吉登·卡鲁鲁","George Hirst":"乔治·赫斯特","Geronimo Rulli":"杰罗尼莫·鲁利","Gervane Kastaneer":"格万·卡斯坦尼尔","Gessime Yassine":"盖西姆·亚辛","Ghislain G. Konan":"吉斯兰·科南","Gideon Mensah":"吉迪恩·门萨","Gihyuk":"李期奕","Gilberto G. Mora":"吉尔伯托·莫拉","Gilson Benchimol":"吉尔森·本奇莫尔","Giorgian G. De Arrascaeta":"乔治安·德·阿拉斯卡埃塔","Giovani Lo Celso":"乔瓦尼·洛塞尔索","Giovanni Reyna":"乔瓦尼·雷纳","Giuliano Simeone":"朱利亚诺·西蒙尼","Gleison Bremer":"格雷森·布雷默","Godfried Roemeratoe":"戈德弗里德·罗默拉托","Gonzalo Montiel":"贡萨洛·蒙蒂尔","Gonzalo Plata":"贡萨洛·普拉塔","Gonzalo Valle":"贡萨洛·瓦莱","Gonçalo G. Guedes":"贡萨洛·格德斯","Gonçalo G. Inácio":"贡萨洛·伊纳西奥","Gonçalo G. Ramos":"贡萨洛·拉莫斯","Granit Xhaka":"格兰尼特·扎卡","Grant Hanley":"格兰特·汉利","Gregor Kobel":"格雷戈尔·科贝尔","Guela G. Doue":"盖拉·杜埃","Guesung":"曹圭成","Gueye":"盖耶","Guillermo G. Martínez":"吉列尔莫·马丁内斯","Guillermo G. Ochoa":"吉列尔莫·奥乔亚","Guillermo G. Varela":"吉列尔莫·巴雷拉","Gustaf Lagerbielke":"古斯塔夫·拉格比尔克","Gustaf Nilsson":"古斯塔夫·尼尔森","Gustavo Caballero":"古斯塔沃·卡瓦列罗","Gustavo G. Gómez":"古斯塔沃·戈麦斯","Gustavo Puerta":"古斯塔沃·普尔塔","Gustavo Velázquez":"古斯塔沃·委拉斯开兹","Guus Til":"古斯·蒂尔","Habib H. Diarra":"哈比卜·迪亚拉","Haissem H. Hassan":"海塞姆·哈桑","Haji Wright":"哈吉·赖特","Hakan Çalhanoğlu":"哈坎·查尔汗奥卢","Hamdy H. Fathy":"哈姆迪·法蒂","Hamza Abdelkarim":"哈姆扎·阿卜杜勒卡里姆","Hanbeom":"李韩汎","Hannes Delcroix":"汉内斯·德尔克鲁瓦","Hannibal":"汉尼拔","Hans Vanaken":"汉斯·瓦纳肯","Haris Tabaković":"哈里斯·塔巴科维奇","Harry Kane":"凯恩","Harry Souttar":"哈里·苏塔尔","Hasan Alhaydos":"哈桑·阿尔海多斯","Hassan Altambakti":"哈桑阿尔坦巴蒂","Hassan Kadish":"哈桑·卡迪什","Hazem Mastouri":"哈齐姆·马斯图里","Heechan":"黄喜灿","Henrik Falchener":"亨里克·法尔切纳","Herman H. Johansson":"赫尔曼·约翰逊","Hernan Galindez":"埃尔南·加林德斯","Heungmin":"孙兴慜","Hicham Boudaoui":"希沙姆·布达维","Hiroki H. Ito":"伊藤洋辉","Hjalmar Ekdal":"哈尔马·埃克达尔","Homam":"霍曼","Hossam":"霍萨姆","Hossein Hosseini":"侯赛因·侯赛尼","Hossein Kanani":"侯赛因·卡纳尼","Houssem Aouar":"侯塞姆·奥阿尔","Hugo Sochůrek":"乌戈·索赫雷克","Husam Abu Dahab":"胡萨姆·阿布·达哈卜","Hussein":"侯赛因","Hyeongyu":"吴贤揆","Hyeonwoo":"赵贤祐","Hyunjun":"杨贤俊","Hélio":"赫利奥","Ianique Stopira":"伊安尼克·斯托皮拉","Ibrahim":"易卜拉欣","Ibrahim I. Adel":"易卜拉欣·阿德尔","Ibrahim I. Mbaye":"易卜拉欣·姆巴耶","Ibrahim Maza":"易卜拉欣·马扎","Ibrahim Sa'Deh":"易卜拉欣·萨德","Ibrahim Sangare":"易卜拉欣·桑加雷","Ibrahima Konate":"易卜拉希马·科纳特","Idrissa Gana":"伊德里萨·加纳","Igor Matanović":"伊戈尔·马塔诺维奇","Igor Sergeev":"伊戈尔·谢尔盖耶夫","Igor Thiago":"伊戈尔·蒂亚戈","Iliman Ndiaye":"伊利曼·恩迪亚耶","Ime Okon":"伊梅·奥肯","Inaki Williams":"伊纳基·威廉姆斯","Inbeom":"黄仁范","Iqraam Rayners":"伊克拉姆·雷纳斯","Irfan Kahveci̇":"伊尔凡·卡赫维奇̇","Isak Hien":"贤伊萨克","Isidro Pitta":"伊西德罗·皮塔","Ismael":"伊斯梅尔","Ismael Gharbi":"伊斯梅尔·加尔比","Ismael Koné":"伊斯梅尔·科内","Ismael Saibari":"伊斯梅尔·赛巴里","Ismail Jakobs":"伊斯梅尔·雅各布斯","Ismail İsmai̇l":"伊斯梅尔·伊斯梅尔","Ismaila Ismaïla":"伊斯梅拉·伊斯梅拉","Israel I. Reyes":"以色列·雷耶斯","Issa":"伊萨","Ivan Bašić":"伊万·巴西奇","Ivan Perišić":"伊万·佩里希奇","Ivan Toney":"伊万·托尼","Ivan Šunjić":"伊万·桑吉奇","Ivor Pandur":"艾弗·潘杜尔","Jack Hendry":"杰克·亨德利","Jackson Irvine":"杰克逊·欧文","Jackson Porozo":"杰克逊·波罗佐","Jacob Italiano":"雅各布·意大利人","Jacob Shaffelburg":"雅各布·沙菲尔伯格","Jacob Zetterström":"雅各布·泽特斯特伦","Jaesung":"李在城","Jair Y. Semedo":"贾尔·塞梅多","Jakhongir Urozov":"贾洪吉尔·乌罗佐夫","Jalal":"贾拉尔","Jamal Musiala":"穆西亚拉","James":"詹姆斯","James Trafford":"詹姆斯·特拉福德","Jamie Leweling":"杰米·卢威林","Jaminton Campaz":"贾明顿·坎帕斯","Jamiro Monteiro":"贾米罗·蒙泰罗","Jamshid Iskanderov":"詹姆希德·伊斯坎德罗夫","Jan Kuchta":"扬·库赫塔","Jan Van Hecke":"扬·范赫克","Jaouen Hadjam":"哈万·哈贾姆","Jarell Quansah":"贾雷尔·夸萨","Jaroslav Zelený":"雅罗斯拉夫·泽莱尼","Jason Geria":"杰森·杰里亚","Jassem":"贾西姆","Jayden Adams":"杰登·亚当斯","Jayden Nelson":"杰登·尼尔森","Jean Seri":"让·塞里","Jean-Kevin Duverne":"让·凯文·杜韦纳","Jean-Philippe Mateta":"让-菲利普·马塔塔","Jean-Ricner Bellegarde":"让·里克纳·贝勒加德","Jearl Margaritha":"杰尔·玛格丽莎","Jefferson J. Lerma":"杰斐逊·勒马","Jehad":"杰哈德","Jens":"延斯·卡斯特罗普","Jens Hauge":"延斯·豪格","Jeremy Antonisse":"杰里米·安东尼斯","Jeremy Arevalo":"杰里米·阿雷瓦洛","Jeremy Doku":"杰里米·多库","Jerome Opoku":"杰罗姆·奥波库","Jesper Karlström":"杰斯珀·卡尔斯特罗姆","Jesse Randall":"杰西·兰德尔","Jesus J. Gallardo":"耶稣·加拉多","Jhon Cordoba":"约翰·科尔多瓦","Jhon J. Arias":"约翰·阿里亚斯","Jhon J. Lucumi":"约翰·卢库米","Jindrich Staněk":"因德里奇·斯塔涅克","Jingyu":"金镇圭","Jinseob":"朴镇燮","Jiovany Ramos":"乔瓦尼·拉莫斯","Jisung":"严智星","Joan Garcia":"琼·加西亚","Joaquin J. Piquerez":"华金·皮克雷斯","Joaquin Seys":"华金·赛斯","Joe Bell":"乔·贝尔","Joe Scally":"乔·斯卡利","Joel Ordóñez":"乔尔·奥尔多涅斯","Joel Waterman":"乔尔·沃特曼","Johan J. Mojica":"约翰·莫吉卡","Johan J. Vásquez":"约翰·巴斯克斯","Johan Manzambi":"约翰·曼赞比","John Souttar":"约翰·苏塔尔","John Stones":"约翰·斯通斯","John Yeboah Zamora":"约翰·叶博阿·萨莫拉","Johny Placide":"约翰尼·普莱西德","Jonas Adjetey":"乔纳斯·阿杰蒂","Jonathan J. David":"乔纳森·大卫","Jonathan Osorio":"乔纳森·奥索里奥","Jonathan Tah":"乔纳森·塔","Jordan Bos":"乔丹·博斯","Jordan Henderson":"乔丹·亨德森","Jordan J. Ayew":"乔丹·阿尤","Jordan Pickford":"乔丹·皮克福德","Jordy Alcivar":"乔迪·阿尔西瓦","Jordy J. Caicedo":"乔迪·凯塞多","Jorge Carrascal":"豪尔赫·卡拉斯卡尔","Jorge Gutiérrez":"豪尔赫·古铁雷斯","Jorge J. Sánchez":"豪尔赫·桑切斯","Jorgen Strand Larsen":"乔根·斯特兰德·拉森","Joris J. Kayembe":"乔里斯·卡延贝","Jorrel Hato":"乔雷尔·哈托","Jose Canale":"何塞·卡纳莱","Jose Cordoba":"何塞·科尔多瓦","Jose Fajardo":"何塞·法哈多","Jose J.l. Rodríguez":"何塞·罗德里格斯","Jose J.m. Giménez":"何塞·吉梅内斯","Jose Lopez":"何塞·洛佩兹","Joseph Anang":"约瑟夫·阿南","Joshua Brenet":"约书亚·布雷内特","Joshua Kimmich":"基米希","Josimar Vozinha":"乔西马尔·沃齐尼亚","Josip Stanišić":"约西普·斯塔尼希奇","Josip Šutalo":"乔西普·苏塔洛","Josko Gvardiol":"乔斯科·格瓦尔迪奥尔","Josue Casimir":"若苏埃·卡西米尔","Josue Duverger":"若苏埃·杜韦尔热","José Dalot":"何塞·达洛特","José Sá":"何塞·萨","Jovane":"约瓦内","Jovo Lukić":"乔沃·卢基奇","João Cancelo":"若奥·坎塞洛","João Félix":"若昂·费利克斯","João Neves":"若奥·内维斯","João Paulo":"若昂·保罗","Juan Cáceres":"胡安·卡塞雷斯","Juan J.m. Sanabria":"胡安·萨纳布里亚","Juan Musso":"胡安·穆索","Juan Portilla":"胡安·波蒂拉","Juan Quintero":"胡安·金特罗","Jude Bellingham":"贝林厄姆","Juergen Locadia":"于尔根·洛卡迪亚","Jules Kounde":"儒勒·昆德","Julian J. Alvarez":"朱利安·阿尔瓦雷斯","Julian J. Quiñones":"朱利安·奎诺内斯","Julian Ryerson":"朱利安·瑞尔森","Julio Enciso":"胡里奥·恩西索","Junho":"裴峻浩","Juninho J. Bacuna":"儒尼尼奥·巴库纳","Junior Alonso":"朱尼尔·阿隆索","Junnosuke J. Suzuki":"铃木淳之介","Junya Ito":"伊东纯也","Jurien Gaari":"朱里安·加里","Justin Kluivert":"贾斯汀·克鲁伊维特","Kaan":"卡恩","Kai Havertz":"哈弗茨","Kai Trewin":"凯·特里温","Kaishu Sano":"佐野海舟","Kalidou Koulibaly":"卡利杜·库利巴利","Kamaldeen":"卡马尔丁","Kamogelo Sebelebele":"卡莫杰洛·塞贝莱贝莱","Kangin":"李刚仁","Karim":"卡里姆","Karim K. Hafez":"卡里姆·哈菲兹","Keeto Thermoncy":"基托热玛西","Keisuke Goto":"后藤启介","Keisuke Osako":"大迫敬介","Keito Nakamura":"中村敬斗","Kelvin":"开尔文","Ken Sema":"肯·塞玛","Kenan Yildiz":"凯南·伊尔迪兹","Kendry":"肯德里","Kenji Gorré":"肯吉·戈雷","Kento Shiogai":"盐贝健人","Kerem Aktürkoğlu":"凯雷姆·阿克图尔科格鲁","Kerim Alajbegović":"克里姆·阿拉贝戈维奇","Kevin":"凯文","Kevin Danso":"凯文·丹索","Kevin De Bruyne":"德布劳内","Kevin Felida":"凯文·菲利达","Kevin K. Castaño":"凯文·卡斯塔尼奥","Kevin K. Yakob":"凯文·雅各布","Kevin Rodriguez":"凯文·罗德里格斯","Khalid":"哈立德","Khalil Ayari":"卡里尔·阿亚里","Khojiakbar Alijonov":"霍贾克巴尔·阿利乔诺夫","Khuliso Mudau":"胡里索·穆达乌","Khulumani Ndamane":"胡鲁马尼·恩达马内","Kieran Tierney":"基兰·蒂尔尼","Kobbie Mainoo":"科比·麦努","Kojo Oppong":"古城奥蓬","Koki Ogawa":"小川航基","Koni De Winter":"科尼·德·温特","Konrad Laimer":"康拉德·莱默","Kosta Barbarouses":"科斯塔·巴巴鲁斯","Kou Itakura":"板仓滉","Krepin Diatta":"克雷平·迪亚塔","Kristian Thorstvedt":"克里斯蒂安·托斯特维特","Kristijan Jakić":"克里斯蒂安·雅基奇","Kristoffer Nordfeldt":"克里斯托弗·诺德费尔特","Kristoffer Vassbakk Ajer":"克里斯托弗·瓦斯巴克·阿耶尔","Kwasi Sibo":"夸西·斯博","Kylian Mbappe":"姆巴佩","Lachlan Bayliss":"拉克兰·贝利斯","Ladislav Krejčí":"拉迪斯拉夫·克雷伊奇","Lamine":"拉明","Lamine Yamal":"亚马尔","Laros L. Duarte":"拉罗斯·杜阿尔特","Lautaro L. Martinez":"劳塔罗·马丁内斯","Lawrence Shankland":"劳伦斯·尚克兰","Lawrence Zigi":"劳伦斯·齐吉","Leandro L. Bacuna":"莱安德罗·巴库纳","Leandro Paredes":"莱安德罗·帕雷德斯","Leandro Trossard":"莱安德罗·特罗萨德","Lenny Joseph":"莱尼·约瑟夫","Leo Østigård":"利奥·奥斯蒂加德","Leon Goretzka":"格雷茨卡","Leonardo Léo Pereira":"莱昂纳多·莱奥·佩雷拉","Leroy Sané":"勒罗伊·萨内","Lewis Ferguson":"刘易斯·弗格森","Liam Kelly":"利亚姆·凯利","Liam Millar":"利亚姆·米勒","Liberato Cacace":"自由人卡卡塞","Lionel Messi":"梅西","Lionel Mpasi":"莱昂内尔·姆帕西","Lisandro Martínez":"利桑德罗·马丁内斯","Livano Comenencia":"利瓦诺·科梅南西亚","Logan Costa":"洛根·科斯塔","Logan Rogerson":"洛根·罗杰森","Louicius":"路易修斯","Luc De Fougerolles":"吕克·德·富热罗勒","Luca Jaquez":"卢卡·雅克斯","Luca Zidane":"卢卡·齐达内","Lucas Bergvall":"卢卡斯·伯格瓦尔","Lucas Digne":"卢卡斯·迪涅","Lucas Herrington":"卢卡斯·赫林顿","Lucas L. Hernandez":"卢卡斯·埃尔南德斯","Lucas L. Paquetá":"帕奎塔","Lucas L.mendes":"卢卡斯·门德斯","Luis Diaz":"路易斯·迪亚兹","Luis L. Chávez":"路易斯·查韦斯","Luis L. Romo":"路易斯·罗莫","Luis Mejia":"路易斯·梅希亚","Luis Suarez":"路易斯·苏亚雷斯","Luiz L. Henrique":"路易斯·恩里克","Luka Modrić":"卢卡·莫德里奇","Luka Sučić":"卢卡·苏西奇","Luka Vušković":"卢卡·武斯科维奇","Lukas Horníček":"卢卡斯·霍尼切克","Lukas Provod":"卢卡斯·普罗沃德","Lukas Červ":"卢卡斯·切尔夫","Lutsharel Geertruida":"卢萨雷尔·吉尔特鲁伊达","Lyle Foster":"莱尔·福斯特","Lyndon Dykes":"林登戴克斯","Maghnes Akliouche":"马格尼斯·阿克利乌什","Mahdy M. Soliman":"马赫迪·索利曼","Mahmoud Abunada":"马哈茂德·阿布纳达","Mahmoud Almardi":"马哈茂德·阿尔玛迪","Mahmoud M. Saber":"马哈茂德·萨贝尔","Mahmoud M. Trezeguet":"马哈茂德·特雷泽盖","Malick Thiaw":"马利克·蒂奥","Malik Tillman":"马利克·蒂尔曼","Malo Gusto":"马洛·古斯托","Mamadou Sarr":"马马杜·萨尔","Manu Kone":"马努·科内","Manuel Akanji":"曼努埃尔·阿坎吉","Manuel M. Ugarte":"曼努埃尔·乌加特","Manuel Neuer":"曼努埃尔·诺伊尔","Marawan M. Attia":"马拉旺·阿蒂亚","Marc Cucurella":"马克·库库雷拉","Marc Guéhi":"马克·盖伊","Marc Pubill":"马克·普比尔","Marcel Sabitzer":"马塞尔·萨比策","Marco Friedl":"马可·弗里德尔","Marco M. Pašalić":"马可·帕萨利奇","Marcos M. Llorente":"马科斯·略伦特","Marcos Marquinhos":"马尔基尼奥斯","Marcos Senesi":"马科斯·塞内西","Marcus Holmgren":"马库斯·霍姆格伦","Marcus Rashford":"拉什福德","Marcus Thuram":"马库斯·图拉姆","Marin Pongračić":"马林·庞格拉西奇","Mario Pašalić":"马里奥·帕萨利奇","Mark Flekken":"马克·弗莱肯","Markhus Lacroix":"马胡斯·拉克鲁瓦","Marko":"马尔科","Marko Arnautovic":"马尔科·阿诺托维奇","Marko Stamenic":"马尔科·斯塔梅尼奇","Marten De Roon":"马丁·德罗恩","Martin Baturina":"马丁·巴图林纳","Martin Erlić":"马丁·埃利克","Martin Experience":"马丁经验","Martin Zlomislić":"马丁·兹洛米斯利奇","Martin Zubimendi":"马丁·祖比门迪","Martin Ødegaard":"马丁·厄德高","Marvin Keller":"马文凯勒","Marvin Seneya":"马文·塞内亚","Marwane Saadane":"马尔万·萨丹","Matej Kovář":"马泰·科瓦日","Mateo Kovačić":"马特奥·科瓦契奇","Mateo M. Chávez":"马特奥·查韦斯","Matheus":"马修斯","Matheus Cunha":"马修斯·库尼亚","Mathew Leckie":"马修·莱基","Mathew Ryan":"马修·瑞安","Mathias M. Olivera":"马蒂亚斯·奥利维拉","Mathieu Choinière":"马蒂厄·乔尼埃","Matias Fernandez-Pardo":"马蒂亚斯·费尔南德斯·帕尔多","Matias Galarza":"马蒂亚斯·加拉扎","Matias M. Viña":"马蒂亚斯·维纳","Mats Wieffer":"马茨·维弗","Matt Freese":"马特·弗里斯","Matt Turner":"马特·特纳","Matthieu Epolo":"马蒂厄·埃波罗","Mattias Svanberg":"马蒂亚斯思文凯","Mauricio":"毛里西奥","Max Arfsten":"马克斯·阿夫斯坦","Max Crocombe":"马克斯·克罗库姆","Maxence Lacroix":"马克森斯·拉克鲁瓦","Maxi M. Araujo":"马克西·阿劳霍","Maxim De Cuyper":"马克西姆·德库珀","Maxime Crépeau":"马克西姆·克雷波","Maximilian Beier":"马克西米利安·贝尔","Mbekezeli Mbokazi":"姆贝凯泽利·姆博卡齐","Mccowatt":"麦考瓦特","Mcginn":"麦金恩","Mckenna":"麦肯纳","Mckennie":"麦肯尼","Mckenzie":"麦肯齐","Mclean":"麦克林","Mctominay":"麦克托米奈","Mehdi Ghayedi":"迈赫迪·加耶迪","Mehdi M. Torabi":"迈赫迪·托拉比","Mehdi Taremi":"迈赫迪·塔雷米","Melvin Mastil":"梅尔文·马斯蒂尔","Memphis":"孟菲斯","Merchas Doski":"梅尔查斯·多斯基","Merih Demi̇ral":"梅里·德米拉尔","Mert":"梅尔特","Mert Müldür":"梅尔特·米尔杜尔","Meschack":"梅沙克","Meshaal Barsham":"梅沙尔·巴沙姆","Michael Boxall":"迈克尔·博克索尔","Michael Gregoritsch":"迈克尔·格雷戈里奇","Michael Olise":"迈克尔·奥利斯","Michael Svoboda":"迈克尔·斯沃博达","Michael Woud":"迈克尔·伍德","Michal Sadílek":"米哈尔·萨迪莱克","Michel Aebischer":"米歇尔·艾比舍尔","Micky Van De Ven":"米奇·范德文","Miguel Almirón":"米格尔·阿尔米龙","Mike Maignan":"迈尼昂","Mike Penders":"迈克·彭德斯","Mikel Merino":"米克尔·梅里诺","Mikel Oyarzabal":"奥亚萨瓦尔","Milad M. Mohammadi":"米拉德·穆罕默迪","Miles M. Robinson":"迈尔斯·罗宾逊","Milos Degenek":"米洛斯·德格内克","Minjae":"金玟哉","Miro Muheim":"米罗·穆海姆","Mladen Jurkas":"姆拉登·尤卡斯","Mohamed Amoura":"穆罕默德·阿穆拉","Mohamed Ben Hmida":"穆罕默德·本·赫米达","Mohamed Hadj Mahmoud":"穆罕默德·哈吉·马哈茂德","Mohamed Kanno":"穆罕默德·坎诺","Mohamed Kone":"穆罕默德·科内","Mohamed M. Abdelmoniem":"穆罕默德·阿卜杜勒莫尼姆","Mohamed M. Alaa":"穆罕默德·阿拉","Mohamed M. Elshenawy":"穆罕默德·埃尔谢纳维","Mohamed M. Hany":"穆罕默德·哈尼","Mohamed M. Salah":"穆罕默德·萨拉赫","Mohamed Manai":"穆罕默德·马奈","Mohamed Tougai":"穆罕默德·图盖","Mohamed Toure":"穆罕默德·杜尔","Mohammad":"穆罕默德","Mohammad Abu Alnadi":"穆罕默德·阿布·阿尔纳迪","Mohammad Abu Ghoush":"穆罕默德·阿布·古什","Mohammad Abu Hasheesh":"穆罕默德·阿布·哈希什","Mohammad Abu Zraiq":"穆罕默德·阿布·兹莱克","Mohammad Aldaoud":"穆罕默德·阿尔达乌德","Mohammad M. Mohebbi":"穆罕默德·莫赫比","Mohammed":"穆罕默德","Mohammed Alowais":"穆罕默德·阿洛韦斯","Mohammed Muntari":"穆罕默德·蒙塔里","Mohanad":"莫哈纳德","Mohanad M. Lashin":"莫哈纳德·拉辛","Mohannad Abu Taha":"莫罕纳德·阿布·塔哈","Moise Bombito":"莫伊兹邦比托","Moises M. Caicedo":"莫伊塞斯·凯塞多","Moises Ramírez":"莫伊塞斯·拉米雷斯","Mojmir Chytil":"莫吉米尔·奇蒂尔","Montassar Talbi":"蒙塔萨尔塔尔比","Moonhwan":"金纹奂","Morgan Rogers":"摩根·罗杰斯","Mortadha Ben Ouanes":"莫塔达·本·瓦内斯","Morten Thorsby":"莫滕·索斯比","Mory Diaw":"莫里·迪奥","Mostafa Shoubir":"穆斯塔法·舒比尔","Mostafa Zico":"穆斯塔法·济科","Moteb":"莫泰布","Mouhib Chamakh":"穆希卜·查马克","Mousa Altamari":"穆萨·阿尔塔马里","Moussa Niakhaté":"穆萨·尼亚哈特","Moutaz Neffati":"穆塔兹·内法提","Munaf":"穆纳夫","Munir El Kajoui":"穆尼尔·埃尔·卡朱伊","Musab":"穆萨布","Mustafa":"穆斯塔法","Márcio Marcio":"马西奥·马西奥","Nabil Bentaleb":"纳比尔·本塔莱布","Nabil Donga":"纳比尔·东加","Nadhir Benbouali":"纳迪尔·本布阿利","Nadiem Amiri":"纳迪姆·阿米里","Nahuel Molina":"纳韦尔·莫利纳","Nando Pijnaker":"南多·派纳克","Nasser":"纳赛尔","Nathan Aké":"内森·阿克","Nathan Ngoy":"内森·恩戈伊","Nathan Patterson":"内森·帕特森","Nathan Saliba":"内森·萨利巴","Nathanael Mbuku":"纳撒内尔·姆布库","Nathaniel Brown":"纳撒尼尔·布朗","Nawaf":"纳瓦夫","Nawaf Alaqidi":"纳瓦夫·阿拉吉迪","Neil El Aynaoui":"尼尔·埃尔·艾纳维","Nestory Irankunda":"内斯托里·伊兰昆达","Neymar Jr":"内马尔","Ngalayel Mukau":"恩加拉耶尔·穆考","Ngolo Kante":"恩戈洛·坎特","Nick Woltemade":"尼克·沃尔特马德","Nico Elvedi":"尼科·埃尔维迪","Nico N. Gonzalez":"尼科·冈萨雷斯","Nico O'Reilly":"尼科·奥莱利","Nico Paz":"尼科·帕斯","Nico Schlotterbeck":"尼科·施洛特贝克","Nico Williams Jr.":"小尼科·威廉姆斯","Nicolas N. De La Cruz":"尼古拉斯·德拉克鲁兹","Nicolas N. Jackson":"尼古拉斯·杰克逊","Nicolas Otamendi":"尼古拉斯·奥塔门迪","Nicolas Pepe":"尼古拉斯·佩佩","Nicolas Raskin":"尼古拉斯·拉斯金","Nicolas Seiwald":"尼古拉斯·塞瓦尔德","Nicolas Tagliafico":"尼古拉斯·塔利亚菲科","Nihad Mujakić":"尼哈德·穆亚基奇","Niko Sigur":"尼科·西古尔","Nikola Katić":"尼古拉·卡蒂奇","Nikola Moro":"尼古拉·莫罗","Nikola Vasilj":"尼古拉·瓦西里","Nikola Vlašić":"尼古拉·弗拉西奇","Nilson Angulo":"尼尔森·安古洛","Nishan Velupillay":"尼山·维鲁皮莱","Nizar":"尼扎尔","Nkosinathi Sibisi":"恩科西纳提·斯比西","Noa Lang":"诺亚·朗","Noah Okafor":"诺亚·奥卡福","Noah Sadiki":"诺亚·萨迪基","Noni Madueke":"诺丽玛杜克","Noor Alrawabdeh":"努尔·阿尔拉瓦德","Noureddin Bani Ateyah":"努尔丁·巴尼·阿提亚","Noussair Mazraoui":"努赛尔·马兹拉维","Nuno Da Costa":"努诺·达科斯塔","Nuno N. Mendes":"努诺·门德斯","Nélson N. Semedo":"纳尔逊·塞梅多","Obed O. Vargas":"奥贝德·巴尔加斯","Odeh":"奥德赫","Odiljon Xamrobekov":"奥迪永·沙姆罗贝科夫","Odilon Kossounou":"奥迪隆·科索努","Oguz Oğuz":"奥古兹·奥古兹","Oliver Baumann":"奥利弗·鲍曼","Ollie Watkins":"奥利·沃特金斯","Olwethu Makhanya":"奥尔韦图·马卡尼亚","Omar Alderete":"奥马尔·阿尔德雷特","Omar Marmoush":"奥马尔·马穆什","Omar Rekik":"奥马尔·雷基克","Orbelin Orbelín":"奥尔贝林奥尔贝林","Orjan Nyland":"奥扬·尼兰","Orkun Kökçü":"奥尔昆·科克楚","Orlando Mosquera":"奥兰多·莫斯克拉","Orlando O. Gill":"奥兰多·吉尔","Oscar Bobb":"奥斯卡·鲍布","Oston Urunov":"奥斯顿·乌鲁诺夫","Oswin Appollis":"奥斯温·阿波利斯","Otabek Shukurov":"奥塔别克·舒库罗夫","Oumar Diakite":"奥马尔·迪亚基特","Ousmane Dembele":"登贝莱","Ousmane O. Diomande":"奥斯曼·迪奥曼德","Oussama Benbot":"乌萨马·本博特","Owen Goodman":"欧文·古德曼","Ozan Kabak":"奥赞·卡巴克","Pablo Gavi":"巴勃罗·加维","Pape Gueye":"帕普·盖耶","Pape P.m. Sarr":"帕普·下午萨尔","Parfait Guiagon":"冻糕吉冈","Pascal":"帕斯卡","Pathe P.i. Ciss":"帕特·西斯","Patrick Beach":"帕特里克比奇","Patrick Berg":"帕特里克·伯格","Patrick Pentz":"帕特里克·彭茨","Patrick Wimmer":"帕特里克·威默","Patrik Schick":"帕特里克·希克","Pau Cubarsí":"保罗·库巴西","Paul Izzo":"保罗·伊佐","Paul Okon-Engstler":"保罗·奥康-恩斯特勒","Paul Wanner":"保罗·万纳","Pavel Šulc":"帕维尔·苏尔克","Payam":"帕亚姆","Pedro":"佩德罗","Pedro Neto":"佩德罗·内托","Pedro Pedri":"佩德罗·佩德里","Pedro Porro":"佩德罗·波罗","Pedro Vite":"佩德罗·维特","Pervis Estupiñán":"佩维斯·埃斯图皮南","Petar Musa":"佩塔·穆萨","Petar P. Sučić":"佩塔尔·苏西奇","Philipp Lienhart":"菲利普·林哈特","Phillip Mwene":"菲利普·穆文尼","Piero Hincapie":"皮耶罗·欣卡皮","Prince":"王子","Promise":"承诺","Quinten Q. Timber":"昆顿·木材","Ra\u0000k Belghali":"拉克贝尔加利","Raed Chikhaoui":"拉德·奇卡维","Rafael Rafa Leão":"拉斐尔·拉法·莱昂","Raja'Ei":"拉惹艾","Ramin":"拉明","Ramiz Zerrouki":"拉米兹·泽鲁基","Ramon Sosa":"拉蒙·索萨","Ramy Bensebaini":"拉米·本塞拜尼","Ramy R. Rabia":"拉米·拉比亚","Rani Khedira":"拉尼·赫迪拉","Raphael Raphinha":"拉菲尼亚","Raul R. Rangel":"劳尔·兰格尔","Raul Raúl":"劳尔·劳尔","Rayan":"拉延","Rayan Ait Nouri":"拉扬·艾特·努里","Rayan Cherki":"拉扬·切尔基","Rayan Elloumi":"拉扬·埃卢米","Rebin":"雷宾","Redouane Halhal":"雷杜安·哈哈尔","Reece James":"里斯·詹姆斯","Relebohile Mofokeng":"雷勒博希勒·莫佛肯","Remo Freuler":"雷莫·弗洛伊勒","Renato Veiga":"雷纳托·韦加","Ricardo Ade":"里卡多·阿德","Ricardo Goss":"里卡多·戈斯","Ricardo Pepi":"里卡多·佩皮","Ricardo Rodriguez":"里卡多·罗德里格斯","Richard Rios":"理查德·里奥斯","Richie Laryea":"里奇·拉里亚","Riechedly Bazoer":"丰富的巴佐尔","Ritsu Doan":"堂安律","Riyad Mahrez":"里亚德·马赫雷斯","Roberto Lopes":"罗伯托·洛佩斯","Roberto R. Alvarado":"罗伯托·阿尔瓦拉多","Robin Hranáč":"罗宾·赫拉纳奇","Robin Risser":"罗宾·瑞瑟","Robin Roefs":"罗宾·罗夫斯","Roderick Miller":"罗德里克·米勒","Rodrigo":"罗德里戈","Rodrigo De Paul":"罗德里戈·德保罗","Rodrigo R. Aguirre":"罗德里戈·阿吉雷","Rodrigo R. Bentancur":"罗德里戈·本坦库尔","Rodrigo R. Zalazar":"罗德里戈·扎拉扎","Roger Ibañez":"罗杰·伊巴涅斯","Romano Schmid":"罗马诺·施密德","Romelu Lukaku":"罗梅卢·卢卡库","Ronald R. Araujo":"罗纳德·阿劳霍","Ronwen Williams":"罗文·威廉姆斯","Roozbeh":"鲁兹贝","Roshon Van Eijma":"罗尚·范·埃吉玛","Ross Stewart":"罗斯·斯图尔特","Ruben Providence":"鲁本·普罗维登斯","Ruben Vargas":"鲁本·巴尔加斯","Rui Silva":"鲁伊·席尔瓦","Ruslanbek Jiyanov":"鲁斯兰贝克·吉亚诺夫","Rustam Ashurmatov":"鲁斯塔姆·阿舒尔马托夫","Ryan":"瑞安","Ryan Christie":"瑞安·克里斯蒂","Ryan Gravenberch":"瑞安·格雷文伯奇","Ryan Thomas":"瑞安·托马斯","Rúben Dias":"鲁本·迪亚斯","Rúben R. Neves":"鲁本·内维斯","Sa'Ed":"萨艾德","Sabri Ben Hessen":"萨布里·本·黑森","Sadio Mané":"萨迪奥·马内","Saeid S. Ezatolahi":"赛义德·埃扎托拉希","Salah":"萨拉赫","Saleem":"萨利姆","Saleh":"萨利赫","Saleh Alshehri":"萨利赫·阿尔谢赫里","Salem":"塞勒姆","Salih Özcan":"萨利赫·厄兹坎","Saman Ghoddos":"萨曼·戈多斯","Samed Baždar":"萨米德·巴兹达尔","Samet Akaydin":"沙美特·阿凯丁","Samir Chergui":"萨米尔·切尔吉","Samir El Mourabet":"萨米尔·埃尔·穆拉贝特","Samuel Moutoussamy":"塞缪尔·穆图萨米","Samuel Samu":"塞缪尔·萨穆","Samukele Kabini":"萨穆克莱·卡比尼","Sander Berge":"桑德伯格","Sander Tangvik":"桑德·坦维克","Santiago Arias":"圣地亚哥·阿里亚斯","Santiago S. Bueno":"圣地亚哥·布埃诺","Santiago S. Gimenez":"圣地亚哥·希门尼斯","Santiago S. Mele":"圣地亚哥·梅莱","Sarpreet Singh":"萨普里特·辛格","Sasa Kalajdzic":"萨萨·卡拉吉奇","Saud":"沙特","Sead Kolašinac":"塞德·科拉希纳茨","Sebastian Berhalter":"塞巴斯蒂安·伯哈尔特","Sebastian S. Caceres":"塞巴斯蒂安·卡塞雷斯","Sebastian Tounekti":"塞巴斯蒂安·图内克蒂","Seko Fofana":"塞科·福法纳","Senne Lammens":"塞内·拉门斯","Sergino Dest":"塞尔吉诺·德斯特","Sergio S. Rochet":"塞尔吉奥·罗切特","Seunggyu":"金承奎","Seungho":"白昇浩","Shahriyar":"沙赫里亚尔","Sherel Floranus":"谢雷尔·弗洛拉努斯","Sherzod Esanov":"谢尔佐德·埃萨诺夫","Sherzod Nasrullaev":"谢尔佐德·纳斯鲁拉耶夫","Shogo Taniguchi":"谷口彰悟","Shoja":"精社","Shurandy Sambo":"舒兰迪桑博","Shuto Machino":"町野修斗","Sidny Lopes Cabral":"西德尼·洛佩斯·卡布拉尔","Silvan Widmer":"西尔万·维德默","Simon Adingra":"西蒙·阿丁格拉","Simon Banza":"西蒙·班扎","Sipho Chaine":"西弗·柴恩","Sofyan Amrabat":"索菲安·阿姆拉巴特","Sondre Langås":"桑德雷·朗格斯","Sontje Hansen":"桑杰·汉森","Sou\u0000ane Rahimi":"苏安·拉希米","Sphephelo Sithole":"斯费罗·西索尔","Stefan Posch":"斯特凡·波什","Stepan Chaloupek":"斯捷潘·查洛佩克","Stephen Eustáquio":"斯蒂芬·尤斯塔奎奥","Steve Kapuadi":"史蒂夫·卡普阿迪","Steven Moreira":"史蒂文·莫雷拉","Stjepan Radeljić":"斯捷潘·拉德尔季奇","Sultan":"苏丹","Sultan Mandash":"苏丹曼达什","Taehyeon":"金太炫","Taeseok":"李太锡","Taha Ali":"塔哈·阿里","Tahith Chong":"钟塔西","Tahsin":"塔辛","Tajon Buchanan":"塔洪·布坎南","Takefusa Kubo":"久保建英","Takehiro Tomiyasu":"富安健洋","Tani Oluwaseyi":"塔尼·奥卢瓦塞伊","Tarek T. Alaa":"塔里克·阿拉","Tarik Muharemović":"塔里克·穆哈雷莫维奇","Teboho Mokoena":"特博霍·莫科埃纳","Telmo Arcanjo":"特尔莫·阿尔坎乔","Tete Yengi":"太特延吉","Teun Koopmeiners":"特恩·库普迈纳斯","Thabang Matuludi":"塔邦·马图鲁迪","Thalente Mbatha":"塔伦特·姆巴塔","Thapelo Maseko":"塔佩洛·马塞科","Thelo Aasgaard":"塞洛·阿斯加德","Themba Zwane":"特姆巴·兹瓦内","Theo Bongonda":"西奥·邦贡达","Theo T. Hernandez":"特奥·埃尔南德斯","Thiago Almada":"蒂亚戈·阿尔马达","Thibaut Courtois":"蒂博·库尔图瓦","Thomas Meunier":"托马斯·莫尼耶","Thomas Partey":"托马斯·帕蒂","Tijjani Reijnders":"蒂贾尼·雷恩德斯","Tim Payne":"蒂姆·佩恩","Tim Ream":"蒂姆·雷姆","Timothy Castagne":"蒂莫西·卡斯塔尼","Timothy Fayulu":"蒂莫西·法尤鲁","Timothy Weah":"蒂莫西·维阿","Tomas Chorý":"托马斯·乔里","Tomas Holeš":"托马斯·霍尔斯","Tomas Souček":"托马斯·苏切克","Tomas T. Rodríguez":"托马斯·罗德里格斯","Tommy Smith":"汤米·史密斯","Tomoki Hayakawa":"早川友基","Tomás":"托马斯","Toni Fruk":"托尼·福鲁克","Torbjorn Heggem":"托比昂·赫格姆","Trevoh Chalobah":"特雷沃·查洛巴","Trevor Doornbusch":"特雷弗·多恩布什","Tshepang Moremi":"哲邦·莫雷米","Tsuyoshi Watanabe":"渡边刚","Tyler Adams":"泰勒·亚当斯","Tyler Bindon":"泰勒·宾顿","Tyler Fletcher":"泰勒·弗莱彻","Tyrese Noslin":"泰瑞斯·诺斯林","Tyrick Bodak":"泰里克·博达克","Ugurcan Uğurcan":"乌古尔干语乌古尔干语","Umar Eshmurodov":"奥马尔·埃什穆罗多夫","Unai Simón":"乌奈·西蒙","Utkir Yusupov":"乌特基尔·尤苏波夫","Valentin Barco":"瓦伦丁·巴尔科","Victor Lindelöf":"维克托·林德洛夫","Victor M.v.":"维克多","Viktor Gyökeres":"维克多·吉克雷斯","Viktor V. Johansson":"维克多·约翰逊","Vinicius Vini Jr.":"维尼修斯","Virgil":"维吉尔","Vitor Vitinha":"维托·维蒂尼亚","Vladimir Coufal":"弗拉基米尔·库法尔","Vladimir Darida":"弗拉基米尔·达里达","Wagner":"瓦格纳","Waldemar Anton":"瓦尔德马·安东","Warren Zaire-Emery":"沃伦·扎伊尔·埃默里","Weverton":"韦弗顿","Wije":"赵伟济","Wilfried Singo":"威尔弗里德·辛戈","Wilguens Paugain":"威尔根斯·波甘","Willer W. Ditta":"威勒·迪塔","William Saliba":"萨利巴","Willian Pacho":"威廉·帕乔","Willy Semedo":"威利·塞梅多","Wilson Isidor":"威尔逊·伊西多尔","Woodensky W. Pierre":"伍登斯基·皮埃尔","Wout Weghorst":"沃特·韦格霍斯特","Xaver":"克萨维尔","Yahia Y. Fofana":"叶海亚·福法纳","Yaimar Medina":"亚马尔·梅迪纳","Yan Diomande":"扬·迪奥曼德","Yan Valery":"严瓦列里","Yasin Ayari":"亚辛·阿亚里","Yasser":"亚西尔","Yassin Fortune":"亚辛财富","Yassine Bono":"亚辛·博诺","Yassine Titraoui":"亚辛·蒂特拉维","Yazan Alarab":"亚赞·阿拉拉布","Yazeed":"亚吉德","Yehvann Y. Diouf":"耶万·迪乌夫","Yeremy":"耶里米","Yerry Y. Mina":"耶里·米纳","Yoane Wissa":"尤恩·维萨","Youngwoo":"薛英佑","Youri Tielemans":"尤里·蒂勒曼斯","Youssef":"优素福","Youssef Belammari":"优素福·贝拉马里","Yuito Y. Suzuki":"铃木唯人","Yukinari Sugawara":"菅原由势","Yunus":"尤努斯","Yusuf":"优素福","Yuto Nagatomo":"长友佑都","Yvon Mvogo":"伊冯·姆沃戈","Zaid":"扎伊德","Zakaria El Ouahdi":"扎卡里亚·埃尔·瓦赫迪","Zeki Amdouni":"泽基·阿姆杜尼","Zeki Zeki̇ Çeli̇k":"ZekiZeki̇Çeli̇k","Zeno Debast":"芝诺·德巴斯特","Zidane Z. Iqbal":"齐达内·伊克巴尔","Zineddine Belaid":"齐内丁·贝莱德","Zion Suzuki":"铃木彩艳","Ziyad":"齐亚德","Álisson A. Becker":"阿利松","Éderson":"埃德森","Erling Haaland":"哈兰德","Vinicius Junior":"维尼修斯","Neymar":"内马尔","Mohamed Salah":"萨拉赫","Virgil van Dijk":"范戴克","Robert Lewandowski":"莱万多夫斯基","Antoine Griezmann":"格列兹曼","Luka Modric":"莫德里奇","Toni Kroos":"克罗斯","Phil Foden":"福登","Pedri":"佩德里","Gavi":"加维","Rodri":"罗德里","Federico Valverde":"巴尔韦德","Vitinha":"维蒂尼亚","Bruno Fernandes":"B费","Bernardo Silva":"贝尔纳多·席尔瓦","Joao Felix":"若昂·费利克斯","Rafael Leao":"莱奥","Sadio Mane":"马内","Victor Osimhen":"奥斯梅恩","Khvicha Kvaratskhelia":"克瓦拉茨赫利亚","Dusan Vlahovic":"弗拉霍维奇","Lautaro Martinez":"劳塔罗·马丁内斯","Julian Alvarez":"J·阿尔瓦雷斯","Enzo Fernandez":"恩佐·费尔南德斯","Frenkie de Jong":"弗兰基·德容","Memphis Depay":"德佩","Alessandro Bastoni":"巴斯托尼","Nicolo Barella":"巴雷拉","Gianluigi Donnarumma":"多纳鲁马","Eduardo Camavinga":"卡马文加","Randal Kolo Muani":"科洛穆阿尼","Theo Hernandez":"特奥·埃尔南德斯","Son Heung-min":"孙兴慜","Wataru Endo":"远藤航","Kaoru Mitoma":"三笘薫","Hidemasa Morita":"森田英正","Ko Itakura":"板仓滉","Alisson Becker":"阿利松","Casemiro":"卡塞米罗","Marquinhos":"马尔基尼奥斯","Raphinha":"拉菲尼亚","Rodrygo":"罗德里戈","Gabriel Jesus":"加布里埃尔·热苏斯","Bruno Guimaraes":"B·吉马良斯","Lucas Paqueta":"帕奎塔","Thomas Muller":"穆勒","Ilkay Gundogan":"京多安","Leroy Sane":"萨内","Serge Gnabry":"格纳布里","Antonio Rudiger":"吕迪格","Niclas Fullkrug":"菲尔克鲁格","Alvaro Morata":"莫拉塔","Nico Williams":"尼科·威廉姆斯","Ferran Torres":"费兰·托雷斯","Mason Mount":"芒特","Cole Palmer":"帕尔默","Trent Alexander-Arnold":"阿诺德","Martin Odegaard":"厄德高","Viktor Gyokeres":"约凯雷斯","Dejan Kulusevski":"库卢塞夫斯基","Márcio":"马尔西奥","Raul":"劳尔","Orbelin":"奥尔贝林","Cherif":"谢里夫","Ismaila":"伊斯梅拉","Fabian":"法比安","Zeki Çelik":"泽基·切利克","Merih Demiral":"梅里赫·德米拉尔","Caglar":"卡格拉尔","Deniz Gül":"德尼兹·居尔","Abdulkerim":"阿卜杜勒克里姆","Ismail":"伊斯梅尔","Irfan Kahveci":"伊尔凡·卡赫维奇","Baris":"巴里斯","Ugurcan":"乌古尔语","Oguz":"奥古兹"};
+const pz=n=>PZH[n]||NAMES_ZH[n]||n;
+const pzr=d=>(d&&d.nameZh)?d.nameZh:pz(d.player);  // 行级中文名：优先data.json的nameZh
+const cz=n=>CZH[n]||n;
+const CLUBABBR={"Paris Saint-Germain":"PSG","Manchester City":"Man City","Manchester United":"Man Utd","Brighton & Hove Albion":"Brighton","Wolverhampton Wanderers":"Wolves","Borussia Monchengladbach":"M'gladbach","Borussia Dortmund":"Dortmund","Eintracht Frankfurt":"Frankfurt","Newcastle United":"Newcastle","West Ham United":"West Ham","Union Saint-Gilloise":"USG","Red Star Belgrade":"Red Star","Istanbul Basaksehir":"Basaksehir","Maccabi Tel Aviv":"Maccabi TA","Universitatea Cluj":"U. Cluj","Slavia Prague":"Slavia","RB Salzburg":"Salzburg","Atlanta United":"Atlanta Utd","Portland Timbers":"Portland","Real Sociedad":"Real Soc."};
+const cabbr=n=>CLUBABBR[n]||n;
+const LEN={"美职联": "MLS", "意甲": "Serie A", "西甲": "La Liga", "英超": "EPL", "德甲": "Bundesliga", "法甲": "Ligue 1", "法乙": "Ligue 2", "英冠": "Championship", "荷甲": "Eredivisie", "葡超": "Primeira Liga", "苏超": "SPFL", "沙特职业联赛": "SPL", "卡塔尔星级联赛": "QSL", "土超": "Süper Lig", "埃及超": "EPL (Egypt)", "俄超": "RPL", "伊朗波斯湾联赛": "PGPL", "塞尔维亚超": "SuperLiga", "阿甲": "Primera (ARG)", "捷克甲级": "Czech 1.", "丹麦超": "Superliga", "罗马尼亚甲级": "Liga I", "斯洛文尼亚甲级": "PrvaLiga", "巴西甲级": "Série A (BRA)", "瑞士超": "Swiss SL", "比利时甲级": "Pro League", "以色列超": "Israeli PL", "伊拉克星级联赛": "Iraqi SL", "奥地利甲级": "Austrian BL", "匈牙利甲级": "NB I", "墨超": "Liga MX", "塞浦路斯甲级": "Cypriot 1.", "阿联酋联赛": "UAE PL"};
+const lab=n=>LEN[n]?[n,LEN[n]]:n;
+const LEAGUEFLAG={"美职联":"🇺🇸","意甲":"🇮🇹","西甲":"🇪🇸","英超":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","德甲":"🇩🇪","法甲":"🇫🇷","法乙":"🇫🇷","英冠":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","荷甲":"🇳🇱","葡超":"🇵🇹","苏超":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","沙特职业联赛":"🇸🇦","卡塔尔星级联赛":"🇶🇦","土超":"🇹🇷","埃及超":"🇪🇬","俄超":"🇷🇺","伊朗波斯湾联赛":"🇮🇷","塞尔维亚超":"🇷🇸","阿甲":"🇦🇷","捷克甲级":"🇨🇿","丹麦超":"🇩🇰","罗马尼亚甲级":"🇷🇴","斯洛文尼亚甲级":"🇸🇮","巴西甲级":"🇧🇷","瑞士超":"🇨🇭","比利时甲级":"🇧🇪","以色列超":"🇮🇱","伊拉克星级联赛":"🇮🇶","奥地利甲级":"🇦🇹","匈牙利甲级":"🇭🇺","墨超":"🇲🇽","塞浦路斯甲级":"🇨🇾","阿联酋联赛":"🇦🇪","南非超":"🇿🇦","摩洛哥联赛":"🇲🇦","突尼斯联赛":"🇹🇳","阿尔及利亚联赛":"🇩🇿","哥伦比亚甲级":"🇨🇴","乌拉圭甲级":"🇺🇾","厄瓜多尔甲级":"🇪🇨","巴拉圭甲级":"🇵🇾","希腊超":"🇬🇷","挪威超":"🇳🇴","瑞典超":"🇸🇪","波兰甲级":"🇵🇱","乌克兰超":"🇺🇦","斯洛伐克甲级":"🇸🇰","保加利亚甲级":"🇧🇬","韩K联":"🇰🇷","日职联":"🇯🇵","澳超":"🇦🇺","刚果联赛":"🇨🇩","约旦联赛":"🇯🇴"};
+const lfl=zh=>LEAGUEFLAG[zh]||"";
+
+
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let totalGoals=0, clubs=[], leagues=[], byLeague={}, byClub={}, clubLeague={}, currentL=[], byNation={};
+
+function countUp(el,to){
+  if(reduce){el.textContent=to;return;}
+  const dur=900,t0=performance.now();
+  (function tick(now){const p=Math.min(1,(now-t0)/dur);
+    el.textContent=Math.round((1-Math.pow(1-p,3))*to);
+    if(p<1)requestAnimationFrame(tick);})(t0);
+}
+function aggNation(){
+  const m={};
+  DATA.forEach(d=>{(m[d.teamEn]??=({goals:0,scorers:0,zh:d.teamZh}));
+    m[d.teamEn].goals+=d.goals;m[d.teamEn].scorers++;});
+  return m;
+}
+function agg(key){
+  const m={};
+  DATA.forEach(d=>{(m[d[key]]??=({goals:0,scorers:0}));
+    m[d[key]].goals+=d.goals;m[d[key]].scorers++;});
+  return m;
+}
+function recompute(){
+  totalGoals=DATA.reduce((s,d)=>s+d.goals,0);
+  clubs=[...new Set(DATA.map(d=>d.club))];
+  leagues=[...new Set(DATA.map(d=>d.league))];
+  byLeague=agg("league"); byClub=agg("club"); byNation=aggNation();
+  clubLeague={}; DATA.forEach(d=>{clubLeague[d.club]=d.league;});
+}
+function leaguesByGoals(){
+  return Object.entries(byLeague)
+    .sort((a,b)=>b[1].goals-a[1].goals||b[1].scorers-a[1].scorers||a[0].localeCompare(b[0],"zh"))
+    .map(e=>e[0]);
+}
+function renderStats(){
+  countUp(document.getElementById("s-goals"),totalGoals);
+  countUp(document.getElementById("s-players"),DATA.length);
+  countUp(document.getElementById("s-clubs"),clubs.length);
+  countUp(document.getElementById("s-leagues"),leagues.length);
+  countUp(document.getElementById("s-matches"),matchesCount);
+}
+let lastUpdated=null, dataUpdatedRaw=null;
+let matchesCount=54;
+function setUpdated(ts,live){
+  dataUpdatedRaw = ts || null;
+  lastUpdated = ts?new Date(ts):new Date();
+  const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
+  document.getElementById("updated").textContent=
+    "更新于 Updated "+lastUpdated.toLocaleString("zh-CN",{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"})+tag;
+  if(typeof renderFooter==="function") renderFooter();
+}
+// 按进球数生成颜色：从青(低)→品红→琥珀(高)的连续色相，最高进球数决定色阶范围
+function tierHue(goals, maxG){
+  const lo=2, hi=Math.max(maxG, lo+1);
+  const t=Math.min(1, Math.max(0, (goals-lo)/(hi-lo)));   // 0..1
+  return 265 - t*240;   // 265°(紫,最低档) → 25°(橙,最高档)，跨度大、相邻档更易区分
+}
+function tierStyle(goals, maxG){
+  if(goals<=1) return {border:"var(--line)", bg:"var(--card)", chip:"#2c3754", strong:"#8A93AB", bar:"transparent"};
+  const h=tierHue(goals,maxG);
+  return {
+    border:`hsla(${h},90%,60%,.9)`,
+    bg:`linear-gradient(90deg, hsla(${h},78%,50%,.62) 0%, hsla(${h},72%,44%,.40) 55%, hsla(${h},60%,40%,.20) 100%)`,
+    chip:`hsl(${h},85%,60%)`,
+    strong:`hsl(${h},95%,80%)`,
+    bar:`hsl(${h},88%,58%)`
+  };
+}
+function renderBoard(){
+  const rows=DATA.filter(d=>d.goals>=boardMin).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player));
+  const el=document.getElementById("board");
+  const maxG=DATA.reduce((m,d)=>Math.max(m,d.goals),0);
+  if(!rows.length){ el.innerHTML='<div class="note" style="padding:8px">暂无达到 '+boardMin+'+ 球的球员 · No players with '+boardMin+'+ goals yet</div>'; return; }
+  el.innerHTML=rows.map((d,i)=>{
+    const st=tierStyle(d.goals,maxG);
+    return `<div class="row" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
+       <span class="rank" style="color:${st.strong}">${String(i+1).padStart(2,"0")}</span>
+       <span class="flag">${fl(d.teamEn)}</span>
+       <span class="who"><div class="nm">${pzr(d)} <span class="ensm">${d.player}</span></div><div class="cl">${cz(d.club)} <span class="ensm">${d.club}</span></div></span>
+       <span class="balls">${d.goals}</span></div>`;}).join("");
+}
+
+const FONT="'Noto Sans SC',system-ui,sans-serif";
+Chart.defaults.font.family=FONT; Chart.defaults.color="#C4CBDE";
+function gradFor(ctx){
+  const data=ctx.dataset?ctx.dataset.data:null, v=ctx.raw;
+  const c=ctx.chart.ctx;
+  const g=c.createLinearGradient(0,0,ctx.chart.width||500,0);
+  if(data==null || v==null){ g.addColorStop(0,"#FF2D78");g.addColorStop(1,"#FFB02E");return g; }
+  const max=Math.max.apply(null,data.filter(x=>x!=null)); 
+  const t=max>0 ? v/max : 0;
+  const h=Math.round(265 - t*240);            // 值越大→越暖(橙)，越小→越冷(紫)
+  g.addColorStop(0,`hsl(${h},78%,46%)`);
+  g.addColorStop(1,`hsl(${h},88%,62%)`);
+  return g;
+}
+function topEntries(obj,metric,n){
+  return Object.entries(obj).sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals).slice(0,n);
+}
+const valueLabel={
+  id:"valueLabel",
+  afterDatasetsDraw(chart){
+    const ctx=chart.ctx, meta=chart.getDatasetMeta(0);
+    ctx.save();
+    ctx.font="700 12px 'Space Mono', monospace";
+    ctx.fillStyle="#F4F6FB";
+    ctx.textBaseline="middle";
+    ctx.textAlign="left";
+    meta.data.forEach((bar,i)=>{
+      const v=chart.data.datasets[0].data[i];
+      if(v!=null) ctx.fillText(v, bar.x+7, bar.y+1);
+    });
+    ctx.restore();
+  }
+};
+function barCfg(entries,metric,onClick){
+  return {type:"bar",
+    plugins:[valueLabel],
+    data:{labels:entries.map(e=>e[0]),
+      datasets:[{data:entries.map(e=>e[1][metric]),
+        backgroundColor:c=>gradFor(c),borderRadius:6,maxBarThickness:26,categoryPercentage:.66,barPercentage:.9}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      onClick:onClick||null,
+      layout:{padding:{right:28,left:(window.innerWidth<620?112:134)}},
+      animation:reduce?false:{duration:800,easing:"easeOutQuart"},
+      plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:10,
+          titleColor:"#EAEEF7",bodyColor:"#8A93AB",
+          callbacks:{label:c=>` ${c.parsed.x} ${metric==="goals"?"球":"人"}`}}},
+      scales:{
+        x:{beginAtZero:true,grace:"6%",ticks:{precision:0,font:{family:"'Space Mono'"}},grid:{color:"rgba(39,48,75,.5)"}},
+        y:{ticks:{display:false},grid:{display:false},border:{display:false}}}}};
+}
+let metric="goals", leagueCh, clubCh, natCh;
+let boardMin=2;
+document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
+function heightFor(n){return Math.max(240,n*40+54);}
+function lblW(){return window.innerWidth<620?112:134;}
+function drawYLabels(chart,htmlLabels,overlayId){
+  const ov=document.getElementById(overlayId); if(!ov) return;
+  ov.innerHTML="";
+  const meta=chart.getDatasetMeta(0); if(!meta||!meta.data) return;
+  const w=lblW()-10;
+  meta.data.forEach((bar,i)=>{
+    const d=document.createElement("div");
+    d.className="yl"; d.style.top=bar.y+"px"; d.style.width=w+"px";
+    d.innerHTML=htmlLabels[i]||"";
+    ov.appendChild(d);
+  });
+}
+function leagueClick(evt,els){
+  if(!els||!els.length) return;
+  const item = currentL[els[0].index];
+  const lg = item && item[0];
+  if(!lg) return;
+  // 延后到本次点击事件处理完毕后再重建图表，避免在图表自身的点击回调里销毁它而报错
+  setTimeout(()=>{
+    document.getElementById("clubLeagueSel").value=lg;
+    renderCharts();
+    document.querySelector(".charts").scrollIntoView({behavior:"smooth",block:"nearest"});
+  },0);
+}
+function renderCharts(){
+  const capV=(id,total)=>{const v=document.getElementById(id).value;return v==='all'?total:Math.min(+v,total);};
+  const L=topEntries(byLeague,metric,capV("topLeagueSel",leagues.length));
+  currentL=L;
+  // 俱乐部图：若选了联赛则只看该联赛内各队，否则看总榜前15
+  const mword = metric==="goals" ? "进球数 Goals" : "进球人数 Scorers";
+  const fL=document.getElementById("clubLeagueSel").value;
+  let C;
+  if(fL){
+    C=Object.entries(byClub).filter(([c])=>clubLeague[c]===fL)
+        .sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals)
+        .slice(0,capV("topClubSel",clubs.length));
+    document.getElementById("clubTitle").textContent="按俱乐部 By Club · "+fL+(LEN[fL]?" "+LEN[fL]:"")+" · "+mword;
+  }else{
+    C=topEntries(byClub,metric,capV("topClubSel",clubs.length));
+    document.getElementById("clubTitle").textContent="按俱乐部 By Club · "+mword;
+  }
+  document.getElementById("leagueTitle").textContent="按联赛 By League · "+mword;
+  document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
+  document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
+  leagueCh&&leagueCh.destroy(); clubCh&&clubCh.destroy();
+  const mob = window.innerWidth < 620;
+  const Lrows=L.map(e=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
+    return {plain:zh+(en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),metric,leagueClick));
+  drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
+  const Crows=C.map(e=>{const zh=cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
+    return {plain:zh+(zh!==en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),metric));
+  drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
+  const N=topEntries(byNation,metric,capV("topNatSel",Object.keys(byNation).length));
+  document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
+  document.getElementById("natTitle").textContent="按国家队 By Nation · "+mword;
+  natCh&&natCh.destroy();
+  const Nrows=N.map(e=>{const zh=e[1].zh||e[0],en=e[0],f=fl(e[0]);
+    return {plain:zh+(zh!==en?" "+en:""), html:(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric));
+  drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
+}
+document.getElementById("metric").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  metric=b.dataset.m;
+  [...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));
+  renderCharts();
+});
+
+const tbody=document.getElementById("tbody"), rowcount=document.getElementById("rowcount");
+const sel=document.getElementById("leagueSel");
+function populateLeagueFilter(){
+  const cur=sel.value;
+  sel.innerHTML='<option value="">全部联赛 All leagues</option>'+
+    leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
+  if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
+}
+let q="",leagueF="",minG=0,sortK="goals",sortDir=-1,acExact=null;
+
+function render(){
+  let rows=TABLE_DATA.filter(d=>d.goals>=minG)
+    .filter(d=>!leagueF||d.league===leagueF)
+    .filter(d=>{
+      if(acExact){  // 从下拉精确选择：按字段精确匹配，避免"葡萄牙"误含"葡萄牙体育"
+        if(acExact.type==="nat") return d.teamZh===acExact.value || d.teamEn===acExact.value;
+        if(acExact.type==="club") return cz(d.club)===acExact.value || d.club===acExact.value;
+        if(acExact.type==="player") return pzr(d)===acExact.value || d.player===acExact.value;
+      }
+      if(!q)return true;
+      const s=q.toLowerCase();
+      return [d.player,d.club,d.league,d.teamZh,d.teamEn,pzr(d),cz(d.club)].some(v=>v.toLowerCase().includes(s));
+    });
+  rows.sort((a,b)=>{
+    let r; if(sortK==="goals")r=a.goals-b.goals;
+    else r=String(a[sortK]).localeCompare(String(b[sortK]),"zh");
+    return r*sortDir || b.goals-a.goals || a.player.localeCompare(b.player);
+  });
+  tbody.innerHTML=rows.map(d=>`<tr>
+    <td><div class="pname">${pzr(d)}</div><div class="psub">${d.player}</div></td>
+    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div></td>
+    <td style="text-align:center;font-family:'Space Mono',monospace;color:#cfd6ea">${d.num||"—"}</td>
+    <td><span class="cmut">${d.posZh||"—"}</span><div class="psub">${d.pos||""}</div></td>
+    <td class="gv ${d.goals>=3?'g3':d.goals===2?'g2':''}">${d.goals}</td>
+    <td>${cz(d.club)}<div class="psub">${d.club}</div></td>
+    <td><div class="cmut">${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
+  const scorersN=TABLE_DATA.filter(d=>d.goals>=1).length, allN=TABLE_DATA.length;
+  rowcount.textContent=`${rows.length} 人 of ${scorersN} 名进球者 of ${allN} 名球员 · showing ${rows.length} of ${scorersN} scorers / ${allN} players`;
+}
+// ===== 搜索自动补全 Autocomplete =====
+let AC_INDEX=[], acSel=-1;
+function buildACIndex(){
+  const nat=new Map(), club=new Map(), pl=[];
+  TABLE_DATA.forEach(d=>{
+    if(d.teamZh && !nat.has(d.teamZh)) nat.set(d.teamZh,{label:d.teamZh,sub:d.teamEn,type:"国家队 Nation",term:d.teamZh,flag:fl(d.teamEn)});
+    const cn=cz(d.club);
+    if(d.club && !club.has(cn)) club.set(cn,{label:cn,sub:d.club,type:"俱乐部 Club",term:cn,flag:""});
+    pl.push({label:pzr(d),sub:d.player,type:"球员 Player",term:pzr(d),flag:fl(d.teamEn)});
+  });
+  AC_INDEX=[...nat.values(),...club.values(),...pl];
+}
+function renderAC(){
+  const box=document.getElementById("acbox");
+  const s=(q||"").trim().toLowerCase();
+  if(!s){ box.style.display="none"; box.innerHTML=""; acSel=-1; return; }
+  const seen=new Set();
+  const hits=AC_INDEX.filter(it=>{
+    const k=it.type+"|"+it.term; if(seen.has(k))return false;
+    const m=(it.label+" "+(it.sub||"")).toLowerCase().includes(s);
+    if(m)seen.add(k); return m;
+  });
+  // 排序：国家队/俱乐部优先于球员，再按 label 起始匹配优先
+  const order={"国家队 Nation":0,"俱乐部 Club":1,"球员 Player":2};
+  hits.sort((a,b)=>{
+    const sa=a.label.toLowerCase().startsWith(s)?0:1, sb=b.label.toLowerCase().startsWith(s)?0:1;
+    return sa-sb || order[a.type]-order[b.type] || a.label.localeCompare(b.label,"zh");
+  });
+  const top=hits.slice(0,10);
+  if(!top.length){ box.style.display="none"; box.innerHTML=""; acSel=-1; return; }
+  box.innerHTML=top.map((it,i)=>{
+    const tcode=it.type.startsWith("国家队")?"nat":it.type.startsWith("俱乐部")?"club":"player";
+    return `<div class="acitem${i===acSel?' sel':''}" data-term="${it.term.replace(/"/g,'&quot;')}" data-type="${tcode}">
+    ${it.flag?`<span class="acflag">${it.flag}</span>`:''}<span>${it.label}${it.sub&&it.sub!==it.label?` <span class="acsub">${it.sub}</span>`:''}</span>
+    <span class="tag">${it.type}</span></div>`;
+  }).join("");
+  box.style.display="block";
+}
+function pickAC(term,type){
+  acExact = type ? {type,value:term} : null;   // 精确字段筛选
+  q=""; const inp=document.getElementById("q"); inp.value=term;
+  document.getElementById("acbox").style.display="none"; acSel=-1;
+  render();
+}
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;acExact=null;acSel=-1;render();renderAC();});
+document.getElementById("q").addEventListener("keydown",e=>{
+  const box=document.getElementById("acbox"); if(box.style.display==="none")return;
+  const items=[...box.querySelectorAll(".acitem")];
+  if(e.key==="ArrowDown"){e.preventDefault();acSel=Math.min(acSel+1,items.length-1);}
+  else if(e.key==="ArrowUp"){e.preventDefault();acSel=Math.max(acSel-1,0);}
+  else if(e.key==="Enter"){if(acSel>=0&&items[acSel]){e.preventDefault();pickAC(items[acSel].dataset.term,items[acSel].dataset.type);}return;}
+  else if(e.key==="Escape"){box.style.display="none";acSel=-1;return;}
+  else return;
+  items.forEach((it,i)=>it.classList.toggle("sel",i===acSel));
+  if(items[acSel])items[acSel].scrollIntoView({block:"nearest"});
+});
+document.getElementById("acbox").addEventListener("mousedown",e=>{
+  const it=e.target.closest(".acitem"); if(it){e.preventDefault();pickAC(it.dataset.term,it.dataset.type);}
+});
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search")) document.getElementById("acbox").style.display="none";
+});
+sel.addEventListener("change",e=>{leagueF=e.target.value;render();});
+document.getElementById("minchips").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  minG=+b.dataset.min;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));render();
+});
+document.querySelectorAll(".tbl thead th").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(sortK===k)sortDir*=-1; else {sortK=k;sortDir=(k==="goals")?-1:1;}
+    document.querySelectorAll(".tbl thead th .ar").forEach(a=>a.remove());
+    const ar=document.createElement("span");ar.className="ar";ar.textContent=sortDir<0?" ▼":" ▲";
+    th.appendChild(ar);render();
+  });
+});
+
+function populateClubLeague(){
+  const csel=document.getElementById("clubLeagueSel"); const cur=csel.value;
+  csel.innerHTML='<option value="">全部联赛 All leagues</option>'+leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
+  if([...csel.options].some(o=>o.value===cur)) csel.value=cur;
+}
+document.getElementById("clubLeagueSel").addEventListener("change",renderCharts);
+["topLeagueSel","topClubSel","topNatSel"].forEach(id=>document.getElementById(id).addEventListener("change",renderCharts));
+function renderFooter(){
+  const d = lastUpdated || new Date();
+  const zh = d.toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"});
+  const en = d.toLocaleDateString("en-GB",{year:"numeric",month:"short",day:"numeric"});
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set("footDate",zh); set("footDateEn",en);
+  set("footPlayers",DATA.length); set("footPlayersEn",DATA.length);
+  set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
+  set("footMatches",matchesCount); set("footMatchesEn",matchesCount);
+  set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
+  set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot"));
+}
+function renderAll(){ recompute(); renderStats(); renderBoard(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); buildACIndex(); }
+
+// 读取自动生成的 data.json；失败则保留内置快照
+async function refresh(){
+  try{
+    const r=await fetch("data.json?_="+Date.now(),{cache:"no-store"});
+    if(!r.ok) return false;
+    const j=await r.json();
+    if(j && Array.isArray(j.scorers) && j.scorers.length){
+      DATA = j.scorers.map(x=>({
+        player:x.player, nameZh:x.nameZh||"", teamEn:x.nation,
+        teamZh:x.nationZh || NATIONZH[x.nation] || x.nation,
+        goals:x.goals, club:x.club||"—", league:x.league||"—"
+      }));
+      if(typeof j.matchesWithGoals==="number") matchesCount=j.matchesWithGoals;
+      if(Array.isArray(j.roster) && j.roster.length){
+        TABLE_DATA = j.roster.map(x=>({player:x.player,nameZh:x.nameZh||"",teamEn:x.nation,goals:x.goals,club:x.club,league:x.league,teamZh:x.nationZh,num:x.num,pos:x.pos,posZh:x.posZh}));
+      } else { TABLE_DATA = DATA; }
+      renderAll(); setUpdated(j.updated, true);
+      return true;
+    }
+  }catch(e){/* 离线或无 data.json：用内置快照 */}
+  return false;
+}
+
+// 首屏先用内置快照即时渲染，再尝试拉取最新
+renderAll(); setUpdated(null,false);
+refresh();
+// 标签页重新可见时再拉一次（便于长期开着的页面拿到当天更新）
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden) refresh(); });
+if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(()=>{ try{renderCharts();}catch(e){} }); }
+let _rsz; window.addEventListener("resize",()=>{ clearTimeout(_rsz); _rsz=setTimeout(()=>{ try{renderCharts();}catch(e){} },250); });
+
+</script>
+</body>
+</html>
