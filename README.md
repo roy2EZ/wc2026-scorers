@@ -162,8 +162,6 @@ GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  
 
 ## File structure
 
-**Active — used by the live pipeline:**
-
 | File | Description |
 |---|---|
 | `index.html` | The site itself (front end + built-in snapshot + data.json loading) |
@@ -174,20 +172,8 @@ GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  
 | `.github/workflows/` | GitHub Actions schedule config (the update workflow) |
 | `screenshots/` | Images used in this README |
 
-**Legacy — kept for reference, no longer read by the pipeline (as of v1.4.0):**
-
-| File | Was used for |
-|---|---|
-| `roster.json` | Earlier all-players list, now superseded by `players.json` |
-| `names_zh.json` | Earlier standalone Chinese-name map, now merged into `players.json` (`nameZh`) |
-| `club_overrides.json` | Hand-verified club/league/nation corrections, now baked into `players.json` |
-| `squad_db.json` | Squad DB parsed from FIFA lists, used to build `players.json` |
-
-> These four were how older builds resolved clubs and names at runtime. From v1.4.0 everything is consolidated into `players.json` (the single source of truth). They're safe to keep (handy if you ever rebuild `players.json`) or to delete — the site and the daily job don't load them.
 
 ## 文件结构
-
-**在用——线上管线依赖：**
 
 | 文件 | 说明 |
 |---|---|
@@ -199,16 +185,6 @@ GitHub Actions (定时)  ->  update_data.py 抓取进球  ->  写入 data.json  
 | `.github/workflows/` | GitHub Actions 定时任务配置（更新工作流） |
 | `screenshots/` | 本 README 用到的图片 |
 
-**历史保留——仓库中仍在，但管线已不再读取（自 v1.4.0 起）：**
-
-| 文件 | 曾经的用途 |
-|---|---|
-| `roster.json` | 早期的全员名单，已被 `players.json` 取代 |
-| `names_zh.json` | 早期独立的中文名映射，已并入 `players.json`（`nameZh` 字段） |
-| `club_overrides.json` | 人工核对的俱乐部/联赛/国家校正，已写入 `players.json` |
-| `squad_db.json` | 由 FIFA 名单解析的全员库，用于构建 `players.json` |
-
-> 这四个文件是旧版在运行时解析俱乐部和译名的方式。自 v1.4.0 起，全部合并进 `players.json`（单一数据源）。它们留着也行（将来若要重建 `players.json` 会用到）、删掉也行——网站和每日任务都不会读取它们。
 
 ---
 
