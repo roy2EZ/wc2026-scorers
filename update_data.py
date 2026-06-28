@@ -242,10 +242,10 @@ def main():
                                      ("goals2",t2,t1,f"{ft[1]}-{ft[0]}")):
             pc={}
             for g in mt.get(side,[]):
-                if g.get("owngoal") or not g.get("name"): continue
-                mn=parse_min(g.get("minute"))
                 ph=phase_of(g.get("minute"))
-                if ph: buckets[ph]+=1
+                if ph: buckets[ph]+=1          # 时间分布：含乌龙球（乌龙也是进球）
+                if g.get("owngoal") or not g.get("name"): continue   # 以下仅限有射手的进球
+                mn=parse_min(g.get("minute"))
                 pid=resolve(g["name"],team); p=by_id.get(pid) if pid else None
                 en=p["name"] if p else g["name"]
                 zh=(p.get("nameZh") if p else "") or g["name"]

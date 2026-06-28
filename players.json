@@ -68,7 +68,7 @@
  {
   "id": "ALG-7",
   "name": "Riyad Mahrez",
-  "nameZh": "里亚德·马赫雷斯",
+  "nameZh": "马赫雷斯",
   "num": 7,
   "pos": "FW",
   "posZh": "前锋",
@@ -398,7 +398,7 @@
  {
   "id": "ARG-11",
   "name": "Giovani Lo Celso",
-  "nameZh": "乔瓦尼·洛塞尔索",
+  "nameZh": "洛塞尔索",
   "num": 11,
   "pos": "MF",
   "posZh": "中场",
@@ -948,7 +948,7 @@
  {
   "id": "AUT-9",
   "name": "Marcel Sabitzer",
-  "nameZh": "马塞尔·萨比策",
+  "nameZh": "萨比策",
   "num": 9,
   "pos": "MF",
   "posZh": "中场",
@@ -1003,7 +1003,7 @@
  {
   "id": "AUT-14",
   "name": "Sasa Kalajdzic",
-  "nameZh": "萨萨·卡拉吉奇",
+  "nameZh": "卡拉吉奇",
   "num": 14,
   "pos": "FW",
   "posZh": "前锋",
@@ -1234,7 +1234,7 @@
  {
   "id": "BEL-9",
   "name": "Romelu Lukaku",
-  "nameZh": "罗梅卢·卢卡库",
+  "nameZh": "卢卡库",
   "num": 9,
   "pos": "FW",
   "posZh": "前锋",
@@ -1245,7 +1245,7 @@
  {
   "id": "BEL-10",
   "name": "Leandro Trossard",
-  "nameZh": "莱安德罗·特罗萨德",
+  "nameZh": "特罗萨德",
   "num": 10,
   "pos": "FW",
   "posZh": "前锋",
@@ -1377,7 +1377,7 @@
  {
   "id": "BEL-22",
   "name": "Alexis Saelemaekers",
-  "nameZh": "亚历克西斯·赛勒梅克斯",
+  "nameZh": "赛勒梅克斯",
   "num": 22,
   "pos": "MF",
   "posZh": "中场",
@@ -3566,7 +3566,7 @@
  {
   "id": "CRO-13",
   "name": "Nikola Vlašić",
-  "nameZh": "尼古拉·弗拉西奇",
+  "nameZh": "弗拉西奇",
   "num": 13,
   "pos": "MF",
   "posZh": "中场",
@@ -4644,7 +4644,7 @@
  {
   "id": "EGY-7",
   "name": "Trezeguet",
-  "nameZh": "马哈茂德·特雷泽盖",
+  "nameZh": "特雷泽盖",
   "num": 7,
   "pos": "FW",
   "posZh": "前锋",
@@ -4677,7 +4677,7 @@
  {
   "id": "EGY-10",
   "name": "Mohamed Salah",
-  "nameZh": "穆罕默德·萨拉赫",
+  "nameZh": "萨拉赫",
   "num": 10,
   "pos": "FW",
   "posZh": "前锋",
@@ -5359,7 +5359,7 @@
  {
   "id": "FRA-20",
   "name": "Désiré Doué",
-  "nameZh": "德西尔·杜埃",
+  "nameZh": "杜埃",
   "num": 20,
   "pos": "FW",
   "posZh": "前锋",
@@ -5634,7 +5634,7 @@
  {
   "id": "GER-19",
   "name": "Leroy Sane",
-  "nameZh": "勒罗伊·萨内",
+  "nameZh": "萨内",
   "num": 19,
   "pos": "MF",
   "posZh": "中场",
@@ -5711,7 +5711,7 @@
  {
   "id": "GER-26",
   "name": "Denis Undav",
-  "nameZh": "德尼兹·昂达夫",
+  "nameZh": "昂达夫",
   "num": 26,
   "pos": "FW",
   "posZh": "前锋",
@@ -9880,7 +9880,7 @@
  {
   "id": "POR-15",
   "name": "Joao Neves",
-  "nameZh": "若奥·内维斯",
+  "nameZh": "内维斯",
   "num": 15,
   "pos": "MF",
   "posZh": "中场",
@@ -9902,7 +9902,7 @@
  {
   "id": "POR-17",
   "name": "Rafael Leao",
-  "nameZh": "拉斐尔·拉法·莱昂",
+  "nameZh": "莱昂",
   "num": 17,
   "pos": "FW",
   "posZh": "前锋",
@@ -11904,7 +11904,7 @@
  {
   "id": "SWE-17",
   "name": "Viktor Gyokeres",
-  "nameZh": "维克多·吉克雷斯",
+  "nameZh": "吉克雷斯",
   "num": 17,
   "pos": "FW",
   "posZh": "前锋",
@@ -13224,7 +13224,7 @@
  {
   "id": "USA-7",
   "name": "Gio Reyna",
-  "nameZh": "乔瓦尼·雷纳",
+  "nameZh": "雷纳",
   "num": 7,
   "pos": "MF",
   "posZh": "中场",
@@ -13587,7 +13587,7 @@
  {
   "id": "UZB-14",
   "name": "Eldor Shomurodov",
-  "nameZh": "埃尔多·肖穆罗多夫",
+  "nameZh": "肖穆罗多夫",
   "num": 14,
   "pos": "FW",
   "posZh": "前锋",

@@ -43,7 +43,10 @@
   .lk:hover{color:#fff;border-color:#fff}
   .repo{margin-top:10px;font-size:13.5px;color:#e9edf6;max-width:680px;font-weight:600}
   .sub-en{margin-top:10px;font-size:12.5px;color:#8a93ab;max-width:680px;line-height:1.55}
-  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:10px}
+  .sub-en .lk{color:#aab2c8;border-bottom-color:rgba(170,178,200,.4);font-weight:500}
+  .sub-en .lk:hover{color:#fff;border-color:#fff}
+  .updated{font-family:'Space Mono',monospace;font-size:12px;color:#B9C1D8;margin-top:14px;line-height:1.5}
+  .updated .upen{display:block;color:#dce2f0;font-size:13.5px;font-weight:600;margin-top:3px}
   .updated .upday{font-size:19px;font-weight:700;color:#EAEEF7;letter-spacing:.01em}
   .updated .upday-en{font-size:13.5px;font-weight:600;color:#9aa3bd;letter-spacing:.01em}
   .updated .uptime{color:#8a93ab}
@@ -51,11 +54,24 @@
   .scoreboard{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
   .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);
     border-radius:14px;padding:18px 16px;position:relative;overflow:hidden;min-width:0}
-  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad)}
+  .scoreboard .stat:nth-child(1)::before{background:linear-gradient(180deg,#FFD66E,#FF9E2C)} /* 总进球 金 */
+  .scoreboard .stat:nth-child(2)::before{background:linear-gradient(180deg,#FF5C9A,#FF2D78)} /* 进球者 粉 */
+  .scoreboard .stat:nth-child(3)::before{background:linear-gradient(180deg,#FF8A4C,#FF5B2E)} /* 联赛 橘 */
+  .scoreboard .stat:nth-child(4)::before{background:linear-gradient(180deg,#3AD2F0,#1AA6D8)} /* 俱乐部 青 */
+  .scoreboard .stat:nth-child(5)::before{background:linear-gradient(180deg,#B68CFF,#8B5CF6)} /* 场次 紫 */
+  .scoreboard .stat:nth-child(6)::before{background:linear-gradient(180deg,#37E0A0,#19B4D8)} /* 赛程 绿 */
   .stat .num{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;line-height:1}
+  .stat .lab .en{display:block;font-size:12.5px;color:#d3d9e8;font-weight:700;letter-spacing:.04em}
+  .stat .lab .zh{display:block;font-size:11px;color:var(--mut);font-weight:500;margin-top:1px}
+  .goalstat .gline{display:flex;align-items:center;gap:10px}
+  .goalstat .gnum{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(42px,8vw,60px);line-height:.9;letter-spacing:-.02em}
+  .goalstat .gwords{display:flex;flex-direction:column;line-height:1.18}
+  .goalstat .gwords .en{font-size:13px;color:#d3d9e8;font-weight:700;letter-spacing:.04em}
+  .goalstat .gwords .zh{font-size:12px;color:var(--mut);font-weight:500}
   .stat .lab{font-size:12px;letter-spacing:.06em;color:var(--mut);margin-top:8px}
   .stat.sched .num{font-size:clamp(20px,3vw,30px);letter-spacing:-.02em;white-space:normal;line-height:1.05}
-  .stat.sched .schzh{display:block;color:#dfe4f0;font-weight:700;font-size:12.5px;margin-bottom:2px;letter-spacing:.02em}
+  .stat.sched .schzh{color:#7ef0c0;font-weight:700;letter-spacing:.02em}
   .stat.sched::before{background:linear-gradient(180deg,#37e0a0,#19b4d8)}
 
   section{padding:38px 0;background:var(--bg)}
@@ -66,7 +82,9 @@
   .sub .en{display:block;color:#9aa3bd;font-size:13.5px;margin-top:3px}
   .note{font-size:13px;color:var(--mut)}
 
-  .board{display:grid;grid-template-columns:1fr;gap:10px;max-width:760px}
+  .board{display:flex;flex-direction:column;gap:12px;max-width:1040px}
+  .board-group{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:840px){ .board-group{grid-template-columns:1fr 1fr} }
   .row{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
     border-radius:12px;padding:15px 16px;transition:transform .15s,border-color .15s}
   .row:hover{transform:translateY(-2px);filter:brightness(1.08)}
@@ -74,7 +92,8 @@
   .rank{font-family:'Space Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);width:22px;text-align:center}
   .rank.medal{font-size:20px;width:26px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
   .flag{font-size:21px;line-height:1}
-  .who{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px}
+  .who{flex:1;min-width:0;display:flex;justify-content:flex-start;padding:0 2px}
+  .who .who-in{min-width:0;max-width:100%;text-align:left}
   .who>div{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .who .nm{font-weight:800;font-size:clamp(14px,3.8vw,16.5px);line-height:1.25;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .who .nm-en{font-size:11.5px;color:#9aa3bd;font-weight:500;line-height:1.2;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -100,7 +119,8 @@
   .boardlf #boardLeagueSel{font-size:12.5px;padding:7px 10px;max-width:200px}
 
   /* 帽子戏法 */
-  .mggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .mggrid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:720px){ .mggrid{grid-template-columns:1fr 1fr} }
   .mgcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 15px;
     display:flex;align-items:center;gap:14px;min-width:0;position:relative;overflow:hidden}
   .mgcard.hat{border-color:rgba(255,176,46,.5);box-shadow:0 0 0 1px rgba(255,176,46,.18),0 6px 18px -12px rgba(255,176,46,.5)}
@@ -111,19 +131,19 @@
   .mgcard .mgnum .u{font-size:9.5px;color:#9aa3bd;font-weight:600;line-height:1.15;letter-spacing:.02em}
   .mgcard .mgpips{display:flex;flex-wrap:wrap;gap:2px;justify-content:center;max-width:78px}
   .mgcard .mgbody{flex:1;min-width:0}
-  .mgcard .mgnm{font-weight:800;font-size:clamp(14.5px,3.6vw,17px);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .mgcard .mgmatch{font-size:clamp(11.5px,2.6vw,13.5px);color:#dfe4f0;font-weight:600;margin-top:5px;line-height:1.5}
+  .mgcard .mgnm{font-weight:800;font-size:clamp(16.5px,4.2vw,20px);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mgcard .mgmatch{font-size:clamp(11.5px,2.5vw,13.5px);color:#dfe4f0;font-weight:600;margin-top:5px;line-height:1.5}
   .mgcard .mgmatch .mgsc{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(14px,3vw,16px);color:var(--amber);margin:0 5px}
-  .mgcard .mgmeta{font-size:10px;color:#8a93ab;margin-top:5px}
+  .mgcard .mgmeta{font-size:10.5px;color:#8a93ab;margin-top:6px}
 
   /* 进球时间分布 */
   .timewrap{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;align-items:stretch}
   .timebars{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;min-width:0}
-  .tbrow{display:flex;align-items:center;gap:10px;margin-bottom:9px}
-  .tbrow .tblab{flex:none;width:124px;text-align:right;line-height:1.2}
-  .tbrow .tblab b{display:block;font-size:12.5px;color:#eef1f8;font-weight:700}
-  .tbrow .tblab i{display:block;font-style:normal;font-family:'Space Mono',monospace;font-size:11px;color:#b9c2d8;font-weight:600;white-space:nowrap}
-  .tbrow .tbtrack{flex:1;background:rgba(39,48,75,.45);border-radius:6px;height:24px;min-width:0;overflow:hidden}
+  .tbrow{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+  .tbrow .tblab{flex:none;width:136px;text-align:right;line-height:1.25}
+  .tbrow .tblab b{display:block;font-size:14px;color:#eef1f8;font-weight:700}
+  .tbrow .tblab i{display:block;font-style:normal;font-family:'Space Mono',monospace;font-size:11.5px;color:#b9c2d8;font-weight:600;white-space:nowrap}
+  .tbrow .tbtrack{flex:1;background:rgba(39,48,75,.45);border-radius:7px;height:30px;min-width:0;overflow:hidden}
   .tbrow .tbfill{display:block;height:100%;border-radius:6px;background:var(--grad);min-width:2px;transition:width .7s cubic-bezier(.22,1,.36,1)}
   .tbrow .tbval{font-family:'Space Mono',monospace;font-size:11.5px;color:#cfd6ea;width:24px;flex:none}
   .extremes{display:flex;flex-direction:column;gap:12px}
@@ -135,7 +155,8 @@
   .excard .exsub{font-size:12px;color:#9aa3bd;margin-top:2px}
 
   /* 进球大战 */
-  .fests{display:grid;grid-template-columns:1fr;gap:8px;max-width:760px}
+  .fests{display:flex;flex-direction:column;gap:12px}
+  .fest-group{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:10px}
   .festrow{position:relative;overflow:hidden;display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);
     border-radius:12px;padding:11px 14px;min-width:0;transition:transform .15s,border-color .15s}
   .festrow:hover{transform:translateY(-2px);filter:brightness(1.08)}
@@ -178,9 +199,9 @@
   .ylabels .yl .fl{font-size:14px;flex:none}
   .ylabels .yl .ymed{font-size:14px;flex:none;line-height:1}
   .ylabels .yl .tx{display:flex;flex-direction:column;line-height:1.05;min-width:0}
-  .ylabels .yl .zh{font-size:11.5px;color:#E6EAF4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ylabels .yl .ens{font-size:9.5px;color:#8A93AB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  @media(max-width:620px){ .ylabels .yl .zh{font-size:11px} .ylabels .yl .ens{font-size:9px} }
+  .ylabels .yl .zh{font-size:15px;color:#E6EAF4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ylabels .yl .ens{font-size:12px;color:#8A93AB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(max-width:620px){ .ylabels .yl .zh{font-size:13px} .ylabels .yl .ens{font-size:10.5px} }
   @media(max-width:560px){ .row .pip{width:14px;height:14px;font-size:10px} .row .pips{max-width:74px;gap:2px} .row{gap:8px} .team{width:50px} }  /* 窄屏缩小足球符号而非隐藏，保留点球标识 */
 
   .subnote{margin:-8px 0 18px;font-size:13px;line-height:1.55;color:#aab2cb;max-width:760px}
@@ -259,12 +280,12 @@
     <p class="updated" id="updated"></p>
 
     <div class="scoreboard">
-      <div class="stat sched"><div class="num" id="s-stage">—</div><div class="lab" id="s-sched">赛程 Schedule</div></div>
-      <div class="stat"><div class="num" id="s-goals">0</div><div class="lab">总进球 Goals</div></div>
-      <div class="stat"><div class="num" id="s-players">0</div><div class="lab">进球球员 Scorers</div></div>
-      <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab">涉及联赛 Leagues</div></div>
-      <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab">涉及俱乐部 Clubs</div></div>
-      <div class="stat"><div class="num" id="s-matches">0</div><div class="lab">进球场次 Matches</div></div>
+      <div class="stat goalstat"><div class="num" id="s-goals">0</div><div class="lab"><span class="en">Total</span><span class="zh">总进球数</span></div></div>
+      <div class="stat"><div class="num" id="s-players">0</div><div class="lab"><span class="en">Scorers</span><span class="zh">进球球员</span></div></div>
+      <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab"><span class="en">Leagues</span><span class="zh">涉及联赛</span></div></div>
+      <div class="stat"><div class="num" id="s-clubs">0</div><div class="lab"><span class="en">Clubs</span><span class="zh">涉及俱乐部</span></div></div>
+      <div class="stat"><div class="num" id="s-matches">0</div><div class="lab"><span class="en">Matches</span><span class="zh">进球场次</span></div></div>
+      <div class="stat sched"><div class="num" id="s-stage">—</div><div class="lab" id="s-sched"><span class="en">games played</span><span class="zh">比赛进程</span></div></div>
     </div>
   </div>
 </header>
@@ -296,7 +317,7 @@
 
 <section style="padding-top:6px">
   <div class="wrap">
-    <div class="shead"><h2>单场<b>多球</b><span class="enh">Multi-goal Games</span></h2></div>
+    <div class="shead"><h2>单场<b>多球</b><span class="enh">Multi-goal Players per Game</span></h2></div>
     <div class="chips mgtabbar" id="mgtabs">
       <button data-mg="2">梅开二度</button>
       <button class="on" data-mg="3">帽子戏法</button>
@@ -361,7 +382,7 @@
 <section style="padding-top:6px">
   <div class="wrap">
     <div class="shead"><h2>进球<b>时间分布</b><span class="enh">Goal Timing</span></h2></div>
-    <p class="subnote">全部进球按发生时段分布（不含乌龙球），并标出全届最早与最晚的进球。<span style="display:block;margin-top:3px;color:#8a93ab">When goals are scored, by 15-minute window — plus the earliest and latest goal of the tournament.</span></p>
+    <p class="subnote">全部进球按比赛阶段分布（含乌龙球），并标出全届最早与最晚的进球。<span style="display:block;margin-top:3px;color:#8a93ab">All goals by match phase (own goals included), plus the earliest and latest goal of the tournament.</span></p>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
       <div class="extremes">
@@ -385,7 +406,6 @@
         </div>
       </div>
     </div>
-    <p class="subnote">单场总进球数达标的比赛，按下方档位筛选（默认 5+）。<span style="display:block;margin-top:3px;color:#8a93ab">Matches by total goals — filter by threshold below (default 5+).</span></p>
     <div class="fests" id="festList"></div>
   </div>
 </section>
@@ -435,7 +455,7 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.6.0</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 451 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.6.1</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 451 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -554,7 +574,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.6.0", BUILD_TIME="2026-06-28 02:49";
+const APP_VERSION="v1.6.1", BUILD_TIME="2026-06-28 11:40";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -629,13 +649,12 @@ function renderStats(){
 function renderSchedule(){
   const stageEl=document.getElementById("s-stage"), schEl=document.getElementById("s-sched");
   if(!stageEl||!schEl) return;
-  const d=lastUpdated||new Date();
-  const mmdd=String(d.getMonth()+1).padStart(2,"0")+"/"+String(d.getDate()).padStart(2,"0");
-  stageEl.textContent=mmdd;
   if(SCHEDULE){
-    schEl.innerHTML=`<span class="schzh">${SCHEDULE.stageEn||""}</span>已赛 ${SCHEDULE.played}/${SCHEDULE.total} Played`;
+    stageEl.textContent=`${SCHEDULE.played}/${SCHEDULE.total}`;
+    schEl.innerHTML=`<span class="en">games played · <span class="schzh">${SCHEDULE.stageEn||""} Now</span></span><span class="zh">比赛进程</span>`;
   }else{
-    schEl.textContent="赛程 Schedule";
+    stageEl.textContent="—";
+    schEl.innerHTML=`<span class="en">games played</span><span class="zh">比赛进程</span>`;
   }
 }
 let lastUpdated=null, dataUpdatedRaw=null, dataVersion=null;
@@ -645,11 +664,13 @@ let FUN=null;
 function setUpdated(ts,live){
   dataUpdatedRaw = ts || null;
   lastUpdated = ts?new Date(ts):new Date();
-  const tag = live ? " · 自动同步 Live" : " · 内置快照 Snapshot";
-  const dayZh = (lastUpdated.getMonth()+1)+"月"+lastUpdated.getDate()+"日";
-  const timeStr = lastUpdated.toLocaleString("zh-CN",{hour:"2-digit",minute:"2-digit"});
+  const tz="America/Los_Angeles";
+  const moDay=new Intl.DateTimeFormat("zh-CN",{timeZone:tz,month:"long",day:"numeric"}).format(lastUpdated);
+  const dEn=new Intl.DateTimeFormat("en-US",{timeZone:tz,month:"2-digit",day:"2-digit",year:"numeric"}).format(lastUpdated);
+  const t12=new Intl.DateTimeFormat("en-US",{timeZone:tz,hour:"2-digit",minute:"2-digit",hour12:true}).format(lastUpdated).toLowerCase();
   document.getElementById("updated").innerHTML=
-    "数据更新于 Updated "+dayZh+" <span class=\"uptime\">"+timeStr+tag+"</span>";
+    "数据更新于 "+moDay+" 美西时间 "+t12+
+    "<span class=\"upen\">Data updated "+dEn+" "+t12+" PST</span>";
   if(typeof renderFooter==="function") renderFooter();
 }
 // 按进球数生成颜色：从青(低)→品红→琥珀(高)的连续色相，最高进球数决定色阶范围
@@ -678,7 +699,7 @@ function renderBoard(){
   const maxG=pool.reduce((m,d)=>Math.max(m,d.goals),0);
   // 奖牌按进球档位发放（并列同档同牌，范围随当前筛选）：最高档=金、次高档=银、第三档=铜
   const tiers=[...new Set(pool.filter(d=>d.goals>0).map(d=>d.goals))].sort((a,b)=>b-a);
-  el.innerHTML=rows.map((d,i)=>{
+  const rowHTML=rows.map((d,i)=>{
     const st=tierStyle(d.goals,maxG);
     const mi=tiers.indexOf(d.goals);
     const rankCell = (mi>=0 && mi<3)
@@ -692,8 +713,12 @@ function renderBoard(){
     return `<div class="row${mi===0?' top3':''}" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
        ${rankCell}
        ${team}
-       <span class="who"><div class="nm">${pzr(d)}</div><div class="nm-en">${d.player}</div><div class="cl">${lfl(d.league)?lfl(d.league)+' ':''}${czr(d)}</div><div class="cl-en">${d.club}</div></span>
-       <span class="score"><span class="pips">${pips}</span><b class="balls">${d.goals}</b></span></div>`;}).join("");
+       <span class="who"><div class="who-in"><div class="nm">${pzr(d)}</div><div class="nm-en">${d.player}</div><div class="cl">${lfl(d.league)?lfl(d.league)+' ':''}${czr(d)}</div><div class="cl-en">${d.club}</div></div></span>
+       <span class="score"><span class="pips">${pips}</span><b class="balls">${d.goals}</b></span></div>`;});
+  // 按进球数分组：同进球数同一行（最多2列），不同进球数另起
+  const groups=[]; let cur=null;
+  rows.forEach((d,i)=>{ if(!cur||cur.g!==d.goals){cur={g:d.goals,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
+  el.innerHTML=groups.map(grp=>`<div class="board-group">${grp.items.join("")}</div>`).join("");
 }
 function fmtMD(s){const p=(s||"").split("-");return p.length===3?`${+p[1]}月${+p[2]}日`:s;}
 const MON_EN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -721,11 +746,11 @@ function renderMulti(){
     for(let k=0;k<open;k++) pips+=`<i class="pip" title="运动战进球 Open play">⚽</i>`;
     for(let k=0;k<pens;k++) pips+=`<i class="pip pen" title="点球 Penalty">⚽</i>`;
     const st=tierStyle(x.n,maxG);
-    return `<div class="mgcard" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
+    return `<div class="mgcard" style="border:2px solid ${st.border};background:${st.bg};border-left:6px solid ${st.bar}">
       <div class="mgnum"><div class="mgnt"><span class="n">${x.n}</span><span class="u">goals<br>/ game</span></div><div class="mgpips">${pips}</div></div>
       <div class="mgbody">
         <div class="mgnm">${x.nameZh||x.player} <span class="ensm">${x.player}</span></div>
-        <div class="mgmatch">${fl(x.nation)} ${x.nationZh} <span class="ensm">${x.nation}</span> <b class="mgsc">${x.score}</b> ${x.oppoZh} <span class="ensm">${x.oppo}</span> ${fl(x.oppo)}</div>
+        <div class="mgmatch">${fl(x.nation)} ${x.nationZh} <span class="ensm">${x.nation}</span> <b class="mgsc">${(x.score||"").replace("-"," : ")}</b> ${x.oppoZh} <span class="ensm">${x.oppo}</span> ${fl(x.oppo)}</div>
         <div class="mgmeta">📅 ${fmtMDen(x.date)} · 📍 ${x.ground||"—"}</div>
       </div></div>`;}).join("");
 }
@@ -765,7 +790,7 @@ function renderFests(){
   const bm=((FUN&&FUN.bigMatches)||[]).filter(x=>x.total>=festMin);
   if(!bm.length){ el.innerHTML='<div class="note" style="padding:8px">该档位暂无比赛 · No matches at '+festMin+'+ goals</div>'; return; }
   const maxT=Math.max(7,...bm.map(x=>x.total)), lo=4;
-  el.innerHTML=bm.map(x=>{
+  const rowHTML=bm.map(x=>{
     const t=Math.min(1,Math.max(0,(x.total-lo)/(maxT-lo))), h=Math.round(258-t*238);
     const bg=`linear-gradient(90deg, hsla(${h},80%,50%,.60) 0%, hsla(${h},74%,44%,.16) 100%)`, bar=`hsl(${h},90%,62%)`, bd=`hsla(${h},88%,60%,.55)`;
     return `<div class="festrow" style="border-color:${bd};background:${bg};border-left:5px solid ${bar}">
@@ -775,7 +800,11 @@ function renderFests(){
        <span class="fmeta">📅 ${fmtMDen(x.date)}</span>
        <span class="fmeta">📍 ${x.ground||"—"}</span>
        ${x.num?`<span class="fmeta">🎫 Match ${x.num}</span>`:""}
-     </div></div>`;}).join("");
+     </div></div>`;});
+  // 按总进球数分组：同总数同一行（多列），不同总数另起
+  const groups=[]; let cur=null;
+  bm.forEach((x,i)=>{ if(!cur||cur.g!==x.total){cur={g:x.total,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
+  el.innerHTML=groups.map(grp=>`<div class="fest-group">${grp.items.join("")}</div>`).join("");
 }
 (function(){const t=document.getElementById("festchips");
   t&&t.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
@@ -804,7 +833,7 @@ const valueLabel={
     const ctx=chart.ctx, meta=chart.getDatasetMeta(0);
     const right=chart.chartArea?chart.chartArea.right:chart.width;
     ctx.save();
-    ctx.font="700 "+(window.innerWidth<620?11:12)+"px 'Space Mono', monospace";
+    ctx.font="700 "+(window.innerWidth<620?12:14)+"px 'Space Mono', monospace";
     ctx.textBaseline="middle";
     meta.data.forEach((bar,i)=>{
       const v=chart.data.datasets[0].data[i];
@@ -819,16 +848,16 @@ const valueLabel={
     ctx.restore();
   }
 };
-function barCfg(entries,metric,onClick){
+function barCfg(entries,metric,onClick,leftPad){
   return {type:"bar",
     plugins:[valueLabel],
     data:{labels:entries.map(e=>e[0]),
       datasets:[{data:entries.map(e=>e[1][metric]),
-        backgroundColor:c=>gradFor(c),borderRadius:6,maxBarThickness:26,categoryPercentage:.66,barPercentage:.9}]},
+        backgroundColor:c=>gradFor(c),borderRadius:6,maxBarThickness:34,categoryPercentage:.7,barPercentage:.9}]},
     options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
       onClick:onClick||null,
       onResize:(ch)=>{ if(ch.$ov) drawYLabels(ch, ch.$hl, ch.$ov); },
-      layout:{padding:{right:(window.innerWidth<620?34:28),left:gutter()}},
+      layout:{padding:{right:(window.innerWidth<620?26:22),left:(leftPad||gutter())}},
       animation:reduce?false:{duration:800,easing:"easeOutQuart"},
       plugins:{legend:{display:false},
         tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:10,
@@ -850,16 +879,23 @@ function populateBoardLeague(){
   if([...bls.options].some(o=>o.value===cur)) bls.value=cur; else { bls.value=""; boardLeague=""; }
 }
 bls&&bls.addEventListener("change",()=>{ boardLeague=bls.value; renderBoard(); });
-function heightFor(n){return Math.max(240,n*40+54);}
+function heightFor(n){return Math.max(260,n*50+56);}
 // 左侧标签留白：按屏宽分多档平滑收窄，窄屏让出更多柱身空间
 function gutter(){const w=window.innerWidth; return w<360?94 : w<440?106 : w<620?116 : 134;}
+// 按当前图表最长中文名动态算留白（让长名尽量显示全），上限内
+function gutterFor(rows){
+  const maxCh=rows.reduce((m,r)=>Math.max(m,(r.zh||"").length),0);
+  const need=Math.round(maxCh*15.5)+62;            // 中文字宽 + 旗/牌/间距余量
+  const cap=window.innerWidth<620?168:240;
+  return Math.min(cap,Math.max(gutter(),need));
+}
 function lblW(){return gutter();}
 function drawYLabels(chart,htmlLabels,overlayId){
   chart.$hl=htmlLabels; chart.$ov=overlayId;   // 存下来供 onResize 即时重定位
   const ov=document.getElementById(overlayId); if(!ov) return;
   ov.innerHTML="";
   const meta=chart.getDatasetMeta(0); if(!meta||!meta.data) return;
-  const w=lblW()-10;
+  const w=(chart.$lp||lblW())-12;
   meta.data.forEach((bar,i)=>{
     const d=document.createElement("div");
     d.className="yl"; d.style.top=bar.y+"px"; d.style.width=w+"px";
@@ -903,21 +939,24 @@ function renderCharts(){
   const mob = window.innerWidth < 620;
   const med=i=>i<3?`<span class="ymed">${MEDALS[i]}</span>`:"";
   const Lrows=L.map((e,i)=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
-    return {plain:zh+(en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
-  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),metric,leagueClick));
-  drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
+    return {zh, plain:zh+(en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  const lpL=gutterFor(Lrows);
+  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),metric,leagueClick,lpL));
+  leagueCh.$lp=lpL; drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
   const Crows=C.map((e,i)=>{const zh=clubZhByEn[e[0]]||cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
-    return {plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
-  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),metric));
-  drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  const lpC=gutterFor(Crows);
+  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),metric,null,lpC));
+  clubCh.$lp=lpC; drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
   const N=topEntries(byNation,metric,capV("topNatSel",Object.keys(byNation).length));
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
   document.getElementById("natTitle").textContent="按国家队 By Nation · "+mword;
   natCh&&natCh.destroy();
   const Nrows=N.map((e,i)=>{const zh=e[1].zh||e[0],en=e[0],f=fl(e[0]);
-    return {plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
-  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric));
-  drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  const lpN=gutterFor(Nrows);
+  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric,null,lpN));
+  natCh.$lp=lpN; drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
 }
 document.getElementById("metric").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;

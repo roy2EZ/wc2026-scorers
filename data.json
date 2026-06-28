@@ -1,6 +1,6 @@
 {
- "version": "v1.6.0",
- "updated": "2026-06-28T17:16:48+00:00",
+ "version": "v1.6.1",
+ "updated": "2026-06-28T11:42:07-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 143,
  "totalGoals": 203,
@@ -176,7 +176,7 @@
     "n": 2,
     "pens": 0,
     "player": "Denis Undav",
-    "nameZh": "德尼兹·昂达夫",
+    "nameZh": "昂达夫",
     "nation": "Germany",
     "nationZh": "德国",
     "oppo": "Ivory Coast",
@@ -332,7 +332,7 @@
     "n": 2,
     "pens": 0,
     "player": "Leandro Trossard",
-    "nameZh": "莱安德罗·特罗萨德",
+    "nameZh": "特罗萨德",
     "nation": "Belgium",
     "nationZh": "比利时",
     "oppo": "New Zealand",
@@ -358,7 +358,7 @@
     "n": 2,
     "pens": 0,
     "player": "Riyad Mahrez",
-    "nameZh": "里亚德·马赫雷斯",
+    "nameZh": "马赫雷斯",
     "nation": "Algeria",
     "nationZh": "阿尔及利亚",
     "oppo": "Austria",
@@ -382,12 +382,12 @@
    }
   ],
   "timeBuckets": {
-   "1-5": 8,
-   "6-30": 45,
-   "31-45": 37,
-   "46-75": 61,
-   "76-90": 32,
-   "90+": 20,
+   "1-5": 9,
+   "6-30": 48,
+   "31-45": 38,
+   "46-75": 65,
+   "76-90": 33,
+   "90+": 22,
    "ET": 0
   },
   "earliest": {
@@ -835,7 +835,7 @@
   },
   {
    "player": "Denis Undav",
-   "nameZh": "德尼兹·昂达夫",
+   "nameZh": "昂达夫",
    "num": 26,
    "pos": "FW",
    "posZh": "前锋",
@@ -1187,7 +1187,7 @@
   },
   {
    "player": "Leandro Trossard",
-   "nameZh": "莱安德罗·特罗萨德",
+   "nameZh": "特罗萨德",
    "num": 10,
    "pos": "FW",
    "posZh": "前锋",
@@ -1299,7 +1299,7 @@
   },
   {
    "player": "Riyad Mahrez",
-   "nameZh": "里亚德·马赫雷斯",
+   "nameZh": "马赫雷斯",
    "num": 7,
    "pos": "FW",
    "posZh": "前锋",
@@ -1443,7 +1443,7 @@
   },
   {
    "player": "Alexis Saelemaekers",
-   "nameZh": "亚历克西斯·赛勒梅克斯",
+   "nameZh": "赛勒梅克斯",
    "num": 22,
    "pos": "MF",
    "posZh": "中场",
@@ -1699,7 +1699,7 @@
   },
   {
    "player": "Désiré Doué",
-   "nameZh": "德西尔·杜埃",
+   "nameZh": "杜埃",
    "num": 20,
    "pos": "FW",
    "posZh": "前锋",
@@ -1715,7 +1715,7 @@
   },
   {
    "player": "Eldor Shomurodov",
-   "nameZh": "埃尔多·肖穆罗多夫",
+   "nameZh": "肖穆罗多夫",
    "num": 14,
    "pos": "FW",
    "posZh": "前锋",
@@ -1827,7 +1827,7 @@
   },
   {
    "player": "Gio Reyna",
-   "nameZh": "乔瓦尼·雷纳",
+   "nameZh": "雷纳",
    "num": 7,
    "pos": "MF",
    "posZh": "中场",
@@ -1843,7 +1843,7 @@
   },
   {
    "player": "Giovani Lo Celso",
-   "nameZh": "乔瓦尼·洛塞尔索",
+   "nameZh": "洛塞尔索",
    "num": 11,
    "pos": "MF",
    "posZh": "中场",
@@ -2051,7 +2051,7 @@
   },
   {
    "player": "Joao Neves",
-   "nameZh": "若奥·内维斯",
+   "nameZh": "内维斯",
    "num": 15,
    "pos": "MF",
    "posZh": "中场",
@@ -2259,7 +2259,7 @@
   },
   {
    "player": "Leroy Sane",
-   "nameZh": "勒罗伊·萨内",
+   "nameZh": "萨内",
    "num": 19,
    "pos": "MF",
    "posZh": "中场",
@@ -2339,7 +2339,7 @@
   },
   {
    "player": "Marcel Sabitzer",
-   "nameZh": "马塞尔·萨比策",
+   "nameZh": "萨比策",
    "num": 9,
    "pos": "MF",
    "posZh": "中场",
@@ -2499,7 +2499,7 @@
   },
   {
    "player": "Mohamed Salah",
-   "nameZh": "穆罕默德·萨拉赫",
+   "nameZh": "萨拉赫",
    "num": 10,
    "pos": "FW",
    "posZh": "前锋",
@@ -2627,7 +2627,7 @@
   },
   {
    "player": "Nikola Vlašić",
-   "nameZh": "尼古拉·弗拉西奇",
+   "nameZh": "弗拉西奇",
    "num": 13,
    "pos": "MF",
    "posZh": "中场",
@@ -2771,7 +2771,7 @@
   },
   {
    "player": "Rafael Leao",
-   "nameZh": "拉斐尔·拉法·莱昂",
+   "nameZh": "莱昂",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",
@@ -2835,7 +2835,7 @@
   },
   {
    "player": "Romelu Lukaku",
-   "nameZh": "罗梅卢·卢卡库",
+   "nameZh": "卢卡库",
    "num": 9,
    "pos": "FW",
    "posZh": "前锋",
@@ -2851,7 +2851,7 @@
   },
   {
    "player": "Sasa Kalajdzic",
-   "nameZh": "萨萨·卡拉吉奇",
+   "nameZh": "卡拉吉奇",
    "num": 14,
    "pos": "FW",
    "posZh": "前锋",
@@ -2947,7 +2947,7 @@
   },
   {
    "player": "Trezeguet",
-   "nameZh": "马哈茂德·特雷泽盖",
+   "nameZh": "特雷泽盖",
    "num": 7,
    "pos": "FW",
    "posZh": "前锋",
@@ -2963,7 +2963,7 @@
   },
   {
    "player": "Viktor Gyokeres",
-   "nameZh": "维克多·吉克雷斯",
+   "nameZh": "吉克雷斯",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",
@@ -3126,7 +3126,7 @@
   },
   {
    "player": "Denis Undav",
-   "nameZh": "德尼兹·昂达夫",
+   "nameZh": "昂达夫",
    "num": 26,
    "pos": "FW",
    "posZh": "前锋",
@@ -3478,7 +3478,7 @@
   },
   {
    "player": "Leandro Trossard",
-   "nameZh": "莱安德罗·特罗萨德",
+   "nameZh": "特罗萨德",
    "num": 10,
    "pos": "FW",
    "posZh": "前锋",
@@ -3590,7 +3590,7 @@
   },
   {
    "player": "Riyad Mahrez",
-   "nameZh": "里亚德·马赫雷斯",
+   "nameZh": "马赫雷斯",
    "num": 7,
    "pos": "FW",
    "posZh": "前锋",
@@ -3734,7 +3734,7 @@
   },
   {
    "player": "Alexis Saelemaekers",
-   "nameZh": "亚历克西斯·赛勒梅克斯",
+   "nameZh": "赛勒梅克斯",
    "num": 22,
    "pos": "MF",
    "posZh": "中场",
@@ -3990,7 +3990,7 @@
   },
   {
    "player": "Désiré Doué",
-   "nameZh": "德西尔·杜埃",
+   "nameZh": "杜埃",
    "num": 20,
    "pos": "FW",
    "posZh": "前锋",
@@ -4006,7 +4006,7 @@
   },
   {
    "player": "Eldor Shomurodov",
-   "nameZh": "埃尔多·肖穆罗多夫",
+   "nameZh": "肖穆罗多夫",
    "num": 14,
    "pos": "FW",
    "posZh": "前锋",
@@ -4118,7 +4118,7 @@
   },
   {
    "player": "Gio Reyna",
-   "nameZh": "乔瓦尼·雷纳",
+   "nameZh": "雷纳",
    "num": 7,
    "pos": "MF",
    "posZh": "中场",
@@ -4134,7 +4134,7 @@
   },
   {
    "player": "Giovani Lo Celso",
-   "nameZh": "乔瓦尼·洛塞尔索",
+   "nameZh": "洛塞尔索",
    "num": 11,
    "pos": "MF",
    "posZh": "中场",
@@ -4342,7 +4342,7 @@
   },
   {
    "player": "Joao Neves",
-   "nameZh": "若奥·内维斯",
+   "nameZh": "内维斯",
    "num": 15,
    "pos": "MF",
    "posZh": "中场",
@@ -4550,7 +4550,7 @@
   },
   {
    "player": "Leroy Sane",
-   "nameZh": "勒罗伊·萨内",
+   "nameZh": "萨内",
    "num": 19,
    "pos": "MF",
    "posZh": "中场",
@@ -4630,7 +4630,7 @@
   },
   {
    "player": "Marcel Sabitzer",
-   "nameZh": "马塞尔·萨比策",
+   "nameZh": "萨比策",
    "num": 9,
    "pos": "MF",
    "posZh": "中场",
@@ -4790,7 +4790,7 @@
   },
   {
    "player": "Mohamed Salah",
-   "nameZh": "穆罕默德·萨拉赫",
+   "nameZh": "萨拉赫",
    "num": 10,
    "pos": "FW",
    "posZh": "前锋",
@@ -4918,7 +4918,7 @@
   },
   {
    "player": "Nikola Vlašić",
-   "nameZh": "尼古拉·弗拉西奇",
+   "nameZh": "弗拉西奇",
    "num": 13,
    "pos": "MF",
    "posZh": "中场",
@@ -5062,7 +5062,7 @@
   },
   {
    "player": "Rafael Leao",
-   "nameZh": "拉斐尔·拉法·莱昂",
+   "nameZh": "莱昂",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",
@@ -5126,7 +5126,7 @@
   },
   {
    "player": "Romelu Lukaku",
-   "nameZh": "罗梅卢·卢卡库",
+   "nameZh": "卢卡库",
    "num": 9,
    "pos": "FW",
    "posZh": "前锋",
@@ -5142,7 +5142,7 @@
   },
   {
    "player": "Sasa Kalajdzic",
-   "nameZh": "萨萨·卡拉吉奇",
+   "nameZh": "卡拉吉奇",
    "num": 14,
    "pos": "FW",
    "posZh": "前锋",
@@ -5238,7 +5238,7 @@
   },
   {
    "player": "Trezeguet",
-   "nameZh": "马哈茂德·特雷泽盖",
+   "nameZh": "特雷泽盖",
    "num": 7,
    "pos": "FW",
    "posZh": "前锋",
@@ -5254,7 +5254,7 @@
   },
   {
    "player": "Viktor Gyokeres",
-   "nameZh": "维克多·吉克雷斯",
+   "nameZh": "吉克雷斯",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",

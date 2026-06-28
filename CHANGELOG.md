@@ -8,6 +8,22 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.6.1
+
+**Layout & readability polish / 布局与可读性打磨**
+- Reworked the header into a concise Chinese-then-English lead (no more language ping-pong), PST update time on two lines, openfootball credit and a star link to the repo. The top scoreboard is reordered (Total goals first, schedule last) with English-over-Chinese labels and per-card accent colours.
+  页头重排为先中后英的简洁引言，更新时间按美西时区分两行，致谢 openfootball 并附仓库 Star 链接。顶部数据条重新排序（总进球在前、赛程在最后），标签英文在上中文在下，每张卡片彩色边条。
+- **Top Scorers** and **Goal Fests** now group cards by goal total — same tally shares a row (up to 2 wide), a different tally starts a new row. **Multi-goal** is a tidy two-line tab bar (brace / hat-trick / haul / glut) with a 2-up grid and goal-count-keyed card borders.
+  **领跑榜**与**进球大战**按进球数分组——同数同一行（最多两列），不同数另起一行。**单场多球**改为整齐的双行标签栏，两列网格，卡片边框按进球数上色。
+- The three **Goal Origins** charts get taller rows, larger bilingual labels and a content-aware left gutter so long Chinese names (e.g. 巴黎圣日耳曼) show in full.
+  三个**进球来自哪里**柱状图行更高、双语标签更大、左侧留白按最长中文名自适应，长名（如巴黎圣日耳曼）完整显示。
+
+**Data / 数据**
+- **Goal Timing now includes own goals** (they're goals too) — totals rise accordingly. Famous players are shown by surname where convention dictates (特罗萨德, 卢卡库, 萨拉赫…) while common surnames keep the given name (乔纳森·戴维, 路易斯·迪亚斯). Venue names dropped the parenthetical suffix.
+  **进球时间分布纳入乌龙球**（乌龙也是进球），总数相应上升。按足球圈惯例，姓氏独特者用单姓（特罗萨德、卢卡库、萨拉赫…），姓氏常见者保留名（乔纳森·戴维、路易斯·迪亚斯）。场地名去掉括号后缀。
+
+---
+
 ## v1.6.0
 
 **New stat sections / 新增统计板块**
