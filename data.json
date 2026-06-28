@@ -1,6 +1,6 @@
 {
  "version": "v1.5.6",
- "updated": "2026-06-27T23:05:27+00:00",
+ "updated": "2026-06-28T01:34:14+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 134,
  "totalGoals": 189,
@@ -8,7 +8,7 @@
  "matchesWithGoals": 62,
  "schedule": {
   "total": 104,
-  "played": 68,
+  "played": 69,
   "stageEn": "Group R3",
   "stageZh": "小组赛第3轮",
   "lastDate": "2026-06-27",
