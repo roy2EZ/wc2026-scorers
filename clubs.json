@@ -2,7 +2,7 @@
  {
   "id": "fc-stade-nyonnais",
   "name": "FC Stade Nyonnais",
-  "nameZh": "",
+  "nameZh": "尼永",
   "league": "瑞士超",
   "aliases": [
    "FC Stade Nyonnais"
@@ -47,7 +47,7 @@
  {
   "id": "fc-twente",
   "name": "FC Twente",
-  "nameZh": "",
+  "nameZh": "特温特",
   "league": "荷甲",
   "aliases": [
    "FC Twente"
@@ -69,15 +69,6 @@
   "league": "沙特职业联赛",
   "aliases": [
    "Al Ittihad"
-  ]
- },
- {
-  "id": "marseille",
-  "name": "Marseille",
-  "nameZh": "马赛",
-  "league": "法甲",
-  "aliases": [
-   "Marseille"
   ]
  },
  {
@@ -110,7 +101,7 @@
  {
   "id": "bsc-young-boys",
   "name": "BSC Young Boys",
-  "nameZh": "",
+  "nameZh": "年轻人",
   "league": "瑞士超",
   "aliases": [
    "BSC Young Boys"
@@ -137,7 +128,7 @@
  {
   "id": "hellas-verona-fc",
   "name": "Hellas Verona FC",
-  "nameZh": "",
+  "nameZh": "维罗纳",
   "league": "意甲",
   "aliases": [
    "Hellas Verona FC"
@@ -182,7 +173,7 @@
  {
   "id": "granada-cf",
   "name": "Granada CF",
-  "nameZh": "",
+  "nameZh": "格拉纳达",
   "league": "西甲",
   "aliases": [
    "Granada CF"
@@ -191,7 +182,7 @@
  {
   "id": "sporting-charleroi",
   "name": "Sporting Charleroi",
-  "nameZh": "",
+  "nameZh": "沙勒罗瓦",
   "league": "比利时甲级",
   "aliases": [
    "Sporting Charleroi"
@@ -200,7 +191,7 @@
  {
   "id": "frosinone",
   "name": "Frosinone",
-  "nameZh": "",
+  "nameZh": "弗罗西诺内",
   "league": "意甲",
   "aliases": [
    "Frosinone"
@@ -209,7 +200,7 @@
  {
   "id": "paris-fc",
   "name": "Paris FC",
-  "nameZh": "",
+  "nameZh": "巴黎FC",
   "league": "法甲",
   "aliases": [
    "Paris FC"
@@ -245,7 +236,7 @@
  {
   "id": "ca-river-plate",
   "name": "CA River Plate",
-  "nameZh": "",
+  "nameZh": "河床",
   "league": "阿甲",
   "aliases": [
    "CA River Plate"
@@ -254,7 +245,7 @@
  {
   "id": "ca-boca-juniors",
   "name": "CA Boca Juniors",
-  "nameZh": "",
+  "nameZh": "博卡青年",
   "league": "阿甲",
   "aliases": [
    "CA Boca Juniors"
@@ -299,9 +290,10 @@
  {
   "id": "olympique-marseille",
   "name": "Olympique Marseille",
-  "nameZh": "",
+  "nameZh": "马赛",
   "league": "法甲",
   "aliases": [
+   "Marseille",
    "Olympique Marseille"
   ]
  },
@@ -325,11 +317,11 @@
  },
  {
   "id": "sl-ben-ca",
-  "name": "SL Ben\u0000ca",
-  "nameZh": "",
+  "name": "SL Benfica",
+  "nameZh": "本菲卡",
   "league": "葡超",
   "aliases": [
-   "SL Ben\u0000ca"
+   "SL Benfica"
   ]
  },
  {
@@ -347,16 +339,18 @@
   "nameZh": "帕尔梅拉斯",
   "league": "巴西甲级",
   "aliases": [
+   "Palmeiras",
    "SE Palmeiras"
   ]
  },
  {
   "id": "fc-internazionale-milano",
-  "name": "FC Internazionale Milano",
-  "nameZh": "",
+  "name": "Inter Milan",
+  "nameZh": "国际米兰",
   "league": "意甲",
   "aliases": [
-   "FC Internazionale Milano"
+   "FC Internazionale Milano",
+   "Inter Milan"
   ]
  },
  {
@@ -380,7 +374,7 @@
  {
   "id": "levante-ud",
   "name": "Levante UD",
-  "nameZh": "",
+  "nameZh": "莱万特",
   "league": "西甲",
   "aliases": [
    "Levante UD"
@@ -398,7 +392,7 @@
  {
   "id": "parma",
   "name": "Parma",
-  "nameZh": "",
+  "nameZh": "帕尔马",
   "league": "意甲",
   "aliases": [
    "Parma"
@@ -407,7 +401,7 @@
  {
   "id": "grazer-ak",
   "name": "Grazer AK",
-  "nameZh": "",
+  "nameZh": "格拉茨AK",
   "league": "奥地利甲级",
   "aliases": [
    "Grazer AK"
@@ -416,7 +410,7 @@
  {
   "id": "albirex-niigata",
   "name": "Albirex Niigata",
-  "nameZh": "",
+  "nameZh": "新潟天鹅",
   "league": "日职联",
   "aliases": [
    "Albirex Niigata"
@@ -425,7 +419,7 @@
  {
   "id": "melbourne-city-fc",
   "name": "Melbourne City FC",
-  "nameZh": "",
+  "nameZh": "墨尔本城",
   "league": "澳超",
   "aliases": [
    "Melbourne City FC"
@@ -443,7 +437,7 @@
  {
   "id": "norwich-city-fc",
   "name": "Norwich City FC",
-  "nameZh": "",
+  "nameZh": "诺维奇城",
   "league": "英超",
   "aliases": [
    "Norwich City FC"
@@ -452,7 +446,7 @@
  {
   "id": "sc-heracles-almelo",
   "name": "SC Heracles Almelo",
-  "nameZh": "",
+  "nameZh": "海拉克勒斯",
   "league": "荷甲",
   "aliases": [
    "SC Heracles Almelo"
@@ -461,7 +455,7 @@
  {
   "id": "cd-castellon",
   "name": "CD Castellón",
-  "nameZh": "",
+  "nameZh": "卡斯特利翁",
   "league": "西甲",
   "aliases": [
    "CD Castellón"
@@ -470,7 +464,7 @@
  {
   "id": "randers-fc",
   "name": "Randers FC",
-  "nameZh": "",
+  "nameZh": "兰讷斯",
   "league": "丹麦超",
   "aliases": [
    "Randers FC"
@@ -479,7 +473,7 @@
  {
   "id": "new-york-city-fc",
   "name": "New York City FC",
-  "nameZh": "",
+  "nameZh": "纽约城",
   "league": "美职联",
   "aliases": [
    "New York City FC"
@@ -488,7 +482,7 @@
  {
   "id": "heart-of-midlothian-fc",
   "name": "Heart Of Midlothian FC",
-  "nameZh": "",
+  "nameZh": "哈茨",
   "league": "苏超",
   "aliases": [
    "Heart Of Midlothian FC"
@@ -506,7 +500,7 @@
  {
   "id": "leicester-city-fc",
   "name": "Leicester City FC",
-  "nameZh": "",
+  "nameZh": "莱斯特城",
   "league": "英超",
   "aliases": [
    "Leicester City FC"
@@ -515,7 +509,7 @@
  {
   "id": "us-sassuolo",
   "name": "US Sassuolo",
-  "nameZh": "",
+  "nameZh": "萨索洛",
   "league": "意甲",
   "aliases": [
    "US Sassuolo"
@@ -533,7 +527,7 @@
  {
   "id": "melbourne-victory-fc",
   "name": "Melbourne Victory FC",
-  "nameZh": "",
+  "nameZh": "墨尔本胜利",
   "league": "澳超",
   "aliases": [
    "Melbourne Victory FC"
@@ -542,7 +536,7 @@
  {
   "id": "sydney-fc",
   "name": "Sydney FC",
-  "nameZh": "",
+  "nameZh": "悉尼FC",
   "league": "澳超",
   "aliases": [
    "Sydney FC"
@@ -551,7 +545,7 @@
  {
   "id": "colorado-rapids",
   "name": "Colorado Rapids",
-  "nameZh": "",
+  "nameZh": "科罗拉多急流",
   "league": "美职联",
   "aliases": [
    "Colorado Rapids"
@@ -560,7 +554,7 @@
  {
   "id": "fc-machida-zelvia",
   "name": "FC Machida Zelvia",
-  "nameZh": "",
+  "nameZh": "町田泽尔维亚",
   "league": "日职联",
   "aliases": [
    "FC Machida Zelvia"
@@ -578,7 +572,7 @@
  {
   "id": "elche-cf",
   "name": "Elche CF",
-  "nameZh": "",
+  "nameZh": "埃尔切",
   "league": "西甲",
   "aliases": [
    "Elche CF"
@@ -596,7 +590,7 @@
  {
   "id": "1-fsv-mainz-05",
   "name": "1. FSV Mainz 05",
-  "nameZh": "",
+  "nameZh": "美因茨",
   "league": "德甲",
   "aliases": [
    "1. FSV Mainz 05"
@@ -632,7 +626,7 @@
  {
   "id": "fc-augsburg",
   "name": "FC Augsburg",
-  "nameZh": "",
+  "nameZh": "奥格斯堡",
   "league": "德甲",
   "aliases": [
    "FC Augsburg"
@@ -650,7 +644,7 @@
  {
   "id": "br-ndby-if",
   "name": "Brøndby IF",
-  "nameZh": "",
+  "nameZh": "布隆德比",
   "league": "丹麦超",
   "aliases": [
    "Brøndby IF"
@@ -659,7 +653,7 @@
  {
   "id": "lask-linz",
   "name": "LASK Linz",
-  "nameZh": "",
+  "nameZh": "林茨",
   "league": "奥地利甲级",
   "aliases": [
    "LASK Linz"
@@ -687,7 +681,7 @@
  {
   "id": "fc-schalke-04",
   "name": "FC Schalke 04",
-  "nameZh": "",
+  "nameZh": "沙尔克04",
   "league": "德甲",
   "aliases": [
    "FC Schalke 04"
@@ -699,13 +693,14 @@
   "nameZh": "拜仁慕尼黑",
   "league": "德甲",
   "aliases": [
+   "Bayern Munich",
    "FC Bayern München"
   ]
  },
  {
   "id": "tsg-hoffenheim",
   "name": "TSG Hoffenheim",
-  "nameZh": "",
+  "nameZh": "霍芬海姆",
   "league": "德甲",
   "aliases": [
    "TSG Hoffenheim"
@@ -723,7 +718,7 @@
  {
   "id": "venezia-fc",
   "name": "Venezia FC",
-  "nameZh": "",
+  "nameZh": "威尼斯",
   "league": "意甲",
   "aliases": [
    "Venezia FC"
@@ -732,7 +727,7 @@
  {
   "id": "wolfsberger-ac",
   "name": "Wolfsberger AC",
-  "nameZh": "",
+  "nameZh": "沃尔夫斯贝格",
   "league": "奥地利甲级",
   "aliases": [
    "Wolfsberger AC"
@@ -750,7 +745,7 @@
  {
   "id": "club-brugge",
   "name": "Club Brugge",
-  "nameZh": "",
+  "nameZh": "布鲁日",
   "league": "比利时甲级",
   "aliases": [
    "Club Brugge"
@@ -831,7 +826,7 @@
  {
   "id": "gaziantep-fk",
   "name": "Gaziantep FK",
-  "nameZh": "",
+  "nameZh": "加济安泰普",
   "league": "土超",
   "aliases": [
    "Gaziantep FK"
@@ -840,7 +835,7 @@
  {
   "id": "uc-sampdoria",
   "name": "UC Sampdoria",
-  "nameZh": "",
+  "nameZh": "桑普多利亚",
   "league": "意甲",
   "aliases": [
    "UC Sampdoria"
@@ -894,7 +889,7 @@
  {
   "id": "hull-city-fc",
   "name": "Hull City FC",
-  "nameZh": "",
+  "nameZh": "赫尔城",
   "league": "英超",
   "aliases": [
    "Hull City FC"
@@ -903,7 +898,7 @@
  {
   "id": "karlsruher-sc",
   "name": "Karlsruher SC",
-  "nameZh": "",
+  "nameZh": "卡尔斯鲁厄",
   "league": "德甲",
   "aliases": [
    "Karlsruher SC"
@@ -930,7 +925,7 @@
  {
   "id": "sk-sturm-graz",
   "name": "SK Sturm Graz",
-  "nameZh": "",
+  "nameZh": "格拉茨风暴",
   "league": "奥地利甲级",
   "aliases": [
    "SK Sturm Graz"
@@ -984,7 +979,7 @@
  {
   "id": "santos-fc",
   "name": "Santos FC",
-  "nameZh": "",
+  "nameZh": "桑托斯",
   "league": "巴西甲级",
   "aliases": [
    "Santos FC"
@@ -1002,7 +997,7 @@
  {
   "id": "gremio-fbpa",
   "name": "Grêmio FBPA",
-  "nameZh": "",
+  "nameZh": "格雷米奥",
   "league": "巴西甲级",
   "aliases": [
    "Grêmio FBPA"
@@ -1020,7 +1015,7 @@
  {
   "id": "fc-zenit-st-petersburg",
   "name": "FC Zenit St. Petersburg",
-  "nameZh": "",
+  "nameZh": "泽尼特",
   "league": "俄超",
   "aliases": [
    "FC Zenit St. Petersburg"
@@ -1029,7 +1024,7 @@
  {
   "id": "botafogo",
   "name": "Botafogo",
-  "nameZh": "",
+  "nameZh": "博塔弗戈",
   "league": "巴西甲级",
   "aliases": [
    "Botafogo"
@@ -1056,7 +1051,7 @@
  {
   "id": "gd-chaves",
   "name": "GD Chaves",
-  "nameZh": "",
+  "nameZh": "沙维斯",
   "league": "葡超",
   "aliases": [
    "GD Chaves"
@@ -1065,7 +1060,7 @@
  {
   "id": "scu-torreense",
   "name": "SCU Torreense",
-  "nameZh": "",
+  "nameZh": "托雷恩斯",
   "league": "葡超",
   "aliases": [
    "SCU Torreense"
@@ -1110,7 +1105,7 @@
  {
   "id": "cf-estrela-da-amadora",
   "name": "CF Estrela Da Amadora",
-  "nameZh": "",
+  "nameZh": "阿马多拉",
   "league": "葡超",
   "aliases": [
    "CF Estrela Da Amadora"
@@ -1128,7 +1123,7 @@
  {
   "id": "fc-akron-tolyatti",
   "name": "FC Akron Tolyatti",
-  "nameZh": "",
+  "nameZh": "阿克伦",
   "league": "俄超",
   "aliases": [
    "FC Akron Tolyatti"
@@ -1137,7 +1132,7 @@
  {
   "id": "pec-zwolle",
   "name": "PEC Zwolle",
-  "nameZh": "",
+  "nameZh": "兹沃勒",
   "league": "荷甲",
   "aliases": [
    "PEC Zwolle"
@@ -1182,7 +1177,7 @@
  {
   "id": "sc-farense",
   "name": "SC Farense",
-  "nameZh": "",
+  "nameZh": "法伦斯",
   "league": "葡超",
   "aliases": [
    "SC Farense"
@@ -1200,7 +1195,7 @@
  {
   "id": "vitoria-sc",
   "name": "Vitória SC",
-  "nameZh": "",
+  "nameZh": "吉马良斯",
   "league": "葡超",
   "aliases": [
    "Vitória SC"
@@ -1209,7 +1204,7 @@
  {
   "id": "casa-pia-ac",
   "name": "Casa Pia AC",
-  "nameZh": "",
+  "nameZh": "卡萨皮亚",
   "league": "葡超",
   "aliases": [
    "Casa Pia AC"
@@ -1218,7 +1213,7 @@
  {
   "id": "igd-r-fk",
   "name": "Iğdır FK",
-  "nameZh": "",
+  "nameZh": "厄德尔",
   "league": "土超",
   "aliases": [
    "Iğdır FK"
@@ -1227,16 +1222,17 @@
  {
   "id": "basaksehir-fk",
   "name": "Başakşehir FK",
-  "nameZh": "",
+  "nameZh": "巴萨克谢希尔",
   "league": "土超",
   "aliases": [
-   "Başakşehir FK"
+   "Başakşehir FK",
+   "Istanbul Basaksehir"
   ]
  },
  {
   "id": "columbus-crew",
   "name": "Columbus Crew",
-  "nameZh": "",
+  "nameZh": "哥伦布机员",
   "league": "美职联",
   "aliases": [
    "Columbus Crew"
@@ -1245,7 +1241,7 @@
  {
   "id": "san-diego-fc",
   "name": "San Diego FC",
-  "nameZh": "",
+  "nameZh": "圣迭戈",
   "league": "美职联",
   "aliases": [
    "San Diego FC"
@@ -1290,7 +1286,7 @@
  {
   "id": "middlesbrough-fc",
   "name": "Middlesbrough FC",
-  "nameZh": "",
+  "nameZh": "米德尔斯堡",
   "league": "英超",
   "aliases": [
    "Middlesbrough FC"
@@ -1299,7 +1295,7 @@
  {
   "id": "fcv-dender-eh",
   "name": "FCV Dender EH",
-  "nameZh": "",
+  "nameZh": "登德尔",
   "league": "比利时甲级",
   "aliases": [
    "FCV Dender EH"
@@ -1308,7 +1304,7 @@
  {
   "id": "chicago-fire-fc",
   "name": "Chicago Fire FC",
-  "nameZh": "",
+  "nameZh": "芝加哥火焰",
   "league": "美职联",
   "aliases": [
    "Chicago Fire FC"
@@ -1335,7 +1331,7 @@
  {
   "id": "orlando-city-sc",
   "name": "Orlando City SC",
-  "nameZh": "",
+  "nameZh": "奥兰多城",
   "league": "美职联",
   "aliases": [
    "Orlando City SC"
@@ -1344,7 +1340,7 @@
  {
   "id": "barnsley",
   "name": "Barnsley",
-  "nameZh": "",
+  "nameZh": "巴恩斯利",
   "league": "英超",
   "aliases": [
    "Barnsley"
@@ -1353,7 +1349,7 @@
  {
   "id": "toronto-fc",
   "name": "Toronto FC",
-  "nameZh": "",
+  "nameZh": "多伦多",
   "league": "美职联",
   "aliases": [
    "Toronto FC"
@@ -1383,13 +1379,14 @@
   "nameZh": "安德莱赫特",
   "league": "比利时甲级",
   "aliases": [
-   "Anderlecht"
+   "Anderlecht",
+   "RSC Anderlecht"
   ]
  },
  {
   "id": "austin-fc",
   "name": "Austin FC",
-  "nameZh": "",
+  "nameZh": "奥斯汀",
   "league": "美职联",
   "aliases": [
    "Austin FC"
@@ -1416,7 +1413,7 @@
  {
   "id": "bologna-fc",
   "name": "Bologna FC",
-  "nameZh": "",
+  "nameZh": "博洛尼亚",
   "league": "意甲",
   "aliases": [
    "Bologna FC"
@@ -1425,25 +1422,16 @@
  {
   "id": "ca-independiente",
   "name": "CA Independiente",
-  "nameZh": "",
+  "nameZh": "独立",
   "league": "阿甲",
   "aliases": [
    "CA Independiente"
   ]
  },
  {
-  "id": "bayern-munich",
-  "name": "Bayern Munich",
-  "nameZh": "拜仁慕尼黑",
-  "league": "德甲",
-  "aliases": [
-   "Bayern Munich"
-  ]
- },
- {
   "id": "minnesota-united-fc",
   "name": "Minnesota United FC",
-  "nameZh": "",
+  "nameZh": "明尼苏达联",
   "league": "美职联",
   "aliases": [
    "Minnesota United FC"
@@ -1452,7 +1440,7 @@
  {
   "id": "atlas-fc",
   "name": "Atlas FC",
-  "nameZh": "",
+  "nameZh": "亚特拉斯",
   "league": "墨超",
   "aliases": [
    "Atlas FC"
@@ -1461,7 +1449,7 @@
  {
   "id": "cagliari",
   "name": "Cagliari",
-  "nameZh": "",
+  "nameZh": "卡利亚里",
   "league": "意甲",
   "aliases": [
    "Cagliari"
@@ -1470,7 +1458,7 @@
  {
   "id": "racing-santander",
   "name": "Racing Santander",
-  "nameZh": "",
+  "nameZh": "桑坦德竞技",
   "league": "西甲",
   "aliases": [
    "Racing Santander"
@@ -1479,7 +1467,7 @@
  {
   "id": "athletico-paranaense",
   "name": "Athletico Paranaense",
-  "nameZh": "",
+  "nameZh": "帕拉纳竞技",
   "league": "巴西甲级",
   "aliases": [
    "Athletico Paranaense"
@@ -1497,7 +1485,7 @@
  {
   "id": "cf-cruz-azul",
   "name": "CF Cruz Azul",
-  "nameZh": "",
+  "nameZh": "蓝十字",
   "league": "墨超",
   "aliases": [
    "CF Cruz Azul"
@@ -1515,7 +1503,7 @@
  {
   "id": "fc-nantes",
   "name": "FC Nantes",
-  "nameZh": "",
+  "nameZh": "南特",
   "league": "法甲",
   "aliases": [
    "FC Nantes"
@@ -1532,17 +1520,17 @@
  },
  {
   "id": "ca-velez-sars-eld",
-  "name": "CA Vélez Sars\u0000eld",
-  "nameZh": "",
+  "name": "CA Vélez Sarsfield",
+  "nameZh": "贝莱斯",
   "league": "阿甲",
   "aliases": [
-   "CA Vélez Sars\u0000eld"
+   "CA Vélez Sarsfield"
   ]
  },
  {
   "id": "cr-vasco-da-gama",
   "name": "CR Vasco Da Gama",
-  "nameZh": "",
+  "nameZh": "瓦斯科达伽马",
   "league": "巴西甲级",
   "aliases": [
    "CR Vasco Da Gama"
@@ -1551,7 +1539,7 @@
  {
   "id": "le-havre-ac",
   "name": "Le Havre AC",
-  "nameZh": "",
+  "nameZh": "勒阿弗尔",
   "league": "法甲",
   "aliases": [
    "Le Havre AC"
@@ -1587,7 +1575,7 @@
  {
   "id": "ael-fc",
   "name": "AEL FC",
-  "nameZh": "",
+  "nameZh": "拉里萨",
   "league": "希腊超",
   "aliases": [
    "AEL FC"
@@ -1596,7 +1584,7 @@
  {
   "id": "montpellier-hsc",
   "name": "Montpellier HSC",
-  "nameZh": "",
+  "nameZh": "蒙彼利埃",
   "league": "法甲",
   "aliases": [
    "Montpellier HSC"
@@ -1605,7 +1593,7 @@
  {
   "id": "atromitos-fc",
   "name": "Atromitos FC",
-  "nameZh": "",
+  "nameZh": "阿特罗米托斯",
   "league": "希腊超",
   "aliases": [
    "Atromitos FC"
@@ -1614,7 +1602,7 @@
  {
   "id": "fc-spartak-moscow",
   "name": "FC Spartak Moscow",
-  "nameZh": "",
+  "nameZh": "莫斯科斯巴达",
   "league": "俄超",
   "aliases": [
    "FC Spartak Moscow"
@@ -1632,7 +1620,7 @@
  {
   "id": "alanyaspor",
   "name": "Alanyaspor",
-  "nameZh": "",
+  "nameZh": "阿兰亚体育",
   "league": "土超",
   "aliases": [
    "Alanyaspor"
@@ -1650,7 +1638,7 @@
  {
   "id": "kilmarnock-fc",
   "name": "Kilmarnock FC",
-  "nameZh": "",
+  "nameZh": "基尔马诺克",
   "league": "苏超",
   "aliases": [
    "Kilmarnock FC"
@@ -1668,7 +1656,7 @@
  {
   "id": "rcd-espanyol",
   "name": "RCD Espanyol",
-  "nameZh": "",
+  "nameZh": "西班牙人",
   "league": "西甲",
   "aliases": [
    "RCD Espanyol"
@@ -1686,7 +1674,7 @@
  {
   "id": "standard-liege",
   "name": "Standard Liège",
-  "nameZh": "",
+  "nameZh": "标准列日",
   "league": "比利时甲级",
   "aliases": [
    "Standard Liège"
@@ -1713,7 +1701,7 @@
  {
   "id": "rc-lens",
   "name": "RC Lens",
-  "nameZh": "",
+  "nameZh": "朗斯",
   "league": "法甲",
   "aliases": [
    "RC Lens"
@@ -1722,7 +1710,7 @@
  {
   "id": "caykur-rizespor",
   "name": "Çaykur Rizespor",
-  "nameZh": "",
+  "nameZh": "里泽体育",
   "league": "土超",
   "aliases": [
    "Çaykur Rizespor"
@@ -1731,7 +1719,7 @@
  {
   "id": "gil-vicente-fc",
   "name": "Gil Vicente FC",
-  "nameZh": "",
+  "nameZh": "吉尔维森特",
   "league": "葡超",
   "aliases": [
    "Gil Vicente FC"
@@ -1767,7 +1755,7 @@
  {
   "id": "cercle-brugge",
   "name": "Cercle Brugge",
-  "nameZh": "",
+  "nameZh": "布鲁日竞技",
   "league": "比利时甲级",
   "aliases": [
    "Cercle Brugge"
@@ -1803,7 +1791,7 @@
  {
   "id": "panathinaikos-fc",
   "name": "Panathinaikos FC",
-  "nameZh": "",
+  "nameZh": "帕纳辛奈科斯",
   "league": "希腊超",
   "aliases": [
    "Panathinaikos FC"
@@ -1866,7 +1854,7 @@
  {
   "id": "hamburger-sv",
   "name": "Hamburger SV",
-  "nameZh": "",
+  "nameZh": "汉堡",
   "league": "德甲",
   "aliases": [
    "Hamburger SV"
@@ -1875,7 +1863,7 @@
  {
   "id": "fc-k-benhavn",
   "name": "FC København",
-  "nameZh": "",
+  "nameZh": "哥本哈根",
   "league": "丹麦超",
   "aliases": [
    "FC København"
@@ -1884,7 +1872,7 @@
  {
   "id": "fc-midtjylland",
   "name": "FC Midtjylland",
-  "nameZh": "",
+  "nameZh": "中日德兰",
   "league": "丹麦超",
   "aliases": [
    "FC Midtjylland"
@@ -1902,7 +1890,7 @@
  {
   "id": "miami-fc",
   "name": "Miami FC",
-  "nameZh": "",
+  "nameZh": "迈阿密FC",
   "league": "美职联",
   "aliases": [
    "Miami FC"
@@ -1911,7 +1899,7 @@
  {
   "id": "sparta-rotterdam",
   "name": "Sparta Rotterdam",
-  "nameZh": "",
+  "nameZh": "鹿特丹斯巴达",
   "league": "荷甲",
   "aliases": [
    "Sparta Rotterdam"
@@ -1920,7 +1908,7 @@
  {
   "id": "abha-club",
   "name": "Abha Club",
-  "nameZh": "",
+  "nameZh": "艾卜哈",
   "league": "沙特职业联赛",
   "aliases": [
    "Abha Club"
@@ -1929,7 +1917,7 @@
  {
   "id": "rkc-waalwijk",
   "name": "RKC Waalwijk",
-  "nameZh": "",
+  "nameZh": "瓦尔韦克",
   "league": "荷甲",
   "aliases": [
    "RKC Waalwijk"
@@ -1938,7 +1926,7 @@
  {
   "id": "fc-volendam",
   "name": "FC Volendam",
-  "nameZh": "",
+  "nameZh": "福伦丹",
   "league": "荷甲",
   "aliases": [
    "FC Volendam"
@@ -1955,17 +1943,17 @@
  },
  {
   "id": "ae-ki-sia-fc",
-  "name": "AE Ki\u0000sia FC",
-  "nameZh": "",
+  "name": "AE Kifisia FC",
+  "nameZh": "基菲西亚",
   "league": "希腊超",
   "aliases": [
-   "AE Ki\u0000sia FC"
+   "AE Kifisia FC"
   ]
  },
  {
   "id": "sc-telstar",
   "name": "SC Telstar",
-  "nameZh": "",
+  "nameZh": "特尔斯达",
   "league": "荷甲",
   "aliases": [
    "SC Telstar"
@@ -1983,7 +1971,7 @@
  {
   "id": "rotherham-united-fc",
   "name": "Rotherham United FC",
-  "nameZh": "",
+  "nameZh": "罗瑟勒姆联",
   "league": "英超",
   "aliases": [
    "Rotherham United FC"
@@ -1992,7 +1980,7 @@
  {
   "id": "sk-beveren",
   "name": "SK Beveren",
-  "nameZh": "",
+  "nameZh": "贝弗伦",
   "league": "比利时甲级",
   "aliases": [
    "SK Beveren"
@@ -2010,7 +1998,7 @@
  {
   "id": "kayserispor",
   "name": "Kayserispor",
-  "nameZh": "",
+  "nameZh": "开塞利体育",
   "league": "土超",
   "aliases": [
    "Kayserispor"
@@ -2018,17 +2006,17 @@
  },
  {
   "id": "she-eld-united-fc",
-  "name": "She\u0000eld United FC",
-  "nameZh": "",
+  "name": "Sheffield United FC",
+  "nameZh": "谢菲尔德联",
   "league": "英超",
   "aliases": [
-   "She\u0000eld United FC"
+   "Sheffield United FC"
   ]
  },
  {
   "id": "fc-den-bosch",
   "name": "FC Den Bosch",
-  "nameZh": "",
+  "nameZh": "登博斯",
   "league": "荷甲",
   "aliases": [
    "FC Den Bosch"
@@ -2037,7 +2025,7 @@
  {
   "id": "konyaspor",
   "name": "Konyaspor",
-  "nameZh": "",
+  "nameZh": "科尼亚体育",
   "league": "土超",
   "aliases": [
    "Konyaspor"
@@ -2046,7 +2034,7 @@
  {
   "id": "nec-nijmegen",
   "name": "NEC Nijmegen",
-  "nameZh": "",
+  "nameZh": "奈梅亨",
   "league": "荷甲",
   "aliases": [
    "NEC Nijmegen"
@@ -2055,7 +2043,7 @@
  {
   "id": "vvv-venlo",
   "name": "VVV Venlo",
-  "nameZh": "",
+  "nameZh": "芬洛",
   "league": "荷甲",
   "aliases": [
    "VVV Venlo"
@@ -2100,7 +2088,7 @@
  {
   "id": "ca-huracan",
   "name": "CA Huracán",
-  "nameZh": "",
+  "nameZh": "飓风",
   "league": "阿甲",
   "aliases": [
    "CA Huracán"
@@ -2109,7 +2097,7 @@
  {
   "id": "sc-internacional",
   "name": "SC Internacional",
-  "nameZh": "",
+  "nameZh": "国际(巴西)",
   "league": "巴西甲级",
   "aliases": [
    "SC Internacional"
@@ -2127,7 +2115,7 @@
  {
   "id": "royal-antwerp-fc",
   "name": "Royal Antwerp FC",
-  "nameZh": "",
+  "nameZh": "安特卫普",
   "league": "比利时甲级",
   "aliases": [
    "Royal Antwerp FC"
@@ -2136,7 +2124,7 @@
  {
   "id": "cf-pachuca",
   "name": "CF Pachuca",
-  "nameZh": "",
+  "nameZh": "帕丘卡",
   "league": "墨超",
   "aliases": [
    "CF Pachuca"
@@ -2145,7 +2133,7 @@
  {
   "id": "atletico-mineiro",
   "name": "Atlético Mineiro",
-  "nameZh": "",
+  "nameZh": "米内罗竞技",
   "league": "巴西甲级",
   "aliases": [
    "Atlético Mineiro"
@@ -2154,7 +2142,7 @@
  {
   "id": "pumas-unam",
   "name": "Pumas UNAM",
-  "nameZh": "",
+  "nameZh": "美洲狮",
   "league": "墨超",
   "aliases": [
    "Pumas UNAM"
@@ -2172,7 +2160,7 @@
  {
   "id": "club-tijuana",
   "name": "Club Tijuana",
-  "nameZh": "",
+  "nameZh": "蒂华纳",
   "league": "墨超",
   "aliases": [
    "Club Tijuana"
@@ -2208,7 +2196,7 @@
  {
   "id": "real-oviedo",
   "name": "Real Oviedo",
-  "nameZh": "",
+  "nameZh": "奥维耶多",
   "league": "西甲",
   "aliases": [
    "Real Oviedo"
@@ -2226,7 +2214,7 @@
  {
   "id": "al-najmah-sc",
   "name": "Al Najmah SC",
-  "nameZh": "",
+  "nameZh": "纳吉马",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Najmah SC"
@@ -2235,9 +2223,10 @@
  {
   "id": "fc-nordsj-lland",
   "name": "FC Nordsjælland",
-  "nameZh": "",
+  "nameZh": "北西兰",
   "league": "丹麦超",
   "aliases": [
+   "FC Nordsjaelland",
    "FC Nordsjælland"
   ]
  },
@@ -2289,25 +2278,16 @@
  {
   "id": "fc-st-gallen",
   "name": "FC St. Gallen",
-  "nameZh": "",
+  "nameZh": "圣加伦",
   "league": "瑞士超",
   "aliases": [
    "FC St. Gallen"
   ]
  },
  {
-  "id": "fc-nordsjaelland",
-  "name": "FC Nordsjaelland",
-  "nameZh": "北西兰",
-  "league": "丹麦超",
-  "aliases": [
-   "FC Nordsjaelland"
-  ]
- },
- {
   "id": "rayo-vallecano",
   "name": "Rayo Vallecano",
-  "nameZh": "",
+  "nameZh": "巴列卡诺",
   "league": "西甲",
   "aliases": [
    "Rayo Vallecano"
@@ -2316,7 +2296,7 @@
  {
   "id": "coventry-city-fc",
   "name": "Coventry City FC",
-  "nameZh": "",
+  "nameZh": "考文垂城",
   "league": "英超",
   "aliases": [
    "Coventry City FC"
@@ -2361,7 +2341,7 @@
  {
   "id": "paok-saloniki",
   "name": "PAOK Saloniki",
-  "nameZh": "",
+  "nameZh": "PAOK塞萨洛尼基",
   "league": "希腊超",
   "aliases": [
    "PAOK Saloniki"
@@ -2379,7 +2359,7 @@
  {
   "id": "as-saint-etienne",
   "name": "AS Saint-Etienne",
-  "nameZh": "",
+  "nameZh": "圣埃蒂安",
   "league": "法甲",
   "aliases": [
    "AS Saint-Etienne"
@@ -2388,7 +2368,7 @@
  {
   "id": "sc-bastia",
   "name": "SC Bastia",
-  "nameZh": "",
+  "nameZh": "巴斯蒂亚",
   "league": "法甲",
   "aliases": [
    "SC Bastia"
@@ -2397,7 +2377,7 @@
  {
   "id": "angers-sco",
   "name": "Angers SCO",
-  "nameZh": "",
+  "nameZh": "昂热",
   "league": "法甲",
   "aliases": [
    "Angers SCO"
@@ -2406,7 +2386,7 @@
  {
   "id": "fc-lugano",
   "name": "FC Lugano",
-  "nameZh": "",
+  "nameZh": "卢加诺",
   "league": "瑞士超",
   "aliases": [
    "FC Lugano"
@@ -2415,7 +2395,7 @@
  {
   "id": "el-paso-locomotive-fc",
   "name": "El Paso Locomotive FC",
-  "nameZh": "",
+  "nameZh": "埃尔帕索机车",
   "league": "美职联",
   "aliases": [
    "El Paso Locomotive FC"
@@ -2424,7 +2404,7 @@
  {
   "id": "as-nancy",
   "name": "AS Nancy",
-  "nameZh": "",
+  "nameZh": "南锡",
   "league": "法甲",
   "aliases": [
    "AS Nancy"
@@ -2442,7 +2422,7 @@
  {
   "id": "fc-sochaux-montbeliard",
   "name": "FC Sochaux-Montbéliard",
-  "nameZh": "",
+  "nameZh": "索肖",
   "league": "法甲",
   "aliases": [
    "FC Sochaux-Montbéliard"
@@ -2451,7 +2431,7 @@
  {
   "id": "colorado-springs-switchbacks-fc",
   "name": "Colorado Springs Switchbacks FC",
-  "nameZh": "",
+  "nameZh": "科罗拉多斯普林斯",
   "league": "美职联",
   "aliases": [
    "Colorado Springs Switchbacks FC"
@@ -2460,7 +2440,7 @@
  {
   "id": "almere-city-fc",
   "name": "Almere City FC",
-  "nameZh": "",
+  "nameZh": "阿尔梅勒城",
   "league": "荷甲",
   "aliases": [
    "Almere City FC"
@@ -2478,7 +2458,7 @@
  {
   "id": "philadelphia-union",
   "name": "Philadelphia Union",
-  "nameZh": "",
+  "nameZh": "费城联",
   "league": "美职联",
   "aliases": [
    "Philadelphia Union"
@@ -2487,7 +2467,7 @@
  {
   "id": "fc-vizela",
   "name": "FC Vizela",
-  "nameZh": "",
+  "nameZh": "维泽拉",
   "league": "葡超",
   "aliases": [
    "FC Vizela"
@@ -2496,7 +2476,7 @@
  {
   "id": "kaa-gent",
   "name": "KAA Gent",
-  "nameZh": "",
+  "nameZh": "根特",
   "league": "比利时甲级",
   "aliases": [
    "KAA Gent"
@@ -2505,7 +2485,7 @@
  {
   "id": "fc-cosmos-koblenz",
   "name": "FC Cosmos Koblenz",
-  "nameZh": "",
+  "nameZh": "科布伦茨",
   "league": "德甲",
   "aliases": [
    "FC Cosmos Koblenz"
@@ -2514,7 +2494,7 @@
  {
   "id": "sv-zulte-waregem",
   "name": "SV Zulte Waregem",
-  "nameZh": "",
+  "nameZh": "瓦雷赫姆",
   "league": "比利时甲级",
   "aliases": [
    "SV Zulte Waregem"
@@ -2586,7 +2566,7 @@
  {
   "id": "olympiacos-fc",
   "name": "Olympiacos FC",
-  "nameZh": "",
+  "nameZh": "奥林匹亚科斯",
   "league": "希腊超",
   "aliases": [
    "Olympiacos FC"
@@ -2712,7 +2692,7 @@
  {
   "id": "luton-town-fc",
   "name": "Luton Town FC",
-  "nameZh": "",
+  "nameZh": "卢顿",
   "league": "英超",
   "aliases": [
    "Luton Town FC"
@@ -2730,7 +2710,7 @@
  {
   "id": "nashville-sc",
   "name": "Nashville SC",
-  "nameZh": "",
+  "nameZh": "纳什维尔",
   "league": "美职联",
   "aliases": [
    "Nashville SC"
@@ -2739,7 +2719,7 @@
  {
   "id": "fc-utrecht",
   "name": "FC Utrecht",
-  "nameZh": "",
+  "nameZh": "乌得勒支",
   "league": "荷甲",
   "aliases": [
    "FC Utrecht"
@@ -2766,7 +2746,7 @@
  {
   "id": "aarhus-gf",
   "name": "Aarhus GF",
-  "nameZh": "",
+  "nameZh": "奥胡斯",
   "league": "丹麦超",
   "aliases": [
    "Aarhus GF"
@@ -2793,7 +2773,7 @@
  {
   "id": "sint-truiden-vv",
   "name": "Sint-Truiden VV",
-  "nameZh": "",
+  "nameZh": "圣特雷登",
   "league": "比利时甲级",
   "aliases": [
    "Sint-Truiden VV"
@@ -2802,7 +2782,7 @@
  {
   "id": "fc-tokyo",
   "name": "FC Tokyo",
-  "nameZh": "",
+  "nameZh": "东京FC",
   "league": "日职联",
   "aliases": [
    "FC Tokyo"
@@ -2820,7 +2800,7 @@
  {
   "id": "sanfrecce-hiroshima",
   "name": "Sanfrecce Hiroshima",
-  "nameZh": "",
+  "nameZh": "广岛三箭",
   "league": "日职联",
   "aliases": [
    "Sanfrecce Hiroshima"
@@ -2838,7 +2818,7 @@
  {
   "id": "kashima-antlers",
   "name": "Kashima Antlers",
-  "nameZh": "",
+  "nameZh": "鹿岛鹿角",
   "league": "日职联",
   "aliases": [
    "Kashima Antlers"
@@ -2865,7 +2845,7 @@
  {
   "id": "fc-seoul",
   "name": "FC Seoul",
-  "nameZh": "",
+  "nameZh": "首尔FC",
   "league": "韩K联",
   "aliases": [
    "FC Seoul"
@@ -2928,7 +2908,7 @@
  {
   "id": "al-shabab-fc",
   "name": "Al Shabab FC",
-  "nameZh": "",
+  "nameZh": "萨巴布",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Shabab FC"
@@ -2937,7 +2917,7 @@
  {
   "id": "gangwon-fc",
   "name": "Gangwon FC",
-  "nameZh": "",
+  "nameZh": "江原FC",
   "league": "韩K联",
   "aliases": [
    "Gangwon FC"
@@ -2946,7 +2926,7 @@
  {
   "id": "birmingham-city-fc",
   "name": "Birmingham City FC",
-  "nameZh": "",
+  "nameZh": "伯明翰城",
   "league": "英超",
   "aliases": [
    "Birmingham City FC"
@@ -2955,7 +2935,7 @@
  {
   "id": "jeonbuk-hyundai-motors-fc",
   "name": "Jeonbuk Hyundai Motors FC",
-  "nameZh": "",
+  "nameZh": "全北现代",
   "league": "韩K联",
   "aliases": [
    "Jeonbuk Hyundai Motors FC"
@@ -2964,7 +2944,7 @@
  {
   "id": "fk-austria-wien",
   "name": "FK Austria Wien",
-  "nameZh": "",
+  "nameZh": "奥地利维也纳",
   "league": "奥地利甲级",
   "aliases": [
    "FK Austria Wien"
@@ -2973,7 +2953,7 @@
  {
   "id": "daejeon-hana-citizen-fc",
   "name": "Daejeon Hana Citizen FC",
-  "nameZh": "",
+  "nameZh": "大田市民",
   "league": "韩K联",
   "aliases": [
    "Daejeon Hana Citizen FC"
@@ -2991,7 +2971,7 @@
  {
   "id": "stoke-city-fc",
   "name": "Stoke City FC",
-  "nameZh": "",
+  "nameZh": "斯托克城",
   "league": "英超",
   "aliases": [
    "Stoke City FC"
@@ -3000,7 +2980,7 @@
  {
   "id": "ulsan-hd",
   "name": "Ulsan HD",
-  "nameZh": "",
+  "nameZh": "蔚山现代",
   "league": "韩K联",
   "aliases": [
    "Ulsan HD"
@@ -3027,7 +3007,7 @@
  {
   "id": "fc-lokomotiv-moscow",
   "name": "FC Lokomotiv Moscow",
-  "nameZh": "",
+  "nameZh": "莫斯科火车头",
   "league": "俄超",
   "aliases": [
    "FC Lokomotiv Moscow"
@@ -3045,7 +3025,7 @@
  {
   "id": "deportivo-toluca-fc",
   "name": "Deportivo Toluca FC",
-  "nameZh": "",
+  "nameZh": "托卢卡",
   "league": "墨超",
   "aliases": [
    "Deportivo Toluca FC"
@@ -3054,7 +3034,7 @@
  {
   "id": "club-santos-laguna",
   "name": "Club Santos Laguna",
-  "nameZh": "",
+  "nameZh": "桑托斯拉古纳",
   "league": "墨超",
   "aliases": [
    "Club Santos Laguna"
@@ -3081,7 +3061,7 @@
  {
   "id": "aek-athens",
   "name": "AEK Athens",
-  "nameZh": "",
+  "nameZh": "雅典AEK",
   "league": "希腊超",
   "aliases": [
    "AEK Athens"
@@ -3097,18 +3077,9 @@
   ]
  },
  {
-  "id": "rsc-anderlecht",
-  "name": "RSC Anderlecht",
-  "nameZh": "",
-  "league": "比利时甲级",
-  "aliases": [
-   "RSC Anderlecht"
-  ]
- },
- {
   "id": "fc-dynamo-moscow",
   "name": "FC Dynamo Moscow",
-  "nameZh": "",
+  "nameZh": "莫斯科迪纳摩",
   "league": "俄超",
   "aliases": [
    "FC Dynamo Moscow"
@@ -3117,7 +3088,7 @@
  {
   "id": "al-fateh-sc",
   "name": "Al Fateh SC",
-  "nameZh": "",
+  "nameZh": "法塔赫",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Fateh SC"
@@ -3144,7 +3115,7 @@
  {
   "id": "kv-mechelen",
   "name": "KV Mechelen",
-  "nameZh": "",
+  "nameZh": "梅赫伦",
   "league": "比利时甲级",
   "aliases": [
    "KV Mechelen"
@@ -3153,7 +3124,7 @@
  {
   "id": "sc-corinthians",
   "name": "SC Corinthians",
-  "nameZh": "",
+  "nameZh": "科林蒂安",
   "league": "巴西甲级",
   "aliases": [
    "SC Corinthians"
@@ -3162,7 +3133,7 @@
  {
   "id": "millwall-fc",
   "name": "Millwall FC",
-  "nameZh": "",
+  "nameZh": "米尔沃尔",
   "league": "英超",
   "aliases": [
    "Millwall FC"
@@ -3171,7 +3142,7 @@
  {
   "id": "wellington-phoenix-fc",
   "name": "Wellington Phoenix FC",
-  "nameZh": "",
+  "nameZh": "惠灵顿凤凰",
   "league": "澳超",
   "aliases": [
    "Wellington Phoenix FC"
@@ -3180,7 +3151,7 @@
  {
   "id": "auckland-fc",
   "name": "Auckland FC",
-  "nameZh": "",
+  "nameZh": "奥克兰FC",
   "league": "澳超",
   "aliases": [
    "Auckland FC"
@@ -3234,7 +3205,7 @@
  {
   "id": "ws-wanderers-fc",
   "name": "WS Wanderers FC",
-  "nameZh": "",
+  "nameZh": "西悉尼流浪者",
   "league": "澳超",
   "aliases": [
    "WS Wanderers FC"
@@ -3243,7 +3214,7 @@
  {
   "id": "port-vale-fc",
   "name": "Port Vale FC",
-  "nameZh": "",
+  "nameZh": "维尔港",
   "league": "英超",
   "aliases": [
    "Port Vale FC"
@@ -3252,7 +3223,7 @@
  {
   "id": "silkeborg-if",
   "name": "Silkeborg IF",
-  "nameZh": "",
+  "nameZh": "锡尔克堡",
   "league": "丹麦超",
   "aliases": [
    "Silkeborg IF"
@@ -3261,7 +3232,7 @@
  {
   "id": "newcastle-united-jets-fc",
   "name": "Newcastle United Jets FC",
-  "nameZh": "",
+  "nameZh": "纽卡斯尔喷气机",
   "league": "澳超",
   "aliases": [
    "Newcastle United Jets FC"
@@ -3270,7 +3241,7 @@
  {
   "id": "braintree-town-fc",
   "name": "Braintree Town FC",
-  "nameZh": "",
+  "nameZh": "布伦特里",
   "league": "英超",
   "aliases": [
    "Braintree Town FC"
@@ -3288,7 +3259,7 @@
  {
   "id": "us-cremonese",
   "name": "US Cremonese",
-  "nameZh": "",
+  "nameZh": "克雷莫纳",
   "league": "意甲",
   "aliases": [
    "US Cremonese"
@@ -3306,7 +3277,7 @@
  {
   "id": "derby-county-fc",
   "name": "Derby County FC",
-  "nameZh": "",
+  "nameZh": "德比郡",
   "league": "英超",
   "aliases": [
    "Derby County FC"
@@ -3342,7 +3313,7 @@
  {
   "id": "fc-pari-nizhny-novgorod",
   "name": "FC Pari Nizhny Novgorod",
-  "nameZh": "",
+  "nameZh": "下诺夫哥罗德",
   "league": "俄超",
   "aliases": [
    "FC Pari Nizhny Novgorod"
@@ -3360,7 +3331,7 @@
  {
   "id": "fc-juarez",
   "name": "FC Juárez",
-  "nameZh": "",
+  "nameZh": "华雷斯",
   "league": "墨超",
   "aliases": [
    "FC Juárez"
@@ -3369,7 +3340,7 @@
  {
   "id": "club-leon",
   "name": "Club León",
-  "nameZh": "",
+  "nameZh": "莱昂",
   "league": "墨超",
   "aliases": [
    "Club León"
@@ -3378,7 +3349,7 @@
  {
   "id": "mazatlan-fc",
   "name": "Mazatlán FC",
-  "nameZh": "",
+  "nameZh": "马萨特兰",
   "league": "墨超",
   "aliases": [
    "Mazatlán FC"
@@ -3441,7 +3412,7 @@
  {
   "id": "al-fayha-fc",
   "name": "Al Fayha FC",
-  "nameZh": "",
+  "nameZh": "法伊哈",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Fayha FC"
@@ -3484,18 +3455,9 @@
   ]
  },
  {
-  "id": "palmeiras",
-  "name": "Palmeiras",
-  "nameZh": "帕尔梅拉斯",
-  "league": "巴西甲级",
-  "aliases": [
-   "Palmeiras"
-  ]
- },
- {
   "id": "ca-san-lorenzo",
   "name": "CA San Lorenzo",
-  "nameZh": "",
+  "nameZh": "圣洛伦索",
   "league": "阿甲",
   "aliases": [
    "CA San Lorenzo"
@@ -3504,7 +3466,7 @@
  {
   "id": "ca-lanus",
   "name": "CA Lanús",
-  "nameZh": "",
+  "nameZh": "拉努斯",
   "league": "阿甲",
   "aliases": [
    "CA Lanús"
@@ -3522,7 +3484,7 @@
  {
   "id": "sao-paulo-fc",
   "name": "São Paulo FC",
-  "nameZh": "",
+  "nameZh": "圣保罗",
   "league": "巴西甲级",
   "aliases": [
    "São Paulo FC"
@@ -3531,7 +3493,7 @@
  {
   "id": "cs-independiente-rivadavia",
   "name": "CS Independiente Rivadavia",
-  "nameZh": "",
+  "nameZh": "里瓦达维亚独立",
   "league": "阿甲",
   "aliases": [
    "CS Independiente Rivadavia"
@@ -3549,7 +3511,7 @@
  {
   "id": "portsmouth-fc",
   "name": "Portsmouth FC",
-  "nameZh": "",
+  "nameZh": "朴茨茅斯",
   "league": "英超",
   "aliases": [
    "Portsmouth FC"
@@ -3558,7 +3520,7 @@
  {
   "id": "red-bull-bragantino",
   "name": "Red Bull Bragantino",
-  "nameZh": "",
+  "nameZh": "布拉甘蒂诺",
   "league": "巴西甲级",
   "aliases": [
    "Red Bull Bragantino"
@@ -3567,7 +3529,7 @@
  {
   "id": "ca-talleres",
   "name": "CA Talleres",
-  "nameZh": "",
+  "nameZh": "塔列雷斯",
   "league": "阿甲",
   "aliases": [
    "CA Talleres"
@@ -3621,7 +3583,7 @@
  {
   "id": "cultural-leonesa",
   "name": "Cultural Leonesa",
-  "nameZh": "",
+  "nameZh": "莱昂文化",
   "league": "西甲",
   "aliases": [
    "Cultural Leonesa"
@@ -3639,7 +3601,7 @@
  {
   "id": "al-ettifaq-fc",
   "name": "Al Ettifaq FC",
-  "nameZh": "",
+  "nameZh": "伊蒂法克",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Ettifaq FC"
@@ -3648,7 +3610,7 @@
  {
   "id": "neom-sc",
   "name": "Neom SC",
-  "nameZh": "",
+  "nameZh": "尼欧姆",
   "league": "沙特职业联赛",
   "aliases": [
    "Neom SC"
@@ -3657,7 +3619,7 @@
  {
   "id": "al-ula-saudi-fc",
   "name": "Al Ula Saudi FC",
-  "nameZh": "",
+  "nameZh": "欧拉",
   "league": "沙特职业联赛",
   "aliases": [
    "Al Ula Saudi FC"
@@ -3666,7 +3628,7 @@
  {
   "id": "hibernian-fc",
   "name": "Hibernian FC",
-  "nameZh": "",
+  "nameZh": "希伯尼安",
   "league": "苏超",
   "aliases": [
    "Hibernian FC"
@@ -3675,7 +3637,7 @@
  {
   "id": "charlton-athletic-fc",
   "name": "Charlton Athletic FC",
-  "nameZh": "",
+  "nameZh": "查尔顿",
   "league": "英超",
   "aliases": [
    "Charlton Athletic FC"
@@ -3684,7 +3646,7 @@
  {
   "id": "ipswich-town-fc",
   "name": "Ipswich Town FC",
-  "nameZh": "",
+  "nameZh": "伊普斯维奇",
   "league": "英超",
   "aliases": [
    "Ipswich Town FC"
@@ -3693,7 +3655,7 @@
  {
   "id": "fc-lorient",
   "name": "FC Lorient",
-  "nameZh": "",
+  "nameZh": "洛里昂",
   "league": "法甲",
   "aliases": [
    "FC Lorient"
@@ -3702,7 +3664,7 @@
  {
   "id": "samsunspor",
   "name": "Samsunspor",
-  "nameZh": "",
+  "nameZh": "萨姆松体育",
   "league": "土超",
   "aliases": [
    "Samsunspor"
@@ -3738,7 +3700,7 @@
  {
   "id": "cd-tondela",
   "name": "CD Tondela",
-  "nameZh": "",
+  "nameZh": "通德拉",
   "league": "葡超",
   "aliases": [
    "CD Tondela"
@@ -3756,7 +3718,7 @@
  {
   "id": "hannover-96",
   "name": "Hannover 96",
-  "nameZh": "",
+  "nameZh": "汉诺威96",
   "league": "德甲",
   "aliases": [
    "Hannover 96"
@@ -3783,7 +3745,7 @@
  {
   "id": "rc-celta-vigo",
   "name": "RC Celta Vigo",
-  "nameZh": "",
+  "nameZh": "塞尔塔",
   "league": "西甲",
   "aliases": [
    "RC Celta Vigo"
@@ -3792,7 +3754,7 @@
  {
   "id": "udinese",
   "name": "Udinese",
-  "nameZh": "",
+  "nameZh": "乌迪内斯",
   "league": "意甲",
   "aliases": [
    "Udinese"
@@ -3801,7 +3763,7 @@
  {
   "id": "holstein-kiel",
   "name": "Holstein Kiel",
-  "nameZh": "",
+  "nameZh": "荷尔斯泰因基尔",
   "league": "德甲",
   "aliases": [
    "Holstein Kiel"
@@ -3846,7 +3808,7 @@
  {
   "id": "pisa-sc",
   "name": "Pisa SC",
-  "nameZh": "",
+  "nameZh": "比萨",
   "league": "意甲",
   "aliases": [
    "Pisa SC"
@@ -3855,7 +3817,7 @@
  {
   "id": "fortuna-dusseldorf",
   "name": "Fortuna Düsseldorf",
-  "nameZh": "",
+  "nameZh": "杜塞尔多夫",
   "league": "德甲",
   "aliases": [
    "Fortuna Düsseldorf"
@@ -3873,7 +3835,7 @@
  {
   "id": "kas-mpasa-sk",
   "name": "Kasımpaşa SK",
-  "nameZh": "",
+  "nameZh": "卡瑟姆帕萨",
   "league": "土超",
   "aliases": [
    "Kasımpaşa SK"
@@ -3882,7 +3844,7 @@
  {
   "id": "servette-fc",
   "name": "Servette FC",
-  "nameZh": "",
+  "nameZh": "塞尔维特",
   "league": "瑞士超",
   "aliases": [
    "Servette FC"
@@ -3945,7 +3907,7 @@
  {
   "id": "cf-monterrey",
   "name": "CF Monterrey",
-  "nameZh": "",
+  "nameZh": "蒙特雷",
   "league": "墨超",
   "aliases": [
    "CF Monterrey"
@@ -3963,7 +3925,7 @@
  {
   "id": "tigres-uanl",
   "name": "Tigres UANL",
-  "nameZh": "",
+  "nameZh": "老虎",
   "league": "墨超",
   "aliases": [
    "Tigres UANL"
@@ -3972,7 +3934,7 @@
  {
   "id": "estudiantes-lp",
   "name": "Estudiantes LP",
-  "nameZh": "",
+  "nameZh": "拉普拉塔大学生",
   "league": "阿甲",
   "aliases": [
    "Estudiantes LP"
@@ -3981,7 +3943,7 @@
  {
   "id": "real-salt-lake",
   "name": "Real Salt Lake",
-  "nameZh": "",
+  "nameZh": "盐湖城皇家",
   "league": "美职联",
   "aliases": [
    "Real Salt Lake"
@@ -3990,7 +3952,7 @@
  {
   "id": "new-england-revolution",
   "name": "New England Revolution",
-  "nameZh": "",
+  "nameZh": "新英格兰革命",
   "league": "美职联",
   "aliases": [
    "New England Revolution"
@@ -3998,17 +3960,17 @@
  },
  {
   "id": "fc-cincinnatti",
-  "name": "FC Cincinnatti",
-  "nameZh": "",
+  "name": "FC Cincinnati",
+  "nameZh": "辛辛那提",
   "league": "美职联",
   "aliases": [
-   "FC Cincinnatti"
+   "FC Cincinnati"
   ]
  },
  {
   "id": "charlotte-fc",
   "name": "Charlotte FC",
-  "nameZh": "",
+  "nameZh": "夏洛特",
   "league": "美职联",
   "aliases": [
    "Charlotte FC"
@@ -4026,7 +3988,7 @@
  {
   "id": "toulouse-fc",
   "name": "Toulouse FC",
-  "nameZh": "",
+  "nameZh": "图卢兹",
   "league": "法甲",
   "aliases": [
    "Toulouse FC"
@@ -4075,15 +4037,6 @@
   "league": "其他联赛",
   "aliases": [
    "FK Dinamo Samarkand"
-  ]
- },
- {
-  "id": "istanbul-basaksehir",
-  "name": "Istanbul Basaksehir",
-  "nameZh": "巴萨克谢希尔",
-  "league": "土超",
-  "aliases": [
-   "Istanbul Basaksehir"
   ]
  },
  {

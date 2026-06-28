@@ -1,6 +1,6 @@
 {
- "version": "v1.5.6",
- "updated": "2026-06-28T08:26:09+00:00",
+ "version": "v1.6.0",
+ "updated": "2026-06-28T02:51:48-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 143,
  "totalGoals": 203,
@@ -13,6 +13,728 @@
   "stageZh": "32强",
   "lastDate": "2026-06-27",
   "nextDate": "2026-06-28"
+ },
+ "funstats": {
+  "multiGoals": [
+   {
+    "n": 3,
+    "pens": 0,
+    "player": "Lionel Messi",
+    "nameZh": "梅西",
+    "nation": "Argentina",
+    "nationZh": "阿根廷",
+    "oppo": "Algeria",
+    "oppoZh": "阿尔及利亚",
+    "score": "3-0",
+    "date": "2026-06-16",
+    "ground": "Kansas City"
+   },
+   {
+    "n": 3,
+    "pens": 0,
+    "player": "Jonathan David",
+    "nameZh": "乔纳森·戴维",
+    "nation": "Canada",
+    "nationZh": "加拿大",
+    "oppo": "Qatar",
+    "oppoZh": "卡塔尔",
+    "score": "6-0",
+    "date": "2026-06-18",
+    "ground": "Vancouver"
+   },
+   {
+    "n": 3,
+    "pens": 0,
+    "player": "Ousmane Dembele",
+    "nameZh": "登贝莱",
+    "nation": "France",
+    "nationZh": "法国",
+    "oppo": "Norway",
+    "oppoZh": "挪威",
+    "score": "4-1",
+    "date": "2026-06-26",
+    "ground": "Boston"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Folarin Balogun",
+    "nameZh": "巴洛贡",
+    "nation": "USA",
+    "nationZh": "美国",
+    "oppo": "Paraguay",
+    "oppoZh": "巴拉圭",
+    "score": "4-1",
+    "date": "2026-06-12",
+    "ground": "Los Angeles"
+   },
+   {
+    "n": 2,
+    "pens": 1,
+    "player": "Kai Havertz",
+    "nameZh": "哈弗茨",
+    "nation": "Germany",
+    "nationZh": "德国",
+    "oppo": "Curaçao",
+    "oppoZh": "库拉索",
+    "score": "7-1",
+    "date": "2026-06-14",
+    "ground": "Houston"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Yasin Ayari",
+    "nameZh": "阿亚里",
+    "nation": "Sweden",
+    "nationZh": "瑞典",
+    "oppo": "Tunisia",
+    "oppoZh": "突尼斯",
+    "score": "5-1",
+    "date": "2026-06-14",
+    "ground": "Monterrey"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Elijah Just",
+    "nameZh": "贾斯特",
+    "nation": "New Zealand",
+    "nationZh": "新西兰",
+    "oppo": "Iran",
+    "oppoZh": "伊朗",
+    "score": "2-2",
+    "date": "2026-06-15",
+    "ground": "Los Angeles"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Kylian Mbappe",
+    "nameZh": "姆巴佩",
+    "nation": "France",
+    "nationZh": "法国",
+    "oppo": "Senegal",
+    "oppoZh": "塞内加尔",
+    "score": "3-1",
+    "date": "2026-06-16",
+    "ground": "New York"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Erling Haaland",
+    "nameZh": "哈兰德",
+    "nation": "Norway",
+    "nationZh": "挪威",
+    "oppo": "Iraq",
+    "oppoZh": "伊拉克",
+    "score": "4-1",
+    "date": "2026-06-16",
+    "ground": "Boston"
+   },
+   {
+    "n": 2,
+    "pens": 1,
+    "player": "Harry Kane",
+    "nameZh": "凯恩",
+    "nation": "England",
+    "nationZh": "英格兰",
+    "oppo": "Croatia",
+    "oppoZh": "克罗地亚",
+    "score": "4-2",
+    "date": "2026-06-17",
+    "ground": "Dallas"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Johan Manzambi",
+    "nameZh": "曼赞比",
+    "nation": "Switzerland",
+    "nationZh": "瑞士",
+    "oppo": "Bosnia & Herzegovina",
+    "oppoZh": "波黑",
+    "score": "4-1",
+    "date": "2026-06-18",
+    "ground": "Los Angeles"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Matheus Cunha",
+    "nameZh": "库尼亚",
+    "nation": "Brazil",
+    "nationZh": "巴西",
+    "oppo": "Haiti",
+    "oppoZh": "海地",
+    "score": "3-0",
+    "date": "2026-06-19",
+    "ground": "Philadelphia"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Denis Undav",
+    "nameZh": "德尼兹·昂达夫",
+    "nation": "Germany",
+    "nationZh": "德国",
+    "oppo": "Ivory Coast",
+    "oppoZh": "科特迪瓦",
+    "score": "2-1",
+    "date": "2026-06-20",
+    "ground": "Toronto"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Brian Brobbey",
+    "nameZh": "布罗比",
+    "nation": "Netherlands",
+    "nationZh": "荷兰",
+    "oppo": "Sweden",
+    "oppoZh": "瑞典",
+    "score": "5-1",
+    "date": "2026-06-20",
+    "ground": "Houston"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Cody Gakpo",
+    "nameZh": "加克波",
+    "nation": "Netherlands",
+    "nationZh": "荷兰",
+    "oppo": "Sweden",
+    "oppoZh": "瑞典",
+    "score": "5-1",
+    "date": "2026-06-20",
+    "ground": "Houston"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Ayase Ueda",
+    "nameZh": "上田绮世",
+    "nation": "Japan",
+    "nationZh": "日本",
+    "oppo": "Tunisia",
+    "oppoZh": "突尼斯",
+    "score": "4-0",
+    "date": "2026-06-20",
+    "ground": "Monterrey"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Mikel Oyarzabal",
+    "nameZh": "奥亚萨瓦尔",
+    "nation": "Spain",
+    "nationZh": "西班牙",
+    "oppo": "Saudi Arabia",
+    "oppoZh": "沙特阿拉伯",
+    "score": "4-0",
+    "date": "2026-06-21",
+    "ground": "Atlanta"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Kylian Mbappe",
+    "nameZh": "姆巴佩",
+    "nation": "France",
+    "nationZh": "法国",
+    "oppo": "Iraq",
+    "oppoZh": "伊拉克",
+    "score": "3-0",
+    "date": "2026-06-22",
+    "ground": "Philadelphia"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Erling Haaland",
+    "nameZh": "哈兰德",
+    "nation": "Norway",
+    "nationZh": "挪威",
+    "oppo": "Senegal",
+    "oppoZh": "塞内加尔",
+    "score": "3-2",
+    "date": "2026-06-22",
+    "ground": "New York"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Ismaila Sarr",
+    "nameZh": "伊斯梅拉",
+    "nation": "Senegal",
+    "nationZh": "塞内加尔",
+    "oppo": "Norway",
+    "oppoZh": "挪威",
+    "score": "2-3",
+    "date": "2026-06-22",
+    "ground": "New York"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Lionel Messi",
+    "nameZh": "梅西",
+    "nation": "Argentina",
+    "nationZh": "阿根廷",
+    "oppo": "Austria",
+    "oppoZh": "奥地利",
+    "score": "2-0",
+    "date": "2026-06-22",
+    "ground": "Dallas"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Cristiano Ronaldo",
+    "nameZh": "C罗",
+    "nation": "Portugal",
+    "nationZh": "葡萄牙",
+    "oppo": "Uzbekistan",
+    "oppoZh": "乌兹别克斯坦",
+    "score": "5-0",
+    "date": "2026-06-23",
+    "ground": "Houston"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Vinicius Junior",
+    "nameZh": "维尼修斯",
+    "nation": "Brazil",
+    "nationZh": "巴西",
+    "oppo": "Scotland",
+    "oppoZh": "苏格兰",
+    "score": "3-0",
+    "date": "2026-06-24",
+    "ground": "Miami"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Nicolas Pepe",
+    "nameZh": "佩佩",
+    "nation": "Ivory Coast",
+    "nationZh": "科特迪瓦",
+    "oppo": "Curaçao",
+    "oppoZh": "库拉索",
+    "score": "2-0",
+    "date": "2026-06-25",
+    "ground": "Philadelphia"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Leandro Trossard",
+    "nameZh": "莱安德罗·特罗萨德",
+    "nation": "Belgium",
+    "nationZh": "比利时",
+    "oppo": "New Zealand",
+    "oppoZh": "新西兰",
+    "score": "5-1",
+    "date": "2026-06-26",
+    "ground": "Vancouver"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Pape Gueye",
+    "nameZh": "帕普·盖耶",
+    "nation": "Senegal",
+    "nationZh": "塞内加尔",
+    "oppo": "Iraq",
+    "oppoZh": "伊拉克",
+    "score": "5-0",
+    "date": "2026-06-26",
+    "ground": "Toronto"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Riyad Mahrez",
+    "nameZh": "里亚德·马赫雷斯",
+    "nation": "Algeria",
+    "nationZh": "阿尔及利亚",
+    "oppo": "Austria",
+    "oppoZh": "奥地利",
+    "score": "3-3",
+    "date": "2026-06-27",
+    "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 1,
+    "player": "Yoane Wissa",
+    "nameZh": "维萨",
+    "nation": "DR Congo",
+    "nationZh": "刚果(金)",
+    "oppo": "Uzbekistan",
+    "oppoZh": "乌兹别克斯坦",
+    "score": "3-1",
+    "date": "2026-06-27",
+    "ground": "Atlanta"
+   }
+  ],
+  "timeBuckets": {
+   "1-5": 8,
+   "6-30": 45,
+   "31-45": 37,
+   "46-75": 61,
+   "76-90": 32,
+   "90+": 20,
+   "ET": 0
+  },
+  "earliest": {
+   "player": "Ismael Saibari",
+   "nameZh": "赛巴里",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "oppo": "Scotland",
+   "oppoZh": "苏格兰",
+   "score": "1-0",
+   "date": "2026-06-19",
+   "min": 2,
+   "minDisp": "2'"
+  },
+  "latest": {
+   "player": "Marko Arnautovic",
+   "nameZh": "阿瑙托维奇",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "oppo": "Jordan",
+   "oppoZh": "约旦",
+   "score": "3-1",
+   "date": "2026-06-16",
+   "min": 102,
+   "minDisp": "90+12'"
+  },
+  "bigMatches": [
+   {
+    "t1": "Germany",
+    "t1Zh": "德国",
+    "t2": "Curaçao",
+    "t2Zh": "库拉索",
+    "ft": "7-1",
+    "total": 8,
+    "date": "2026-06-14",
+    "ground": "Houston",
+    "num": 9
+   },
+   {
+    "t1": "Sweden",
+    "t1Zh": "瑞典",
+    "t2": "Tunisia",
+    "t2Zh": "突尼斯",
+    "ft": "5-1",
+    "total": 6,
+    "date": "2026-06-14",
+    "ground": "Monterrey",
+    "num": 12
+   },
+   {
+    "t1": "England",
+    "t1Zh": "英格兰",
+    "t2": "Croatia",
+    "t2Zh": "克罗地亚",
+    "ft": "4-2",
+    "total": 6,
+    "date": "2026-06-17",
+    "ground": "Dallas",
+    "num": 22
+   },
+   {
+    "t1": "Canada",
+    "t1Zh": "加拿大",
+    "t2": "Qatar",
+    "t2Zh": "卡塔尔",
+    "ft": "6-0",
+    "total": 6,
+    "date": "2026-06-18",
+    "ground": "Vancouver",
+    "num": 27
+   },
+   {
+    "t1": "Netherlands",
+    "t1Zh": "荷兰",
+    "t2": "Sweden",
+    "t2Zh": "瑞典",
+    "ft": "5-1",
+    "total": 6,
+    "date": "2026-06-20",
+    "ground": "Houston",
+    "num": 33
+   },
+   {
+    "t1": "Morocco",
+    "t1Zh": "摩洛哥",
+    "t2": "Haiti",
+    "t2Zh": "海地",
+    "ft": "4-2",
+    "total": 6,
+    "date": "2026-06-24",
+    "ground": "Atlanta",
+    "num": 52
+   },
+   {
+    "t1": "New Zealand",
+    "t1Zh": "新西兰",
+    "t2": "Belgium",
+    "t2Zh": "比利时",
+    "ft": "1-5",
+    "total": 6,
+    "date": "2026-06-26",
+    "ground": "Vancouver",
+    "num": 66
+   },
+   {
+    "t1": "Algeria",
+    "t1Zh": "阿尔及利亚",
+    "t2": "Austria",
+    "t2Zh": "奥地利",
+    "ft": "3-3",
+    "total": 6,
+    "date": "2026-06-27",
+    "ground": "Kansas City",
+    "num": 71
+   },
+   {
+    "t1": "USA",
+    "t1Zh": "美国",
+    "t2": "Paraguay",
+    "t2Zh": "巴拉圭",
+    "ft": "4-1",
+    "total": 5,
+    "date": "2026-06-12",
+    "ground": "Los Angeles",
+    "num": 4
+   },
+   {
+    "t1": "Iraq",
+    "t1Zh": "伊拉克",
+    "t2": "Norway",
+    "t2Zh": "挪威",
+    "ft": "1-4",
+    "total": 5,
+    "date": "2026-06-16",
+    "ground": "Boston",
+    "num": 18
+   },
+   {
+    "t1": "Switzerland",
+    "t1Zh": "瑞士",
+    "t2": "Bosnia & Herzegovina",
+    "t2Zh": "波黑",
+    "ft": "4-1",
+    "total": 5,
+    "date": "2026-06-18",
+    "ground": "Los Angeles",
+    "num": 26
+   },
+   {
+    "t1": "Norway",
+    "t1Zh": "挪威",
+    "t2": "Senegal",
+    "t2Zh": "塞内加尔",
+    "ft": "3-2",
+    "total": 5,
+    "date": "2026-06-22",
+    "ground": "New York",
+    "num": 43
+   },
+   {
+    "t1": "Portugal",
+    "t1Zh": "葡萄牙",
+    "t2": "Uzbekistan",
+    "t2Zh": "乌兹别克斯坦",
+    "ft": "5-0",
+    "total": 5,
+    "date": "2026-06-23",
+    "ground": "Houston",
+    "num": 45
+   },
+   {
+    "t1": "Türkiye",
+    "t1Zh": "土耳其",
+    "t2": "USA",
+    "t2Zh": "美国",
+    "ft": "3-2",
+    "total": 5,
+    "date": "2026-06-25",
+    "ground": "Los Angeles",
+    "num": 59
+   },
+   {
+    "t1": "Norway",
+    "t1Zh": "挪威",
+    "t2": "France",
+    "t2Zh": "法国",
+    "ft": "1-4",
+    "total": 5,
+    "date": "2026-06-26",
+    "ground": "Boston",
+    "num": 61
+   },
+   {
+    "t1": "Senegal",
+    "t1Zh": "塞内加尔",
+    "t2": "Iraq",
+    "t2Zh": "伊拉克",
+    "ft": "5-0",
+    "total": 5,
+    "date": "2026-06-26",
+    "ground": "Toronto",
+    "num": 62
+   },
+   {
+    "t1": "Netherlands",
+    "t1Zh": "荷兰",
+    "t2": "Japan",
+    "t2Zh": "日本",
+    "ft": "2-2",
+    "total": 4,
+    "date": "2026-06-14",
+    "ground": "Dallas",
+    "num": 10
+   },
+   {
+    "t1": "Iran",
+    "t1Zh": "伊朗",
+    "t2": "New Zealand",
+    "t2Zh": "新西兰",
+    "ft": "2-2",
+    "total": 4,
+    "date": "2026-06-15",
+    "ground": "Los Angeles",
+    "num": 16
+   },
+   {
+    "t1": "France",
+    "t1Zh": "法国",
+    "t2": "Senegal",
+    "t2Zh": "塞内加尔",
+    "ft": "3-1",
+    "total": 4,
+    "date": "2026-06-16",
+    "ground": "New York",
+    "num": 17
+   },
+   {
+    "t1": "Austria",
+    "t1Zh": "奥地利",
+    "t2": "Jordan",
+    "t2Zh": "约旦",
+    "ft": "3-1",
+    "total": 4,
+    "date": "2026-06-16",
+    "ground": "San Francisco Bay Area",
+    "num": 20
+   },
+   {
+    "t1": "Uzbekistan",
+    "t1Zh": "乌兹别克斯坦",
+    "t2": "Colombia",
+    "t2Zh": "哥伦比亚",
+    "ft": "1-3",
+    "total": 4,
+    "date": "2026-06-17",
+    "ground": "Mexico City",
+    "num": 24
+   },
+   {
+    "t1": "Tunisia",
+    "t1Zh": "突尼斯",
+    "t2": "Japan",
+    "t2Zh": "日本",
+    "ft": "0-4",
+    "total": 4,
+    "date": "2026-06-20",
+    "ground": "Monterrey",
+    "num": 36
+   },
+   {
+    "t1": "New Zealand",
+    "t1Zh": "新西兰",
+    "t2": "Egypt",
+    "t2Zh": "埃及",
+    "ft": "1-3",
+    "total": 4,
+    "date": "2026-06-21",
+    "ground": "Vancouver",
+    "num": 40
+   },
+   {
+    "t1": "Spain",
+    "t1Zh": "西班牙",
+    "t2": "Saudi Arabia",
+    "t2Zh": "沙特阿拉伯",
+    "ft": "4-0",
+    "total": 4,
+    "date": "2026-06-21",
+    "ground": "Atlanta",
+    "num": 37
+   },
+   {
+    "t1": "Uruguay",
+    "t1Zh": "乌拉圭",
+    "t2": "Cape Verde",
+    "t2Zh": "佛得角",
+    "ft": "2-2",
+    "total": 4,
+    "date": "2026-06-21",
+    "ground": "Miami",
+    "num": 39
+   },
+   {
+    "t1": "Bosnia & Herzegovina",
+    "t1Zh": "波黑",
+    "t2": "Qatar",
+    "t2Zh": "卡塔尔",
+    "ft": "3-1",
+    "total": 4,
+    "date": "2026-06-24",
+    "ground": "Seattle",
+    "num": 50
+   },
+   {
+    "t1": "Tunisia",
+    "t1Zh": "突尼斯",
+    "t2": "Netherlands",
+    "t2Zh": "荷兰",
+    "ft": "1-3",
+    "total": 4,
+    "date": "2026-06-25",
+    "ground": "Kansas City",
+    "num": 58
+   },
+   {
+    "t1": "Jordan",
+    "t1Zh": "约旦",
+    "t2": "Argentina",
+    "t2Zh": "阿根廷",
+    "ft": "1-3",
+    "total": 4,
+    "date": "2026-06-27",
+    "ground": "Dallas",
+    "num": 72
+   },
+   {
+    "t1": "DR Congo",
+    "t1Zh": "刚果(金)",
+    "t2": "Uzbekistan",
+    "t2Zh": "乌兹别克斯坦",
+    "ft": "3-1",
+    "total": 4,
+    "date": "2026-06-27",
+    "ground": "Atlanta",
+    "num": 70
+   }
+  ]
  },
  "scorers": [
   {
@@ -153,10 +875,10 @@
    "nationZh": "英格兰",
    "goals": 3,
    "pens": 1,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "ENG-9"
   },
   {
@@ -633,10 +1355,10 @@
    "nationZh": "乌兹别克斯坦",
    "goals": 1,
    "pens": 0,
-   "club": "Istanbul Basaksehir",
+   "club": "Başakşehir FK",
    "clubZh": "巴萨克谢希尔",
    "league": "土超",
-   "club_id": "istanbul-basaksehir",
+   "club_id": "basaksehir-fk",
    "id": "UZB-22"
   },
   {
@@ -793,10 +1515,10 @@
    "nationZh": "阿尔及利亚",
    "goals": 1,
    "pens": 0,
-   "club": "Marseille",
+   "club": "Olympique Marseille",
    "clubZh": "马赛",
    "league": "法甲",
-   "club_id": "marseille",
+   "club_id": "olympique-marseille",
    "id": "ALG-9"
   },
   {
@@ -921,10 +1643,10 @@
    "nationZh": "加纳",
    "goals": 1,
    "pens": 0,
-   "club": "FC Nordsjaelland",
+   "club": "FC Nordsjælland",
    "clubZh": "北西兰",
    "league": "丹麦超",
-   "club_id": "fc-nordsjaelland",
+   "club_id": "fc-nordsj-lland",
    "id": "GHA-3"
   },
   {
@@ -1002,7 +1724,7 @@
    "goals": 1,
    "pens": 0,
    "club": "Başakşehir FK",
-   "clubZh": "",
+   "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
@@ -1289,10 +2011,10 @@
    "nationZh": "德国",
    "goals": 1,
    "pens": 0,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "GER-10"
   },
   {
@@ -1513,8 +2235,8 @@
    "nationZh": "阿根廷",
    "goals": 1,
    "pens": 1,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "ARG-22"
@@ -1577,10 +2299,10 @@
    "nationZh": "哥伦比亚",
    "goals": 1,
    "pens": 0,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "COL-7"
   },
   {
@@ -1737,10 +2459,10 @@
    "nationZh": "巴拉圭",
    "goals": 1,
    "pens": 0,
-   "club": "Palmeiras",
+   "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
    "league": "巴西甲级",
-   "club_id": "palmeiras",
+   "club_id": "se-palmeiras",
    "id": "PAR-11"
   },
   {
@@ -2025,8 +2747,8 @@
    "nationZh": "克罗地亚",
    "goals": 1,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "CRO-17"
@@ -2048,22 +2770,6 @@
    "id": "CAN-24"
   },
   {
-   "player": "Ra\u0000k Belghali",
-   "nameZh": "拉克贝尔加利",
-   "num": 17,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Algeria",
-   "nationZh": "阿尔及利亚",
-   "goals": 1,
-   "pens": 0,
-   "club": "Hellas Verona FC",
-   "clubZh": "",
-   "league": "意甲",
-   "club_id": "hellas-verona-fc",
-   "id": "ALG-17"
-  },
-  {
    "player": "Rafael Leao",
    "nameZh": "拉斐尔·拉法·莱昂",
    "num": 17,
@@ -2078,6 +2784,22 @@
    "league": "意甲",
    "club_id": "ac-milan",
    "id": "POR-17"
+  },
+  {
+   "player": "Rafik Belghali",
+   "nameZh": "拉菲克·贝尔加利",
+   "num": 17,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "Hellas Verona FC",
+   "clubZh": "维罗纳",
+   "league": "意甲",
+   "club_id": "hellas-verona-fc",
+   "id": "ALG-17"
   },
   {
    "player": "Raul Jimenez",
@@ -2138,7 +2860,7 @@
    "goals": 1,
    "pens": 0,
    "club": "LASK Linz",
-   "clubZh": "",
+   "clubZh": "林茨",
    "league": "奥地利甲级",
    "club_id": "lask-linz",
    "id": "AUT-14"
@@ -2444,10 +3166,10 @@
    "nationZh": "英格兰",
    "goals": 3,
    "pens": 1,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "ENG-9"
   },
   {
@@ -2924,10 +3646,10 @@
    "nationZh": "乌兹别克斯坦",
    "goals": 1,
    "pens": 0,
-   "club": "Istanbul Basaksehir",
+   "club": "Başakşehir FK",
    "clubZh": "巴萨克谢希尔",
    "league": "土超",
-   "club_id": "istanbul-basaksehir",
+   "club_id": "basaksehir-fk",
    "id": "UZB-22"
   },
   {
@@ -3084,10 +3806,10 @@
    "nationZh": "阿尔及利亚",
    "goals": 1,
    "pens": 0,
-   "club": "Marseille",
+   "club": "Olympique Marseille",
    "clubZh": "马赛",
    "league": "法甲",
-   "club_id": "marseille",
+   "club_id": "olympique-marseille",
    "id": "ALG-9"
   },
   {
@@ -3212,10 +3934,10 @@
    "nationZh": "加纳",
    "goals": 1,
    "pens": 0,
-   "club": "FC Nordsjaelland",
+   "club": "FC Nordsjælland",
    "clubZh": "北西兰",
    "league": "丹麦超",
-   "club_id": "fc-nordsjaelland",
+   "club_id": "fc-nordsj-lland",
    "id": "GHA-3"
   },
   {
@@ -3293,7 +4015,7 @@
    "goals": 1,
    "pens": 0,
    "club": "Başakşehir FK",
-   "clubZh": "",
+   "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
@@ -3580,10 +4302,10 @@
    "nationZh": "德国",
    "goals": 1,
    "pens": 0,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "GER-10"
   },
   {
@@ -3804,8 +4526,8 @@
    "nationZh": "阿根廷",
    "goals": 1,
    "pens": 1,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "ARG-22"
@@ -3868,10 +4590,10 @@
    "nationZh": "哥伦比亚",
    "goals": 1,
    "pens": 0,
-   "club": "Bayern Munich",
+   "club": "FC Bayern München",
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
-   "club_id": "bayern-munich",
+   "club_id": "fc-bayern-munchen",
    "id": "COL-7"
   },
   {
@@ -4028,10 +4750,10 @@
    "nationZh": "巴拉圭",
    "goals": 1,
    "pens": 0,
-   "club": "Palmeiras",
+   "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
    "league": "巴西甲级",
-   "club_id": "palmeiras",
+   "club_id": "se-palmeiras",
    "id": "PAR-11"
   },
   {
@@ -4316,8 +5038,8 @@
    "nationZh": "克罗地亚",
    "goals": 1,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "CRO-17"
@@ -4339,22 +5061,6 @@
    "id": "CAN-24"
   },
   {
-   "player": "Ra\u0000k Belghali",
-   "nameZh": "拉克贝尔加利",
-   "num": 17,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Algeria",
-   "nationZh": "阿尔及利亚",
-   "goals": 1,
-   "pens": 0,
-   "club": "Hellas Verona FC",
-   "clubZh": "",
-   "league": "意甲",
-   "club_id": "hellas-verona-fc",
-   "id": "ALG-17"
-  },
-  {
    "player": "Rafael Leao",
    "nameZh": "拉斐尔·拉法·莱昂",
    "num": 17,
@@ -4369,6 +5075,22 @@
    "league": "意甲",
    "club_id": "ac-milan",
    "id": "POR-17"
+  },
+  {
+   "player": "Rafik Belghali",
+   "nameZh": "拉菲克·贝尔加利",
+   "num": 17,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "Hellas Verona FC",
+   "clubZh": "维罗纳",
+   "league": "意甲",
+   "club_id": "hellas-verona-fc",
+   "id": "ALG-17"
   },
   {
    "player": "Raul Jimenez",
@@ -4429,7 +5151,7 @@
    "goals": 1,
    "pens": 0,
    "club": "LASK Linz",
-   "clubZh": "",
+   "clubZh": "林茨",
    "league": "奥地利甲级",
    "club_id": "lask-linz",
    "id": "AUT-14"
@@ -4621,7 +5343,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kilmarnock FC",
-   "clubZh": "",
+   "clubZh": "基尔马诺克",
    "league": "苏超",
    "club_id": "kilmarnock-fc",
    "id": "COD-15"
@@ -4733,7 +5455,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Leicester City FC",
-   "clubZh": "",
+   "clubZh": "莱斯特城",
    "league": "英超",
    "club_id": "leicester-city-fc",
    "id": "GHA-7"
@@ -4749,7 +5471,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Rayo Vallecano",
-   "clubZh": "",
+   "clubZh": "巴列卡诺",
    "league": "西甲",
    "club_id": "rayo-vallecano",
    "id": "GHA-6"
@@ -4861,7 +5583,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Pumas UNAM",
-   "clubZh": "",
+   "clubZh": "美洲狮",
    "league": "墨超",
    "club_id": "pumas-unam",
    "id": "PAN-8"
@@ -4877,7 +5599,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kasımpaşa SK",
-   "clubZh": "",
+   "clubZh": "卡瑟姆帕萨",
    "league": "土超",
    "club_id": "kas-mpasa-sk",
    "id": "TUN-5"
@@ -4893,7 +5615,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "CZE-9"
@@ -4941,7 +5663,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Nashville SC",
-   "clubZh": "",
+   "clubZh": "纳什维尔",
    "league": "美职联",
    "club_id": "nashville-sc",
    "id": "IRQ-11"
@@ -5101,7 +5823,7 @@
    "goals": 0,
    "pens": 0,
    "club": "New York City FC",
-   "clubZh": "",
+   "clubZh": "纽约城",
    "league": "美职联",
    "club_id": "new-york-city-fc",
    "id": "AUS-13"
@@ -5165,7 +5887,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Heracles Almelo",
-   "clubZh": "",
+   "clubZh": "海拉克勒斯",
    "league": "荷甲",
    "club_id": "sc-heracles-almelo",
    "id": "AUS-10"
@@ -5219,22 +5941,6 @@
    "id": "QAT-11"
   },
   {
-   "player": "Al\u0000e Jones",
-   "nameZh": "艾尔·琼斯",
-   "num": 3,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Canada",
-   "nationZh": "加拿大",
-   "goals": 0,
-   "pens": 0,
-   "club": "Middlesbrough FC",
-   "clubZh": "",
-   "league": "英超",
-   "club_id": "middlesbrough-fc",
-   "id": "CAN-3"
-  },
-  {
    "player": "Ala Alhajji",
    "nameZh": "阿拉·阿尔哈吉",
    "num": 18,
@@ -5245,7 +5951,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Neom SC",
-   "clubZh": "",
+   "clubZh": "尼欧姆",
    "league": "沙特职业联赛",
    "club_id": "neom-sc",
    "id": "KSA-18"
@@ -5261,7 +5967,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atlético Mineiro",
-   "clubZh": "",
+   "clubZh": "米内罗竞技",
    "league": "巴西甲级",
    "club_id": "atletico-mineiro",
    "id": "ECU-21"
@@ -5277,7 +5983,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atlético Mineiro",
-   "clubZh": "",
+   "clubZh": "米内罗竞技",
    "league": "巴西甲级",
    "club_id": "atletico-mineiro",
    "id": "ECU-14"
@@ -5293,7 +5999,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Panathinaikos FC",
-   "clubZh": "",
+   "clubZh": "帕纳辛奈科斯",
    "league": "希腊超",
    "club_id": "panathinaikos-fc",
    "id": "CIV-23"
@@ -5357,7 +6063,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Parma",
-   "clubZh": "",
+   "clubZh": "帕尔马",
    "league": "意甲",
    "club_id": "parma",
    "id": "AUS-3"
@@ -5373,7 +6079,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Wolfsberger AC",
-   "clubZh": "",
+   "clubZh": "沃尔夫斯贝格",
    "league": "奥地利甲级",
    "club_id": "wolfsberger-ac",
    "id": "AUT-26"
@@ -5389,7 +6095,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CS Independiente Rivadavia",
-   "clubZh": "",
+   "clubZh": "里瓦达维亚独立",
    "league": "阿甲",
    "club_id": "cs-independiente-rivadavia",
    "id": "PAR-18"
@@ -5437,7 +6143,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Wellington Phoenix FC",
-   "clubZh": "",
+   "clubZh": "惠灵顿凤凰",
    "league": "澳超",
    "club_id": "wellington-phoenix-fc",
    "id": "NZL-14"
@@ -5485,7 +6191,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Holstein Kiel",
-   "clubZh": "",
+   "clubZh": "荷尔斯泰因基尔",
    "league": "德甲",
    "club_id": "holstein-kiel",
    "id": "SWE-21"
@@ -5517,7 +6223,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "AUT-22"
@@ -5581,7 +6287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Sochaux-Montbéliard",
-   "clubZh": "",
+   "clubZh": "索肖",
    "league": "法甲",
    "club_id": "fc-sochaux-montbeliard",
    "id": "HAI-12"
@@ -5597,7 +6303,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Talleres",
-   "clubZh": "",
+   "clubZh": "塔列雷斯",
    "league": "阿甲",
    "club_id": "ca-talleres",
    "id": "PAR-26"
@@ -5613,7 +6319,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Deportivo Toluca FC",
-   "clubZh": "",
+   "clubZh": "托卢卡",
    "league": "墨超",
    "club_id": "deportivo-toluca-fc",
    "id": "MEX-10"
@@ -5633,6 +6339,22 @@
    "league": "英超",
    "club_id": "liverpool",
    "id": "ARG-20"
+  },
+  {
+   "player": "Alfie Jones",
+   "nameZh": "阿尔菲·琼斯",
+   "num": 3,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Canada",
+   "nationZh": "加拿大",
+   "goals": 0,
+   "pens": 0,
+   "club": "Middlesbrough FC",
+   "clubZh": "米德尔斯堡",
+   "league": "英超",
+   "club_id": "middlesbrough-fc",
+   "id": "CAN-3"
   },
   {
    "player": "Alhashmi",
@@ -5693,7 +6415,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Najmah SC",
-   "clubZh": "",
+   "clubZh": "纳吉马",
    "league": "沙特职业联赛",
    "club_id": "al-najmah-sc",
    "id": "IRQ-17"
@@ -5741,7 +6463,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Norwich City FC",
-   "clubZh": "",
+   "clubZh": "诺维奇城",
    "league": "英超",
    "club_id": "norwich-city-fc",
    "id": "CAN-20"
@@ -5757,7 +6479,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Luton Town FC",
-   "clubZh": "",
+   "clubZh": "卢顿",
    "league": "英超",
    "club_id": "luton-town-fc",
    "id": "IRQ-9"
@@ -5773,7 +6495,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Shabab FC",
-   "clubZh": "",
+   "clubZh": "萨巴布",
    "league": "沙特职业联赛",
    "club_id": "al-shabab-fc",
    "id": "JOR-24"
@@ -5837,7 +6559,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FCV Dender EH",
-   "clubZh": "",
+   "clubZh": "登德尔",
    "league": "比利时甲级",
    "club_id": "fcv-dender-eh",
    "id": "IRN-7"
@@ -5932,8 +6654,8 @@
    "nationZh": "哥伦比亚",
    "goals": 0,
    "pens": 0,
-   "club": "CA Vélez Sars\u0000eld",
-   "clubZh": "",
+   "club": "CA Vélez Sarsfield",
+   "clubZh": "贝莱斯",
    "league": "阿甲",
    "club_id": "ca-velez-sars-eld",
    "id": "COL-24"
@@ -5964,8 +6686,8 @@
    "nationZh": "波黑",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "BIH-7"
@@ -6013,7 +6735,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Angers SCO",
-   "clubZh": "",
+   "clubZh": "昂热",
    "league": "法甲",
    "club_id": "angers-sco",
    "id": "MAR-17"
@@ -6061,7 +6783,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hull City FC",
-   "clubZh": "",
+   "clubZh": "赫尔城",
    "league": "英超",
    "club_id": "hull-city-fc",
    "id": "BIH-16"
@@ -6140,8 +6862,8 @@
    "nationZh": "挪威",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "NOR-21"
@@ -6157,7 +6879,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "CRO-9"
@@ -6173,7 +6895,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CR Vasco Da Gama",
-   "clubZh": "",
+   "clubZh": "瓦斯科达伽马",
    "league": "巴西甲级",
    "club_id": "cr-vasco-da-gama",
    "id": "COL-26"
@@ -6189,7 +6911,7 @@
    "goals": 0,
    "pens": 0,
    "club": "LASK Linz",
-   "clubZh": "",
+   "clubZh": "林茨",
    "league": "奥地利甲级",
    "club_id": "lask-linz",
    "id": "PAN-16"
@@ -6236,8 +6958,8 @@
    "nationZh": "科特迪瓦",
    "goals": 0,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "CIV-9"
@@ -6253,7 +6975,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atlético Mineiro",
-   "clubZh": "",
+   "clubZh": "米内罗竞技",
    "league": "巴西甲级",
    "club_id": "atletico-mineiro",
    "id": "ECU-17"
@@ -6301,7 +7023,7 @@
    "goals": 0,
    "pens": 0,
    "club": "San Diego FC",
-   "clubZh": "",
+   "clubZh": "圣迭戈",
    "league": "美职联",
    "club_id": "san-diego-fc",
    "id": "PAN-20"
@@ -6333,7 +7055,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Norwich City FC",
-   "clubZh": "",
+   "clubZh": "诺维奇城",
    "league": "英超",
    "club_id": "norwich-city-fc",
    "id": "TUN-25"
@@ -6349,7 +7071,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Royal Antwerp FC",
-   "clubZh": "",
+   "clubZh": "安特卫普",
    "league": "比利时甲级",
    "club_id": "royal-antwerp-fc",
    "id": "ECU-8"
@@ -6477,7 +7199,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Cremonese",
-   "clubZh": "",
+   "clubZh": "克雷莫纳",
    "league": "意甲",
    "club_id": "us-cremonese",
    "id": "PAR-9"
@@ -6525,7 +7247,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SK Sturm Graz",
-   "clubZh": "",
+   "clubZh": "格拉茨风暴",
    "league": "奥地利甲级",
    "club_id": "sk-sturm-graz",
    "id": "BIH-24"
@@ -6541,7 +7263,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Rotherham United FC",
-   "clubZh": "",
+   "clubZh": "罗瑟勒姆联",
    "league": "英超",
    "club_id": "rotherham-united-fc",
    "id": "CUW-15"
@@ -6589,7 +7311,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "BIH-8"
@@ -6605,7 +7327,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RC Lens",
-   "clubZh": "",
+   "clubZh": "朗斯",
    "league": "法甲",
    "club_id": "rc-lens",
    "id": "COD-26"
@@ -6717,7 +7439,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AS Saint-Etienne",
-   "clubZh": "",
+   "clubZh": "圣埃蒂安",
    "league": "法甲",
    "club_id": "as-saint-etienne",
    "id": "GHA-20"
@@ -6781,7 +7503,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CD Castellón",
-   "clubZh": "",
+   "clubZh": "卡斯特利翁",
    "league": "西甲",
    "club_id": "cd-castellon",
    "id": "AUS-11"
@@ -6893,7 +7615,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympiacos FC",
-   "clubZh": "",
+   "clubZh": "奥林匹亚科斯",
    "league": "希腊超",
    "club_id": "olympiacos-fc",
    "id": "MAR-20"
@@ -6925,7 +7647,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Le Havre AC",
-   "clubZh": "",
+   "clubZh": "勒阿弗尔",
    "league": "法甲",
    "club_id": "le-havre-ac",
    "id": "JPN-20"
@@ -6973,7 +7695,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Melbourne City FC",
-   "clubZh": "",
+   "clubZh": "墨尔本城",
    "league": "澳超",
    "club_id": "melbourne-city-fc",
    "id": "AUS-16"
@@ -7037,7 +7759,7 @@
    "goals": 0,
    "pens": 0,
    "club": "PAOK Saloniki",
-   "clubZh": "",
+   "clubZh": "PAOK塞萨洛尼基",
    "league": "希腊超",
    "club_id": "paok-saloniki",
    "id": "GHA-17"
@@ -7053,7 +7775,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lorient",
-   "clubZh": "",
+   "clubZh": "洛里昂",
    "league": "法甲",
    "club_id": "fc-lorient",
    "id": "SEN-9"
@@ -7101,7 +7823,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "CIV-24"
@@ -7149,7 +7871,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AS Saint-Etienne",
-   "clubZh": "",
+   "clubZh": "圣埃蒂安",
    "league": "法甲",
    "club_id": "as-saint-etienne",
    "id": "NZL-19"
@@ -7165,7 +7887,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Port Vale FC",
-   "clubZh": "",
+   "clubZh": "维尔港",
    "league": "英超",
    "club_id": "port-vale-fc",
    "id": "NZL-18"
@@ -7213,7 +7935,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Brøndby IF",
-   "clubZh": "",
+   "clubZh": "布隆德比",
    "league": "丹麦超",
    "club_id": "br-ndby-if",
    "id": "BIH-6"
@@ -7277,7 +7999,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RC Celta Vigo",
-   "clubZh": "",
+   "clubZh": "塞尔塔",
    "league": "西甲",
    "club_id": "rc-celta-vigo",
    "id": "ESP-26"
@@ -7341,7 +8063,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Orlando City SC",
-   "clubZh": "",
+   "clubZh": "奥兰多城",
    "league": "美职联",
    "club_id": "orlando-city-sc",
    "id": "PAR-20"
@@ -7357,7 +8079,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Volendam",
-   "clubZh": "",
+   "clubZh": "福伦丹",
    "league": "荷甲",
    "club_id": "fc-volendam",
    "id": "CUW-17"
@@ -7373,7 +8095,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Coventry City FC",
-   "clubZh": "",
+   "clubZh": "考文垂城",
    "league": "英超",
    "club_id": "coventry-city-fc",
    "id": "GHA-10"
@@ -7389,7 +8111,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日",
    "league": "比利时甲级",
    "club_id": "club-brugge",
    "id": "BEL-4"
@@ -7453,7 +8175,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CD Castellón",
-   "clubZh": "",
+   "clubZh": "卡斯特利翁",
    "league": "西甲",
    "club_id": "cd-castellon",
    "id": "COD-9"
@@ -7533,7 +8255,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Jeonbuk Hyundai Motors FC",
-   "clubZh": "",
+   "clubZh": "全北现代",
    "league": "韩K联",
    "club_id": "jeonbuk-hyundai-motors-fc",
    "id": "KOR-12"
@@ -7565,7 +8287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-24"
@@ -7597,7 +8319,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Heart Of Midlothian FC",
-   "clubZh": "",
+   "clubZh": "哈茨",
    "league": "苏超",
    "club_id": "heart-of-midlothian-fc",
    "id": "AUS-14"
@@ -7613,7 +8335,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atlas FC",
-   "clubZh": "",
+   "clubZh": "亚特拉斯",
    "league": "墨超",
    "club_id": "atlas-fc",
    "id": "COL-12"
@@ -7645,7 +8367,7 @@
    "goals": 0,
    "pens": 0,
    "club": "El Paso Locomotive FC",
-   "clubZh": "",
+   "clubZh": "埃尔帕索机车",
    "league": "美职联",
    "club_id": "el-paso-locomotive-fc",
    "id": "HAI-6"
@@ -7661,7 +8383,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RC Celta Vigo",
-   "clubZh": "",
+   "clubZh": "塞尔塔",
    "league": "西甲",
    "club_id": "rc-celta-vigo",
    "id": "SWE-15"
@@ -7677,7 +8399,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Angers SCO",
-   "clubZh": "",
+   "clubZh": "昂热",
    "league": "法甲",
    "club_id": "angers-sco",
    "id": "HAI-2"
@@ -7693,7 +8415,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Santos Laguna",
-   "clubZh": "",
+   "clubZh": "桑托斯拉古纳",
    "league": "墨超",
    "club_id": "club-santos-laguna",
    "id": "MEX-12"
@@ -7725,7 +8447,7 @@
    "goals": 0,
    "pens": 0,
    "club": "San Diego FC",
-   "clubZh": "",
+   "clubZh": "圣迭戈",
    "league": "美职联",
    "club_id": "san-diego-fc",
    "id": "CPV-23"
@@ -7741,7 +8463,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Minnesota United FC",
-   "clubZh": "",
+   "clubZh": "明尼苏达联",
    "league": "美职联",
    "club_id": "minnesota-united-fc",
    "id": "PAN-14"
@@ -7805,7 +8527,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Fortuna Düsseldorf",
-   "clubZh": "",
+   "clubZh": "杜塞尔多夫",
    "league": "德甲",
    "club_id": "fortuna-dusseldorf",
    "id": "SUI-26"
@@ -7836,10 +8558,10 @@
    "nationZh": "墨西哥",
    "goals": 0,
    "pens": 0,
-   "club": "RSC Anderlecht",
-   "clubZh": "",
+   "club": "Anderlecht",
+   "clubZh": "安德莱赫特",
    "league": "比利时甲级",
-   "club_id": "rsc-anderlecht",
+   "club_id": "anderlecht",
    "id": "MEX-21"
   },
   {
@@ -7853,7 +8575,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lokomotiv Moscow",
-   "clubZh": "",
+   "clubZh": "莫斯科火车头",
    "league": "俄超",
    "club_id": "fc-lokomotiv-moscow",
    "id": "MEX-3"
@@ -7949,7 +8671,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RCD Espanyol",
-   "clubZh": "",
+   "clubZh": "西班牙人",
    "league": "西甲",
    "club_id": "rcd-espanyol",
    "id": "COD-18"
@@ -7997,7 +8719,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Samsunspor",
-   "clubZh": "",
+   "clubZh": "萨姆松体育",
    "league": "土超",
    "club_id": "samsunspor",
    "id": "SEN-12"
@@ -8013,7 +8735,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Chicago Fire FC",
-   "clubZh": "",
+   "clubZh": "芝加哥火焰",
    "league": "美职联",
    "club_id": "chicago-fire-fc",
    "id": "USA-25"
@@ -8077,7 +8799,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "SUI-16"
@@ -8125,7 +8847,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Başakşehir FK",
-   "clubZh": "",
+   "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "CIV-13"
@@ -8141,7 +8863,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Heart Of Midlothian FC",
-   "clubZh": "",
+   "clubZh": "哈茨",
    "league": "苏超",
    "club_id": "heart-of-midlothian-fc",
    "id": "SCO-21"
@@ -8205,7 +8927,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Sassuolo",
-   "clubZh": "",
+   "clubZh": "萨索洛",
    "league": "意甲",
    "club_id": "us-sassuolo",
    "id": "AUS-20"
@@ -8237,7 +8959,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Casa Pia AC",
-   "clubZh": "",
+   "clubZh": "卡萨皮亚",
    "league": "葡超",
    "club_id": "casa-pia-ac",
    "id": "CPV-19"
@@ -8253,7 +8975,7 @@
    "goals": 0,
    "pens": 0,
    "club": "São Paulo FC",
-   "clubZh": "",
+   "clubZh": "圣保罗",
    "league": "巴西甲级",
    "club_id": "sao-paulo-fc",
    "id": "PAR-16"
@@ -8365,7 +9087,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Botafogo",
-   "clubZh": "",
+   "clubZh": "博塔弗戈",
    "league": "巴西甲级",
    "club_id": "botafogo",
    "id": "BRA-18"
@@ -8381,7 +9103,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Philadelphia Union",
-   "clubZh": "",
+   "clubZh": "费城联",
    "league": "美职联",
    "club_id": "philadelphia-union",
    "id": "HAI-17"
@@ -8413,7 +9135,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Elche CF",
-   "clubZh": "",
+   "clubZh": "埃尔切",
    "league": "西甲",
    "club_id": "elche-cf",
    "id": "AUT-2"
@@ -8637,7 +9359,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Nantes",
-   "clubZh": "",
+   "clubZh": "南特",
    "league": "法甲",
    "club_id": "fc-nantes",
    "id": "COL-22"
@@ -8653,7 +9375,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Schalke 04",
-   "clubZh": "",
+   "clubZh": "沙尔克04",
    "league": "德甲",
    "club_id": "fc-schalke-04",
    "id": "AUT-19"
@@ -8669,7 +9391,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Midtjylland",
-   "clubZh": "",
+   "clubZh": "中日德兰",
    "league": "丹麦超",
    "club_id": "fc-midtjylland",
    "id": "ECU-18"
@@ -8733,7 +9455,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Standard Liège",
-   "clubZh": "",
+   "clubZh": "标准列日",
    "league": "比利时甲级",
    "club_id": "standard-liege",
    "id": "IRN-24"
@@ -8749,7 +9471,7 @@
    "goals": 0,
    "pens": 0,
    "club": "UC Sampdoria",
-   "clubZh": "",
+   "clubZh": "桑普多利亚",
    "league": "意甲",
    "club_id": "uc-sampdoria",
    "id": "BIH-3"
@@ -8764,8 +9486,8 @@
    "nationZh": "荷兰",
    "goals": 0,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "NED-22"
@@ -8813,7 +9535,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Toronto FC",
-   "clubZh": "",
+   "clubZh": "多伦多",
    "league": "美职联",
    "club_id": "toronto-fc",
    "id": "HAI-7"
@@ -8829,7 +9551,7 @@
    "goals": 0,
    "pens": 0,
    "club": "NEC Nijmegen",
-   "clubZh": "",
+   "clubZh": "奈梅亨",
    "league": "荷甲",
    "club_id": "nec-nijmegen",
    "id": "CUW-24"
@@ -8924,8 +9646,8 @@
    "nationZh": "比利时",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "BEL-14"
@@ -8957,7 +9679,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC København",
-   "clubZh": "",
+   "clubZh": "哥本哈根",
    "league": "丹麦超",
    "club_id": "fc-k-benhavn",
    "id": "CRO-23"
@@ -9005,7 +9727,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Ulsan HD",
-   "clubZh": "",
+   "clubZh": "蔚山现代",
    "league": "韩K联",
    "club_id": "ulsan-hd",
    "id": "KOR-26"
@@ -9053,7 +9775,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Zenit St. Petersburg",
-   "clubZh": "",
+   "clubZh": "泽尼特",
    "league": "俄超",
    "club_id": "fc-zenit-st-petersburg",
    "id": "BRA-16"
@@ -9101,7 +9823,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AEL FC",
-   "clubZh": "",
+   "clubZh": "拉里萨",
    "league": "希腊超",
    "club_id": "ael-fc",
    "id": "COD-5"
@@ -9117,7 +9839,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Servette FC",
-   "clubZh": "",
+   "clubZh": "塞尔维特",
    "league": "瑞士超",
    "club_id": "servette-fc",
    "id": "TUN-6"
@@ -9133,7 +9855,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Karlsruher SC",
-   "clubZh": "",
+   "clubZh": "卡尔斯鲁厄",
    "league": "德甲",
    "club_id": "karlsruher-sc",
    "id": "BIH-17"
@@ -9181,7 +9903,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Mazatlán FC",
-   "clubZh": "",
+   "clubZh": "马萨特兰",
    "league": "墨超",
    "club_id": "mazatlan-fc",
    "id": "PAN-11"
@@ -9197,7 +9919,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Pari Nizhny Novgorod",
-   "clubZh": "",
+   "clubZh": "下诺夫哥罗德",
    "league": "俄超",
    "club_id": "fc-pari-nizhny-novgorod",
    "id": "PAN-5"
@@ -9229,7 +9951,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Schalke 04",
-   "clubZh": "",
+   "clubZh": "沙尔克04",
    "league": "德甲",
    "club_id": "fc-schalke-04",
    "id": "BIH-11"
@@ -9373,7 +10095,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC København",
-   "clubZh": "",
+   "clubZh": "哥本哈根",
    "league": "丹麦超",
    "club_id": "fc-k-benhavn",
    "id": "TUN-7"
@@ -9389,7 +10111,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hannover 96",
-   "clubZh": "",
+   "clubZh": "汉诺威96",
    "league": "德甲",
    "club_id": "hannover-96",
    "id": "TUN-8"
@@ -9469,7 +10191,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Miami FC",
-   "clubZh": "",
+   "clubZh": "迈阿密FC",
    "league": "美职联",
    "club_id": "miami-fc",
    "id": "CUW-1"
@@ -9565,7 +10287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CF Pachuca",
-   "clubZh": "",
+   "clubZh": "帕丘卡",
    "league": "墨超",
    "club_id": "cf-pachuca",
    "id": "ECU-13"
@@ -9677,7 +10399,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CF Cruz Azul",
-   "clubZh": "",
+   "clubZh": "蓝十字",
    "league": "墨超",
    "club_id": "cf-cruz-azul",
    "id": "MEX-6"
@@ -9837,7 +10559,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Grêmio FBPA",
-   "clubZh": "",
+   "clubZh": "格雷米奥",
    "league": "巴西甲级",
    "club_id": "gremio-fbpa",
    "id": "PAR-5"
@@ -9853,7 +10575,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Augsburg",
-   "clubZh": "",
+   "clubZh": "奥格斯堡",
    "league": "德甲",
    "club_id": "fc-augsburg",
    "id": "SUI-22"
@@ -9885,7 +10607,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Panathinaikos FC",
-   "clubZh": "",
+   "clubZh": "帕纳辛奈科斯",
    "league": "希腊超",
    "club_id": "panathinaikos-fc",
    "id": "URU-11"
@@ -9901,7 +10623,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympique Marseille",
-   "clubZh": "",
+   "clubZh": "马赛",
    "league": "法甲",
    "club_id": "olympique-marseille",
    "id": "ARG-25"
@@ -9949,7 +10671,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Frosinone",
-   "clubZh": "",
+   "clubZh": "弗罗西诺内",
    "league": "意甲",
    "club_id": "frosinone",
    "id": "ALG-25"
@@ -9997,7 +10719,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Real Oviedo",
-   "clubZh": "",
+   "clubZh": "奥维耶多",
    "league": "西甲",
    "club_id": "real-oviedo",
    "id": "URU-21"
@@ -10013,7 +10735,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Internacional",
-   "clubZh": "",
+   "clubZh": "国际(巴西)",
    "league": "巴西甲级",
    "club_id": "sc-internacional",
    "id": "ECU-2"
@@ -10061,7 +10783,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Estudiantes LP",
-   "clubZh": "",
+   "clubZh": "拉普拉塔大学生",
    "league": "阿甲",
    "club_id": "estudiantes-lp",
    "id": "URU-23"
@@ -10109,7 +10831,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kilmarnock FC",
-   "clubZh": "",
+   "clubZh": "基尔马诺克",
    "league": "苏超",
    "club_id": "kilmarnock-fc",
    "id": "SCO-25"
@@ -10189,7 +10911,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-3"
@@ -10253,7 +10975,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Çaykur Rizespor",
-   "clubZh": "",
+   "clubZh": "里泽体育",
    "league": "土超",
    "club_id": "caykur-rizespor",
    "id": "HAI-20"
@@ -10268,8 +10990,8 @@
    "nationZh": "挪威",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "NOR-14"
@@ -10333,7 +11055,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Independiente",
-   "clubZh": "",
+   "clubZh": "独立",
    "league": "阿甲",
    "club_id": "ca-independiente",
    "id": "PAR-21"
@@ -10381,7 +11103,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AEL FC",
-   "clubZh": "",
+   "clubZh": "拉里萨",
    "league": "希腊超",
    "club_id": "ael-fc",
    "id": "COD-11"
@@ -10413,7 +11135,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Colorado Springs Switchbacks FC",
-   "clubZh": "",
+   "clubZh": "科罗拉多斯普林斯",
    "league": "美职联",
    "club_id": "colorado-springs-switchbacks-fc",
    "id": "HAI-14"
@@ -10477,7 +11199,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Ipswich Town FC",
-   "clubZh": "",
+   "clubZh": "伊普斯维奇",
    "league": "英超",
    "club_id": "ipswich-town-fc",
    "id": "SCO-18"
@@ -10493,7 +11215,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympique Marseille",
-   "clubZh": "",
+   "clubZh": "马赛",
    "league": "法甲",
    "club_id": "olympique-marseille",
    "id": "ARG-12"
@@ -10525,7 +11247,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Gil Vicente FC",
-   "clubZh": "",
+   "clubZh": "吉尔维森特",
    "league": "葡超",
    "club_id": "gil-vicente-fc",
    "id": "CIV-3"
@@ -10557,7 +11279,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Gangwon FC",
-   "clubZh": "",
+   "clubZh": "江原FC",
    "league": "韩K联",
    "club_id": "gangwon-fc",
    "id": "KOR-3"
@@ -10573,7 +11295,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Tijuana",
-   "clubZh": "",
+   "clubZh": "蒂华纳",
    "league": "墨超",
    "club_id": "club-tijuana",
    "id": "MEX-19"
@@ -10589,7 +11311,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Akron Tolyatti",
-   "clubZh": "",
+   "clubZh": "阿克伦",
    "league": "俄超",
    "club_id": "fc-akron-tolyatti",
    "id": "CPV-9"
@@ -10653,7 +11375,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RKC Waalwijk",
-   "clubZh": "",
+   "clubZh": "瓦尔韦克",
    "league": "荷甲",
    "club_id": "rkc-waalwijk",
    "id": "CUW-6"
@@ -10669,7 +11391,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA River Plate",
-   "clubZh": "",
+   "clubZh": "河床",
    "league": "阿甲",
    "club_id": "ca-river-plate",
    "id": "ARG-4"
@@ -10749,7 +11471,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hibernian FC",
-   "clubZh": "",
+   "clubZh": "希伯尼安",
    "league": "苏超",
    "club_id": "hibernian-fc",
    "id": "SCO-5"
@@ -10797,7 +11519,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Midtjylland",
-   "clubZh": "",
+   "clubZh": "中日德兰",
    "league": "丹麦超",
    "club_id": "fc-midtjylland",
    "id": "KOR-9"
@@ -10829,7 +11551,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Pumas UNAM",
-   "clubZh": "",
+   "clubZh": "美洲狮",
    "league": "墨超",
    "club_id": "pumas-unam",
    "id": "MEX-22"
@@ -10893,7 +11615,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日",
    "league": "比利时甲级",
    "club_id": "club-brugge",
    "id": "SWE-25"
@@ -10909,7 +11631,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Portsmouth FC",
-   "clubZh": "",
+   "clubZh": "朴茨茅斯",
    "league": "英超",
    "club_id": "portsmouth-fc",
    "id": "PAR-24"
@@ -10941,7 +11663,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Racing Santander",
-   "clubZh": "",
+   "clubZh": "桑坦德竞技",
    "league": "西甲",
    "club_id": "racing-santander",
    "id": "COL-14"
@@ -10989,7 +11711,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Real Oviedo",
-   "clubZh": "",
+   "clubZh": "奥维耶多",
    "league": "西甲",
    "club_id": "real-oviedo",
    "id": "EGY-12"
@@ -11005,7 +11727,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Coventry City FC",
-   "clubZh": "",
+   "clubZh": "考文垂城",
    "league": "英超",
    "club_id": "coventry-city-fc",
    "id": "USA-19"
@@ -11020,8 +11742,8 @@
    "nationZh": "土耳其",
    "goals": 0,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "TUR-10"
@@ -11069,7 +11791,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Midtjylland",
-   "clubZh": "",
+   "clubZh": "中日德兰",
    "league": "丹麦超",
    "club_id": "fc-midtjylland",
    "id": "KOR-2"
@@ -11085,7 +11807,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lugano",
-   "clubZh": "",
+   "clubZh": "卢加诺",
    "league": "瑞士超",
    "club_id": "fc-lugano",
    "id": "HAI-5"
@@ -11117,7 +11839,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日",
    "league": "比利时甲级",
    "club_id": "club-brugge",
    "id": "BEL-20"
@@ -11149,7 +11871,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Leicester City FC",
-   "clubZh": "",
+   "clubZh": "莱斯特城",
    "league": "英超",
    "club_id": "leicester-city-fc",
    "id": "AUS-19"
@@ -11261,7 +11983,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Huracán",
-   "clubZh": "",
+   "clubZh": "飓风",
    "league": "阿甲",
    "club_id": "ca-huracan",
    "id": "ECU-1"
@@ -11341,7 +12063,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Cultural Leonesa",
-   "clubZh": "",
+   "clubZh": "莱昂文化",
    "league": "西甲",
    "club_id": "cultural-leonesa",
    "id": "QAT-14"
@@ -11453,7 +12175,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Ulsan HD",
-   "clubZh": "",
+   "clubZh": "蔚山现代",
    "league": "韩K联",
    "club_id": "ulsan-hd",
    "id": "KOR-21"
@@ -11485,7 +12207,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SCU Torreense",
-   "clubZh": "",
+   "clubZh": "托雷恩斯",
    "league": "葡超",
    "club_id": "scu-torreense",
    "id": "CPV-2"
@@ -11517,7 +12239,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Nordsjælland",
-   "clubZh": "",
+   "clubZh": "北西兰",
    "league": "丹麦超",
    "club_id": "fc-nordsj-lland",
    "id": "EGY-20"
@@ -11661,7 +12383,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hannover 96",
-   "clubZh": "",
+   "clubZh": "汉诺威96",
    "league": "德甲",
    "club_id": "hannover-96",
    "id": "RSA-21"
@@ -11709,7 +12431,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kasımpaşa SK",
-   "clubZh": "",
+   "clubZh": "卡瑟姆帕萨",
    "league": "土超",
    "club_id": "kas-mpasa-sk",
    "id": "TUR-17"
@@ -11741,7 +12463,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Red Bull Bragantino",
-   "clubZh": "",
+   "clubZh": "布拉甘蒂诺",
    "league": "巴西甲级",
    "club_id": "red-bull-bragantino",
    "id": "PAR-25"
@@ -11757,7 +12479,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club León",
-   "clubZh": "",
+   "clubZh": "莱昂",
    "league": "墨超",
    "club_id": "club-leon",
    "id": "PAN-10"
@@ -11773,7 +12495,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Augsburg",
-   "clubZh": "",
+   "clubZh": "奥格斯堡",
    "league": "德甲",
    "club_id": "fc-augsburg",
    "id": "TUN-11"
@@ -11789,7 +12511,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Sassuolo",
-   "clubZh": "",
+   "clubZh": "萨索洛",
    "league": "意甲",
    "club_id": "us-sassuolo",
    "id": "CAN-8"
@@ -11933,7 +12655,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hull City FC",
-   "clubZh": "",
+   "clubZh": "赫尔城",
    "league": "英超",
    "club_id": "hull-city-fc",
    "id": "CRO-12"
@@ -11949,7 +12671,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Ettifaq FC",
-   "clubZh": "",
+   "clubZh": "伊蒂法克",
    "league": "沙特职业联赛",
    "club_id": "al-ettifaq-fc",
    "id": "SCO-13"
@@ -11981,7 +12703,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Tijuana",
-   "clubZh": "",
+   "clubZh": "蒂华纳",
    "league": "墨超",
    "club_id": "club-tijuana",
    "id": "ECU-25"
@@ -11997,7 +12719,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Grazer AK",
-   "clubZh": "",
+   "clubZh": "格拉茨AK",
    "league": "奥地利甲级",
    "club_id": "grazer-ak",
    "id": "AUS-4"
@@ -12029,7 +12751,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Derby County FC",
-   "clubZh": "",
+   "clubZh": "德比郡",
    "league": "英超",
    "club_id": "derby-county-fc",
    "id": "SWE-1"
@@ -12045,7 +12767,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "KOR-10"
@@ -12061,7 +12783,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Farense",
-   "clubZh": "",
+   "clubZh": "法伦斯",
    "league": "葡超",
    "club_id": "sc-farense",
    "id": "CPV-16"
@@ -12109,7 +12831,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Minnesota United FC",
-   "clubZh": "",
+   "clubZh": "明尼苏达联",
    "league": "美职联",
    "club_id": "minnesota-united-fc",
    "id": "COL-10"
@@ -12157,7 +12879,7 @@
    "goals": 0,
    "pens": 0,
    "club": "PEC Zwolle",
-   "clubZh": "",
+   "clubZh": "兹沃勒",
    "league": "荷甲",
    "club_id": "pec-zwolle",
    "id": "CPV-10"
@@ -12205,7 +12927,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "ALG-13"
@@ -12253,7 +12975,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Albirex Niigata",
-   "clubZh": "",
+   "clubZh": "新潟天鹅",
    "league": "日职联",
    "club_id": "albirex-niigata",
    "id": "AUS-6"
@@ -12301,7 +13023,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Austin FC",
-   "clubZh": "",
+   "clubZh": "奥斯汀",
    "league": "美职联",
    "club_id": "austin-fc",
    "id": "CAN-26"
@@ -12333,7 +13055,7 @@
    "goals": 0,
    "pens": 0,
    "club": "KAA Gent",
-   "clubZh": "",
+   "clubZh": "根特",
    "league": "比利时甲级",
    "club_id": "kaa-gent",
    "id": "HAI-22"
@@ -12381,7 +13103,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SK Beveren",
-   "clubZh": "",
+   "clubZh": "贝弗伦",
    "league": "比利时甲级",
    "club_id": "sk-beveren",
    "id": "CUW-16"
@@ -12460,8 +13182,8 @@
    "nationZh": "库拉索",
    "goals": 0,
    "pens": 0,
-   "club": "AE Ki\u0000sia FC",
-   "clubZh": "",
+   "club": "AE Kifisia FC",
+   "clubZh": "基菲西亚",
    "league": "希腊超",
    "club_id": "ae-ki-sia-fc",
    "id": "CUW-11"
@@ -12509,7 +13231,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Başakşehir FK",
-   "clubZh": "",
+   "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "GHA-18"
@@ -12525,7 +13247,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Udinese",
-   "clubZh": "",
+   "clubZh": "乌迪内斯",
    "league": "意甲",
    "club_id": "udinese",
    "id": "SWE-16"
@@ -12541,7 +13263,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-21"
@@ -12557,7 +13279,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Deportivo Toluca FC",
-   "clubZh": "",
+   "clubZh": "托卢卡",
    "league": "墨超",
    "club_id": "deportivo-toluca-fc",
    "id": "MEX-23"
@@ -12605,7 +13327,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Bologna FC",
-   "clubZh": "",
+   "clubZh": "博洛尼亚",
    "league": "意甲",
    "club_id": "bologna-fc",
    "id": "COL-3"
@@ -12637,7 +13359,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Jeonbuk Hyundai Motors FC",
-   "clubZh": "",
+   "clubZh": "全北现代",
    "league": "韩K联",
    "club_id": "jeonbuk-hyundai-motors-fc",
    "id": "KOR-24"
@@ -12733,7 +13455,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日",
    "league": "比利时甲级",
    "club_id": "club-brugge",
    "id": "BEL-18"
@@ -12781,7 +13503,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Club Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日",
    "league": "比利时甲级",
    "club_id": "club-brugge",
    "id": "ECU-4"
@@ -12797,7 +13519,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Chicago Fire FC",
-   "clubZh": "",
+   "clubZh": "芝加哥火焰",
    "league": "美职联",
    "club_id": "chicago-fire-fc",
    "id": "CAN-5"
@@ -12877,7 +13599,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Venezia FC",
-   "clubZh": "",
+   "clubZh": "威尼斯",
    "league": "意甲",
    "club_id": "venezia-fc",
    "id": "ECU-9"
@@ -12893,7 +13615,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Bastia",
-   "clubZh": "",
+   "clubZh": "巴斯蒂亚",
    "league": "法甲",
    "club_id": "sc-bastia",
    "id": "HAI-1"
@@ -12925,7 +13647,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Toronto FC",
-   "clubZh": "",
+   "clubZh": "多伦多",
    "league": "美职联",
    "club_id": "toronto-fc",
    "id": "CAN-21"
@@ -12989,7 +13711,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Leicester City FC",
-   "clubZh": "",
+   "clubZh": "莱斯特城",
    "league": "英超",
    "club_id": "leicester-city-fc",
    "id": "GHA-9"
@@ -13037,7 +13759,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Huracán",
-   "clubZh": "",
+   "clubZh": "飓风",
    "league": "阿甲",
    "club_id": "ca-huracan",
    "id": "ECU-16"
@@ -13085,7 +13807,7 @@
    "goals": 0,
    "pens": 0,
    "club": "PAOK Saloniki",
-   "clubZh": "",
+   "clubZh": "PAOK塞萨洛尼基",
    "league": "希腊超",
    "club_id": "paok-saloniki",
    "id": "MEX-2"
@@ -13149,7 +13871,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Lanús",
-   "clubZh": "",
+   "clubZh": "拉努斯",
    "league": "阿甲",
    "club_id": "ca-lanus",
    "id": "PAR-13"
@@ -13165,7 +13887,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Norwich City FC",
-   "clubZh": "",
+   "clubZh": "诺维奇城",
    "league": "英超",
    "club_id": "norwich-city-fc",
    "id": "PAN-3"
@@ -13197,7 +13919,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Juárez",
-   "clubZh": "",
+   "clubZh": "华雷斯",
    "league": "墨超",
    "club_id": "fc-juarez",
    "id": "PAN-7"
@@ -13261,7 +13983,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kayserispor",
-   "clubZh": "",
+   "clubZh": "开塞利体育",
    "league": "土超",
    "club_id": "kayserispor",
    "id": "CUW-20"
@@ -13293,7 +14015,7 @@
    "goals": 0,
    "pens": 0,
    "club": "GD Chaves",
-   "clubZh": "",
+   "clubZh": "沙维斯",
    "league": "葡超",
    "club_id": "gd-chaves",
    "id": "CPV-1"
@@ -13373,7 +14095,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Cosmos Koblenz",
-   "clubZh": "",
+   "clubZh": "科布伦茨",
    "league": "德甲",
    "club_id": "fc-cosmos-koblenz",
    "id": "HAI-23"
@@ -13421,7 +14143,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CF Estrela Da Amadora",
-   "clubZh": "",
+   "clubZh": "阿马多拉",
    "league": "葡超",
    "club_id": "cf-estrela-da-amadora",
    "id": "CPV-7"
@@ -13485,7 +14207,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Dynamo Moscow",
-   "clubZh": "",
+   "clubZh": "莫斯科迪纳摩",
    "league": "俄超",
    "club_id": "fc-dynamo-moscow",
    "id": "PAR-4"
@@ -13501,7 +14223,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Real Salt Lake",
-   "clubZh": "",
+   "clubZh": "盐湖城皇家",
    "league": "美职联",
    "club_id": "real-salt-lake",
    "id": "URU-25"
@@ -13533,7 +14255,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Athletico Paranaense",
-   "clubZh": "",
+   "clubZh": "帕拉纳竞技",
    "league": "巴西甲级",
    "club_id": "athletico-paranaense",
    "id": "COL-15"
@@ -13549,7 +14271,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA River Plate",
-   "clubZh": "",
+   "clubZh": "河床",
    "league": "阿甲",
    "club_id": "ca-river-plate",
    "id": "COL-20"
@@ -13565,7 +14287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Miami FC",
-   "clubZh": "",
+   "clubZh": "迈阿密FC",
    "league": "美职联",
    "club_id": "miami-fc",
    "id": "CUW-9"
@@ -13645,7 +14367,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Stoke City FC",
-   "clubZh": "",
+   "clubZh": "斯托克城",
    "league": "英超",
    "club_id": "stoke-city-fc",
    "id": "KOR-17"
@@ -13661,7 +14383,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Volendam",
-   "clubZh": "",
+   "clubZh": "福伦丹",
    "league": "荷甲",
    "club_id": "fc-volendam",
    "id": "CUW-7"
@@ -13677,7 +14399,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atlético Mineiro",
-   "clubZh": "",
+   "clubZh": "米内罗竞技",
    "league": "巴西甲级",
    "club_id": "atletico-mineiro",
    "id": "PAR-6"
@@ -13693,7 +14415,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC København",
-   "clubZh": "",
+   "clubZh": "哥本哈根",
    "league": "丹麦超",
    "club_id": "fc-k-benhavn",
    "id": "JPN-25"
@@ -13709,7 +14431,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Abha Club",
-   "clubZh": "",
+   "clubZh": "艾卜哈",
    "league": "沙特职业联赛",
    "club_id": "abha-club",
    "id": "CUW-3"
@@ -13741,7 +14463,7 @@
    "goals": 0,
    "pens": 0,
    "club": "New York City FC",
-   "clubZh": "",
+   "clubZh": "纽约城",
    "league": "美职联",
    "club_id": "new-york-city-fc",
    "id": "AUS-15"
@@ -13757,7 +14479,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "JPN-24"
@@ -13869,7 +14591,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "HAI-3"
@@ -13885,7 +14607,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sint-Truiden VV",
-   "clubZh": "",
+   "clubZh": "圣特雷登",
    "league": "比利时甲级",
    "club_id": "sint-truiden-vv",
    "id": "JPN-9"
@@ -13901,7 +14623,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sanfrecce Hiroshima",
-   "clubZh": "",
+   "clubZh": "广岛三箭",
    "league": "日职联",
    "club_id": "sanfrecce-hiroshima",
    "id": "JPN-12"
@@ -13965,7 +14687,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA River Plate",
-   "clubZh": "",
+   "clubZh": "河床",
    "league": "阿甲",
    "club_id": "ca-river-plate",
    "id": "ECU-10"
@@ -14045,7 +14767,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Den Bosch",
-   "clubZh": "",
+   "clubZh": "登博斯",
    "league": "荷甲",
    "club_id": "fc-den-bosch",
    "id": "CUW-22"
@@ -14061,7 +14783,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA River Plate",
-   "clubZh": "",
+   "clubZh": "河床",
    "league": "阿甲",
    "club_id": "ca-river-plate",
    "id": "COL-5"
@@ -14077,7 +14799,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Aarhus GF",
-   "clubZh": "",
+   "clubZh": "奥胡斯",
    "league": "丹麦超",
    "club_id": "aarhus-gf",
    "id": "IRQ-19"
@@ -14109,7 +14831,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Ettifaq FC",
-   "clubZh": "",
+   "clubZh": "伊蒂法克",
    "league": "沙特职业联赛",
    "club_id": "al-ettifaq-fc",
    "id": "KSA-17"
@@ -14237,7 +14959,7 @@
    "goals": 0,
    "pens": 0,
    "club": "NEC Nijmegen",
-   "clubZh": "",
+   "clubZh": "奈梅亨",
    "league": "荷甲",
    "club_id": "nec-nijmegen",
    "id": "JPN-19"
@@ -14285,7 +15007,7 @@
    "goals": 0,
    "pens": 0,
    "club": "WS Wanderers FC",
-   "clubZh": "",
+   "clubZh": "西悉尼流浪者",
    "league": "澳超",
    "club_id": "ws-wanderers-fc",
    "id": "NZL-17"
@@ -14333,7 +15055,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Sassuolo",
-   "clubZh": "",
+   "clubZh": "萨索洛",
    "league": "意甲",
    "club_id": "us-sassuolo",
    "id": "NOR-18"
@@ -14349,7 +15071,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Augsburg",
-   "clubZh": "",
+   "clubZh": "奥格斯堡",
    "league": "德甲",
    "club_id": "fc-augsburg",
    "id": "CRO-18"
@@ -14397,7 +15119,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Real Oviedo",
-   "clubZh": "",
+   "clubZh": "奥维耶多",
    "league": "西甲",
    "club_id": "real-oviedo",
    "id": "GHA-8"
@@ -14413,7 +15135,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Newcastle United Jets FC",
-   "clubZh": "",
+   "clubZh": "纽卡斯尔喷气机",
    "league": "澳超",
    "club_id": "newcastle-united-jets-fc",
    "id": "NZL-25"
@@ -14461,7 +15183,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Heart Of Midlothian FC",
-   "clubZh": "",
+   "clubZh": "哈茨",
    "league": "苏超",
    "club_id": "heart-of-midlothian-fc",
    "id": "SCO-20"
@@ -14477,7 +15199,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC St. Gallen",
-   "clubZh": "",
+   "clubZh": "圣加伦",
    "league": "瑞士超",
    "club_id": "fc-st-gallen",
    "id": "GHA-1"
@@ -14493,7 +15215,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Iğdır FK",
-   "clubZh": "",
+   "clubZh": "厄德尔",
    "league": "土超",
    "club_id": "igd-r-fk",
    "id": "CUW-10"
@@ -14509,7 +15231,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Boca Juniors",
-   "clubZh": "",
+   "clubZh": "博卡青年",
    "league": "阿甲",
    "club_id": "ca-boca-juniors",
    "id": "ARG-5"
@@ -14573,7 +15295,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Bologna FC",
-   "clubZh": "",
+   "clubZh": "博洛尼亚",
    "league": "意甲",
    "club_id": "bologna-fc",
    "id": "SCO-19"
@@ -14605,7 +15327,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hull City FC",
-   "clubZh": "",
+   "clubZh": "赫尔城",
    "league": "英超",
    "club_id": "hull-city-fc",
    "id": "CAN-11"
@@ -14637,7 +15359,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Le Havre AC",
-   "clubZh": "",
+   "clubZh": "勒阿弗尔",
    "league": "法甲",
    "club_id": "le-havre-ac",
    "id": "COD-1"
@@ -14685,7 +15407,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-7"
@@ -14717,7 +15439,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FCV Dender EH",
-   "clubZh": "",
+   "clubZh": "登德尔",
    "league": "比利时甲级",
    "club_id": "fcv-dender-eh",
    "id": "CAN-4"
@@ -14749,7 +15471,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Granada CF",
-   "clubZh": "",
+   "clubZh": "格拉纳达",
    "league": "西甲",
    "club_id": "granada-cf",
    "id": "ALG-23"
@@ -14797,7 +15519,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Colorado Rapids",
-   "clubZh": "",
+   "clubZh": "科罗拉多急流",
    "league": "美职联",
    "club_id": "colorado-rapids",
    "id": "AUS-25"
@@ -14861,7 +15583,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Dynamo Moscow",
-   "clubZh": "",
+   "clubZh": "莫斯科迪纳摩",
    "league": "俄超",
    "club_id": "fc-dynamo-moscow",
    "id": "MEX-24"
@@ -14909,7 +15631,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Zenit St. Petersburg",
-   "clubZh": "",
+   "clubZh": "泽尼特",
    "league": "俄超",
    "club_id": "fc-zenit-st-petersburg",
    "id": "BRA-21"
@@ -14957,7 +15679,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hamburger SV",
-   "clubZh": "",
+   "clubZh": "汉堡",
    "league": "德甲",
    "club_id": "hamburger-sv",
    "id": "CRO-22"
@@ -15053,7 +15775,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Charlton Athletic FC",
-   "clubZh": "",
+   "clubZh": "查尔顿",
    "league": "英超",
    "club_id": "charlton-athletic-fc",
    "id": "SCO-9"
@@ -15212,8 +15934,8 @@
    "nationZh": "瑞士",
    "goals": 0,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "SUI-5"
@@ -15341,7 +16063,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Orlando City SC",
-   "clubZh": "",
+   "clubZh": "奥兰多城",
    "league": "美职联",
    "club_id": "orlando-city-sc",
    "id": "CRO-24"
@@ -15404,8 +16126,8 @@
    "nationZh": "法国",
    "goals": 0,
    "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "FRA-9"
@@ -15469,7 +16191,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Colorado Springs Switchbacks FC",
-   "clubZh": "",
+   "clubZh": "科罗拉多斯普林斯",
    "league": "美职联",
    "club_id": "colorado-springs-switchbacks-fc",
    "id": "HAI-13"
@@ -15485,7 +16207,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Venezia FC",
-   "clubZh": "",
+   "clubZh": "威尼斯",
    "league": "意甲",
    "club_id": "venezia-fc",
    "id": "IRQ-21"
@@ -15533,7 +16255,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Midtjylland",
-   "clubZh": "",
+   "clubZh": "中日德兰",
    "league": "丹麦超",
    "club_id": "fc-midtjylland",
    "id": "CRO-25"
@@ -15549,7 +16271,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AS Nancy",
-   "clubZh": "",
+   "clubZh": "南锡",
    "league": "法甲",
    "club_id": "as-nancy",
    "id": "HAI-8"
@@ -15613,7 +16335,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "SUI-21"
@@ -15645,7 +16367,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Fateh SC",
-   "clubZh": "",
+   "clubZh": "法塔赫",
    "league": "沙特职业联赛",
    "club_id": "al-fateh-sc",
    "id": "MAR-5"
@@ -15709,7 +16431,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Melbourne City FC",
-   "clubZh": "",
+   "clubZh": "墨尔本城",
    "league": "澳超",
    "club_id": "melbourne-city-fc",
    "id": "AUS-7"
@@ -15725,7 +16447,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Levante UD",
-   "clubZh": "",
+   "clubZh": "莱万特",
    "league": "西甲",
    "club_id": "levante-ud",
    "id": "AUS-1"
@@ -15789,7 +16511,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA River Plate",
-   "clubZh": "",
+   "clubZh": "河床",
    "league": "阿甲",
    "club_id": "ca-river-plate",
    "id": "URU-17"
@@ -15821,7 +16543,7 @@
    "goals": 0,
    "pens": 0,
    "club": "New York City FC",
-   "clubZh": "",
+   "clubZh": "纽约城",
    "league": "美职联",
    "club_id": "new-york-city-fc",
    "id": "USA-24"
@@ -15837,7 +16559,7 @@
    "goals": 0,
    "pens": 0,
    "club": "New England Revolution",
-   "clubZh": "",
+   "clubZh": "新英格兰革命",
    "league": "美职联",
    "club_id": "new-england-revolution",
    "id": "USA-1"
@@ -15853,7 +16575,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Standard Liège",
-   "clubZh": "",
+   "clubZh": "标准列日",
    "league": "比利时甲级",
    "club_id": "standard-liege",
    "id": "COD-21"
@@ -15869,7 +16591,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Columbus Crew",
-   "clubZh": "",
+   "clubZh": "哥伦布机员",
    "league": "美职联",
    "club_id": "columbus-crew",
    "id": "USA-18"
@@ -15885,7 +16607,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Millwall FC",
-   "clubZh": "",
+   "clubZh": "米尔沃尔",
    "league": "英超",
    "club_id": "millwall-fc",
    "id": "NZL-1"
@@ -15933,7 +16655,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Orlando City SC",
-   "clubZh": "",
+   "clubZh": "奥兰多城",
    "league": "美职联",
    "club_id": "orlando-city-sc",
    "id": "CAN-16"
@@ -15965,7 +16687,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Chicago Fire FC",
-   "clubZh": "",
+   "clubZh": "芝加哥火焰",
    "league": "美职联",
    "club_id": "chicago-fire-fc",
    "id": "RSA-14"
@@ -15981,7 +16703,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Silkeborg IF",
-   "clubZh": "",
+   "clubZh": "锡尔克堡",
    "league": "丹麦超",
    "club_id": "silkeborg-if",
    "id": "NZL-20"
@@ -16029,7 +16751,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Toulouse FC",
-   "clubZh": "",
+   "clubZh": "图卢兹",
    "league": "法甲",
    "club_id": "toulouse-fc",
    "id": "USA-22"
@@ -16045,7 +16767,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Norwich City FC",
-   "clubZh": "",
+   "clubZh": "诺维奇城",
    "league": "英超",
    "club_id": "norwich-city-fc",
    "id": "SCO-23"
@@ -16109,7 +16831,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympiacos FC",
-   "clubZh": "",
+   "clubZh": "奥林匹亚科斯",
    "league": "希腊超",
    "club_id": "olympiacos-fc",
    "id": "IRN-9"
@@ -16125,7 +16847,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Stade Nyonnais",
-   "clubZh": "",
+   "clubZh": "尼永",
    "league": "瑞士超",
    "club_id": "fc-stade-nyonnais",
    "id": "ALG-1"
@@ -16141,7 +16863,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Corinthians",
-   "clubZh": "",
+   "clubZh": "科林蒂安",
    "league": "巴西甲级",
    "club_id": "sc-corinthians",
    "id": "NED-10"
@@ -16221,7 +16943,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Alanyaspor",
-   "clubZh": "",
+   "clubZh": "阿兰亚体育",
    "league": "土超",
    "club_id": "alanyaspor",
    "id": "COD-13"
@@ -16253,7 +16975,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Minnesota United FC",
-   "clubZh": "",
+   "clubZh": "明尼苏达联",
    "league": "美职联",
    "club_id": "minnesota-united-fc",
    "id": "NZL-5"
@@ -16269,7 +16991,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Augsburg",
-   "clubZh": "",
+   "clubZh": "奥格斯堡",
    "league": "德甲",
    "club_id": "fc-augsburg",
    "id": "AUT-11"
@@ -16301,7 +17023,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Venezia FC",
-   "clubZh": "",
+   "clubZh": "威尼斯",
    "league": "意甲",
    "club_id": "venezia-fc",
    "id": "AUT-25"
@@ -16317,7 +17039,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-22"
@@ -16333,7 +17055,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Pisa SC",
-   "clubZh": "",
+   "clubZh": "比萨",
    "league": "意甲",
    "club_id": "pisa-sc",
    "id": "SUI-20"
@@ -16444,8 +17166,8 @@
    "nationZh": "美国",
    "goals": 0,
    "pens": 0,
-   "club": "FC Cincinnatti",
-   "clubZh": "",
+   "club": "FC Cincinnati",
+   "clubZh": "辛辛那提",
    "league": "美职联",
    "club_id": "fc-cincinnatti",
    "id": "USA-12"
@@ -16493,7 +17215,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hamburger SV",
-   "clubZh": "",
+   "clubZh": "汉堡",
    "league": "德甲",
    "club_id": "hamburger-sv",
    "id": "SUI-2"
@@ -16557,7 +17279,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lugano",
-   "clubZh": "",
+   "clubZh": "卢加诺",
    "league": "瑞士超",
    "club_id": "fc-lugano",
    "id": "TUN-15"
@@ -16589,7 +17311,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sporting Charleroi",
-   "clubZh": "",
+   "clubZh": "沙勒罗瓦",
    "league": "比利时甲级",
    "club_id": "sporting-charleroi",
    "id": "CIV-16"
@@ -16701,7 +17423,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Norwich City FC",
-   "clubZh": "",
+   "clubZh": "诺维奇城",
    "league": "英超",
    "club_id": "norwich-city-fc",
    "id": "AUS-9"
@@ -16829,7 +17551,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Ula Saudi FC",
-   "clubZh": "",
+   "clubZh": "欧拉",
    "league": "沙特职业联赛",
    "club_id": "al-ula-saudi-fc",
    "id": "KSA-21"
@@ -16940,8 +17662,8 @@
    "nationZh": "厄瓜多尔",
    "goals": 0,
    "pens": 0,
-   "club": "AE Ki\u0000sia FC",
-   "clubZh": "",
+   "club": "AE Kifisia FC",
+   "clubZh": "基菲西亚",
    "league": "希腊超",
    "club_id": "ae-ki-sia-fc",
    "id": "ECU-12"
@@ -16973,7 +17695,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lorient",
-   "clubZh": "",
+   "clubZh": "洛里昂",
    "league": "法甲",
    "club_id": "fc-lorient",
    "id": "TUN-3"
@@ -16989,7 +17711,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Daejeon Hana Citizen FC",
-   "clubZh": "",
+   "clubZh": "大田市民",
    "league": "韩K联",
    "club_id": "daejeon-hana-citizen-fc",
    "id": "KOR-15"
@@ -17021,7 +17743,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kasımpaşa SK",
-   "clubZh": "",
+   "clubZh": "卡瑟姆帕萨",
    "league": "土超",
    "club_id": "kas-mpasa-sk",
    "id": "TUN-12"
@@ -17037,7 +17759,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Cremonese",
-   "clubZh": "",
+   "clubZh": "克雷莫纳",
    "league": "意甲",
    "club_id": "us-cremonese",
    "id": "NOR-2"
@@ -17053,7 +17775,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Le Havre AC",
-   "clubZh": "",
+   "clubZh": "勒阿弗尔",
    "league": "法甲",
    "club_id": "le-havre-ac",
    "id": "SEN-23"
@@ -17245,7 +17967,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Najmah SC",
-   "clubZh": "",
+   "clubZh": "纳吉马",
    "league": "沙特职业联赛",
    "club_id": "al-najmah-sc",
    "id": "EGY-18"
@@ -17261,7 +17983,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "GER-20"
@@ -17293,7 +18015,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Auckland FC",
-   "clubZh": "",
+   "clubZh": "奥克兰FC",
    "league": "澳超",
    "club_id": "auckland-fc",
    "id": "NZL-15"
@@ -17373,7 +18095,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Montpellier HSC",
-   "clubZh": "",
+   "clubZh": "蒙彼利埃",
    "league": "法甲",
    "club_id": "montpellier-hsc",
    "id": "COD-7"
@@ -17437,7 +18159,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Santos FC",
-   "clubZh": "",
+   "clubZh": "桑托斯",
    "league": "巴西甲级",
    "club_id": "santos-fc",
    "id": "BRA-10"
@@ -17612,8 +18334,8 @@
    "nationZh": "阿根廷",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "ARG-19"
@@ -17677,7 +18399,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Gaziantep FK",
-   "clubZh": "",
+   "clubZh": "加济安泰普",
    "league": "土超",
    "club_id": "gaziantep-fk",
    "id": "BIH-2"
@@ -17709,7 +18431,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Schalke 04",
-   "clubZh": "",
+   "clubZh": "沙尔克04",
    "league": "德甲",
    "club_id": "fc-schalke-04",
    "id": "BIH-18"
@@ -17725,7 +18447,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Bologna FC",
-   "clubZh": "",
+   "clubZh": "博洛尼亚",
    "league": "意甲",
    "club_id": "bologna-fc",
    "id": "CRO-7"
@@ -17757,7 +18479,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Melbourne Victory FC",
-   "clubZh": "",
+   "clubZh": "墨尔本胜利",
    "league": "澳超",
    "club_id": "melbourne-victory-fc",
    "id": "AUS-23"
@@ -17901,7 +18623,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Başakşehir FK",
-   "clubZh": "",
+   "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "CPV-21"
@@ -18013,7 +18735,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "GER-12"
@@ -18045,7 +18767,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Philadelphia Union",
-   "clubZh": "",
+   "clubZh": "费城联",
    "league": "美职联",
    "club_id": "philadelphia-union",
    "id": "RSA-24"
@@ -18093,7 +18815,7 @@
    "goals": 0,
    "pens": 0,
    "club": "AEK Athens",
-   "clubZh": "",
+   "clubZh": "雅典AEK",
    "league": "希腊超",
    "club_id": "aek-athens",
    "id": "MEX-17"
@@ -18141,7 +18863,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Al Fayha FC",
-   "clubZh": "",
+   "clubZh": "法伊哈",
    "league": "沙特职业联赛",
    "club_id": "al-fayha-fc",
    "id": "PAN-22"
@@ -18157,7 +18879,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA San Lorenzo",
-   "clubZh": "",
+   "clubZh": "圣洛伦索",
    "league": "阿甲",
    "club_id": "ca-san-lorenzo",
    "id": "PAR-12"
@@ -18237,7 +18959,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Cercle Brugge",
-   "clubZh": "",
+   "clubZh": "布鲁日竞技",
    "league": "比利时甲级",
    "club_id": "cercle-brugge",
    "id": "CIV-14"
@@ -18285,7 +19007,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Barnsley",
-   "clubZh": "",
+   "clubZh": "巴恩斯利",
    "league": "英超",
    "club_id": "barnsley",
    "id": "CAN-18"
@@ -18301,7 +19023,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "TUR-15"
@@ -18349,7 +19071,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sporting Charleroi",
-   "clubZh": "",
+   "clubZh": "沙勒罗瓦",
    "league": "比利时甲级",
    "club_id": "sporting-charleroi",
    "id": "CIV-25"
@@ -18381,7 +19103,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Rayo Vallecano",
-   "clubZh": "",
+   "clubZh": "巴列卡诺",
    "league": "西甲",
    "club_id": "rayo-vallecano",
    "id": "SEN-6"
@@ -18397,7 +19119,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Melbourne City FC",
-   "clubZh": "",
+   "clubZh": "墨尔本城",
    "league": "澳超",
    "club_id": "melbourne-city-fc",
    "id": "AUS-18"
@@ -18429,7 +19151,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Brøndby IF",
-   "clubZh": "",
+   "clubZh": "布隆德比",
    "league": "丹麦超",
    "club_id": "br-ndby-if",
    "id": "AUT-13"
@@ -18493,7 +19215,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Randers FC",
-   "clubZh": "",
+   "clubZh": "兰讷斯",
    "league": "丹麦超",
    "club_id": "randers-fc",
    "id": "AUS-12"
@@ -18509,7 +19231,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sydney FC",
-   "clubZh": "",
+   "clubZh": "悉尼FC",
    "league": "澳超",
    "club_id": "sydney-fc",
    "id": "AUS-24"
@@ -18637,7 +19359,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Pumas UNAM",
-   "clubZh": "",
+   "clubZh": "美洲狮",
    "league": "墨超",
    "club_id": "pumas-unam",
    "id": "ECU-15"
@@ -18685,7 +19407,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "AUT-16"
@@ -18733,7 +19455,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympique Marseille",
-   "clubZh": "",
+   "clubZh": "马赛",
    "league": "法甲",
    "club_id": "olympique-marseille",
    "id": "NED-26"
@@ -18781,7 +19503,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Twente",
-   "clubZh": "",
+   "clubZh": "特温特",
    "league": "荷甲",
    "club_id": "fc-twente",
    "id": "ALG-6"
@@ -18973,7 +19695,7 @@
    "goals": 0,
    "pens": 0,
    "club": "KV Mechelen",
-   "clubZh": "",
+   "clubZh": "梅赫伦",
    "league": "比利时甲级",
    "club_id": "kv-mechelen",
    "id": "MAR-25"
@@ -19021,7 +19743,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Bologna FC",
-   "clubZh": "",
+   "clubZh": "博洛尼亚",
    "league": "意甲",
    "club_id": "bologna-fc",
    "id": "SUI-8"
@@ -19116,8 +19838,8 @@
    "nationZh": "哥伦比亚",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "COL-6"
@@ -19133,7 +19855,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Toronto FC",
-   "clubZh": "",
+   "clubZh": "多伦多",
    "league": "美职联",
    "club_id": "toronto-fc",
    "id": "CAN-22"
@@ -19149,7 +19871,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Konyaspor",
-   "clubZh": "",
+   "clubZh": "科尼亚体育",
    "league": "土超",
    "club_id": "konyaspor",
    "id": "CUW-23"
@@ -19213,7 +19935,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "CZE-4"
@@ -19229,7 +19951,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RC Lens",
-   "clubZh": "",
+   "clubZh": "朗斯",
    "league": "法甲",
    "club_id": "rc-lens",
    "id": "FRA-23"
@@ -19309,7 +20031,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Tigres UANL",
-   "clubZh": "",
+   "clubZh": "老虎",
    "league": "墨超",
    "club_id": "tigres-uanl",
    "id": "URU-19"
@@ -19421,7 +20143,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RKC Waalwijk",
-   "clubZh": "",
+   "clubZh": "瓦尔韦克",
    "league": "荷甲",
    "club_id": "rkc-waalwijk",
    "id": "CUW-4"
@@ -19453,7 +20175,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Almere City FC",
-   "clubZh": "",
+   "clubZh": "阿尔梅勒城",
    "league": "荷甲",
    "club_id": "almere-city-fc",
    "id": "HAI-15"
@@ -19517,7 +20239,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Iğdır FK",
-   "clubZh": "",
+   "clubZh": "厄德尔",
    "league": "土超",
    "club_id": "igd-r-fk",
    "id": "CPV-20"
@@ -19565,7 +20287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "PEC Zwolle",
-   "clubZh": "",
+   "clubZh": "兹沃勒",
    "league": "荷甲",
    "club_id": "pec-zwolle",
    "id": "NZL-23"
@@ -19805,7 +20527,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Çaykur Rizespor",
-   "clubZh": "",
+   "clubZh": "里泽体育",
    "league": "土超",
    "club_id": "caykur-rizespor",
    "id": "TUR-25"
@@ -19821,7 +20543,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Paris FC",
-   "clubZh": "",
+   "clubZh": "巴黎FC",
    "league": "法甲",
    "club_id": "paris-fc",
    "id": "ALG-26"
@@ -19853,7 +20575,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Atromitos FC",
-   "clubZh": "",
+   "clubZh": "阿特罗米托斯",
    "league": "希腊超",
    "club_id": "atromitos-fc",
    "id": "COD-8"
@@ -19917,7 +20639,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Hamburger SV",
-   "clubZh": "",
+   "clubZh": "汉堡",
    "league": "德甲",
    "club_id": "hamburger-sv",
    "id": "NOR-12"
@@ -19933,7 +20655,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CA Independiente",
-   "clubZh": "",
+   "clubZh": "独立",
    "league": "阿甲",
    "club_id": "ca-independiente",
    "id": "COL-4"
@@ -19981,7 +20703,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CF Monterrey",
-   "clubZh": "",
+   "clubZh": "蒙特雷",
    "league": "墨超",
    "club_id": "cf-monterrey",
    "id": "URU-12"
@@ -19997,7 +20719,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Wellington Phoenix FC",
-   "clubZh": "",
+   "clubZh": "惠灵顿凤凰",
    "league": "澳超",
    "club_id": "wellington-phoenix-fc",
    "id": "NZL-10"
@@ -20013,7 +20735,7 @@
    "goals": 0,
    "pens": 0,
    "club": "RC Lens",
-   "clubZh": "",
+   "clubZh": "朗斯",
    "league": "法甲",
    "club_id": "rc-lens",
    "id": "KSA-12"
@@ -20125,7 +20847,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Internacional",
-   "clubZh": "",
+   "clubZh": "国际(巴西)",
    "league": "巴西甲级",
    "club_id": "sc-internacional",
    "id": "URU-1"
@@ -20141,7 +20863,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Tokyo",
-   "clubZh": "",
+   "clubZh": "东京FC",
    "league": "日职联",
    "club_id": "fc-tokyo",
    "id": "KOR-1"
@@ -20157,7 +20879,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Birmingham City FC",
-   "clubZh": "",
+   "clubZh": "伯明翰城",
    "league": "英超",
    "club_id": "birmingham-city-fc",
    "id": "KOR-8"
@@ -20189,7 +20911,7 @@
    "goals": 0,
    "pens": 0,
    "club": "PEC Zwolle",
-   "clubZh": "",
+   "clubZh": "兹沃勒",
    "league": "荷甲",
    "club_id": "pec-zwolle",
    "id": "CUW-5"
@@ -20237,7 +20959,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sint-Truiden VV",
-   "clubZh": "",
+   "clubZh": "圣特雷登",
    "league": "比利时甲级",
    "club_id": "sint-truiden-vv",
    "id": "JPN-3"
@@ -20269,7 +20991,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sparta Rotterdam",
-   "clubZh": "",
+   "clubZh": "鹿特丹斯巴达",
    "league": "荷甲",
    "club_id": "sparta-rotterdam",
    "id": "CUW-2"
@@ -20300,8 +21022,8 @@
    "nationZh": "佛得角",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "CPV-13"
@@ -20317,7 +21039,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "SUI-3"
@@ -20397,7 +21119,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Derby County FC",
-   "clubZh": "",
+   "clubZh": "德比郡",
    "league": "英超",
    "club_id": "derby-county-fc",
    "id": "NOR-24"
@@ -20413,7 +21135,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Middlesbrough FC",
-   "clubZh": "",
+   "clubZh": "米德尔斯堡",
    "league": "英超",
    "club_id": "middlesbrough-fc",
    "id": "CUW-12"
@@ -20429,7 +21151,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CD Tondela",
-   "clubZh": "",
+   "clubZh": "通德拉",
    "league": "葡超",
    "club_id": "cd-tondela",
    "id": "RSA-13"
@@ -20445,7 +21167,7 @@
    "goals": 0,
    "pens": 0,
    "club": "1. FSV Mainz 05",
-   "clubZh": "",
+   "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
    "id": "AUT-5"
@@ -20509,7 +21231,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Columbus Crew",
-   "clubZh": "",
+   "clubZh": "哥伦布机员",
    "league": "美职联",
    "club_id": "columbus-crew",
    "id": "CPV-22"
@@ -20573,7 +21295,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kashima Antlers",
-   "clubZh": "",
+   "clubZh": "鹿岛鹿角",
    "league": "日职联",
    "club_id": "kashima-antlers",
    "id": "KOR-5"
@@ -20589,7 +21311,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FK Austria Wien",
-   "clubZh": "",
+   "clubZh": "奥地利维也纳",
    "league": "奥地利甲级",
    "club_id": "fk-austria-wien",
    "id": "KOR-13"
@@ -20620,8 +21342,8 @@
    "nationZh": "库拉索",
    "goals": 0,
    "pens": 0,
-   "club": "She\u0000eld United FC",
-   "clubZh": "",
+   "club": "Sheffield United FC",
+   "clubZh": "谢菲尔德联",
    "league": "英超",
    "club_id": "she-eld-united-fc",
    "id": "CUW-21"
@@ -20733,7 +21455,7 @@
    "goals": 0,
    "pens": 0,
    "club": "US Sassuolo",
-   "clubZh": "",
+   "clubZh": "萨索洛",
    "league": "意甲",
    "club_id": "us-sassuolo",
    "id": "BIH-4"
@@ -20749,7 +21471,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Vitória SC",
-   "clubZh": "",
+   "clubZh": "吉马良斯",
    "league": "葡超",
    "club_id": "vitoria-sc",
    "id": "CPV-18"
@@ -20765,7 +21487,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Machida Zelvia",
-   "clubZh": "",
+   "clubZh": "町田泽尔维亚",
    "league": "日职联",
    "club_id": "fc-machida-zelvia",
    "id": "AUS-26"
@@ -20845,7 +21567,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Spartak Moscow",
-   "clubZh": "",
+   "clubZh": "莫斯科斯巴达",
    "league": "俄超",
    "club_id": "fc-spartak-moscow",
    "id": "COD-10"
@@ -20957,7 +21679,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Wellington Phoenix FC",
-   "clubZh": "",
+   "clubZh": "惠灵顿凤凰",
    "league": "澳超",
    "club_id": "wellington-phoenix-fc",
    "id": "NZL-2"
@@ -20973,7 +21695,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Charlotte FC",
-   "clubZh": "",
+   "clubZh": "夏洛特",
    "league": "美职联",
    "club_id": "charlotte-fc",
    "id": "USA-13"
@@ -21021,7 +21743,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Olympique Marseille",
-   "clubZh": "",
+   "clubZh": "马赛",
    "league": "法甲",
    "club_id": "olympique-marseille",
    "id": "USA-21"
@@ -21101,7 +21823,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Braintree Town FC",
-   "clubZh": "",
+   "clubZh": "布伦特里",
    "league": "英超",
    "club_id": "braintree-town-fc",
    "id": "NZL-26"
@@ -21117,7 +21839,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Kashima Antlers",
-   "clubZh": "",
+   "clubZh": "鹿岛鹿角",
    "league": "日职联",
    "club_id": "kashima-antlers",
    "id": "JPN-23"
@@ -21132,8 +21854,8 @@
    "nationZh": "葡萄牙",
    "goals": 0,
    "pens": 0,
-   "club": "SL Ben\u0000ca",
-   "clubZh": "",
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "POR-4"
@@ -21165,7 +21887,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Bologna FC",
-   "clubZh": "",
+   "clubZh": "博洛尼亚",
    "league": "意甲",
    "club_id": "bologna-fc",
    "id": "NOR-17"
@@ -21197,7 +21919,7 @@
    "goals": 0,
    "pens": 0,
    "club": "VVV Venlo",
-   "clubZh": "",
+   "clubZh": "芬洛",
    "league": "荷甲",
    "club_id": "vvv-venlo",
    "id": "CUW-26"
@@ -21260,8 +21982,8 @@
    "nationZh": "新西兰",
    "goals": 0,
    "pens": 0,
-   "club": "She\u0000eld United FC",
-   "clubZh": "",
+   "club": "Sheffield United FC",
+   "clubZh": "谢菲尔德联",
    "league": "英超",
    "club_id": "she-eld-united-fc",
    "id": "NZL-4"
@@ -21293,7 +22015,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Telstar",
-   "clubZh": "",
+   "clubZh": "特尔斯达",
    "league": "荷甲",
    "club_id": "sc-telstar",
    "id": "CUW-13"
@@ -21309,7 +22031,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SC Telstar",
-   "clubZh": "",
+   "clubZh": "特尔斯达",
    "league": "荷甲",
    "club_id": "sc-telstar",
    "id": "CUW-25"
@@ -21437,7 +22159,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Stoke City FC",
-   "clubZh": "",
+   "clubZh": "斯托克城",
    "league": "英超",
    "club_id": "stoke-city-fc",
    "id": "SWE-12"
@@ -21469,7 +22191,7 @@
    "goals": 0,
    "pens": 0,
    "club": "TSG Hoffenheim",
-   "clubZh": "",
+   "clubZh": "霍芬海姆",
    "league": "德甲",
    "club_id": "tsg-hoffenheim",
    "id": "CZE-5"
@@ -21549,7 +22271,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Grêmio FBPA",
-   "clubZh": "",
+   "clubZh": "格雷米奥",
    "league": "巴西甲级",
    "club_id": "gremio-fbpa",
    "id": "BRA-12"
@@ -21565,7 +22287,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Jeonbuk Hyundai Motors FC",
-   "clubZh": "",
+   "clubZh": "全北现代",
    "league": "韩K联",
    "club_id": "jeonbuk-hyundai-motors-fc",
    "id": "KOR-14"
@@ -21597,7 +22319,7 @@
    "goals": 0,
    "pens": 0,
    "club": "SV Zulte Waregem",
-   "clubZh": "",
+   "clubZh": "瓦雷赫姆",
    "league": "比利时甲级",
    "club_id": "sv-zulte-waregem",
    "id": "HAI-24"
@@ -21613,7 +22335,7 @@
    "goals": 0,
    "pens": 0,
    "club": "CF Cruz Azul",
-   "clubZh": "",
+   "clubZh": "蓝十字",
    "league": "墨超",
    "club_id": "cf-cruz-azul",
    "id": "COL-18"
@@ -21725,7 +22447,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Çaykur Rizespor",
-   "clubZh": "",
+   "clubZh": "里泽体育",
    "league": "土超",
    "club_id": "caykur-rizespor",
    "id": "CIV-1"
@@ -21773,7 +22495,7 @@
    "goals": 0,
    "pens": 0,
    "club": "BSC Young Boys",
-   "clubZh": "",
+   "clubZh": "年轻人",
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "TUN-20"
@@ -21805,7 +22527,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Vizela",
-   "clubZh": "",
+   "clubZh": "维泽拉",
    "league": "葡超",
    "club_id": "fc-vizela",
    "id": "HAI-19"
@@ -21837,7 +22559,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Sporting Charleroi",
-   "clubZh": "",
+   "clubZh": "沙勒罗瓦",
    "league": "比利时甲级",
    "club_id": "sporting-charleroi",
    "id": "ALG-24"
@@ -21853,7 +22575,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Seoul",
-   "clubZh": "",
+   "clubZh": "首尔FC",
    "league": "韩K联",
    "club_id": "fc-seoul",
    "id": "JOR-5"
@@ -21917,7 +22639,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Cagliari",
-   "clubZh": "",
+   "clubZh": "卡利亚里",
    "league": "意甲",
    "club_id": "cagliari",
    "id": "COL-13"
@@ -22061,7 +22783,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Tokyo",
-   "clubZh": "",
+   "clubZh": "东京FC",
    "league": "日职联",
    "club_id": "fc-tokyo",
    "id": "JPN-5"
@@ -22077,7 +22799,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Lorient",
-   "clubZh": "",
+   "clubZh": "洛里昂",
    "league": "法甲",
    "club_id": "fc-lorient",
    "id": "SUI-12"
@@ -22189,7 +22911,7 @@
    "goals": 0,
    "pens": 0,
    "club": "FC Utrecht",
-   "clubZh": "",
+   "clubZh": "乌得勒支",
    "league": "荷甲",
    "club_id": "fc-utrecht",
    "id": "IRQ-14"
@@ -22221,7 +22943,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Parma",
-   "clubZh": "",
+   "clubZh": "帕尔马",
    "league": "意甲",
    "club_id": "parma",
    "id": "JPN-1"

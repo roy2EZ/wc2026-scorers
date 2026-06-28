@@ -87,6 +87,10 @@ def main():
     for p in players: NAT_EN2ZH.setdefault(p["nation"], p["nationZh"])
 
     def nat_zh(team): return NAT_EN2ZH.get(team, NATION_ZH.get(team, team))
+    # 国名归一到 players.json 的标准英文名（= 前端 FLAG 键），避免变体（Czech Republic 等）出白旗
+    ZH2EN={}
+    for p in players: ZH2EN.setdefault(p["nationZh"], p["nation"])
+    def canon_nat(team): return ZH2EN.get(nat_zh(team), team)
 
     def expand(p, goals, pens=0):
         """把球员档案 JOIN clubs.json，展开成 data.json 用的完整记录。pens=其中的点球数。"""
@@ -166,6 +170,10 @@ def main():
     STAGE_EN={"Round of 32":"Round of 32","Round of 16":"Round of 16","Quarter-final":"Quarter-finals",
               "Semi-final":"Semi-finals","Match for third place":"Third place","Final":"Final"}
     all_matches=wc.get("matches",[])
+    # 按日期+时间给全部比赛编号（= 第几场）
+    match_no={}
+    for i,mt in enumerate(sorted(all_matches,key=lambda m:(m.get("date",""),m.get("time","")))):
+        match_no[id(mt)]=i+1
     total_m=len(all_matches)
     played_m=sum(1 for m in all_matches if m.get("score",{}).get("ft"))
     # 小组赛轮次：把每个小组的比赛按日期排序，每 2 场为一轮 → 小组赛第1/2/3轮
@@ -197,12 +205,85 @@ def main():
     schedule={"total":total_m,"played":played_m,"stageEn":st_en,"stageZh":st_zh,
               "lastDate":last_date,"nextDate":next_date}
 
+    # ---- 趣味统计：多球表演 / 进球时间分布 / 最早最晚 / 进球大战 ----
+    def parse_min(s):
+        m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
+        return int(m.group(1))+(int(m.group(2)) if m.group(2) else 0) if m else None
+    def clean_ground(g):
+        g=re.sub(r"\s*\(.*?\)","",g or "").strip()   # 去掉括号里的具体郊区名
+        return g.replace("New York/New Jersey","New York")
+    def resolve(name, team):
+        nm=ALIASES.get(name,name)
+        return (smap.get(name) or smap.get(nm) or smap_ci.get(sa(name).lower())
+                or smap_ci.get(sa(nm).lower()) or fuzzy_id(nm,team))
+    # 按比赛阶段分桶（补水时间约 30'/75'）
+    PHASES=["1-5","6-30","31-45","46-75","76-90","90+","ET"]
+    buckets={b:0 for b in PHASES}
+    def phase_of(s):
+        m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
+        if not m: return None
+        base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
+        if base>=91: return "ET"            # 加时（淘汰赛）
+        if base==45 and extra>0: return "31-45"  # 上半场补时
+        if base==90 and extra>0: return "90+"    # 终场补时绝杀
+        t=base+extra
+        if t<=5: return "1-5"
+        if t<=30: return "6-30"
+        if t<=45: return "31-45"
+        if t<=75: return "46-75"
+        if t<=90: return "76-90"
+        return "90+"
+    multi=[]; earliest=None; latest=None
+    for mt in all_matches:
+        ft=mt.get("score",{}).get("ft")
+        if not ft: continue
+        t1,t2=mt.get("team1"),mt.get("team2"); mdate=mt.get("date","")
+        for side,team,oppo,persp in (("goals1",t1,t2,f"{ft[0]}-{ft[1]}"),
+                                     ("goals2",t2,t1,f"{ft[1]}-{ft[0]}")):
+            pc={}
+            for g in mt.get(side,[]):
+                if g.get("owngoal") or not g.get("name"): continue
+                mn=parse_min(g.get("minute"))
+                ph=phase_of(g.get("minute"))
+                if ph: buckets[ph]+=1
+                pid=resolve(g["name"],team); p=by_id.get(pid) if pid else None
+                en=p["name"] if p else g["name"]
+                zh=(p.get("nameZh") if p else "") or g["name"]
+                if mn is not None:
+                    rec={"player":en,"nameZh":zh,"nation":canon_nat(team),"nationZh":nat_zh(team),
+                         "oppo":canon_nat(oppo),"oppoZh":nat_zh(oppo),"score":persp,"date":mdate,
+                         "min":mn,"minDisp":(str(g.get("minute"))+"'" if g.get("minute") else "")}
+                    if earliest is None or mn<earliest["min"]: earliest=rec
+                    if latest is None or mn>latest["min"]: latest=rec
+                e=pc.setdefault(pid or en,{"n":0,"pens":0,"en":en,"zh":zh})
+                e["n"]+=1
+                if g.get("penalty"): e["pens"]+=1
+            for e in pc.values():
+                if e["n"]>=2:
+                    multi.append({"n":e["n"],"pens":e["pens"],"player":e["en"],"nameZh":e["zh"],
+                        "nation":canon_nat(team),"nationZh":nat_zh(team),
+                        "oppo":canon_nat(oppo),"oppoZh":nat_zh(oppo),"score":persp,
+                        "date":mdate,"ground":clean_ground(mt.get("ground",""))})
+    multi.sort(key=lambda x:(-x["n"], x["date"]))
+    bigm=[]
+    for mt in all_matches:
+        ft=mt.get("score",{}).get("ft")
+        if not ft: continue
+        bigm.append({"t1":canon_nat(mt.get("team1")),"t1Zh":nat_zh(mt.get("team1")),
+            "t2":canon_nat(mt.get("team2")),"t2Zh":nat_zh(mt.get("team2")),
+            "ft":f"{ft[0]}-{ft[1]}","total":ft[0]+ft[1],"date":mt.get("date",""),
+            "ground":clean_ground(mt.get("ground","")),"num":match_no.get(id(mt),"")})
+    bigm.sort(key=lambda x:(-x["total"], x["date"]))
+    bigm=[m for m in bigm if m["total"]>=4]   # 进球大战：保留总进球≥4（前端再按档位筛选）
+    funstats={"multiGoals":multi,"timeBuckets":buckets,
+              "earliest":earliest,"latest":latest,"bigMatches":bigm}
+
     out={"version":read_version(),
          "updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
          "source":"openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
          "totalPens":sum(s["pens"] for s in scorers),
-         "matchesWithGoals":matches_with_goals,"schedule":schedule,"scorers":scorers,
+         "matchesWithGoals":matches_with_goals,"schedule":schedule,"funstats":funstats,"scorers":scorers,
          "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 

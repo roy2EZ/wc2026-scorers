@@ -8,6 +8,28 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.6.0
+
+**New stat sections / 新增统计板块**
+- **Multi-goal Games / 单场多球**: tabbed board (brace / hat-trick / haul / glut) listing every multi-goal performance — player, matchup with score, venue & date, penalty pips, card border colour-keyed to the goal count (same scale as the Top Scorers board). Tabs show live counts.
+  **单场多球**：标签页切换（梅开二度 / 帽子戏法 / 大四喜 / 五子登科），列出每场多球表演——球员、对阵比分、场地与日期、点球标识，卡片边框按进球数上色（与领跑榜同一色阶）。标签显示实时数量。
+- **Goal Timing / 进球时间分布**: a 7-phase heat-mapped histogram by match stage (闪电进球 / 初见端倪 / 中盘厮杀 / 再接再厉 / 放手一搏 / 终场绝杀 / 一战再战) plus the tournament's earliest & latest goal.
+  **进球时间分布**：按比赛阶段分 7 段的热力图柱状图，外加全届最早 / 最晚进球。
+- **Goal Fests / 进球大战**: highest-scoring matches with a 4+/5+/6+/7+ threshold filter, symmetric bilingual matchup, score, venue, match number.
+  **进球大战**：单场进球最多的比赛，含 4+/5+/6+/7+ 档位筛选、对称中英对阵、比分、场地、场次。
+- **Top Scorers / 射手榜领跑者** gains a per-league filter (个人 league leaderboards) and the three **Goal Origins** charts gain 🥇🥈🥉 medals on each top 3 (dynamic with filters).
+  **射手榜领跑者**新增按联赛筛选（各联赛个人榜），三个**进球来自哪里**柱状图前三名加金银铜牌（随筛选动态）。
+
+**Data integrity / 数据整治**
+- Fixed 6 NUL-byte-corrupted names (Benfica, Sheffield United, Vélez Sarsfield, Kifisia + 2 players), merged 6 duplicate club entries (457 → 451 clubs), added Chinese names for 200+ major-league clubs, and English labels for all 58 leagues; normalized stray league/venue strings. `update_data.py` now emits a `funstats` block (multi-goal, timing, extremes, big matches) and per-match numbering. Consistency check green (1248 / 451 / 48).
+  修复 6 处 NUL 字节损坏名（本菲卡、谢菲尔德联、贝莱斯、基菲西亚 + 2 名球员），合并 6 对重复俱乐部（457→451），补 200+ 主流联赛俱乐部中文名、58 个联赛英文名；归一游离联赛/场地写法。`update_data.py` 新增 `funstats`（多球 / 时间 / 最早最晚 / 大战）与比赛编号。一致性校验全绿（1248 / 451 / 48）。
+
+**Header & polish / 页头与打磨**
+- Rewrote the intro as a concise Chinese-then-English lead with thanks to the open-source openfootball project and a star link to this repo; trimmed the footer; many responsive type/colour/layout refinements across all cards.
+  开场白重写为先中后英的简洁引言，致谢开源项目 openfootball 并附本仓库 Star 链接；精简页脚；各卡片大量响应式字号 / 配色 / 布局打磨。
+
+---
+
 ## v1.5.6
 
 **Responsive overhaul: Top Scorers, All Players table & charts / 响应式大改：领跑榜、球员表与图表**
