@@ -1,18 +1,18 @@
 {
  "version": "v1.5.6",
- "updated": "2026-06-28T01:34:14+00:00",
+ "updated": "2026-06-28T04:39:30+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 134,
- "totalGoals": 189,
- "totalPens": 6,
- "matchesWithGoals": 62,
+ "count": 143,
+ "totalGoals": 203,
+ "totalPens": 8,
+ "matchesWithGoals": 65,
  "schedule": {
   "total": 104,
-  "played": 69,
-  "stageEn": "Group R3",
-  "stageZh": "小组赛第3轮",
+  "played": 72,
+  "stageEn": "Round of 32",
+  "stageZh": "32强",
   "lastDate": "2026-06-27",
-  "nextDate": "2026-06-27"
+  "nextDate": "2026-06-28"
  },
  "scorers": [
   {
@@ -23,7 +23,7 @@
    "posZh": "前锋",
    "nation": "Argentina",
    "nationZh": "阿根廷",
-   "goals": 5,
+   "goals": 6,
    "pens": 0,
    "club": "Inter Miami",
    "clubZh": "迈阿密国际",
@@ -238,6 +238,22 @@
    "league": "英超",
    "club_id": "manchester-united",
    "id": "BRA-9"
+  },
+  {
+   "player": "Yoane Wissa",
+   "nameZh": "维萨",
+   "num": 20,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 3,
+   "pens": 1,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "COD-20"
   },
   {
    "player": "Anthony Elanga",
@@ -464,6 +480,22 @@
    "id": "BEL-10"
   },
   {
+   "player": "Marko Arnautovic",
+   "nameZh": "阿瑙托维奇",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 2,
+   "pens": 1,
+   "club": "Red Star Belgrade",
+   "clubZh": "贝尔格莱德红星",
+   "league": "塞尔维亚超",
+   "club_id": "red-star-belgrade",
+   "id": "AUT-7"
+  },
+  {
    "player": "Maximiliano Araujo",
    "nameZh": "马克西·阿劳霍",
    "num": 20,
@@ -542,6 +574,22 @@
    "league": "伊朗波斯湾联赛",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
+  },
+  {
+   "player": "Riyad Mahrez",
+   "nameZh": "里亚德·马赫雷斯",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al-Ahli",
+   "clubZh": "吉达阿赫利",
+   "league": "沙特职业联赛",
+   "club_id": "al-ahli",
+   "id": "ALG-7"
   },
   {
    "player": "Ruben Vargas",
@@ -944,6 +992,22 @@
    "id": "FRA-20"
   },
   {
+   "player": "Eldor Shomurodov",
+   "nameZh": "埃尔多·肖穆罗多夫",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Uzbekistan",
+   "nationZh": "乌兹别克斯坦",
+   "goals": 1,
+   "pens": 0,
+   "club": "Başakşehir FK",
+   "clubZh": "",
+   "league": "土超",
+   "club_id": "basaksehir-fk",
+   "id": "UZB-14"
+  },
+  {
    "player": "Emam Ashour",
    "nameZh": "埃玛姆·阿舒尔",
    "num": 8,
@@ -992,6 +1056,22 @@
    "id": "NZL-16"
   },
   {
+   "player": "Fiston Mayele",
+   "nameZh": "菲斯顿·马耶勒",
+   "num": 19,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 1,
+   "pens": 0,
+   "club": "Pyramids FC",
+   "clubZh": "金字塔",
+   "league": "埃及超",
+   "club_id": "pyramids-fc",
+   "id": "COD-19"
+  },
+  {
    "player": "Franck Kessie",
    "nameZh": "凯西埃",
    "num": 8,
@@ -1038,6 +1118,22 @@
    "league": "德甲",
    "club_id": "borussia-monchengladbach",
    "id": "USA-7"
+  },
+  {
+   "player": "Giovani Lo Celso",
+   "nameZh": "乔瓦尼·洛塞尔索",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Real Betis",
+   "clubZh": "贝蒂斯",
+   "league": "西甲",
+   "club_id": "real-betis",
+   "id": "ARG-11"
   },
   {
    "player": "Gonzalo Plata",
@@ -1408,6 +1504,22 @@
    "id": "ESP-19"
   },
   {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 1,
+   "club": "FC Internazionale Milano",
+   "clubZh": "",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22"
+  },
+  {
    "player": "Leo Ostigard",
    "nameZh": "利奥·奥斯蒂加德",
    "num": 4,
@@ -1504,6 +1616,22 @@
    "id": "EGY-21"
   },
   {
+   "player": "Marcel Sabitzer",
+   "nameZh": "马塞尔·萨比策",
+   "num": 9,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 1,
+   "pens": 0,
+   "club": "Borussia Dortmund",
+   "clubZh": "多特蒙德",
+   "league": "德甲",
+   "club_id": "borussia-dortmund",
+   "id": "AUT-9"
+  },
+  {
    "player": "Marcus Holmgren Pedersen",
    "nameZh": "马库斯·霍姆格伦",
    "num": 16,
@@ -1534,22 +1662,6 @@
    "league": "西甲",
    "club_id": "barcelona",
    "id": "ENG-11"
-  },
-  {
-   "player": "Marko Arnautovic",
-   "nameZh": "阿瑙托维奇",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Austria",
-   "nationZh": "奥地利",
-   "goals": 1,
-   "pens": 1,
-   "club": "Red Star Belgrade",
-   "clubZh": "贝尔格莱德红星",
-   "league": "塞尔维亚超",
-   "club_id": "red-star-belgrade",
-   "id": "AUT-7"
   },
   {
    "player": "Martin Baturina",
@@ -1694,6 +1806,22 @@
    "league": "埃及超",
    "club_id": "pyramids-fc",
    "id": "EGY-11"
+  },
+  {
+   "player": "Mousa Altamari",
+   "nameZh": "穆萨·阿尔塔马里",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Jordan",
+   "nationZh": "约旦",
+   "goals": 1,
+   "pens": 0,
+   "club": "Stade Rennais",
+   "clubZh": "雷恩",
+   "league": "法甲",
+   "club_id": "stade-rennais",
+   "id": "JOR-10"
   },
   {
    "player": "Nadhir Benbouali",
@@ -1920,6 +2048,22 @@
    "id": "CAN-24"
   },
   {
+   "player": "Ra\u0000k Belghali",
+   "nameZh": "拉克贝尔加利",
+   "num": 17,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "Hellas Verona FC",
+   "clubZh": "",
+   "league": "意甲",
+   "club_id": "hellas-verona-fc",
+   "id": "ALG-17"
+  },
+  {
    "player": "Rafael Leao",
    "nameZh": "拉斐尔·拉法·莱昂",
    "num": 17,
@@ -1982,6 +2126,22 @@
    "league": "意甲",
    "club_id": "ssc-napoli",
    "id": "BEL-9"
+  },
+  {
+   "player": "Sasa Kalajdzic",
+   "nameZh": "萨萨·卡拉吉奇",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 1,
+   "pens": 0,
+   "club": "LASK Linz",
+   "clubZh": "",
+   "league": "奥地利甲级",
+   "club_id": "lask-linz",
+   "id": "AUT-14"
   },
   {
    "player": "Sebastian Berhalter",
@@ -2126,22 +2286,6 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "HAI-18"
-  },
-  {
-   "player": "Yoane Wissa",
-   "nameZh": "维萨",
-   "num": 20,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "DR Congo",
-   "nationZh": "刚果(金)",
-   "goals": 1,
-   "pens": 0,
-   "club": "Newcastle United",
-   "clubZh": "纽卡斯尔",
-   "league": "英超",
-   "club_id": "newcastle-united",
-   "id": "COD-20"
   },
   {
    "player": "Álex Baena",
@@ -2170,7 +2314,7 @@
    "posZh": "前锋",
    "nation": "Argentina",
    "nationZh": "阿根廷",
-   "goals": 5,
+   "goals": 6,
    "pens": 0,
    "club": "Inter Miami",
    "clubZh": "迈阿密国际",
@@ -2385,6 +2529,22 @@
    "league": "英超",
    "club_id": "manchester-united",
    "id": "BRA-9"
+  },
+  {
+   "player": "Yoane Wissa",
+   "nameZh": "维萨",
+   "num": 20,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 3,
+   "pens": 1,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "COD-20"
   },
   {
    "player": "Anthony Elanga",
@@ -2611,6 +2771,22 @@
    "id": "BEL-10"
   },
   {
+   "player": "Marko Arnautovic",
+   "nameZh": "阿瑙托维奇",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 2,
+   "pens": 1,
+   "club": "Red Star Belgrade",
+   "clubZh": "贝尔格莱德红星",
+   "league": "塞尔维亚超",
+   "club_id": "red-star-belgrade",
+   "id": "AUT-7"
+  },
+  {
    "player": "Maximiliano Araujo",
    "nameZh": "马克西·阿劳霍",
    "num": 20,
@@ -2689,6 +2865,22 @@
    "league": "伊朗波斯湾联赛",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
+  },
+  {
+   "player": "Riyad Mahrez",
+   "nameZh": "里亚德·马赫雷斯",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al-Ahli",
+   "clubZh": "吉达阿赫利",
+   "league": "沙特职业联赛",
+   "club_id": "al-ahli",
+   "id": "ALG-7"
   },
   {
    "player": "Ruben Vargas",
@@ -3091,6 +3283,22 @@
    "id": "FRA-20"
   },
   {
+   "player": "Eldor Shomurodov",
+   "nameZh": "埃尔多·肖穆罗多夫",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Uzbekistan",
+   "nationZh": "乌兹别克斯坦",
+   "goals": 1,
+   "pens": 0,
+   "club": "Başakşehir FK",
+   "clubZh": "",
+   "league": "土超",
+   "club_id": "basaksehir-fk",
+   "id": "UZB-14"
+  },
+  {
    "player": "Emam Ashour",
    "nameZh": "埃玛姆·阿舒尔",
    "num": 8,
@@ -3139,6 +3347,22 @@
    "id": "NZL-16"
   },
   {
+   "player": "Fiston Mayele",
+   "nameZh": "菲斯顿·马耶勒",
+   "num": 19,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 1,
+   "pens": 0,
+   "club": "Pyramids FC",
+   "clubZh": "金字塔",
+   "league": "埃及超",
+   "club_id": "pyramids-fc",
+   "id": "COD-19"
+  },
+  {
    "player": "Franck Kessie",
    "nameZh": "凯西埃",
    "num": 8,
@@ -3185,6 +3409,22 @@
    "league": "德甲",
    "club_id": "borussia-monchengladbach",
    "id": "USA-7"
+  },
+  {
+   "player": "Giovani Lo Celso",
+   "nameZh": "乔瓦尼·洛塞尔索",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Real Betis",
+   "clubZh": "贝蒂斯",
+   "league": "西甲",
+   "club_id": "real-betis",
+   "id": "ARG-11"
   },
   {
    "player": "Gonzalo Plata",
@@ -3555,6 +3795,22 @@
    "id": "ESP-19"
   },
   {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 1,
+   "club": "FC Internazionale Milano",
+   "clubZh": "",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22"
+  },
+  {
    "player": "Leo Ostigard",
    "nameZh": "利奥·奥斯蒂加德",
    "num": 4,
@@ -3651,6 +3907,22 @@
    "id": "EGY-21"
   },
   {
+   "player": "Marcel Sabitzer",
+   "nameZh": "马塞尔·萨比策",
+   "num": 9,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 1,
+   "pens": 0,
+   "club": "Borussia Dortmund",
+   "clubZh": "多特蒙德",
+   "league": "德甲",
+   "club_id": "borussia-dortmund",
+   "id": "AUT-9"
+  },
+  {
    "player": "Marcus Holmgren Pedersen",
    "nameZh": "马库斯·霍姆格伦",
    "num": 16,
@@ -3681,22 +3953,6 @@
    "league": "西甲",
    "club_id": "barcelona",
    "id": "ENG-11"
-  },
-  {
-   "player": "Marko Arnautovic",
-   "nameZh": "阿瑙托维奇",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Austria",
-   "nationZh": "奥地利",
-   "goals": 1,
-   "pens": 1,
-   "club": "Red Star Belgrade",
-   "clubZh": "贝尔格莱德红星",
-   "league": "塞尔维亚超",
-   "club_id": "red-star-belgrade",
-   "id": "AUT-7"
   },
   {
    "player": "Martin Baturina",
@@ -3841,6 +4097,22 @@
    "league": "埃及超",
    "club_id": "pyramids-fc",
    "id": "EGY-11"
+  },
+  {
+   "player": "Mousa Altamari",
+   "nameZh": "穆萨·阿尔塔马里",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Jordan",
+   "nationZh": "约旦",
+   "goals": 1,
+   "pens": 0,
+   "club": "Stade Rennais",
+   "clubZh": "雷恩",
+   "league": "法甲",
+   "club_id": "stade-rennais",
+   "id": "JOR-10"
   },
   {
    "player": "Nadhir Benbouali",
@@ -4067,6 +4339,22 @@
    "id": "CAN-24"
   },
   {
+   "player": "Ra\u0000k Belghali",
+   "nameZh": "拉克贝尔加利",
+   "num": 17,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "Hellas Verona FC",
+   "clubZh": "",
+   "league": "意甲",
+   "club_id": "hellas-verona-fc",
+   "id": "ALG-17"
+  },
+  {
    "player": "Rafael Leao",
    "nameZh": "拉斐尔·拉法·莱昂",
    "num": 17,
@@ -4129,6 +4417,22 @@
    "league": "意甲",
    "club_id": "ssc-napoli",
    "id": "BEL-9"
+  },
+  {
+   "player": "Sasa Kalajdzic",
+   "nameZh": "萨萨·卡拉吉奇",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Austria",
+   "nationZh": "奥地利",
+   "goals": 1,
+   "pens": 0,
+   "club": "LASK Linz",
+   "clubZh": "",
+   "league": "奥地利甲级",
+   "club_id": "lask-linz",
+   "id": "AUT-14"
   },
   {
    "player": "Sebastian Berhalter",
@@ -4273,22 +4577,6 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "HAI-18"
-  },
-  {
-   "player": "Yoane Wissa",
-   "nameZh": "维萨",
-   "num": 20,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "DR Congo",
-   "nationZh": "刚果(金)",
-   "goals": 1,
-   "pens": 0,
-   "club": "Newcastle United",
-   "clubZh": "纽卡斯尔",
-   "league": "英超",
-   "club_id": "newcastle-united",
-   "id": "COD-20"
   },
   {
    "player": "Álex Baena",
@@ -9075,22 +9363,6 @@
    "id": "SEN-25"
   },
   {
-   "player": "Eldor Shomurodov",
-   "nameZh": "埃尔多·肖穆罗多夫",
-   "num": 14,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Uzbekistan",
-   "nationZh": "乌兹别克斯坦",
-   "goals": 0,
-   "pens": 0,
-   "club": "Başakşehir FK",
-   "clubZh": "",
-   "league": "土超",
-   "club_id": "basaksehir-fk",
-   "id": "UZB-14"
-  },
-  {
    "player": "Elias Achouri",
    "nameZh": "埃利亚斯·阿乔里",
    "num": 7,
@@ -9859,22 +10131,6 @@
    "id": "TUN-19"
   },
   {
-   "player": "Fiston Mayele",
-   "nameZh": "菲斯顿·马耶勒",
-   "num": 19,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "DR Congo",
-   "nationZh": "刚果(金)",
-   "goals": 0,
-   "pens": 0,
-   "club": "Pyramids FC",
-   "clubZh": "金字塔",
-   "league": "埃及超",
-   "club_id": "pyramids-fc",
-   "id": "COD-19"
-  },
-  {
    "player": "Florian Grillitsch",
    "nameZh": "弗洛里安·格里里奇",
    "num": 10,
@@ -10353,22 +10609,6 @@
    "league": "巴西甲级",
    "club_id": "cr-flamengo",
    "id": "URU-10"
-  },
-  {
-   "player": "Giovani Lo Celso",
-   "nameZh": "乔瓦尼·洛塞尔索",
-   "num": 11,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "Real Betis",
-   "clubZh": "贝蒂斯",
-   "league": "西甲",
-   "club_id": "real-betis",
-   "id": "ARG-11"
   },
   {
    "player": "Giuliano Simeone",
@@ -14211,22 +14451,6 @@
    "id": "CPV-15"
   },
   {
-   "player": "Lautaro L. Martinez",
-   "nameZh": "劳塔罗·马丁内斯",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "FC Internazionale Milano",
-   "clubZh": "",
-   "league": "意甲",
-   "club_id": "fc-internazionale-milano",
-   "id": "ARG-22"
-  },
-  {
    "player": "Lawrence Shankland",
    "nameZh": "劳伦斯·尚克兰",
    "num": 20,
@@ -15089,22 +15313,6 @@
    "league": "西甲",
    "club_id": "atletico-de-madrid",
    "id": "ESP-2"
-  },
-  {
-   "player": "Marcel Sabitzer",
-   "nameZh": "马塞尔·萨比策",
-   "num": 9,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Austria",
-   "nationZh": "奥地利",
-   "goals": 0,
-   "pens": 0,
-   "club": "Borussia Dortmund",
-   "clubZh": "多特蒙德",
-   "league": "德甲",
-   "club_id": "borussia-dortmund",
-   "id": "AUT-9"
   },
   {
    "player": "Marco Friedl",
@@ -16899,22 +17107,6 @@
    "id": "TUN-1"
   },
   {
-   "player": "Mousa Altamari",
-   "nameZh": "穆萨·阿尔塔马里",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Jordan",
-   "nationZh": "约旦",
-   "goals": 0,
-   "pens": 0,
-   "club": "Stade Rennais",
-   "clubZh": "雷恩",
-   "league": "法甲",
-   "club_id": "stade-rennais",
-   "id": "JOR-10"
-  },
-  {
    "player": "Moussa Niakhaté",
    "nameZh": "穆萨·尼亚哈特",
    "num": 19,
@@ -18547,22 +18739,6 @@
    "id": "NED-26"
   },
   {
-   "player": "Ra\u0000k Belghali",
-   "nameZh": "拉克贝尔加利",
-   "num": 17,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Algeria",
-   "nationZh": "阿尔及利亚",
-   "goals": 0,
-   "pens": 0,
-   "club": "Hellas Verona FC",
-   "clubZh": "",
-   "league": "意甲",
-   "club_id": "hellas-verona-fc",
-   "id": "ALG-17"
-  },
-  {
    "player": "Raed Chikhaoui",
    "nameZh": "拉德·奇卡维",
    "num": 24,
@@ -18993,22 +19169,6 @@
    "league": "德甲",
    "club_id": "eintracht-frankfurt",
    "id": "JPN-10"
-  },
-  {
-   "player": "Riyad Mahrez",
-   "nameZh": "里亚德·马赫雷斯",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Algeria",
-   "nationZh": "阿尔及利亚",
-   "goals": 0,
-   "pens": 0,
-   "club": "Al-Ahli",
-   "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
-   "club_id": "al-ahli",
-   "id": "ALG-7"
   },
   {
    "player": "Roberto Lopes",
@@ -19841,22 +20001,6 @@
    "league": "澳超",
    "club_id": "wellington-phoenix-fc",
    "id": "NZL-10"
-  },
-  {
-   "player": "Sasa Kalajdzic",
-   "nameZh": "萨萨·卡拉吉奇",
-   "num": 14,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Austria",
-   "nationZh": "奥地利",
-   "goals": 0,
-   "pens": 0,
-   "club": "LASK Linz",
-   "clubZh": "",
-   "league": "奥地利甲级",
-   "club_id": "lask-linz",
-   "id": "AUT-14"
   },
   {
    "player": "Saud",
