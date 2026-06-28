@@ -205,7 +205,21 @@
   @media(max-width:560px){ .row .pip{width:14px;height:14px;font-size:10px} .row .pips{max-width:74px;gap:2px} .row{gap:8px} .team{width:50px} }  /* 窄屏缩小足球符号而非隐藏，保留点球标识 */
 
   .subnote{margin:-8px 0 18px;font-size:13px;line-height:1.55;color:#aab2cb;max-width:760px}
-  .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+  .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:16px;align-items:start}
+  .minrow{grid-column:1/-1;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .combo{position:relative;min-width:0}
+  .combo .cinp{width:100%;background:var(--card);border:1px solid var(--line);color:var(--ink);font-family:'Noto Sans SC';font-size:14px;border-radius:10px;padding:11px 30px 11px 12px;outline:none}
+  .combo .cinp:focus{border-color:#3a4a6a}
+  .combo .cinp::placeholder{color:var(--mut)}
+  .combo .cclr{position:absolute;right:7px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--mut);font-size:17px;line-height:1;cursor:pointer;padding:3px 5px;display:none}
+  .combo.has-val .cclr{display:block}
+  .combo .cmenu{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:40;background:#121a30;border:1px solid #2a3550;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.5);max-height:300px;overflow-y:auto;display:none}
+  .combo.open .cmenu{display:block}
+  .combo .citem{display:flex;align-items:center;gap:9px;padding:9px 12px;cursor:pointer;font-size:14px;border-bottom:1px solid rgba(255,255,255,.04)}
+  .combo .citem:last-child{border-bottom:0}
+  .combo .citem:hover,.combo .citem.sel{background:rgba(255,45,120,.14)}
+  .combo .citem .cflag{font-size:16px;flex:none}
+  .combo .citem .csub{color:#8a93ab;font-size:12px;margin-left:auto;white-space:nowrap}
   .search{position:relative}
   .acbox{position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:30;background:#121a30;border:1px solid #2a3550;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.5);overflow:hidden;max-height:320px;overflow-y:auto}
   .acitem{display:flex;align-items:center;gap:9px;padding:9px 12px;cursor:pointer;font-size:14px;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -416,19 +430,20 @@
     <div class="shead"><h2>全部<b>球员查询</b><span class="enh">All Players</span></h2></div>
     <p class="subnote">完整收录本届世界杯全部 48 队 1248 名参赛球员，可查询每位球员的国家队、号码、位置、所属俱乐部与联赛——包含尚未/没有进球的球员（进球数记为 0）。默认仅显示已进球球员，点「全部 All」查看全部名单。进球数右上角的 <sup class="penmk">P</sup> 表示其中的点球数。<span style="display:block;margin-top:3px;color:#8a93ab">A full searchable database of all 1,248 players across 48 teams — including those with 0 goals. A <sup class="penmk">P</sup> next to a goal tally marks penalty goals.</span></p>
     <div class="filters">
-      <label class="search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
-        <input id="q" type="search" placeholder="搜索球员 / 俱乐部 / 国家 Search players, clubs, nations…" autocomplete="off">
-        <div id="acbox" class="acbox" style="display:none"></div>
-      </label>
-      <select id="leagueSel"></select>
-      <div class="chips" id="minchips">
-        <button class="on" data-min="0">全部 All</button>
-        <button data-min="1">1+</button>
-        <button data-min="2">2+</button>
-        <button data-min="3">3+</button>
-        <button data-min="4">4+</button>
-        <button data-min="5">5+</button>
+      <div class="combo" data-cat="player"><input class="cinp" autocomplete="off" placeholder="球员 Player"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
+      <div class="combo" data-cat="nation"><input class="cinp" autocomplete="off" placeholder="国家队 Nation Team"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
+      <div class="combo" data-cat="league"><input class="cinp" autocomplete="off" placeholder="联赛 League"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
+      <div class="combo" data-cat="club"><input class="cinp" autocomplete="off" placeholder="俱乐部 Club"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
+      <div class="minrow">
+        <span class="boardlf">个人进球总数 Goals</span>
+        <div class="chips" id="minchips">
+          <button class="on" data-min="0">全部 All</button>
+          <button data-min="1">1+</button>
+          <button data-min="2">2+</button>
+          <button data-min="3">3+</button>
+          <button data-min="4">4+</button>
+          <button data-min="5">5+</button>
+        </div>
       </div>
     </div>
     <div class="tablecard">
@@ -455,7 +470,7 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.6.1</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 451 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.6.2</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 451 clubs · data <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -574,7 +589,7 @@ const RAW = [
 ];
 const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
 let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
-const APP_VERSION="v1.6.1", BUILD_TIME="2026-06-28 11:40";
+const APP_VERSION="v1.6.2", BUILD_TIME="2026-06-28 13:50";
 let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
 const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
 
@@ -966,14 +981,8 @@ document.getElementById("metric").addEventListener("click",e=>{
 });
 
 const tbody=document.getElementById("tbody"), rowcount=document.getElementById("rowcount");
-const sel=document.getElementById("leagueSel");
-function populateLeagueFilter(){
-  const cur=sel.value;
-  sel.innerHTML='<option value="">全部联赛 All leagues</option>'+
-    leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
-  if([...sel.options].some(o=>o.value===cur)) sel.value=cur;
-}
-let q="",leagueF="",minG=0,sortK="goals",sortDir=-1,acExact=null;
+let minG=0,sortK="goals",sortDir=-1;
+const F={player:"",club:"",nation:"",league:""};   // 四个 combobox 的筛选值（子串匹配）
 
 // 表格行背景：进球≥2 时按档位上一层淡渐变，与领跑榜同色系但更克制；0–1 球保持干净
 function rowTint(goals,maxG){
@@ -985,18 +994,12 @@ function rowTint(goals,maxG){
 }
 function render(){
   const maxG=TABLE_DATA.reduce((m,d)=>Math.max(m,d.goals),0);
+  const mF=(fields,q)=>{ if(!q)return true; q=q.toLowerCase(); return fields.some(v=>(v||"").toLowerCase().includes(q)); };
   let rows=TABLE_DATA.filter(d=>d.goals>=minG)
-    .filter(d=>!leagueF||d.league===leagueF)
-    .filter(d=>{
-      if(acExact){  // 从下拉精确选择：按字段精确匹配，避免"葡萄牙"误含"葡萄牙体育"
-        if(acExact.type==="nat") return d.teamZh===acExact.value || d.teamEn===acExact.value;
-        if(acExact.type==="club") return czr(d)===acExact.value || d.club===acExact.value;
-        if(acExact.type==="player") return pzr(d)===acExact.value || d.player===acExact.value;
-      }
-      if(!q)return true;
-      const s=q.toLowerCase();
-      return [d.player,d.club,d.league,d.teamZh,d.teamEn,pzr(d),czr(d)].some(v=>v.toLowerCase().includes(s));
-    });
+    .filter(d=>mF([d.player,pzr(d)],F.player))
+    .filter(d=>mF([d.club,czr(d)],F.club))
+    .filter(d=>mF([d.teamEn,d.teamZh],F.nation))
+    .filter(d=>mF([d.league,LEN[d.league]||""],F.league));
   rows.sort((a,b)=>{
     let r; if(sortK==="goals")r=a.goals-b.goals;
     else r=String(a[sortK]).localeCompare(String(b[sortK]),"zh");
@@ -1011,69 +1014,56 @@ function render(){
   const scorersN=TABLE_DATA.filter(d=>d.goals>=1).length, allN=TABLE_DATA.length;
   rowcount.textContent=`${rows.length} 人 of ${scorersN} 名进球者 of ${allN} 名球员 · showing ${rows.length} of ${scorersN} scorers / ${allN} players`;
 }
-// ===== 搜索自动补全 Autocomplete =====
-let AC_INDEX=[], acSel=-1;
-function buildACIndex(){
-  const nat=new Map(), club=new Map(), pl=[];
+// ===== 四个可搜索下拉（combobox）：球员 / 国家 / 俱乐部 / 联赛 =====
+let COMBO={player:[],club:[],nation:[],league:[]};
+const escA=s=>String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+function buildComboData(){
+  const seen={player:new Set(),club:new Set(),nation:new Set(),league:new Set()};
+  COMBO={player:[],club:[],nation:[],league:[]};
   TABLE_DATA.forEach(d=>{
-    if(d.teamZh && !nat.has(d.teamZh)) nat.set(d.teamZh,{label:d.teamZh,sub:d.teamEn,type:"国家队 Nation",term:d.teamZh,flag:fl(d.teamEn)});
-    const cn=czr(d);
-    if(d.club && !club.has(cn)) club.set(cn,{label:cn,sub:d.club,type:"俱乐部 Club",term:cn,flag:""});
-    pl.push({label:pzr(d),sub:d.player,type:"球员 Player",term:pzr(d),flag:fl(d.teamEn)});
+    if(!seen.player.has(d.player)){seen.player.add(d.player);COMBO.player.push({disp:pzr(d),sub:d.player,flag:fl(d.teamEn),val:pzr(d)});}
+    if(d.club && !seen.club.has(d.club)){seen.club.add(d.club);COMBO.club.push({disp:czr(d),sub:d.club,flag:"",val:czr(d)});}
+    if(!seen.nation.has(d.teamEn)){seen.nation.add(d.teamEn);COMBO.nation.push({disp:d.teamZh,sub:d.teamEn,flag:fl(d.teamEn),val:d.teamZh});}
+    if(d.league && !seen.league.has(d.league)){seen.league.add(d.league);COMBO.league.push({disp:d.league,sub:LEN[d.league]||"",flag:lfl(d.league),val:d.league});}
   });
-  AC_INDEX=[...nat.values(),...club.values(),...pl];
+  for(const k in COMBO) COMBO[k].sort((a,b)=>a.disp.localeCompare(b.disp,"zh"));
 }
-function renderAC(){
-  const box=document.getElementById("acbox");
-  const s=(q||"").trim().toLowerCase();
-  if(!s){ box.style.display="none"; box.innerHTML=""; acSel=-1; return; }
-  const seen=new Set();
-  const hits=AC_INDEX.filter(it=>{
-    const k=it.type+"|"+it.term; if(seen.has(k))return false;
-    const m=(it.label+" "+(it.sub||"")).toLowerCase().includes(s);
-    if(m)seen.add(k); return m;
+function comboMenu(combo,cat,text){
+  const t=(text||"").trim().toLowerCase();
+  let opts=COMBO[cat];
+  if(t) opts=opts.filter(o=>o.disp.toLowerCase().includes(t)||(o.sub||"").toLowerCase().includes(t));
+  opts=opts.slice(0,40);
+  combo.querySelector(".cmenu").innerHTML = opts.length
+    ? opts.map(o=>`<div class="citem" data-val="${escA(o.val)}">${o.flag?`<span class="cflag">${o.flag}</span>`:''}<span>${o.disp}</span>${o.sub&&o.sub!==o.disp?`<span class="csub">${o.sub}</span>`:''}</div>`).join("")
+    : '<div class="citem" style="cursor:default;color:#8a93ab">无匹配 No match</div>';
+}
+function setupCombos(){
+  document.querySelectorAll(".combo").forEach(combo=>{
+    const cat=combo.dataset.cat, inp=combo.querySelector(".cinp"), menu=combo.querySelector(".cmenu"), clr=combo.querySelector(".cclr");
+    let sel=-1;
+    const open=()=>{ if(cat==="player" && !inp.value.trim()){ close(); return; } comboMenu(combo,cat,inp.value); combo.classList.add("open"); sel=-1; };
+    const close=()=>{ combo.classList.remove("open"); sel=-1; };
+    const apply=v=>{ F[cat]=v; combo.classList.toggle("has-val",!!v); render(); };
+    const pick=v=>{ inp.value=v; apply(v); close(); };
+    inp.addEventListener("focus",open);
+    inp.addEventListener("input",()=>{ apply(inp.value); open(); });
+    inp.addEventListener("keydown",e=>{
+      if(!combo.classList.contains("open") && (e.key==="ArrowDown")){ open(); }
+      const items=[...menu.querySelectorAll(".citem[data-val]")];
+      if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min(sel+1,items.length-1);}
+      else if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(sel-1,0);}
+      else if(e.key==="Enter"){ if(sel>=0&&items[sel]){e.preventDefault();pick(items[sel].dataset.val);} else close(); return; }
+      else if(e.key==="Escape"){close();return;}
+      else return;
+      items.forEach((it,i)=>it.classList.toggle("sel",i===sel));
+      if(items[sel])items[sel].scrollIntoView({block:"nearest"});
+    });
+    menu.addEventListener("mousedown",e=>{ const it=e.target.closest(".citem[data-val]"); if(!it)return; e.preventDefault(); pick(it.dataset.val); });
+    clr.addEventListener("click",()=>{ inp.value=""; apply(""); inp.focus(); open(); });
+    inp.addEventListener("blur",()=>setTimeout(close,160));
   });
-  // 排序：国家队/俱乐部优先于球员，再按 label 起始匹配优先
-  const order={"国家队 Nation":0,"俱乐部 Club":1,"球员 Player":2};
-  hits.sort((a,b)=>{
-    const sa=a.label.toLowerCase().startsWith(s)?0:1, sb=b.label.toLowerCase().startsWith(s)?0:1;
-    return sa-sb || order[a.type]-order[b.type] || a.label.localeCompare(b.label,"zh");
-  });
-  const top=hits.slice(0,10);
-  if(!top.length){ box.style.display="none"; box.innerHTML=""; acSel=-1; return; }
-  box.innerHTML=top.map((it,i)=>{
-    const tcode=it.type.startsWith("国家队")?"nat":it.type.startsWith("俱乐部")?"club":"player";
-    return `<div class="acitem${i===acSel?' sel':''}" data-term="${it.term.replace(/"/g,'&quot;')}" data-type="${tcode}">
-    ${it.flag?`<span class="acflag">${it.flag}</span>`:''}<span>${it.label}${it.sub&&it.sub!==it.label?` <span class="acsub">${it.sub}</span>`:''}</span>
-    <span class="tag">${it.type}</span></div>`;
-  }).join("");
-  box.style.display="block";
 }
-function pickAC(term,type){
-  acExact = type ? {type,value:term} : null;   // 精确字段筛选
-  q=""; const inp=document.getElementById("q"); inp.value=term;
-  document.getElementById("acbox").style.display="none"; acSel=-1;
-  render();
-}
-document.getElementById("q").addEventListener("input",e=>{q=e.target.value;acExact=null;acSel=-1;render();renderAC();});
-document.getElementById("q").addEventListener("keydown",e=>{
-  const box=document.getElementById("acbox"); if(box.style.display==="none")return;
-  const items=[...box.querySelectorAll(".acitem")];
-  if(e.key==="ArrowDown"){e.preventDefault();acSel=Math.min(acSel+1,items.length-1);}
-  else if(e.key==="ArrowUp"){e.preventDefault();acSel=Math.max(acSel-1,0);}
-  else if(e.key==="Enter"){if(acSel>=0&&items[acSel]){e.preventDefault();pickAC(items[acSel].dataset.term,items[acSel].dataset.type);}return;}
-  else if(e.key==="Escape"){box.style.display="none";acSel=-1;return;}
-  else return;
-  items.forEach((it,i)=>it.classList.toggle("sel",i===acSel));
-  if(items[acSel])items[acSel].scrollIntoView({block:"nearest"});
-});
-document.getElementById("acbox").addEventListener("mousedown",e=>{
-  const it=e.target.closest(".acitem"); if(it){e.preventDefault();pickAC(it.dataset.term,it.dataset.type);}
-});
-document.addEventListener("click",e=>{
-  if(!e.target.closest(".search")) document.getElementById("acbox").style.display="none";
-});
-sel.addEventListener("change",e=>{leagueF=e.target.value;render();});
+setupCombos();
 document.getElementById("minchips").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;
   minG=+b.dataset.min;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));render();
@@ -1107,7 +1097,7 @@ function renderFooter(){
   set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
   set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot") + (dataVersion? " · "+dataVersion : ""));
 }
-function renderAll(){ recompute(); populateBoardLeague(); renderStats(); renderBoard(); renderFun(); populateLeagueFilter(); populateClubLeague(); renderCharts(); render(); renderFooter(); buildACIndex(); }
+function renderAll(){ recompute(); populateBoardLeague(); renderStats(); renderBoard(); renderFun(); buildComboData(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
 
 // 读取自动生成的 data.json；失败则保留内置快照
 async function refresh(){
@@ -1136,6 +1126,7 @@ async function refresh(){
 }
 
 // 首屏先用内置快照即时渲染，再尝试拉取最新
+// 实测输入框可用宽度，从完整到简短挑选能完整放下的最长 placeholder（充分利用宽度且不溢出）
 renderAll(); setUpdated(null,false);
 refresh();
 // 标签页重新可见时再拉一次（便于长期开着的页面拿到当天更新）

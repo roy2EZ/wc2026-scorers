@@ -8,6 +8,18 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.6.2
+
+**Searchable filters / 可搜索筛选**
+- The All Players search is rebuilt as four independent comboboxes — Player / Nation Team / League / Club — that combine free-text fuzzy search with a pick-from-list dropdown (the league filter is now type-to-search too). Player is typeahead-only (bilingual suggestions as you type); the other three open a filterable list. Filters stack (AND), each with a clear button and full keyboard nav. A "Goals" threshold (All / 1+…5+) rounds it out.
+  全部球员查询的搜索改为四个独立可搜索下拉——球员 / 国家队 / 联赛 / 俱乐部——把"打字模糊查找"与"下拉点选"合二为一（联赛也能输入筛选了）。球员为纯输入式 typeahead（边打边出双语建议），其余三个可点开筛选列表。多条件叠加（AND），各带清除按钮与完整键盘操作，外加个人进球总数档位（全部 / 1+…5+）。
+
+**Charts / 图表**
+- The three Goal Origins charts get taller rows and larger bilingual labels with a content-aware left gutter; the Goal Timing histogram bars are taller too.
+  三个进球来自哪里柱状图行更高、双语标签更大、左侧留白按最长中文名自适应；进球时间分布柱条也加高。
+
+---
+
 ## v1.6.1
 
 **Layout & readability polish / 布局与可读性打磨**
