@@ -1,18 +1,18 @@
 {
  "version": "v1.6.2",
- "updated": "2026-06-28T13:52:03-07:00",
+ "updated": "2026-06-28T21:38:53+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 143,
- "totalGoals": 203,
+ "count": 144,
+ "totalGoals": 204,
  "totalPens": 8,
- "matchesWithGoals": 65,
+ "matchesWithGoals": 66,
  "schedule": {
   "total": 104,
-  "played": 72,
+  "played": 73,
   "stageEn": "Round of 32",
   "stageZh": "32强",
-  "lastDate": "2026-06-27",
-  "nextDate": "2026-06-28"
+  "lastDate": "2026-06-28",
+  "nextDate": "2026-06-29"
  },
  "funstats": {
   "multiGoals": [
@@ -387,7 +387,7 @@
    "31-45": 38,
    "46-75": 65,
    "76-90": 33,
-   "90+": 22,
+   "90+": 23,
    "ET": 0
   },
   "earliest": {
@@ -2898,6 +2898,22 @@
    "id": "MAR-9"
   },
   {
+   "player": "Stephen Eustáquio",
+   "nameZh": "斯蒂芬·尤斯塔奎奥",
+   "num": 7,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Canada",
+   "nationZh": "加拿大",
+   "goals": 1,
+   "pens": 0,
+   "club": "LAFC",
+   "clubZh": "洛杉矶FC",
+   "league": "美职联",
+   "club_id": "lafc",
+   "id": "CAN-7"
+  },
+  {
    "player": "Teboho Mokoena",
    "nameZh": "莫凯纳",
    "num": 4,
@@ -5187,6 +5203,22 @@
    "league": "阿联酋联赛",
    "club_id": "al-ain-fc",
    "id": "MAR-9"
+  },
+  {
+   "player": "Stephen Eustáquio",
+   "nameZh": "斯蒂芬·尤斯塔奎奥",
+   "num": 7,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Canada",
+   "nationZh": "加拿大",
+   "goals": 1,
+   "pens": 0,
+   "club": "LAFC",
+   "clubZh": "洛杉矶FC",
+   "league": "美职联",
+   "club_id": "lafc",
+   "id": "CAN-7"
   },
   {
    "player": "Teboho Mokoena",
@@ -21187,22 +21219,6 @@
    "league": "捷克甲级",
    "club_id": "sk-slavia-praha",
    "id": "CZE-6"
-  },
-  {
-   "player": "Stephen Eustáquio",
-   "nameZh": "斯蒂芬·尤斯塔奎奥",
-   "num": 7,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Canada",
-   "nationZh": "加拿大",
-   "goals": 0,
-   "pens": 0,
-   "club": "LAFC",
-   "clubZh": "洛杉矶FC",
-   "league": "美职联",
-   "club_id": "lafc",
-   "id": "CAN-7"
   },
   {
    "player": "Steve Kapuadi",
