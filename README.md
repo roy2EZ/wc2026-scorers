@@ -1,15 +1,12 @@
 # FIFA World Cup 2026 Scorers · 2026 世界杯射手榜
 
-A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World Cup, backed by a full **1,248-player database** and styled in the official **WC26 black-and-gold** look. Updates daily, hosted free on GitHub Pages.
+A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World Cup, backed by a full **1,248-player database**. Updates daily, hosted free on GitHub Pages.
 
-**中英双语**的 2026 美加墨世界杯进球榜，背后是 **1248 名球员的完整数据库**，黑金主题、每日自动更新、托管在 GitHub Pages，零成本。
+**中英双语**的 2026 美加墨世界杯进球榜，背后是 **1248 名球员的完整数据库**，每日自动更新、托管在 GitHub Pages，零成本。
 
 🔗 **Live / 在线**: https://roy2ez.github.io/wc2026-scorers/
 
 ![App preview](screenshots/promo-en.png)
-
-> Screenshots are being refreshed for the v1.7.0 black-and-gold redesign.
-> 截图正在按 v1.7.0 黑金改版更新中。
 
 ---
 
@@ -17,9 +14,9 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 
 - **Top Scorers / 射手榜领跑者** — goal ranking (All / 2+…5+), grouped by goal count; cards auto-colored by tier, with jersey number and penalty marks. 进球数排名，按进球数分组、自动上色，含号码与点球标记。
 - **Goal Origins / 进球来自哪里** — three charts by Nation / League / Club, with a Goals ↔ Scorers toggle and Top 10/15/20/All. 三张图（国家队 / 联赛 / 俱乐部），可切换进球数/进球人数。
+- **All Players / 全部球员查询** — searchable database of all 1,248 players (incl. 0-goal), with four stacking comboboxes (Player / Nation / League / Club). 可查询全部 1248 名球员（含 0 球），四个可叠加的搜索下拉。
 - **Multi-goal & Goal Fests / 单场多球 & 进球大战** — braces and hat-tricks per match, and the highest-scoring matches. 单场梅开二度/帽子戏法，以及单场进球最多的比赛。
 - **Goal Timing / 进球时间分布** — all goals by match phase, plus the earliest and latest goal. 全部进球按阶段分布，并标出最早/最晚进球。
-- **All Players / 全部球员查询** — searchable database of all 1,248 players (incl. 0-goal), with four stacking comboboxes (Player / Nation / League / Club). 可查询全部 1248 名球员（含 0 球），四个可叠加的搜索下拉。
 
 Fully bilingual and responsive (phone / tablet / desktop). The footer shows `version · build · data-updated` for cache checks.
 全站双语、自适应手机/平板/电脑；页脚显示 `版本 · 构建 · 数据更新` 便于排查缓存。
