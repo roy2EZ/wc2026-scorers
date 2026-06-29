@@ -8,6 +8,22 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.8.0
+
+**No more built-in snapshot / 移除内置快照**
+- The page no longer ships an embedded scorer snapshot. Data now comes solely from `data.json`: the first paint shows a loading state, then renders; if `data.json` can't be fetched it shows a clear failure message. This removes the brief "flash of stale data" and shrinks the HTML.
+  网页不再内置一份冻结的射手快照。数据完全来自 `data.json`：首屏显示加载状态、随后渲染；拉取失败则显示明确的失败提示。消除了"闪一下旧数据"的问题，HTML 也更小。
+
+**All Players table — width-friendly redesign / 全部球员表 · 省宽重排**
+- Club and League merged into one column, so the table is now four columns (Player / Nation / Goals / Club·League). Long fields stack vertically instead of overflowing: player name splits Chinese (on ·) and English (given/surname) onto separate lines, the nation column puts jersey number and position on their own lines, and Club·League shows club zh / club en / league (with league flag) / league en. Fixed single-source column widths adapt cleanly to phones.
+  俱乐部与联赛合并为一列，表格变为四列（球员 / 国家队 / 进球 / 俱乐部·联赛）。长内容改为纵向堆叠而非溢出：球员名中文按「·」、英文按名/姓分行；国家队列号码与位置各占一行；俱乐部·联赛分四行（俱乐部中/英、联赛带国旗/英）。固定的单一来源列宽在手机上自适应良好。
+- Headers are now bilingual two-line (Chinese over English) with the sort arrow on the Chinese line; goal tallies are larger and brighter with a tier-colored glow, matching the other sections; jersey numbers shown as badges.
+  表头改为中文一行、英文一行（排序箭头在中文行）；进球数字加大加亮、带档位同色微光，与其他板块统一；号码以徽章显示。
+
+**Links & footer / 链接与页脚**
+- All links use the gold theme color with no underline; the footer reads `version · build · data updated` (dropped the duplicate version, ID-architecture label and player/club counts). README refreshed and slimmed for v1.7.0+; unused screenshots removed.
+  全站链接统一金色、无下划线；页脚精简为 `版本 · 构建 · 数据更新`。README 重写精简，删除无用截图。
+
 ## v1.7.0
 
 **Official WC26 black-and-gold theme / 官方黑金主题**

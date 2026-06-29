@@ -294,12 +294,18 @@
   .tbl thead th{position:sticky;top:0;background:var(--bg2);text-align:left;font-size:12px;
     color:var(--mut);font-weight:700;padding:12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
   .tbl thead th .ar{color:var(--pink);font-size:9px}
+  .tbl colgroup col:nth-child(1){width:23%}
+  .tbl colgroup col:nth-child(2){width:28%}
+  .tbl colgroup col:nth-child(3){width:10%}
+  .tbl colgroup col:nth-child(4){width:39%}
+  .tbl .lgz{font-size:12px;color:#aeb7ce;font-weight:600;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .tbl tbody td{padding:11px 13px;border-bottom:1px solid rgba(39,48,75,.55);vertical-align:middle;overflow:hidden}
   .tbl td .pname,.tbl td .psub,.tbl td>.cmut{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .tbl tbody tr:hover{background:rgba(26,34,56,.5)}
-  .tbl .gv{font-family:'Space Mono',monospace;font-weight:700;text-align:center;padding-left:4px;padding-right:4px}
+  .tbl .gv{font-family:'Space Mono',monospace;font-weight:800;font-size:19px;text-align:center;padding-left:4px;padding-right:4px;text-shadow:0 0 12px currentColor}
   .tbl th.gcol{padding-left:4px;padding-right:4px}
-  .tbl th.gcol .thmini{display:block;font-size:9px;color:#9aa3bd;font-weight:400;letter-spacing:0;margin-top:1px}
+  .tbl thead th .thzh{white-space:nowrap}
+  .tbl thead th .then{display:block;font-size:9.5px;color:#9aa3bd;font-weight:400;letter-spacing:0;margin-top:2px}
   .natmeta{margin-top:2px}
   .natno{font-family:'Space Mono',monospace;font-size:12.5px;font-weight:800;color:#fff;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:5px;padding:1px 6px}
   .g3{color:var(--amber)} .g2{color:var(--cyan)}
@@ -452,14 +458,13 @@
       <div class="scroller">
         <table class="tbl">
           <colgroup>
-            <col style="width:27%"><col style="width:20%"><col style="width:10%"><col style="width:26%"><col style="width:17%">
+            <col><col><col><col>
           </colgroup>
           <thead><tr>
-            <th data-k="player">球员 Player</th>
-            <th data-k="teamZh">国家队 Nation</th>
-            <th data-k="goals" class="gcol" style="text-align:center">进球 <span class="ar">▼</span><span class="thmini">Goals</span></th>
-            <th data-k="club">俱乐部 Club</th>
-            <th data-k="league">联赛 League</th>
+            <th data-k="player"><span class="thzh">球员</span><span class="then">Player</span></th>
+            <th data-k="teamZh"><span class="thzh">国家队</span><span class="then">Nation</span></th>
+            <th data-k="goals" class="gcol" style="text-align:center"><span class="thzh">进球 <span class="ar">▼</span></span><span class="then">Goals</span></th>
+            <th data-k="club"><span class="thzh">俱乐部 / 联赛</span><span class="then">Club / League</span></th>
           </tr></thead>
           <tbody id="tbody"></tbody>
         </table>
@@ -524,14 +529,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.7.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.8.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.7.0", BUILD_TIME="2026-06-29 14:30";
+const APP_VERSION="v1.8.0", BUILD_TIME="2026-06-29 16:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -972,11 +977,10 @@ function render(){
     return r*sortDir || b.goals-a.goals || a.player.localeCompare(b.player);
   });
   tbody.innerHTML=rows.map(d=>`<tr style="${rowTint(d.goals,maxG)}">
-    <td><div class="pname">${pzr(d)}</div><div class="psub">${d.player}</div></td>
-    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div><div class="psub natmeta">${[d.num?`<span class="natno">#${d.num}</span>`:"",[d.posZh,d.pos].filter(Boolean).join(" ")].filter(Boolean).join(" · ")||"—"}</div></td>
+    <td><div class="pname">${(pzr(d)||"").replace(/·/g,"<br>")}</div><div class="psub">${(d.player||"").replace(/ /g,"<br>")}</div></td>
+    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div>${d.num?`<div class="psub natmeta"><span class="natno">#${d.num}</span></div>`:""}${(d.posZh||d.pos)?`<div class="psub">${[d.posZh,d.pos].filter(Boolean).join(" ")}</div>`:""}</td>
     <td class="gv" style="color:${tierStyle(d.goals,maxG).strong}">${d.goals}${d.pens>0?`<sup class="penmk" title="含 ${d.pens} 个点球 · incl. ${d.pens} penalty">P${d.pens>1?d.pens:''}</sup>`:''}</td>
-    <td>${czr(d)}<div class="psub">${cabbr(d.club)}</div></td>
-    <td><div class="cmut">${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
+    <td><div class="cmut">${czr(d)}</div><div class="psub">${cabbr(d.club)}</div><div class="lgz">${lfl(d.league)?lfl(d.league)+' ':''}${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
   const scorersN=TABLE_DATA.filter(d=>d.goals>=1).length, allN=TABLE_DATA.length;
   rowcount.innerHTML = minG===0
     ? `显示 ${rows.length} / ${allN} 名球员（含未进球）<span class="cnt-en">Showing ${rows.length} of ${allN} players (incl. 0-goal)</span>`
@@ -1048,7 +1052,7 @@ document.querySelectorAll(".tbl thead th").forEach(th=>{
     if(sortK===k)sortDir*=-1; else {sortK=k;sortDir=(k==="goals")?-1:1;}
     document.querySelectorAll(".tbl thead th .ar").forEach(a=>a.remove());
     const ar=document.createElement("span");ar.className="ar";ar.textContent=sortDir<0?" ▼":" ▲";
-    th.appendChild(ar);render();
+    (th.querySelector(".thzh")||th).appendChild(ar);render();
   });
 });
 
