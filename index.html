@@ -524,7 +524,7 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.7.0</span> · build <span id="buildTime">—</span> · ID架构 · 1248 players · 451 clubs · data <span id="dataVer">—</span>
+      <span id="buildVer">v1.7.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
@@ -1181,7 +1181,7 @@ function renderFooter(){
   set("footGoals",totalGoals); set("footGoalsEn",totalGoals);
   set("footMatches",matchesCount); set("footMatchesEn",matchesCount);
   set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
-  set("dataVer", (dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot") + (dataVersion? " · "+dataVersion : ""));
+  set("dataVer", dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot");
 }
 function renderAll(){ recompute(); populateBoardLeague(); renderStats(); renderBoard(); renderFun(); buildComboData(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
 
