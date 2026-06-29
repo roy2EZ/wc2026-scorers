@@ -530,122 +530,10 @@
 </footer>
 
 <script>
-// [球员, 国家队(英), 进球, 俱乐部, 联赛(中), 国家队(中)]
-const RAW = [
- ["Lionel Messi","Argentina",5,"Inter Miami","美职联","阿根廷"],
- ["Kylian Mbappe","France",4,"Real Madrid","西甲","法国"],
- ["Erling Haaland","Norway",4,"Manchester City","英超","挪威"],
- ["Jonathan David","Canada",3,"Juventus","意甲","加拿大"],
- ["Denis Undav","Germany",3,"VfB Stuttgart","德甲","德国"],
- ["Johan Manzambi","Switzerland",3,"SC Freiburg","德甲","瑞士"],
- ["Folarin Balogun","USA",2,"AS Monaco","法甲","美国"],
- ["Kai Havertz","Germany",2,"Arsenal","英超","德国"],
- ["Yasin Ayari","Sweden",2,"Brighton & Hove Albion","英超","瑞典"],
- ["Elijah Just","New Zealand",2,"Motherwell","苏超","新西兰"],
- ["Harry Kane","England",2,"Bayern Munich","德甲","英格兰"],
- ["Cyle Larin","Canada",2,"Southampton","英冠","加拿大"],
- ["Ismael Saibari","Morocco",3,"PSV Eindhoven","荷甲","摩洛哥"],
- ["Matheus Cunha","Brazil",3,"Manchester United","英超","巴西"],
- ["Vinicius Junior","Brazil",4,"Real Madrid","西甲","巴西"],
- ["Crysencio Summerville","Netherlands",2,"West Ham United","英超","荷兰"],
- ["Brian Brobbey","Netherlands",2,"Sunderland","英超","荷兰"],
- ["Cody Gakpo","Netherlands",2,"Liverpool","英超","荷兰"],
- ["Daichi Kamada","Japan",2,"Crystal Palace","英超","日本"],
- ["Ayase Ueda","Japan",2,"Feyenoord","荷甲","日本"],
- ["Mikel Oyarzabal","Spain",2,"Real Sociedad","西甲","西班牙"],
- ["Maximiliano Araujo","Uruguay",2,"Sporting CP","葡超","乌拉圭"],
- ["Ismaila Sarr","Senegal",2,"Crystal Palace","英超","塞内加尔"],
- ["Cristiano Ronaldo","Portugal",2,"Al-Nassr","沙特职业联赛","葡萄牙"],
- ["Ruben Vargas","Switzerland",2,"Sevilla","西甲","瑞士"],
- ["Ermin Mahmic","Bosnia & Herzegovina",2,"Slovan Liberec","捷克甲级","波黑"],
- ["Julian Quinones","Mexico",2,"Al-Qadsiah","沙特职业联赛","墨西哥"],
- ["Raul Jimenez","Mexico",1,"Fulham","英超","墨西哥"],
- ["Ladislav Krejci","Czechia",1,"Wolverhampton Wanderers","英超","捷克"],
- ["Hwang In-beom","South Korea",1,"Feyenoord","荷甲","韩国"],
- ["Oh Hyeon-gyu","South Korea",1,"Besiktas","土超","韩国"],
- ["Jovo Lukic","Bosnia & Herzegovina",1,"Universitatea Cluj","罗马尼亚甲级","波黑"],
- ["Mauricio","Paraguay",1,"Palmeiras","巴西甲级","巴拉圭"],
- ["Gio Reyna","USA",1,"Borussia Monchengladbach","德甲","美国"],
- ["Breel Embolo","Switzerland",1,"Stade Rennais","法甲","瑞士"],
- ["Boualem Khoukhi","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
- ["John McGinn","Scotland",1,"Aston Villa","英超","苏格兰"],
- ["Nestory Irankunda","Australia",1,"Watford","英冠","澳大利亚"],
- ["Connor Metcalfe","Australia",1,"FC St. Pauli","德甲","澳大利亚"],
- ["Felix Nmecha","Germany",1,"Borussia Dortmund","德甲","德国"],
- ["Nico Schlotterbeck","Germany",1,"Borussia Dortmund","德甲","德国"],
- ["Livano Comenencia","Curacao",1,"FC Zurich","瑞士超","库拉索"],
- ["Jamal Musiala","Germany",1,"Bayern Munich","德甲","德国"],
- ["Nathaniel Brown","Germany",1,"Eintracht Frankfurt","德甲","德国"],
- ["Virgil van Dijk","Netherlands",1,"Liverpool","英超","荷兰"],
- ["Keito Nakamura","Japan",1,"Stade Reims","法乙","日本"],
- ["Amad Diallo","Ivory Coast",1,"Manchester United","英超","科特迪瓦"],
- ["Alexander Isak","Sweden",1,"Liverpool","英超","瑞典"],
- ["Omar Rekik","Tunisia",1,"NK Maribor","斯洛文尼亚甲级","突尼斯"],
- ["Viktor Gyokeres","Sweden",1,"Arsenal","英超","瑞典"],
- ["Mattias Svanberg","Sweden",1,"VfL Wolfsburg","德甲","瑞典"],
- ["Abdulelah Al-Amri","Saudi Arabia",1,"Al-Nassr","沙特职业联赛","沙特阿拉伯"],
- ["Aymen Hussein","Iraq",1,"Al-Karma","伊拉克星级联赛","伊拉克"],
- ["Bradley Barcola","France",1,"Paris Saint-Germain","法甲","法国"],
- ["Emam Ashour","Egypt",1,"Al Ahly","埃及超","埃及"],
- ["Ibrahim Mbaye","Senegal",1,"Paris Saint-Germain","法甲","塞内加尔"],
- ["Leo Ostigard","Norway",1,"Genoa","意甲","挪威"],
- ["Mohamed Mohebi","Iran",1,"FC Rostov","俄超","伊朗"],
- ["Ramin Rezaeian","Iran",1,"Foolad","伊朗波斯湾联赛","伊朗"],
- ["Romano Schmid","Austria",1,"Werder Bremen","德甲","奥地利"],
- ["Marko Arnautovic","Austria",1,"Red Star Belgrade","塞尔维亚超","奥地利"],
- ["Ali Olwan","Jordan",1,"Al-Sailiya","卡塔尔星级联赛","约旦"],
- ["Joao Neves","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
- ["Yoane Wissa","DR Congo",1,"Newcastle United","英超","刚果(金)"],
- ["Martin Baturina","Croatia",1,"Como","意甲","克罗地亚"],
- ["Petar Musa","Croatia",1,"FC Dallas","美职联","克罗地亚"],
- ["Jude Bellingham","England",1,"Real Madrid","西甲","英格兰"],
- ["Marcus Rashford","England",1,"Barcelona","西甲","英格兰"],
- ["Caleb Yirenkyi","Ghana",1,"FC Nordsjaelland","丹麦超","加纳"],
- ["Daniel Munoz","Colombia",1,"Crystal Palace","英超","哥伦比亚"],
- ["Abbosbek Fayzullaev","Uzbekistan",1,"Istanbul Basaksehir","土超","乌兹别克斯坦"],
- ["Luis Diaz","Colombia",1,"Bayern Munich","德甲","哥伦比亚"],
- ["Jaminton Campaz","Colombia",1,"Rosario Central","阿甲","哥伦比亚"],
- ["Michal Sadilek","Czechia",1,"Slavia Prague","捷克甲级","捷克"],
- ["Granit Xhaka","Switzerland",1,"Sunderland","英超","瑞士"],
- ["Nathan Saliba","Canada",1,"Anderlecht","比利时甲级","加拿大"],
- ["Luis Romo","Mexico",1,"Guadalajara","墨超","墨西哥"],
- ["Alex Freeman","USA",1,"Villarreal","西甲","美国"],
- ["Matias Galarza","Paraguay",1,"Atlanta United","美职联","巴拉圭"],
- ["Anthony Elanga","Sweden",1,"Newcastle United","英超","瑞典"],
- ["Agustin Canobbio","Uruguay",1,"Fluminense","巴西甲级","乌拉圭"],
- ["Kevin Pina","Cape Verde",1,"FC Krasnodar","俄超","佛得角"],
- ["Helio Varela","Cape Verde",1,"Maccabi Tel Aviv","以色列超","佛得角"],
- ["Junya Ito","Japan",1,"KRC Genk","比利时甲级","日本"],
- ["Finn Surman","New Zealand",1,"Portland Timbers","美职联","新西兰"],
- ["Lamine Yamal","Spain",1,"Barcelona","西甲","西班牙"],
- ["Franck Kessie","Ivory Coast",1,"Al-Ahli","沙特职业联赛","科特迪瓦"],
- ["Mohamed Salah","Egypt",1,"Liverpool","英超","埃及"],
- ["Trezeguet","Egypt",1,"Al Ahly","埃及超","埃及"],
- ["Mostafa Ziko","Egypt",1,"Pyramids","埃及超","埃及"],
- ["Ousmane Dembele","France",1,"Paris Saint-Germain","法甲","法国"],
- ["Marcus Holmgren Pedersen","Norway",1,"Torino","意甲","挪威"],
- ["Amine Gouiri","Algeria",1,"Marseille","法甲","阿尔及利亚"],
- ["Nadhir Benbouali","Algeria",1,"Gyori ETO","匈牙利甲级","阿尔及利亚"],
- ["Nizar Al-Rashdan","Jordan",1,"Qatar SC","卡塔尔星级联赛","约旦"],
- ["Nuno Mendes","Portugal",1,"Paris Saint-Germain","法甲","葡萄牙"],
- ["Rafael Leao","Portugal",1,"AC Milan","意甲","葡萄牙"],
- ["Ante Budimir","Croatia",1,"Osasuna","西甲","克罗地亚"],
- ["Kerim Alajbegovic","Bosnia & Herzegovina",1,"RB Salzburg","奥地利甲级","波黑"],
- ["Hassan Al Haidos","Qatar",1,"Al-Sadd","卡塔尔星级联赛","卡塔尔"],
- ["Promise David","Canada",1,"Union Saint-Gilloise","比利时甲级","加拿大"],
- ["Achraf Hakimi","Morocco",1,"Paris Saint-Germain","法甲","摩洛哥"],
- ["Soufiane Rahimi","Morocco",1,"Al Ain","阿联酋联赛","摩洛哥"],
- ["Gessime Yassine","Morocco",1,"Strasbourg","法甲","摩洛哥"],
- ["Mateo Chavez","Mexico",1,"AZ Alkmaar","荷甲","墨西哥"],
- ["Alvaro Fidalgo","Mexico",1,"Real Betis","西甲","墨西哥"],
- ["Thapelo Maseko","South Africa",1,"AEL Limassol","塞浦路斯甲级","南非"],
- ["Wilson Isidor","Haiti",1,"Sunderland","英超","海地"]
-];
-const mapRow=r=>({player:r[0],teamEn:r[1],goals:r[2],club:r[3],league:r[4],teamZh:r[5]});
-let DATA = RAW.map(mapRow);            // 内置快照，作为读取 data.json 失败时的兜底
+let DATA = [];                          // 数据来自 data.json（加载完成前为空）
 const APP_VERSION="v1.7.0", BUILD_TIME="2026-06-29 14:30";
-let TABLE_DATA = DATA;                  // 全员名册（含0球），仅"全部进球者"表格使用
-const NATIONZH={}; RAW.forEach(r=>NATIONZH[r[1]]=r[5]);  // 由内置数据推导“国家队→中文名”
+let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
+const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
 const FLAG={ "Argentina":"🇦🇷","Canada":"🇨🇦","USA":"🇺🇸","Germany":"🇩🇪","Sweden":"🇸🇪","New Zealand":"🇳🇿",
  "Norway":"🇳🇴","France":"🇫🇷","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Switzerland":"🇨🇭","Morocco":"🇲🇦","Brazil":"🇧🇷","Netherlands":"🇳🇱",
@@ -1207,14 +1095,18 @@ async function refresh(){
       renderAll(); setUpdated(j.updated, true);
       return true;
     }
-  }catch(e){/* 离线或无 data.json：用内置快照 */}
+  }catch(e){/* 离线或 data.json 不可用 */}
   return false;
 }
 
-// 首屏先用内置快照即时渲染，再尝试拉取最新
-// 实测输入框可用宽度，从完整到简短挑选能完整放下的最长 placeholder（充分利用宽度且不溢出）
-renderAll(); setUpdated(null,false);
-refresh();
+function showLoadState(msg){
+  const b=document.getElementById("board");
+  if(b) b.innerHTML='<div class="note" style="padding:30px 14px;text-align:center;font-size:14px;line-height:1.6">'+msg+'</div>';
+}
+
+// 首屏显示加载状态；拉取 data.json 成功后整页渲染，失败则提示刷新
+showLoadState('⏳ 数据加载中… · Loading…');
+refresh().then(ok=>{ if(!ok) showLoadState('⚠️ 数据加载失败，请刷新页面重试<br><span style="color:#8a93ab">Failed to load data — please refresh.</span>'); });
 // 标签页重新可见时再拉一次（便于长期开着的页面拿到当天更新）
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden) refresh(); });
 if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(()=>{ try{renderCharts();}catch(e){} }); }
