@@ -1,17 +1,17 @@
 {
  "version": "v1.8.0",
- "updated": "2026-06-29T18:10:36+00:00",
+ "updated": "2026-06-29T20:06:15+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 144,
- "totalGoals": 204,
+ "count": 147,
+ "totalGoals": 207,
  "totalPens": 8,
- "matchesWithGoals": 66,
+ "matchesWithGoals": 67,
  "schedule": {
   "total": 104,
-  "played": 73,
+  "played": 74,
   "stageEn": "Round of 32",
   "stageZh": "32强",
-  "lastDate": "2026-06-28",
+  "lastDate": "2026-06-29",
   "nextDate": "2026-06-29"
  },
  "funstats": {
@@ -384,10 +384,10 @@
   "timeBuckets": {
    "1-5": 9,
    "6-22": 37,
-   "23-45": 49,
-   "46-68": 57,
+   "23-45": 50,
+   "46-68": 58,
    "69-90": 41,
-   "90+": 23,
+   "90+": 24,
    "ET": 0
   },
   "ownGoals": [
@@ -1856,6 +1856,22 @@
    "id": "GHA-3"
   },
   {
+   "player": "Carlos Casemiro",
+   "nameZh": "卡塞米罗",
+   "num": 5,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 0,
+   "club": "Manchester United",
+   "clubZh": "曼联",
+   "league": "英超",
+   "club_id": "manchester-united",
+   "id": "BRA-5"
+  },
+  {
    "player": "Connor Metcalfe",
    "nameZh": "梅特卡夫",
    "num": 8,
@@ -2014,6 +2030,22 @@
    "league": "沙特联",
    "club_id": "al-ahli",
    "id": "CIV-8"
+  },
+  {
+   "player": "Gabriel Martinelli",
+   "nameZh": "马丁内利",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "BRA-22"
   },
   {
    "player": "Gessime Yassine",
@@ -2334,6 +2366,22 @@
    "league": "土超",
    "club_id": "galatasaray-sk",
    "id": "TUR-22"
+  },
+  {
+   "player": "Kaishu Sano",
+   "nameZh": "佐野海舟",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Japan",
+   "nationZh": "日本",
+   "goals": 1,
+   "pens": 0,
+   "club": "1. FSV Mainz 05",
+   "clubZh": "美因茨",
+   "league": "德甲",
+   "club_id": "1-fsv-mainz-05",
+   "id": "JPN-24"
   },
   {
    "player": "Keito Nakamura",
@@ -4163,6 +4211,22 @@
    "id": "GHA-3"
   },
   {
+   "player": "Carlos Casemiro",
+   "nameZh": "卡塞米罗",
+   "num": 5,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 0,
+   "club": "Manchester United",
+   "clubZh": "曼联",
+   "league": "英超",
+   "club_id": "manchester-united",
+   "id": "BRA-5"
+  },
+  {
    "player": "Connor Metcalfe",
    "nameZh": "梅特卡夫",
    "num": 8,
@@ -4321,6 +4385,22 @@
    "league": "沙特联",
    "club_id": "al-ahli",
    "id": "CIV-8"
+  },
+  {
+   "player": "Gabriel Martinelli",
+   "nameZh": "马丁内利",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "BRA-22"
   },
   {
    "player": "Gessime Yassine",
@@ -4641,6 +4721,22 @@
    "league": "土超",
    "club_id": "galatasaray-sk",
    "id": "TUR-22"
+  },
+  {
+   "player": "Kaishu Sano",
+   "nameZh": "佐野海舟",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Japan",
+   "nationZh": "日本",
+   "goals": 1,
+   "pens": 0,
+   "club": "1. FSV Mainz 05",
+   "clubZh": "美因茨",
+   "league": "德甲",
+   "club_id": "1-fsv-mainz-05",
+   "id": "JPN-24"
   },
   {
    "player": "Keito Nakamura",
@@ -8659,22 +8755,6 @@
    "id": "MEX-12"
   },
   {
-   "player": "Carlos Casemiro",
-   "nameZh": "卡塞米罗",
-   "num": 5,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Brazil",
-   "nationZh": "巴西",
-   "goals": 0,
-   "pens": 0,
-   "club": "Manchester United",
-   "clubZh": "曼联",
-   "league": "英超",
-   "club_id": "manchester-united",
-   "id": "BRA-5"
-  },
-  {
    "player": "Carlos Dos Santos",
    "nameZh": "卡洛斯·多斯桑托斯",
    "num": 23,
@@ -11313,22 +11393,6 @@
    "league": "英超",
    "club_id": "leeds-united-fc",
    "id": "SWE-5"
-  },
-  {
-   "player": "Gabriel Martinelli",
-   "nameZh": "马丁内利",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Brazil",
-   "nationZh": "巴西",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "BRA-22"
   },
   {
    "player": "Gael Kakuta",
@@ -14705,22 +14769,6 @@
    "league": "美职联",
    "club_id": "new-york-city-fc",
    "id": "AUS-15"
-  },
-  {
-   "player": "Kaishu Sano",
-   "nameZh": "佐野海舟",
-   "num": 24,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Japan",
-   "nationZh": "日本",
-   "goals": 0,
-   "pens": 0,
-   "club": "1. FSV Mainz 05",
-   "clubZh": "美因茨",
-   "league": "德甲",
-   "club_id": "1-fsv-mainz-05",
-   "id": "JPN-24"
   },
   {
    "player": "Kalidou Koulibaly",
