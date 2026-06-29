@@ -43,7 +43,7 @@
 | `data.json` | **产物**，由 `update_data.py` 自动生成。含 `version`、`scorers`（有进球者，已 JOIN 展开俱乐部名/中文/联赛）、`roster`（全员） |
 | `update_data.py` | 每日运行：抓 openfootball 进球 → 解析到 player id → 按 id 累加 → JOIN clubs/nations → 写 data.json |
 | `validate_db.py` | 构建时强制一致性校验，任何不一致 exit(1) |
-| `index.html` | 前端（单文件，含内置快照兜底）。直接读 data.json 展开好的字段 |
+| `index.html` | 前端（单文件）。首屏显示加载状态，再读 data.json 渲染；拉取失败显示失败提示（已移除内置快照） |
 | `VERSION` | 版本号单一来源，一行如 `v1.5.2` |
 | `CHANGELOG.md` | 双语更新日志 |
 | `.github/workflows/update.yml` | GitHub Actions 定时任务 |
