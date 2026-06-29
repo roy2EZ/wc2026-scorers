@@ -18,8 +18,8 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 - **Multi-goal & Goal Fests / 单场多球 & 进球大战** — braces and hat-tricks per match, and the highest-scoring matches. 单场梅开二度/帽子戏法，以及单场进球最多的比赛。
 - **Goal Timing / 进球时间分布** — all goals by match phase, plus the earliest and latest goal. 全部进球按阶段分布，并标出最早/最晚进球。
 
-Fully bilingual and responsive (phone / tablet / desktop). The footer shows `version · build · data-updated` for cache checks.
-全站双语、自适应手机/平板/电脑；页脚显示 `版本 · 构建 · 数据更新` 便于排查缓存。
+Fully bilingual and responsive (phone / tablet / desktop).
+全站双语、自适应手机 / 平板 / 电脑。
 
 ---
 
