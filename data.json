@@ -1,6 +1,6 @@
 {
- "version": "v1.6.2",
- "updated": "2026-06-29T04:48:04+00:00",
+ "version": "v1.7.0",
+ "updated": "2026-06-29T02:32:05-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 144,
  "totalGoals": 204,
@@ -383,13 +383,219 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-30": 48,
-   "31-45": 38,
-   "46-75": 65,
-   "76-90": 33,
+   "6-22": 37,
+   "23-45": 49,
+   "46-68": 57,
+   "69-90": 41,
    "90+": 23,
    "ET": 0
   },
+  "ownGoals": [
+   {
+    "player": "Damian Bobadilla",
+    "nameZh": "达米安·博巴迪拉",
+    "nation": "Paraguay",
+    "nationZh": "巴拉圭",
+    "benef": "USA",
+    "benefZh": "美国",
+    "minute": "7'",
+    "min": 7,
+    "t1": "USA",
+    "t1Zh": "美国",
+    "t2": "Paraguay",
+    "t2Zh": "巴拉圭",
+    "ft": "4-1",
+    "date": "2026-06-12",
+    "ground": "Los Angeles"
+   },
+   {
+    "player": "Miro Muheim",
+    "nameZh": "米罗·穆海姆",
+    "nation": "Switzerland",
+    "nationZh": "瑞士",
+    "benef": "Qatar",
+    "benefZh": "卡塔尔",
+    "minute": "90+4'",
+    "min": 94,
+    "t1": "Qatar",
+    "t1Zh": "卡塔尔",
+    "t2": "Switzerland",
+    "t2Zh": "瑞士",
+    "ft": "1-1",
+    "date": "2026-06-13",
+    "ground": "San Francisco Bay Area"
+   },
+   {
+    "player": "Mohamed M. Hany",
+    "nameZh": "穆罕默德·哈尼",
+    "nation": "Egypt",
+    "nationZh": "埃及",
+    "benef": "Belgium",
+    "benefZh": "比利时",
+    "minute": "66'",
+    "min": 66,
+    "t1": "Belgium",
+    "t1Zh": "比利时",
+    "t2": "Egypt",
+    "t2Zh": "埃及",
+    "ft": "1-1",
+    "date": "2026-06-15",
+    "ground": "Seattle"
+   },
+   {
+    "player": "Yazan Alarab",
+    "nameZh": "亚赞·阿拉拉布",
+    "nation": "Jordan",
+    "nationZh": "约旦",
+    "benef": "Austria",
+    "benefZh": "奥地利",
+    "minute": "76'",
+    "min": 76,
+    "t1": "Austria",
+    "t1Zh": "奥地利",
+    "t2": "Jordan",
+    "t2Zh": "约旦",
+    "ft": "3-1",
+    "date": "2026-06-16",
+    "ground": "San Francisco Bay Area"
+   },
+   {
+    "player": "Aymen Hussein",
+    "nameZh": "侯赛因",
+    "nation": "Iraq",
+    "nationZh": "伊拉克",
+    "benef": "Norway",
+    "benefZh": "挪威",
+    "minute": "90+6'",
+    "min": 96,
+    "t1": "Iraq",
+    "t1Zh": "伊拉克",
+    "t2": "Norway",
+    "t2Zh": "挪威",
+    "ft": "1-4",
+    "date": "2026-06-16",
+    "ground": "Boston"
+   },
+   {
+    "player": "Mohamed Manai",
+    "nameZh": "穆罕默德·马奈",
+    "nation": "Qatar",
+    "nationZh": "卡塔尔",
+    "benef": "Canada",
+    "benefZh": "加拿大",
+    "minute": "75'",
+    "min": 75,
+    "t1": "Canada",
+    "t1Zh": "加拿大",
+    "t2": "Qatar",
+    "t2Zh": "卡塔尔",
+    "ft": "6-0",
+    "date": "2026-06-18",
+    "ground": "Vancouver"
+   },
+   {
+    "player": "Cameron Burgess",
+    "nameZh": "卡梅伦·伯吉斯",
+    "nation": "Australia",
+    "nationZh": "澳大利亚",
+    "benef": "USA",
+    "benefZh": "美国",
+    "minute": "11'",
+    "min": 11,
+    "t1": "USA",
+    "t1Zh": "美国",
+    "t2": "Australia",
+    "t2Zh": "澳大利亚",
+    "ft": "2-0",
+    "date": "2026-06-19",
+    "ground": "Seattle"
+   },
+   {
+    "player": "Hassan Al-Tambakti",
+    "nameZh": "Hassan Al-Tambakti",
+    "nation": "Saudi Arabia",
+    "nationZh": "沙特阿拉伯",
+    "benef": "Spain",
+    "benefZh": "西班牙",
+    "minute": "49'",
+    "min": 49,
+    "t1": "Spain",
+    "t1Zh": "西班牙",
+    "t2": "Saudi Arabia",
+    "t2Zh": "沙特阿拉伯",
+    "ft": "4-0",
+    "date": "2026-06-21",
+    "ground": "Atlanta"
+   },
+   {
+    "player": "Abduvohid Nematov",
+    "nameZh": "阿卜杜沃希德·内马托夫",
+    "nation": "Uzbekistan",
+    "nationZh": "乌兹别克斯坦",
+    "benef": "Portugal",
+    "benefZh": "葡萄牙",
+    "minute": "60'",
+    "min": 60,
+    "t1": "Portugal",
+    "t1Zh": "葡萄牙",
+    "t2": "Uzbekistan",
+    "t2Zh": "乌兹别克斯坦",
+    "ft": "5-0",
+    "date": "2026-06-23",
+    "ground": "Houston"
+   },
+   {
+    "player": "Yassine Bounou",
+    "nameZh": "Yassine Bounou",
+    "nation": "Morocco",
+    "nationZh": "摩洛哥",
+    "benef": "Haiti",
+    "benefZh": "海地",
+    "minute": "10'",
+    "min": 10,
+    "t1": "Morocco",
+    "t1Zh": "摩洛哥",
+    "t2": "Haiti",
+    "t2Zh": "海地",
+    "ft": "4-2",
+    "date": "2026-06-24",
+    "ground": "Atlanta"
+   },
+   {
+    "player": "Mahmoud Abunada",
+    "nameZh": "马哈茂德·阿布纳达",
+    "nation": "Qatar",
+    "nationZh": "卡塔尔",
+    "benef": "Bosnia & Herzegovina",
+    "benefZh": "波黑",
+    "minute": "34'",
+    "min": 34,
+    "t1": "Bosnia & Herzegovina",
+    "t1Zh": "波黑",
+    "t2": "Qatar",
+    "t2Zh": "卡塔尔",
+    "ft": "3-1",
+    "date": "2026-06-24",
+    "ground": "Seattle"
+   },
+   {
+    "player": "Ellyes Skhiri",
+    "nameZh": "埃利斯·斯基里",
+    "nation": "Tunisia",
+    "nationZh": "突尼斯",
+    "benef": "Netherlands",
+    "benefZh": "荷兰",
+    "minute": "3'",
+    "min": 3,
+    "t1": "Tunisia",
+    "t1Zh": "突尼斯",
+    "t2": "Netherlands",
+    "t2Zh": "荷兰",
+    "ft": "1-3",
+    "date": "2026-06-25",
+    "ground": "Kansas City"
+   }
+  ],
   "earliest": {
    "player": "Ismael Saibari",
    "nameZh": "赛巴里",
@@ -764,7 +970,7 @@
    "goals": 4,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "NOR-9"
@@ -1037,7 +1243,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "POR-7"
   },
@@ -1117,7 +1323,7 @@
    "pens": 0,
    "club": "FC Slovan Liberec",
    "clubZh": "利贝雷茨",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-slovan-liberec",
    "id": "BIH-26"
   },
@@ -1165,7 +1371,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "MEX-16"
   },
@@ -1213,7 +1419,7 @@
    "pens": 1,
    "club": "Red Star Belgrade",
    "clubZh": "贝尔格莱德红星",
-   "league": "塞尔维亚超",
+   "league": "塞超",
    "club_id": "red-star-belgrade",
    "id": "AUT-7"
   },
@@ -1293,7 +1499,7 @@
    "pens": 0,
    "club": "Foolad Khuzestan FC",
    "clubZh": "胡齐斯坦钢铁",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
   },
@@ -1309,7 +1515,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "ALG-7"
   },
@@ -1373,7 +1579,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-4"
   },
@@ -1405,7 +1611,7 @@
    "pens": 0,
    "club": "Fluminense FC",
    "clubZh": "弗鲁米嫩塞",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "fluminense-fc",
    "id": "URU-14"
   },
@@ -1469,7 +1675,7 @@
    "pens": 0,
    "club": "Al-Sailiya",
    "clubZh": "赛利亚",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sailiya",
    "id": "JOR-9"
   },
@@ -1581,7 +1787,7 @@
    "pens": 0,
    "club": "Pogoń Szczecin",
    "clubZh": "什切青波贡",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "pogon-szczecin",
    "id": "IRQ-3"
   },
@@ -1692,8 +1898,8 @@
    "goals": 1,
    "pens": 0,
    "club": "Pafos FC",
-   "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "clubZh": "帕福斯",
+   "league": "塞浦路斯甲",
    "club_id": "pafos-fc",
    "id": "GHA-23"
   },
@@ -1805,7 +2011,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "CIV-8"
   },
@@ -1869,7 +2075,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "ECU-19"
   },
@@ -1917,7 +2123,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-16"
   },
@@ -1949,7 +2155,7 @@
    "pens": 0,
    "club": "Maccabi Tel-Aviv FC",
    "clubZh": "特拉维夫马卡比",
-   "league": "以色列超",
+   "league": "以超",
    "club_id": "maccabi-tel-aviv-fc",
    "id": "CPV-26"
   },
@@ -2093,7 +2299,7 @@
    "pens": 0,
    "club": "Universitatea Cluj",
    "clubZh": "克卢日大学",
-   "league": "罗马尼亚甲级",
+   "league": "罗马尼亚甲",
    "club_id": "universitatea-cluj",
    "id": "BIH-25"
   },
@@ -2109,7 +2315,7 @@
    "pens": 0,
    "club": "KRC Genk",
    "clubZh": "亨克",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "krc-genk",
    "id": "JPN-14"
   },
@@ -2157,7 +2363,7 @@
    "pens": 0,
    "club": "FC Red Bull Salzburg",
    "clubZh": "萨尔茨堡红牛",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "fc-red-bull-salzburg",
    "id": "BIH-19"
   },
@@ -2461,7 +2667,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "PAR-11"
   },
@@ -2477,7 +2683,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-18"
   },
@@ -2557,7 +2763,7 @@
    "pens": 0,
    "club": "Gyori ETO",
    "clubZh": "杰尔ETO",
-   "league": "匈牙利甲级",
+   "league": "匈甲",
    "club_id": "gyori-eto",
    "id": "ALG-12"
   },
@@ -2573,7 +2779,7 @@
    "pens": 0,
    "club": "Anderlecht",
    "clubZh": "安德莱赫特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "anderlecht",
    "id": "CAN-25"
   },
@@ -2653,7 +2859,7 @@
    "pens": 0,
    "club": "Anderlecht",
    "clubZh": "安德莱赫特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "anderlecht",
    "id": "ECU-20"
   },
@@ -2669,7 +2875,7 @@
    "pens": 0,
    "club": "Qatar SC",
    "clubZh": "卡塔尔SC",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "qatar-sc",
    "id": "JOR-21"
   },
@@ -2717,7 +2923,7 @@
    "pens": 0,
    "club": "NK Maribor",
    "clubZh": "马里博尔",
-   "league": "斯洛文尼亚甲级",
+   "league": "斯洛文尼亚甲",
    "club_id": "nk-maribor",
    "id": "TUN-4"
   },
@@ -2755,7 +2961,7 @@
   },
   {
    "player": "Promise David",
-   "nameZh": "承诺",
+   "nameZh": "普罗米斯·戴维",
    "num": 24,
    "pos": "FW",
    "posZh": "前锋",
@@ -2765,7 +2971,7 @@
    "pens": 0,
    "club": "Royale Union Saint-Gilloise",
    "clubZh": "圣吉卢瓦兹联",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "royale-union-saint-gilloise",
    "id": "CAN-24"
   },
@@ -2861,7 +3067,7 @@
    "pens": 0,
    "club": "LASK Linz",
    "clubZh": "林茨",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "lask-linz",
    "id": "AUT-14"
   },
@@ -2893,13 +3099,13 @@
    "pens": 0,
    "club": "Al Ain FC",
    "clubZh": "艾因",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ain-fc",
    "id": "MAR-9"
   },
   {
    "player": "Stephen Eustáquio",
-   "nameZh": "斯蒂芬·尤斯塔奎奥",
+   "nameZh": "斯蒂芬·尤斯塔基奥",
    "num": 7,
    "pos": "MF",
    "posZh": "中场",
@@ -2941,7 +3147,7 @@
    "pens": 0,
    "club": "AEL Limassol",
    "clubZh": "利马索尔AEL",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "ael-limassol",
    "id": "RSA-12"
   },
@@ -3071,7 +3277,7 @@
    "goals": 4,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "NOR-9"
@@ -3344,7 +3550,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "POR-7"
   },
@@ -3424,7 +3630,7 @@
    "pens": 0,
    "club": "FC Slovan Liberec",
    "clubZh": "利贝雷茨",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-slovan-liberec",
    "id": "BIH-26"
   },
@@ -3472,7 +3678,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "MEX-16"
   },
@@ -3520,7 +3726,7 @@
    "pens": 1,
    "club": "Red Star Belgrade",
    "clubZh": "贝尔格莱德红星",
-   "league": "塞尔维亚超",
+   "league": "塞超",
    "club_id": "red-star-belgrade",
    "id": "AUT-7"
   },
@@ -3600,7 +3806,7 @@
    "pens": 0,
    "club": "Foolad Khuzestan FC",
    "clubZh": "胡齐斯坦钢铁",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
   },
@@ -3616,7 +3822,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "ALG-7"
   },
@@ -3680,7 +3886,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-4"
   },
@@ -3712,7 +3918,7 @@
    "pens": 0,
    "club": "Fluminense FC",
    "clubZh": "弗鲁米嫩塞",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "fluminense-fc",
    "id": "URU-14"
   },
@@ -3776,7 +3982,7 @@
    "pens": 0,
    "club": "Al-Sailiya",
    "clubZh": "赛利亚",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sailiya",
    "id": "JOR-9"
   },
@@ -3888,7 +4094,7 @@
    "pens": 0,
    "club": "Pogoń Szczecin",
    "clubZh": "什切青波贡",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "pogon-szczecin",
    "id": "IRQ-3"
   },
@@ -3999,8 +4205,8 @@
    "goals": 1,
    "pens": 0,
    "club": "Pafos FC",
-   "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "clubZh": "帕福斯",
+   "league": "塞浦路斯甲",
    "club_id": "pafos-fc",
    "id": "GHA-23"
   },
@@ -4112,7 +4318,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "CIV-8"
   },
@@ -4176,7 +4382,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "ECU-19"
   },
@@ -4224,7 +4430,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-16"
   },
@@ -4256,7 +4462,7 @@
    "pens": 0,
    "club": "Maccabi Tel-Aviv FC",
    "clubZh": "特拉维夫马卡比",
-   "league": "以色列超",
+   "league": "以超",
    "club_id": "maccabi-tel-aviv-fc",
    "id": "CPV-26"
   },
@@ -4400,7 +4606,7 @@
    "pens": 0,
    "club": "Universitatea Cluj",
    "clubZh": "克卢日大学",
-   "league": "罗马尼亚甲级",
+   "league": "罗马尼亚甲",
    "club_id": "universitatea-cluj",
    "id": "BIH-25"
   },
@@ -4416,7 +4622,7 @@
    "pens": 0,
    "club": "KRC Genk",
    "clubZh": "亨克",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "krc-genk",
    "id": "JPN-14"
   },
@@ -4464,7 +4670,7 @@
    "pens": 0,
    "club": "FC Red Bull Salzburg",
    "clubZh": "萨尔茨堡红牛",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "fc-red-bull-salzburg",
    "id": "BIH-19"
   },
@@ -4768,7 +4974,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "PAR-11"
   },
@@ -4784,7 +4990,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-18"
   },
@@ -4864,7 +5070,7 @@
    "pens": 0,
    "club": "Gyori ETO",
    "clubZh": "杰尔ETO",
-   "league": "匈牙利甲级",
+   "league": "匈甲",
    "club_id": "gyori-eto",
    "id": "ALG-12"
   },
@@ -4880,7 +5086,7 @@
    "pens": 0,
    "club": "Anderlecht",
    "clubZh": "安德莱赫特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "anderlecht",
    "id": "CAN-25"
   },
@@ -4960,7 +5166,7 @@
    "pens": 0,
    "club": "Anderlecht",
    "clubZh": "安德莱赫特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "anderlecht",
    "id": "ECU-20"
   },
@@ -4976,7 +5182,7 @@
    "pens": 0,
    "club": "Qatar SC",
    "clubZh": "卡塔尔SC",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "qatar-sc",
    "id": "JOR-21"
   },
@@ -5024,7 +5230,7 @@
    "pens": 0,
    "club": "NK Maribor",
    "clubZh": "马里博尔",
-   "league": "斯洛文尼亚甲级",
+   "league": "斯洛文尼亚甲",
    "club_id": "nk-maribor",
    "id": "TUN-4"
   },
@@ -5062,7 +5268,7 @@
   },
   {
    "player": "Promise David",
-   "nameZh": "承诺",
+   "nameZh": "普罗米斯·戴维",
    "num": 24,
    "pos": "FW",
    "posZh": "前锋",
@@ -5072,7 +5278,7 @@
    "pens": 0,
    "club": "Royale Union Saint-Gilloise",
    "clubZh": "圣吉卢瓦兹联",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "royale-union-saint-gilloise",
    "id": "CAN-24"
   },
@@ -5168,7 +5374,7 @@
    "pens": 0,
    "club": "LASK Linz",
    "clubZh": "林茨",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "lask-linz",
    "id": "AUT-14"
   },
@@ -5200,13 +5406,13 @@
    "pens": 0,
    "club": "Al Ain FC",
    "clubZh": "艾因",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ain-fc",
    "id": "MAR-9"
   },
   {
    "player": "Stephen Eustáquio",
-   "nameZh": "斯蒂芬·尤斯塔奎奥",
+   "nameZh": "斯蒂芬·尤斯塔基奥",
    "num": 7,
    "pos": "MF",
    "posZh": "中场",
@@ -5248,7 +5454,7 @@
    "pens": 0,
    "club": "AEL Limassol",
    "clubZh": "利马索尔AEL",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "ael-limassol",
    "id": "RSA-12"
   },
@@ -5408,7 +5614,7 @@
    "pens": 0,
    "club": "Al Wahdat SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-wahdat-sc",
    "id": "JOR-22"
   },
@@ -5424,7 +5630,7 @@
    "pens": 0,
    "club": "Al Zawra'a SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-zawra-a-sc",
    "id": "JOR-3"
   },
@@ -5440,7 +5646,7 @@
    "pens": 0,
    "club": "Al Rayyan SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-rayyan-sc",
    "id": "QAT-6"
   },
@@ -5456,7 +5662,7 @@
    "pens": 0,
    "club": "Maccabi Haifa FC",
    "clubZh": "",
-   "league": "以色列超",
+   "league": "以超",
    "club_id": "maccabi-haifa-fc",
    "id": "SEN-4"
   },
@@ -5471,7 +5677,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "UZB-2"
@@ -5536,7 +5742,7 @@
    "pens": 0,
    "club": "Dibba FC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "dibba-fc",
    "id": "UZB-18"
   },
@@ -5552,7 +5758,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-19"
   },
@@ -5568,7 +5774,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-15"
   },
@@ -5584,7 +5790,7 @@
    "pens": 0,
    "club": "Nasaf Qarshi FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "nasaf-qarshi-fc",
    "id": "UZB-12"
   },
@@ -5600,7 +5806,7 @@
    "pens": 0,
    "club": "USM Alger",
    "clubZh": "",
-   "league": "阿尔及利亚联赛",
+   "league": "阿尔及利亚联",
    "club_id": "usm-alger",
    "id": "ALG-3"
   },
@@ -5664,7 +5870,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "ALG-20"
   },
@@ -5712,7 +5918,7 @@
    "pens": 0,
    "club": "Al Karma SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-karma-sc",
    "id": "IRQ-15"
   },
@@ -5728,7 +5934,7 @@
    "pens": 0,
    "club": "Al Shorta SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-shorta-sc",
    "id": "IRQ-22"
   },
@@ -5744,7 +5950,7 @@
    "pens": 0,
    "club": "Al Gharafa SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-gharafa-sc",
    "id": "QAT-17"
   },
@@ -5760,7 +5966,7 @@
    "pens": 0,
    "club": "Al Arabi SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-arabi-sc",
    "id": "QAT-20"
   },
@@ -5792,7 +5998,7 @@
    "pens": 0,
    "club": "Al Rayyan SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-rayyan-sc",
    "id": "QAT-7"
   },
@@ -5808,7 +6014,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "KSA-22"
   },
@@ -5824,7 +6030,7 @@
    "pens": 0,
    "club": "ASFAR",
    "clubZh": "",
-   "league": "摩洛哥联赛",
+   "league": "摩洛哥联",
    "club_id": "asfar",
    "id": "MAR-22"
   },
@@ -5872,7 +6078,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-8"
   },
@@ -5936,7 +6142,7 @@
    "pens": 0,
    "club": "Al Zawra'a SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-zawra-a-sc",
    "id": "IRQ-5"
   },
@@ -5952,7 +6158,7 @@
    "pens": 0,
    "club": "Pakhtakor Tashkent FK",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "pakhtakor-tashkent-fk",
    "id": "UZB-6"
   },
@@ -5968,7 +6174,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-11"
   },
@@ -5984,7 +6190,7 @@
    "pens": 0,
    "club": "Neom SC",
    "clubZh": "尼欧姆",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "neom-sc",
    "id": "KSA-18"
   },
@@ -6000,7 +6206,7 @@
    "pens": 0,
    "club": "Atlético Mineiro",
    "clubZh": "米内罗竞技",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "atletico-mineiro",
    "id": "ECU-21"
   },
@@ -6016,7 +6222,7 @@
    "pens": 0,
    "club": "Atlético Mineiro",
    "clubZh": "米内罗竞技",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "atletico-mineiro",
    "id": "ECU-14"
   },
@@ -6048,7 +6254,7 @@
    "pens": 0,
    "club": "CD Plaza Amador",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "cd-plaza-amador",
    "id": "PAN-19"
   },
@@ -6064,7 +6270,7 @@
    "pens": 0,
    "club": "Al Ain FC",
    "clubZh": "艾因",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ain-fc",
    "id": "PAR-17"
   },
@@ -6112,7 +6318,7 @@
    "pens": 0,
    "club": "Wolfsberger AC",
    "clubZh": "沃尔夫斯贝格",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "wolfsberger-ac",
    "id": "AUT-26"
   },
@@ -6160,7 +6366,7 @@
    "pens": 0,
    "club": "Lechia Gdańsk",
    "clubZh": "",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "lechia-gdansk",
    "id": "NZL-12"
   },
@@ -6192,7 +6398,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "BRA-6"
   },
@@ -6272,7 +6478,7 @@
    "pens": 0,
    "club": "FC Red Bull Salzburg",
    "clubZh": "萨尔茨堡红牛",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "fc-red-bull-salzburg",
    "id": "AUT-1"
   },
@@ -6304,7 +6510,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "CZE-24"
   },
@@ -6400,7 +6606,7 @@
    "pens": 0,
    "club": "Al Arabi SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-arabi-sc",
    "id": "QAT-25"
   },
@@ -6416,7 +6622,7 @@
    "pens": 0,
    "club": "Foolad Khuzestan FC",
    "clubZh": "胡齐斯坦钢铁",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-19"
   },
@@ -6432,7 +6638,7 @@
    "pens": 0,
    "club": "Al Talaba SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-talaba-sc",
    "id": "IRQ-13"
   },
@@ -6448,7 +6654,7 @@
    "pens": 0,
    "club": "Al Najmah SC",
    "clubZh": "纳吉马",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-najmah-sc",
    "id": "IRQ-17"
   },
@@ -6464,7 +6670,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "IRN-11"
   },
@@ -6528,7 +6734,7 @@
    "pens": 0,
    "club": "Al Shabab FC",
    "clubZh": "萨巴布",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-shabab-fc",
    "id": "JOR-24"
   },
@@ -6544,7 +6750,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-3"
   },
@@ -6560,7 +6766,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "KSA-2"
   },
@@ -6592,7 +6798,7 @@
    "pens": 0,
    "club": "FCV Dender EH",
    "clubZh": "登德尔",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "fcv-dender-eh",
    "id": "IRN-7"
   },
@@ -6608,7 +6814,7 @@
    "pens": 0,
    "club": "Tractor Sazi Tabriz FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "tractor-sazi-tabriz-fc",
    "id": "IRN-1"
   },
@@ -6640,7 +6846,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-19"
   },
@@ -6736,7 +6942,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "BIH-15"
   },
@@ -6752,7 +6958,7 @@
    "pens": 0,
    "club": "Al Zawra'a SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-zawra-a-sc",
    "id": "JOR-6"
   },
@@ -6800,7 +7006,7 @@
    "pens": 0,
    "club": "KS Cracovia",
    "clubZh": "",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "ks-cracovia",
    "id": "IRQ-16"
   },
@@ -6832,7 +7038,7 @@
    "pens": 0,
    "club": "Tractor Sazi Tabriz FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "tractor-sazi-tabriz-fc",
    "id": "IRN-18"
   },
@@ -6848,7 +7054,7 @@
    "pens": 0,
    "club": "Esteghlal Tehran FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "esteghlal-tehran-fc",
    "id": "IRN-26"
   },
@@ -6864,7 +7070,7 @@
    "pens": 0,
    "club": "Al Faisaly SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-faisaly-sc",
    "id": "JOR-26"
   },
@@ -6928,7 +7134,7 @@
    "pens": 0,
    "club": "CR Vasco Da Gama",
    "clubZh": "瓦斯科达伽马",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-vasco-da-gama",
    "id": "COL-26"
   },
@@ -6944,7 +7150,7 @@
    "pens": 0,
    "club": "LASK Linz",
    "clubZh": "林茨",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "lask-linz",
    "id": "PAN-16"
   },
@@ -7008,7 +7214,7 @@
    "pens": 0,
    "club": "Atlético Mineiro",
    "clubZh": "米内罗竞技",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "atletico-mineiro",
    "id": "ECU-17"
   },
@@ -7104,7 +7310,7 @@
    "pens": 0,
    "club": "Royal Antwerp FC",
    "clubZh": "安特卫普",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "royal-antwerp-fc",
    "id": "ECU-8"
   },
@@ -7167,7 +7373,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "GHA-11"
@@ -7280,7 +7486,7 @@
    "pens": 0,
    "club": "SK Sturm Graz",
    "clubZh": "格拉茨风暴",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "sk-sturm-graz",
    "id": "BIH-24"
   },
@@ -7392,7 +7598,7 @@
    "pens": 0,
    "club": "Sepahan SC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "sepahan-sc",
    "id": "IRN-17"
   },
@@ -7440,7 +7646,7 @@
    "pens": 0,
    "club": "Al Wakrah SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-wakrah-sc",
    "id": "QAT-23"
   },
@@ -7520,7 +7726,7 @@
    "pens": 0,
    "club": "OKMK FK",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "okmk-fk",
    "id": "UZB-25"
   },
@@ -7584,7 +7790,7 @@
    "pens": 0,
    "club": "Al Karma SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-karma-sc",
    "id": "IRQ-18"
   },
@@ -7600,7 +7806,7 @@
    "pens": 0,
    "club": "CS Sfaxien",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "cs-sfaxien",
    "id": "TUN-16"
   },
@@ -7632,7 +7838,7 @@
    "pens": 0,
    "club": "Al Gharafa SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-gharafa-sc",
    "id": "QAT-13"
   },
@@ -7712,7 +7918,7 @@
    "pens": 0,
    "club": "CD Universidad Católica",
    "clubZh": "",
-   "league": "厄瓜多尔甲级",
+   "league": "厄瓜多尔甲",
    "club_id": "cd-universidad-catolica",
    "id": "PAN-24"
   },
@@ -7744,7 +7950,7 @@
    "pens": 0,
    "club": "FK Dinamo Samarkand",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fk-dinamo-samarkand",
    "id": "UZB-20"
   },
@@ -7760,7 +7966,7 @@
    "pens": 0,
    "club": "Al Bataeh Club",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-bataeh-club",
    "id": "UZB-19"
   },
@@ -7872,7 +8078,7 @@
    "pens": 0,
    "club": "Surkhon FK",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "surkhon-fk",
    "id": "UZB-24"
   },
@@ -7936,7 +8142,7 @@
    "pens": 0,
    "club": "Hearts Of Oak SC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "hearts-of-oak-sc",
    "id": "GHA-16"
   },
@@ -7983,7 +8189,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "POR-10"
@@ -8000,7 +8206,7 @@
    "pens": 0,
    "club": "Royale Union Saint-Gilloise",
    "clubZh": "圣吉卢瓦兹联",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "royale-union-saint-gilloise",
    "id": "SWE-22"
   },
@@ -8048,7 +8254,7 @@
    "pens": 0,
    "club": "FK Neftchi Farg'ona",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "fk-neftchi-farg-ona",
    "id": "UZB-16"
   },
@@ -8144,7 +8350,7 @@
    "pens": 0,
    "club": "Club Brugge",
    "clubZh": "布鲁日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "club-brugge",
    "id": "BEL-4"
   },
@@ -8528,7 +8734,7 @@
    "pens": 0,
    "club": "CD Universidad De Concepción",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "cd-universidad-de-concepcion",
    "id": "PAN-18"
   },
@@ -8576,7 +8782,7 @@
    "pens": 0,
    "club": "ŠK Slovan Bratislava",
    "clubZh": "",
-   "league": "斯洛伐克甲级",
+   "league": "斯洛伐克甲",
    "club_id": "sk-slovan-bratislava",
    "id": "PAN-2"
   },
@@ -8592,7 +8798,7 @@
    "pens": 0,
    "club": "Anderlecht",
    "clubZh": "安德莱赫特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "anderlecht",
    "id": "MEX-21"
   },
@@ -8624,7 +8830,7 @@
    "pens": 0,
    "club": "CD Marathón",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "cd-marathon",
    "id": "PAN-12"
   },
@@ -8640,7 +8846,7 @@
    "pens": 0,
    "club": "CD Cobresal",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "cd-cobresal",
    "id": "PAN-21"
   },
@@ -8864,7 +9070,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "GHA-13"
   },
@@ -8912,7 +9118,7 @@
    "pens": 0,
    "club": "Hapoel Kiryat Shmona FC",
    "clubZh": "",
-   "league": "以色列超",
+   "league": "以超",
    "club_id": "hapoel-kiryat-shmona-fc",
    "id": "PAN-6"
   },
@@ -9008,7 +9214,7 @@
    "pens": 0,
    "club": "São Paulo FC",
    "clubZh": "圣保罗",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "sao-paulo-fc",
    "id": "PAR-16"
   },
@@ -9072,7 +9278,7 @@
    "pens": 0,
    "club": "Malavan Anzali FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "malavan-anzali-fc",
    "id": "IRN-25"
   },
@@ -9104,7 +9310,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "BRA-13"
   },
@@ -9120,7 +9326,7 @@
    "pens": 0,
    "club": "Botafogo",
    "clubZh": "博塔弗戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "botafogo",
    "id": "BRA-18"
   },
@@ -9152,7 +9358,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "URU-9"
   },
@@ -9200,7 +9406,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-21"
   },
@@ -9216,7 +9422,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-14"
   },
@@ -9248,7 +9454,7 @@
    "pens": 0,
    "club": "Atlético Nacional",
    "clubZh": "",
-   "league": "哥伦比亚甲级",
+   "league": "哥伦比亚甲",
    "club_id": "atletico-nacional",
    "id": "COL-1"
   },
@@ -9296,7 +9502,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-2"
   },
@@ -9440,7 +9646,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "CZE-26"
   },
@@ -9488,7 +9694,7 @@
    "pens": 0,
    "club": "Standard Liège",
    "clubZh": "标准列日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "standard-liege",
    "id": "IRN-24"
   },
@@ -9552,7 +9758,7 @@
    "pens": 0,
    "club": "PFC Ludogorets Razgrad",
    "clubZh": "",
-   "league": "保加利亚甲级",
+   "league": "保加利亚甲",
    "club_id": "pfc-ludogorets-razgrad",
    "id": "CPV-14"
   },
@@ -9728,7 +9934,7 @@
    "pens": 0,
    "club": "GNK Dinamo Zagreb",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "gnk-dinamo-zagreb",
    "id": "CRO-1"
   },
@@ -9744,7 +9950,7 @@
    "pens": 0,
    "club": "FC Tatran Prešov",
    "clubZh": "",
-   "league": "斯洛伐克甲级",
+   "league": "斯洛伐克甲",
    "club_id": "fc-tatran-presov",
    "id": "HAI-25"
   },
@@ -9792,7 +9998,7 @@
    "pens": 0,
    "club": "Pakhtakor Tashkent FK",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "pakhtakor-tashkent-fk",
    "id": "UZB-17"
   },
@@ -9824,7 +10030,7 @@
    "pens": 0,
    "club": "Esteghlal Tehran FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "esteghlal-tehran-fc",
    "id": "HAI-9"
   },
@@ -9968,7 +10174,7 @@
    "pens": 0,
    "club": "Al Bataeh Club",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-bataeh-club",
    "id": "CPV-3"
   },
@@ -10000,7 +10206,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-8"
   },
@@ -10032,7 +10238,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "SEN-16"
   },
@@ -10080,7 +10286,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-23"
   },
@@ -10096,7 +10302,7 @@
    "pens": 0,
    "club": "Sepahan SC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "sepahan-sc",
    "id": "IRN-3"
   },
@@ -10272,7 +10478,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "URU-15"
   },
@@ -10400,7 +10606,7 @@
    "pens": 0,
    "club": "CD Plaza Amador",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "cd-plaza-amador",
    "id": "PAN-15"
   },
@@ -10592,7 +10798,7 @@
    "pens": 0,
    "club": "Grêmio FBPA",
    "clubZh": "格雷米奥",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "gremio-fbpa",
    "id": "PAR-5"
   },
@@ -10624,7 +10830,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "BRA-17"
   },
@@ -10672,7 +10878,7 @@
    "pens": 0,
    "club": "Al Talaba SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-talaba-sc",
    "id": "IRQ-1"
   },
@@ -10720,7 +10926,7 @@
    "pens": 0,
    "club": "FK Neftchi Farg'ona",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "fk-neftchi-farg-ona",
    "id": "UZB-4"
   },
@@ -10768,7 +10974,7 @@
    "pens": 0,
    "club": "SC Internacional",
    "clubZh": "国际(巴西)",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "sc-internacional",
    "id": "ECU-2"
   },
@@ -10784,7 +10990,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "KSA-9"
   },
@@ -10848,7 +11054,7 @@
    "pens": 0,
    "club": "Deportivo Saprissa",
    "clubZh": "",
-   "league": "哥斯达黎加甲级",
+   "league": "哥斯达黎加甲",
    "club_id": "deportivo-saprissa",
    "id": "PAN-4"
   },
@@ -10880,7 +11086,7 @@
    "pens": 0,
    "club": "Club Africain",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "club-africain",
    "id": "TUN-19"
   },
@@ -10912,7 +11118,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "AUT-12"
   },
@@ -10992,7 +11198,7 @@
    "pens": 0,
    "club": "Persib Bandung",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "persib-bandung",
    "id": "IRQ-26"
   },
@@ -11152,7 +11358,7 @@
    "pens": 0,
    "club": "Apollon Limassol",
    "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "apollon-limassol",
    "id": "CPV-11"
   },
@@ -11184,7 +11390,7 @@
    "pens": 0,
    "club": "Club Olimpia",
    "clubZh": "",
-   "league": "巴拉圭甲级",
+   "league": "巴拉圭甲",
    "club_id": "club-olimpia",
    "id": "PAR-22"
   },
@@ -11200,7 +11406,7 @@
    "pens": 0,
    "club": "Cerro Porteño",
    "clubZh": "",
-   "league": "巴拉圭甲级",
+   "league": "巴拉圭甲",
    "club_id": "cerro-porteno",
    "id": "PAR-1"
   },
@@ -11216,7 +11422,7 @@
    "pens": 0,
    "club": "Aris Limassol FC",
    "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "aris-limassol-fc",
    "id": "COD-24"
   },
@@ -11264,7 +11470,7 @@
    "pens": 0,
    "club": "Terengganu FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "terengganu-fc",
    "id": "CUW-19"
   },
@@ -11360,7 +11566,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "URU-10"
   },
@@ -11440,7 +11646,7 @@
    "pens": 0,
    "club": "LDU Quito",
    "clubZh": "",
-   "league": "厄瓜多尔甲级",
+   "league": "厄瓜多尔甲",
    "club_id": "ldu-quito",
    "id": "ECU-22"
   },
@@ -11568,7 +11774,7 @@
    "pens": 0,
    "club": "Al Arabi SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-arabi-sc",
    "id": "QAT-4"
   },
@@ -11600,7 +11806,7 @@
    "pens": 0,
    "club": "AEL Limassol",
    "clubZh": "利马索尔AEL",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "ael-limassol",
    "id": "MEX-13"
   },
@@ -11616,7 +11822,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "URU-13"
   },
@@ -11648,7 +11854,7 @@
    "pens": 0,
    "club": "Club Brugge",
    "clubZh": "布鲁日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "club-brugge",
    "id": "SWE-25"
   },
@@ -11680,7 +11886,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "PAR-15"
   },
@@ -11712,7 +11918,7 @@
    "pens": 0,
    "club": "Cerro Porteño",
    "clubZh": "",
-   "league": "巴拉圭甲级",
+   "league": "巴拉圭甲",
    "club_id": "cerro-porteno",
    "id": "PAR-2"
   },
@@ -11792,7 +11998,7 @@
    "pens": 0,
    "club": "Al Wakrah SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-wakrah-sc",
    "id": "EGY-14"
   },
@@ -11872,7 +12078,7 @@
    "pens": 0,
    "club": "Club Brugge",
    "clubZh": "布鲁日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "club-brugge",
    "id": "BEL-20"
   },
@@ -11920,7 +12126,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-10"
   },
@@ -11936,7 +12142,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-5"
   },
@@ -11952,7 +12158,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "KSA-14"
   },
@@ -12128,7 +12334,7 @@
    "pens": 0,
    "club": "Sepahan SC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "sepahan-sc",
    "id": "IRN-22"
   },
@@ -12144,7 +12350,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "IRN-13"
   },
@@ -12160,7 +12366,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "ALG-8"
   },
@@ -12176,7 +12382,7 @@
    "pens": 0,
    "club": "AC Sparta Praha",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "ac-sparta-praha",
    "id": "CZE-25"
   },
@@ -12192,7 +12398,7 @@
    "pens": 0,
    "club": "Al Faisaly SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-faisaly-sc",
    "id": "JOR-4"
   },
@@ -12256,7 +12462,7 @@
    "pens": 0,
    "club": "Al Dhafra SCC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-dhafra-scc",
    "id": "IRQ-8"
   },
@@ -12304,7 +12510,7 @@
    "pens": 0,
    "club": "Al Karma SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-karma-sc",
    "id": "JOR-15"
   },
@@ -12384,7 +12590,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "UZB-21"
   },
@@ -12496,7 +12702,7 @@
    "pens": 0,
    "club": "Red Bull Bragantino",
    "clubZh": "布拉甘蒂诺",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "red-bull-bragantino",
    "id": "PAR-25"
   },
@@ -12624,7 +12830,7 @@
    "pens": 0,
    "club": "FC Astana",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fc-astana",
    "id": "BIH-13"
   },
@@ -12656,7 +12862,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "ENG-22"
   },
@@ -12671,8 +12877,8 @@
    "goals": 0,
    "pens": 0,
    "club": "Pafos FC",
-   "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "clubZh": "帕福斯",
+   "league": "塞浦路斯甲",
    "club_id": "pafos-fc",
    "id": "BIH-14"
   },
@@ -12704,7 +12910,7 @@
    "pens": 0,
    "club": "Al Ettifaq FC",
    "clubZh": "伊蒂法克",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ettifaq-fc",
    "id": "SCO-13"
   },
@@ -12752,7 +12958,7 @@
    "pens": 0,
    "club": "Grazer AK",
    "clubZh": "格拉茨AK",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "grazer-ak",
    "id": "AUS-4"
   },
@@ -12832,7 +13038,7 @@
    "pens": 0,
    "club": "FK Dinamo Samarkand",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fk-dinamo-samarkand",
    "id": "UZB-26"
   },
@@ -12848,7 +13054,7 @@
    "pens": 0,
    "club": "Al Zawra'a SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-zawra-a-sc",
    "id": "IRQ-12"
   },
@@ -12879,7 +13085,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ENG-23"
@@ -12928,7 +13134,7 @@
    "pens": 0,
    "club": "FK Neftchi Farg'ona",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "fk-neftchi-farg-ona",
    "id": "UZB-8"
   },
@@ -12944,7 +13150,7 @@
    "pens": 0,
    "club": "AC Sparta Praha",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "ac-sparta-praha",
    "id": "CZE-11"
   },
@@ -12992,7 +13198,7 @@
    "pens": 0,
    "club": "AC Sparta Praha",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "ac-sparta-praha",
    "id": "CZE-20"
   },
@@ -13024,7 +13230,7 @@
    "pens": 0,
    "club": "Al Rayyan SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-rayyan-sc",
    "id": "QAT-5"
   },
@@ -13072,7 +13278,7 @@
    "pens": 0,
    "club": "NK Maribor",
    "clubZh": "马里博尔",
-   "league": "斯洛文尼亚甲级",
+   "league": "斯洛文尼亚甲",
    "club_id": "nk-maribor",
    "id": "CIV-4"
   },
@@ -13088,7 +13294,7 @@
    "pens": 0,
    "club": "KAA Gent",
    "clubZh": "根特",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "kaa-gent",
    "id": "HAI-22"
   },
@@ -13136,7 +13342,7 @@
    "pens": 0,
    "club": "SK Beveren",
    "clubZh": "贝弗伦",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sk-beveren",
    "id": "CUW-16"
   },
@@ -13168,7 +13374,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "KSA-25"
   },
@@ -13247,7 +13453,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "BEL-11"
@@ -13344,7 +13550,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "COL-11"
   },
@@ -13376,7 +13582,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-16"
   },
@@ -13424,7 +13630,7 @@
    "pens": 0,
    "club": "Puerto Cabello CF",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "puerto-cabello-cf",
    "id": "PAN-13"
   },
@@ -13472,7 +13678,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "URU-22"
   },
@@ -13488,7 +13694,7 @@
    "pens": 0,
    "club": "Club Brugge",
    "clubZh": "布鲁日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "club-brugge",
    "id": "BEL-18"
   },
@@ -13536,7 +13742,7 @@
    "pens": 0,
    "club": "Club Brugge",
    "clubZh": "布鲁日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "club-brugge",
    "id": "ECU-4"
   },
@@ -13615,7 +13821,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ENG-5"
@@ -13776,7 +13982,7 @@
    "pens": 0,
    "club": "Independiente Del Valle",
    "clubZh": "",
-   "league": "厄瓜多尔甲级",
+   "league": "厄瓜多尔甲",
    "club_id": "independiente-del-valle",
    "id": "ECU-5"
   },
@@ -13808,7 +14014,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "COL-8"
   },
@@ -13824,7 +14030,7 @@
    "pens": 0,
    "club": "Deportivo La Guaira",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "deportivo-la-guaira",
    "id": "PAN-26"
   },
@@ -13872,7 +14078,7 @@
    "pens": 0,
    "club": "KRC Genk",
    "clubZh": "亨克",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "krc-genk",
    "id": "COD-12"
   },
@@ -13936,7 +14142,7 @@
    "pens": 0,
    "club": "CD Universidad Católica",
    "clubZh": "",
-   "league": "厄瓜多尔甲级",
+   "league": "厄瓜多尔甲",
    "club_id": "cd-universidad-catolica",
    "id": "PAN-17"
   },
@@ -13984,7 +14190,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "ARG-21"
   },
@@ -14000,7 +14206,7 @@
    "pens": 0,
    "club": "St Patrick's Athletic FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "st-patrick-s-athletic-fc",
    "id": "GHA-12"
   },
@@ -14095,7 +14301,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "CRO-4"
@@ -14208,7 +14414,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "POR-11"
   },
@@ -14224,7 +14430,7 @@
    "pens": 0,
    "club": "FC FCSB",
    "clubZh": "",
-   "league": "罗马尼亚甲级",
+   "league": "罗马尼亚甲",
    "club_id": "fc-fcsb",
    "id": "CPV-8"
   },
@@ -14288,7 +14494,7 @@
    "pens": 0,
    "club": "Athletico Paranaense",
    "clubZh": "帕拉纳竞技",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "athletico-paranaense",
    "id": "COL-15"
   },
@@ -14432,7 +14638,7 @@
    "pens": 0,
    "club": "Atlético Mineiro",
    "clubZh": "米内罗竞技",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "atletico-mineiro",
    "id": "PAR-6"
   },
@@ -14464,7 +14670,7 @@
    "pens": 0,
    "club": "Abha Club",
    "clubZh": "艾卜哈",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "abha-club",
    "id": "CUW-3"
   },
@@ -14528,7 +14734,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "SEN-3"
   },
@@ -14592,7 +14798,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-12"
   },
@@ -14640,7 +14846,7 @@
    "pens": 0,
    "club": "Sint-Truiden VV",
    "clubZh": "圣特雷登",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sint-truiden-vv",
    "id": "JPN-9"
   },
@@ -14672,7 +14878,7 @@
    "pens": 0,
    "club": "SJK",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "sjk",
    "id": "CPV-25"
   },
@@ -14687,8 +14893,8 @@
    "goals": 0,
    "pens": 0,
    "club": "Pafos FC",
-   "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "clubZh": "帕福斯",
+   "league": "塞浦路斯甲",
    "club_id": "pafos-fc",
    "id": "SWE-13"
   },
@@ -14736,7 +14942,7 @@
    "pens": 0,
    "club": "Maccabi Haifa FC",
    "clubZh": "",
-   "league": "以色列超",
+   "league": "以超",
    "club_id": "maccabi-haifa-fc",
    "id": "CUW-14"
   },
@@ -14848,7 +15054,7 @@
    "pens": 0,
    "club": "Royale Union Saint-Gilloise",
    "clubZh": "圣吉卢瓦兹联",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "royale-union-saint-gilloise",
    "id": "ECU-11"
   },
@@ -14864,7 +15070,7 @@
    "pens": 0,
    "club": "Al Ettifaq FC",
    "clubZh": "伊蒂法克",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ettifaq-fc",
    "id": "KSA-17"
   },
@@ -14896,7 +15102,7 @@
    "pens": 0,
    "club": "Pakhtakor Tashkent FK",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "pakhtakor-tashkent-fk",
    "id": "UZB-3"
   },
@@ -15200,7 +15406,7 @@
    "pens": 0,
    "club": "Puskás Akadémia FC",
    "clubZh": "",
-   "league": "匈牙利甲级",
+   "league": "匈甲",
    "club_id": "puskas-akademia-fc",
    "id": "CPV-15"
   },
@@ -15280,7 +15486,7 @@
    "pens": 0,
    "club": "Ferencvárosi TC",
    "clubZh": "",
-   "league": "匈牙利甲级",
+   "league": "匈甲",
    "club_id": "ferencvarosi-tc",
    "id": "HAI-16"
   },
@@ -15312,7 +15518,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "BRA-15"
   },
@@ -15472,7 +15678,7 @@
    "pens": 0,
    "club": "FCV Dender EH",
    "clubZh": "登德尔",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "fcv-dender-eh",
    "id": "CAN-4"
   },
@@ -15584,7 +15790,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "BRA-20"
   },
@@ -15600,7 +15806,7 @@
    "pens": 0,
    "club": "Al Wakrah SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-wakrah-sc",
    "id": "QAT-3"
   },
@@ -15632,7 +15838,7 @@
    "pens": 0,
    "club": "Club Nacional",
    "clubZh": "",
-   "league": "乌拉圭甲级",
+   "league": "乌拉圭甲",
    "club_id": "club-nacional",
    "id": "PAN-1"
   },
@@ -15744,7 +15950,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-17"
   },
@@ -15760,7 +15966,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "CZE-12"
   },
@@ -15856,7 +16062,7 @@
    "pens": 0,
    "club": "Al Rayyan SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-rayyan-sc",
    "id": "QAT-1"
   },
@@ -15872,7 +16078,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-13"
   },
@@ -16047,7 +16253,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ENG-6"
@@ -16320,7 +16526,7 @@
    "pens": 0,
    "club": "HNK Rijeka",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "hnk-rijeka",
    "id": "BIH-22"
   },
@@ -16400,7 +16606,7 @@
    "pens": 0,
    "club": "Al Fateh SC",
    "clubZh": "法塔赫",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-fateh-sc",
    "id": "MAR-5"
   },
@@ -16431,7 +16637,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "CRO-8"
@@ -16447,7 +16653,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "POR-6"
@@ -16608,7 +16814,7 @@
    "pens": 0,
    "club": "Standard Liège",
    "clubZh": "标准列日",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "standard-liege",
    "id": "COD-21"
   },
@@ -16752,7 +16958,7 @@
    "pens": 0,
    "club": "GNK Dinamo Zagreb",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "gnk-dinamo-zagreb",
    "id": "SCO-26"
   },
@@ -16832,7 +17038,7 @@
    "pens": 0,
    "club": "Al Nasr SC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-nasr-sc",
    "id": "IRN-10"
   },
@@ -16848,7 +17054,7 @@
    "pens": 0,
    "club": "Tractor Sazi Tabriz FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "tractor-sazi-tabriz-fc",
    "id": "IRN-16"
   },
@@ -16896,7 +17102,7 @@
    "pens": 0,
    "club": "SC Corinthians",
    "clubZh": "科林蒂安",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "sc-corinthians",
    "id": "NED-10"
   },
@@ -16912,7 +17118,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "IRQ-23"
   },
@@ -16928,7 +17134,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "TUR-3"
   },
@@ -16992,7 +17198,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-22"
   },
@@ -17184,7 +17390,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "IRN-5"
   },
@@ -17216,7 +17422,7 @@
    "pens": 0,
    "club": "APOEL FC",
    "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "apoel-fc",
    "id": "AUS-2"
   },
@@ -17264,7 +17470,7 @@
    "pens": 0,
    "club": "FK Borac Banja Luka",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fk-borac-banja-luka",
    "id": "BIH-12"
   },
@@ -17296,7 +17502,7 @@
    "pens": 0,
    "club": "Espérance De Tunisie",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "esperance-de-tunisie",
    "id": "TUN-21"
   },
@@ -17328,7 +17534,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-23"
   },
@@ -17344,7 +17550,7 @@
    "pens": 0,
    "club": "Sporting Charleroi",
    "clubZh": "沙勒罗瓦",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sporting-charleroi",
    "id": "CIV-16"
   },
@@ -17424,7 +17630,7 @@
    "pens": 0,
    "club": "Al Shamal SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-shamal-sc",
    "id": "QAT-26"
   },
@@ -17440,7 +17646,7 @@
    "pens": 0,
    "club": "Espérance De Tunisie",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "esperance-de-tunisie",
    "id": "ALG-4"
   },
@@ -17472,7 +17678,7 @@
    "pens": 0,
    "club": "Al Wahda SC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-wahda-sc",
    "id": "IRN-21"
   },
@@ -17488,7 +17694,7 @@
    "pens": 0,
    "club": "Selangor FC",
    "clubZh": "",
-   "league": "马来西亚超",
+   "league": "马来超",
    "club_id": "selangor-fc",
    "id": "JOR-16"
   },
@@ -17504,7 +17710,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-18"
   },
@@ -17520,7 +17726,7 @@
    "pens": 0,
    "club": "Al Karma SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-karma-sc",
    "id": "JOR-2"
   },
@@ -17536,7 +17742,7 @@
    "pens": 0,
    "club": "Raja Casablanca",
    "clubZh": "",
-   "league": "摩洛哥联赛",
+   "league": "摩洛哥联",
    "club_id": "raja-casablanca",
    "id": "JOR-7"
   },
@@ -17552,7 +17758,7 @@
    "pens": 0,
    "club": "Al Wahdat SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-wahdat-sc",
    "id": "JOR-25"
   },
@@ -17568,7 +17774,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "KSA-26"
   },
@@ -17584,7 +17790,7 @@
    "pens": 0,
    "club": "Al Ula Saudi FC",
    "clubZh": "欧拉",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ula-saudi-fc",
    "id": "KSA-21"
   },
@@ -17600,7 +17806,7 @@
    "pens": 0,
    "club": "Al Gharafa SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-gharafa-sc",
    "id": "QAT-9"
   },
@@ -17616,7 +17822,7 @@
    "pens": 0,
    "club": "Dibba FC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "dibba-fc",
    "id": "IRQ-10"
   },
@@ -17648,7 +17854,7 @@
    "pens": 0,
    "club": "Al-Quwa Al-Jawiya",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-quwa-al-jawiya",
    "id": "JOR-20"
   },
@@ -17712,7 +17918,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-13"
   },
@@ -17840,7 +18046,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-24"
   },
@@ -17856,7 +18062,7 @@
    "pens": 0,
    "club": "Club Africain",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "club-africain",
    "id": "TUN-1"
   },
@@ -17904,7 +18110,7 @@
    "pens": 0,
    "club": "Al Shorta SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-shorta-sc",
    "id": "IRQ-6"
   },
@@ -17920,7 +18126,7 @@
    "pens": 0,
    "club": "RS Berkane",
    "clubZh": "",
-   "league": "摩洛哥联赛",
+   "league": "摩洛哥联",
    "club_id": "rs-berkane",
    "id": "MAR-12"
   },
@@ -17936,7 +18142,7 @@
    "pens": 0,
    "club": "Al Qadsiah FC",
    "clubZh": "卡迪西亚",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "KSA-7"
   },
@@ -17952,7 +18158,7 @@
    "pens": 0,
    "club": "Al Shorta SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-shorta-sc",
    "id": "IRQ-25"
   },
@@ -17968,7 +18174,7 @@
    "pens": 0,
    "club": "PFC Montana",
    "clubZh": "",
-   "league": "保加利亚甲级",
+   "league": "保加利亚甲",
    "club_id": "pfc-montana",
    "id": "CPV-12"
   },
@@ -18000,7 +18206,7 @@
    "pens": 0,
    "club": "Al Najmah SC",
    "clubZh": "纳吉马",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-najmah-sc",
    "id": "EGY-18"
   },
@@ -18064,7 +18270,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-6"
   },
@@ -18079,7 +18285,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "NED-5"
@@ -18144,7 +18350,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-13"
   },
@@ -18160,7 +18366,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "KSA-1"
   },
@@ -18192,7 +18398,7 @@
    "pens": 0,
    "club": "Santos FC",
    "clubZh": "桑托斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "santos-fc",
    "id": "BRA-10"
   },
@@ -18287,7 +18493,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ENG-3"
@@ -18336,7 +18542,7 @@
    "pens": 0,
    "club": "CR Flamengo",
    "clubZh": "弗拉门戈",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "cr-flamengo",
    "id": "URU-7"
   },
@@ -18448,7 +18654,7 @@
    "pens": 0,
    "club": "HNK Hajduk Split",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "hnk-hajduk-split",
    "id": "CAN-23"
   },
@@ -18608,7 +18814,7 @@
    "pens": 0,
    "club": "Selangor FC",
    "clubZh": "",
-   "league": "马来西亚超",
+   "league": "马来超",
    "club_id": "selangor-fc",
    "id": "JOR-8"
   },
@@ -18624,7 +18830,7 @@
    "pens": 0,
    "club": "Al Faisaly SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-faisaly-sc",
    "id": "JOR-12"
   },
@@ -18720,7 +18926,7 @@
    "pens": 0,
    "club": "Tractor Sazi Tabriz FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "tractor-sazi-tabriz-fc",
    "id": "UZB-9"
   },
@@ -18831,7 +19037,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "EGY-22"
@@ -18896,7 +19102,7 @@
    "pens": 0,
    "club": "Al Fayha FC",
    "clubZh": "法伊哈",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-fayha-fc",
    "id": "PAN-22"
   },
@@ -18944,7 +19150,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "UZB-11"
   },
@@ -18976,7 +19182,7 @@
    "pens": 0,
    "club": "Baniyas Club",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "baniyas-club",
    "id": "UZB-7"
   },
@@ -18992,7 +19198,7 @@
    "pens": 0,
    "club": "Cercle Brugge",
    "clubZh": "布鲁日竞技",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "cercle-brugge",
    "id": "CIV-14"
   },
@@ -19024,7 +19230,7 @@
    "pens": 0,
    "club": "USM Alger",
    "clubZh": "",
-   "league": "阿尔及利亚联赛",
+   "league": "阿尔及利亚联",
    "club_id": "usm-alger",
    "id": "ALG-16"
   },
@@ -19104,7 +19310,7 @@
    "pens": 0,
    "club": "Sporting Charleroi",
    "clubZh": "沙勒罗瓦",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sporting-charleroi",
    "id": "CIV-25"
   },
@@ -19312,7 +19518,7 @@
    "pens": 0,
    "club": "Persepolis FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "persepolis-fc",
    "id": "IRN-12"
   },
@@ -19328,7 +19534,7 @@
    "pens": 0,
    "club": "Al-Sadd",
    "clubZh": "萨德",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-sadd",
    "id": "QAT-2"
   },
@@ -19472,7 +19678,7 @@
    "pens": 0,
    "club": "FC Viktoria Plzeň",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-viktoria-plzen",
    "id": "GHA-25"
   },
@@ -19504,7 +19710,7 @@
    "pens": 0,
    "club": "US Monastir",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "us-monastir",
    "id": "TUN-24"
   },
@@ -19520,7 +19726,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-14"
   },
@@ -19552,7 +19758,7 @@
    "pens": 0,
    "club": "SE Palmeiras",
    "clubZh": "帕尔梅拉斯",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "se-palmeiras",
    "id": "PAR-7"
   },
@@ -19584,7 +19790,7 @@
    "pens": 0,
    "club": "Al Ain FC",
    "clubZh": "艾因",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ain-fc",
    "id": "EGY-5"
   },
@@ -19663,7 +19869,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ALG-15"
@@ -19679,7 +19885,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "FRA-24"
@@ -19712,7 +19918,7 @@
    "pens": 0,
    "club": "Port FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "port-fc",
    "id": "IRQ-2"
   },
@@ -19728,7 +19934,7 @@
    "pens": 0,
    "club": "KV Mechelen",
    "clubZh": "梅赫伦",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "kv-mechelen",
    "id": "MAR-25"
   },
@@ -19808,7 +20014,7 @@
    "pens": 0,
    "club": "LDU Quito",
    "clubZh": "",
-   "league": "厄瓜多尔甲级",
+   "league": "厄瓜多尔甲",
    "club_id": "ldu-quito",
    "id": "HAI-4"
   },
@@ -19936,7 +20142,7 @@
    "pens": 0,
    "club": "Shamrock Rovers FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "shamrock-rovers-fc",
    "id": "CPV-4"
   },
@@ -20016,7 +20222,7 @@
    "pens": 0,
    "club": "Turan Tovuz",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "turan-tovuz",
    "id": "PAN-25"
   },
@@ -20031,7 +20237,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "ESP-16"
@@ -20112,7 +20318,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "BRA-24"
   },
@@ -20160,7 +20366,7 @@
    "pens": 0,
    "club": "Esteghlal Tehran FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "esteghlal-tehran-fc",
    "id": "IRN-15"
   },
@@ -20240,7 +20446,7 @@
    "pens": 0,
    "club": "PFC Navbahor Namangan",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "pfc-navbahor-namangan",
    "id": "UZB-10"
   },
@@ -20256,7 +20462,7 @@
    "pens": 0,
    "club": "Esteghlal Tehran FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "esteghlal-tehran-fc",
    "id": "UZB-5"
   },
@@ -20335,7 +20541,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "POR-3"
@@ -20352,7 +20558,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "POR-21"
   },
@@ -20368,7 +20574,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-19"
   },
@@ -20384,7 +20590,7 @@
    "pens": 0,
    "club": "Étoile Du Sahel",
    "clubZh": "",
-   "league": "突尼斯联赛",
+   "league": "突尼斯联",
    "club_id": "etoile-du-sahel",
    "id": "TUN-22"
   },
@@ -20400,7 +20606,7 @@
    "pens": 0,
    "club": "Al-Nassr",
    "clubZh": "利雅得胜利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-nassr",
    "id": "SEN-10"
   },
@@ -20416,7 +20622,7 @@
    "pens": 0,
    "club": "Shabab Al Ahli Club",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "shabab-al-ahli-club",
    "id": "IRN-6"
   },
@@ -20432,7 +20638,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-21"
   },
@@ -20448,7 +20654,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-17"
   },
@@ -20464,7 +20670,7 @@
    "pens": 0,
    "club": "Esteghlal Tehran FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "esteghlal-tehran-fc",
    "id": "IRN-2"
   },
@@ -20480,7 +20686,7 @@
    "pens": 0,
    "club": "Al Ittihad",
    "clubZh": "吉达联合",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ittihad",
    "id": "KSA-11"
   },
@@ -20496,7 +20702,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-10"
   },
@@ -20528,7 +20734,7 @@
    "pens": 0,
    "club": "Al Ittihad Kalba SCC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ittihad-kalba-scc",
    "id": "IRN-14"
   },
@@ -20544,7 +20750,7 @@
    "pens": 0,
    "club": "Jagiellonia Białystok",
    "clubZh": "",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "jagiellonia-bia-ystok",
    "id": "BIH-9"
   },
@@ -20880,7 +21086,7 @@
    "pens": 0,
    "club": "SC Internacional",
    "clubZh": "国际(巴西)",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "sc-internacional",
    "id": "URU-1"
   },
@@ -20928,7 +21134,7 @@
    "pens": 0,
    "club": "Al Ittihad Kalba SCC",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-ittihad-kalba-scc",
    "id": "IRN-20"
   },
@@ -20960,7 +21166,7 @@
    "pens": 0,
    "club": "FK Buxoro",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fk-buxoro",
    "id": "UZB-23"
   },
@@ -20976,7 +21182,7 @@
    "pens": 0,
    "club": "Pakhtakor Tashkent FK",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "pakhtakor-tashkent-fk",
    "id": "UZB-13"
   },
@@ -20992,7 +21198,7 @@
    "pens": 0,
    "club": "Sint-Truiden VV",
    "clubZh": "圣特雷登",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sint-truiden-vv",
    "id": "JPN-3"
   },
@@ -21008,7 +21214,7 @@
    "pens": 0,
    "club": "Tractor Sazi Tabriz FC",
    "clubZh": "",
-   "league": "伊朗波斯湾联赛",
+   "league": "伊朗联",
    "club_id": "tractor-sazi-tabriz-fc",
    "id": "IRN-4"
   },
@@ -21104,7 +21310,7 @@
    "pens": 0,
    "club": "Al Jazira",
    "clubZh": "",
-   "league": "阿联酋联赛",
+   "league": "阿联酋联",
    "club_id": "al-jazira",
    "id": "COD-23"
   },
@@ -21216,7 +21422,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-6"
   },
@@ -21232,7 +21438,7 @@
    "pens": 0,
    "club": "Widzew Łódź",
    "clubZh": "",
-   "league": "波兰甲级",
+   "league": "波甲",
    "club_id": "widzew-odz",
    "id": "COD-3"
   },
@@ -21264,7 +21470,7 @@
    "pens": 0,
    "club": "HNK Rijeka",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "hnk-rijeka",
    "id": "BIH-21"
   },
@@ -21280,7 +21486,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-18"
   },
@@ -21296,7 +21502,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "KSA-20"
   },
@@ -21328,7 +21534,7 @@
    "pens": 0,
    "club": "FK Austria Wien",
    "clubZh": "奥地利维也纳",
-   "league": "奥地利甲级",
+   "league": "奥甲",
    "club_id": "fk-austria-wien",
    "id": "KOR-13"
   },
@@ -21376,7 +21582,7 @@
    "pens": 0,
    "club": "Al Duhail SC",
    "clubZh": "杜海勒",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-duhail-sc",
    "id": "QAT-24"
   },
@@ -21600,7 +21806,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "FRA-19"
   },
@@ -21679,7 +21885,7 @@
    "goals": 0,
    "pens": 0,
    "club": "Manchester City FC",
-   "clubZh": "曼彻斯特城",
+   "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
    "id": "NED-14"
@@ -21744,7 +21950,7 @@
    "pens": 0,
    "club": "FC Noah",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "fc-noah",
    "id": "COD-16"
   },
@@ -21776,7 +21982,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-19"
   },
@@ -21792,7 +21998,7 @@
    "pens": 0,
    "club": "SK Slavia Praha",
    "clubZh": "布拉格斯拉维亚",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-3"
   },
@@ -21824,7 +22030,7 @@
    "pens": 0,
    "club": "Deportivo Saprissa",
    "clubZh": "",
-   "league": "哥斯达黎加甲级",
+   "league": "哥斯达黎加甲",
    "club_id": "deportivo-saprissa",
    "id": "PAN-9"
   },
@@ -21888,7 +22094,7 @@
    "pens": 0,
    "club": "HNK Rijeka",
    "clubZh": "",
-   "league": "克罗地亚甲级",
+   "league": "克罗地亚甲",
    "club_id": "hnk-rijeka",
    "id": "CRO-19"
   },
@@ -22080,7 +22286,7 @@
    "pens": 0,
    "club": "Nasaf Qarshi FC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "nasaf-qarshi-fc",
    "id": "UZB-15"
   },
@@ -22112,7 +22318,7 @@
    "pens": 0,
    "club": "PFC Navbahor Namangan",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "pfc-navbahor-namangan",
    "id": "UZB-1"
   },
@@ -22224,7 +22430,7 @@
    "pens": 0,
    "club": "FC Hradec Králové",
    "clubZh": "",
-   "league": "捷克甲级",
+   "league": "捷甲",
    "club_id": "fc-hradec-kralove",
    "id": "CZE-8"
   },
@@ -22288,7 +22494,7 @@
    "pens": 0,
    "club": "Grêmio FBPA",
    "clubZh": "格雷米奥",
-   "league": "巴西甲级",
+   "league": "巴甲",
    "club_id": "gremio-fbpa",
    "id": "BRA-12"
   },
@@ -22336,7 +22542,7 @@
    "pens": 0,
    "club": "SV Zulte Waregem",
    "clubZh": "瓦雷赫姆",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sv-zulte-waregem",
    "id": "HAI-24"
   },
@@ -22400,7 +22606,7 @@
    "pens": 0,
    "club": "AC Omonia",
    "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "ac-omonia",
    "id": "CPV-17"
   },
@@ -22416,7 +22622,7 @@
    "pens": 0,
    "club": "Violette AC",
    "clubZh": "",
-   "league": "其他联赛",
+   "league": "其他",
    "club_id": "violette-ac",
    "id": "HAI-26"
   },
@@ -22480,7 +22686,7 @@
    "pens": 0,
    "club": "KRC Genk",
    "clubZh": "亨克",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "krc-genk",
    "id": "ECU-26"
   },
@@ -22560,7 +22766,7 @@
    "pens": 0,
    "club": "Al Hilal SC",
    "clubZh": "利雅得新月",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-hilal-sc",
    "id": "MAR-1"
   },
@@ -22576,7 +22782,7 @@
    "pens": 0,
    "club": "Sporting Charleroi",
    "clubZh": "沙勒罗瓦",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "sporting-charleroi",
    "id": "ALG-24"
   },
@@ -22608,7 +22814,7 @@
    "pens": 0,
    "club": "Al Hussein SC",
    "clubZh": "",
-   "league": "约旦联赛",
+   "league": "约旦联",
    "club_id": "al-hussein-sc",
    "id": "JOR-1"
   },
@@ -22672,7 +22878,7 @@
    "pens": 0,
    "club": "FK Crvena Zvezda",
    "clubZh": "",
-   "league": "塞尔维亚超",
+   "league": "塞超",
    "club_id": "fk-crvena-zvezda",
    "id": "KOR-22"
   },
@@ -22704,7 +22910,7 @@
    "pens": 0,
    "club": "AEK Larnaca FC",
    "clubZh": "",
-   "league": "塞浦路斯甲级",
+   "league": "塞浦路斯甲",
    "club_id": "aek-larnaca-fc",
    "id": "IRQ-7"
   },
@@ -22784,7 +22990,7 @@
    "pens": 0,
    "club": "Al Wakrah SC",
    "clubZh": "",
-   "league": "卡塔尔星级联赛",
+   "league": "卡塔尔联",
    "club_id": "al-wakrah-sc",
    "id": "QAT-15"
   },
@@ -22832,7 +23038,7 @@
    "pens": 0,
    "club": "Pakhtakor Tashkent FK",
    "clubZh": "",
-   "league": "乌兹别克斯坦超",
+   "league": "乌兹超",
    "club_id": "pakhtakor-tashkent-fk",
    "id": "IRQ-4"
   },
@@ -22848,7 +23054,7 @@
    "pens": 0,
    "club": "Al Talaba SC",
    "clubZh": "",
-   "league": "伊拉克星级联赛",
+   "league": "伊拉克联",
    "club_id": "al-talaba-sc",
    "id": "IRQ-24"
   },
@@ -22864,7 +23070,7 @@
    "pens": 0,
    "club": "KRC Genk",
    "clubZh": "亨克",
-   "league": "比利时甲级",
+   "league": "比甲",
    "club_id": "krc-genk",
    "id": "MAR-13"
   },
@@ -22944,7 +23150,7 @@
    "pens": 0,
    "club": "JS Kabylie",
    "clubZh": "",
-   "league": "阿尔及利亚联赛",
+   "league": "阿尔及利亚联",
    "club_id": "js-kabylie",
    "id": "ALG-5"
   },
@@ -22976,7 +23182,7 @@
    "pens": 0,
    "club": "Al-Ahli",
    "clubZh": "吉达阿赫利",
-   "league": "沙特职业联赛",
+   "league": "沙特联",
    "club_id": "al-ahli",
    "id": "KSA-16"
   },

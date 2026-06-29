@@ -217,21 +217,21 @@ def main():
         return (smap.get(name) or smap.get(nm) or smap_ci.get(sa(name).lower())
                 or smap_ci.get(sa(nm).lower()) or fuzzy_id(nm,team))
     # 按比赛阶段分桶（补水时间约 30'/75'）
-    PHASES=["1-5","6-30","31-45","46-75","76-90","90+","ET"]
+    PHASES=["1-5","6-22","23-45","46-68","69-90","90+","ET"]
     buckets={b:0 for b in PHASES}
     def phase_of(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return None
         base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
         if base>=91: return "ET"            # 加时（淘汰赛）
-        if base==45 and extra>0: return "31-45"  # 上半场补时
+        if base==45 and extra>0: return "23-45"  # 上半场补时
         if base==90 and extra>0: return "90+"    # 终场补时绝杀
         t=base+extra
         if t<=5: return "1-5"
-        if t<=30: return "6-30"
-        if t<=45: return "31-45"
-        if t<=75: return "46-75"
-        if t<=90: return "76-90"
+        if t<=22: return "6-22"
+        if t<=45: return "23-45"
+        if t<=68: return "46-68"
+        if t<=90: return "69-90"
         return "90+"
     multi=[]; earliest=None; latest=None
     for mt in all_matches:
@@ -275,7 +275,24 @@ def main():
             "ground":clean_ground(mt.get("ground","")),"num":match_no.get(id(mt),"")})
     bigm.sort(key=lambda x:(-x["total"], x["date"]))
     bigm=[m for m in bigm if m["total"]>=4]   # 进球大战：保留总进球≥4（前端再按档位筛选）
-    funstats={"multiGoals":multi,"timeBuckets":buckets,
+    # 乌龙球：记在受益方名下，乌龙球员属于对手队（nation=对手）
+    ownGoals=[]
+    for mt in all_matches:
+        ft=mt.get("score",{}).get("ft")
+        if not ft: continue
+        t1,t2=mt.get("team1"),mt.get("team2"); mdate=mt.get("date","")
+        for side,benef,oppo in (("goals1",t1,t2),("goals2",t2,t1)):
+            for g in mt.get(side,[]):
+                if not g.get("owngoal"): continue
+                nm=g.get("name") or ""
+                pid=resolve(nm,oppo); p=by_id.get(pid) if pid else None
+                ownGoals.append({"player":(p["name"] if p else nm),"nameZh":(p.get("nameZh") if p else "") or nm,
+                    "nation":canon_nat(oppo),"nationZh":nat_zh(oppo),"benef":canon_nat(benef),"benefZh":nat_zh(benef),
+                    "minute":(str(g.get("minute"))+"'" if g.get("minute") else ""),"min":parse_min(g.get("minute")) or 0,
+                    "t1":canon_nat(t1),"t1Zh":nat_zh(t1),"t2":canon_nat(t2),"t2Zh":nat_zh(t2),
+                    "ft":f"{ft[0]}-{ft[1]}","date":mdate,"ground":clean_ground(mt.get("ground",""))})
+    ownGoals.sort(key=lambda x:(x["date"],x["min"]))
+    funstats={"multiGoals":multi,"timeBuckets":buckets,"ownGoals":ownGoals,
               "earliest":earliest,"latest":latest,"bigMatches":bigm}
 
     out={"version":read_version(),

@@ -8,6 +8,24 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.7.0
+
+**Official WC26 black-and-gold theme / 官方黑金主题**
+- Recolored the whole site around the official FIFA World Cup 26 identity: the key-visual multicolor palette (red / orange / lime / teal / blue / purple) drives scoreboard accents and data bars, while titles, section headings, filter buttons and links share a black-and-gold treatment inspired by the trophy and the FIFA Fan ID. Goal-count numbers share one tier color scale across Top Scorers, Multi-goal, Goal Fests and the All Players table.
+  全站围绕 FIFA World Cup 26 官方视觉重新配色：取自主视觉的多彩色板（红/橙/柠绿/青/蓝/紫）用于记分板强调条与数据柱；标题、版块标题、筛选按钮与链接统一为呼应大力神杯与 FIFA Fan ID 的黑金风格。进球数数字在领跑者 / 单场多球 / 进球大战 / 全部球员表中统一为同一套档位色阶。
+
+**Layout & sections / 布局与板块**
+- New header order: title → live/updated line → six stat cards → concise bilingual bullet intro. Sections reordered (Top Scorers → Goal Origins → All Players → Multi-goal → Goal Fests → Goal Timing) with a clearer gold divider between them.
+  页头重排：标题 → 实时追踪/更新 → 六张卡 → 精简双语要点；板块顺序调整，板块之间用更清晰的金色分隔线。
+- Goal Fests cards align the scoreline across cards and reflow to two rows on narrow screens; Goal Timing labels left-aligned with an aligned time column; goal-origin chart titles enlarged and two-tone.
+  进球大战卡片比分跨卡对齐、窄屏两行布局；进球时间分布成语左对齐、时间列对齐；进球来自哪里图表标题加大并双色。
+
+**Data & fixes / 数据与修复**
+- English club names render consistently everywhere via one abbreviation pass (PSG spelled out; very long names like Wolves / M'gladbach stay short); long league names normalized to short forms; Manchester City → 曼城; Pafos FC Chinese name added.
+  俱乐部英文名经统一缩写规则处处一致（PSG 全写；狼队 / 门兴等超长名保持短写）；长联赛名规范化为短名；曼彻斯特城→曼城；补 Pafos FC 中文名。
+- Fixed combobox dropdown not reopening after clearing a filter; jersey numbers shown as badges in Top Scorers cards and the All Players table; row-count line now reads logically when "All" includes 0-goal players; All Players table uses a single-source fixed column layout; Own Goals section hidden.
+  修复 combo 清除后下拉不再弹出的 bug；领跑者卡片与全部球员表以徽章显示国家队号码；选「全部」含 0 球球员时计数文案改为合理表述；全部球员表改为单一来源固定列宽；乌龙球板块隐藏。
+
 ## v1.6.2
 
 **Searchable filters / 可搜索筛选**
