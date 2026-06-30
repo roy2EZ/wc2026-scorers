@@ -1,18 +1,18 @@
 {
  "version": "v1.8.0",
- "updated": "2026-06-30T01:31:03+00:00",
+ "updated": "2026-06-30T04:14:26+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 148,
- "totalGoals": 209,
+ "count": 149,
+ "totalGoals": 211,
  "totalPens": 8,
- "matchesWithGoals": 68,
+ "matchesWithGoals": 69,
  "schedule": {
   "total": 104,
-  "played": 75,
+  "played": 76,
   "stageEn": "Round of 32",
   "stageZh": "32强",
   "lastDate": "2026-06-29",
-  "nextDate": "2026-06-29"
+  "nextDate": "2026-06-30"
  },
  "funstats": {
   "multiGoals": [
@@ -386,8 +386,8 @@
    "6-22": 37,
    "23-45": 51,
    "46-68": 59,
-   "69-90": 41,
-   "90+": 24,
+   "69-90": 42,
+   "90+": 25,
    "ET": 0
   },
   "ownGoals": [
@@ -1040,6 +1040,22 @@
    "id": "NED-19"
   },
   {
+   "player": "Cody Gakpo",
+   "nameZh": "加克波",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 3,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "NED-11"
+  },
+  {
    "player": "Denis Undav",
    "nameZh": "昂达夫",
    "num": 26,
@@ -1230,22 +1246,6 @@
    "league": "荷甲",
    "club_id": "feyenoord-rotterdam",
    "id": "JPN-18"
-  },
-  {
-   "player": "Cody Gakpo",
-   "nameZh": "加克波",
-   "num": 11,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Netherlands",
-   "nationZh": "荷兰",
-   "goals": 2,
-   "pens": 0,
-   "club": "Liverpool",
-   "clubZh": "利物浦",
-   "league": "英超",
-   "club_id": "liverpool",
-   "id": "NED-11"
   },
   {
    "player": "Cristiano Ronaldo",
@@ -2238,6 +2238,22 @@
    "league": "英超",
    "club_id": "everton-fc",
    "id": "SEN-13"
+  },
+  {
+   "player": "Issa",
+   "nameZh": "伊萨",
+   "num": 14,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 1,
+   "pens": 0,
+   "club": "Fulham FC",
+   "clubZh": "富勒姆",
+   "league": "英超",
+   "club_id": "fulham-fc",
+   "id": "MAR-14"
   },
   {
    "player": "Jamal Musiala",
@@ -3411,6 +3427,22 @@
    "id": "NED-19"
   },
   {
+   "player": "Cody Gakpo",
+   "nameZh": "加克波",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 3,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "NED-11"
+  },
+  {
    "player": "Denis Undav",
    "nameZh": "昂达夫",
    "num": 26,
@@ -3601,22 +3633,6 @@
    "league": "荷甲",
    "club_id": "feyenoord-rotterdam",
    "id": "JPN-18"
-  },
-  {
-   "player": "Cody Gakpo",
-   "nameZh": "加克波",
-   "num": 11,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Netherlands",
-   "nationZh": "荷兰",
-   "goals": 2,
-   "pens": 0,
-   "club": "Liverpool",
-   "clubZh": "利物浦",
-   "league": "英超",
-   "club_id": "liverpool",
-   "id": "NED-11"
   },
   {
    "player": "Cristiano Ronaldo",
@@ -4609,6 +4625,22 @@
    "league": "英超",
    "club_id": "everton-fc",
    "id": "SEN-13"
+  },
+  {
+   "player": "Issa",
+   "nameZh": "伊萨",
+   "num": 14,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 1,
+   "pens": 0,
+   "club": "Fulham FC",
+   "clubZh": "富勒姆",
+   "league": "英超",
+   "club_id": "fulham-fc",
+   "id": "MAR-14"
   },
   {
    "player": "Jamal Musiala",
@@ -12897,22 +12929,6 @@
    "league": "墨超",
    "club_id": "club-america",
    "id": "MEX-15"
-  },
-  {
-   "player": "Issa",
-   "nameZh": "伊萨",
-   "num": 14,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Morocco",
-   "nationZh": "摩洛哥",
-   "goals": 0,
-   "pens": 0,
-   "club": "Fulham FC",
-   "clubZh": "富勒姆",
-   "league": "英超",
-   "club_id": "fulham-fc",
-   "id": "MAR-14"
   },
   {
    "player": "Ivan Bašić",
