@@ -8,6 +8,18 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.1
+
+**Latest Goals feed — polish / 最新进球时间流·打磨**
+- Days fold into per-day accordion panels colored by their stage — group rounds (1/2/3 = teal/blue/purple) and knockout rounds (R32 gold → final red); the latest day stays open by default. Match headers now show Match #, Round + Group on separate lines, two-color scoreline, host city (English over Chinese), and a penalty-shootout line with the goal-net icon aligned under the score. Penalty goals show the ⚽ pip plus a red "点球 Penalty" label; long nation names wrap instead of truncating.
+  最新进球按天折叠成面板、按阶段着色（小组 1/2/3 = 青/蓝/紫，淘汰赛 32 强金→决赛红），最新一天默认展开。比赛组头显示 Match 编号、Round 与 Group 分两行、两色比分、主办城市（英文上中文下），以及与比分对齐的点球大战行（🥅）。点球进球显示 ⚽ + 红色「点球 Penalty」；长国名换行不截断。
+- Fixed the group-round计算 (each group's 6 games split 2-per-round by date order, so rounds are 1/2/3 — not inflated by split-date fixtures).
+  修复小组轮次计算（每组 6 场按时间每 2 场一轮，得 1/2/3；不再因同轮分两天而虚增）。
+
+**Data fixes / 数据修复**
+- Own goal by Morocco's keeper now resolves to 博诺 (Yassine Bono / "Bounou"); Morocco's Issa → 迪奥普 (Issa Diop, Fulham). Scoreboard first card: "games" (dropped "played") and "Round of 32" (dropped "Now").
+  摩洛哥门将乌龙球正确解析为博诺（Yassine Bono / 源写作 Bounou）；摩洛哥 Issa → 迪奥普（Issa Diop，富勒姆）。记分板第一卡："games"（去 played）、"Round of 32"（去 Now）。
+
 ## v1.9.0
 
 **Latest Goals feed / 最新进球时间流**

@@ -1,6 +1,6 @@
 {
- "version": "v1.9.0",
- "updated": "2026-06-30T01:23:02-07:00",
+ "version": "v1.9.1",
+ "updated": "2026-06-30T02:39:01-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 149,
  "totalGoals": 211,
@@ -678,8 +678,8 @@
     "ground": "Houston"
    },
    {
-    "player": "Yassine Bounou",
-    "nameZh": "Yassine Bounou",
+    "player": "Yassine Bono",
+    "nameZh": "亚辛·博诺",
     "nation": "Morocco",
     "nationZh": "摩洛哥",
     "benef": "Haiti",
@@ -735,6 +735,7 @@
     "num": 76,
     "group": "",
     "round": "Round of 32",
+    "mday": null,
     "t1": "Brazil",
     "t1Zh": "巴西",
     "t2": "Japan",
@@ -744,6 +745,7 @@
     "cityZh": "休斯顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Kaishu Sano",
@@ -791,6 +793,7 @@
     "num": 75,
     "group": "",
     "round": "Round of 32",
+    "mday": null,
     "t1": "Netherlands",
     "t1Zh": "荷兰",
     "t2": "Morocco",
@@ -800,6 +803,10 @@
     "cityZh": "蒙特雷",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": [
+     2,
+     3
+    ],
     "goals": [
      {
       "player": "Cody Gakpo",
@@ -815,8 +822,8 @@
       "og": false
      },
      {
-      "player": "Issa",
-      "nameZh": "伊萨",
+      "player": "Issa Diop",
+      "nameZh": "迪奥普",
       "nation": "Morocco",
       "nationZh": "摩洛哥",
       "clubZh": "富勒姆",
@@ -834,6 +841,7 @@
     "num": 74,
     "group": "",
     "round": "Round of 32",
+    "mday": null,
     "t1": "Germany",
     "t1Zh": "德国",
     "t2": "Paraguay",
@@ -843,6 +851,10 @@
     "cityZh": "波士顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": [
+     3,
+     4
+    ],
     "goals": [
      {
       "player": "Julio Enciso",
@@ -877,6 +889,7 @@
     "num": 73,
     "group": "",
     "round": "Round of 32",
+    "mday": null,
     "t1": "South Africa",
     "t1Zh": "南非",
     "t2": "Canada",
@@ -886,6 +899,7 @@
     "cityZh": "洛杉矶",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Stephen Eustáquio",
@@ -907,6 +921,7 @@
     "num": 72,
     "group": "Group L",
     "round": "Matchday 17",
+    "mday": 3,
     "t1": "Croatia",
     "t1Zh": "克罗地亚",
     "t2": "Ghana",
@@ -916,6 +931,7 @@
     "cityZh": "费城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Petar P. Sučić",
@@ -963,6 +979,7 @@
     "num": 71,
     "group": "Group L",
     "round": "Matchday 17",
+    "mday": 3,
     "t1": "Panama",
     "t1Zh": "巴拿马",
     "t2": "England",
@@ -972,6 +989,7 @@
     "cityZh": "纽约",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Jude Bellingham",
@@ -1006,6 +1024,7 @@
     "num": 66,
     "group": "Group K",
     "round": "Matchday 17",
+    "mday": 3,
     "t1": "DR Congo",
     "t1Zh": "刚果(金)",
     "t2": "Uzbekistan",
@@ -1015,6 +1034,7 @@
     "cityZh": "亚特兰大",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Eldor Shomurodov",
@@ -1075,6 +1095,7 @@
     "num": 60,
     "group": "Group J",
     "round": "Matchday 17",
+    "mday": 3,
     "t1": "Jordan",
     "t1Zh": "约旦",
     "t2": "Argentina",
@@ -1084,6 +1105,7 @@
     "cityZh": "达拉斯",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Giovani Lo Celso",
@@ -1144,6 +1166,7 @@
     "num": 59,
     "group": "Group J",
     "round": "Matchday 17",
+    "mday": 3,
     "t1": "Algeria",
     "t1Zh": "阿尔及利亚",
     "t2": "Austria",
@@ -1153,6 +1176,7 @@
     "cityZh": "堪萨斯城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Marko Arnautovic",
@@ -1239,6 +1263,7 @@
     "num": 54,
     "group": "Group I",
     "round": "Matchday 16",
+    "mday": 3,
     "t1": "Senegal",
     "t1Zh": "塞内加尔",
     "t2": "Iraq",
@@ -1248,6 +1273,7 @@
     "cityZh": "多伦多",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Habib Diarra",
@@ -1321,6 +1347,7 @@
     "num": 53,
     "group": "Group I",
     "round": "Matchday 16",
+    "mday": 3,
     "t1": "Norway",
     "t1Zh": "挪威",
     "t2": "France",
@@ -1330,6 +1357,7 @@
     "cityZh": "波士顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Ousmane Dembele",
@@ -1403,6 +1431,7 @@
     "num": 48,
     "group": "Group H",
     "round": "Matchday 16",
+    "mday": 3,
     "t1": "Uruguay",
     "t1Zh": "乌拉圭",
     "t2": "Spain",
@@ -1412,6 +1441,7 @@
     "cityZh": "瓜达拉哈拉",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Álex Baena",
@@ -1433,6 +1463,7 @@
     "num": 42,
     "group": "Group G",
     "round": "Matchday 16",
+    "mday": 3,
     "t1": "New Zealand",
     "t1Zh": "新西兰",
     "t2": "Belgium",
@@ -1442,6 +1473,7 @@
     "cityZh": "温哥华",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Leandro Trossard",
@@ -1528,6 +1560,7 @@
     "num": 41,
     "group": "Group G",
     "round": "Matchday 16",
+    "mday": 3,
     "t1": "Egypt",
     "t1Zh": "埃及",
     "t2": "Iran",
@@ -1537,6 +1570,7 @@
     "cityZh": "西雅图",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Mahmoud M. Saber",
@@ -1571,6 +1605,7 @@
     "num": 36,
     "group": "Group F",
     "round": "Matchday 15",
+    "mday": 3,
     "t1": "Tunisia",
     "t1Zh": "突尼斯",
     "t2": "Netherlands",
@@ -1580,6 +1615,7 @@
     "cityZh": "堪萨斯城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Ellyes Skhiri",
@@ -1640,6 +1676,7 @@
     "num": 35,
     "group": "Group F",
     "round": "Matchday 15",
+    "mday": 3,
     "t1": "Japan",
     "t1Zh": "日本",
     "t2": "Sweden",
@@ -1649,6 +1686,7 @@
     "cityZh": "达拉斯",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Daizen Maeda",
@@ -1683,6 +1721,7 @@
     "num": 30,
     "group": "Group E",
     "round": "Matchday 15",
+    "mday": 3,
     "t1": "Ecuador",
     "t1Zh": "厄瓜多尔",
     "t2": "Germany",
@@ -1692,6 +1731,7 @@
     "cityZh": "纽约",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Leroy Sane",
@@ -1739,6 +1779,7 @@
     "num": 29,
     "group": "Group E",
     "round": "Matchday 15",
+    "mday": 3,
     "t1": "Curaçao",
     "t1Zh": "库拉索",
     "t2": "Ivory Coast",
@@ -1748,6 +1789,7 @@
     "cityZh": "费城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Nicolas Pepe",
@@ -1782,6 +1824,7 @@
     "num": 23,
     "group": "Group D",
     "round": "Matchday 15",
+    "mday": 3,
     "t1": "Türkiye",
     "t1Zh": "土耳其",
     "t2": "USA",
@@ -1791,6 +1834,7 @@
     "cityZh": "洛杉矶",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Auston Trusty",
@@ -1864,6 +1908,7 @@
     "num": 18,
     "group": "Group C",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "Morocco",
     "t1Zh": "摩洛哥",
     "t2": "Haiti",
@@ -1873,15 +1918,16 @@
     "cityZh": "亚特兰大",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
-      "player": "Yassine Bounou",
-      "nameZh": "Yassine Bounou",
+      "player": "Yassine Bono",
+      "nameZh": "亚辛·博诺",
       "nation": "Morocco",
       "nationZh": "摩洛哥",
-      "clubZh": "",
-      "club": "",
-      "league": "",
+      "clubZh": "利雅得新月",
+      "club": "Al Hilal SC",
+      "league": "沙特联",
       "minute": "10'",
       "min": 10,
       "pen": false,
@@ -1959,6 +2005,7 @@
     "num": 17,
     "group": "Group C",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "Scotland",
     "t1Zh": "苏格兰",
     "t2": "Brazil",
@@ -1968,6 +2015,7 @@
     "cityZh": "迈阿密",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Vinicius Junior",
@@ -2015,6 +2063,7 @@
     "num": 12,
     "group": "Group B",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "Bosnia & Herzegovina",
     "t1Zh": "波黑",
     "t2": "Qatar",
@@ -2024,6 +2073,7 @@
     "cityZh": "西雅图",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Kerim Alajbegovic",
@@ -2084,6 +2134,7 @@
     "num": 11,
     "group": "Group B",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "Switzerland",
     "t1Zh": "瑞士",
     "t2": "Canada",
@@ -2093,6 +2144,7 @@
     "cityZh": "温哥华",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Ruben Vargas",
@@ -2140,6 +2192,7 @@
     "num": 6,
     "group": "Group A",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "South Africa",
     "t1Zh": "南非",
     "t2": "South Korea",
@@ -2149,6 +2202,7 @@
     "cityZh": "蒙特雷",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Thapelo Maseko",
@@ -2170,6 +2224,7 @@
     "num": 5,
     "group": "Group A",
     "round": "Matchday 14",
+    "mday": 3,
     "t1": "Czechia",
     "t1Zh": "捷克",
     "t2": "Mexico",
@@ -2179,6 +2234,7 @@
     "cityZh": "墨西哥城",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Mateo Chavez",
@@ -2226,6 +2282,7 @@
     "num": 70,
     "group": "Group L",
     "round": "Matchday 13",
+    "mday": 2,
     "t1": "Panama",
     "t1Zh": "巴拿马",
     "t2": "Croatia",
@@ -2235,6 +2292,7 @@
     "cityZh": "多伦多",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Ante Budimir",
@@ -2256,6 +2314,7 @@
     "num": 64,
     "group": "Group K",
     "round": "Matchday 13",
+    "mday": 2,
     "t1": "Colombia",
     "t1Zh": "哥伦比亚",
     "t2": "DR Congo",
@@ -2265,6 +2324,7 @@
     "cityZh": "瓜达拉哈拉",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Daniel Munoz",
@@ -2286,6 +2346,7 @@
     "num": 63,
     "group": "Group K",
     "round": "Matchday 13",
+    "mday": 2,
     "t1": "Portugal",
     "t1Zh": "葡萄牙",
     "t2": "Uzbekistan",
@@ -2295,6 +2356,7 @@
     "cityZh": "休斯顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Cristiano Ronaldo",
@@ -2368,6 +2430,7 @@
     "num": 58,
     "group": "Group J",
     "round": "Matchday 12",
+    "mday": 2,
     "t1": "Jordan",
     "t1Zh": "约旦",
     "t2": "Algeria",
@@ -2377,6 +2440,7 @@
     "cityZh": "旧金山湾区",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Nizar Al-Rashdan",
@@ -2424,6 +2488,7 @@
     "num": 57,
     "group": "Group J",
     "round": "Matchday 12",
+    "mday": 2,
     "t1": "Argentina",
     "t1Zh": "阿根廷",
     "t2": "Austria",
@@ -2433,6 +2498,7 @@
     "cityZh": "达拉斯",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Lionel Messi",
@@ -2467,6 +2533,7 @@
     "num": 52,
     "group": "Group I",
     "round": "Matchday 12",
+    "mday": 2,
     "t1": "Norway",
     "t1Zh": "挪威",
     "t2": "Senegal",
@@ -2476,6 +2543,7 @@
     "cityZh": "纽约",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Marcus Holmgren Pedersen",
@@ -2549,6 +2617,7 @@
     "num": 51,
     "group": "Group I",
     "round": "Matchday 12",
+    "mday": 2,
     "t1": "France",
     "t1Zh": "法国",
     "t2": "Iraq",
@@ -2558,6 +2627,7 @@
     "cityZh": "费城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Kylian Mbappe",
@@ -2605,6 +2675,7 @@
     "num": 46,
     "group": "Group H",
     "round": "Matchday 11",
+    "mday": 2,
     "t1": "Uruguay",
     "t1Zh": "乌拉圭",
     "t2": "Cape Verde",
@@ -2614,6 +2685,7 @@
     "cityZh": "迈阿密",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Kevin Pina",
@@ -2674,6 +2746,7 @@
     "num": 45,
     "group": "Group H",
     "round": "Matchday 11",
+    "mday": 2,
     "t1": "Spain",
     "t1Zh": "西班牙",
     "t2": "Saudi Arabia",
@@ -2683,6 +2756,7 @@
     "cityZh": "亚特兰大",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Lamine Yamal",
@@ -2743,6 +2817,7 @@
     "num": 40,
     "group": "Group G",
     "round": "Matchday 11",
+    "mday": 2,
     "t1": "New Zealand",
     "t1Zh": "新西兰",
     "t2": "Egypt",
@@ -2752,6 +2827,7 @@
     "cityZh": "温哥华",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Finn Surman",
@@ -2812,6 +2888,7 @@
     "num": 34,
     "group": "Group F",
     "round": "Matchday 10",
+    "mday": 2,
     "t1": "Tunisia",
     "t1Zh": "突尼斯",
     "t2": "Japan",
@@ -2821,6 +2898,7 @@
     "cityZh": "蒙特雷",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Daichi Kamada",
@@ -2881,6 +2959,7 @@
     "num": 33,
     "group": "Group F",
     "round": "Matchday 10",
+    "mday": 2,
     "t1": "Netherlands",
     "t1Zh": "荷兰",
     "t2": "Sweden",
@@ -2890,6 +2969,7 @@
     "cityZh": "休斯顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Brian Brobbey",
@@ -2976,6 +3056,7 @@
     "num": 27,
     "group": "Group E",
     "round": "Matchday 10",
+    "mday": 2,
     "t1": "Germany",
     "t1Zh": "德国",
     "t2": "Ivory Coast",
@@ -2985,6 +3066,7 @@
     "cityZh": "多伦多",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Franck Kessie",
@@ -3032,6 +3114,7 @@
     "num": 22,
     "group": "Group D",
     "round": "Matchday 9",
+    "mday": 2,
     "t1": "Türkiye",
     "t1Zh": "土耳其",
     "t2": "Paraguay",
@@ -3041,6 +3124,7 @@
     "cityZh": "旧金山湾区",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Matias Galarza",
@@ -3062,6 +3146,7 @@
     "num": 21,
     "group": "Group D",
     "round": "Matchday 9",
+    "mday": 2,
     "t1": "USA",
     "t1Zh": "美国",
     "t2": "Australia",
@@ -3071,6 +3156,7 @@
     "cityZh": "西雅图",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Cameron Burgess",
@@ -3105,6 +3191,7 @@
     "num": 16,
     "group": "Group C",
     "round": "Matchday 9",
+    "mday": 2,
     "t1": "Brazil",
     "t1Zh": "巴西",
     "t2": "Haiti",
@@ -3114,6 +3201,7 @@
     "cityZh": "费城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Matheus Cunha",
@@ -3161,6 +3249,7 @@
     "num": 15,
     "group": "Group C",
     "round": "Matchday 9",
+    "mday": 2,
     "t1": "Scotland",
     "t1Zh": "苏格兰",
     "t2": "Morocco",
@@ -3170,6 +3259,7 @@
     "cityZh": "波士顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Ismael Saibari",
@@ -3191,6 +3281,7 @@
     "num": 10,
     "group": "Group B",
     "round": "Matchday 8",
+    "mday": 2,
     "t1": "Canada",
     "t1Zh": "加拿大",
     "t2": "Qatar",
@@ -3200,6 +3291,7 @@
     "cityZh": "温哥华",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Cyle Larin",
@@ -3286,6 +3378,7 @@
     "num": 9,
     "group": "Group B",
     "round": "Matchday 8",
+    "mday": 2,
     "t1": "Switzerland",
     "t1Zh": "瑞士",
     "t2": "Bosnia & Herzegovina",
@@ -3295,6 +3388,7 @@
     "cityZh": "洛杉矶",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Johan Manzambi",
@@ -3368,6 +3462,7 @@
     "num": 4,
     "group": "Group A",
     "round": "Matchday 8",
+    "mday": 2,
     "t1": "Mexico",
     "t1Zh": "墨西哥",
     "t2": "South Korea",
@@ -3377,6 +3472,7 @@
     "cityZh": "瓜达拉哈拉",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Luis Romo",
@@ -3398,6 +3494,7 @@
     "num": 3,
     "group": "Group A",
     "round": "Matchday 8",
+    "mday": 2,
     "t1": "Czechia",
     "t1Zh": "捷克",
     "t2": "South Africa",
@@ -3407,6 +3504,7 @@
     "cityZh": "亚特兰大",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Michal Sadilek",
@@ -3441,6 +3539,7 @@
     "num": 68,
     "group": "Group L",
     "round": "Matchday 7",
+    "mday": 1,
     "t1": "Ghana",
     "t1Zh": "加纳",
     "t2": "Panama",
@@ -3450,6 +3549,7 @@
     "cityZh": "多伦多",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Caleb Yirenkyi",
@@ -3471,6 +3571,7 @@
     "num": 67,
     "group": "Group L",
     "round": "Matchday 7",
+    "mday": 1,
     "t1": "England",
     "t1Zh": "英格兰",
     "t2": "Croatia",
@@ -3480,6 +3581,7 @@
     "cityZh": "达拉斯",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Harry Kane",
@@ -3566,6 +3668,7 @@
     "num": 62,
     "group": "Group K",
     "round": "Matchday 7",
+    "mday": 1,
     "t1": "Uzbekistan",
     "t1Zh": "乌兹别克斯坦",
     "t2": "Colombia",
@@ -3575,6 +3678,7 @@
     "cityZh": "墨西哥城",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Daniel Munoz",
@@ -3635,6 +3739,7 @@
     "num": 61,
     "group": "Group K",
     "round": "Matchday 7",
+    "mday": 1,
     "t1": "Portugal",
     "t1Zh": "葡萄牙",
     "t2": "DR Congo",
@@ -3644,6 +3749,7 @@
     "cityZh": "休斯顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Joao Neves",
@@ -3678,6 +3784,7 @@
     "num": 56,
     "group": "Group J",
     "round": "Matchday 6",
+    "mday": 1,
     "t1": "Austria",
     "t1Zh": "奥地利",
     "t2": "Jordan",
@@ -3687,6 +3794,7 @@
     "cityZh": "旧金山湾区",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Romano Schmid",
@@ -3747,6 +3855,7 @@
     "num": 55,
     "group": "Group J",
     "round": "Matchday 6",
+    "mday": 1,
     "t1": "Argentina",
     "t1Zh": "阿根廷",
     "t2": "Algeria",
@@ -3756,6 +3865,7 @@
     "cityZh": "堪萨斯城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Lionel Messi",
@@ -3803,6 +3913,7 @@
     "num": 50,
     "group": "Group I",
     "round": "Matchday 6",
+    "mday": 1,
     "t1": "Iraq",
     "t1Zh": "伊拉克",
     "t2": "Norway",
@@ -3812,6 +3923,7 @@
     "cityZh": "波士顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Erling Haaland",
@@ -3885,6 +3997,7 @@
     "num": 49,
     "group": "Group I",
     "round": "Matchday 6",
+    "mday": 1,
     "t1": "France",
     "t1Zh": "法国",
     "t2": "Senegal",
@@ -3894,6 +4007,7 @@
     "cityZh": "纽约",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Kylian Mbappe",
@@ -3954,6 +4068,7 @@
     "num": 44,
     "group": "Group H",
     "round": "Matchday 5",
+    "mday": 1,
     "t1": "Saudi Arabia",
     "t1Zh": "沙特阿拉伯",
     "t2": "Uruguay",
@@ -3963,6 +4078,7 @@
     "cityZh": "迈阿密",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Abdulelah Al-Amri",
@@ -3997,6 +4113,7 @@
     "num": 38,
     "group": "Group G",
     "round": "Matchday 5",
+    "mday": 1,
     "t1": "Iran",
     "t1Zh": "伊朗",
     "t2": "New Zealand",
@@ -4006,6 +4123,7 @@
     "cityZh": "洛杉矶",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Elijah Just",
@@ -4066,6 +4184,7 @@
     "num": 37,
     "group": "Group G",
     "round": "Matchday 5",
+    "mday": 1,
     "t1": "Belgium",
     "t1Zh": "比利时",
     "t2": "Egypt",
@@ -4075,6 +4194,7 @@
     "cityZh": "西雅图",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Emam Ashour",
@@ -4109,6 +4229,7 @@
     "num": 32,
     "group": "Group F",
     "round": "Matchday 4",
+    "mday": 1,
     "t1": "Sweden",
     "t1Zh": "瑞典",
     "t2": "Tunisia",
@@ -4118,6 +4239,7 @@
     "cityZh": "蒙特雷",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Yasin Ayari",
@@ -4204,6 +4326,7 @@
     "num": 31,
     "group": "Group F",
     "round": "Matchday 4",
+    "mday": 1,
     "t1": "Netherlands",
     "t1Zh": "荷兰",
     "t2": "Japan",
@@ -4213,6 +4336,7 @@
     "cityZh": "达拉斯",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Virgil van Dijk",
@@ -4273,6 +4397,7 @@
     "num": 26,
     "group": "Group E",
     "round": "Matchday 4",
+    "mday": 1,
     "t1": "Ivory Coast",
     "t1Zh": "科特迪瓦",
     "t2": "Ecuador",
@@ -4282,6 +4407,7 @@
     "cityZh": "费城",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Amad Diallo",
@@ -4303,6 +4429,7 @@
     "num": 25,
     "group": "Group E",
     "round": "Matchday 4",
+    "mday": 1,
     "t1": "Germany",
     "t1Zh": "德国",
     "t2": "Curaçao",
@@ -4312,6 +4439,7 @@
     "cityZh": "休斯顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Felix Nmecha",
@@ -4424,6 +4552,7 @@
     "num": 20,
     "group": "Group D",
     "round": "Matchday 3",
+    "mday": 1,
     "t1": "Australia",
     "t1Zh": "澳大利亚",
     "t2": "Türkiye",
@@ -4433,6 +4562,7 @@
     "cityZh": "温哥华",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Nestory Irankunda",
@@ -4467,6 +4597,7 @@
     "num": 14,
     "group": "Group C",
     "round": "Matchday 3",
+    "mday": 1,
     "t1": "Haiti",
     "t1Zh": "海地",
     "t2": "Scotland",
@@ -4476,6 +4607,7 @@
     "cityZh": "波士顿",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "John McGinn",
@@ -4497,6 +4629,7 @@
     "num": 13,
     "group": "Group C",
     "round": "Matchday 3",
+    "mday": 1,
     "t1": "Brazil",
     "t1Zh": "巴西",
     "t2": "Morocco",
@@ -4506,6 +4639,7 @@
     "cityZh": "纽约",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Ismael Saibari",
@@ -4540,6 +4674,7 @@
     "num": 8,
     "group": "Group B",
     "round": "Matchday 3",
+    "mday": 1,
     "t1": "Qatar",
     "t1Zh": "卡塔尔",
     "t2": "Switzerland",
@@ -4549,6 +4684,7 @@
     "cityZh": "旧金山湾区",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Breel Embolo",
@@ -4583,6 +4719,7 @@
     "num": 19,
     "group": "Group D",
     "round": "Matchday 2",
+    "mday": 1,
     "t1": "USA",
     "t1Zh": "美国",
     "t2": "Paraguay",
@@ -4592,6 +4729,7 @@
     "cityZh": "洛杉矶",
     "hostFlag": "🇺🇸",
     "hostZh": "美国",
+    "shootout": null,
     "goals": [
      {
       "player": "Damian Bobadilla",
@@ -4665,6 +4803,7 @@
     "num": 7,
     "group": "Group B",
     "round": "Matchday 2",
+    "mday": 1,
     "t1": "Canada",
     "t1Zh": "加拿大",
     "t2": "Bosnia & Herzegovina",
@@ -4674,6 +4813,7 @@
     "cityZh": "多伦多",
     "hostFlag": "🇨🇦",
     "hostZh": "加拿大",
+    "shootout": null,
     "goals": [
      {
       "player": "Jovo Lukic",
@@ -4708,6 +4848,7 @@
     "num": 2,
     "group": "Group A",
     "round": "Matchday 1",
+    "mday": 1,
     "t1": "South Korea",
     "t1Zh": "韩国",
     "t2": "Czechia",
@@ -4717,6 +4858,7 @@
     "cityZh": "瓜达拉哈拉",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Ladislav Krejci",
@@ -4764,6 +4906,7 @@
     "num": 1,
     "group": "Group A",
     "round": "Matchday 1",
+    "mday": 1,
     "t1": "Mexico",
     "t1Zh": "墨西哥",
     "t2": "South Africa",
@@ -4773,6 +4916,7 @@
     "cityZh": "墨西哥城",
     "hostFlag": "🇲🇽",
     "hostZh": "墨西哥",
+    "shootout": null,
     "goals": [
      {
       "player": "Julian Quinones",
@@ -6447,8 +6591,8 @@
    "id": "SEN-13"
   },
   {
-   "player": "Issa",
-   "nameZh": "伊萨",
+   "player": "Issa Diop",
+   "nameZh": "迪奥普",
    "num": 14,
    "pos": "DF",
    "posZh": "后卫",
@@ -8834,8 +8978,8 @@
    "id": "SEN-13"
   },
   {
-   "player": "Issa",
-   "nameZh": "伊萨",
+   "player": "Issa Diop",
+   "nameZh": "迪奥普",
    "num": 14,
    "pos": "DF",
    "posZh": "后卫",

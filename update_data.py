@@ -310,6 +310,16 @@ def main():
     CITY_ZH={"Atlanta":"亚特兰大","Boston":"波士顿","Dallas":"达拉斯","Guadalajara":"瓜达拉哈拉","Houston":"休斯顿",
         "Kansas City":"堪萨斯城","Los Angeles":"洛杉矶","Mexico City":"墨西哥城","Miami":"迈阿密","Monterrey":"蒙特雷",
         "New York":"纽约","Philadelphia":"费城","San Francisco Bay Area":"旧金山湾区","Seattle":"西雅图","Toronto":"多伦多","Vancouver":"温哥华"}
+    # 小组内真实轮次：每组 6 场、每轮 2 场，按(日期,编号)排序后 index//2+1 得 1/2/3
+    # （不能按"不同日期"算——同一轮两场可能分在两天）
+    grp_matches={}
+    for mt in all_matches:
+        g=mt.get("group")
+        if g: grp_matches.setdefault(g,[]).append(mt)
+    grp_round={}
+    for g,ms in grp_matches.items():
+        for idx,mt in enumerate(sorted(ms,key=lambda x:(x.get("date",""), x.get("num") or 0))):
+            grp_round[(g,mt.get("date"),mt.get("team1"),mt.get("team2"))]=idx//2+1
     goalFeed=[]
     for idx,mt in enumerate(all_matches):
         ft=mt.get("score",{}).get("ft")
@@ -331,8 +341,10 @@ def main():
         grd=clean_ground(mt.get("ground","")); hf,hz=HOSTINFO.get(HOST.get(grd,""),("",""))
         goalFeed.append({"date":mt.get("date",""),"num":mt.get("num") or (idx+1),
             "group":mt.get("group","") or "","round":mt.get("round","") or "",
+            "mday":(grp_round.get((mt.get("group"),mt.get("date"),mt.get("team1"),mt.get("team2"))) if mt.get("group") else None),
             "t1":canon_nat(t1),"t1Zh":nat_zh(t1),"t2":canon_nat(t2),"t2Zh":nat_zh(t2),
-            "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,"goals":glist})
+            "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,
+            "shootout":(mt.get("score",{}).get("p") or None),"goals":glist})
     goalFeed.sort(key=lambda m:(m["date"],m["num"]), reverse=True)
     funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"ownGoals":ownGoals,
               "goalFeed":goalFeed,
