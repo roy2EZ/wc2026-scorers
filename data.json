@@ -1,17 +1,17 @@
 {
  "version": "v1.9.1",
- "updated": "2026-06-30T19:03:43+00:00",
+ "updated": "2026-06-30T19:11:39+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 149,
- "totalGoals": 211,
+ "count": 150,
+ "totalGoals": 214,
  "totalPens": 8,
- "matchesWithGoals": 69,
+ "matchesWithGoals": 70,
  "schedule": {
   "total": 104,
-  "played": 76,
+  "played": 77,
   "stageEn": "Round of 32",
   "stageZh": "32强",
-  "lastDate": "2026-06-29",
+  "lastDate": "2026-06-30",
   "nextDate": "2026-06-30"
  },
  "funstats": {
@@ -384,9 +384,9 @@
   "timeBuckets": {
    "1-5": 9,
    "6-22": 37,
-   "23-45": 51,
+   "23-45": 52,
    "46-68": 59,
-   "69-90": 42,
+   "69-90": 44,
    "90+": 25,
    "ET": 0
   },
@@ -430,7 +430,7 @@
    3,
    0,
    2,
-   3,
+   4,
    1,
    1,
    4,
@@ -465,7 +465,7 @@
    1,
    1,
    2,
-   1,
+   2,
    2,
    5,
    1,
@@ -477,7 +477,7 @@
    3,
    3,
    1,
-   1,
+   2,
    1,
    2,
    2,
@@ -730,6 +730,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-06-30",
+    "num": 78,
+    "group": "",
+    "round": "Round of 32",
+    "mday": null,
+    "t1": "Ivory Coast",
+    "t1Zh": "科特迪瓦",
+    "t2": "Norway",
+    "t2Zh": "挪威",
+    "ft": "1-2",
+    "ground": "Dallas",
+    "cityZh": "达拉斯",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Antonio Nusa",
+      "nameZh": "安东尼奥·努萨",
+      "nation": "Norway",
+      "nationZh": "挪威",
+      "clubZh": "莱比锡红牛",
+      "club": "RB Leipzig",
+      "league": "德甲",
+      "minute": "39'",
+      "min": 39,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Amad Diallo",
+      "nameZh": "阿马德",
+      "nation": "Ivory Coast",
+      "nationZh": "科特迪瓦",
+      "clubZh": "曼联",
+      "club": "Manchester United",
+      "league": "英超",
+      "minute": "74'",
+      "min": 74,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Erling Haaland",
+      "nameZh": "哈兰德",
+      "nation": "Norway",
+      "nationZh": "挪威",
+      "clubZh": "曼城",
+      "club": "Manchester City FC",
+      "league": "英超",
+      "minute": "86'",
+      "min": 86,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-06-29",
     "num": 76,
@@ -5318,7 +5376,7 @@
    "posZh": "前锋",
    "nation": "Norway",
    "nationZh": "挪威",
-   "goals": 4,
+   "goals": 5,
    "pens": 0,
    "club": "Manchester City FC",
    "clubZh": "曼城",
@@ -5565,6 +5623,22 @@
    "league": "英超",
    "club_id": "newcastle-united",
    "id": "COD-20"
+  },
+  {
+   "player": "Amad Diallo",
+   "nameZh": "阿马德",
+   "num": 15,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Ivory Coast",
+   "nationZh": "科特迪瓦",
+   "goals": 2,
+   "pens": 0,
+   "club": "Manchester United",
+   "clubZh": "曼联",
+   "league": "英超",
+   "club_id": "manchester-united",
+   "id": "CIV-15"
   },
   {
    "player": "Anthony Elanga",
@@ -6047,22 +6121,6 @@
    "id": "MEX-8"
   },
   {
-   "player": "Amad Diallo",
-   "nameZh": "阿马德",
-   "num": 15,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Ivory Coast",
-   "nationZh": "科特迪瓦",
-   "goals": 1,
-   "pens": 0,
-   "club": "Manchester United",
-   "clubZh": "曼联",
-   "league": "英超",
-   "club_id": "manchester-united",
-   "id": "CIV-15"
-  },
-  {
    "player": "Amine Gouiri",
    "nameZh": "古伊里",
    "num": 9,
@@ -6093,6 +6151,22 @@
    "league": "西甲",
    "club_id": "osasuna",
    "id": "CRO-11"
+  },
+  {
+   "player": "Antonio Nusa",
+   "nameZh": "安东尼奥·努萨",
+   "num": 20,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "pens": 0,
+   "club": "RB Leipzig",
+   "clubZh": "莱比锡红牛",
+   "league": "德甲",
+   "club_id": "rb-leipzig",
+   "id": "NOR-20"
   },
   {
    "player": "Arda Güler",
@@ -7705,7 +7779,7 @@
    "posZh": "前锋",
    "nation": "Norway",
    "nationZh": "挪威",
-   "goals": 4,
+   "goals": 5,
    "pens": 0,
    "club": "Manchester City FC",
    "clubZh": "曼城",
@@ -7952,6 +8026,22 @@
    "league": "英超",
    "club_id": "newcastle-united",
    "id": "COD-20"
+  },
+  {
+   "player": "Amad Diallo",
+   "nameZh": "阿马德",
+   "num": 15,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Ivory Coast",
+   "nationZh": "科特迪瓦",
+   "goals": 2,
+   "pens": 0,
+   "club": "Manchester United",
+   "clubZh": "曼联",
+   "league": "英超",
+   "club_id": "manchester-united",
+   "id": "CIV-15"
   },
   {
    "player": "Anthony Elanga",
@@ -8434,22 +8524,6 @@
    "id": "MEX-8"
   },
   {
-   "player": "Amad Diallo",
-   "nameZh": "阿马德",
-   "num": 15,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Ivory Coast",
-   "nationZh": "科特迪瓦",
-   "goals": 1,
-   "pens": 0,
-   "club": "Manchester United",
-   "clubZh": "曼联",
-   "league": "英超",
-   "club_id": "manchester-united",
-   "id": "CIV-15"
-  },
-  {
    "player": "Amine Gouiri",
    "nameZh": "古伊里",
    "num": 9,
@@ -8480,6 +8554,22 @@
    "league": "西甲",
    "club_id": "osasuna",
    "id": "CRO-11"
+  },
+  {
+   "player": "Antonio Nusa",
+   "nameZh": "安东尼奥·努萨",
+   "num": 20,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "pens": 0,
+   "club": "RB Leipzig",
+   "clubZh": "莱比锡红牛",
+   "league": "德甲",
+   "club_id": "rb-leipzig",
+   "id": "NOR-20"
   },
   {
    "player": "Arda Güler",
@@ -11904,22 +11994,6 @@
    "league": "英超",
    "club_id": "fulham-fc",
    "id": "USA-5"
-  },
-  {
-   "player": "Antonio Nusa",
-   "nameZh": "安东尼奥·努萨",
-   "num": 20,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 0,
-   "pens": 0,
-   "club": "RB Leipzig",
-   "clubZh": "莱比锡红牛",
-   "league": "德甲",
-   "club_id": "rb-leipzig",
-   "id": "NOR-20"
   },
   {
    "player": "Antonio Rüdiger",
