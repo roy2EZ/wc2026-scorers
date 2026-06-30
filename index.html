@@ -158,6 +158,12 @@
   .mgcard .mgmeta{font-size:10.5px;color:#8a93ab;margin-top:6px}
 
   /* 进球时间分布 */
+  .minutecard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px 12px;margin-bottom:16px;min-width:0;overflow:hidden}
+  .minutehd{font-size:15px;font-weight:800;color:#cdd4e6}
+  .minutehd .mhd-en{font-size:11.5px;color:#7AA7FF;font-weight:600;margin-left:5px}
+  .minutewrap{position:relative;width:100%;height:200px;margin-top:8px}
+  .minutewrap canvas{max-width:100%}
+  .minutenote{font-size:10.5px;color:#8a93ab;margin-top:8px}
   .timewrap{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;align-items:stretch}
   .timebars{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;min-width:0}
   .tbrow{display:flex;align-items:center;gap:10px;margin-bottom:13px}
@@ -181,6 +187,56 @@
   .excard .exsub{font-size:12px;color:#9aa3bd;margin-top:2px}
 
   /* 进球大战 */
+  .feed{display:flex;flex-direction:column;gap:10px;max-width:660px}
+  .feedday{font-size:12.5px;font-weight:800;color:#E7B23B;margin:6px 0 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .feedday .fdtag{font-size:10.5px;font-weight:600;color:#8a93ab}
+  .feedday-btn{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-family:'Noto Sans SC';font-size:12.5px;font-weight:800;color:#E7B23B;background:rgba(231,178,59,.08);border:1px solid rgba(231,178,59,.25);border-radius:10px;padding:9px 13px;cursor:pointer}
+  .feedday-btn:hover{background:rgba(231,178,59,.15)}
+  .feedday-btn .fdarrow{font-size:10px}
+  .feedday-btn .fdcount{font-size:10.5px;font-weight:600;color:#8a93ab;margin-left:auto}
+  .feedday-btn .fdtag2{font-size:10px;font-weight:600;color:#8a93ab}
+  .feedmore{align-self:flex-start;font-family:'Noto Sans SC';font-size:12.5px;font-weight:700;color:#E7B23B;background:rgba(231,178,59,.1);border:1px solid rgba(231,178,59,.3);border-radius:999px;padding:7px 16px;cursor:pointer}
+  .feedmore:hover{background:rgba(231,178,59,.18)}
+  .feedday-body{display:flex;flex-direction:column;gap:10px;margin-top:2px}
+  .feedday-body[hidden]{display:none}
+  .fgrp{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .fgh{display:grid;grid-template-columns:118px minmax(0,1fr);align-items:center;gap:12px;padding:9px 13px;background:var(--bg2)}
+  .fgh-l{display:flex;flex-direction:column;line-height:1.3}
+  .fgh-l .fgnum{font-family:'Space Mono',monospace;font-weight:800;font-size:12px;color:#E7B23B;white-space:nowrap}
+  .fgh-l .fgstage{font-size:10px;color:#9aa3bd;font-weight:600;white-space:nowrap}
+  .fgh-l .fgloc{font-size:10px;color:#8a93ab;font-weight:600;margin-top:1px;line-height:1.25}
+  .fgh-c{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;min-width:0}
+  .fgh-c .fgteam:not(.r){justify-content:flex-end}
+  .fgh-c .fgteam.r{justify-content:flex-start}
+  .fgh-r{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;white-space:nowrap}
+  .fgh-r .fgh-host{font-size:10.5px;color:#8a93ab;font-weight:600}
+  .fgh-r .fgh-cz{font-size:9.5px;color:#6f7da0}
+  .fgteam{display:flex;align-items:center;gap:6px;min-width:0}
+  .fgteam .flag{font-size:18px;line-height:1}
+  .fgteam .tx{display:flex;flex-direction:column;line-height:1.12;min-width:0}
+  .fgteam .tx b{font-size:13px;color:#fff;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fgteam .tx i{font-style:normal;font-size:10px;color:#9aa3bd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fgteam.r .tx{text-align:right}
+  .fgs{font-family:'Space Mono',monospace;font-size:16px;font-weight:800}
+  .fgs .fgsc{color:#6f7da0;margin:0 2px}
+  .fgh-m{font-size:10.5px;color:#8a93ab;white-space:nowrap}
+  .feedrow{display:grid;grid-template-columns:40px 86px minmax(0,1fr);align-items:center;column-gap:12px;padding:7px 13px;border-top:1px solid rgba(39,48,75,.45)}
+  .feedrow .fmin{font-family:'Space Mono',monospace;font-weight:800;font-size:14px;color:#FFC53D;text-align:center;white-space:nowrap}
+  .feedrow.og .fmin{color:#9bb6e8}
+  .feedrow .fnat{display:flex;align-items:center;gap:5px;min-width:0}
+  .feedrow .fnat .flag{font-size:15px;line-height:1}
+  .feedrow .fnat .tx{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+  .feedrow .fnat .tx b{font-size:11.5px;color:#cfd6ea;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .feedrow .fnat .tx i{font-style:normal;font-size:9px;color:#8a93ab;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .feedrow .fpl{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  .feedrow .fpl .fpz{display:flex;align-items:center;gap:6px;min-width:0}
+  .feedrow .fpl .fpz b{font-size:13.5px;color:#fff;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .feedrow .fpl i{font-style:normal;font-size:10.5px;color:#9aa3bd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .feedrow .fpl .fclub{font-size:10.5px;color:#aeb7ce;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+  .feedrow .fpl .fcen{color:#8a93ab}
+  .feedrow .fmark{font-size:9.5px;font-weight:700;padding:1px 5px;border-radius:5px;white-space:nowrap;flex:none}
+  .feedrow .fmark.pen{color:#FFB02E;background:rgba(255,176,46,.14)}
+  .feedrow .fmark.ogm{color:#9bb6e8;background:rgba(110,167,255,.12)}
   .fests{display:flex;flex-direction:column;gap:12px;max-width:560px}
   .oggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
   .ogcard{background:var(--card);border:1px solid var(--line);border-left:5px solid #8794ad;border-radius:12px;padding:12px 14px;min-width:0;overflow:hidden}
@@ -361,6 +417,13 @@
 
 <section>
   <div class="wrap">
+    <div class="shead"><h2>最新<b>进球</b><span class="enh">Latest Goals</span></h2></div>
+    <div class="feed" id="goalFeed"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2>
       <div class="boardctl">
         <span class="boardlf">按进球数 By goals</span>
@@ -508,6 +571,11 @@
   <div class="wrap">
     <div class="shead"><h2>进球<b>时间分布</b><span class="enh">Goal Timing</span></h2></div>
     <p class="subnote">全部进球按比赛阶段分布（含乌龙球），并标出全届最早与最晚的进球。<span style="display:block;margin-top:3px;color:#8a93ab">All goals by match phase (own goals included), plus the earliest and latest goal of the tournament.</span></p>
+    <div class="minutecard">
+      <div class="minutehd">每分钟进球 <span class="mhd-en">By Minute</span></div>
+      <div class="minutewrap"><canvas id="minuteChart"></canvas></div>
+      <div class="minutenote">横轴为实际累计分钟，含补时与加时（上半场补时计入 45'）<span style="display:block;margin-top:2px">By actual elapsed minute, incl. stoppage &amp; extra time</span></div>
+    </div>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
       <div class="extremes">
@@ -529,14 +597,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.8.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.9.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.8.0", BUILD_TIME="2026-06-29 16:00";
+const APP_VERSION="v1.9.0", BUILD_TIME="2026-06-30 12:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -560,7 +628,7 @@ const CLUBABBR={"Manchester City":"Man City","Manchester United":"Man Utd","Brig
 const cabbr=n=>{ if(CLUBABBR[n]) return CLUBABBR[n]; const s=(n||"").replace(/\s+FC$/,"").trim(); return CLUBABBR[s]||s; };
 const LEN={"美职联": "MLS", "意甲": "Serie A", "西甲": "La Liga", "英超": "EPL", "德甲": "Bundesliga", "法甲": "Ligue 1", "法乙": "Ligue 2", "英冠": "Championship", "荷甲": "Eredivisie", "葡超": "Primeira Liga", "苏超": "SPFL", "沙特职业联赛": "SPL", "卡塔尔星级联赛": "QSL", "土超": "Süper Lig", "埃及超": "EPL (Egypt)", "俄超": "RPL", "伊朗波斯湾联赛": "PGPL", "塞尔维亚超": "SuperLiga", "阿甲": "Primera (ARG)", "捷克甲级": "Czech 1.", "丹麦超": "Superliga", "罗马尼亚甲级": "Liga I", "斯洛文尼亚甲级": "PrvaLiga", "巴西甲级": "Série A (BRA)", "瑞士超": "Swiss SL", "比利时甲级": "Pro League", "以色列超": "Israeli PL", "伊拉克星级联赛": "Iraqi SL", "奥地利甲级": "Austrian BL", "匈牙利甲级": "NB I", "墨超": "Liga MX", "塞浦路斯甲级": "Cypriot 1.", "阿联酋联赛": "UAE PL", "南非超": "PSL", "澳超": "A-League", "约旦联赛": "JPL", "希腊超": "Super League", "乌兹别克斯坦超": "Uzbek SL", "韩K联": "K League", "挪威超": "Eliteserien", "突尼斯联赛": "Ligue 1 (TUN)", "日职联": "J1 League", "克罗地亚甲级": "HNL", "波兰甲级": "Ekstraklasa", "厄瓜多尔甲级": "LigaPro", "瑞典超": "Allsvenskan", "阿尔及利亚联赛": "Ligue 1 (ALG)", "摩洛哥联赛": "Botola Pro", "巴拉圭甲级": "Primera (PAR)", "斯洛伐克甲级": "Slovak 1.", "保加利亚甲级": "Parva Liga", "哥斯达黎加甲级": "Liga FPD", "马来西亚超": "MSL", "哥伦比亚甲级": "Primera A (COL)", "中超": "CSL", "乌拉圭甲级": "Primera (URU)", "其他联赛": "Other"};
 const lab=n=>LEN[n]?[n,LEN[n]]:n;
-const LEAGUEFLAG={"美职联":"🇺🇸","意甲":"🇮🇹","西甲":"🇪🇸","英超":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","德甲":"🇩🇪","法甲":"🇫🇷","法乙":"🇫🇷","英冠":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","荷甲":"🇳🇱","葡超":"🇵🇹","苏超":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","沙特职业联赛":"🇸🇦","卡塔尔星级联赛":"🇶🇦","土超":"🇹🇷","埃及超":"🇪🇬","俄超":"🇷🇺","伊朗波斯湾联赛":"🇮🇷","塞尔维亚超":"🇷🇸","阿甲":"🇦🇷","捷克甲级":"🇨🇿","丹麦超":"🇩🇰","罗马尼亚甲级":"🇷🇴","斯洛文尼亚甲级":"🇸🇮","巴西甲级":"🇧🇷","瑞士超":"🇨🇭","比利时甲级":"🇧🇪","以色列超":"🇮🇱","伊拉克星级联赛":"🇮🇶","奥地利甲级":"🇦🇹","匈牙利甲级":"🇭🇺","墨超":"🇲🇽","塞浦路斯甲级":"🇨🇾","阿联酋联赛":"🇦🇪","南非超":"🇿🇦","摩洛哥联赛":"🇲🇦","突尼斯联赛":"🇹🇳","阿尔及利亚联赛":"🇩🇿","哥伦比亚甲级":"🇨🇴","乌拉圭甲级":"🇺🇾","厄瓜多尔甲级":"🇪🇨","巴拉圭甲级":"🇵🇾","希腊超":"🇬🇷","挪威超":"🇳🇴","瑞典超":"🇸🇪","波兰甲级":"🇵🇱","乌克兰超":"🇺🇦","斯洛伐克甲级":"🇸🇰","保加利亚甲级":"🇧🇬","韩K联":"🇰🇷","日职联":"🇯🇵","澳超":"🇦🇺","刚果联赛":"🇨🇩","约旦联赛":"🇯🇴"};
+const LEAGUEFLAG={"美职联":"🇺🇸","意甲":"🇮🇹","西甲":"🇪🇸","英超":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","德甲":"🇩🇪","法甲":"🇫🇷","法乙":"🇫🇷","英冠":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","荷甲":"🇳🇱","葡超":"🇵🇹","苏超":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","土超":"🇹🇷","埃及超":"🇪🇬","俄超":"🇷🇺","阿甲":"🇦🇷","丹麦超":"🇩🇰","瑞士超":"🇨🇭","墨超":"🇲🇽","南非超":"🇿🇦","希腊超":"🇬🇷","挪威超":"🇳🇴","瑞典超":"🇸🇪","乌克兰超":"🇺🇦","韩K联":"🇰🇷","日职联":"🇯🇵","澳超":"🇦🇺","刚果联赛":"🇨🇩","沙特联":"🇸🇦","卡塔尔联":"🇶🇦","伊朗联":"🇮🇷","伊拉克联":"🇮🇶","塞超":"🇷🇸","捷甲":"🇨🇿","罗马尼亚甲":"🇷🇴","斯洛文尼亚甲":"🇸🇮","巴甲":"🇧🇷","比甲":"🇧🇪","以超":"🇮🇱","奥甲":"🇦🇹","匈甲":"🇭🇺","塞浦路斯甲":"🇨🇾","阿联酋联":"🇦🇪","摩洛哥联":"🇲🇦","突尼斯联":"🇹🇳","阿尔及利亚联":"🇩🇿","哥伦比亚甲":"🇨🇴","乌拉圭甲":"🇺🇾","厄瓜多尔甲":"🇪🇨","巴拉圭甲":"🇵🇾","波甲":"🇵🇱","斯洛伐克甲":"🇸🇰","保加利亚甲":"🇧🇬","约旦联":"🇯🇴","乌兹超":"🇺🇿","中超":"🇨🇳","克罗地亚甲":"🇭🇷","哥斯达黎加甲":"🇨🇷","马来超":"🇲🇾"};
 const lfl=zh=>LEAGUEFLAG[zh]||"";
 
 
@@ -668,7 +736,7 @@ function renderBoard(){
     const rankCell = (mi>=0 && mi<3)
       ? `<span class="rank medal">${MEDALS[mi]}</span>`
       : `<span class="rank" style="color:${st.strong}">${i+1}</span>`;
-    const team = `<span class="team"><span class="flag">${fl(d.teamEn)}</span><span class="tnm">${d.teamZh}</span><span class="tnm-en">${d.teamEn}</span>${d.num?`<span class="tnum">#${d.num}</span>`:""}</span>`;
+    const team = `<span class="team"><span class="flag">${fl(d.teamEn)}</span><span class="tnm">${d.teamZh}</span><span class="tnm-en">${natEn(d.teamEn)}</span>${d.num?`<span class="tnum">#${d.num}</span>`:""}</span>`;
     const pens=d.pens||0, open=d.goals-pens;
     let pips="";
     for(let k=0;k<open;k++) pips+=`<i class="pip" title="运动战进球 Open play">⚽</i>`;
@@ -689,7 +757,96 @@ function fmtMD(s){const p=(s||"").split("-");return p.length===3?`${+p[1]}月${+
 const MON_EN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtMDen(s){const p=(s||"").split("-");if(p.length!==3)return s;const d=+p[2],a=["th","st","nd","rd"],v=d%100;
   return `${MON_EN[+p[1]-1]} ${d}${a[(v-20)%10]||a[v]||"th"}, ${p[0]}`;}
-function renderFun(){ renderMulti(); renderTiming(); renderFests(); renderOG(); }
+function renderFun(){ renderFeed(); renderMulti(); renderTiming(); renderMinuteLine(); renderFests(); renderOG(); }
+// 各国家队"国旗主色"（深底可读的亮色版），用于进球时间/比分着色
+const NATCOLOR={Algeria:"#2BB673",Argentina:"#75AADB",Australia:"#FFCD00",Austria:"#F0454F",Belgium:"#FF4B4B","Bosnia & Herzegovina":"#3F6FE0",Brazil:"#2BC04A","Cape Verde":"#3F6FE0",Canada:"#FF3B47",Colombia:"#FCD93A","DR Congo":"#34A7E0","Ivory Coast":"#FF8A3D",Croatia:"#FF4B4B","Curaçao":"#3F6FE0",Czechia:"#4F7FE0",Ecuador:"#FFD93A",Egypt:"#FF4B4B",England:"#FF4B5C",France:"#5A7FF0",Germany:"#FFCE3A",Ghana:"#2BC04A",Haiti:"#3F6FE0",Iran:"#2BB673",Iraq:"#FF4B4B",Japan:"#FF4B5C",Jordan:"#FF6B6B","South Korea":"#5A7FF0",Mexico:"#2BC04A",Morocco:"#FF4B4B",Netherlands:"#FF7A2D","New Zealand":"#5A8FF0",Norway:"#FF5C6E",Panama:"#4F8FE0",Paraguay:"#FF5B5B",Portugal:"#E84B4B",Qatar:"#C45A86","Saudi Arabia":"#2BB673",Scotland:"#4F8FE0",Senegal:"#2BC04A","South Africa":"#2BB673",Spain:"#E84B4B",Sweden:"#4F9FE0",Switzerland:"#FF4B4B",Tunisia:"#FF5B5B","Türkiye":"#FF4B5C",Uruguay:"#5AB4E0",USA:"#5A7FF0",Uzbekistan:"#34B7C0"};
+const natColor=n=>NATCOLOR[n]||"#FFC53D";
+// 过长国家英文名的显示缩写
+const NAT_EN_SHORT={"Bosnia & Herzegovina":"Bosnia"};
+const natEn=n=>NAT_EN_SHORT[n]||n;
+function renderFeed(){
+  const el=document.getElementById("goalFeed"); if(!el) return;
+  const ms=(FUN&&FUN.goalFeed)||[];
+  if(!ms.length){ el.innerHTML='<div class="note" style="padding:14px">暂无进球 · No goals yet</div>'; return; }
+  const grp=m=>{ const stage=m.group||m.round||""; const sc=(m.ft||"").split("-"); const c1=natColor(m.t1), c2=natColor(m.t2);
+    return `<div class="fgrp">
+    <div class="fgh">
+      <div class="fgh-l"><span class="fgnum">Match ${m.num}</span>${stage?`<span class="fgstage">${stage}</span>`:""}${m.hostFlag?`<span class="fgloc">${m.hostFlag} ${m.ground}</span>`:""}</div>
+      <div class="fgh-c">
+        <span class="fgteam"><span class="flag">${fl(m.t1)}</span><span class="tx"><b>${m.t1Zh}</b><i>${natEn(m.t1)}</i></span></span>
+        <b class="fgs"><span style="color:${c1}">${sc[0]||""}</span><span class="fgsc">:</span><span style="color:${c2}">${sc[1]||""}</span></b>
+        <span class="fgteam r"><span class="tx"><b>${m.t2Zh}</b><i>${natEn(m.t2)}</i></span><span class="flag">${fl(m.t2)}</span></span>
+      </div>
+    </div>
+    ${m.goals.map(x=>`<div class="feedrow${x.og?' og':''}">
+       <span class="fmin" style="color:${natColor(x.nation)}">${x.minute||"—"}</span>
+       <span class="fnat"><span class="flag">${fl(x.nation)}</span><span class="tx"><b>${x.nationZh}</b><i>${natEn(x.nation)}</i></span></span>
+       <span class="fpl"><span class="fpz"><b>${x.nameZh||x.player}</b>${x.pen?'<span class="fmark pen">点 P</span>':''}${x.og?'<span class="fmark ogm">乌龙 OG</span>':''}</span><i>${x.player}</i>${x.clubZh?`<span class="fclub">${lfl(x.league)?lfl(x.league)+' ':''}${x.clubZh} <span class="fcen">${cabbr(x.club)}</span></span>`:""}</span>
+     </div>`).join("")}
+  </div>`; };
+  // 按日期分组（goalFeed 已按日期倒序）
+  const days=[]; let cur=null;
+  ms.forEach(m=>{ if(!cur||cur.date!==m.date){ cur={date:m.date,matches:[]}; days.push(cur);} cur.matches.push(m); });
+  const dayBlock=(d,i,open)=>`<button type="button" class="feedday-btn${open?' open':''}" data-day="${i}"><span class="fdarrow">${open?"▾":"▸"}</span>📅 ${fmtMDen(d.date)}${i===0?' <span class="fdtag2">最新 Latest</span>':""}<span class="fdcount">${d.matches.length} 场</span></button><div class="feedday-body" id="fday-${i}"${open?"":" hidden"}>${d.matches.map(grp).join("")}</div>`;
+  let html=dayBlock(days[0],0,true);   // 今天：默认展开，可点收起
+  if(days.length>1){
+    html+=`<button type="button" class="feedmore" id="feedMore">▾ 查看更早的比赛日 Earlier days (${days.length-1})</button>`;
+    let inner=""; for(let i=1;i<days.length;i++) inner+=dayBlock(days[i],i,false);
+    html+=`<div id="feedOlder" hidden>${inner}</div>`;
+  }
+  el.innerHTML=html;
+  el.querySelectorAll(".feedday-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{ const body=document.getElementById("fday-"+btn.dataset.day); if(!body)return;
+      body.hidden=!body.hidden; btn.classList.toggle("open",!body.hidden); btn.querySelector(".fdarrow").textContent=body.hidden?"▸":"▾"; });
+  });
+  const more=document.getElementById("feedMore");
+  if(more) more.addEventListener("click",()=>{ const o=document.getElementById("feedOlder"); if(!o)return;
+    o.hidden=!o.hidden; more.textContent=o.hidden?`▾ 查看更早的比赛日 Earlier days (${days.length-1})`:"▴ 收起更早 Hide earlier"; });
+}
+let minuteCh=null;
+function renderMinuteLine(){
+  const cv=document.getElementById("minuteChart"); if(!cv) return;
+  const mc=(FUN&&FUN.minuteCounts)||[];
+  let maxM=0; for(let i=mc.length-1;i>=1;i--){ if(mc[i]){ maxM=i; break; } }
+  if(!maxM){ return; }
+  const BIN=3, nb=Math.ceil(maxM/BIN);   // 3 分钟一档聚合
+  const data=[], ranges=[];
+  for(let k=0;k<nb;k++){
+    const lo=k*BIN+1, hi=k*BIN+BIN; let s=0;
+    for(let m=lo;m<=hi;m++) s+=mc[m]||0;
+    data.push({x:hi,y:s}); ranges.push(lo+"-"+hi+"'");
+  }
+  const BREAKS=[{m:22.5,zh:"💧 补水"},{m:68.5,zh:"💧 补水"}];   // 上/下半场补水时间
+  const breaksPlugin={id:"breaks",afterDatasetsDraw(ch){
+    const {ctx,chartArea:a,scales:{x}}=ch; ctx.save();
+    BREAKS.forEach(b=>{ const px=x.getPixelForValue(b.m); if(px<a.left||px>a.right) return;
+      ctx.strokeStyle="rgba(110,167,255,.55)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
+      ctx.beginPath(); ctx.moveTo(px,a.top); ctx.lineTo(px,a.bottom); ctx.stroke(); ctx.setLineDash([]);
+      ctx.textAlign="center";
+      ctx.fillStyle="#9bb6e8"; ctx.font="10px sans-serif"; ctx.fillText(b.zh, px, a.top-14);
+      ctx.fillStyle="#6f7da0"; ctx.font="8.5px sans-serif"; ctx.fillText("Hydration", px, a.top-4); });
+    ctx.restore();
+  }};
+  const ctx=cv.getContext("2d");
+  const grad=ctx.createLinearGradient(0,0,0,200);
+  grad.addColorStop(0,"rgba(231,178,59,.34)"); grad.addColorStop(1,"rgba(231,178,59,0)");
+  if(minuteCh) minuteCh.destroy();
+  minuteCh=new Chart(cv,{type:"line",plugins:[breaksPlugin],
+    data:{datasets:[{data,borderColor:"#E7B23B",borderWidth:2,fill:true,backgroundColor:grad,
+      tension:.35,pointRadius:0,pointHoverRadius:4,pointHoverBackgroundColor:"#FCE79A",pointHoverBorderColor:"#fff"}]},
+    options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:22}},
+      animation:reduce?false:{duration:700,easing:"easeOutQuart"},
+      plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:9,
+          titleColor:"#EAEEF7",bodyColor:"#8A93AB",
+          callbacks:{title:it=>ranges[it[0].dataIndex],label:c=>` ${c.parsed.y} 球 goals`}}},
+      scales:{
+        x:{type:"linear",min:0,max:maxM,grid:{display:false},
+           ticks:{stepSize:15,color:"#7a849c",font:{family:"'Space Mono'",size:10},maxRotation:0,
+             callback:v=>v>0?v+"'":""}},
+        y:{beginAtZero:true,grid:{color:"rgba(39,48,75,.5)"},
+           ticks:{precision:0,color:"#7a849c",font:{family:"'Space Mono'",size:10},maxTicksLimit:5}}}}});
+}
 function renderOG(){
   const el=document.getElementById("ogList"); if(!el) return;
   const og=(FUN&&FUN.ownGoals)||[];
@@ -938,7 +1095,7 @@ function renderCharts(){
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
   document.getElementById("natTitle").innerHTML=`<span class="ct-cat">按国家队 By Nation</span> · <span class="ct-m">${mword}</span>`;
   natCh&&natCh.destroy();
-  const Nrows=N.map((e,i)=>{const zh=e[1].zh||e[0],en=e[0],f=fl(e[0]);
+  const Nrows=N.map((e,i)=>{const zh=e[1].zh||e[0],en=natEn(e[0]),f=fl(e[0]);
     return {zh, plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
   const lpN=gutterFor(Nrows);
   natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric,null,lpN));
@@ -978,7 +1135,7 @@ function render(){
   });
   tbody.innerHTML=rows.map(d=>`<tr style="${rowTint(d.goals,maxG)}">
     <td><div class="pname">${(pzr(d)||"").replace(/·/g,"<br>")}</div><div class="psub">${(d.player||"").replace(/ /g,"<br>")}</div></td>
-    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${d.teamEn}</div>${d.num?`<div class="psub natmeta"><span class="natno">#${d.num}</span></div>`:""}${(d.posZh||d.pos)?`<div class="psub">${[d.posZh,d.pos].filter(Boolean).join(" ")}</div>`:""}</td>
+    <td><span class="flag" style="font-size:16px">${fl(d.teamEn)}</span> <span class="cmut">${d.teamZh}</span><div class="psub">${natEn(d.teamEn)}</div>${d.num?`<div class="psub natmeta"><span class="natno">#${d.num}</span></div>`:""}${(d.posZh||d.pos)?`<div class="psub">${[d.posZh,d.pos].filter(Boolean).join(" ")}</div>`:""}</td>
     <td class="gv" style="color:${tierStyle(d.goals,maxG).strong}">${d.goals}${d.pens>0?`<sup class="penmk" title="含 ${d.pens} 个点球 · incl. ${d.pens} penalty">P${d.pens>1?d.pens:''}</sup>`:''}</td>
     <td><div class="cmut">${czr(d)}</div><div class="psub">${cabbr(d.club)}</div><div class="lgz">${lfl(d.league)?lfl(d.league)+' ':''}${d.league}</div><div class="psub">${LEN[d.league]||""}</div></td></tr>`).join("");
   const scorersN=TABLE_DATA.filter(d=>d.goals>=1).length, allN=TABLE_DATA.length;

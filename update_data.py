@@ -219,6 +219,14 @@ def main():
     # 按比赛阶段分桶（补水时间约 30'/75'）
     PHASES=["1-5","6-22","23-45","46-68","69-90","90+","ET"]
     buckets={b:0 for b in PHASES}
+    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）；按实际累计分钟，90+ 与加时自然向右延伸
+    def minute_bin(s):
+        m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
+        if not m: return None
+        base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
+        if base==45 and extra>0: return 45      # 上半场补时折入 45'（避免与下半场早段重叠）
+        t=base+extra                            # 其余按真实累计分钟：90+x→91.., 加时 91-120 照实
+        return min(t,130) if t>=1 else None
     def phase_of(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return None
@@ -244,6 +252,8 @@ def main():
             for g in mt.get(side,[]):
                 ph=phase_of(g.get("minute"))
                 if ph: buckets[ph]+=1          # 时间分布：含乌龙球（乌龙也是进球）
+                mb=minute_bin(g.get("minute"))
+                if mb: minuteCounts[mb]+=1     # 每分钟进球数：同样含乌龙球
                 if g.get("owngoal") or not g.get("name"): continue   # 以下仅限有射手的进球
                 mn=parse_min(g.get("minute"))
                 pid=resolve(g["name"],team); p=by_id.get(pid) if pid else None
@@ -292,7 +302,40 @@ def main():
                     "t1":canon_nat(t1),"t1Zh":nat_zh(t1),"t2":canon_nat(t2),"t2Zh":nat_zh(t2),
                     "ft":f"{ft[0]}-{ft[1]}","date":mdate,"ground":clean_ground(mt.get("ground",""))})
     ownGoals.sort(key=lambda x:(x["date"],x["min"]))
-    funstats={"multiGoals":multi,"timeBuckets":buckets,"ownGoals":ownGoals,
+    # 进球时间流：所有有进球的比赛按场分组，最新比赛在前；组内进球按分钟正序。可一直回看至本届首球
+    HOST={"Atlanta":"USA","Boston":"USA","Dallas":"USA","Houston":"USA","Kansas City":"USA","Los Angeles":"USA",
+          "Miami":"USA","New York":"USA","Philadelphia":"USA","San Francisco Bay Area":"USA","Seattle":"USA",
+          "Guadalajara":"Mexico","Mexico City":"Mexico","Monterrey":"Mexico","Toronto":"Canada","Vancouver":"Canada"}
+    HOSTINFO={"USA":("🇺🇸","美国"),"Mexico":("🇲🇽","墨西哥"),"Canada":("🇨🇦","加拿大")}
+    CITY_ZH={"Atlanta":"亚特兰大","Boston":"波士顿","Dallas":"达拉斯","Guadalajara":"瓜达拉哈拉","Houston":"休斯顿",
+        "Kansas City":"堪萨斯城","Los Angeles":"洛杉矶","Mexico City":"墨西哥城","Miami":"迈阿密","Monterrey":"蒙特雷",
+        "New York":"纽约","Philadelphia":"费城","San Francisco Bay Area":"旧金山湾区","Seattle":"西雅图","Toronto":"多伦多","Vancouver":"温哥华"}
+    goalFeed=[]
+    for idx,mt in enumerate(all_matches):
+        ft=mt.get("score",{}).get("ft")
+        if not ft: continue
+        t1,t2=mt.get("team1"),mt.get("team2"); glist=[]
+        for side,team,oppo in (("goals1",t1,t2),("goals2",t2,t1)):
+            for g in mt.get(side,[]):
+                nm=g.get("name") or ""; og=bool(g.get("owngoal"))
+                who=oppo if og else team   # 乌龙球员属于对手队
+                pid=resolve(nm,who); p=by_id.get(pid) if pid else None
+                c=club_by_id.get(p.get("club_id")) if p else None
+                glist.append({"player":(p["name"] if p else nm),"nameZh":(p.get("nameZh") if p else "") or nm,
+                    "nation":canon_nat(who),"nationZh":nat_zh(who),
+                    "clubZh":(c.get("nameZh") if c else "") or "","club":(c.get("name") if c else "") or "","league":(c.get("league") if c else "") or "",
+                    "minute":(str(g.get("minute"))+"'" if g.get("minute") else ""),"min":parse_min(g.get("minute")) or 0,
+                    "pen":bool(g.get("penalty")),"og":og})
+        if not glist: continue
+        glist.sort(key=lambda x:x["min"])
+        grd=clean_ground(mt.get("ground","")); hf,hz=HOSTINFO.get(HOST.get(grd,""),("",""))
+        goalFeed.append({"date":mt.get("date",""),"num":mt.get("num") or (idx+1),
+            "group":mt.get("group","") or "","round":mt.get("round","") or "",
+            "t1":canon_nat(t1),"t1Zh":nat_zh(t1),"t2":canon_nat(t2),"t2Zh":nat_zh(t2),
+            "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,"goals":glist})
+    goalFeed.sort(key=lambda m:(m["date"],m["num"]), reverse=True)
+    funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"ownGoals":ownGoals,
+              "goalFeed":goalFeed,
               "earliest":earliest,"latest":latest,"bigMatches":bigm}
 
     out={"version":read_version(),

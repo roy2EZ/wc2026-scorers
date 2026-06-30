@@ -8,6 +8,20 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.0
+
+**Latest Goals feed / 最新进球时间流**
+- New section at the top: every goal grouped by match, newest first. The latest match day is expanded by default (and can be collapsed); earlier days fold behind one "Earlier days" toggle, each day expandable on its own. Each match header shows Match #, group/round, the two teams (flag + zh/en) with a two-color scoreline (each team's flag color), and the host city; goals list minute (colored by the scoring team), scorer (zh/en), and club (league flag + zh/en). Scorelines are aligned across cards.
+  顶部新增板块：全部进球按比赛分组、最新在前。最新比赛日默认展开（可收起），更早的折进一个"查看更早"按钮、每天独立展开。每场组头含 Match 编号、小组/淘汰赛阶段、两队（旗+中英）与两色比分（各取本队旗色）、主办城市；进球行含分钟（按进球方上色）、球员（中英）、俱乐部（联赛旗+中英）。各卡比分对齐。
+
+**Goal Timing — per-minute line / 进球时间分布·每分钟折线**
+- Added a smoothed per-minute line chart (3-minute bins) by actual elapsed minute, including stoppage time and extra time, with hydration-break markers on the axis.
+  新增每分钟进球折线图（3 分钟聚合）：按真实累计分钟、含补时与加时，横轴标出补水时间。
+
+**Fixes & polish / 修复与打磨**
+- Fixed league flags missing site-wide after the earlier league-name shortening (flag table re-keyed to current names); long nation name "Bosnia & Herzegovina" shows as "Bosnia"; All Players feed/table column alignment tightened.
+  修复联赛名缩短后全站联赛国旗丢失的问题（旗帜表改用当前短名）；波黑英文统一显示 Bosnia；最新进球与全部球员表的列对齐优化。
+
 ## v1.8.0
 
 **No more built-in snapshot / 移除内置快照**
