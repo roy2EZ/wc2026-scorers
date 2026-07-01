@@ -8,6 +8,16 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.5
+
+**All Players — adaptive goal filter / 全部球员查询·自适应档位**
+- The personal-goal threshold buttons now extend automatically with the current maximum (6+, 7+…), matching Top Scorers and Goal Fests; the default stays "All".
+  个人进球总数档位按钮随当前最高进球数自动扩展（6+、7+…），与射手榜领跑者、进球大战一致；默认仍为「全部」。
+
+**README**
+- Merged the screenshots into the feature table (feature text left, screenshot right); Goal Origins is featured larger and split into three separate images (by Nation / League / Club).
+  README 把截图并入功能表格（左文右图）；Goal Origins 放大并拆成三张独立截图（按国家队 / 联赛 / 俱乐部）。
+
 ## v1.9.4
 
 **Goal Origins — per-chart controls / 进球来自哪里·每图独立**

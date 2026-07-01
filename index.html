@@ -514,14 +514,7 @@
       <div class="combo" data-cat="club"><input class="cinp" autocomplete="off" placeholder="俱乐部 Club"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
       <div class="minrow">
         <span class="boardlf">个人进球总数 Goals：</span>
-        <div class="chips" id="minchips">
-          <button class="on" data-min="0">全部 All</button>
-          <button data-min="1">1+</button>
-          <button data-min="2">2+</button>
-          <button data-min="3">3+</button>
-          <button data-min="4">4+</button>
-          <button data-min="5">5+</button>
-        </div>
+        <div class="chips" id="minchips"></div>
       </div>
     </div>
     <div class="tablecard">
@@ -599,14 +592,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.9.4</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.9.5</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.9.4", BUILD_TIME="2026-07-01 16:00";
+const APP_VERSION="v1.9.5", BUILD_TIME="2026-07-01 18:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -1166,6 +1159,11 @@ function rowTint(goals,maxG){
 }
 function render(){
   const maxG=TABLE_DATA.reduce((m,d)=>Math.max(m,d.goals),0);
+  const mc=document.getElementById("minchips");
+  if(mc){ if(minG>maxG) minG=0;   // 档位按钮随最高进球数动态扩展（默认「全部」）
+    let h='<button type="button" data-min="0">全部 All</button>';
+    for(let g=1; g<=Math.max(maxG,1); g++) h+=`<button type="button" data-min="${g}">${g}+</button>`;
+    mc.innerHTML=h; [...mc.children].forEach(b=>b.classList.toggle("on", +b.dataset.min===minG)); }
   const mF=(fields,q)=>{ if(!q)return true; q=q.toLowerCase(); return fields.some(v=>(v||"").toLowerCase().includes(q)); };
   let rows=TABLE_DATA.filter(d=>d.goals>=minG)
     .filter(d=>mF([d.player,pzr(d)],F.player))
