@@ -297,6 +297,8 @@
   .chead.stack{flex-direction:column;align-items:stretch;gap:8px}
   .chead.stack .selrow{display:flex;gap:6px;justify-content:flex-start;flex-wrap:wrap}
   .chead.stack .selrow .miniSel{max-width:none;flex:1;min-width:120px}
+  .chart-metric{flex:none}
+  .chart-metric button{font-size:11px;padding:5px 10px}
   .miniSel{background:var(--card2);border:1px solid var(--line);color:var(--ink);
     font-family:'Noto Sans SC';font-size:12px;border-radius:8px;padding:5px 9px;outline:none;cursor:pointer;max-width:58%}
   .chartcard .cwrap{position:relative;width:100%;min-width:0}
@@ -456,14 +458,11 @@
 <section style="padding-top:6px">
   <div class="wrap">
     <div class="shead"><h2>进球<b>来自哪里</b><span class="enh">Goal Origins</span></h2></div>
-    <div class="toggle mgtabbar" id="metric">
-      <button class="on" data-m="goals">进球数 Goals</button>
-      <button data-m="scorers">进球人数 Scorers</button>
-    </div>
     <div class="charts">
       <div class="chartcard">
         <div class="chead stack"><h3 id="natTitle">按国家队</h3>
           <div class="selrow">
+            <div class="toggle chart-metric" data-chart="nation"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
             <select class="miniSel topn" id="topNatSel">
               <option value="10" selected>Top 10</option>
               <option value="15">Top 15</option>
@@ -476,6 +475,7 @@
       <div class="chartcard">
         <div class="chead stack"><h3 id="leagueTitle">按联赛</h3>
           <div class="selrow">
+            <div class="toggle chart-metric" data-chart="league"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
             <select class="miniSel topn" id="topLeagueSel">
               <option value="10" selected>Top 10</option>
               <option value="15">Top 15</option>
@@ -488,6 +488,7 @@
       <div class="chartcard">
         <div class="chead stack"><h3 id="clubTitle">按俱乐部</h3>
           <div class="selrow">
+            <div class="toggle chart-metric" data-chart="club"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
             <select id="clubLeagueSel" class="miniSel"></select>
             <select class="miniSel topn" id="topClubSel">
               <option value="10" selected>Top 10</option>
@@ -598,14 +599,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.9.3</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.9.4</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.9.3", BUILD_TIME="2026-07-01 12:00";
+const APP_VERSION="v1.9.4", BUILD_TIME="2026-07-01 16:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -1036,7 +1037,7 @@ function barCfg(entries,metric,onClick,leftPad){
         x:{beginAtZero:true,grace:"6%",ticks:{precision:0,font:{family:"'Space Mono'"}},grid:{color:"rgba(39,48,75,.5)"}},
         y:{ticks:{display:false},grid:{display:false},border:{display:false}}}}};
 }
-let metric="goals", leagueCh, clubCh, natCh;
+let chartMetric={nation:"goals",league:"goals",club:"goals"}, leagueCh, clubCh, natCh;
 let boardMin=null, boardLeague="", boardMinUserSet=false;
 function setupBoardChips(){
   const el=document.getElementById("boardchips"); if(!el) return;
@@ -1092,58 +1093,63 @@ function leagueClick(evt,els){
   // 延后到本次点击事件处理完毕后再重建图表，避免在图表自身的点击回调里销毁它而报错
   setTimeout(()=>{
     document.getElementById("clubLeagueSel").value=lg;
-    renderCharts();
+    renderClubChart();   // 联赛下钻只影响俱乐部图
     document.querySelector(".charts").scrollIntoView({behavior:"smooth",block:"nearest"});
   },0);
 }
 function renderCharts(){
-  const capV=(id,total)=>{const v=document.getElementById(id).value;return v==='all'?total:Math.min(+v,total);};
-  const L=topEntries(byLeague,metric,capV("topLeagueSel",leagues.length));
-  currentL=L;
-  // 俱乐部图：若选了联赛则只看该联赛内各队，否则看总榜前15
-  const mword = metric==="goals" ? "进球数 Goals" : "进球人数 Scorers";
-  const fL=document.getElementById("clubLeagueSel").value;
-  let C;
-  if(fL){
-    C=Object.entries(byClub).filter(([c])=>clubLeague[c]===fL)
-        .sort((a,b)=>b[1][metric]-a[1][metric]||b[1].goals-a[1].goals)
-        .slice(0,capV("topClubSel",clubs.length));
-    document.getElementById("clubTitle").innerHTML=`<span class="ct-cat">按俱乐部 By Club</span> · ${fL}${LEN[fL]?" "+LEN[fL]:""} · <span class="ct-m">${mword}</span>`;
-  }else{
-    C=topEntries(byClub,metric,capV("topClubSel",clubs.length));
-    document.getElementById("clubTitle").innerHTML=`<span class="ct-cat">按俱乐部 By Club</span> · <span class="ct-m">${mword}</span>`;
-  }
-  document.getElementById("leagueTitle").innerHTML=`<span class="ct-cat">按联赛 By League</span> · <span class="ct-m">${mword}</span>`;
-  document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
-  document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
-  leagueCh&&leagueCh.destroy(); clubCh&&clubCh.destroy();
-  const mob = window.innerWidth < 620;
-  const med=i=>i<3?`<span class="ymed">${MEDALS[i]}</span>`:"";
-  const Lrows=L.map((e,i)=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
-    return {zh, plain:zh+(en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
-  const lpL=gutterFor(Lrows);
-  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),metric,leagueClick,lpL));
-  leagueCh.$lp=lpL; drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
-  const Crows=C.map((e,i)=>{const zh=clubZhByEn[e[0]]||cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
-    return {zh, plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
-  const lpC=gutterFor(Crows);
-  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),metric,null,lpC));
-  clubCh.$lp=lpC; drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
-  const N=topEntries(byNation,metric,capV("topNatSel",Object.keys(byNation).length));
+  renderNatChart(); renderLeagueChart(); renderClubChart();
+}
+const _capV=(id,total)=>{const v=document.getElementById(id).value;return v==='all'?total:Math.min(+v,total);};
+const _mw=m=>m==="goals"?"进球数 Goals":"进球人数 Scorers";
+const _med=i=>i<3?`<span class="ymed">${MEDALS[i]}</span>`:"";
+function renderNatChart(){
+  const N=topEntries(byNation,chartMetric.nation,_capV("topNatSel",Object.keys(byNation).length));
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
-  document.getElementById("natTitle").innerHTML=`<span class="ct-cat">按国家队 By Nation</span> · <span class="ct-m">${mword}</span>`;
+  document.getElementById("natTitle").innerHTML=`<span class="ct-cat">按国家队 By Nation</span> · <span class="ct-m">${_mw(chartMetric.nation)}</span>`;
   natCh&&natCh.destroy();
   const Nrows=N.map((e,i)=>{const zh=e[1].zh||e[0],en=natEn(e[0]),f=fl(e[0]);
-    return {zh, plain:zh+(zh!==en?" "+en:""), html:med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
   const lpN=gutterFor(Nrows);
-  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),metric,null,lpN));
+  natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),chartMetric.nation,null,lpN));
   natCh.$lp=lpN; drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
 }
-document.getElementById("metric").addEventListener("click",e=>{
-  const b=e.target.closest("button"); if(!b)return;
-  metric=b.dataset.m;
-  [...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));
-  renderCharts();
+function renderLeagueChart(){
+  const L=topEntries(byLeague,chartMetric.league,_capV("topLeagueSel",leagues.length)); currentL=L;
+  document.getElementById("leagueTitle").innerHTML=`<span class="ct-cat">按联赛 By League</span> · <span class="ct-m">${_mw(chartMetric.league)}</span>`;
+  document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
+  leagueCh&&leagueCh.destroy();
+  const Lrows=L.map((e,i)=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
+    return {zh, plain:zh+(en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  const lpL=gutterFor(Lrows);
+  leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),chartMetric.league,leagueClick,lpL));
+  leagueCh.$lp=lpL; drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
+}
+function renderClubChart(){
+  const fL=document.getElementById("clubLeagueSel").value; let C;
+  if(fL){
+    C=Object.entries(byClub).filter(([c])=>clubLeague[c]===fL)
+        .sort((a,b)=>b[1][chartMetric.club]-a[1][chartMetric.club]||b[1].goals-a[1].goals)
+        .slice(0,_capV("topClubSel",clubs.length));
+    document.getElementById("clubTitle").innerHTML=`<span class="ct-cat">按俱乐部 By Club</span> · ${fL}${LEN[fL]?" "+LEN[fL]:""} · <span class="ct-m">${_mw(chartMetric.club)}</span>`;
+  }else{
+    C=topEntries(byClub,chartMetric.club,_capV("topClubSel",clubs.length));
+    document.getElementById("clubTitle").innerHTML=`<span class="ct-cat">按俱乐部 By Club</span> · <span class="ct-m">${_mw(chartMetric.club)}</span>`;
+  }
+  document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
+  clubCh&&clubCh.destroy();
+  const Crows=C.map((e,i)=>{const zh=clubZhByEn[e[0]]||cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+  const lpC=gutterFor(Crows);
+  clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),chartMetric.club,null,lpC));
+  clubCh.$lp=lpC; drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
+}
+const _chartRender={nation:()=>renderNatChart(),league:()=>renderLeagueChart(),club:()=>renderClubChart()};
+document.querySelector(".charts").addEventListener("click",e=>{
+  const b=e.target.closest(".chart-metric button"); if(!b)return;
+  const tog=b.closest(".chart-metric"); chartMetric[tog.dataset.chart]=b.dataset.m;
+  [...tog.children].forEach(x=>x.classList.toggle("on",x===b));
+  (_chartRender[tog.dataset.chart]||renderCharts)();   // 只重画这一张
 });
 
 const tbody=document.getElementById("tbody"), rowcount=document.getElementById("rowcount");
@@ -1256,8 +1262,10 @@ function populateClubLeague(){
   csel.innerHTML='<option value="">全部联赛 All leagues</option>'+leaguesByGoals().map(l=>`<option value="${l}">${(lfl(l)?lfl(l)+' ':'')}${l}${LEN[l]?' '+LEN[l]:''}</option>`).join("");
   if([...csel.options].some(o=>o.value===cur)) csel.value=cur;
 }
-document.getElementById("clubLeagueSel").addEventListener("change",renderCharts);
-["topLeagueSel","topClubSel","topNatSel"].forEach(id=>document.getElementById(id).addEventListener("change",renderCharts));
+document.getElementById("clubLeagueSel").addEventListener("change",renderClubChart);
+document.getElementById("topNatSel").addEventListener("change",renderNatChart);
+document.getElementById("topLeagueSel").addEventListener("change",renderLeagueChart);
+document.getElementById("topClubSel").addEventListener("change",renderClubChart);
 function renderFooter(){
   const d = lastUpdated || new Date();
   const zh = d.toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"});

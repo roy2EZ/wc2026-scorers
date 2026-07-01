@@ -8,6 +8,14 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.4
+
+**Goal Origins — per-chart controls / 进球来自哪里·每图独立**
+- Each of the three charts (Nation / League / Club) now has its own Goals ↔ Scorers toggle, instead of one global switch — you can view different metrics side by side.
+  三张图（国家队 / 联赛 / 俱乐部）各自拥有独立的「进球数 / 进球人数」切换，不再是一个全局开关——可并排对比不同口径。
+- Changing one chart's filter (metric or Top-N, or the league drill-down) now re-renders only that chart, not all three.
+  改动某张图的筛选（口径 / Top-N / 联赛下钻）只重画那一张，不再三张一起重渲染。
+
 ## v1.9.3
 
 **Adaptive filters / 自适应筛选**

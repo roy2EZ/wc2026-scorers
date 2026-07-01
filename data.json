@@ -1,11 +1,11 @@
 {
- "version": "v1.9.3",
- "updated": "2026-07-01T00:17:24-07:00",
+ "version": "v1.9.4",
+ "updated": "2026-07-01T00:36:42-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 150,
- "totalGoals": 217,
+ "totalGoals": 219,
  "totalPens": 8,
- "matchesWithGoals": 71,
+ "matchesWithGoals": 72,
  "schedule": {
   "total": 104,
   "played": 79,
@@ -396,8 +396,8 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 38,
-   "23-45": 54,
+   "6-22": 37,
+   "23-45": 55,
    "46-68": 60,
    "69-90": 45,
    "90+": 25,
@@ -426,7 +426,7 @@
    2,
    1,
    7,
-   1,
+   0,
    1,
    1,
    0,
@@ -449,7 +449,7 @@
    4,
    5,
    1,
-   11,
+   12,
    1,
    3,
    1,
@@ -768,8 +768,8 @@
       "clubZh": "卡迪西亚",
       "club": "Al Qadsiah FC",
       "league": "沙特联",
-      "minute": "22'",
-      "min": 22,
+      "minute": "31'",
+      "min": 31,
       "pen": false,
       "og": false
      },
@@ -781,8 +781,8 @@
       "clubZh": "富勒姆",
       "club": "Fulham FC",
       "league": "英超",
-      "minute": "31'",
-      "min": 31,
+      "minute": "45+1'",
+      "min": 46,
       "pen": false,
       "og": false
      }
@@ -5693,6 +5693,22 @@
    "id": "CAN-10"
   },
   {
+   "player": "Julian Quinones",
+   "nameZh": "朱利安·奎诺内斯",
+   "num": 16,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 3,
+   "pens": 0,
+   "club": "Al Qadsiah FC",
+   "clubZh": "卡迪西亚",
+   "league": "沙特联",
+   "club_id": "al-qadsiah-fc",
+   "id": "MEX-16"
+  },
+  {
    "player": "Kai Havertz",
    "nameZh": "哈弗茨",
    "num": 7,
@@ -5933,22 +5949,6 @@
    "id": "ENG-10"
   },
   {
-   "player": "Julian Quinones",
-   "nameZh": "朱利安·奎诺内斯",
-   "num": 16,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Mexico",
-   "nationZh": "墨西哥",
-   "goals": 2,
-   "pens": 0,
-   "club": "Al Qadsiah FC",
-   "clubZh": "卡迪西亚",
-   "league": "沙特联",
-   "club_id": "al-qadsiah-fc",
-   "id": "MEX-16"
-  },
-  {
    "player": "Leandro Trossard",
    "nameZh": "特罗萨德",
    "num": 10,
@@ -6059,6 +6059,22 @@
    "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
+  },
+  {
+   "player": "Raul Jimenez",
+   "nameZh": "希门尼斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Fulham FC",
+   "clubZh": "富勒姆",
+   "league": "英超",
+   "club_id": "fulham-fc",
+   "id": "MEX-9"
   },
   {
    "player": "Riyad Mahrez",
@@ -7627,22 +7643,6 @@
    "league": "意甲",
    "club_id": "hellas-verona-fc",
    "id": "ALG-17"
-  },
-  {
-   "player": "Raul Jimenez",
-   "nameZh": "希门尼斯",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Mexico",
-   "nationZh": "墨西哥",
-   "goals": 1,
-   "pens": 0,
-   "club": "Fulham FC",
-   "clubZh": "富勒姆",
-   "league": "英超",
-   "club_id": "fulham-fc",
-   "id": "MEX-9"
   },
   {
    "player": "Romano Schmid",
@@ -8096,6 +8096,22 @@
    "id": "CAN-10"
   },
   {
+   "player": "Julian Quinones",
+   "nameZh": "朱利安·奎诺内斯",
+   "num": 16,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 3,
+   "pens": 0,
+   "club": "Al Qadsiah FC",
+   "clubZh": "卡迪西亚",
+   "league": "沙特联",
+   "club_id": "al-qadsiah-fc",
+   "id": "MEX-16"
+  },
+  {
    "player": "Kai Havertz",
    "nameZh": "哈弗茨",
    "num": 7,
@@ -8336,22 +8352,6 @@
    "id": "ENG-10"
   },
   {
-   "player": "Julian Quinones",
-   "nameZh": "朱利安·奎诺内斯",
-   "num": 16,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Mexico",
-   "nationZh": "墨西哥",
-   "goals": 2,
-   "pens": 0,
-   "club": "Al Qadsiah FC",
-   "clubZh": "卡迪西亚",
-   "league": "沙特联",
-   "club_id": "al-qadsiah-fc",
-   "id": "MEX-16"
-  },
-  {
    "player": "Leandro Trossard",
    "nameZh": "特罗萨德",
    "num": 10,
@@ -8462,6 +8462,22 @@
    "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
    "id": "IRN-23"
+  },
+  {
+   "player": "Raul Jimenez",
+   "nameZh": "希门尼斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Fulham FC",
+   "clubZh": "富勒姆",
+   "league": "英超",
+   "club_id": "fulham-fc",
+   "id": "MEX-9"
   },
   {
    "player": "Riyad Mahrez",
@@ -10030,22 +10046,6 @@
    "league": "意甲",
    "club_id": "hellas-verona-fc",
    "id": "ALG-17"
-  },
-  {
-   "player": "Raul Jimenez",
-   "nameZh": "希门尼斯",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Mexico",
-   "nationZh": "墨西哥",
-   "goals": 1,
-   "pens": 0,
-   "club": "Fulham FC",
-   "clubZh": "富勒姆",
-   "league": "英超",
-   "club_id": "fulham-fc",
-   "id": "MEX-9"
   },
   {
    "player": "Romano Schmid",
