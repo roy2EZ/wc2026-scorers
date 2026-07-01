@@ -14,7 +14,7 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 
 | Screenshot / 截图 | Feature / 功能 |
 |---|---|
-| <img src="screenshots/hero-stats.png" width="600"> | **Hero & stats · 页头与统计**<br>Title with six live stat cards: matches played, goals, scorers, leagues, clubs, matches-with-goals.<br>标题 + 六张实时统计卡（比赛进程/总进球/进球者/联赛/俱乐部/场次）。 |
+| <img src="screenshots/hero-stats.png" width="1000"> | **Hero & stats · 页头与统计**<br>Title with six live stat cards: matches played, goals, scorers, leagues, clubs, matches-with-goals.<br>标题 + 六张实时统计卡（比赛进程/总进球/进球者/联赛/俱乐部/场次）。 |
 | <img src="screenshots/latest-goals.png" width="600"> | **Latest Goals · 最新进球**<br>Every goal grouped by match, newest first — Match #, round & group, two-color scoreline, host city, penalty shootout, scorer + club.<br>全部进球按比赛分组、最新在前——Match 编号、轮次与小组、两色比分、主办城市、点球大战、进球者+俱乐部。 |
 | <img src="screenshots/latest-goals-days.png" width="600"> | **Latest Goals · earlier days / 按天折叠**<br>Earlier days fold into per-day panels colored by stage (group 1/2/3 = teal/blue/purple, knockouts = gold→red).<br>更早的比赛按天折叠、按阶段着色（小组 1/2/3 = 青/蓝/紫，淘汰赛 = 金→红）。 |
 | <img src="screenshots/top-scorers.png" width="600"> | **Top Scorers · 射手榜领跑者**<br>Goal ranking grouped by goal count; tier-colored cards with jersey number and penalty marks.<br>进球数排名、按进球数分组；档位配色，含号码徽章与点球标记。 |
