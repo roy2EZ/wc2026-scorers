@@ -8,6 +8,18 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.3
+
+**Adaptive filters / 自适应筛选**
+- Top Scorers and Goal Fests now build their threshold buttons dynamically from the data (e.g. 6+, then 7+ as goals climb), and default to a threshold that always keeps the top three tiers (gold/silver/bronze) visible.
+  射手榜领跑者与进球大战的档位按钮改为按数据动态生成（如 6+，进球更多再加 7+），默认阈值始终露出前三档（金/银/铜）。
+- Multi-goal Players and Goal Fests now list the most recent occurrence first within each tier.
+  单场多球与进球大战：每个档位内最近发生的排在最上。
+
+**Goal Timing line / 进球时间分布折线**
+- The per-minute trend now handles stoppage time correctly: first-half stoppage counts at 45' (it can't extend into the second half), while second-half stoppage extends naturally past 90' (90+1→91'…) instead of piling into a single spike.
+  每分钟趋势线修正补时处理：上半场补时并入 45'（不能外延到下半场），下半场补时按真实分钟向 90 后自然延伸（90+1→91'…），不再堆成一根尖刺。
+
 ## v1.9.2
 
 **Dual-source results / 双源比赛结果**

@@ -439,13 +439,7 @@
     <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2>
       <div class="boardctl">
         <span class="boardlf">按进球数 By goals</span>
-        <div class="chips" id="boardchips">
-          <button data-bmin="1">全部 All</button>
-          <button data-bmin="2">2+</button>
-          <button class="on" data-bmin="3">3+</button>
-          <button data-bmin="4">4+</button>
-          <button data-bmin="5">5+</button>
-        </div>
+        <div class="chips" id="boardchips"></div>
         <label class="boardlf">按联赛看榜 By league
           <select id="boardLeagueSel" title="选择联赛，只看该联赛球员的个人进球榜"></select>
         </label>
@@ -568,12 +562,7 @@
     <div class="shead"><h2>进球<b>大战</b><span class="enh">Goal Fests</span></h2></div>
     <div class="boardctl">
       <span class="boardlf">单场总进球 Total goals</span>
-      <div class="chips" id="festchips">
-        <button data-fmin="4">4+</button>
-        <button class="on" data-fmin="5">5+</button>
-        <button data-fmin="6">6+</button>
-        <button data-fmin="7">7+</button>
-      </div>
+      <div class="chips" id="festchips"></div>
     </div>
     <div class="fests" id="festList"></div>
   </div>
@@ -586,7 +575,7 @@
     <div class="minutecard">
       <div class="minutehd">每分钟进球 <span class="mhd-en">By Minute</span></div>
       <div class="minutewrap"><canvas id="minuteChart"></canvas></div>
-      <div class="minutenote">横轴为实际累计分钟，含补时与加时（上半场补时计入 45'）<span style="display:block;margin-top:2px">By actual elapsed minute, incl. stoppage &amp; extra time</span></div>
+      <div class="minutenote">每分钟进球（3 分钟聚合看趋势）；上半场补时并入 45'，下半场补时按 90+ 向右自然延伸<span style="display:block;margin-top:2px">Goals per minute (3-min bins); first-half stoppage counts at 45', second-half stoppage extends past 90' (90+1→91'…)</span></div>
     </div>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
@@ -609,14 +598,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.9.2</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.9.3</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.9.2", BUILD_TIME="2026-06-30 20:00";
+const APP_VERSION="v1.9.3", BUILD_TIME="2026-07-01 12:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -735,6 +724,7 @@ function tierStyle(goals, maxG){
 }
 const MEDALS=["🥇","🥈","🥉"];
 function renderBoard(){
+  setupBoardChips();
   const pool = boardLeague ? DATA.filter(d=>d.league===boardLeague) : DATA;
   const rows=pool.filter(d=>d.goals>=boardMin).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player));
   const el=document.getElementById("board");
@@ -833,7 +823,7 @@ function renderMinuteLine(){
   const mc=(FUN&&FUN.minuteCounts)||[];
   let maxM=0; for(let i=mc.length-1;i>=1;i--){ if(mc[i]){ maxM=i; break; } }
   if(!maxM){ return; }
-  const BIN=3, nb=Math.ceil(maxM/BIN);   // 3 分钟一档聚合
+  const BIN=3, nb=Math.ceil(maxM/BIN);   // 3 分钟一档聚合（平滑看趋势；补时并入所在半场末）
   const data=[], ranges=[];
   for(let k=0;k<nb;k++){
     const lo=k*BIN+1, hi=k*BIN+BIN; let s=0;
@@ -951,9 +941,21 @@ function renderTiming(){
   if(e1) e1.innerHTML=exc("最早进球 Earliest","⚡",FUN&&FUN.earliest);
   if(e2) e2.innerHTML=exc("最晚进球 Latest","🕛",FUN&&FUN.latest);
 }
-let festMin=5;
+let festMin=null, festMinUserSet=false;
+function setupFestChips(){
+  const el=document.getElementById("festchips"); if(!el) return;
+  const totals=[...new Set(((FUN&&FUN.bigMatches)||[]).map(x=>x.total))].sort((a,b)=>b-a);
+  const maxT=totals[0]||7;
+  const def = totals.length>=3 ? totals[2] : (totals.length?totals[totals.length-1]:5);  // 第三高总进球 → 露出最高三档
+  if(!festMinUserSet || festMin==null || festMin>maxT) festMin=Math.max(4,def);
+  let html='';
+  for(let g=4; g<=Math.max(maxT,7); g++) html+=`<button type="button" data-fmin="${g}">${g}+</button>`;
+  el.innerHTML=html;
+  [...el.children].forEach(b=>b.classList.toggle("on", +b.dataset.fmin===festMin));
+}
 function renderFests(){
   const el=document.getElementById("festList"); if(!el) return;
+  setupFestChips();
   const bm=((FUN&&FUN.bigMatches)||[]).filter(x=>x.total>=festMin);
   if(!bm.length){ el.innerHTML='<div class="note" style="padding:8px">该档位暂无比赛 · No matches at '+festMin+'+ goals</div>'; return; }
   const maxT=Math.max(7,...bm.map(x=>x.total)), lo=4;
@@ -975,7 +977,7 @@ function renderFests(){
 }
 (function(){const t=document.getElementById("festchips");
   t&&t.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
-    festMin=+b.dataset.fmin;[...t.children].forEach(x=>x.classList.toggle("on",x===b));renderFests();});})();
+    festMin=+b.dataset.fmin;festMinUserSet=true;[...t.children].forEach(x=>x.classList.toggle("on",x===b));renderFests();});})();
 
 const FONT="'Noto Sans SC',system-ui,sans-serif";
 Chart.defaults.font.family=FONT; Chart.defaults.color="#C4CBDE";
@@ -1035,8 +1037,20 @@ function barCfg(entries,metric,onClick,leftPad){
         y:{ticks:{display:false},grid:{display:false},border:{display:false}}}}};
 }
 let metric="goals", leagueCh, clubCh, natCh;
-let boardMin=3, boardLeague="";
-document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
+let boardMin=null, boardLeague="", boardMinUserSet=false;
+function setupBoardChips(){
+  const el=document.getElementById("boardchips"); if(!el) return;
+  const pool = boardLeague ? DATA.filter(d=>d.league===boardLeague) : DATA;
+  const tiers=[...new Set(pool.filter(d=>d.goals>0).map(d=>d.goals))].sort((a,b)=>b-a);
+  const maxG=tiers[0]||0;
+  const def = tiers.length>=3 ? tiers[2] : (tiers.length?tiers[tiers.length-1]:1);  // 第三高档位 → 金银铜三档必露
+  if(!boardMinUserSet || boardMin==null || boardMin>maxG) boardMin=def;
+  let html='<button type="button" data-bmin="1">全部 All</button>';
+  for(let g=2; g<=Math.max(maxG,2); g++) html+=`<button type="button" data-bmin="${g}">${g}+</button>`;
+  el.innerHTML=html;
+  [...el.children].forEach(b=>b.classList.toggle("on", +b.dataset.bmin===boardMin));
+}
+document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;boardMinUserSet=true;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
 const bls=document.getElementById("boardLeagueSel");
 function populateBoardLeague(){
   if(!bls) return;

@@ -285,14 +285,15 @@ def main():
     # 按比赛阶段分桶（补水时间约 30'/75'）
     PHASES=["1-5","6-22","23-45","46-68","69-90","90+","ET"]
     buckets={b:0 for b in PHASES}
-    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）；按实际累计分钟，90+ 与加时自然向右延伸
-    def minute_bin(s):
+    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）
+    def add_minute(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
-        if not m: return None
+        if not m: return
         base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
-        if base==45 and extra>0: return 45      # 上半场补时折入 45'（避免与下半场早段重叠）
-        t=base+extra                            # 其余按真实累计分钟：90+x→91.., 加时 91-120 照实
-        return min(t,130) if t>=1 else None
+        # 上半场补时并入 45'（其后紧接下半场，不能外延到46+，否则会和真实下半场分钟混）；
+        # 其余(含下半场补时 90+x)按真实累计分钟向右自然延伸(90+1→91…)，平缓不断崖。
+        t=45 if (extra>0 and base==45) else base+extra
+        if 1<=t<=130: minuteCounts[t]+=1
     def phase_of(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return None
@@ -318,8 +319,7 @@ def main():
             for g in mt.get(side,[]):
                 ph=phase_of(g.get("minute"))
                 if ph: buckets[ph]+=1          # 时间分布：含乌龙球（乌龙也是进球）
-                mb=minute_bin(g.get("minute"))
-                if mb: minuteCounts[mb]+=1     # 每分钟进球数：同样含乌龙球
+                add_minute(g.get("minute"))   # 常规分钟 / 补时（各半场补时单独统计）
                 if g.get("owngoal") or not g.get("name"): continue   # 以下仅限有射手的进球
                 mn=parse_min(g.get("minute"))
                 pid=resolve(g["name"],team); p=by_id.get(pid) if pid else None
@@ -340,7 +340,7 @@ def main():
                         "nation":canon_nat(team),"nationZh":nat_zh(team),
                         "oppo":canon_nat(oppo),"oppoZh":nat_zh(oppo),"score":persp,
                         "date":mdate,"ground":clean_ground(mt.get("ground",""))})
-    multi.sort(key=lambda x:(-x["n"], x["date"]))
+    multi.sort(key=lambda x:(x["n"], x["date"]), reverse=True)  # 档位降序 + 同档位最近在前
     bigm=[]
     for mt in all_matches:
         ft=mt.get("score",{}).get("ft")
@@ -349,7 +349,7 @@ def main():
             "t2":canon_nat(mt.get("team2")),"t2Zh":nat_zh(mt.get("team2")),
             "ft":f"{ft[0]}-{ft[1]}","total":ft[0]+ft[1],"date":mt.get("date",""),
             "ground":clean_ground(mt.get("ground","")),"num":match_no.get(id(mt),"")})
-    bigm.sort(key=lambda x:(-x["total"], x["date"]))
+    bigm.sort(key=lambda x:(x["total"], x["date"]), reverse=True)  # 总进球降序 + 同档位最近在前
     bigm=[m for m in bigm if m["total"]>=4]   # 进球大战：保留总进球≥4（前端再按档位筛选）
     # 乌龙球：记在受益方名下，乌龙球员属于对手队（nation=对手）
     ownGoals=[]
