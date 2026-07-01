@@ -8,6 +8,14 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.9.2
+
+**Dual-source results / 双源比赛结果**
+- Added ESPN as an auxiliary results feed: openfootball stays the record source, and ESPN fills in matches openfootball hasn't logged yet (so results appear sooner). Team names from any source normalize to one canonical key; scorer names resolve to player IDs accent-insensitively. If ESPN is unavailable the run falls back to openfootball only.
+  新增 ESPN 作为辅助结果源：openfootball 仍为记录源，ESPN 补齐它还没录入的场次（结果更快出现）。任何源的队名归一化到统一键，进球者名以重音无关方式解析到球员 ID；ESPN 不可用时自动退回纯 openfootball。
+- README rewritten with a full screenshot section (one per feature) and dual-source data notes. Raúl Jiménez → 希门尼斯.
+  README 重写，加入按功能分节的完整截图区与双源说明；劳尔·希门尼斯译名修正为希门尼斯。
+
 ## v1.9.1
 
 **Latest Goals feed — polish / 最新进球时间流·打磨**

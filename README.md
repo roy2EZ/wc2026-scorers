@@ -10,13 +10,71 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 
 ---
 
+## Screenshots / 截图
+
+### Hero & stats / 页头与统计
+Title with the six live stat cards — matches played, total goals, scorers, leagues, clubs, and matches with goals.
+标题与六张实时统计卡：比赛进程、总进球、进球球员、涉及联赛、涉及俱乐部、进球场次。
+
+![Hero & stats](screenshots/hero-stats.png)
+
+### Latest Goals / 最新进球
+Every goal grouped by match, newest first. Each match header shows Match #, round & group, a two-color scoreline (each team's flag color), host city, and a penalty-shootout line; goals list the minute (colored by the scoring team), scorer (zh/en) and club.
+全部进球按比赛分组、最新在前。组头含 Match 编号、轮次与小组、两色比分（各取本队旗色）、主办城市、点球大战行；进球行含分钟（按进球方上色）、球员（中英）与俱乐部。
+
+![Latest Goals](screenshots/latest-goals.png)
+
+Earlier days fold into per-day panels colored by stage (group rounds = teal/blue/purple, knockouts = gold→red).
+更早的比赛按天折叠成面板，并按阶段着色（小组 1/2/3 = 青/蓝/紫，淘汰赛 = 金→红）。
+
+![Latest Goals — earlier days](screenshots/latest-goals-days.png)
+
+### Top Scorers / 射手榜领跑者
+Goal ranking (All / 2+…5+), grouped by goal count; cards auto-colored by tier, with jersey number badges and penalty marks.
+进球数排名（全部 / 2+…5+），按进球数分组；卡片按档位自动上色，含号码徽章与点球标记。
+
+![Top Scorers](screenshots/top-scorers.png)
+
+### Goal Origins / 进球来自哪里
+Three charts — by Nation / League / Club — with a Goals ↔ Scorers toggle and per-chart Top 10 / 15 / 20 / All.
+三张图——按国家队 / 联赛 / 俱乐部——可切换进球数 / 进球人数，每张图可选 Top 10 / 15 / 20 / 全部。
+
+![Goal Origins](screenshots/goal-origins.png)
+
+### All Players / 全部球员查询
+A searchable database of all 1,248 players (including 0-goal), with four stacking comboboxes — Player / Nation / League / Club.
+可查询全部 1248 名球员（含 0 球）的数据库，四个可叠加的搜索下拉——球员 / 国家队 / 联赛 / 俱乐部。
+
+![All Players](screenshots/all-players.png)
+
+### Multi-goal Players / 单场多球
+Players who scored a brace or hat-trick in a single match, with the match, scoreline, date and venue.
+单场梅开二度、帽子戏法的球员，附比赛、比分、日期与场地。
+
+![Multi-goal](screenshots/multi-goal.png)
+
+### Goal Fests / 进球大战
+The highest-scoring single matches (4+ / 5+ / 6+ / 7+), as aligned bilingual scorelines.
+单场总进球最多的比赛（4+ / 5+ / 6+ / 7+），以对齐的中英双语比分呈现。
+
+![Goal Fests](screenshots/goal-fests.png)
+
+### Goal Timing / 进球时间分布
+All goals by match phase, a per-minute line chart (with hydration-break markers), and the earliest & latest goal of the tournament.
+全部进球按比赛阶段分布、每分钟进球折线（含补水时间标记），以及全届最早与最晚的进球。
+
+![Goal Timing](screenshots/goal-timing.png)
+
+---
+
 ## Features / 功能
 
-- **Top Scorers / 射手榜领跑者** — goal ranking (All / 2+…5+), grouped by goal count; cards auto-colored by tier, with jersey number and penalty marks. 进球数排名，按进球数分组、自动上色，含号码与点球标记。
-- **Goal Origins / 进球来自哪里** — three charts by Nation / League / Club, with a Goals ↔ Scorers toggle and Top 10/15/20/All. 三张图（国家队 / 联赛 / 俱乐部），可切换进球数/进球人数。
-- **All Players / 全部球员查询** — searchable database of all 1,248 players (incl. 0-goal), with four stacking comboboxes (Player / Nation / League / Club). 可查询全部 1248 名球员（含 0 球），四个可叠加的搜索下拉。
+- **Latest Goals / 最新进球** — every goal grouped by match, newest first; days fold into stage-colored panels, with two-color scorelines and penalty-shootout results. 全部进球按比赛分组、最新在前；按天折叠、按阶段着色，两色比分与点球大战结果。
+- **Top Scorers / 射手榜领跑者** — goal ranking grouped by goal count; tier-colored cards with jersey number and penalty marks. 进球数排名、按进球数分组；档位配色，含号码与点球标记。
+- **Goal Origins / 进球来自哪里** — three charts by Nation / League / Club, with a Goals ↔ Scorers toggle. 三张图（国家队 / 联赛 / 俱乐部），可切换进球数 / 进球人数。
+- **All Players / 全部球员查询** — searchable database of all 1,248 players (incl. 0-goal), with four stacking comboboxes. 可查询全部 1248 名球员（含 0 球），四个可叠加的搜索下拉。
 - **Multi-goal & Goal Fests / 单场多球 & 进球大战** — braces and hat-tricks per match, and the highest-scoring matches. 单场梅开二度/帽子戏法，以及单场进球最多的比赛。
-- **Goal Timing / 进球时间分布** — all goals by match phase, plus the earliest and latest goal. 全部进球按阶段分布，并标出最早/最晚进球。
+- **Goal Timing / 进球时间分布** — goals by match phase, a per-minute line, plus the earliest and latest goal. 进球按阶段分布、每分钟折线，并标出最早/最晚进球。
 
 Fully bilingual and responsive (phone / tablet / desktop).
 全站双语、自适应手机 / 平板 / 电脑。
@@ -25,28 +83,32 @@ Fully bilingual and responsive (phone / tablet / desktop).
 
 ## Data architecture / 数据架构
 
-**Single source of truth**: a master player database with stable IDs. Goals attach to players **by ID**, never by guessing names — so number, position, club and Chinese name never get lost or mismatched.
+**Single source of truth**: a master player database with stable IDs. Goals attach to players **by ID**, never by guessing names — so number, position, club and Chinese name never get lost or mismatched. Match results come from two feeds merged into one: **OpenFootball** (record) with **ESPN** filling any match it hasn't logged yet.
 
-**单一数据源**：带稳定 ID 的球员主表。进球按 **ID** 精确叠加、绝不猜名字，号码/位置/俱乐部/中文名不会错配。
+**单一数据源**：带稳定 ID 的球员主表。进球按 **ID** 精确叠加、绝不猜名字，号码/位置/俱乐部/中文名不会错配。比赛结果由两个源合并：**openfootball（记录源）为主**，**ESPN 补齐它还没录入的场次**。
 
 ```
 players.json + clubs.json + nations.json + scorer_map.json
-        │  update_data.py  (fetch goals → resolve by id → tally → fun-stats)
+        │  update_data.py
+        │    ├─ openfootball (primary)  +  ESPN (fills missing matches)
+        │    └─ resolve scorers → tally by id → fun-stats
         ▼
      data.json  (scorers + roster + funstats)
         │
         ▼
-   index.html  renders everything
+   index.html  renders everything (loading / failed states, no stale snapshot)
 ```
+
+Team names from any source are normalized to one canonical key; scorer names resolve to player IDs accent-insensitively (unresolved names are logged and pinned in `scorer_map.json`).
+任何源的队名都归一化到统一键；进球者名以重音无关方式解析到球员 ID（解析不了的会打日志、锚定进 `scorer_map.json`）。
 
 ---
 
 ## Auto-update / 自动更新
 
-- **Source / 来源**: [openfootball/worldcup.json](https://github.com/openfootball/worldcup.json) — public domain, no API key.
+- **Sources / 来源**: [openfootball/worldcup.json](https://github.com/openfootball/worldcup.json) (public domain, primary) + ESPN's public scoreboard/summary API (auxiliary, fills matches openfootball hasn't logged). openfootball 为主，ESPN 辅助补齐。
 - **Schedule / 定时**: GitHub Actions runs `update_data.py` daily and commits only when data changes; can also be run manually (**Actions → Update WC2026 scorers → Run workflow**). 每天跑一次，有变化才提交，也可手动运行。
-- **Front end / 前端**: ships a built-in snapshot, then fetches `data.json` for the latest. 内置快照秒显，再抓取最新数据覆盖。
-- If a new scorer can't be matched, the log prints `WARNING: unresolved scorer` — add a line to `scorer_map.json` (`"Name": "player-id"`). 新进球者无法匹配时按日志提示补一行映射。
+- **Resilient / 容错**: if ESPN is unavailable the run falls back to openfootball only. If a new scorer can't be matched, the log prints `WARNING: unresolved scorer` — add a line to `scorer_map.json`. ESPN 不可用时自动退回纯 openfootball；新进球者无法匹配时按日志补一行映射。
 - **After the tournament / 赛事结束后**: once totals are confirmed against FIFA's official data, the scheduled job is disabled (manual run kept). 与 FIFA 官方核对一致后停用定时任务。
 
 ---
@@ -55,11 +117,11 @@ players.json + clubs.json + nations.json + scorer_map.json
 
 | File | Description / 说明 |
 |---|---|
-| `index.html` | The site — front end + built-in snapshot + data loading / 网站本体 |
+| `index.html` | The site — front end + data loading (loading/failed states) / 网站本体 |
 | `players.json` | Player master table (1,248) / 球员主表 |
 | `clubs.json` · `nations.json` | Club & nation master tables / 俱乐部、国家主表 |
 | `scorer_map.json` | Scorer name → player id map / 进球者名→id 映射 |
-| `update_data.py` | Fetches goals, generates `data.json` / 抓取并生成数据 |
+| `update_data.py` | Fetches goals (openfootball + ESPN), generates `data.json` / 抓取并生成数据 |
 | `validate_db.py` | Build-time consistency check / 一致性校验 |
 | `data.json` | Generated data (`scorers` + `roster` + `funstats`) / 数据产物 |
 | `VERSION` | Single source of the version number / 版本号来源 |
@@ -69,7 +131,7 @@ players.json + clubs.json + nations.json + scorer_map.json
 
 ## Notes / 数据口径
 
-- Goals from official FIFA data and post-match reports (via openfootball). 进球来自 FIFA 官方数据与赛后报道（经 openfootball 整理）。
+- Match results from openfootball (record) and ESPN (fills gaps). 比赛结果来自 openfootball（记录源）与 ESPN（补齐）。
 - Club = the player's registered club in their squad. 俱乐部 = 球员国家队名单登记的球会。
 - Own goals are **not** credited to individuals (still counted in timing). 乌龙球不计入个人进球（但计入时间分布）。
 

@@ -64,6 +64,67 @@ def toks(n):
 def cnorm(c):
     return re.sub(r'\b(fc|cf|sc|afc|cd|sk|fk|ac|as|ssc|club|de|the)\b','',sa(c or "").lower()).replace(" ","")
 
+# ---- ESPN 辅助源：补齐 openfootball 还没录入的已完赛场次（openfootball 为主）----
+ESPN_BASE="https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world"
+# 各源队名 → 统一归一化键（去重音去非字母 + 少量别名），保证不同源的队名能对上
+_TEAMKEY_ALIAS={"unitedstates":"usa","bosniaherzegovina":"bosnia","bosniaandherzegovina":"bosnia",
+                "congodr":"drcongo","drcongo":"drcongo","czechia":"czech","czechrepublic":"czech","turkiye":"turkey"}
+def team_key(n):
+    k=re.sub(r'[^a-z]','',sa(n or "").lower())
+    return _TEAMKEY_ALIAS.get(k,k)
+def _uget(u,t=25):
+    req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"})
+    return json.load(urllib.request.urlopen(req,timeout=t))
+def _espn_minute(s):
+    return (s or "").replace("'","").strip()   # "45'+5'"→"45+5"，"22'"→"22"
+def merge_espn(all_matches, today):
+    """openfootball 里有日期、无 ft 且已到日期的比赛，用 ESPN 已完赛结果+进球补齐。非致命。"""
+    missing=[m for m in all_matches if not (m.get("score") or {}).get("ft") and m.get("date") and m["date"]<=today]
+    if not missing:
+        print("ESPN: openfootball 无待补场次，跳过"); return 0
+    by_date={}
+    for m in missing: by_date.setdefault(m["date"],[]).append(m)
+    filled=0
+    for d,ms in sorted(by_date.items()):
+        try: sb=_uget(f"{ESPN_BASE}/scoreboard?dates={d.replace('-','')}")
+        except Exception as ex: print(f"  ESPN scoreboard {d} 失败: {ex}"); continue
+        idx={}
+        for e in sb.get("events",[]):
+            comp=(e.get("competitions") or [{}])[0]
+            names=[team_key((c.get("team") or {}).get("displayName")) for c in comp.get("competitors",[])]
+            if len(names)==2: idx[frozenset(names)]=(e,comp)
+        for m in ms:
+            got=idx.get(frozenset((team_key(m.get("team1")),team_key(m.get("team2")))))
+            if not got: continue
+            e,comp=got
+            if not ((e.get("status") or {}).get("type") or {}).get("completed"): continue
+            scmap={team_key((c.get("team") or {}).get("displayName")): c.get("score") for c in comp.get("competitors",[])}
+            try: a=int(scmap[team_key(m["team1"])]); b=int(scmap[team_key(m["team2"])])
+            except Exception: continue
+            try: s=_uget(f"{ESPN_BASE}/summary?event={e.get('id')}")
+            except Exception as ex: print(f"  ESPN summary 失败 {m.get('team1')}-{m.get('team2')}: {ex}"); continue
+            g1,g2=[],[]; pa=pb=0; k1=team_key(m["team1"]); k2=team_key(m["team2"])
+            for k in s.get("keyEvents",[]):
+                tt=((k.get("type") or {}).get("text") or ""); tk=team_key((k.get("team") or {}).get("displayName"))
+                if k.get("shootout"):
+                    if k.get("scoringPlay"):
+                        if tk==k1: pa+=1
+                        elif tk==k2: pb+=1
+                    continue
+                if not (k.get("scoringPlay") or tt in ("Goal","Own Goal")): continue
+                scorer=((k.get("participants") or [{}])[0].get("athlete") or {}).get("displayName","")
+                if not scorer: continue
+                gd={"name":scorer,"minute":_espn_minute((k.get("clock") or {}).get("displayValue",""))}
+                if tt=="Own Goal": gd["owngoal"]=True
+                if "penal" in tt.lower() or k.get("penaltyKick"): gd["penalty"]=True
+                (g1 if tk==k1 else g2).append(gd)
+            m.setdefault("score",{})["ft"]=[a,b]
+            if pa or pb: m["score"]["p"]=[pa,pb]
+            m["goals1"]=g1; m["goals2"]=g2; filled+=1
+            print(f"  [ESPN补齐] {m['team1']} {a}-{b} {m['team2']}  进球={[x['name'] for x in g1+g2]}")
+    print(f"ESPN: 共补齐 {filled} 场")
+    return filled
+
 def main():
     try:
         wc=json.load(urllib.request.urlopen(SRC,timeout=30))
@@ -170,6 +231,11 @@ def main():
     STAGE_EN={"Round of 32":"Round of 32","Round of 16":"Round of 16","Quarter-final":"Quarter-finals",
               "Semi-final":"Semi-finals","Match for third place":"Third place","Final":"Final"}
     all_matches=wc.get("matches",[])
+    # ESPN 辅助补齐（openfootball 为主）；整体失败则退回纯 openfootball
+    try:
+        merge_espn(all_matches, datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+    except Exception as ex:
+        print("ESPN 合并整体失败，退回纯 openfootball：", ex)
     # 按日期+时间给全部比赛编号（= 第几场）
     match_no={}
     for i,mt in enumerate(sorted(all_matches,key=lambda m:(m.get("date",""),m.get("time","")))):

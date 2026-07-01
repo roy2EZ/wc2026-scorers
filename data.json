@@ -1,6 +1,6 @@
 {
- "version": "v1.9.1",
- "updated": "2026-07-01T05:52:24+00:00",
+ "version": "v1.9.2",
+ "updated": "2026-06-30T23:39:34-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 150,
  "totalGoals": 217,
@@ -8,11 +8,11 @@
  "matchesWithGoals": 71,
  "schedule": {
   "total": 104,
-  "played": 78,
+  "played": 79,
   "stageEn": "Round of 32",
   "stageZh": "32强",
   "lastDate": "2026-06-30",
-  "nextDate": "2026-06-30"
+  "nextDate": "2026-07-01"
  },
  "funstats": {
   "multiGoals": [
@@ -396,8 +396,8 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 37,
-   "23-45": 53,
+   "6-22": 38,
+   "23-45": 54,
    "46-68": 60,
    "69-90": 45,
    "90+": 25,
@@ -426,7 +426,7 @@
    2,
    1,
    7,
-   0,
+   1,
    1,
    1,
    0,
@@ -435,7 +435,7 @@
    3,
    4,
    2,
-   5,
+   6,
    3,
    0,
    1,
@@ -743,6 +743,51 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-06-30",
+    "num": 79,
+    "group": "",
+    "round": "Round of 32",
+    "mday": null,
+    "t1": "Mexico",
+    "t1Zh": "墨西哥",
+    "t2": "Ecuador",
+    "t2Zh": "厄瓜多尔",
+    "ft": "2-0",
+    "ground": "Mexico City",
+    "cityZh": "墨西哥城",
+    "hostFlag": "🇲🇽",
+    "hostZh": "墨西哥",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Julian Quinones",
+      "nameZh": "朱利安·奎诺内斯",
+      "nation": "Mexico",
+      "nationZh": "墨西哥",
+      "clubZh": "卡迪西亚",
+      "club": "Al Qadsiah FC",
+      "league": "沙特联",
+      "minute": "22'",
+      "min": 22,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Raul Jimenez",
+      "nameZh": "希门尼斯",
+      "nation": "Mexico",
+      "nationZh": "墨西哥",
+      "clubZh": "富勒姆",
+      "club": "Fulham FC",
+      "league": "英超",
+      "minute": "31'",
+      "min": 31,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-06-30",
     "num": 78,
@@ -5062,7 +5107,7 @@
      },
      {
       "player": "Raul Jimenez",
-      "nameZh": "劳尔",
+      "nameZh": "希门尼斯",
       "nation": "Mexico",
       "nationZh": "墨西哥",
       "clubZh": "富勒姆",
@@ -7585,7 +7630,7 @@
   },
   {
    "player": "Raul Jimenez",
-   "nameZh": "劳尔",
+   "nameZh": "希门尼斯",
    "num": 9,
    "pos": "FW",
    "posZh": "前锋",
@@ -9988,7 +10033,7 @@
   },
   {
    "player": "Raul Jimenez",
-   "nameZh": "劳尔",
+   "nameZh": "希门尼斯",
    "num": 9,
    "pos": "FW",
    "posZh": "前锋",
