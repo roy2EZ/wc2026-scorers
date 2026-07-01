@@ -1,6 +1,6 @@
 {
  "version": "v1.9.5",
- "updated": "2026-07-01T18:00:16+00:00",
+ "updated": "2026-07-01T18:04:01+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 150,
  "totalGoals": 219,
@@ -8,10 +8,10 @@
  "matchesWithGoals": 72,
  "schedule": {
   "total": 104,
-  "played": 79,
+  "played": 80,
   "stageEn": "Round of 32",
   "stageZh": "32强",
-  "lastDate": "2026-06-30",
+  "lastDate": "2026-07-01",
   "nextDate": "2026-07-01"
  },
  "funstats": {
@@ -54,6 +54,19 @@
     "score": "3-0",
     "date": "2026-06-16",
     "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Harry Kane",
+    "nameZh": "凯恩",
+    "nation": "England",
+    "nationZh": "英格兰",
+    "oppo": "DR Congo",
+    "oppoZh": "刚果(金)",
+    "score": "2-1",
+    "date": "2026-07-01",
+    "ground": "Atlanta"
    },
    {
     "n": 2,
@@ -396,10 +409,10 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 37,
+   "6-22": 38,
    "23-45": 55,
    "46-68": 60,
-   "69-90": 45,
+   "69-90": 47,
    "90+": 25,
    "ET": 0
   },
@@ -411,7 +424,7 @@
    2,
    2,
    4,
-   7,
+   8,
    0,
    2,
    4,
@@ -479,7 +492,7 @@
    1,
    2,
    3,
-   2,
+   3,
    5,
    1,
    4,
@@ -490,7 +503,7 @@
    3,
    3,
    1,
-   2,
+   3,
    1,
    2,
    2,
@@ -743,6 +756,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-01",
+    "num": 80,
+    "group": "",
+    "round": "Round of 32",
+    "mday": null,
+    "t1": "England",
+    "t1Zh": "英格兰",
+    "t2": "DR Congo",
+    "t2Zh": "刚果(金)",
+    "ft": "2-1",
+    "ground": "Atlanta",
+    "cityZh": "亚特兰大",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Brian Cipenga",
+      "nameZh": "布赖恩·西彭加",
+      "nation": "DR Congo",
+      "nationZh": "刚果(金)",
+      "clubZh": "卡斯特利翁",
+      "club": "CD Castellón",
+      "league": "西甲",
+      "minute": "7'",
+      "min": 7,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Harry Kane",
+      "nameZh": "凯恩",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "拜仁慕尼黑",
+      "club": "FC Bayern München",
+      "league": "德甲",
+      "minute": "75'",
+      "min": 75,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Harry Kane",
+      "nameZh": "凯恩",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "拜仁慕尼黑",
+      "club": "FC Bayern München",
+      "league": "德甲",
+      "minute": "86'",
+      "min": 86,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-06-30",
     "num": 79,
