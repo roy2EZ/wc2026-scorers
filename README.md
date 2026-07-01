@@ -6,7 +6,7 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 
 🔗 **Live / 在线**: https://roy2ez.github.io/wc2026-scorers/
 
-![App preview](screenshots/promo-en.png)
+<img alt="App preview" src="screenshots/promo-en.png" width="720">
 
 ---
 
@@ -16,54 +16,54 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 Title with the six live stat cards — matches played, total goals, scorers, leagues, clubs, and matches with goals.
 标题与六张实时统计卡：比赛进程、总进球、进球球员、涉及联赛、涉及俱乐部、进球场次。
 
-![Hero & stats](screenshots/hero-stats.png)
+<img alt="Hero & stats" src="screenshots/hero-stats.png" width="600">
 
 ### Latest Goals / 最新进球
 Every goal grouped by match, newest first. Each match header shows Match #, round & group, a two-color scoreline (each team's flag color), host city, and a penalty-shootout line; goals list the minute (colored by the scoring team), scorer (zh/en) and club.
 全部进球按比赛分组、最新在前。组头含 Match 编号、轮次与小组、两色比分（各取本队旗色）、主办城市、点球大战行；进球行含分钟（按进球方上色）、球员（中英）与俱乐部。
 
-![Latest Goals](screenshots/latest-goals.png)
+<img alt="Latest Goals" src="screenshots/latest-goals.png" width="600">
 
 Earlier days fold into per-day panels colored by stage (group rounds = teal/blue/purple, knockouts = gold→red).
 更早的比赛按天折叠成面板，并按阶段着色（小组 1/2/3 = 青/蓝/紫，淘汰赛 = 金→红）。
 
-![Latest Goals — earlier days](screenshots/latest-goals-days.png)
+<img alt="Latest Goals — earlier days" src="screenshots/latest-goals-days.png" width="600">
 
 ### Top Scorers / 射手榜领跑者
 Goal ranking (All / 2+…5+), grouped by goal count; cards auto-colored by tier, with jersey number badges and penalty marks.
 进球数排名（全部 / 2+…5+），按进球数分组；卡片按档位自动上色，含号码徽章与点球标记。
 
-![Top Scorers](screenshots/top-scorers.png)
+<img alt="Top Scorers" src="screenshots/top-scorers.png" width="600">
 
 ### Goal Origins / 进球来自哪里
 Three charts — by Nation / League / Club — with a Goals ↔ Scorers toggle and per-chart Top 10 / 15 / 20 / All.
 三张图——按国家队 / 联赛 / 俱乐部——可切换进球数 / 进球人数，每张图可选 Top 10 / 15 / 20 / 全部。
 
-![Goal Origins](screenshots/goal-origins.png)
+<img alt="Goal Origins" src="screenshots/goal-origins.png" width="600">
 
 ### All Players / 全部球员查询
 A searchable database of all 1,248 players (including 0-goal), with four stacking comboboxes — Player / Nation / League / Club.
 可查询全部 1248 名球员（含 0 球）的数据库，四个可叠加的搜索下拉——球员 / 国家队 / 联赛 / 俱乐部。
 
-![All Players](screenshots/all-players.png)
+<img alt="All Players" src="screenshots/all-players.png" width="600">
 
 ### Multi-goal Players / 单场多球
 Players who scored a brace or hat-trick in a single match, with the match, scoreline, date and venue.
 单场梅开二度、帽子戏法的球员，附比赛、比分、日期与场地。
 
-![Multi-goal](screenshots/multi-goal.png)
+<img alt="Multi-goal" src="screenshots/multi-goal.png" width="600">
 
 ### Goal Fests / 进球大战
 The highest-scoring single matches (4+ / 5+ / 6+ / 7+), as aligned bilingual scorelines.
 单场总进球最多的比赛（4+ / 5+ / 6+ / 7+），以对齐的中英双语比分呈现。
 
-![Goal Fests](screenshots/goal-fests.png)
+<img alt="Goal Fests" src="screenshots/goal-fests.png" width="600">
 
 ### Goal Timing / 进球时间分布
 All goals by match phase, a per-minute line chart (with hydration-break markers), and the earliest & latest goal of the tournament.
 全部进球按比赛阶段分布、每分钟进球折线（含补水时间标记），以及全届最早与最晚的进球。
 
-![Goal Timing](screenshots/goal-timing.png)
+<img alt="Goal Timing" src="screenshots/goal-timing.png" width="600">
 
 ---
 
