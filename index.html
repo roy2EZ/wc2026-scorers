@@ -127,6 +127,12 @@
   .score{display:flex;align-items:center;gap:9px;flex:none}
   .pips{display:inline-flex;flex-wrap:wrap;gap:3px;width:104px;justify-content:flex-start;align-items:center}
   @media(max-width:560px){ .pips{width:78px} }
+  .score .aslbl{display:flex;flex-direction:column;line-height:1.2;width:104px}
+  .score .aslbl b{font-size:11px;color:#aeb7ce;font-weight:700}
+  .score .aslbl i{font-style:normal;font-size:9.5px;color:#8a93ab;font-weight:500}
+  .score .aslbl em{font-style:normal;font-size:9.5px;color:#7f8aa3;font-weight:600;margin-top:2px}
+  @media(max-width:560px){ .score .aslbl{width:78px} }
+  .asrc{margin-top:14px;font-family:'Noto Sans SC';font-size:11.5px;color:#8a93ab}
   .pip{font-style:normal;font-size:13px;line-height:1;width:18px;height:18px;
     display:inline-flex;align-items:center;justify-content:center}
   .pip.pen{position:relative;border-radius:50%;background:rgba(255,45,120,.16);box-shadow:0 0 0 1.6px var(--pink)}
@@ -438,7 +444,7 @@
 
 <section>
   <div class="wrap">
-    <div class="shead"><h2>射手榜<b>领跑者</b><span class="enh">Top Scorers</span></h2>
+    <div class="shead"><h2>射手<b>榜</b><span class="enh">Top Scorers</span></h2>
       <div class="boardctl">
         <span class="boardlf">按进球数 By goals</span>
         <div class="chips" id="boardchips"></div>
@@ -452,6 +458,19 @@
       <span><i class="pip">⚽</i> 运动战进球 Open play</span>
       <span><i class="pip pen">⚽</i> 点球 Penalty</span>
     </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <div class="shead"><h2>助攻<b>榜</b><span class="enh">Top Assists</span>
+      <div class="boardctl">
+        <span class="boardlf">按助攻数 By assists</span>
+        <div class="chips" id="assistchips"></div>
+      </div>
+    </div>
+    <div class="board" id="assistBoard"></div>
+    <div class="asrc">数据来源：ESPN 官方赛事助攻榜 · Assist counts per ESPN official tournament leaders</div>
   </div>
 </section>
 
@@ -551,7 +570,7 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section style="padding-top:6px;display:none">
   <div class="wrap">
     <div class="shead"><h2>进球<b>大战</b><span class="enh">Goal Fests</span></h2></div>
     <div class="boardctl">
@@ -569,7 +588,7 @@
     <div class="minutecard">
       <div class="minutehd">每分钟进球 <span class="mhd-en">By Minute</span></div>
       <div class="minutewrap"><canvas id="minuteChart"></canvas></div>
-      <div class="minutenote">每分钟进球（3 分钟聚合看趋势）；上半场补时并入 45'，下半场补时按 90+ 向右自然延伸<span style="display:block;margin-top:2px">Goals per minute (3-min bins); first-half stoppage counts at 45', second-half stoppage extends past 90' (90+1→91'…)</span></div>
+      <div class="minutenote">每分钟进球（逐分钟统计）；上半场补时（45+）、下半场补时（90+）各自单独成段并标注<span style="display:block;margin-top:2px">Goals per minute; first-half (45+) and second-half (90+) stoppage each shown as its own marked segment</span></div>
     </div>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
@@ -592,14 +611,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.9.5</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.10.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.9.5", BUILD_TIME="2026-07-01 18:00";
+const APP_VERSION="v1.10.0", BUILD_TIME="2026-07-01 20:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -686,6 +705,7 @@ let lastUpdated=null, dataUpdatedRaw=null, dataVersion=null;
 let matchesCount=54;
 let SCHEDULE=null;
 let FUN=null;
+let ASSISTS=[];   // 助攻榜（来自 data.json.assists，ESPN 官方赛事助攻榜）
 function setUpdated(ts,live){
   dataUpdatedRaw = ts || null;
   lastUpdated = ts?new Date(ts):new Date();
@@ -720,7 +740,7 @@ const MEDALS=["🥇","🥈","🥉"];
 function renderBoard(){
   setupBoardChips();
   const pool = boardLeague ? DATA.filter(d=>d.league===boardLeague) : DATA;
-  const rows=pool.filter(d=>d.goals>=boardMin).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player));
+  const rows=pool.filter(d=>d.goals>=boardMin).sort((a,b)=>b.goals-a.goals||(b.assists||0)-(a.assists||0)||a.player.localeCompare(b.player));
   const el=document.getElementById("board");
   if(!rows.length){ el.innerHTML='<div class="note" style="padding:8px">该筛选下暂无达到 '+boardMin+'+ 球的球员 · No players with '+boardMin+'+ goals here</div>'; return; }
   const maxG=pool.reduce((m,d)=>Math.max(m,d.goals),0);
@@ -747,6 +767,44 @@ function renderBoard(){
   rows.forEach((d,i)=>{ if(!cur||cur.g!==d.goals){cur={g:d.goals,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
   el.innerHTML=groups.map(grp=>{ const n=grp.items.length;
     return `<div class="bgrp-hd">${grp.g} 球 <span class="bgrp-en">Goals</span> · <b>${n}</b> 人 <span class="bgrp-en">player${n===1?"":"s"}</span></div>`+
+      `<div class="board-group">${grp.items.join("")}</div>`;}).join("");
+}
+let assistMin=null, assistMinUserSet=false;
+function setupAssistChips(){
+  const el=document.getElementById("assistchips"); if(!el) return;
+  const tiers=[...new Set(ASSISTS.filter(d=>d.assists>0).map(d=>d.assists))].sort((a,b)=>b-a);
+  const maxA=tiers[0]||0;
+  const def = maxA<2 ? 1 : Math.max(2, maxA-2);   // 金银铜按数值：maxA / maxA-1 / maxA-2
+  if(!assistMinUserSet || assistMin==null || assistMin>maxA) assistMin=def;
+  let html='<button type="button" data-amin="1">全部 All</button>';
+  for(let g=2; g<=Math.max(maxA,2); g++) html+=`<button type="button" data-amin="${g}">${g}+</button>`;
+  el.innerHTML=html;
+  [...el.children].forEach(b=>b.classList.toggle("on", +b.dataset.amin===assistMin));
+}
+function renderAssists(){
+  const el=document.getElementById("assistBoard"); if(!el) return;
+  if(!ASSISTS.length){ el.innerHTML='<div class="note" style="padding:8px">暂无助攻数据 · No assist data yet</div>'; return; }
+  setupAssistChips();
+  const pool=ASSISTS;
+  const rows=pool.filter(d=>d.assists>=assistMin).sort((a,b)=>b.assists-a.assists||b.goals-a.goals||a.player.localeCompare(b.player));
+  if(!rows.length){ el.innerHTML='<div class="note" style="padding:8px">该筛选下暂无达到 '+assistMin+'+ 助攻的球员 · No players with '+assistMin+'+ assists</div>'; return; }
+  const maxA=pool.reduce((m,d)=>Math.max(m,d.assists),0);
+  const tiers=[...new Set(pool.filter(d=>d.assists>0).map(d=>d.assists))].sort((a,b)=>b-a);   // 奖牌按助攻档位：金/银/铜
+  const rowHTML=rows.map((d,i)=>{
+    const st=tierStyle(d.assists,maxA);
+    const mi=tiers.indexOf(d.assists);
+    const rankCell=(mi>=0&&mi<3)?`<span class="rank medal">${MEDALS[mi]}</span>`
+      :`<span class="rank" style="color:${st.strong}">${i+1}</span>`;
+    const team=`<span class="team"><span class="flag">${fl(d.teamEn)}</span><span class="tnm">${d.teamZh}</span><span class="tnm-en">${natEn(d.teamEn)}</span>${d.num?`<span class="tnum">#${d.num}</span>`:""}</span>`;
+    return `<div class="row${mi===0?' top3':''}" style="border-color:${st.border};background:${st.bg};border-left:5px solid ${st.bar}">
+       ${rankCell}
+       ${team}
+       <span class="who"><div class="who-in"><div class="nm">${pzr(d)}</div><div class="nm-en">${d.player}</div><div class="cl">${lfl(d.league)?lfl(d.league)+' ':''}${czr(d)}</div><div class="cl-en">${cabbr(d.club)}</div></div></span>
+       <span class="score"><b class="balls" style="color:${st.strong}">${d.assists}</b><span class="aslbl"><b>助攻</b><i>Assists</i>${d.goals?`<em>${d.goals} 球 G</em>`:""}</span></span></div>`;});
+  const groups=[]; let cur=null;
+  rows.forEach((d,i)=>{ if(!cur||cur.g!==d.assists){cur={g:d.assists,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
+  el.innerHTML=groups.map(grp=>{ const n=grp.items.length;
+    return `<div class="bgrp-hd">${grp.g} 助攻 <span class="bgrp-en">Assists</span> · <b>${n}</b> 人 <span class="bgrp-en">player${n===1?"":"s"}</span></div>`+
       `<div class="board-group">${grp.items.join("")}</div>`;}).join("");
 }
 function fmtMD(s){const p=(s||"").split("-");return p.length===3?`${+p[1]}月${+p[2]}日`:s;}
@@ -815,23 +873,37 @@ let minuteCh=null;
 function renderMinuteLine(){
   const cv=document.getElementById("minuteChart"); if(!cv) return;
   const mc=(FUN&&FUN.minuteCounts)||[];
+  const st=(FUN&&FUN.stoppage1)||[];
   let maxM=0; for(let i=mc.length-1;i>=1;i--){ if(mc[i]){ maxM=i; break; } }
   if(!maxM){ return; }
-  const BIN=3, nb=Math.ceil(maxM/BIN);   // 3 分钟一档聚合（平滑看趋势；补时并入所在半场末）
-  const data=[], ranges=[];
-  for(let k=0;k<nb;k++){
-    const lo=k*BIN+1, hi=k*BIN+BIN; let s=0;
-    for(let m=lo;m<=hi;m++) s+=mc[m]||0;
-    data.push({x:hi,y:s}); ranges.push(lo+"-"+hi+"'");
-  }
-  const BREAKS=[{m:22.5,zh:"💧 补水"},{m:68.5,zh:"💧 补水"}];   // 上/下半场补水时间
+  let Smax=0; for(let i=st.length-1;i>=1;i--){ if(st[i]){ Smax=i; break; } }
+  const shift=Smax;              // 下半场整体右移，给上半场补时段(45+)腾出独立宽度
+  const BIN=3;                   // 3 分钟一档（看趋势更清爽）
+  const data=[], labels=[];
+  const lab=(lo,hi)=>lo===hi?lo+"'":lo+"-"+hi+"'";
+  // 上半场 1-45（逐分钟）
+  for(let lo=1;lo<=45;lo+=BIN){ const hi=Math.min(lo+BIN-1,45); let s=0;
+    for(let m=lo;m<=hi;m++) s+=mc[m]||0; data.push({x:hi,y:s}); labels.push(lab(lo,hi)); }
+  // 上半场补时 45+ —— 与两半同为 3 分钟聚合(尺度一致)，独立成段夹在 45 与 46 之间（连续不断线）
+  for(let lo=1;lo<=Smax;lo+=BIN){ const hi=Math.min(lo+BIN-1,Smax); let s=0;
+    for(let e=lo;e<=hi;e++) s+=st[e]||0; data.push({x:45+hi,y:s}); labels.push(lo===hi?`45+${lo}'`:`45+${lo}-${hi}'`); }
+  // 下半场 46-maxM（逐分钟，整体右移 shift；下半场补时 90+x 已右延）
+  for(let lo=46;lo<=maxM;lo+=BIN){ const hi=Math.min(lo+BIN-1,maxM); let s=0;
+    for(let m=lo;m<=hi;m++) s+=mc[m]||0; data.push({x:hi+shift,y:s}); labels.push(lab(lo,hi)); }
+  const maxX=maxM+shift;
+  const bandL=45.5, bandR=45.5+Smax;   // 上半场补时段左右边界(显示坐标)
+  const BREAKS=[{m:22.5},{m:68.5+shift}];                     // 上/下半场补水时间(下半场随右移)
   const breaksPlugin={id:"breaks",afterDatasetsDraw(ch){
-    const {ctx,chartArea:a,scales:{x}}=ch; ctx.save();
+    const {ctx,chartArea:a,scales:{x}}=ch; ctx.save(); ctx.textAlign="center";
+    const shade=(x0,x1,tx)=>{ const xl=x.getPixelForValue(x0), xr=x.getPixelForValue(x1); if(xr<=xl) return;
+      ctx.fillStyle="rgba(110,167,255,.07)"; ctx.fillRect(xl,a.top,xr-xl,a.bottom-a.top);
+      ctx.fillStyle="#9bb6e8"; ctx.font="bold 9.5px sans-serif"; ctx.fillText(tx,(xl+xr)/2,a.top-5); };
+    if(Smax) shade(bandL,bandR,"45+");                  // 上半场补时段
+    if(maxM>90) shade(90.5+shift,maxM+shift,"90+");     // 下半场补时段(镜像 45+)
     BREAKS.forEach(b=>{ const px=x.getPixelForValue(b.m); if(px<a.left||px>a.right) return;
       ctx.strokeStyle="rgba(110,167,255,.55)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
       ctx.beginPath(); ctx.moveTo(px,a.top); ctx.lineTo(px,a.bottom); ctx.stroke(); ctx.setLineDash([]);
-      ctx.textAlign="center";
-      ctx.fillStyle="#9bb6e8"; ctx.font="10px sans-serif"; ctx.fillText(b.zh, px, a.top-14);
+      ctx.fillStyle="#9bb6e8"; ctx.font="10px sans-serif"; ctx.fillText("💧 补水", px, a.top-14);
       ctx.fillStyle="#6f7da0"; ctx.font="8.5px sans-serif"; ctx.fillText("Hydration", px, a.top-4); });
     ctx.restore();
   }};
@@ -839,19 +911,22 @@ function renderMinuteLine(){
   const grad=ctx.createLinearGradient(0,0,0,200);
   grad.addColorStop(0,"rgba(231,178,59,.34)"); grad.addColorStop(1,"rgba(231,178,59,0)");
   if(minuteCh) minuteCh.destroy();
+  const tickVals=[15,30,45];
+  for(const v of [60,75,90]) if(v<=maxM) tickVals.push(v+shift);
   minuteCh=new Chart(cv,{type:"line",plugins:[breaksPlugin],
-    data:{datasets:[{data,borderColor:"#E7B23B",borderWidth:2,fill:true,backgroundColor:grad,
+    data:{datasets:[{data,spanGaps:false,borderColor:"#E7B23B",borderWidth:2,fill:true,backgroundColor:grad,
       tension:.35,pointRadius:0,pointHoverRadius:4,pointHoverBackgroundColor:"#FCE79A",pointHoverBorderColor:"#fff"}]},
     options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:22}},
       animation:reduce?false:{duration:700,easing:"easeOutQuart"},
       plugins:{legend:{display:false},
         tooltip:{backgroundColor:"#0E1424",borderColor:"#27304b",borderWidth:1,padding:9,
           titleColor:"#EAEEF7",bodyColor:"#8A93AB",
-          callbacks:{title:it=>ranges[it[0].dataIndex],label:c=>` ${c.parsed.y} 球 goals`}}},
+          callbacks:{title:it=>labels[it[0].dataIndex]||"",label:c=>` ${c.parsed.y} 球 goals`}}},
       scales:{
-        x:{type:"linear",min:0,max:maxM,grid:{display:false},
-           ticks:{stepSize:15,color:"#7a849c",font:{family:"'Space Mono'",size:10},maxRotation:0,
-             callback:v=>v>0?v+"'":""}},
+        x:{type:"linear",min:0,max:maxX,grid:{display:false},
+           afterBuildTicks:sc=>{ sc.ticks=tickVals.map(value=>({value})); },
+           ticks:{color:"#7a849c",font:{family:"'Space Mono'",size:10},maxRotation:0,autoSkip:false,
+             callback:v=>{ if(v<=45.5) return v+"'"; return Math.round(v-shift)+"'"; }}},
         y:{beginAtZero:true,grid:{color:"rgba(39,48,75,.5)"},
            ticks:{precision:0,color:"#7a849c",font:{family:"'Space Mono'",size:10},maxTicksLimit:5}}}}});
 }
@@ -940,8 +1015,8 @@ function setupFestChips(){
   const el=document.getElementById("festchips"); if(!el) return;
   const totals=[...new Set(((FUN&&FUN.bigMatches)||[]).map(x=>x.total))].sort((a,b)=>b-a);
   const maxT=totals[0]||7;
-  const def = totals.length>=3 ? totals[2] : (totals.length?totals[totals.length-1]:5);  // 第三高总进球 → 露出最高三档
-  if(!festMinUserSet || festMin==null || festMin>maxT) festMin=Math.max(4,def);
+  const def = Math.max(4, maxT-2);  // 金银铜按数值：maxT / maxT-1 / maxT-2，默认露出最高三档阈值(哪怕中间断档)
+  if(!festMinUserSet || festMin==null || festMin>maxT) festMin=def;
   let html='';
   for(let g=4; g<=Math.max(maxT,7); g++) html+=`<button type="button" data-fmin="${g}">${g}+</button>`;
   el.innerHTML=html;
@@ -1037,7 +1112,7 @@ function setupBoardChips(){
   const pool = boardLeague ? DATA.filter(d=>d.league===boardLeague) : DATA;
   const tiers=[...new Set(pool.filter(d=>d.goals>0).map(d=>d.goals))].sort((a,b)=>b-a);
   const maxG=tiers[0]||0;
-  const def = tiers.length>=3 ? tiers[2] : (tiers.length?tiers[tiers.length-1]:1);  // 第三高档位 → 金银铜三档必露
+  const def = maxG<2 ? 1 : Math.max(2, maxG-2);  // 金银铜按数值：maxG / maxG-1 / maxG-2，默认露出最高三档(哪怕中间断档)
   if(!boardMinUserSet || boardMin==null || boardMin>maxG) boardMin=def;
   let html='<button type="button" data-bmin="1">全部 All</button>';
   for(let g=2; g<=Math.max(maxG,2); g++) html+=`<button type="button" data-bmin="${g}">${g}+</button>`;
@@ -1045,6 +1120,7 @@ function setupBoardChips(){
   [...el.children].forEach(b=>b.classList.toggle("on", +b.dataset.bmin===boardMin));
 }
 document.getElementById("boardchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;boardMin=+b.dataset.bmin;boardMinUserSet=true;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderBoard();});
+document.getElementById("assistchips").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;assistMin=+b.dataset.amin;assistMinUserSet=true;[...e.currentTarget.children].forEach(x=>x.classList.toggle("on",x===b));renderAssists();});
 const bls=document.getElementById("boardLeagueSel");
 function populateBoardLeague(){
   if(!bls) return;
@@ -1276,7 +1352,7 @@ function renderFooter(){
   set("buildVer",APP_VERSION); set("buildTime",BUILD_TIME);
   set("dataVer", dataUpdatedRaw? String(dataUpdatedRaw).slice(0,16).replace("T"," ") : "snapshot");
 }
-function renderAll(){ recompute(); populateBoardLeague(); renderStats(); renderBoard(); renderFun(); buildComboData(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
+function renderAll(){ recompute(); populateBoardLeague(); renderStats(); renderBoard(); renderAssists(); renderFun(); buildComboData(); populateClubLeague(); renderCharts(); render(); renderFooter(); }
 
 // 读取自动生成的 data.json；失败则保留内置快照
 async function refresh(){
@@ -1288,7 +1364,7 @@ async function refresh(){
       DATA = j.scorers.map(x=>({
         player:x.player, nameZh:x.nameZh||"", teamEn:x.nation,
         teamZh:x.nationZh || NATIONZH[x.nation] || x.nation,
-        goals:x.goals, pens:x.pens||0, club:x.club||"—", clubZh:x.clubZh||"", league:x.league||"—", num:x.num
+        goals:x.goals, pens:x.pens||0, assists:x.assists||0, club:x.club||"—", clubZh:x.clubZh||"", league:x.league||"—", num:x.num
       }));
       if(typeof j.matchesWithGoals==="number") matchesCount=j.matchesWithGoals;
       if(j.schedule) SCHEDULE=j.schedule;
@@ -1296,6 +1372,10 @@ async function refresh(){
       if(Array.isArray(j.roster) && j.roster.length){
         TABLE_DATA = j.roster.map(x=>({player:x.player,nameZh:x.nameZh||"",teamEn:x.nation,goals:x.goals,pens:x.pens||0,club:x.club,clubZh:x.clubZh||"",league:x.league,teamZh:x.nationZh,num:x.num,pos:x.pos,posZh:x.posZh}));
       } else { TABLE_DATA = DATA; }
+      ASSISTS = Array.isArray(j.assists) ? j.assists.map(x=>({
+        player:x.player, nameZh:x.nameZh||"", teamEn:x.nation, teamZh:x.nationZh||x.nation,
+        assists:x.assists||0, goals:x.goals||0, club:x.club||"—", clubZh:x.clubZh||"", league:x.league||"—", num:x.num
+      })) : [];
       dataVersion = j.version || null;
       renderAll(); setUpdated(j.updated, true);
       return true;

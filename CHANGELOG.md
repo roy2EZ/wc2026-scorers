@@ -8,6 +8,21 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.10.0
+
+- **新增「助攻榜 Top Assists」板块**（射手榜正下方）：数据取自 **ESPN 官方赛事助攻榜**，全部解析到球员主库，显示中文名·俱乐部·联赛旗，并同时标注进球数；金/银/铜档位配色，配**动态档位筛选按钮**（与射手榜同一套金银铜逻辑）。
+  Added a **Top Assists** board right below Top Scorers, sourced from ESPN's official tournament assist leaders, resolved to the player database (Chinese name · club · league) with goals shown alongside; gold/silver/bronze tiers and adaptive filter chips.
+- **射手榜同分并列按助攻排序**：进球数相同时，助攻多者靠前（贴近 FIFA 金靴奖并列规则第 2 顺位），奖牌仍按进球档位发放。
+  Ties in Top Scorers are now broken by assists (per FIFA Golden Boot rule 2); medals still follow the goal tier.
+- **进球时间分布·每分钟折线图重构**：上半场补时 **45+**、下半场补时 **90+** 各自单独成段并着色标注、与正常时间连续不断线；统一为 **3 分钟**尺度；横坐标简化为 15/30/45/60/75/90。
+  Rebuilt the per-minute line chart: first-half (45+) and second-half (90+) stoppage each shown as its own marked, connected segment; unified 3-minute scale; cleaner x-axis.
+- **筛选按钮默认阈值改为按数值取金银铜**（`最高档-2`，如最高 8 → 默认 6+），中间断档也能正确露出前三档。
+  Filter chips now default to the top-three tiers by value (`max-2`), robust to gaps.
+- 「射手榜领跑者」更名为「**射手榜**」，与助攻榜对齐；隐藏「进球大战」板块；README 同步（删进球大战、加助攻榜）。
+  Renamed the "Top Scorers" heading, hid the "Goal Fests" section, updated README accordingly.
+- 数据修正：法国 Michael Olise 中文名改为「奥利塞」。
+  Data fix: Michael Olise's Chinese name → 奥利塞.
+
 ## v1.9.5
 
 **All Players — adaptive goal filter / 全部球员查询·自适应档位**

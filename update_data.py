@@ -77,6 +77,25 @@ def _uget(u,t=25):
     return json.load(urllib.request.urlopen(req,timeout=t))
 def _espn_minute(s):
     return (s or "").replace("'","").strip()   # "45'+5'"→"45+5"，"22'"→"22"
+# ESPN 官方赛事榜（含 goalsLeaders/assistsLeaders），用于助攻榜。每条 athlete/team 均为 $ref。
+ESPN_LEADERS="https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/seasons/2026/types/0/leaders"
+def fetch_espn_assist_leaders(top=25):
+    """返回 [(name, nation, assists)]，按助攻降序；非致命，失败/异常返回 []。
+    只拉 athlete $ref（同时含 displayName 与 citizenship=国家），不再拉 team，省一半请求。"""
+    lead=_uget(ESPN_LEADERS)
+    cats={c.get("name"):c for c in lead.get("categories",[])}
+    al=(cats.get("assistsLeaders") or {}).get("leaders",[]) or []
+    out=[]
+    for l in al[:top]:
+        v=int(l.get("value") or 0)
+        if v<=0: continue
+        aref=(l.get("athlete") or {}).get("$ref")
+        if not aref: continue
+        try: a=_uget(aref)
+        except Exception: continue
+        nm=a.get("displayName") or a.get("fullName")
+        if nm: out.append((nm, a.get("citizenship") or "", v))
+    return out
 def merge_espn(all_matches, today):
     """openfootball 里有日期、无 ft 且已到日期的比赛，用 ESPN 已完赛结果+进球补齐。非致命。"""
     missing=[m for m in all_matches if not (m.get("score") or {}).get("ft") and m.get("date") and m["date"]<=today]
@@ -285,14 +304,16 @@ def main():
     # 按比赛阶段分桶（补水时间约 30'/75'）
     PHASES=["1-5","6-22","23-45","46-68","69-90","90+","ET"]
     buckets={b:0 for b in PHASES}
-    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）
+    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）：上半场1-45 + 下半场46+（下半场补时90+x→91…右延）
+    stoppage1=[0]*20       # 上半场补时(45+1..45+19)单独统计：前端折线在45与46之间画成独立一段
     def add_minute(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return
         base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
-        # 上半场补时并入 45'（其后紧接下半场，不能外延到46+，否则会和真实下半场分钟混）；
-        # 其余(含下半场补时 90+x)按真实累计分钟向右自然延伸(90+1→91…)，平缓不断崖。
-        t=45 if (extra>0 and base==45) else base+extra
+        if base==45 and extra>0:                    # 上半场补时：单独成段，不并入 45'
+            if 1<=extra<len(stoppage1): stoppage1[extra]+=1
+            return
+        t=base+extra                                # 下半场补时 90+x 按真实分钟向右自然延伸(91…)，不断崖
         if 1<=t<=130: minuteCounts[t]+=1
     def phase_of(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
@@ -412,9 +433,33 @@ def main():
             "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,
             "shootout":(mt.get("score",{}).get("p") or None),"goals":glist})
     goalFeed.sort(key=lambda m:(m["date"],m["num"]), reverse=True)
-    funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"ownGoals":ownGoals,
+    funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"stoppage1":stoppage1,"ownGoals":ownGoals,
               "goalFeed":goalFeed,
               "earliest":earliest,"latest":latest,"bigMatches":bigm}
+
+    # 助攻榜：直接引用 ESPN 官方赛事 assistsLeaders（权威、无需逐场累加）；解析到球员库拿中文名/俱乐部。非致命。
+    assists=[]
+    try:
+        unresolved_a=[]
+        for nm,nation,v in fetch_espn_assist_leaders():
+            pid=resolve(nm,nation); p=by_id.get(pid) if pid else None
+            if p:
+                rec=expand(p, goals_by_id.get(p["id"],0), pens_by_id.get(p["id"],0))
+            else:
+                unresolved_a.append(f"{nm}({nation})")
+                rec={"player":nm,"nameZh":"","num":"","pos":"","posZh":"",
+                     "nation":canon_nat(nation),"nationZh":nat_zh(nation),
+                     "goals":0,"pens":0,"club":"—","clubZh":"","league":"—","club_id":"","id":""}
+            rec["assists"]=v; assists.append(rec)
+        assists.sort(key=lambda x:(-x["assists"], -x["goals"], x["player"]))
+        print(f"助攻榜：{len(assists)} 人（ESPN assistsLeaders）"
+              + (f"；未匹配到球员库: {', '.join(unresolved_a)}" if unresolved_a else "；全部已匹配"))
+    except Exception as ex:
+        print("助攻榜抓取失败（非致命，跳过）：", ex); assists=[]
+
+    # 把助攻数回填进 scorers：射手榜同进球档内按“助攻多者靠前”（贴近 FIFA 金靴并列规则第2顺位）
+    amap={r["id"]:r["assists"] for r in assists if r.get("id")}
+    for s in scorers: s["assists"]=amap.get(s["id"],0)
 
     out={"version":read_version(),
          "updated":datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
@@ -422,6 +467,7 @@ def main():
          "count":len(scorers),"totalGoals":sum(s["goals"] for s in scorers),
          "totalPens":sum(s["pens"] for s in scorers),
          "matchesWithGoals":matches_with_goals,"schedule":schedule,"funstats":funstats,"scorers":scorers,
+         "assists":assists,"assistsCount":len(assists),
          "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 

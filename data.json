@@ -1,6 +1,6 @@
 {
- "version": "v1.9.5",
- "updated": "2026-07-01T11:12:41-07:00",
+ "version": "v1.10.0",
+ "updated": "2026-07-01T12:00:12-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 151,
  "totalGoals": 222,
@@ -462,7 +462,7 @@
    4,
    5,
    1,
-   12,
+   2,
    1,
    3,
    1,
@@ -535,6 +535,28 @@
    0,
    0,
    0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "stoppage1": [
+   0,
+   2,
+   0,
+   3,
+   0,
+   4,
+   1,
    0,
    0,
    0,
@@ -5553,7 +5575,8 @@
    "clubZh": "皇家马德里",
    "league": "西甲",
    "club_id": "real-madrid",
-   "id": "FRA-10"
+   "id": "FRA-10",
+   "assists": 2
   },
   {
    "player": "Lionel Messi",
@@ -5569,7 +5592,8 @@
    "clubZh": "迈阿密国际",
    "league": "美职联",
    "club_id": "inter-miami",
-   "id": "ARG-10"
+   "id": "ARG-10",
+   "assists": 0
   },
   {
    "player": "Erling Haaland",
@@ -5585,7 +5609,8 @@
    "clubZh": "曼城",
    "league": "英超",
    "club_id": "manchester-city-fc",
-   "id": "NOR-9"
+   "id": "NOR-9",
+   "assists": 0
   },
   {
    "player": "Harry Kane",
@@ -5601,7 +5626,8 @@
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
-   "id": "ENG-9"
+   "id": "ENG-9",
+   "assists": 0
   },
   {
    "player": "Ousmane Dembele",
@@ -5617,7 +5643,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "FRA-7"
+   "id": "FRA-7",
+   "assists": 2
   },
   {
    "player": "Vinicius Junior",
@@ -5633,7 +5660,8 @@
    "clubZh": "皇家马德里",
    "league": "西甲",
    "club_id": "real-madrid",
-   "id": "BRA-7"
+   "id": "BRA-7",
+   "assists": 0
   },
   {
    "player": "Brian Brobbey",
@@ -5649,7 +5677,8 @@
    "clubZh": "桑德兰",
    "league": "英超",
    "club_id": "sunderland",
-   "id": "NED-19"
+   "id": "NED-19",
+   "assists": 0
   },
   {
    "player": "Cody Gakpo",
@@ -5665,7 +5694,8 @@
    "clubZh": "利物浦",
    "league": "英超",
    "club_id": "liverpool",
-   "id": "NED-11"
+   "id": "NED-11",
+   "assists": 0
   },
   {
    "player": "Denis Undav",
@@ -5681,7 +5711,8 @@
    "clubZh": "斯图加特",
    "league": "德甲",
    "club_id": "vfb-stuttgart",
-   "id": "GER-26"
+   "id": "GER-26",
+   "assists": 2
   },
   {
    "player": "Elijah Just",
@@ -5697,7 +5728,8 @@
    "clubZh": "马瑟韦尔",
    "league": "苏超",
    "club_id": "motherwell",
-   "id": "NZL-11"
+   "id": "NZL-11",
+   "assists": 0
   },
   {
    "player": "Ismael Saibari",
@@ -5713,7 +5745,8 @@
    "clubZh": "埃因霍温",
    "league": "荷甲",
    "club_id": "psv-eindhoven",
-   "id": "MAR-11"
+   "id": "MAR-11",
+   "assists": 0
   },
   {
    "player": "Ismaila Sarr",
@@ -5729,7 +5762,8 @@
    "clubZh": "水晶宫",
    "league": "英超",
    "club_id": "crystal-palace",
-   "id": "SEN-18"
+   "id": "SEN-18",
+   "assists": 0
   },
   {
    "player": "Johan Manzambi",
@@ -5745,7 +5779,8 @@
    "clubZh": "弗赖堡",
    "league": "德甲",
    "club_id": "sc-freiburg",
-   "id": "SUI-9"
+   "id": "SUI-9",
+   "assists": 0
   },
   {
    "player": "Jonathan David",
@@ -5761,7 +5796,8 @@
    "clubZh": "尤文图斯",
    "league": "意甲",
    "club_id": "juventus-fc",
-   "id": "CAN-10"
+   "id": "CAN-10",
+   "assists": 0
   },
   {
    "player": "Julian Quinones",
@@ -5777,7 +5813,8 @@
    "clubZh": "卡迪西亚",
    "league": "沙特联",
    "club_id": "al-qadsiah-fc",
-   "id": "MEX-16"
+   "id": "MEX-16",
+   "assists": 0
   },
   {
    "player": "Kai Havertz",
@@ -5793,7 +5830,8 @@
    "clubZh": "阿森纳",
    "league": "英超",
    "club_id": "arsenal",
-   "id": "GER-7"
+   "id": "GER-7",
+   "assists": 0
   },
   {
    "player": "Matheus Cunha",
@@ -5809,7 +5847,8 @@
    "clubZh": "曼联",
    "league": "英超",
    "club_id": "manchester-united",
-   "id": "BRA-9"
+   "id": "BRA-9",
+   "assists": 0
   },
   {
    "player": "Yoane Wissa",
@@ -5825,7 +5864,8 @@
    "clubZh": "纽卡斯尔",
    "league": "英超",
    "club_id": "newcastle-united",
-   "id": "COD-20"
+   "id": "COD-20",
+   "assists": 0
   },
   {
    "player": "Amad Diallo",
@@ -5841,7 +5881,8 @@
    "clubZh": "曼联",
    "league": "英超",
    "club_id": "manchester-united",
-   "id": "CIV-15"
+   "id": "CIV-15",
+   "assists": 0
   },
   {
    "player": "Anthony Elanga",
@@ -5857,7 +5898,8 @@
    "clubZh": "纽卡斯尔",
    "league": "英超",
    "club_id": "newcastle-united",
-   "id": "SWE-11"
+   "id": "SWE-11",
+   "assists": 0
   },
   {
    "player": "Ayase Ueda",
@@ -5873,7 +5915,8 @@
    "clubZh": "费耶诺德",
    "league": "荷甲",
    "club_id": "feyenoord-rotterdam",
-   "id": "JPN-18"
+   "id": "JPN-18",
+   "assists": 0
   },
   {
    "player": "Bradley Barcola",
@@ -5889,7 +5932,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "FRA-12"
+   "id": "FRA-12",
+   "assists": 0
   },
   {
    "player": "Cristiano Ronaldo",
@@ -5905,7 +5949,8 @@
    "clubZh": "利雅得胜利",
    "league": "沙特联",
    "club_id": "al-nassr",
-   "id": "POR-7"
+   "id": "POR-7",
+   "assists": 0
   },
   {
    "player": "Crysencio Summerville",
@@ -5921,7 +5966,8 @@
    "clubZh": "西汉姆",
    "league": "英超",
    "club_id": "west-ham-united",
-   "id": "NED-24"
+   "id": "NED-24",
+   "assists": 2
   },
   {
    "player": "Cyle Larin",
@@ -5937,7 +5983,8 @@
    "clubZh": "南安普顿",
    "league": "英冠",
    "club_id": "southampton",
-   "id": "CAN-9"
+   "id": "CAN-9",
+   "assists": 0
   },
   {
    "player": "Daichi Kamada",
@@ -5953,7 +6000,8 @@
    "clubZh": "水晶宫",
    "league": "英超",
    "club_id": "crystal-palace",
-   "id": "JPN-15"
+   "id": "JPN-15",
+   "assists": 0
   },
   {
    "player": "Daniel Munoz",
@@ -5969,7 +6017,8 @@
    "clubZh": "水晶宫",
    "league": "英超",
    "club_id": "crystal-palace",
-   "id": "COL-2"
+   "id": "COL-2",
+   "assists": 0
   },
   {
    "player": "Ermin Mahmic",
@@ -5985,7 +6034,8 @@
    "clubZh": "利贝雷茨",
    "league": "捷甲",
    "club_id": "fc-slovan-liberec",
-   "id": "BIH-26"
+   "id": "BIH-26",
+   "assists": 0
   },
   {
    "player": "Folarin Balogun",
@@ -6001,7 +6051,8 @@
    "clubZh": "摩纳哥",
    "league": "法甲",
    "club_id": "as-monaco",
-   "id": "USA-20"
+   "id": "USA-20",
+   "assists": 0
   },
   {
    "player": "Jude Bellingham",
@@ -6017,7 +6068,8 @@
    "clubZh": "皇家马德里",
    "league": "西甲",
    "club_id": "real-madrid",
-   "id": "ENG-10"
+   "id": "ENG-10",
+   "assists": 0
   },
   {
    "player": "Leandro Trossard",
@@ -6033,7 +6085,8 @@
    "clubZh": "阿森纳",
    "league": "英超",
    "club_id": "arsenal",
-   "id": "BEL-10"
+   "id": "BEL-10",
+   "assists": 0
   },
   {
    "player": "Marko Arnautovic",
@@ -6049,7 +6102,8 @@
    "clubZh": "贝尔格莱德红星",
    "league": "塞超",
    "club_id": "red-star-belgrade",
-   "id": "AUT-7"
+   "id": "AUT-7",
+   "assists": 0
   },
   {
    "player": "Maximiliano Araujo",
@@ -6065,7 +6119,8 @@
    "clubZh": "葡萄牙体育",
    "league": "葡超",
    "club_id": "sporting-cp",
-   "id": "URU-20"
+   "id": "URU-20",
+   "assists": 0
   },
   {
    "player": "Mikel Oyarzabal",
@@ -6081,7 +6136,8 @@
    "clubZh": "皇家社会",
    "league": "西甲",
    "club_id": "real-sociedad",
-   "id": "ESP-21"
+   "id": "ESP-21",
+   "assists": 0
   },
   {
    "player": "Nicolas Pepe",
@@ -6097,7 +6153,8 @@
    "clubZh": "比利亚雷亚尔",
    "league": "西甲",
    "club_id": "villarreal",
-   "id": "CIV-19"
+   "id": "CIV-19",
+   "assists": 0
   },
   {
    "player": "Pape Gueye",
@@ -6113,7 +6170,8 @@
    "clubZh": "比利亚雷亚尔",
    "league": "西甲",
    "club_id": "villarreal",
-   "id": "SEN-26"
+   "id": "SEN-26",
+   "assists": 0
   },
   {
    "player": "Ramin Rezaeian",
@@ -6129,7 +6187,8 @@
    "clubZh": "胡齐斯坦钢铁",
    "league": "伊朗联",
    "club_id": "foolad-khuzestan-fc",
-   "id": "IRN-23"
+   "id": "IRN-23",
+   "assists": 0
   },
   {
    "player": "Raul Jimenez",
@@ -6145,7 +6204,8 @@
    "clubZh": "富勒姆",
    "league": "英超",
    "club_id": "fulham-fc",
-   "id": "MEX-9"
+   "id": "MEX-9",
+   "assists": 0
   },
   {
    "player": "Riyad Mahrez",
@@ -6161,7 +6221,8 @@
    "clubZh": "吉达阿赫利",
    "league": "沙特联",
    "club_id": "al-ahli",
-   "id": "ALG-7"
+   "id": "ALG-7",
+   "assists": 0
   },
   {
    "player": "Ruben Vargas",
@@ -6177,7 +6238,8 @@
    "clubZh": "塞维利亚",
    "league": "西甲",
    "club_id": "sevilla",
-   "id": "SUI-17"
+   "id": "SUI-17",
+   "assists": 0
   },
   {
    "player": "Yasin Ayari",
@@ -6193,7 +6255,8 @@
    "clubZh": "布莱顿",
    "league": "英超",
    "club_id": "brighton-hove-albion",
-   "id": "SWE-18"
+   "id": "SWE-18",
+   "assists": 0
   },
   {
    "player": "Abbosbek Fayzullaev",
@@ -6209,7 +6272,8 @@
    "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
-   "id": "UZB-22"
+   "id": "UZB-22",
+   "assists": 0
   },
   {
    "player": "Abdulelah Al-Amri",
@@ -6225,7 +6289,8 @@
    "clubZh": "利雅得胜利",
    "league": "沙特联",
    "club_id": "al-nassr",
-   "id": "KSA-4"
+   "id": "KSA-4",
+   "assists": 0
   },
   {
    "player": "Achraf Hakimi",
@@ -6241,7 +6306,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "MAR-2"
+   "id": "MAR-2",
+   "assists": 0
   },
   {
    "player": "Agustin Canobbio",
@@ -6257,7 +6323,8 @@
    "clubZh": "弗鲁米嫩塞",
    "league": "巴甲",
    "club_id": "fluminense-fc",
-   "id": "URU-14"
+   "id": "URU-14",
+   "assists": 0
   },
   {
    "player": "Alex Freeman",
@@ -6273,7 +6340,8 @@
    "clubZh": "比利亚雷亚尔",
    "league": "西甲",
    "club_id": "villarreal",
-   "id": "USA-16"
+   "id": "USA-16",
+   "assists": 0
   },
   {
    "player": "Alexander Isak",
@@ -6289,7 +6357,8 @@
    "clubZh": "利物浦",
    "league": "英超",
    "club_id": "liverpool",
-   "id": "SWE-9"
+   "id": "SWE-9",
+   "assists": 3
   },
   {
    "player": "Alexis Saelemaekers",
@@ -6305,7 +6374,8 @@
    "clubZh": "AC米兰",
    "league": "意甲",
    "club_id": "ac-milan",
-   "id": "BEL-22"
+   "id": "BEL-22",
+   "assists": 0
   },
   {
    "player": "Ali Olwan",
@@ -6321,7 +6391,8 @@
    "clubZh": "赛利亚",
    "league": "卡塔尔联",
    "club_id": "al-sailiya",
-   "id": "JOR-9"
+   "id": "JOR-9",
+   "assists": 0
   },
   {
    "player": "Alvaro Fidalgo",
@@ -6337,7 +6408,8 @@
    "clubZh": "贝蒂斯",
    "league": "西甲",
    "club_id": "real-betis",
-   "id": "MEX-8"
+   "id": "MEX-8",
+   "assists": 0
   },
   {
    "player": "Amine Gouiri",
@@ -6353,7 +6425,8 @@
    "clubZh": "马赛",
    "league": "法甲",
    "club_id": "olympique-marseille",
-   "id": "ALG-9"
+   "id": "ALG-9",
+   "assists": 0
   },
   {
    "player": "Ante Budimir",
@@ -6369,7 +6442,8 @@
    "clubZh": "奥萨苏纳",
    "league": "西甲",
    "club_id": "osasuna",
-   "id": "CRO-11"
+   "id": "CRO-11",
+   "assists": 0
   },
   {
    "player": "Antonio Nusa",
@@ -6385,7 +6459,8 @@
    "clubZh": "莱比锡红牛",
    "league": "德甲",
    "club_id": "rb-leipzig",
-   "id": "NOR-20"
+   "id": "NOR-20",
+   "assists": 0
   },
   {
    "player": "Arda Güler",
@@ -6401,7 +6476,8 @@
    "clubZh": "皇家马德里",
    "league": "西甲",
    "club_id": "real-madrid",
-   "id": "TUR-8"
+   "id": "TUR-8",
+   "assists": 0
   },
   {
    "player": "Auston Trusty",
@@ -6417,7 +6493,8 @@
    "clubZh": "凯尔特人",
    "league": "苏超",
    "club_id": "celtic-fc",
-   "id": "USA-6"
+   "id": "USA-6",
+   "assists": 0
   },
   {
    "player": "Aymen Hussein",
@@ -6433,7 +6510,8 @@
    "clubZh": "什切青波贡",
    "league": "波甲",
    "club_id": "pogon-szczecin",
-   "id": "IRQ-3"
+   "id": "IRQ-3",
+   "assists": 0
   },
   {
    "player": "Baris Alper Yilmaz",
@@ -6449,7 +6527,8 @@
    "clubZh": "加拉塔萨雷",
    "league": "土超",
    "club_id": "galatasaray-sk",
-   "id": "TUR-21"
+   "id": "TUR-21",
+   "assists": 0
   },
   {
    "player": "Breel Embolo",
@@ -6465,7 +6544,8 @@
    "clubZh": "雷恩",
    "league": "法甲",
    "club_id": "stade-rennais",
-   "id": "SUI-7"
+   "id": "SUI-7",
+   "assists": 2
   },
   {
    "player": "Brian Cipenga",
@@ -6481,7 +6561,8 @@
    "clubZh": "卡斯特利翁",
    "league": "西甲",
    "club_id": "cd-castellon",
-   "id": "COD-9"
+   "id": "COD-9",
+   "assists": 0
   },
   {
    "player": "Caleb Yirenkyi",
@@ -6497,7 +6578,8 @@
    "clubZh": "北西兰",
    "league": "丹麦超",
    "club_id": "fc-nordsj-lland",
-   "id": "GHA-3"
+   "id": "GHA-3",
+   "assists": 0
   },
   {
    "player": "Carlos Casemiro",
@@ -6513,7 +6595,8 @@
    "clubZh": "曼联",
    "league": "英超",
    "club_id": "manchester-united",
-   "id": "BRA-5"
+   "id": "BRA-5",
+   "assists": 0
   },
   {
    "player": "Connor Metcalfe",
@@ -6529,7 +6612,8 @@
    "clubZh": "圣保利",
    "league": "德甲",
    "club_id": "fc-st-pauli",
-   "id": "AUS-8"
+   "id": "AUS-8",
+   "assists": 0
   },
   {
    "player": "Daizen Maeda",
@@ -6545,7 +6629,8 @@
    "clubZh": "凯尔特人",
    "league": "苏超",
    "club_id": "celtic-fc",
-   "id": "JPN-11"
+   "id": "JPN-11",
+   "assists": 0
   },
   {
    "player": "Derrick Luckassen",
@@ -6561,7 +6646,8 @@
    "clubZh": "帕福斯",
    "league": "塞浦路斯甲",
    "club_id": "pafos-fc",
-   "id": "GHA-23"
+   "id": "GHA-23",
+   "assists": 0
   },
   {
    "player": "Désiré Doué",
@@ -6577,7 +6663,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "FRA-20"
+   "id": "FRA-20",
+   "assists": 0
   },
   {
    "player": "Eldor Shomurodov",
@@ -6593,7 +6680,8 @@
    "clubZh": "巴萨克谢希尔",
    "league": "土超",
    "club_id": "basaksehir-fk",
-   "id": "UZB-14"
+   "id": "UZB-14",
+   "assists": 0
   },
   {
    "player": "Emam Ashour",
@@ -6609,7 +6697,8 @@
    "clubZh": "开罗国民",
    "league": "埃及超",
    "club_id": "al-ahly-fc",
-   "id": "EGY-8"
+   "id": "EGY-8",
+   "assists": 0
   },
   {
    "player": "Felix Nmecha",
@@ -6625,7 +6714,8 @@
    "clubZh": "多特蒙德",
    "league": "德甲",
    "club_id": "borussia-dortmund",
-   "id": "GER-23"
+   "id": "GER-23",
+   "assists": 0
   },
   {
    "player": "Finn Surman",
@@ -6641,7 +6731,8 @@
    "clubZh": "波特兰伐木者",
    "league": "美职联",
    "club_id": "portland-timbers",
-   "id": "NZL-16"
+   "id": "NZL-16",
+   "assists": 0
   },
   {
    "player": "Fiston Mayele",
@@ -6657,7 +6748,8 @@
    "clubZh": "金字塔",
    "league": "埃及超",
    "club_id": "pyramids-fc",
-   "id": "COD-19"
+   "id": "COD-19",
+   "assists": 0
   },
   {
    "player": "Franck Kessie",
@@ -6673,7 +6765,8 @@
    "clubZh": "吉达阿赫利",
    "league": "沙特联",
    "club_id": "al-ahli",
-   "id": "CIV-8"
+   "id": "CIV-8",
+   "assists": 0
   },
   {
    "player": "Gabriel Martinelli",
@@ -6689,7 +6782,8 @@
    "clubZh": "阿森纳",
    "league": "英超",
    "club_id": "arsenal",
-   "id": "BRA-22"
+   "id": "BRA-22",
+   "assists": 0
   },
   {
    "player": "Gessime Yassine",
@@ -6705,7 +6799,8 @@
    "clubZh": "斯特拉斯堡",
    "league": "法甲",
    "club_id": "strasbourg",
-   "id": "MAR-16"
+   "id": "MAR-16",
+   "assists": 0
   },
   {
    "player": "Gio Reyna",
@@ -6721,7 +6816,8 @@
    "clubZh": "门兴格拉德巴赫",
    "league": "德甲",
    "club_id": "borussia-monchengladbach",
-   "id": "USA-7"
+   "id": "USA-7",
+   "assists": 0
   },
   {
    "player": "Giovani Lo Celso",
@@ -6737,7 +6833,8 @@
    "clubZh": "贝蒂斯",
    "league": "西甲",
    "club_id": "real-betis",
-   "id": "ARG-11"
+   "id": "ARG-11",
+   "assists": 0
   },
   {
    "player": "Gonzalo Plata",
@@ -6753,7 +6850,8 @@
    "clubZh": "吉达联合",
    "league": "沙特联",
    "club_id": "al-ittihad",
-   "id": "ECU-19"
+   "id": "ECU-19",
+   "assists": 0
   },
   {
    "player": "Granit Xhaka",
@@ -6769,7 +6867,8 @@
    "clubZh": "桑德兰",
    "league": "英超",
    "club_id": "sunderland",
-   "id": "SUI-10"
+   "id": "SUI-10",
+   "assists": 0
   },
   {
    "player": "Habib Diarra",
@@ -6785,7 +6884,8 @@
    "clubZh": "桑德兰",
    "league": "英超",
    "club_id": "sunderland",
-   "id": "SEN-21"
+   "id": "SEN-21",
+   "assists": 0
   },
   {
    "player": "Hassan Al Haidos",
@@ -6801,7 +6901,8 @@
    "clubZh": "萨德",
    "league": "卡塔尔联",
    "club_id": "al-sadd",
-   "id": "QAT-16"
+   "id": "QAT-16",
+   "assists": 0
   },
   {
    "player": "Hazem Mastouri",
@@ -6817,7 +6918,8 @@
    "clubZh": "马哈奇卡拉迪纳摩",
    "league": "俄超",
    "club_id": "fc-dynamo-makhachkala",
-   "id": "TUN-9"
+   "id": "TUN-9",
+   "assists": 0
   },
   {
    "player": "Helio Varela",
@@ -6833,7 +6935,8 @@
    "clubZh": "特拉维夫马卡比",
    "league": "以超",
    "club_id": "maccabi-tel-aviv-fc",
-   "id": "CPV-26"
+   "id": "CPV-26",
+   "assists": 0
   },
   {
    "player": "Hwang In-beom",
@@ -6849,7 +6952,8 @@
    "clubZh": "费耶诺德",
    "league": "荷甲",
    "club_id": "feyenoord-rotterdam",
-   "id": "KOR-6"
+   "id": "KOR-6",
+   "assists": 0
   },
   {
    "player": "Ibrahim Mbaye",
@@ -6865,7 +6969,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "SEN-20"
+   "id": "SEN-20",
+   "assists": 0
   },
   {
    "player": "Iliman Ndiaye",
@@ -6881,7 +6986,8 @@
    "clubZh": "埃弗顿",
    "league": "英超",
    "club_id": "everton-fc",
-   "id": "SEN-13"
+   "id": "SEN-13",
+   "assists": 2
   },
   {
    "player": "Issa Diop",
@@ -6897,7 +7003,8 @@
    "clubZh": "富勒姆",
    "league": "英超",
    "club_id": "fulham-fc",
-   "id": "MAR-14"
+   "id": "MAR-14",
+   "assists": 0
   },
   {
    "player": "Jamal Musiala",
@@ -6913,7 +7020,8 @@
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
-   "id": "GER-10"
+   "id": "GER-10",
+   "assists": 0
   },
   {
    "player": "Jaminton Campaz",
@@ -6929,7 +7037,8 @@
    "clubZh": "罗萨里奥中央",
    "league": "阿甲",
    "club_id": "rosario-central",
-   "id": "COL-21"
+   "id": "COL-21",
+   "assists": 0
   },
   {
    "player": "Jan Paul van Hecke",
@@ -6945,7 +7054,8 @@
    "clubZh": "布莱顿",
    "league": "英超",
    "club_id": "brighton-hove-albion",
-   "id": "NED-6"
+   "id": "NED-6",
+   "assists": 0
   },
   {
    "player": "Joao Neves",
@@ -6961,7 +7071,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "POR-15"
+   "id": "POR-15",
+   "assists": 0
   },
   {
    "player": "John McGinn",
@@ -6977,7 +7088,8 @@
    "clubZh": "阿斯顿维拉",
    "league": "英超",
    "club_id": "aston-villa-fc",
-   "id": "SCO-7"
+   "id": "SCO-7",
+   "assists": 0
   },
   {
    "player": "Jovo Lukic",
@@ -6993,7 +7105,8 @@
    "clubZh": "克卢日大学",
    "league": "罗马尼亚甲",
    "club_id": "universitatea-cluj",
-   "id": "BIH-25"
+   "id": "BIH-25",
+   "assists": 0
   },
   {
    "player": "Julio Enciso",
@@ -7009,7 +7122,8 @@
    "clubZh": "斯特拉斯堡",
    "league": "法甲",
    "club_id": "strasbourg",
-   "id": "PAR-19"
+   "id": "PAR-19",
+   "assists": 2
   },
   {
    "player": "Junya Ito",
@@ -7025,7 +7139,8 @@
    "clubZh": "亨克",
    "league": "比甲",
    "club_id": "krc-genk",
-   "id": "JPN-14"
+   "id": "JPN-14",
+   "assists": 0
   },
   {
    "player": "Kaan Ayhan",
@@ -7041,7 +7156,8 @@
    "clubZh": "加拉塔萨雷",
    "league": "土超",
    "club_id": "galatasaray-sk",
-   "id": "TUR-22"
+   "id": "TUR-22",
+   "assists": 0
   },
   {
    "player": "Kaishu Sano",
@@ -7057,7 +7173,8 @@
    "clubZh": "美因茨",
    "league": "德甲",
    "club_id": "1-fsv-mainz-05",
-   "id": "JPN-24"
+   "id": "JPN-24",
+   "assists": 0
   },
   {
    "player": "Keito Nakamura",
@@ -7073,7 +7190,8 @@
    "clubZh": "兰斯",
    "league": "法乙",
    "club_id": "stade-reims",
-   "id": "JPN-13"
+   "id": "JPN-13",
+   "assists": 0
   },
   {
    "player": "Kerim Alajbegovic",
@@ -7089,7 +7207,8 @@
    "clubZh": "萨尔茨堡红牛",
    "league": "奥甲",
    "club_id": "fc-red-bull-salzburg",
-   "id": "BIH-19"
+   "id": "BIH-19",
+   "assists": 0
   },
   {
    "player": "Kevin De Bruyne",
@@ -7105,7 +7224,8 @@
    "clubZh": "那不勒斯",
    "league": "意甲",
    "club_id": "ssc-napoli",
-   "id": "BEL-7"
+   "id": "BEL-7",
+   "assists": 0
   },
   {
    "player": "Kevin Pina",
@@ -7121,7 +7241,8 @@
    "clubZh": "克拉斯诺达尔",
    "league": "俄超",
    "club_id": "fc-krasnodar",
-   "id": "CPV-6"
+   "id": "CPV-6",
+   "assists": 0
   },
   {
    "player": "Ladislav Krejci",
@@ -7137,7 +7258,8 @@
    "clubZh": "狼队",
    "league": "英超",
    "club_id": "wolverhampton-wanderers-fc",
-   "id": "CZE-7"
+   "id": "CZE-7",
+   "assists": 0
   },
   {
    "player": "Lamine Yamal",
@@ -7153,7 +7275,8 @@
    "clubZh": "巴塞罗那",
    "league": "西甲",
    "club_id": "barcelona",
-   "id": "ESP-19"
+   "id": "ESP-19",
+   "assists": 0
   },
   {
    "player": "Lautaro L. Martinez",
@@ -7169,7 +7292,8 @@
    "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
-   "id": "ARG-22"
+   "id": "ARG-22",
+   "assists": 0
   },
   {
    "player": "Leo Ostigard",
@@ -7185,7 +7309,8 @@
    "clubZh": "热那亚",
    "league": "意甲",
    "club_id": "genoa-cfc",
-   "id": "NOR-4"
+   "id": "NOR-4",
+   "assists": 0
   },
   {
    "player": "Leroy Sane",
@@ -7201,7 +7326,8 @@
    "clubZh": "加拉塔萨雷",
    "league": "土超",
    "club_id": "galatasaray-sk",
-   "id": "GER-19"
+   "id": "GER-19",
+   "assists": 0
   },
   {
    "player": "Livano Comenencia",
@@ -7217,7 +7343,8 @@
    "clubZh": "苏黎世",
    "league": "瑞士超",
    "club_id": "fc-zurich",
-   "id": "CUW-8"
+   "id": "CUW-8",
+   "assists": 0
   },
   {
    "player": "Luis Diaz",
@@ -7233,7 +7360,8 @@
    "clubZh": "拜仁慕尼黑",
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
-   "id": "COL-7"
+   "id": "COL-7",
+   "assists": 0
   },
   {
    "player": "Luis Romo",
@@ -7249,7 +7377,8 @@
    "clubZh": "瓜达拉哈拉",
    "league": "墨超",
    "club_id": "cd-guadalajara",
-   "id": "MEX-7"
+   "id": "MEX-7",
+   "assists": 0
   },
   {
    "player": "Mahmoud M. Saber",
@@ -7265,7 +7394,8 @@
    "clubZh": "齐德",
    "league": "埃及超",
    "club_id": "zed-fc",
-   "id": "EGY-21"
+   "id": "EGY-21",
+   "assists": 0
   },
   {
    "player": "Marcel Sabitzer",
@@ -7281,7 +7411,8 @@
    "clubZh": "多特蒙德",
    "league": "德甲",
    "club_id": "borussia-dortmund",
-   "id": "AUT-9"
+   "id": "AUT-9",
+   "assists": 0
   },
   {
    "player": "Marcus Holmgren Pedersen",
@@ -7297,7 +7428,8 @@
    "clubZh": "都灵",
    "league": "意甲",
    "club_id": "torino-fc",
-   "id": "NOR-16"
+   "id": "NOR-16",
+   "assists": 0
   },
   {
    "player": "Marcus Rashford",
@@ -7313,7 +7445,8 @@
    "clubZh": "巴塞罗那",
    "league": "西甲",
    "club_id": "barcelona",
-   "id": "ENG-11"
+   "id": "ENG-11",
+   "assists": 0
   },
   {
    "player": "Martin Baturina",
@@ -7329,7 +7462,8 @@
    "clubZh": "科莫",
    "league": "意甲",
    "club_id": "como",
-   "id": "CRO-16"
+   "id": "CRO-16",
+   "assists": 0
   },
   {
    "player": "Mateo Chavez",
@@ -7345,7 +7479,8 @@
    "clubZh": "阿尔克马尔",
    "league": "荷甲",
    "club_id": "az-alkmaar",
-   "id": "MEX-20"
+   "id": "MEX-20",
+   "assists": 0
   },
   {
    "player": "Matias Galarza",
@@ -7361,7 +7496,8 @@
    "clubZh": "亚特兰大联",
    "league": "美职联",
    "club_id": "atlanta-united",
-   "id": "PAR-23"
+   "id": "PAR-23",
+   "assists": 0
   },
   {
    "player": "Mattias Svanberg",
@@ -7377,7 +7513,8 @@
    "clubZh": "沃尔夫斯堡",
    "league": "德甲",
    "club_id": "vfl-wolfsburg",
-   "id": "SWE-19"
+   "id": "SWE-19",
+   "assists": 0
   },
   {
    "player": "Mauricio",
@@ -7393,7 +7530,8 @@
    "clubZh": "帕尔梅拉斯",
    "league": "巴甲",
    "club_id": "se-palmeiras",
-   "id": "PAR-11"
+   "id": "PAR-11",
+   "assists": 0
   },
   {
    "player": "Michal Sadilek",
@@ -7409,7 +7547,8 @@
    "clubZh": "布拉格斯拉维亚",
    "league": "捷甲",
    "club_id": "sk-slavia-praha",
-   "id": "CZE-18"
+   "id": "CZE-18",
+   "assists": 0
   },
   {
    "player": "Mohamed Mohebi",
@@ -7425,7 +7564,8 @@
    "clubZh": "罗斯托夫",
    "league": "俄超",
    "club_id": "fc-rostov",
-   "id": "IRN-8"
+   "id": "IRN-8",
+   "assists": 0
   },
   {
    "player": "Mohamed Salah",
@@ -7441,7 +7581,8 @@
    "clubZh": "利物浦",
    "league": "英超",
    "club_id": "liverpool",
-   "id": "EGY-10"
+   "id": "EGY-10",
+   "assists": 2
   },
   {
    "player": "Mostafa Ziko",
@@ -7457,7 +7598,8 @@
    "clubZh": "金字塔",
    "league": "埃及超",
    "club_id": "pyramids-fc",
-   "id": "EGY-11"
+   "id": "EGY-11",
+   "assists": 0
   },
   {
    "player": "Mousa Altamari",
@@ -7473,7 +7615,8 @@
    "clubZh": "雷恩",
    "league": "法甲",
    "club_id": "stade-rennais",
-   "id": "JOR-10"
+   "id": "JOR-10",
+   "assists": 0
   },
   {
    "player": "Nadhir Benbouali",
@@ -7489,7 +7632,8 @@
    "clubZh": "杰尔ETO",
    "league": "匈甲",
    "club_id": "gyori-eto",
-   "id": "ALG-12"
+   "id": "ALG-12",
+   "assists": 0
   },
   {
    "player": "Nathan Saliba",
@@ -7505,7 +7649,8 @@
    "clubZh": "安德莱赫特",
    "league": "比甲",
    "club_id": "anderlecht",
-   "id": "CAN-25"
+   "id": "CAN-25",
+   "assists": 2
   },
   {
    "player": "Nathaniel Brown",
@@ -7521,7 +7666,8 @@
    "clubZh": "法兰克福",
    "league": "德甲",
    "club_id": "eintracht-frankfurt",
-   "id": "GER-18"
+   "id": "GER-18",
+   "assists": 0
   },
   {
    "player": "Nestory Irankunda",
@@ -7537,7 +7683,8 @@
    "clubZh": "沃特福德",
    "league": "英超",
    "club_id": "watford",
-   "id": "AUS-17"
+   "id": "AUS-17",
+   "assists": 0
   },
   {
    "player": "Nico Schlotterbeck",
@@ -7553,7 +7700,8 @@
    "clubZh": "多特蒙德",
    "league": "德甲",
    "club_id": "borussia-dortmund",
-   "id": "GER-15"
+   "id": "GER-15",
+   "assists": 0
   },
   {
    "player": "Nikola Vlašić",
@@ -7569,7 +7717,8 @@
    "clubZh": "都灵",
    "league": "意甲",
    "club_id": "torino-fc",
-   "id": "CRO-13"
+   "id": "CRO-13",
+   "assists": 0
   },
   {
    "player": "Nilson Angulo",
@@ -7585,7 +7734,8 @@
    "clubZh": "安德莱赫特",
    "league": "比甲",
    "club_id": "anderlecht",
-   "id": "ECU-20"
+   "id": "ECU-20",
+   "assists": 0
   },
   {
    "player": "Nizar Al-Rashdan",
@@ -7601,7 +7751,8 @@
    "clubZh": "卡塔尔SC",
    "league": "卡塔尔联",
    "club_id": "qatar-sc",
-   "id": "JOR-21"
+   "id": "JOR-21",
+   "assists": 0
   },
   {
    "player": "Nuno Mendes",
@@ -7617,7 +7768,8 @@
    "clubZh": "巴黎圣日耳曼",
    "league": "法甲",
    "club_id": "paris-saint-germain",
-   "id": "POR-25"
+   "id": "POR-25",
+   "assists": 0
   },
   {
    "player": "Oh Hyeon-gyu",
@@ -7633,7 +7785,8 @@
    "clubZh": "贝西克塔斯",
    "league": "土超",
    "club_id": "besiktas-jk",
-   "id": "KOR-18"
+   "id": "KOR-18",
+   "assists": 0
   },
   {
    "player": "Omar Rekik",
@@ -7649,7 +7802,8 @@
    "clubZh": "马里博尔",
    "league": "斯洛文尼亚甲",
    "club_id": "nk-maribor",
-   "id": "TUN-4"
+   "id": "TUN-4",
+   "assists": 0
   },
   {
    "player": "Petar Musa",
@@ -7665,7 +7819,8 @@
    "clubZh": "达拉斯",
    "league": "美职联",
    "club_id": "fc-dallas",
-   "id": "CRO-26"
+   "id": "CRO-26",
+   "assists": 0
   },
   {
    "player": "Petar P. Sučić",
@@ -7681,7 +7836,8 @@
    "clubZh": "国际米兰",
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
-   "id": "CRO-17"
+   "id": "CRO-17",
+   "assists": 0
   },
   {
    "player": "Promise David",
@@ -7697,7 +7853,8 @@
    "clubZh": "圣吉卢瓦兹联",
    "league": "比甲",
    "club_id": "royale-union-saint-gilloise",
-   "id": "CAN-24"
+   "id": "CAN-24",
+   "assists": 0
   },
   {
    "player": "Rafael Leao",
@@ -7713,7 +7870,8 @@
    "clubZh": "AC米兰",
    "league": "意甲",
    "club_id": "ac-milan",
-   "id": "POR-17"
+   "id": "POR-17",
+   "assists": 0
   },
   {
    "player": "Rafik Belghali",
@@ -7729,7 +7887,8 @@
    "clubZh": "维罗纳",
    "league": "意甲",
    "club_id": "hellas-verona-fc",
-   "id": "ALG-17"
+   "id": "ALG-17",
+   "assists": 0
   },
   {
    "player": "Romano Schmid",
@@ -7745,7 +7904,8 @@
    "clubZh": "云达不莱梅",
    "league": "德甲",
    "club_id": "sv-werder-bremen",
-   "id": "AUT-18"
+   "id": "AUT-18",
+   "assists": 0
   },
   {
    "player": "Romelu Lukaku",
@@ -7761,7 +7921,8 @@
    "clubZh": "那不勒斯",
    "league": "意甲",
    "club_id": "ssc-napoli",
-   "id": "BEL-9"
+   "id": "BEL-9",
+   "assists": 0
   },
   {
    "player": "Sasa Kalajdzic",
@@ -7777,7 +7938,8 @@
    "clubZh": "林茨",
    "league": "奥甲",
    "club_id": "lask-linz",
-   "id": "AUT-14"
+   "id": "AUT-14",
+   "assists": 0
   },
   {
    "player": "Sebastian Berhalter",
@@ -7793,7 +7955,8 @@
    "clubZh": "温哥华白帽",
    "league": "美职联",
    "club_id": "vancouver-whitecaps-fc",
-   "id": "USA-14"
+   "id": "USA-14",
+   "assists": 0
   },
   {
    "player": "Soufiane Rahimi",
@@ -7809,7 +7972,8 @@
    "clubZh": "艾因",
    "league": "阿联酋联",
    "club_id": "al-ain-fc",
-   "id": "MAR-9"
+   "id": "MAR-9",
+   "assists": 0
   },
   {
    "player": "Stephen Eustáquio",
@@ -7825,7 +7989,8 @@
    "clubZh": "洛杉矶FC",
    "league": "美职联",
    "club_id": "lafc",
-   "id": "CAN-7"
+   "id": "CAN-7",
+   "assists": 0
   },
   {
    "player": "Teboho Mokoena",
@@ -7841,7 +8006,8 @@
    "clubZh": "马梅洛迪日落",
    "league": "南非超",
    "club_id": "mamelodi-sundowns",
-   "id": "RSA-4"
+   "id": "RSA-4",
+   "assists": 0
   },
   {
    "player": "Thapelo Maseko",
@@ -7857,7 +8023,8 @@
    "clubZh": "利马索尔AEL",
    "league": "塞浦路斯甲",
    "club_id": "ael-limassol",
-   "id": "RSA-12"
+   "id": "RSA-12",
+   "assists": 0
   },
   {
    "player": "Thelo Aasgaard",
@@ -7873,7 +8040,8 @@
    "clubZh": "流浪者",
    "league": "苏超",
    "club_id": "rangers-fc",
-   "id": "NOR-19"
+   "id": "NOR-19",
+   "assists": 0
   },
   {
    "player": "Trezeguet",
@@ -7889,7 +8057,8 @@
    "clubZh": "开罗国民",
    "league": "埃及超",
    "club_id": "al-ahly-fc",
-   "id": "EGY-7"
+   "id": "EGY-7",
+   "assists": 0
   },
   {
    "player": "Viktor Gyokeres",
@@ -7905,7 +8074,8 @@
    "clubZh": "阿森纳",
    "league": "英超",
    "club_id": "arsenal",
-   "id": "SWE-17"
+   "id": "SWE-17",
+   "assists": 2
   },
   {
    "player": "Virgil van Dijk",
@@ -7921,7 +8091,8 @@
    "clubZh": "利物浦",
    "league": "英超",
    "club_id": "liverpool",
-   "id": "NED-4"
+   "id": "NED-4",
+   "assists": 0
   },
   {
    "player": "Wilson Isidor",
@@ -7937,7 +8108,8 @@
    "clubZh": "桑德兰",
    "league": "英超",
    "club_id": "sunderland",
-   "id": "HAI-18"
+   "id": "HAI-18",
+   "assists": 0
   },
   {
    "player": "Álex Baena",
@@ -7953,9 +8125,438 @@
    "clubZh": "马德里竞技",
    "league": "西甲",
    "club_id": "atletico-de-madrid",
-   "id": "ESP-15"
+   "id": "ESP-15",
+   "assists": 0
   }
  ],
+ "assists": [
+  {
+   "player": "Michael Olise",
+   "nameZh": "奥利塞",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 0,
+   "pens": 0,
+   "club": "FC Bayern München",
+   "clubZh": "拜仁慕尼黑",
+   "league": "德甲",
+   "club_id": "fc-bayern-munchen",
+   "id": "FRA-11",
+   "assists": 5
+  },
+  {
+   "player": "Bruno",
+   "nameZh": "布鲁诺",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 0,
+   "pens": 0,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "BRA-8",
+   "assists": 4
+  },
+  {
+   "player": "Alexander Isak",
+   "nameZh": "伊萨克",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Sweden",
+   "nationZh": "瑞典",
+   "goals": 1,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "SWE-9",
+   "assists": 3
+  },
+  {
+   "player": "Florian Wirtz",
+   "nameZh": "维尔茨",
+   "num": 17,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Germany",
+   "nationZh": "德国",
+   "goals": 0,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "GER-17",
+   "assists": 3
+  },
+  {
+   "player": "Martin Ødegaard",
+   "nameZh": "马丁·厄德高",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 0,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "NOR-10",
+   "assists": 3
+  },
+  {
+   "player": "Roberto R. Alvarado",
+   "nameZh": "罗伯托·阿尔瓦拉多",
+   "num": 25,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Mexico",
+   "nationZh": "墨西哥",
+   "goals": 0,
+   "pens": 0,
+   "club": "CD Guadalajara",
+   "clubZh": "瓜达拉哈拉",
+   "league": "墨超",
+   "club_id": "cd-guadalajara",
+   "id": "MEX-25",
+   "assists": 3
+  },
+  {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 6,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10",
+   "assists": 2
+  },
+  {
+   "player": "Ousmane Dembele",
+   "nameZh": "登贝莱",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 4,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-7",
+   "assists": 2
+  },
+  {
+   "player": "Denis Undav",
+   "nameZh": "昂达夫",
+   "num": 26,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Germany",
+   "nationZh": "德国",
+   "goals": 3,
+   "pens": 0,
+   "club": "VfB Stuttgart",
+   "clubZh": "斯图加特",
+   "league": "德甲",
+   "club_id": "vfb-stuttgart",
+   "id": "GER-26",
+   "assists": 2
+  },
+  {
+   "player": "Crysencio Summerville",
+   "nameZh": "萨默维尔",
+   "num": 24,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 2,
+   "pens": 0,
+   "club": "West Ham United",
+   "clubZh": "西汉姆",
+   "league": "英超",
+   "club_id": "west-ham-united",
+   "id": "NED-24",
+   "assists": 2
+  },
+  {
+   "player": "Breel Embolo",
+   "nameZh": "恩博洛",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Switzerland",
+   "nationZh": "瑞士",
+   "goals": 1,
+   "pens": 1,
+   "club": "Stade Rennais",
+   "clubZh": "雷恩",
+   "league": "法甲",
+   "club_id": "stade-rennais",
+   "id": "SUI-7",
+   "assists": 2
+  },
+  {
+   "player": "Iliman Ndiaye",
+   "nameZh": "伊利曼·恩迪亚耶",
+   "num": 13,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Senegal",
+   "nationZh": "塞内加尔",
+   "goals": 1,
+   "pens": 0,
+   "club": "Everton FC",
+   "clubZh": "埃弗顿",
+   "league": "英超",
+   "club_id": "everton-fc",
+   "id": "SEN-13",
+   "assists": 2
+  },
+  {
+   "player": "Julio Enciso",
+   "nameZh": "胡里奥·恩西索",
+   "num": 19,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Paraguay",
+   "nationZh": "巴拉圭",
+   "goals": 1,
+   "pens": 0,
+   "club": "Strasbourg",
+   "clubZh": "斯特拉斯堡",
+   "league": "法甲",
+   "club_id": "strasbourg",
+   "id": "PAR-19",
+   "assists": 2
+  },
+  {
+   "player": "Mohamed Salah",
+   "nameZh": "萨拉赫",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 1,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "EGY-10",
+   "assists": 2
+  },
+  {
+   "player": "Nathan Saliba",
+   "nameZh": "萨利巴",
+   "num": 25,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Canada",
+   "nationZh": "加拿大",
+   "goals": 1,
+   "pens": 0,
+   "club": "Anderlecht",
+   "clubZh": "安德莱赫特",
+   "league": "比甲",
+   "club_id": "anderlecht",
+   "id": "CAN-25",
+   "assists": 2
+  },
+  {
+   "player": "Viktor Gyokeres",
+   "nameZh": "吉克雷斯",
+   "num": 17,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Sweden",
+   "nationZh": "瑞典",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "SWE-17",
+   "assists": 2
+  },
+  {
+   "player": "Brahim",
+   "nameZh": "卜拉欣",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 0,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "MAR-10",
+   "assists": 2
+  },
+  {
+   "player": "Bukayo Saka",
+   "nameZh": "萨卡",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-7",
+   "assists": 2
+  },
+  {
+   "player": "Chris Wood",
+   "nameZh": "克里斯·伍德",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "New Zealand",
+   "nationZh": "新西兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Nottingham Forest FC",
+   "clubZh": "诺丁汉森林",
+   "league": "英超",
+   "club_id": "nottingham-forest-fc",
+   "id": "NZL-9",
+   "assists": 2
+  },
+  {
+   "player": "Denzel Dumfries",
+   "nameZh": "邓弗里斯",
+   "num": 22,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "NED-22",
+   "assists": 2
+  },
+  {
+   "player": "Hannibal",
+   "nameZh": "汉尼拔",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Tunisia",
+   "nationZh": "突尼斯",
+   "goals": 0,
+   "pens": 0,
+   "club": "Burnley FC",
+   "clubZh": "伯恩利",
+   "league": "英超",
+   "club_id": "burnley-fc",
+   "id": "TUN-10",
+   "assists": 2
+  },
+  {
+   "player": "Houssem Aouar",
+   "nameZh": "侯塞姆·奥阿尔",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Algeria",
+   "nationZh": "阿尔及利亚",
+   "goals": 0,
+   "pens": 0,
+   "club": "Al Ittihad",
+   "clubZh": "吉达联合",
+   "league": "沙特联",
+   "club_id": "al-ittihad",
+   "id": "ALG-8",
+   "assists": 2
+  },
+  {
+   "player": "Joshua Kimmich",
+   "nameZh": "基米希",
+   "num": 6,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Germany",
+   "nationZh": "德国",
+   "goals": 0,
+   "pens": 0,
+   "club": "FC Bayern München",
+   "clubZh": "拜仁慕尼黑",
+   "league": "德甲",
+   "club_id": "fc-bayern-munchen",
+   "id": "GER-6",
+   "assists": 2
+  },
+  {
+   "player": "Patrick Berg",
+   "nameZh": "帕特里克·伯格",
+   "num": 6,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 0,
+   "pens": 0,
+   "club": "FK Bodø/Glimt",
+   "clubZh": "",
+   "league": "挪威超",
+   "club_id": "fk-bod-glimt",
+   "id": "NOR-6",
+   "assists": 2
+  },
+  {
+   "player": "Ryan Gravenberch",
+   "nameZh": "瑞安·格雷文伯奇",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Netherlands",
+   "nationZh": "荷兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "NED-8",
+   "assists": 2
+  }
+ ],
+ "assistsCount": 25,
  "rosterCount": 1248,
  "roster": [
   {
@@ -21944,7 +22545,7 @@
   },
   {
    "player": "Michael Olise",
-   "nameZh": "迈克尔·奥利斯",
+   "nameZh": "奥利塞",
    "num": 11,
    "pos": "FW",
    "posZh": "前锋",
