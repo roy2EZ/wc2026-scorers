@@ -1,11 +1,11 @@
 {
  "version": "v1.9.5",
- "updated": "2026-07-01T18:04:01+00:00",
+ "updated": "2026-07-01T11:12:41-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 150,
- "totalGoals": 219,
+ "count": 151,
+ "totalGoals": 222,
  "totalPens": 8,
- "matchesWithGoals": 72,
+ "matchesWithGoals": 73,
  "schedule": {
   "total": 104,
   "played": 80,
@@ -5588,6 +5588,22 @@
    "id": "NOR-9"
   },
   {
+   "player": "Harry Kane",
+   "nameZh": "凯恩",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 5,
+   "pens": 1,
+   "club": "FC Bayern München",
+   "clubZh": "拜仁慕尼黑",
+   "league": "德甲",
+   "club_id": "fc-bayern-munchen",
+   "id": "ENG-9"
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -5682,22 +5698,6 @@
    "league": "苏超",
    "club_id": "motherwell",
    "id": "NZL-11"
-  },
-  {
-   "player": "Harry Kane",
-   "nameZh": "凯恩",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 3,
-   "pens": 1,
-   "club": "FC Bayern München",
-   "clubZh": "拜仁慕尼黑",
-   "league": "德甲",
-   "club_id": "fc-bayern-munchen",
-   "id": "ENG-9"
   },
   {
    "player": "Ismael Saibari",
@@ -6466,6 +6466,22 @@
    "league": "法甲",
    "club_id": "stade-rennais",
    "id": "SUI-7"
+  },
+  {
+   "player": "Brian Cipenga",
+   "nameZh": "布赖恩·西彭加",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 1,
+   "pens": 0,
+   "club": "CD Castellón",
+   "clubZh": "卡斯特利翁",
+   "league": "西甲",
+   "club_id": "cd-castellon",
+   "id": "COD-9"
   },
   {
    "player": "Caleb Yirenkyi",
@@ -7991,6 +8007,22 @@
    "id": "NOR-9"
   },
   {
+   "player": "Harry Kane",
+   "nameZh": "凯恩",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 5,
+   "pens": 1,
+   "club": "FC Bayern München",
+   "clubZh": "拜仁慕尼黑",
+   "league": "德甲",
+   "club_id": "fc-bayern-munchen",
+   "id": "ENG-9"
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -8085,22 +8117,6 @@
    "league": "苏超",
    "club_id": "motherwell",
    "id": "NZL-11"
-  },
-  {
-   "player": "Harry Kane",
-   "nameZh": "凯恩",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 3,
-   "pens": 1,
-   "club": "FC Bayern München",
-   "clubZh": "拜仁慕尼黑",
-   "league": "德甲",
-   "club_id": "fc-bayern-munchen",
-   "id": "ENG-9"
   },
   {
    "player": "Ismael Saibari",
@@ -8869,6 +8885,22 @@
    "league": "法甲",
    "club_id": "stade-rennais",
    "id": "SUI-7"
+  },
+  {
+   "player": "Brian Cipenga",
+   "nameZh": "布赖恩·西彭加",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "DR Congo",
+   "nationZh": "刚果(金)",
+   "goals": 1,
+   "pens": 0,
+   "club": "CD Castellón",
+   "clubZh": "卡斯特利翁",
+   "league": "西甲",
+   "club_id": "cd-castellon",
+   "id": "COD-9"
   },
   {
    "player": "Caleb Yirenkyi",
@@ -13173,22 +13205,6 @@
    "league": "墨超",
    "club_id": "club-america",
    "id": "URU-18"
-  },
-  {
-   "player": "Brian Cipenga",
-   "nameZh": "布赖恩·西彭加",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "DR Congo",
-   "nationZh": "刚果(金)",
-   "goals": 0,
-   "pens": 0,
-   "club": "CD Castellón",
-   "clubZh": "卡斯特利翁",
-   "league": "西甲",
-   "club_id": "cd-castellon",
-   "id": "COD-9"
   },
   {
    "player": "Brice Samba",
