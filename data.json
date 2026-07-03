@@ -1,17 +1,17 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-03T20:40:22+00:00",
+ "updated": "2026-07-03T21:15:09+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 157,
- "totalGoals": 237,
+ "totalGoals": 238,
  "totalPens": 10,
- "matchesWithGoals": 78,
+ "matchesWithGoals": 79,
  "schedule": {
   "total": 104,
-  "played": 85,
+  "played": 86,
   "stageEn": "Round of 32",
   "stageZh": "32强",
-  "lastDate": "2026-07-02",
+  "lastDate": "2026-07-03",
   "nextDate": "2026-07-03"
  },
  "funstats": {
@@ -435,9 +435,9 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 39,
+   "6-22": 40,
    "23-45": 58,
-   "46-68": 65,
+   "46-68": 66,
    "69-90": 51,
    "90+": 26,
    "ET": 1
@@ -456,7 +456,7 @@
    5,
    1,
    1,
-   0,
+   1,
    2,
    1,
    1,
@@ -498,7 +498,7 @@
    0,
    3,
    6,
-   3,
+   4,
    3,
    2,
    2,
@@ -801,9 +801,74 @@
     "ft": "1-3",
     "date": "2026-06-25",
     "ground": "Kansas City"
+   },
+   {
+    "player": "Mohamed M. Hany",
+    "nameZh": "穆罕默德·哈尼",
+    "nation": "Egypt",
+    "nationZh": "埃及",
+    "benef": "Australia",
+    "benefZh": "澳大利亚",
+    "minute": "55'",
+    "min": 55,
+    "t1": "Australia",
+    "t1Zh": "澳大利亚",
+    "t2": "Egypt",
+    "t2Zh": "埃及",
+    "ft": "1-1",
+    "date": "2026-07-03",
+    "ground": "Dallas"
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-03",
+    "num": 88,
+    "group": "",
+    "round": "Round of 32",
+    "mday": null,
+    "t1": "Australia",
+    "t1Zh": "澳大利亚",
+    "t2": "Egypt",
+    "t2Zh": "埃及",
+    "ft": "1-1",
+    "ground": "Dallas",
+    "cityZh": "达拉斯",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": [
+     2,
+     4
+    ],
+    "goals": [
+     {
+      "player": "Emam Ashour",
+      "nameZh": "埃玛姆·阿舒尔",
+      "nation": "Egypt",
+      "nationZh": "埃及",
+      "clubZh": "开罗国民",
+      "club": "Al Ahly FC",
+      "league": "埃及超",
+      "minute": "13'",
+      "min": 13,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Mohamed M. Hany",
+      "nameZh": "穆罕默德·哈尼",
+      "nation": "Egypt",
+      "nationZh": "埃及",
+      "clubZh": "开罗国民",
+      "club": "Al Ahly FC",
+      "league": "埃及超",
+      "minute": "55'",
+      "min": 55,
+      "pen": false,
+      "og": true
+     }
+    ]
+   },
    {
     "date": "2026-07-02",
     "num": 85,
@@ -6399,6 +6464,23 @@
    "assists": 0
   },
   {
+   "player": "Emam Ashour",
+   "nameZh": "埃玛姆·阿舒尔",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al Ahly FC",
+   "clubZh": "开罗国民",
+   "league": "埃及超",
+   "club_id": "al-ahly-fc",
+   "id": "EGY-8",
+   "assists": 0
+  },
+  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -7076,23 +7158,6 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14",
-   "assists": 0
-  },
-  {
-   "player": "Emam Ashour",
-   "nameZh": "埃玛姆·阿舒尔",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 1,
-   "pens": 0,
-   "club": "Al Ahly FC",
-   "clubZh": "开罗国民",
-   "league": "埃及超",
-   "club_id": "al-ahly-fc",
-   "id": "EGY-8",
    "assists": 0
   },
   {
@@ -9469,6 +9534,22 @@
    "id": "COL-2"
   },
   {
+   "player": "Emam Ashour",
+   "nameZh": "埃玛姆·阿舒尔",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al Ahly FC",
+   "clubZh": "开罗国民",
+   "league": "埃及超",
+   "club_id": "al-ahly-fc",
+   "id": "EGY-8"
+  },
+  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -10107,22 +10188,6 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
-  },
-  {
-   "player": "Emam Ashour",
-   "nameZh": "埃玛姆·阿舒尔",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 1,
-   "pens": 0,
-   "club": "Al Ahly FC",
-   "clubZh": "开罗国民",
-   "league": "埃及超",
-   "club_id": "al-ahly-fc",
-   "id": "EGY-8"
   },
   {
    "player": "Felix Nmecha",
