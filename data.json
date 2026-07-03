@@ -1,14 +1,14 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-03T00:09:27+00:00",
+ "updated": "2026-07-03T03:56:36+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 154,
- "totalGoals": 232,
- "totalPens": 9,
- "matchesWithGoals": 76,
+ "count": 156,
+ "totalGoals": 235,
+ "totalPens": 10,
+ "matchesWithGoals": 77,
  "schedule": {
   "total": 104,
-  "played": 83,
+  "played": 84,
   "stageEn": "Round of 32",
   "stageZh": "32强",
   "lastDate": "2026-07-02",
@@ -437,9 +437,9 @@
    "1-5": 9,
    "6-22": 38,
    "23-45": 58,
-   "46-68": 62,
+   "46-68": 64,
    "69-90": 51,
-   "90+": 25,
+   "90+": 26,
    "ET": 1
   },
   "minuteCounts": [
@@ -496,7 +496,7 @@
    3,
    2,
    0,
-   2,
+   3,
    6,
    3,
    3,
@@ -511,7 +511,7 @@
    1,
    5,
    4,
-   3,
+   4,
    2,
    0,
    1,
@@ -537,7 +537,7 @@
    2,
    2,
    3,
-   5,
+   6,
    4,
    4,
    1,
@@ -857,6 +857,64 @@
       "league": "西甲",
       "minute": "89'",
       "min": 89,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
+   {
+    "date": "2026-07-02",
+    "num": 83,
+    "group": "",
+    "round": "Round of 32",
+    "mday": null,
+    "t1": "Portugal",
+    "t1Zh": "葡萄牙",
+    "t2": "Croatia",
+    "t2Zh": "克罗地亚",
+    "ft": "2-1",
+    "ground": "Toronto",
+    "cityZh": "多伦多",
+    "hostFlag": "🇨🇦",
+    "hostZh": "加拿大",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Ivan Perišić",
+      "nameZh": "伊万·佩里希奇",
+      "nation": "Croatia",
+      "nationZh": "克罗地亚",
+      "clubZh": "埃因霍温",
+      "club": "PSV Eindhoven",
+      "league": "荷甲",
+      "minute": "53'",
+      "min": 53,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Cristiano Ronaldo",
+      "nameZh": "C罗",
+      "nation": "Portugal",
+      "nationZh": "葡萄牙",
+      "clubZh": "利雅得胜利",
+      "club": "Al-Nassr",
+      "league": "沙特联",
+      "minute": "68'",
+      "min": 68,
+      "pen": true,
+      "og": false
+     },
+     {
+      "player": "Gonçalo G. Ramos",
+      "nameZh": "贡萨洛·拉莫斯",
+      "nation": "Portugal",
+      "nationZh": "葡萄牙",
+      "clubZh": "巴黎圣日耳曼",
+      "club": "Paris Saint-Germain",
+      "league": "法甲",
+      "minute": "90+4'",
+      "min": 94,
       "pen": false,
       "og": false
      }
@@ -5956,6 +6014,23 @@
    "assists": 0
   },
   {
+   "player": "Cristiano Ronaldo",
+   "nameZh": "C罗",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Portugal",
+   "nationZh": "葡萄牙",
+   "goals": 3,
+   "pens": 1,
+   "club": "Al-Nassr",
+   "clubZh": "利雅得胜利",
+   "league": "沙特联",
+   "club_id": "al-nassr",
+   "id": "POR-7",
+   "assists": 0
+  },
+  {
    "player": "Denis Undav",
    "nameZh": "昂达夫",
    "num": 26,
@@ -6191,23 +6266,6 @@
    "league": "法甲",
    "club_id": "paris-saint-germain",
    "id": "FRA-12",
-   "assists": 0
-  },
-  {
-   "player": "Cristiano Ronaldo",
-   "nameZh": "C罗",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Portugal",
-   "nationZh": "葡萄牙",
-   "goals": 2,
-   "pens": 0,
-   "club": "Al-Nassr",
-   "clubZh": "利雅得胜利",
-   "league": "沙特联",
-   "club_id": "al-nassr",
-   "id": "POR-7",
    "assists": 0
   },
   {
@@ -7129,6 +7187,23 @@
    "assists": 0
   },
   {
+   "player": "Gonçalo G. Ramos",
+   "nameZh": "贡萨洛·拉莫斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Portugal",
+   "nationZh": "葡萄牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "POR-9",
+   "assists": 0
+  },
+  {
    "player": "Granit Xhaka",
    "nameZh": "扎卡",
    "num": 10,
@@ -7262,6 +7337,23 @@
    "league": "英超",
    "club_id": "fulham-fc",
    "id": "MAR-14",
+   "assists": 0
+  },
+  {
+   "player": "Ivan Perišić",
+   "nameZh": "伊万·佩里希奇",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Croatia",
+   "nationZh": "克罗地亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "PSV Eindhoven",
+   "clubZh": "埃因霍温",
+   "league": "荷甲",
+   "club_id": "psv-eindhoven",
+   "id": "CRO-14",
    "assists": 0
   },
   {
@@ -8995,6 +9087,22 @@
    "id": "NED-11"
   },
   {
+   "player": "Cristiano Ronaldo",
+   "nameZh": "C罗",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Portugal",
+   "nationZh": "葡萄牙",
+   "goals": 3,
+   "pens": 1,
+   "club": "Al-Nassr",
+   "clubZh": "利雅得胜利",
+   "league": "沙特联",
+   "club_id": "al-nassr",
+   "id": "POR-7"
+  },
+  {
    "player": "Denis Undav",
    "nameZh": "昂达夫",
    "num": 26,
@@ -9217,22 +9325,6 @@
    "league": "法甲",
    "club_id": "paris-saint-germain",
    "id": "FRA-12"
-  },
-  {
-   "player": "Cristiano Ronaldo",
-   "nameZh": "C罗",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Portugal",
-   "nationZh": "葡萄牙",
-   "goals": 2,
-   "pens": 0,
-   "club": "Al-Nassr",
-   "clubZh": "利雅得胜利",
-   "league": "沙特联",
-   "club_id": "al-nassr",
-   "id": "POR-7"
   },
   {
    "player": "Crysencio Summerville",
@@ -10099,6 +10191,22 @@
    "id": "ECU-19"
   },
   {
+   "player": "Gonçalo G. Ramos",
+   "nameZh": "贡萨洛·拉莫斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Portugal",
+   "nationZh": "葡萄牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "POR-9"
+  },
+  {
    "player": "Granit Xhaka",
    "nameZh": "扎卡",
    "num": 10,
@@ -10225,6 +10333,22 @@
    "league": "英超",
    "club_id": "fulham-fc",
    "id": "MAR-14"
+  },
+  {
+   "player": "Ivan Perišić",
+   "nameZh": "伊万·佩里希奇",
+   "num": 14,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Croatia",
+   "nationZh": "克罗地亚",
+   "goals": 1,
+   "pens": 0,
+   "club": "PSV Eindhoven",
+   "clubZh": "埃因霍温",
+   "league": "荷甲",
+   "club_id": "psv-eindhoven",
+   "id": "CRO-14"
   },
   {
    "player": "Jamal Musiala",
@@ -17363,22 +17487,6 @@
    "id": "POR-14"
   },
   {
-   "player": "Gonçalo G. Ramos",
-   "nameZh": "贡萨洛·拉莫斯",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Portugal",
-   "nationZh": "葡萄牙",
-   "goals": 0,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "POR-9"
-  },
-  {
    "player": "Grant Hanley",
    "nameZh": "格兰特·汉利",
    "num": 5,
@@ -18497,22 +18605,6 @@
    "league": "其他",
    "club_id": "fc-astana",
    "id": "BIH-13"
-  },
-  {
-   "player": "Ivan Perišić",
-   "nameZh": "伊万·佩里希奇",
-   "num": 14,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Croatia",
-   "nationZh": "克罗地亚",
-   "goals": 0,
-   "pens": 0,
-   "club": "PSV Eindhoven",
-   "clubZh": "埃因霍温",
-   "league": "荷甲",
-   "club_id": "psv-eindhoven",
-   "id": "CRO-14"
   },
   {
    "player": "Ivan Toney",
