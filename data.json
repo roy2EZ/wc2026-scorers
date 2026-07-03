@@ -1,6 +1,6 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-03T07:31:24+00:00",
+ "updated": "2026-07-03T17:35:46+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 157,
  "totalGoals": 237,
@@ -6158,7 +6158,7 @@
    "league": "德甲",
    "club_id": "sc-freiburg",
    "id": "SUI-9",
-   "assists": 0
+   "assists": 2
   },
   {
    "player": "Jonathan David",
@@ -7382,7 +7382,7 @@
    "league": "英超",
    "club_id": "everton-fc",
    "id": "SEN-13",
-   "assists": 2
+   "assists": 0
   },
   {
    "player": "Issa Diop",
@@ -8713,6 +8713,23 @@
    "assists": 2
   },
   {
+   "player": "Johan Manzambi",
+   "nameZh": "曼赞比",
+   "num": 9,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Switzerland",
+   "nationZh": "瑞士",
+   "goals": 3,
+   "pens": 0,
+   "club": "SC Freiburg",
+   "clubZh": "弗赖堡",
+   "league": "德甲",
+   "club_id": "sc-freiburg",
+   "id": "SUI-9",
+   "assists": 2
+  },
+  {
    "player": "Breel Embolo",
    "nameZh": "恩博洛",
    "num": 7,
@@ -8744,23 +8761,6 @@
    "league": "英超",
    "club_id": "west-ham-united",
    "id": "NED-24",
-   "assists": 2
-  },
-  {
-   "player": "Iliman Ndiaye",
-   "nameZh": "伊利曼·恩迪亚耶",
-   "num": 13,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Senegal",
-   "nationZh": "塞内加尔",
-   "goals": 1,
-   "pens": 0,
-   "club": "Everton FC",
-   "clubZh": "埃弗顿",
-   "league": "英超",
-   "club_id": "everton-fc",
-   "id": "SEN-13",
    "assists": 2
   },
   {
@@ -8829,23 +8829,6 @@
    "league": "英超",
    "club_id": "arsenal",
    "id": "SWE-17",
-   "assists": 2
-  },
-  {
-   "player": "Anthony Gordon",
-   "nameZh": "安东尼·戈登",
-   "num": 18,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Newcastle United",
-   "clubZh": "纽卡斯尔",
-   "league": "英超",
-   "club_id": "newcastle-united",
-   "id": "ENG-18",
    "assists": 2
   },
   {
@@ -8948,6 +8931,23 @@
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
    "id": "GER-6",
+   "assists": 2
+  },
+  {
+   "player": "Marc Cucurella",
+   "nameZh": "马克·库库雷拉",
+   "num": 24,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 0,
+   "pens": 0,
+   "club": "Chelsea FC",
+   "clubZh": "切尔西",
+   "league": "英超",
+   "club_id": "chelsea-fc",
+   "id": "ESP-24",
    "assists": 2
   },
   {
