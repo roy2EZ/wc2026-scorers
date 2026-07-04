@@ -1,18 +1,18 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-04T22:52:55+00:00",
+ "updated": "2026-07-04T23:10:35+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 162,
- "totalGoals": 246,
- "totalPens": 10,
- "matchesWithGoals": 82,
+ "totalGoals": 247,
+ "totalPens": 11,
+ "matchesWithGoals": 83,
  "schedule": {
   "total": 104,
-  "played": 89,
+  "played": 90,
   "stageEn": "Round of 16",
   "stageZh": "16强",
   "lastDate": "2026-07-04",
-  "nextDate": "2026-07-04"
+  "nextDate": "2026-07-05"
  },
  "funstats": {
   "multiGoals": [
@@ -451,7 +451,7 @@
    "6-22": 41,
    "23-45": 59,
    "46-68": 68,
-   "69-90": 52,
+   "69-90": 53,
    "90+": 27,
    "ET": 4
   },
@@ -526,7 +526,7 @@
    4,
    4,
    2,
-   0,
+   1,
    1,
    1,
    2,
@@ -905,6 +905,38 @@
       "minute": "90+8'",
       "min": 98,
       "pen": false,
+      "og": false
+     }
+    ]
+   },
+   {
+    "date": "2026-07-04",
+    "num": 89,
+    "group": "",
+    "round": "Round of 16",
+    "mday": null,
+    "t1": "Paraguay",
+    "t1Zh": "巴拉圭",
+    "t2": "France",
+    "t2Zh": "法国",
+    "ft": "0-1",
+    "ground": "Philadelphia",
+    "cityZh": "费城",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Kylian Mbappe",
+      "nameZh": "姆巴佩",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "70'",
+      "min": 70,
+      "pen": true,
       "og": false
      }
     ]
@@ -6158,6 +6190,23 @@
  },
  "scorers": [
   {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 7,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10",
+   "assists": 2
+  },
+  {
    "player": "Lionel Messi",
    "nameZh": "梅西",
    "num": 10,
@@ -6173,23 +6222,6 @@
    "club_id": "inter-miami",
    "id": "ARG-10",
    "assists": 0
-  },
-  {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 6,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10",
-   "assists": 2
   },
   {
    "player": "Erling Haaland",
@@ -9023,8 +9055,8 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 6,
-   "pens": 0,
+   "goals": 7,
+   "pens": 1,
    "club": "Real Madrid",
    "clubZh": "皇家马德里",
    "league": "西甲",
@@ -9343,6 +9375,22 @@
  "rosterCount": 1248,
  "roster": [
   {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 7,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10"
+  },
+  {
    "player": "Lionel Messi",
    "nameZh": "梅西",
    "num": 10,
@@ -9357,22 +9405,6 @@
    "league": "美职联",
    "club_id": "inter-miami",
    "id": "ARG-10"
-  },
-  {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 6,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10"
   },
   {
    "player": "Erling Haaland",
