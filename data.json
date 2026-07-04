@@ -1,17 +1,17 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-04T18:33:15+00:00",
+ "updated": "2026-07-04T20:11:18+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 161,
- "totalGoals": 243,
+ "count": 162,
+ "totalGoals": 246,
  "totalPens": 10,
- "matchesWithGoals": 81,
+ "matchesWithGoals": 82,
  "schedule": {
   "total": 104,
-  "played": 88,
+  "played": 89,
   "stageEn": "Round of 16",
   "stageZh": "16强",
-  "lastDate": "2026-07-03",
+  "lastDate": "2026-07-04",
   "nextDate": "2026-07-04"
  },
  "funstats": {
@@ -54,6 +54,19 @@
     "score": "3-0",
     "date": "2026-06-16",
     "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Azzedine Ounahi",
+    "nameZh": "阿泽丁·欧纳希",
+    "nation": "Morocco",
+    "nationZh": "摩洛哥",
+    "oppo": "Canada",
+    "oppoZh": "加拿大",
+    "score": "3-0",
+    "date": "2026-07-04",
+    "ground": "Houston"
    },
    {
     "n": 2,
@@ -437,9 +450,9 @@
    "1-5": 9,
    "6-22": 41,
    "23-45": 59,
-   "46-68": 67,
-   "69-90": 51,
-   "90+": 26,
+   "46-68": 68,
+   "69-90": 52,
+   "90+": 27,
    "ET": 4
   },
   "minuteCounts": [
@@ -493,7 +506,7 @@
    3,
    1,
    2,
-   3,
+   4,
    2,
    0,
    3,
@@ -525,7 +538,7 @@
    0,
    4,
    0,
-   5,
+   6,
    3,
    3,
    1,
@@ -541,7 +554,7 @@
    4,
    4,
    1,
-   2,
+   3,
    1,
    0,
    0,
@@ -838,6 +851,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-04",
+    "num": 90,
+    "group": "",
+    "round": "Round of 16",
+    "mday": null,
+    "t1": "Canada",
+    "t1Zh": "加拿大",
+    "t2": "Morocco",
+    "t2Zh": "摩洛哥",
+    "ft": "0-3",
+    "ground": "Houston",
+    "cityZh": "休斯顿",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Azzedine Ounahi",
+      "nameZh": "阿泽丁·欧纳希",
+      "nation": "Morocco",
+      "nationZh": "摩洛哥",
+      "clubZh": "赫罗纳",
+      "club": "Girona FC",
+      "league": "西甲",
+      "minute": "50'",
+      "min": 50,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Azzedine Ounahi",
+      "nameZh": "阿泽丁·欧纳希",
+      "nation": "Morocco",
+      "nationZh": "摩洛哥",
+      "clubZh": "赫罗纳",
+      "club": "Girona FC",
+      "league": "西甲",
+      "minute": "82'",
+      "min": 82,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Soufiane Rahimi",
+      "nameZh": "苏安·拉希米",
+      "nation": "Morocco",
+      "nationZh": "摩洛哥",
+      "clubZh": "艾因",
+      "club": "Al Ain FC",
+      "league": "阿联酋联",
+      "minute": "90+8'",
+      "min": 98,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-03",
     "num": 88,
@@ -6495,6 +6566,23 @@
    "assists": 0
   },
   {
+   "player": "Azzedine Ounahi",
+   "nameZh": "阿泽丁·欧纳希",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Girona FC",
+   "clubZh": "赫罗纳",
+   "league": "西甲",
+   "club_id": "girona-fc",
+   "id": "MAR-8",
+   "assists": 0
+  },
+  {
    "player": "Bradley Barcola",
    "nameZh": "巴尔科拉",
    "num": 12,
@@ -6832,6 +6920,23 @@
    "league": "西甲",
    "club_id": "sevilla",
    "id": "SUI-17",
+   "assists": 0
+  },
+  {
+   "player": "Soufiane Rahimi",
+   "nameZh": "苏安·拉希米",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al Ain FC",
+   "clubZh": "艾因",
+   "league": "阿联酋联",
+   "club_id": "al-ain-fc",
+   "id": "MAR-9",
    "assists": 0
   },
   {
@@ -8654,23 +8759,6 @@
    "assists": 0
   },
   {
-   "player": "Soufiane Rahimi",
-   "nameZh": "苏安·拉希米",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Morocco",
-   "nationZh": "摩洛哥",
-   "goals": 1,
-   "pens": 0,
-   "club": "Al Ain FC",
-   "clubZh": "艾因",
-   "league": "阿联酋联",
-   "club_id": "al-ain-fc",
-   "id": "MAR-9",
-   "assists": 0
-  },
-  {
    "player": "Stephen Eustáquio",
    "nameZh": "斯蒂芬·尤斯塔基奥",
    "num": 7,
@@ -9639,6 +9727,22 @@
    "id": "JPN-18"
   },
   {
+   "player": "Azzedine Ounahi",
+   "nameZh": "阿泽丁·欧纳希",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Girona FC",
+   "clubZh": "赫罗纳",
+   "league": "西甲",
+   "club_id": "girona-fc",
+   "id": "MAR-8"
+  },
+  {
    "player": "Bradley Barcola",
    "nameZh": "巴尔科拉",
    "num": 12,
@@ -9957,6 +10061,22 @@
    "league": "西甲",
    "club_id": "sevilla",
    "id": "SUI-17"
+  },
+  {
+   "player": "Soufiane Rahimi",
+   "nameZh": "苏安·拉希米",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 2,
+   "pens": 0,
+   "club": "Al Ain FC",
+   "clubZh": "艾因",
+   "league": "阿联酋联",
+   "club_id": "al-ain-fc",
+   "id": "MAR-9"
   },
   {
    "player": "Yasin Ayari",
@@ -11669,22 +11789,6 @@
    "league": "葡超",
    "club_id": "sl-ben-ca",
    "id": "CPV-13"
-  },
-  {
-   "player": "Soufiane Rahimi",
-   "nameZh": "苏安·拉希米",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Morocco",
-   "nationZh": "摩洛哥",
-   "goals": 1,
-   "pens": 0,
-   "club": "Al Ain FC",
-   "clubZh": "艾因",
-   "league": "阿联酋联",
-   "club_id": "al-ain-fc",
-   "id": "MAR-9"
   },
   {
    "player": "Stephen Eustáquio",
@@ -14229,22 +14333,6 @@
    "league": "阿联酋联",
    "club_id": "al-bataeh-club",
    "id": "UZB-19"
-  },
-  {
-   "player": "Azzedine Ounahi",
-   "nameZh": "阿泽丁·欧纳希",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Morocco",
-   "nationZh": "摩洛哥",
-   "goals": 0,
-   "pens": 0,
-   "club": "Girona FC",
-   "clubZh": "赫罗纳",
-   "league": "西甲",
-   "club_id": "girona-fc",
-   "id": "MAR-8"
   },
   {
    "player": "Baba",
