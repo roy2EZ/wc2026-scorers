@@ -1,17 +1,17 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-05T21:34:40+00:00",
+ "updated": "2026-07-05T22:42:56+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 162,
- "totalGoals": 247,
- "totalPens": 11,
- "matchesWithGoals": 83,
+ "count": 163,
+ "totalGoals": 250,
+ "totalPens": 12,
+ "matchesWithGoals": 84,
  "schedule": {
   "total": 104,
-  "played": 90,
+  "played": 91,
   "stageEn": "Round of 16",
   "stageZh": "16强",
-  "lastDate": "2026-07-04",
+  "lastDate": "2026-07-05",
   "nextDate": "2026-07-05"
  },
  "funstats": {
@@ -54,6 +54,19 @@
     "score": "3-0",
     "date": "2026-06-16",
     "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Erling Haaland",
+    "nameZh": "哈兰德",
+    "nation": "Norway",
+    "nationZh": "挪威",
+    "oppo": "Brazil",
+    "oppoZh": "巴西",
+    "score": "2-1",
+    "date": "2026-07-05",
+    "ground": "New York"
    },
    {
     "n": 2,
@@ -451,8 +464,8 @@
    "6-22": 41,
    "23-45": 59,
    "46-68": 68,
-   "69-90": 53,
-   "90+": 27,
+   "69-90": 55,
+   "90+": 28,
    "ET": 4
   },
   "minuteCounts": [
@@ -535,7 +548,7 @@
    5,
    1,
    4,
-   0,
+   1,
    4,
    0,
    6,
@@ -546,7 +559,7 @@
    1,
    2,
    4,
-   2,
+   3,
    2,
    3,
    3,
@@ -556,7 +569,7 @@
    1,
    3,
    1,
-   0,
+   1,
    0,
    1,
    1,
@@ -851,6 +864,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-05",
+    "num": 91,
+    "group": "",
+    "round": "Round of 16",
+    "mday": null,
+    "t1": "Brazil",
+    "t1Zh": "巴西",
+    "t2": "Norway",
+    "t2Zh": "挪威",
+    "ft": "1-2",
+    "ground": "New York",
+    "cityZh": "纽约",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Erling Haaland",
+      "nameZh": "哈兰德",
+      "nation": "Norway",
+      "nationZh": "挪威",
+      "clubZh": "曼城",
+      "club": "Manchester City FC",
+      "league": "英超",
+      "minute": "79'",
+      "min": 79,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Erling Haaland",
+      "nameZh": "哈兰德",
+      "nation": "Norway",
+      "nationZh": "挪威",
+      "clubZh": "曼城",
+      "club": "Manchester City FC",
+      "league": "英超",
+      "minute": "90'",
+      "min": 90,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Neymar Jr",
+      "nameZh": "内马尔",
+      "nation": "Brazil",
+      "nationZh": "巴西",
+      "clubZh": "桑托斯",
+      "club": "Santos FC",
+      "league": "巴甲",
+      "minute": "90+10'",
+      "min": 100,
+      "pen": true,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-04",
     "num": 90,
@@ -6190,6 +6261,23 @@
  },
  "scorers": [
   {
+   "player": "Erling Haaland",
+   "nameZh": "哈兰德",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 7,
+   "pens": 0,
+   "club": "Manchester City FC",
+   "clubZh": "曼城",
+   "league": "英超",
+   "club_id": "manchester-city-fc",
+   "id": "NOR-9",
+   "assists": 0
+  },
+  {
    "player": "Kylian Mbappe",
    "nameZh": "姆巴佩",
    "num": 10,
@@ -6221,23 +6309,6 @@
    "league": "美职联",
    "club_id": "inter-miami",
    "id": "ARG-10",
-   "assists": 0
-  },
-  {
-   "player": "Erling Haaland",
-   "nameZh": "哈兰德",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 5,
-   "pens": 0,
-   "club": "Manchester City FC",
-   "clubZh": "曼城",
-   "league": "英超",
-   "club_id": "manchester-city-fc",
-   "id": "NOR-9",
    "assists": 0
   },
   {
@@ -8502,6 +8573,23 @@
    "assists": 0
   },
   {
+   "player": "Neymar Jr",
+   "nameZh": "内马尔",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 1,
+   "club": "Santos FC",
+   "clubZh": "桑托斯",
+   "league": "巴甲",
+   "club_id": "santos-fc",
+   "id": "BRA-10",
+   "assists": 0
+  },
+  {
    "player": "Nico Schlotterbeck",
    "nameZh": "施洛特贝克",
    "num": 15,
@@ -9375,6 +9463,22 @@
  "rosterCount": 1248,
  "roster": [
   {
+   "player": "Erling Haaland",
+   "nameZh": "哈兰德",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 7,
+   "pens": 0,
+   "club": "Manchester City FC",
+   "clubZh": "曼城",
+   "league": "英超",
+   "club_id": "manchester-city-fc",
+   "id": "NOR-9"
+  },
+  {
    "player": "Kylian Mbappe",
    "nameZh": "姆巴佩",
    "num": 10,
@@ -9405,22 +9509,6 @@
    "league": "美职联",
    "club_id": "inter-miami",
    "id": "ARG-10"
-  },
-  {
-   "player": "Erling Haaland",
-   "nameZh": "哈兰德",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 5,
-   "pens": 0,
-   "club": "Manchester City FC",
-   "clubZh": "曼城",
-   "league": "英超",
-   "club_id": "manchester-city-fc",
-   "id": "NOR-9"
   },
   {
    "player": "Harry Kane",
@@ -11549,6 +11637,22 @@
    "league": "英超",
    "club_id": "watford",
    "id": "AUS-17"
+  },
+  {
+   "player": "Neymar Jr",
+   "nameZh": "内马尔",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Brazil",
+   "nationZh": "巴西",
+   "goals": 1,
+   "pens": 1,
+   "club": "Santos FC",
+   "clubZh": "桑托斯",
+   "league": "巴甲",
+   "club_id": "santos-fc",
+   "id": "BRA-10"
   },
   {
    "player": "Nico Schlotterbeck",
@@ -24557,22 +24661,6 @@
    "league": "意甲",
    "club_id": "as-roma",
    "id": "MAR-24"
-  },
-  {
-   "player": "Neymar Jr",
-   "nameZh": "内马尔",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Brazil",
-   "nationZh": "巴西",
-   "goals": 0,
-   "pens": 0,
-   "club": "Santos FC",
-   "clubZh": "桑托斯",
-   "league": "巴甲",
-   "club_id": "santos-fc",
-   "id": "BRA-10"
   },
   {
    "player": "Ngalayel Mukau",
