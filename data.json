@@ -1,6 +1,6 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-05T07:44:14+00:00",
+ "updated": "2026-07-05T17:15:13+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 162,
  "totalGoals": 247,
@@ -7054,7 +7054,7 @@
    "league": "法甲",
    "club_id": "paris-saint-germain",
    "id": "MAR-2",
-   "assists": 0
+   "assists": 2
   },
   {
    "player": "Agustin Canobbio",
@@ -8465,7 +8465,7 @@
    "league": "比甲",
    "club_id": "anderlecht",
    "id": "CAN-25",
-   "assists": 2
+   "assists": 0
   },
   {
    "player": "Nathaniel Brown",
@@ -8963,6 +8963,23 @@
    "assists": 5
   },
   {
+   "player": "Brahim",
+   "nameZh": "卜拉欣",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 0,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "MAR-10",
+   "assists": 4
+  },
+  {
    "player": "Bruno",
    "nameZh": "布鲁诺",
    "num": 8,
@@ -9150,6 +9167,23 @@
    "assists": 2
   },
   {
+   "player": "Achraf Hakimi",
+   "nameZh": "哈基米",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Morocco",
+   "nationZh": "摩洛哥",
+   "goals": 1,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "MAR-2",
+   "assists": 2
+  },
+  {
    "player": "Julio Enciso",
    "nameZh": "胡里奥·恩西索",
    "num": 19,
@@ -9184,23 +9218,6 @@
    "assists": 2
   },
   {
-   "player": "Nathan Saliba",
-   "nameZh": "萨利巴",
-   "num": 25,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Canada",
-   "nationZh": "加拿大",
-   "goals": 1,
-   "pens": 0,
-   "club": "Anderlecht",
-   "clubZh": "安德莱赫特",
-   "league": "比甲",
-   "club_id": "anderlecht",
-   "id": "CAN-25",
-   "assists": 2
-  },
-  {
    "player": "Viktor Gyokeres",
    "nameZh": "吉克雷斯",
    "num": 17,
@@ -9215,23 +9232,6 @@
    "league": "英超",
    "club_id": "arsenal",
    "id": "SWE-17",
-   "assists": 2
-  },
-  {
-   "player": "Brahim",
-   "nameZh": "卜拉欣",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Morocco",
-   "nationZh": "摩洛哥",
-   "goals": 0,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "MAR-10",
    "assists": 2
   },
   {
