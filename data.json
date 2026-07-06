@@ -1,17 +1,17 @@
 {
  "version": "v1.10.0",
- "updated": "2026-07-06T20:25:40+00:00",
+ "updated": "2026-07-06T21:11:16+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 163,
- "totalGoals": 255,
+ "count": 164,
+ "totalGoals": 256,
  "totalPens": 14,
- "matchesWithGoals": 85,
+ "matchesWithGoals": 86,
  "schedule": {
   "total": 104,
-  "played": 92,
+  "played": 93,
   "stageEn": "Round of 16",
   "stageZh": "16强",
-  "lastDate": "2026-07-05",
+  "lastDate": "2026-07-06",
   "nextDate": "2026-07-06"
  },
  "funstats": {
@@ -478,7 +478,7 @@
    "23-45": 62,
    "46-68": 69,
    "69-90": 56,
-   "90+": 28,
+   "90+": 29,
    "ET": 4
   },
   "minuteCounts": [
@@ -573,7 +573,7 @@
    2,
    4,
    3,
-   2,
+   3,
    3,
    3,
    6,
@@ -877,6 +877,38 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-06",
+    "num": 93,
+    "group": "",
+    "round": "Round of 16",
+    "mday": null,
+    "t1": "Portugal",
+    "t1Zh": "葡萄牙",
+    "t2": "Spain",
+    "t2Zh": "西班牙",
+    "ft": "0-1",
+    "ground": "Dallas",
+    "cityZh": "达拉斯",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Mikel Merino",
+      "nameZh": "米克尔·梅里诺",
+      "nation": "Spain",
+      "nationZh": "西班牙",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "90+1'",
+      "min": 91,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-05",
     "num": 92,
@@ -8545,6 +8577,23 @@
    "assists": 0
   },
   {
+   "player": "Mikel Merino",
+   "nameZh": "米克尔·梅里诺",
+   "num": 6,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ESP-6",
+   "assists": 0
+  },
+  {
    "player": "Mohamed Mohebi",
    "nameZh": "穆罕默德·莫赫比",
    "num": 8,
@@ -11617,6 +11666,22 @@
    "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-18"
+  },
+  {
+   "player": "Mikel Merino",
+   "nameZh": "米克尔·梅里诺",
+   "num": 6,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ESP-6"
   },
   {
    "player": "Mohamed Mohebi",
@@ -23745,22 +23810,6 @@
    "league": "法甲",
    "club_id": "strasbourg",
    "id": "BEL-13"
-  },
-  {
-   "player": "Mikel Merino",
-   "nameZh": "米克尔·梅里诺",
-   "num": 6,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ESP-6"
   },
   {
    "player": "Milad M. Mohammadi",
