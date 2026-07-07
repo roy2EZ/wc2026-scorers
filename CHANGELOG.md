@@ -8,6 +8,13 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.10.1
+
+- **修复排行榜默认档位漏铜牌**：当进球/助攻数出现断档（如最高档是 7、6、4，缺 5）时，旧的"按数值 max-2"默认阈值会把铜牌档挡在门外。改为默认 = **第 3 高的实际档位**，保证金/银/铜三档始终露出，且与发牌口径一致。射手榜、助攻榜、进球大战统一。
+  Fixed ranking boards hiding the bronze tier by default when values have gaps; the default threshold is now the 3rd-highest actual tier, so gold/silver/bronze always show.
+- **柱状图奖牌支持并列**：进球来自哪里的国家队/联赛/俱乐部三张图，金/银/铜改为**按数值发牌**——同一数值并列的条目共享同一枚奖牌（此前按位置发牌，并列会错位）。
+  Goal Origins charts now award medals by value, so tied entries share the same medal (previously assigned by position).
+
 ## v1.10.0
 
 - **新增「助攻榜 Top Assists」板块**（射手榜正下方）：数据取自 **ESPN 官方赛事助攻榜**，全部解析到球员主库，显示中文名·俱乐部·联赛旗，并同时标注进球数；金/银/铜档位配色，配**动态档位筛选按钮**（与射手榜同一套金银铜逻辑）。

@@ -611,14 +611,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.10.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.10.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.10.0", BUILD_TIME="2026-07-01 20:00";
+const APP_VERSION="v1.10.1", BUILD_TIME="2026-07-06 23:05";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -774,7 +774,7 @@ function setupAssistChips(){
   const el=document.getElementById("assistchips"); if(!el) return;
   const tiers=[...new Set(ASSISTS.filter(d=>d.assists>0).map(d=>d.assists))].sort((a,b)=>b-a);
   const maxA=tiers[0]||0;
-  const def = maxA<2 ? 1 : Math.max(2, maxA-2);   // 金银铜按数值：maxA / maxA-1 / maxA-2
+  const def = tiers.length>=3 ? tiers[2] : (tiers.length?tiers[tiers.length-1]:1);   // 默认=第3高档位→金/银/铜三档必露(断档也不漏铜牌)
   if(!assistMinUserSet || assistMin==null || assistMin>maxA) assistMin=def;
   let html='<button type="button" data-amin="1">全部 All</button>';
   for(let g=2; g<=Math.max(maxA,2); g++) html+=`<button type="button" data-amin="${g}">${g}+</button>`;
@@ -1015,7 +1015,7 @@ function setupFestChips(){
   const el=document.getElementById("festchips"); if(!el) return;
   const totals=[...new Set(((FUN&&FUN.bigMatches)||[]).map(x=>x.total))].sort((a,b)=>b-a);
   const maxT=totals[0]||7;
-  const def = Math.max(4, maxT-2);  // 金银铜按数值：maxT / maxT-1 / maxT-2，默认露出最高三档阈值(哪怕中间断档)
+  const def = Math.max(4, totals.length>=3 ? totals[2] : (totals.length?totals[totals.length-1]:5));  // 默认=第3高档位→金/银/铜三档必露(断档也不漏铜牌)
   if(!festMinUserSet || festMin==null || festMin>maxT) festMin=def;
   let html='';
   for(let g=4; g<=Math.max(maxT,7); g++) html+=`<button type="button" data-fmin="${g}">${g}+</button>`;
@@ -1112,7 +1112,7 @@ function setupBoardChips(){
   const pool = boardLeague ? DATA.filter(d=>d.league===boardLeague) : DATA;
   const tiers=[...new Set(pool.filter(d=>d.goals>0).map(d=>d.goals))].sort((a,b)=>b-a);
   const maxG=tiers[0]||0;
-  const def = maxG<2 ? 1 : Math.max(2, maxG-2);  // 金银铜按数值：maxG / maxG-1 / maxG-2，默认露出最高三档(哪怕中间断档)
+  const def = tiers.length>=3 ? tiers[2] : (tiers.length?tiers[tiers.length-1]:1);  // 默认=第3高档位→金/银/铜三档必露(断档也不漏铜牌，与发牌口径一致)
   if(!boardMinUserSet || boardMin==null || boardMin>maxG) boardMin=def;
   let html='<button type="button" data-bmin="1">全部 All</button>';
   for(let g=2; g<=Math.max(maxG,2); g++) html+=`<button type="button" data-bmin="${g}">${g}+</button>`;
@@ -1172,13 +1172,17 @@ function renderCharts(){
 const _capV=(id,total)=>{const v=document.getElementById(id).value;return v==='all'?total:Math.min(+v,total);};
 const _mw=m=>m==="goals"?"进球数 Goals":"进球人数 Scorers";
 const _med=i=>i<3?`<span class="ymed">${MEDALS[i]}</span>`:"";
+// 按数值发牌（金银铜）：同一数值并列共享同一枚奖牌；dv=去重降序的数值档位
+const _medV=(val,dv)=>{const k=dv.indexOf(val);return (k>=0&&k<3)?`<span class="ymed">${MEDALS[k]}</span>`:"";};
+const _distinct=(arr)=>[...new Set(arr)].sort((a,b)=>b-a);
 function renderNatChart(){
   const N=topEntries(byNation,chartMetric.nation,_capV("topNatSel",Object.keys(byNation).length));
   document.getElementById("natChart").parentElement.style.height=heightFor(N.length)+"px";
   document.getElementById("natTitle").innerHTML=`<span class="ct-cat">按国家队 By Nation</span> · <span class="ct-m">${_mw(chartMetric.nation)}</span>`;
   natCh&&natCh.destroy();
+  const dvN=_distinct(N.map(e=>e[1][chartMetric.nation]));
   const Nrows=N.map((e,i)=>{const zh=e[1].zh||e[0],en=natEn(e[0]),f=fl(e[0]);
-    return {zh, plain:zh+(zh!==en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:_medV(e[1][chartMetric.nation],dvN)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
   const lpN=gutterFor(Nrows);
   natCh=new Chart(document.getElementById("natChart"),barCfg(N.map((e,i)=>[Nrows[i].plain,e[1]]),chartMetric.nation,null,lpN));
   natCh.$lp=lpN; drawYLabels(natCh,Nrows.map(r=>r.html),"natLabels");
@@ -1188,8 +1192,9 @@ function renderLeagueChart(){
   document.getElementById("leagueTitle").innerHTML=`<span class="ct-cat">按联赛 By League</span> · <span class="ct-m">${_mw(chartMetric.league)}</span>`;
   document.getElementById("leagueChart").parentElement.style.height=heightFor(L.length)+"px";
   leagueCh&&leagueCh.destroy();
+  const dvL=_distinct(L.map(e=>e[1][chartMetric.league]));
   const Lrows=L.map((e,i)=>{const zh=e[0],en=LEN[zh],f=lfl(zh);
-    return {zh, plain:zh+(en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+    return {zh, plain:zh+(en?" "+en:""), html:_medV(e[1][chartMetric.league],dvL)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(en?`<span class="ens">${en}</span>`:"")+`</span>`};});
   const lpL=gutterFor(Lrows);
   leagueCh=new Chart(document.getElementById("leagueChart"),barCfg(L.map((e,i)=>[Lrows[i].plain,e[1]]),chartMetric.league,leagueClick,lpL));
   leagueCh.$lp=lpL; drawYLabels(leagueCh,Lrows.map(r=>r.html),"leagueLabels");
@@ -1207,8 +1212,9 @@ function renderClubChart(){
   }
   document.getElementById("clubChart").parentElement.style.height=heightFor(C.length)+"px";
   clubCh&&clubCh.destroy();
+  const dvC=_distinct(C.map(e=>e[1][chartMetric.club]));
   const Crows=C.map((e,i)=>{const zh=clubZhByEn[e[0]]||cz(e[0]),en=cabbr(e[0]),f=lfl(clubLeague[e[0]]);
-    return {zh, plain:zh+(zh!==en?" "+en:""), html:_med(i)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
+    return {zh, plain:zh+(zh!==en?" "+en:""), html:_medV(e[1][chartMetric.club],dvC)+(f?`<span class="fl">${f}</span>`:"")+`<span class="tx"><span class="zh">${zh}</span>`+(zh!==en?`<span class="ens">${en}</span>`:"")+`</span>`};});
   const lpC=gutterFor(Crows);
   clubCh=new Chart(document.getElementById("clubChart"),barCfg(C.map((e,i)=>[Crows[i].plain,e[1]]),chartMetric.club,null,lpC));
   clubCh.$lp=lpC; drawYLabels(clubCh,Crows.map(r=>r.html),"clubLabels");
