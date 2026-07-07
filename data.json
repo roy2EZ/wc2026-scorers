@@ -1,6 +1,6 @@
 {
  "version": "v1.10.1",
- "updated": "2026-07-07T08:00:07+00:00",
+ "updated": "2026-07-07T18:03:00+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 166,
  "totalGoals": 261,
@@ -6744,7 +6744,7 @@
    "league": "德甲",
    "club_id": "vfb-stuttgart",
    "id": "GER-26",
-   "assists": 2
+   "assists": 0
   },
   {
    "player": "Elijah Just",
@@ -6812,7 +6812,7 @@
    "league": "德甲",
    "club_id": "sc-freiburg",
    "id": "SUI-9",
-   "assists": 2
+   "assists": 0
   },
   {
    "player": "Jonathan David",
@@ -7050,7 +7050,7 @@
    "league": "英超",
    "club_id": "west-ham-united",
    "id": "NED-24",
-   "assists": 2
+   "assists": 0
   },
   {
    "player": "Cyle Larin",
@@ -7169,7 +7169,7 @@
    "league": "英超",
    "club_id": "arsenal",
    "id": "BEL-10",
-   "assists": 0
+   "assists": 2
   },
   {
    "player": "Malik Tillman",
@@ -8002,7 +8002,7 @@
    "league": "比甲",
    "club_id": "club-brugge",
    "id": "BEL-20",
-   "assists": 0
+   "assists": 2
   },
   {
    "player": "Hassan Al Haidos",
@@ -9520,40 +9520,6 @@
    "assists": 2
   },
   {
-   "player": "Denis Undav",
-   "nameZh": "昂达夫",
-   "num": 26,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Germany",
-   "nationZh": "德国",
-   "goals": 3,
-   "pens": 0,
-   "club": "VfB Stuttgart",
-   "clubZh": "斯图加特",
-   "league": "德甲",
-   "club_id": "vfb-stuttgart",
-   "id": "GER-26",
-   "assists": 2
-  },
-  {
-   "player": "Johan Manzambi",
-   "nameZh": "曼赞比",
-   "num": 9,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Switzerland",
-   "nationZh": "瑞士",
-   "goals": 3,
-   "pens": 0,
-   "club": "SC Freiburg",
-   "clubZh": "弗赖堡",
-   "league": "德甲",
-   "club_id": "sc-freiburg",
-   "id": "SUI-9",
-   "assists": 2
-  },
-  {
    "player": "Breel Embolo",
    "nameZh": "恩博洛",
    "num": 7,
@@ -9571,20 +9537,20 @@
    "assists": 2
   },
   {
-   "player": "Crysencio Summerville",
-   "nameZh": "萨默维尔",
-   "num": 24,
+   "player": "Leandro Trossard",
+   "nameZh": "特罗萨德",
+   "num": 10,
    "pos": "FW",
    "posZh": "前锋",
-   "nation": "Netherlands",
-   "nationZh": "荷兰",
+   "nation": "Belgium",
+   "nationZh": "比利时",
    "goals": 2,
    "pens": 0,
-   "club": "West Ham United",
-   "clubZh": "西汉姆",
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
    "league": "英超",
-   "club_id": "west-ham-united",
-   "id": "NED-24",
+   "club_id": "arsenal",
+   "id": "BEL-10",
    "assists": 2
   },
   {
@@ -9602,6 +9568,23 @@
    "league": "法甲",
    "club_id": "paris-saint-germain",
    "id": "MAR-2",
+   "assists": 2
+  },
+  {
+   "player": "Hans Vanaken",
+   "nameZh": "汉斯·瓦纳肯",
+   "num": 20,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 1,
+   "pens": 0,
+   "club": "Club Brugge",
+   "clubZh": "布鲁日",
+   "league": "比甲",
+   "club_id": "club-brugge",
+   "id": "BEL-20",
    "assists": 2
   },
   {
@@ -9721,6 +9704,23 @@
    "league": "英超",
    "club_id": "chelsea-fc",
    "id": "ESP-24",
+   "assists": 2
+  },
+  {
+   "player": "Nicolas Raskin",
+   "nameZh": "尼古拉斯·拉斯金",
+   "num": 23,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 0,
+   "pens": 0,
+   "club": "Rangers FC",
+   "clubZh": "流浪者",
+   "league": "苏超",
+   "club_id": "rangers-fc",
+   "id": "BEL-23",
    "assists": 2
   },
   {
