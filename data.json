@@ -1,11 +1,11 @@
 {
  "version": "v1.10.1",
- "updated": "2026-07-07T18:11:35+00:00",
+ "updated": "2026-07-07T18:14:29+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 166,
- "totalGoals": 261,
+ "count": 168,
+ "totalGoals": 265,
  "totalPens": 14,
- "matchesWithGoals": 87,
+ "matchesWithGoals": 88,
  "schedule": {
   "total": 104,
   "played": 95,
@@ -6604,6 +6604,23 @@
  },
  "scorers": [
   {
+   "player": "Lionel Messi",
+   "nameZh": "梅西",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 8,
+   "pens": 0,
+   "club": "Inter Miami",
+   "clubZh": "迈阿密国际",
+   "league": "美职联",
+   "club_id": "inter-miami",
+   "id": "ARG-10",
+   "assists": 0
+  },
+  {
    "player": "Erling Haaland",
    "nameZh": "哈兰德",
    "num": 9,
@@ -6636,23 +6653,6 @@
    "club_id": "real-madrid",
    "id": "FRA-10",
    "assists": 2
-  },
-  {
-   "player": "Lionel Messi",
-   "nameZh": "梅西",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 7,
-   "pens": 0,
-   "club": "Inter Miami",
-   "clubZh": "迈阿密国际",
-   "league": "美职联",
-   "club_id": "inter-miami",
-   "id": "ARG-10",
-   "assists": 0
   },
   {
    "player": "Harry Kane",
@@ -7318,6 +7318,23 @@
    "assists": 0
   },
   {
+   "player": "Mostafa Ziko",
+   "nameZh": "穆斯塔法·济科",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 2,
+   "pens": 0,
+   "club": "Pyramids FC",
+   "clubZh": "金字塔",
+   "league": "埃及超",
+   "club_id": "pyramids-fc",
+   "id": "EGY-11",
+   "assists": 0
+  },
+  {
    "player": "Nicolas Pepe",
    "nameZh": "佩佩",
    "num": 19,
@@ -7794,6 +7811,23 @@
    "assists": 0
   },
   {
+   "player": "Cristian Romero",
+   "nameZh": "克里斯蒂安·罗梅罗",
+   "num": 13,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Tottenham Hotspur FC",
+   "clubZh": "托特纳姆热刺",
+   "league": "英超",
+   "club_id": "tottenham-hotspur-fc",
+   "id": "ARG-13",
+   "assists": 0
+  },
+  {
    "player": "Daizen Maeda",
    "nameZh": "前田大然",
    "num": 11,
@@ -7893,6 +7927,23 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14",
+   "assists": 0
+  },
+  {
+   "player": "Enzo E. Fernandez",
+   "nameZh": "恩佐·费尔南德斯",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Chelsea FC",
+   "clubZh": "切尔西",
+   "league": "英超",
+   "club_id": "chelsea-fc",
+   "id": "ARG-24",
    "assists": 0
   },
   {
@@ -8863,23 +8914,6 @@
    "club_id": "liverpool",
    "id": "EGY-10",
    "assists": 2
-  },
-  {
-   "player": "Mostafa Ziko",
-   "nameZh": "穆斯塔法·济科",
-   "num": 11,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 1,
-   "pens": 0,
-   "club": "Pyramids FC",
-   "clubZh": "金字塔",
-   "league": "埃及超",
-   "club_id": "pyramids-fc",
-   "id": "EGY-11",
-   "assists": 0
   },
   {
    "player": "Mousa Altamari",
@@ -9857,6 +9891,22 @@
  "rosterCount": 1248,
  "roster": [
   {
+   "player": "Lionel Messi",
+   "nameZh": "梅西",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 8,
+   "pens": 0,
+   "club": "Inter Miami",
+   "clubZh": "迈阿密国际",
+   "league": "美职联",
+   "club_id": "inter-miami",
+   "id": "ARG-10"
+  },
+  {
    "player": "Erling Haaland",
    "nameZh": "哈兰德",
    "num": 9,
@@ -9887,22 +9937,6 @@
    "league": "西甲",
    "club_id": "real-madrid",
    "id": "FRA-10"
-  },
-  {
-   "player": "Lionel Messi",
-   "nameZh": "梅西",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 7,
-   "pens": 0,
-   "club": "Inter Miami",
-   "clubZh": "迈阿密国际",
-   "league": "美职联",
-   "club_id": "inter-miami",
-   "id": "ARG-10"
   },
   {
    "player": "Harry Kane",
@@ -10529,6 +10563,22 @@
    "id": "URU-20"
   },
   {
+   "player": "Mostafa Ziko",
+   "nameZh": "穆斯塔法·济科",
+   "num": 11,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 2,
+   "pens": 0,
+   "club": "Pyramids FC",
+   "clubZh": "金字塔",
+   "league": "埃及超",
+   "club_id": "pyramids-fc",
+   "id": "EGY-11"
+  },
+  {
    "player": "Nicolas Pepe",
    "nameZh": "佩佩",
    "num": 19,
@@ -10977,6 +11027,22 @@
    "id": "AUS-8"
   },
   {
+   "player": "Cristian Romero",
+   "nameZh": "克里斯蒂安·罗梅罗",
+   "num": 13,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Tottenham Hotspur FC",
+   "clubZh": "托特纳姆热刺",
+   "league": "英超",
+   "club_id": "tottenham-hotspur-fc",
+   "id": "ARG-13"
+  },
+  {
    "player": "Daizen Maeda",
    "nameZh": "前田大然",
    "num": 11,
@@ -11071,6 +11137,22 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
+  },
+  {
+   "player": "Enzo E. Fernandez",
+   "nameZh": "恩佐·费尔南德斯",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Chelsea FC",
+   "clubZh": "切尔西",
+   "league": "英超",
+   "club_id": "chelsea-fc",
+   "id": "ARG-24"
   },
   {
    "player": "Felix Nmecha",
@@ -11983,22 +12065,6 @@
    "league": "英超",
    "club_id": "liverpool",
    "id": "EGY-10"
-  },
-  {
-   "player": "Mostafa Ziko",
-   "nameZh": "穆斯塔法·济科",
-   "num": 11,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 1,
-   "pens": 0,
-   "club": "Pyramids FC",
-   "clubZh": "金字塔",
-   "league": "埃及超",
-   "club_id": "pyramids-fc",
-   "id": "EGY-11"
   },
   {
    "player": "Mousa Altamari",
@@ -16017,22 +16083,6 @@
    "id": "USA-15"
   },
   {
-   "player": "Cristian Romero",
-   "nameZh": "克里斯蒂安·罗梅罗",
-   "num": 13,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "Tottenham Hotspur FC",
-   "clubZh": "托特纳姆热刺",
-   "league": "英超",
-   "club_id": "tottenham-hotspur-fc",
-   "id": "ARG-13"
-  },
-  {
    "player": "Cristian Volpato",
    "nameZh": "克里斯蒂安·沃尔帕托",
    "num": 20,
@@ -17375,22 +17425,6 @@
    "league": "墨超",
    "club_id": "cf-pachuca",
    "id": "ECU-13"
-  },
-  {
-   "player": "Enzo E. Fernandez",
-   "nameZh": "恩佐·费尔南德斯",
-   "num": 24,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "Chelsea FC",
-   "clubZh": "切尔西",
-   "league": "英超",
-   "club_id": "chelsea-fc",
-   "id": "ARG-24"
   },
   {
    "player": "Eray Cömert",
