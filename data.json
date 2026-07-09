@@ -1,18 +1,18 @@
 {
  "version": "v1.10.1",
- "updated": "2026-07-09T21:37:32+00:00",
+ "updated": "2026-07-09T22:21:04+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 168,
- "totalGoals": 265,
+ "totalGoals": 267,
  "totalPens": 14,
- "matchesWithGoals": 88,
+ "matchesWithGoals": 89,
  "schedule": {
   "total": 104,
-  "played": 96,
+  "played": 97,
   "stageEn": "Quarter-finals",
   "stageZh": "八强",
-  "lastDate": "2026-07-07",
-  "nextDate": "2026-07-09"
+  "lastDate": "2026-07-09",
+  "nextDate": "2026-07-10"
  },
  "funstats": {
   "multiGoals": [
@@ -489,7 +489,7 @@
    "1-5": 9,
    "6-22": 43,
    "23-45": 64,
-   "46-68": 71,
+   "46-68": 73,
    "69-90": 58,
    "90+": 31,
    "ET": 4
@@ -555,13 +555,13 @@
    3,
    2,
    5,
-   6,
+   7,
    2,
    3,
    1,
    4,
    1,
-   5,
+   6,
    5,
    4,
    3,
@@ -890,6 +890,51 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-09",
+    "num": 97,
+    "group": "",
+    "round": "Quarter-final",
+    "mday": null,
+    "t1": "France",
+    "t1Zh": "法国",
+    "t2": "Morocco",
+    "t2Zh": "摩洛哥",
+    "ft": "2-0",
+    "ground": "Boston",
+    "cityZh": "波士顿",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Kylian Mbappe",
+      "nameZh": "姆巴佩",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "60'",
+      "min": 60,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Ousmane Dembele",
+      "nameZh": "登贝莱",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "巴黎圣日耳曼",
+      "club": "Paris Saint-Germain",
+      "league": "法甲",
+      "minute": "66'",
+      "min": 66,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-07",
     "num": 95,
@@ -6604,6 +6649,23 @@
  },
  "scorers": [
   {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 8,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10",
+   "assists": 2
+  },
+  {
    "player": "Lionel Messi",
    "nameZh": "梅西",
    "num": 10,
@@ -6638,23 +6700,6 @@
    "assists": 0
   },
   {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 7,
-   "pens": 1,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10",
-   "assists": 2
-  },
-  {
    "player": "Harry Kane",
    "nameZh": "凯恩",
    "num": 9,
@@ -6670,6 +6715,23 @@
    "club_id": "fc-bayern-munchen",
    "id": "ENG-9",
    "assists": 0
+  },
+  {
+   "player": "Ousmane Dembele",
+   "nameZh": "登贝莱",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 5,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-7",
+   "assists": 2
   },
   {
    "player": "Ismaila Sarr",
@@ -6738,23 +6800,6 @@
    "club_id": "real-sociedad",
    "id": "ESP-21",
    "assists": 0
-  },
-  {
-   "player": "Ousmane Dembele",
-   "nameZh": "登贝莱",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 4,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-7",
-   "assists": 2
   },
   {
    "player": "Vinicius Junior",
@@ -9622,7 +9667,7 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 7,
+   "goals": 8,
    "pens": 1,
    "club": "Real Madrid",
    "clubZh": "皇家马德里",
@@ -9639,7 +9684,7 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 4,
+   "goals": 5,
    "pens": 0,
    "club": "Paris Saint-Germain",
    "clubZh": "巴黎圣日耳曼",
@@ -9891,6 +9936,22 @@
  "rosterCount": 1248,
  "roster": [
   {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 8,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10"
+  },
+  {
    "player": "Lionel Messi",
    "nameZh": "梅西",
    "num": 10,
@@ -9923,22 +9984,6 @@
    "id": "NOR-9"
   },
   {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 7,
-   "pens": 1,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10"
-  },
-  {
    "player": "Harry Kane",
    "nameZh": "凯恩",
    "num": 9,
@@ -9953,6 +9998,22 @@
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
    "id": "ENG-9"
+  },
+  {
+   "player": "Ousmane Dembele",
+   "nameZh": "登贝莱",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 5,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-7"
   },
   {
    "player": "Ismaila Sarr",
@@ -10017,22 +10078,6 @@
    "league": "西甲",
    "club_id": "real-sociedad",
    "id": "ESP-21"
-  },
-  {
-   "player": "Ousmane Dembele",
-   "nameZh": "登贝莱",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 4,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-7"
   },
   {
    "player": "Vinicius Junior",
