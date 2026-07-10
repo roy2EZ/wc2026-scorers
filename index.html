@@ -141,6 +141,8 @@
   .boardlegend{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:12px;
     font-family:'Noto Sans SC';font-size:12px;color:#9aa3bd}
   .boardlegend span{display:inline-flex;align-items:center;gap:8px}
+  .hero-photo{display:block;margin:2px auto 22px;max-width:520px;width:100%;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 28px rgba(0,0,0,.32);line-height:0}
+  .hero-photo img{display:block;width:100%;height:auto}
   .boardctl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
   .boardlf{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--mut);font-weight:600}
   .boardlf #boardLeagueSel{font-size:12.5px;padding:7px 10px;max-width:200px}
@@ -255,6 +257,7 @@
   .feedrow .fmark{font-size:9.5px;font-weight:700;padding:1px 5px;border-radius:5px;white-space:nowrap;flex:none}
   .feedrow .fmark.pen{color:#FFB02E;background:rgba(255,176,46,.14)}
   .feedrow .fmark.ogm{color:#9bb6e8;background:rgba(110,167,255,.12)}
+  .fnogoal{padding:9px 13px;border-top:1px solid rgba(39,48,75,.45);font-size:11.5px;color:#8a93ab;text-align:center;letter-spacing:.02em}
   .fests{display:flex;flex-direction:column;gap:12px;max-width:560px}
   .oggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
   .ogcard{background:var(--card);border:1px solid var(--line);border-left:5px solid #8794ad;border-radius:12px;padding:12px 14px;min-width:0;overflow:hidden}
@@ -437,21 +440,23 @@
 
 <section>
   <div class="wrap">
-    <div class="shead"><h2>最新<b>进球</b><span class="enh">Latest Goals</span></h2></div>
+    <div class="shead"><h2>最新<b>赛果</b><span class="enh">Latest Results</span></h2></div>
     <div class="feed" id="goalFeed"></div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="shead"><h2>射手<b>榜</b><span class="enh">Top Scorers</span></h2>
-      <div class="boardctl">
-        <span class="boardlf">按进球数 By goals</span>
-        <div class="chips" id="boardchips"></div>
-        <label class="boardlf">按联赛看榜 By league
-          <select id="boardLeagueSel" title="选择联赛，只看该联赛球员的个人进球榜"></select>
-        </label>
-      </div>
+    <div class="shead"><h2>射手<b>榜</b><span class="enh">Leading Goalscorers</span></h2></div>
+    <figure class="hero-photo">
+      <img src="screenshots/Goalscorers-with-photo.jpg" alt="Leading Goalscorers · 世界杯射手榜" loading="lazy">
+    </figure>
+    <div class="boardctl">
+      <span class="boardlf">按进球数 By goals</span>
+      <div class="chips" id="boardchips"></div>
+      <label class="boardlf">按联赛看榜 By league
+        <select id="boardLeagueSel" title="选择联赛，只看该联赛球员的个人进球榜"></select>
+      </label>
     </div>
     <div class="board" id="board"></div>
     <div class="boardlegend">
@@ -618,7 +623,7 @@
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.10.1", BUILD_TIME="2026-07-06 23:05";
+const APP_VERSION="v1.11.0", BUILD_TIME="2026-07-10 22:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -821,7 +826,7 @@ const natEn=n=>NAT_EN_SHORT[n]||n;
 function renderFeed(){
   const el=document.getElementById("goalFeed"); if(!el) return;
   const ms=(FUN&&FUN.goalFeed)||[];
-  if(!ms.length){ el.innerHTML='<div class="note" style="padding:14px">暂无进球 · No goals yet</div>'; return; }
+  if(!ms.length){ el.innerHTML='<div class="note" style="padding:14px">暂无赛果 · No results yet</div>'; return; }
   const grp=m=>{ const stageHtml=m.group?`<span class="fgstage">Round ${m.mday||"?"}</span><span class="fgstage">${m.group}</span>`:(m.round?`<span class="fgstage">${m.round}</span>`:""); const sc=(m.ft||"").split("-"); const c1=natColor(m.t1), c2=natColor(m.t2);
     return `<div class="fgrp">
     <div class="fgh">
@@ -833,11 +838,11 @@ function renderFeed(){
         ${m.shootout?`<span class="fgpdiv"></span><span class="fgpenl">🥅<span class="fgptx"><b>点球</b><i>Penalty</i></span></span><b class="fgpens"><span style="color:${c1}">${m.shootout[0]}</span><span class="fgsc">:</span><span style="color:${c2}">${m.shootout[1]}</span></b>`:""}
       </div>
     </div>
-    ${m.goals.map(x=>`<div class="feedrow${x.og?' og':''}">
+    ${m.goals.length?m.goals.map(x=>`<div class="feedrow${x.og?' og':''}">
        <span class="fmin" style="color:${natColor(x.nation)}">${x.minute||"—"}</span>
        <span class="fnat"><span class="flag">${fl(x.nation)}</span><span class="tx"><b>${x.nationZh}</b><i>${natEn(x.nation)}</i></span></span>
        <span class="fpl"><span class="fpz"><b>${x.nameZh||x.player}</b>${x.pen?'<i class="pip pen" title="点球 Penalty">⚽</i><span class="fpenlbl">点球 Penalty</span>':''}${x.og?'<span class="fmark ogm">乌龙 OG</span>':''}</span><i>${x.player}</i>${x.clubZh?`<span class="fclub">${lfl(x.league)?lfl(x.league)+' ':''}${x.clubZh} <span class="fcen">${cabbr(x.club)}</span></span>`:""}</span>
-     </div>`).join("")}
+     </div>`).join(""):`<div class="fnogoal">🚫 本场无进球 · No goals</div>`}
   </div>`; };
   // 按日期分组（goalFeed 已按日期倒序）
   const days=[]; let cur=null;

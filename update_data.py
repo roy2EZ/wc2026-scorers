@@ -423,7 +423,7 @@ def main():
                     "clubZh":(c.get("nameZh") if c else "") or "","club":(c.get("name") if c else "") or "","league":(c.get("league") if c else "") or "",
                     "minute":(str(g.get("minute"))+"'" if g.get("minute") else ""),"min":parse_min(g.get("minute")) or 0,
                     "pen":bool(g.get("penalty")),"og":og})
-        if not glist: continue
+        # 最新赛果：所有已完赛的比赛都收录（含 0-0 / 无进球场次），glist 可为空
         glist.sort(key=lambda x:x["min"])
         grd=clean_ground(mt.get("ground","")); hf,hz=HOSTINFO.get(HOST.get(grd,""),("",""))
         goalFeed.append({"date":mt.get("date",""),"num":mt.get("num") or (idx+1),

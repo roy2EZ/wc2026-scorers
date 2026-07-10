@@ -1,9 +1,9 @@
 {
- "version": "v1.10.1",
- "updated": "2026-07-10T21:31:21+00:00",
+ "version": "v1.11.0",
+ "updated": "2026-07-10T15:02:51-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 169,
- "totalGoals": 270,
+ "count": 170,
+ "totalGoals": 271,
  "totalPens": 14,
  "matchesWithGoals": 90,
  "schedule": {
@@ -995,6 +995,27 @@
    },
    {
     "date": "2026-07-07",
+    "num": 96,
+    "group": "",
+    "round": "Round of 16",
+    "mday": null,
+    "t1": "Switzerland",
+    "t1Zh": "瑞士",
+    "t2": "Colombia",
+    "t2Zh": "哥伦比亚",
+    "ft": "0-0",
+    "ground": "Vancouver",
+    "cityZh": "温哥华",
+    "hostFlag": "🇨🇦",
+    "hostZh": "加拿大",
+    "shootout": [
+     4,
+     3
+    ],
+    "goals": []
+   },
+   {
+    "date": "2026-07-07",
     "num": 95,
     "group": "",
     "round": "Round of 16",
@@ -1012,12 +1033,12 @@
     "goals": [
      {
       "player": "Yasser Ibrahim",
-      "nameZh": "Yasser Ibrahim",
+      "nameZh": "亚西尔·易卜拉欣",
       "nation": "Egypt",
       "nationZh": "埃及",
-      "clubZh": "",
-      "club": "",
-      "league": "",
+      "clubZh": "开罗国民",
+      "club": "Al Ahly FC",
+      "league": "埃及超",
       "minute": "15'",
       "min": 15,
       "pen": false,
@@ -2460,6 +2481,24 @@
    },
    {
     "date": "2026-06-27",
+    "num": 65,
+    "group": "Group K",
+    "round": "Matchday 17",
+    "mday": 3,
+    "t1": "Colombia",
+    "t1Zh": "哥伦比亚",
+    "t2": "Portugal",
+    "t2Zh": "葡萄牙",
+    "ft": "0-0",
+    "ground": "Miami",
+    "cityZh": "迈阿密",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
+   },
+   {
+    "date": "2026-06-27",
     "num": 60,
     "group": "Group J",
     "round": "Matchday 17",
@@ -2828,6 +2867,24 @@
    },
    {
     "date": "2026-06-26",
+    "num": 47,
+    "group": "Group H",
+    "round": "Matchday 16",
+    "mday": 3,
+    "t1": "Cape Verde",
+    "t1Zh": "佛得角",
+    "t2": "Saudi Arabia",
+    "t2Zh": "沙特阿拉伯",
+    "ft": "0-0",
+    "ground": "Houston",
+    "cityZh": "休斯顿",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
+   },
+   {
+    "date": "2026-06-26",
     "num": 42,
     "group": "Group G",
     "round": "Matchday 16",
@@ -3186,6 +3243,24 @@
       "og": false
      }
     ]
+   },
+   {
+    "date": "2026-06-25",
+    "num": 24,
+    "group": "Group D",
+    "round": "Matchday 15",
+    "mday": 3,
+    "t1": "Paraguay",
+    "t1Zh": "巴拉圭",
+    "t2": "Australia",
+    "t2Zh": "澳大利亚",
+    "ft": "0-0",
+    "ground": "San Francisco Bay Area",
+    "cityZh": "旧金山湾区",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
    },
    {
     "date": "2026-06-25",
@@ -3676,6 +3751,24 @@
       "og": false
      }
     ]
+   },
+   {
+    "date": "2026-06-23",
+    "num": 69,
+    "group": "Group L",
+    "round": "Matchday 13",
+    "mday": 2,
+    "t1": "England",
+    "t1Zh": "英格兰",
+    "t2": "Ghana",
+    "t2Zh": "加纳",
+    "ft": "0-0",
+    "ground": "Boston",
+    "cityZh": "波士顿",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
    },
    {
     "date": "2026-06-23",
@@ -4252,6 +4345,24 @@
     ]
    },
    {
+    "date": "2026-06-21",
+    "num": 39,
+    "group": "Group G",
+    "round": "Matchday 11",
+    "mday": 2,
+    "t1": "Belgium",
+    "t1Zh": "比利时",
+    "t2": "Iran",
+    "t2Zh": "伊朗",
+    "ft": "0-0",
+    "ground": "Los Angeles",
+    "cityZh": "洛杉矶",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
+   },
+   {
     "date": "2026-06-20",
     "num": 34,
     "group": "Group F",
@@ -4418,6 +4529,24 @@
       "og": false
      }
     ]
+   },
+   {
+    "date": "2026-06-20",
+    "num": 28,
+    "group": "Group E",
+    "round": "Matchday 10",
+    "mday": 2,
+    "t1": "Ecuador",
+    "t1Zh": "厄瓜多尔",
+    "t2": "Curaçao",
+    "t2Zh": "库拉索",
+    "ft": "0-0",
+    "ground": "Kansas City",
+    "cityZh": "堪萨斯城",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
    },
    {
     "date": "2026-06-20",
@@ -5475,6 +5604,24 @@
       "og": false
      }
     ]
+   },
+   {
+    "date": "2026-06-15",
+    "num": 43,
+    "group": "Group H",
+    "round": "Matchday 5",
+    "mday": 1,
+    "t1": "Spain",
+    "t1Zh": "西班牙",
+    "t2": "Cape Verde",
+    "t2Zh": "佛得角",
+    "ft": "0-0",
+    "ground": "Atlanta",
+    "cityZh": "亚特兰大",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": []
    },
    {
     "date": "2026-06-15",
@@ -9563,6 +9710,23 @@
    "assists": 0
   },
   {
+   "player": "Yasser Ibrahim",
+   "nameZh": "亚西尔·易卜拉欣",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 1,
+   "pens": 0,
+   "club": "Al Ahly FC",
+   "clubZh": "开罗国民",
+   "league": "埃及超",
+   "club_id": "al-ahly-fc",
+   "id": "EGY-2",
+   "assists": 0
+  },
+  {
    "player": "Álex Baena",
    "nameZh": "巴埃纳",
    "num": 15,
@@ -12697,6 +12861,22 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "HAI-18"
+  },
+  {
+   "player": "Yasser Ibrahim",
+   "nameZh": "亚西尔·易卜拉欣",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Egypt",
+   "nationZh": "埃及",
+   "goals": 1,
+   "pens": 0,
+   "club": "Al Ahly FC",
+   "clubZh": "开罗国民",
+   "league": "埃及超",
+   "club_id": "al-ahly-fc",
+   "id": "EGY-2"
   },
   {
    "player": "Álex Baena",
@@ -29497,22 +29677,6 @@
    "league": "瑞士超",
    "club_id": "bsc-young-boys",
    "id": "TUN-20"
-  },
-  {
-   "player": "Yasser",
-   "nameZh": "亚西尔",
-   "num": 2,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Egypt",
-   "nationZh": "埃及",
-   "goals": 0,
-   "pens": 0,
-   "club": "Al Ahly FC",
-   "clubZh": "开罗国民",
-   "league": "埃及超",
-   "club_id": "al-ahly-fc",
-   "id": "EGY-2"
   },
   {
    "player": "Yassin Fortune",

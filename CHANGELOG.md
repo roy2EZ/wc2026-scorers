@@ -8,6 +8,11 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.11.0
+
+- **「最新进球」板块升级为「最新赛果 Latest Results」**：此前只显示有进球的比赛，0-0（含淘汰赛点球决胜的 0-0）会被整场跳过。现在**所有已完赛比赛无论比分都收录**，无进球的场次显示「🚫 本场无进球 · No goals」占位行，点球大战比分照常展示。
+  The "Latest Goals" section is now "Latest Results": every finished match is listed regardless of score. Goalless matches (including 0-0 decided on penalties) now appear with a "No goals" placeholder row instead of being skipped.
+
 ## v1.10.1
 
 - **修复排行榜默认档位漏铜牌**：当进球/助攻数出现断档（如最高档是 7、6、4，缺 5）时，旧的"按数值 max-2"默认阈值会把铜牌档挡在门外。改为默认 = **第 3 高的实际档位**，保证金/银/铜三档始终露出，且与发牌口径一致。射手榜、助攻榜、进球大战统一。
