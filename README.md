@@ -7,8 +7,6 @@ A **bilingual (English / Chinese)** goalscorer dashboard for the 2026 FIFA World
 🔗 **Live / 在线**: https://roy2ez.github.io/wc2026-scorers/
 
 <img alt="App preview" src="screenshots/promo-en.png" width="720">
-<img alt="goalscorers photo" src="Goalscorers-with-photo.jpg" width="720">
-
 
 ---
 
