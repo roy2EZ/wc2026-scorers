@@ -1,6 +1,6 @@
 {
  "version": "v1.10.1",
- "updated": "2026-07-10T07:47:37+00:00",
+ "updated": "2026-07-10T17:49:23+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 168,
  "totalGoals": 267,
@@ -6663,7 +6663,7 @@
    "league": "西甲",
    "club_id": "real-madrid",
    "id": "FRA-10",
-   "assists": 2
+   "assists": 3
   },
   {
    "player": "Lionel Messi",
@@ -9558,6 +9558,23 @@
    "assists": 4
   },
   {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 8,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10",
+   "assists": 3
+  },
+  {
    "player": "Alexander Isak",
    "nameZh": "伊萨克",
    "num": 9,
@@ -9658,23 +9675,6 @@
    "club_id": "cd-guadalajara",
    "id": "MEX-25",
    "assists": 3
-  },
-  {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 8,
-   "pens": 1,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10",
-   "assists": 2
   },
   {
    "player": "Ousmane Dembele",
