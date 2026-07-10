@@ -1,18 +1,18 @@
 {
  "version": "v1.10.1",
- "updated": "2026-07-10T19:37:25+00:00",
+ "updated": "2026-07-10T21:08:35+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 168,
- "totalGoals": 267,
+ "count": 169,
+ "totalGoals": 270,
  "totalPens": 14,
- "matchesWithGoals": 89,
+ "matchesWithGoals": 90,
  "schedule": {
   "total": 104,
-  "played": 97,
+  "played": 98,
   "stageEn": "Quarter-finals",
   "stageZh": "八强",
-  "lastDate": "2026-07-09",
-  "nextDate": "2026-07-10"
+  "lastDate": "2026-07-10",
+  "nextDate": "2026-07-11"
  },
  "funstats": {
   "multiGoals": [
@@ -488,9 +488,9 @@
   "timeBuckets": {
    "1-5": 9,
    "6-22": 43,
-   "23-45": 64,
+   "23-45": 66,
    "46-68": 73,
-   "69-90": 58,
+   "69-90": 59,
    "90+": 31,
    "ET": 4
   },
@@ -525,7 +525,7 @@
    1,
    3,
    5,
-   2,
+   3,
    7,
    3,
    1,
@@ -536,7 +536,7 @@
    3,
    4,
    1,
-   1,
+   2,
    5,
    5,
    1,
@@ -583,7 +583,7 @@
    1,
    4,
    1,
-   2,
+   3,
    4,
    3,
    3,
@@ -890,6 +890,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-10",
+    "num": 98,
+    "group": "",
+    "round": "Quarter-final",
+    "mday": null,
+    "t1": "Spain",
+    "t1Zh": "西班牙",
+    "t2": "Belgium",
+    "t2Zh": "比利时",
+    "ft": "2-1",
+    "ground": "Los Angeles",
+    "cityZh": "洛杉矶",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Fabian",
+      "nameZh": "法比安",
+      "nation": "Spain",
+      "nationZh": "西班牙",
+      "clubZh": "巴黎圣日耳曼",
+      "club": "Paris Saint-Germain",
+      "league": "法甲",
+      "minute": "30'",
+      "min": 30,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Charles De Ketelaere",
+      "nameZh": "查尔斯·德·克特拉雷",
+      "nation": "Belgium",
+      "nationZh": "比利时",
+      "clubZh": "亚特兰大",
+      "club": "Atalanta Bergamo",
+      "league": "意甲",
+      "minute": "41'",
+      "min": 41,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Mikel Merino",
+      "nameZh": "米克尔·梅里诺",
+      "nation": "Spain",
+      "nationZh": "西班牙",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "88'",
+      "min": 88,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-09",
     "num": 97,
@@ -6836,6 +6894,23 @@
    "assists": 0
   },
   {
+   "player": "Charles De Ketelaere",
+   "nameZh": "查尔斯·德·克特拉雷",
+   "num": 17,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 3,
+   "pens": 0,
+   "club": "Atalanta Bergamo",
+   "clubZh": "亚特兰大",
+   "league": "意甲",
+   "club_id": "atalanta-bergamo",
+   "id": "BEL-17",
+   "assists": 0
+  },
+  {
    "player": "Cody Gakpo",
    "nameZh": "加克波",
    "num": 11,
@@ -7159,23 +7234,6 @@
    "assists": 2
   },
   {
-   "player": "Charles De Ketelaere",
-   "nameZh": "查尔斯·德·克特拉雷",
-   "num": 17,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 2,
-   "pens": 0,
-   "club": "Atalanta Bergamo",
-   "clubZh": "亚特兰大",
-   "league": "意甲",
-   "club_id": "atalanta-bergamo",
-   "id": "BEL-17",
-   "assists": 0
-  },
-  {
    "player": "Crysencio Summerville",
    "nameZh": "萨默维尔",
    "num": 24,
@@ -7360,6 +7418,23 @@
    "league": "葡超",
    "club_id": "sporting-cp",
    "id": "URU-20",
+   "assists": 0
+  },
+  {
+   "player": "Mikel Merino",
+   "nameZh": "米克尔·梅里诺",
+   "num": 6,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 2,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ESP-6",
    "assists": 0
   },
   {
@@ -7989,6 +8064,23 @@
    "league": "英超",
    "club_id": "chelsea-fc",
    "id": "ARG-24",
+   "assists": 0
+  },
+  {
+   "player": "Fabian",
+   "nameZh": "法比安",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "ESP-8",
    "assists": 0
   },
   {
@@ -8907,23 +8999,6 @@
    "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-18",
-   "assists": 0
-  },
-  {
-   "player": "Mikel Merino",
-   "nameZh": "米克尔·梅里诺",
-   "num": 6,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 1,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ESP-6",
    "assists": 0
   },
   {
@@ -10112,6 +10187,22 @@
    "id": "NED-19"
   },
   {
+   "player": "Charles De Ketelaere",
+   "nameZh": "查尔斯·德·克特拉雷",
+   "num": 17,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Belgium",
+   "nationZh": "比利时",
+   "goals": 3,
+   "pens": 0,
+   "club": "Atalanta Bergamo",
+   "clubZh": "亚特兰大",
+   "league": "意甲",
+   "club_id": "atalanta-bergamo",
+   "id": "BEL-17"
+  },
+  {
    "player": "Cody Gakpo",
    "nameZh": "加克波",
    "num": 11,
@@ -10416,22 +10507,6 @@
    "id": "SUI-7"
   },
   {
-   "player": "Charles De Ketelaere",
-   "nameZh": "查尔斯·德·克特拉雷",
-   "num": 17,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Belgium",
-   "nationZh": "比利时",
-   "goals": 2,
-   "pens": 0,
-   "club": "Atalanta Bergamo",
-   "clubZh": "亚特兰大",
-   "league": "意甲",
-   "club_id": "atalanta-bergamo",
-   "id": "BEL-17"
-  },
-  {
    "player": "Crysencio Summerville",
    "nameZh": "萨默维尔",
    "num": 24,
@@ -10606,6 +10681,22 @@
    "league": "葡超",
    "club_id": "sporting-cp",
    "id": "URU-20"
+  },
+  {
+   "player": "Mikel Merino",
+   "nameZh": "米克尔·梅里诺",
+   "num": 6,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 2,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ESP-6"
   },
   {
    "player": "Mostafa Ziko",
@@ -11198,6 +11289,22 @@
    "league": "英超",
    "club_id": "chelsea-fc",
    "id": "ARG-24"
+  },
+  {
+   "player": "Fabian",
+   "nameZh": "法比安",
+   "num": 8,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 1,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "ESP-8"
   },
   {
    "player": "Felix Nmecha",
@@ -12062,22 +12169,6 @@
    "league": "捷甲",
    "club_id": "sk-slavia-praha",
    "id": "CZE-18"
-  },
-  {
-   "player": "Mikel Merino",
-   "nameZh": "米克尔·梅里诺",
-   "num": 6,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 1,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ESP-6"
   },
   {
    "player": "Mohamed Mohebi",
@@ -17694,22 +17785,6 @@
    "league": "英超",
    "club_id": "aston-villa-fc",
    "id": "ENG-2"
-  },
-  {
-   "player": "Fabian",
-   "nameZh": "法比安",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 0,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "ESP-8"
   },
   {
    "player": "Fabian Balbuena",
