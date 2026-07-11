@@ -304,17 +304,26 @@ def main():
     # 按比赛阶段分桶（补水时间约 30'/75'）
     PHASES=["1-5","6-22","23-45","46-68","69-90","90+","ET"]
     buckets={b:0 for b in PHASES}
-    minuteCounts=[0]*131   # 每分钟进球数（含乌龙球）：上半场1-45 + 下半场46+（下半场补时90+x→91…右延）
-    stoppage1=[0]*20       # 上半场补时(45+1..45+19)单独统计：前端折线在45与46之间画成独立一段
+    minuteCounts=[0]*131   # 常规每分钟进球(含乌龙)：1-90（含正好90'）
+    stoppage1=[0]*20       # 上半场补时 45+x（前端折线单独成段）
+    stoppage2=[0]*20       # 下半场补时 90+x（前端折线单独成段，独立于加时）
+    etCounts=[0]*141       # 加时赛 ET：base>=91（含ET补时），按累计分钟索引(91-140)，前端单独成段
     def add_minute(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return
         base=int(m.group(1)); extra=int(m.group(2)) if m.group(2) else 0
-        if base==45 and extra>0:                    # 上半场补时：单独成段，不并入 45'
+        if base==45 and extra>0:                    # 上半场补时：单独成段
             if 1<=extra<len(stoppage1): stoppage1[extra]+=1
             return
-        t=base+extra                                # 下半场补时 90+x 按真实分钟向右自然延伸(91…)，不断崖
-        if 1<=t<=130: minuteCounts[t]+=1
+        if base==90 and extra>0:                    # 下半场补时 90+：单独成段
+            if 1<=extra<len(stoppage2): stoppage2[extra]+=1
+            return
+        if base>=91:                                # 加时赛(含ET补时)：单独成段
+            t=base+extra
+            if 91<=t<len(etCounts): etCounts[t]+=1
+            return
+        t=base+extra                                # 常规 1-90
+        if 1<=t<=90: minuteCounts[t]+=1
     def phase_of(s):
         m=re.match(r"(\d+)(?:\+(\d+))?", str(s or ""))
         if not m: return None
@@ -433,7 +442,8 @@ def main():
             "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,
             "shootout":(mt.get("score",{}).get("p") or None),"goals":glist})
     goalFeed.sort(key=lambda m:(m["date"],m["num"]), reverse=True)
-    funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"stoppage1":stoppage1,"ownGoals":ownGoals,
+    funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"stoppage1":stoppage1,
+              "stoppage2":stoppage2,"et":etCounts,"ownGoals":ownGoals,
               "goalFeed":goalFeed,
               "earliest":earliest,"latest":latest,"bigMatches":bigm}
 
