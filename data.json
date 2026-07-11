@@ -1,17 +1,17 @@
 {
  "version": "v1.11.1",
- "updated": "2026-07-11T23:13:17+00:00",
+ "updated": "2026-07-11T23:58:16+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 170,
- "totalGoals": 271,
+ "count": 171,
+ "totalGoals": 274,
  "totalPens": 14,
- "matchesWithGoals": 90,
+ "matchesWithGoals": 91,
  "schedule": {
   "total": 104,
-  "played": 98,
+  "played": 99,
   "stageEn": "Quarter-finals",
   "stageZh": "八强",
-  "lastDate": "2026-07-10",
+  "lastDate": "2026-07-11",
   "nextDate": "2026-07-11"
  },
  "funstats": {
@@ -54,6 +54,19 @@
     "score": "3-0",
     "date": "2026-06-16",
     "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Jude Bellingham",
+    "nameZh": "贝林厄姆",
+    "nation": "England",
+    "nationZh": "英格兰",
+    "oppo": "Norway",
+    "oppoZh": "挪威",
+    "score": "1-1",
+    "date": "2026-07-11",
+    "ground": "Miami"
    },
    {
     "n": 2,
@@ -488,11 +501,11 @@
   "timeBuckets": {
    "1-5": 9,
    "6-22": 43,
-   "23-45": 66,
+   "23-45": 68,
    "46-68": 73,
    "69-90": 59,
    "90+": 31,
-   "ET": 4
+   "ET": 5
   },
   "minuteCounts": [
    0,
@@ -531,7 +544,7 @@
    1,
    1,
    0,
-   5,
+   6,
    0,
    3,
    4,
@@ -630,7 +643,7 @@
   "stoppage1": [
    0,
    2,
-   0,
+   1,
    3,
    0,
    4,
@@ -765,7 +778,7 @@
    0,
    0,
    1,
-   0,
+   1,
    0,
    0,
    0,
@@ -1055,6 +1068,64 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-11",
+    "num": 99,
+    "group": "",
+    "round": "Quarter-final",
+    "mday": null,
+    "t1": "Norway",
+    "t1Zh": "挪威",
+    "t2": "England",
+    "t2Zh": "英格兰",
+    "ft": "1-1",
+    "ground": "Miami",
+    "cityZh": "迈阿密",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Andreas Schjelderup",
+      "nameZh": "安德烈亚斯·谢尔德鲁普",
+      "nation": "Norway",
+      "nationZh": "挪威",
+      "clubZh": "本菲卡",
+      "club": "SL Benfica",
+      "league": "葡超",
+      "minute": "36'",
+      "min": 36,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Jude Bellingham",
+      "nameZh": "贝林厄姆",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "45+2'",
+      "min": 47,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Jude Bellingham",
+      "nameZh": "贝林厄姆",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "93'",
+      "min": 93,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-10",
     "num": 98,
@@ -7087,6 +7158,23 @@
    "assists": 0
   },
   {
+   "player": "Jude Bellingham",
+   "nameZh": "贝林厄姆",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 6,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "ENG-10",
+   "assists": 0
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -7118,23 +7206,6 @@
    "league": "英超",
    "club_id": "crystal-palace",
    "id": "SEN-18",
-   "assists": 0
-  },
-  {
-   "player": "Jude Bellingham",
-   "nameZh": "贝林厄姆",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 4,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "ENG-10",
    "assists": 0
   },
   {
@@ -8071,6 +8142,23 @@
    "club_id": "olympique-marseille",
    "id": "ALG-9",
    "assists": 0
+  },
+  {
+   "player": "Andreas Schjelderup",
+   "nameZh": "安德烈亚斯·谢尔德鲁普",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "pens": 0,
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
+   "league": "葡超",
+   "club_id": "sl-ben-ca",
+   "id": "NOR-21",
+   "assists": 3
   },
   {
    "player": "Ante Budimir",
@@ -10003,7 +10091,7 @@
    "posZh": "中场",
    "nation": "Norway",
    "nationZh": "挪威",
-   "goals": 0,
+   "goals": 1,
    "pens": 0,
    "club": "SL Benfica",
    "clubZh": "本菲卡",
@@ -10404,6 +10492,22 @@
    "id": "ENG-9"
   },
   {
+   "player": "Jude Bellingham",
+   "nameZh": "贝林厄姆",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 6,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "ENG-10"
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -10434,22 +10538,6 @@
    "league": "英超",
    "club_id": "crystal-palace",
    "id": "SEN-18"
-  },
-  {
-   "player": "Jude Bellingham",
-   "nameZh": "贝林厄姆",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 4,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "ENG-10"
   },
   {
    "player": "Julian Quinones",
@@ -11330,6 +11418,22 @@
    "league": "法甲",
    "club_id": "olympique-marseille",
    "id": "ALG-9"
+  },
+  {
+   "player": "Andreas Schjelderup",
+   "nameZh": "安德烈亚斯·谢尔德鲁普",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 1,
+   "pens": 0,
+   "club": "SL Benfica",
+   "clubZh": "本菲卡",
+   "league": "葡超",
+   "club_id": "sl-ben-ca",
+   "id": "NOR-21"
   },
   {
    "player": "Ante Budimir",
@@ -14594,22 +14698,6 @@
    "league": "荷甲",
    "club_id": "psv-eindhoven",
    "id": "MAR-26"
-  },
-  {
-   "player": "Andreas Schjelderup",
-   "nameZh": "安德烈亚斯·谢尔德鲁普",
-   "num": 21,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 0,
-   "pens": 0,
-   "club": "SL Benfica",
-   "clubZh": "本菲卡",
-   "league": "葡超",
-   "club_id": "sl-ben-ca",
-   "id": "NOR-21"
   },
   {
    "player": "Andrej Kramarić",
