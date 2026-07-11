@@ -8,6 +8,11 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.11.1
+
+- **进球时间分布·折线图重构为五阶段**：上半场 → **45+ 补时** → 下半场 → **90+ 补时** → **加时赛 ET**，各阶段整段背景着色区分（上半场青 / 下半场蓝 / 加时紫），补时段用更深同色并标注「补时 Stoppage」，「上半场 / 下半场 / 加时赛」阶段提示词同色显示；曲线从开场（0'）连续起步、各段首尾相连。90+ 补时与真正的加时赛（91-120'）在数据层彻底分开统计。
+  Rebuilt the Goal Timing line chart into five phases (1H → 45+ stoppage → 2H → 90+ stoppage → extra time), each with its own tinted background and bilingual labels; second-half stoppage and real extra time are now tracked separately in the data.
+
 ## v1.11.0
 
 - **「最新进球」板块升级为「最新赛果 Latest Results」**：此前只显示有进球的比赛，0-0（含淘汰赛点球决胜的 0-0）会被整场跳过。现在**所有已完赛比赛无论比分都收录**，无进球的场次显示「🚫 本场无进球 · No goals」占位行，点球大战比分照常展示。

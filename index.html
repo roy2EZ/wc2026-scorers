@@ -593,7 +593,7 @@
     <div class="minutecard">
       <div class="minutehd">每分钟进球 <span class="mhd-en">By Minute</span></div>
       <div class="minutewrap"><canvas id="minuteChart"></canvas></div>
-      <div class="minutenote">每分钟进球（逐分钟统计）；上半场补时（45+）、下半场补时（90+）各自单独成段并标注<span style="display:block;margin-top:2px">Goals per minute; first-half (45+) and second-half (90+) stoppage each shown as its own marked segment</span></div>
+      <div class="minutenote">每分钟进球（3 分钟一档）；上半场补时（45+）、下半场补时（90+）、加时赛（ET）各自单独成段并标注、首尾相连<span style="display:block;margin-top:2px">Goals per minute (3-min bins); first-half (45+) & second-half (90+) stoppage and extra time (ET) each shown as its own marked, connected segment</span></div>
     </div>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
@@ -616,14 +616,14 @@
 <footer>
   <div class="wrap">
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
-      <span id="buildVer">v1.10.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.11.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.11.0", BUILD_TIME="2026-07-10 22:00";
+const APP_VERSION="v1.11.1", BUILD_TIME="2026-07-11 15:00";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -877,48 +877,69 @@ function renderFeed(){
 let minuteCh=null;
 function renderMinuteLine(){
   const cv=document.getElementById("minuteChart"); if(!cv) return;
-  const mc=(FUN&&FUN.minuteCounts)||[];
-  const st=(FUN&&FUN.stoppage1)||[];
-  let maxM=0; for(let i=mc.length-1;i>=1;i--){ if(mc[i]){ maxM=i; break; } }
-  if(!maxM){ return; }
-  let Smax=0; for(let i=st.length-1;i>=1;i--){ if(st[i]){ Smax=i; break; } }
-  const shift=Smax;              // 下半场整体右移，给上半场补时段(45+)腾出独立宽度
-  const BIN=3;                   // 3 分钟一档（看趋势更清爽）
+  const mc=(FUN&&FUN.minuteCounts)||[], s1=(FUN&&FUN.stoppage1)||[], s2=(FUN&&FUN.stoppage2)||[], et=(FUN&&FUN.et)||[];
+  const last=a=>{ for(let i=a.length-1;i>=1;i--) if(a[i]) return i; return 0; };
+  const reg=last(mc); if(!reg) return;
+  const S1=last(s1), S2=last(s2), ETmax=last(et);   // 上/下半场补时跨度、加时最后分钟
+  const off2=S1, off3=S1+S2, BIN=3;                 // 下半场位移=S1；加时位移=S1+S2
   const data=[], labels=[];
-  const lab=(lo,hi)=>lo===hi?lo+"'":lo+"-"+hi+"'";
-  // 上半场 1-45（逐分钟）
-  for(let lo=1;lo<=45;lo+=BIN){ const hi=Math.min(lo+BIN-1,45); let s=0;
-    for(let m=lo;m<=hi;m++) s+=mc[m]||0; data.push({x:hi,y:s}); labels.push(lab(lo,hi)); }
-  // 上半场补时 45+ —— 与两半同为 3 分钟聚合(尺度一致)，独立成段夹在 45 与 46 之间（连续不断线）
-  for(let lo=1;lo<=Smax;lo+=BIN){ const hi=Math.min(lo+BIN-1,Smax); let s=0;
-    for(let e=lo;e<=hi;e++) s+=st[e]||0; data.push({x:45+hi,y:s}); labels.push(lo===hi?`45+${lo}'`:`45+${lo}-${hi}'`); }
-  // 下半场 46-maxM（逐分钟，整体右移 shift；下半场补时 90+x 已右延）
-  for(let lo=46;lo<=maxM;lo+=BIN){ const hi=Math.min(lo+BIN-1,maxM); let s=0;
-    for(let m=lo;m<=hi;m++) s+=mc[m]||0; data.push({x:hi+shift,y:s}); labels.push(lab(lo,hi)); }
-  const maxX=maxM+shift;
-  const bandL=45.5, bandR=45.5+Smax;   // 上半场补时段左右边界(显示坐标)
-  const BREAKS=[{m:22.5},{m:68.5+shift}];                     // 上/下半场补水时间(下半场随右移)
-  const breaksPlugin={id:"breaks",afterDatasetsDraw(ch){
-    const {ctx,chartArea:a,scales:{x}}=ch; ctx.save(); ctx.textAlign="center";
-    const shade=(x0,x1,tx)=>{ const xl=x.getPixelForValue(x0), xr=x.getPixelForValue(x1); if(xr<=xl) return;
-      ctx.fillStyle="rgba(110,167,255,.07)"; ctx.fillRect(xl,a.top,xr-xl,a.bottom-a.top);
-      ctx.fillStyle="#9bb6e8"; ctx.font="bold 9.5px sans-serif"; ctx.fillText(tx,(xl+xr)/2,a.top-5); };
-    if(Smax) shade(bandL,bandR,"45+");                  // 上半场补时段
-    if(maxM>90) shade(90.5+shift,maxM+shift,"90+");     // 下半场补时段(镜像 45+)
-    BREAKS.forEach(b=>{ const px=x.getPixelForValue(b.m); if(px<a.left||px>a.right) return;
-      ctx.strokeStyle="rgba(110,167,255,.55)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
-      ctx.beginPath(); ctx.moveTo(px,a.top); ctx.lineTo(px,a.bottom); ctx.stroke(); ctx.setLineDash([]);
-      ctx.fillStyle="#9bb6e8"; ctx.font="10px sans-serif"; ctx.fillText("💧 补水", px, a.top-14);
-      ctx.fillStyle="#6f7da0"; ctx.font="8.5px sans-serif"; ctx.fillText("Hydration", px, a.top-4); });
-    ctx.restore();
-  }};
+  // 把 arr[lo..hi] 按 BIN 聚合成点，x=分钟+xof（各阶段首尾相连、连续不断线）
+  const seg=(arr,lo,hi,xof,mk)=>{ for(let a=lo;a<=hi;a+=BIN){ const b=Math.min(a+BIN-1,hi); let s=0;
+      for(let m=a;m<=b;m++) s+=arr[m]||0; data.push({x:b+xof,y:s}); labels.push(mk(a,b)); } };
+  const rng=(a,b)=>a===b?`${a}'`:`${a}-${b}'`;
+  data.push({x:0,y:0}); labels.push("0'");                             // 开场锚点：曲线从最左端(kickoff)起步
+  seg(mc,1,45,0,rng);                                                   // 上半场 1-45
+  if(S1) seg(s1,1,S1,45,(a,b)=>a===b?`45+${a}'`:`45+${a}-${b}'`);        // 上半场补时 45+
+  const twoTo=Math.min(90,reg);
+  if(twoTo>=46) seg(mc,46,twoTo,off2,rng);                              // 下半场 46-90
+  if(S2) seg(s2,1,S2,90+off2,(a,b)=>a===b?`90+${a}'`:`90+${a}-${b}'`);   // 下半场补时 90+
+  if(ETmax>=91) seg(et,91,ETmax,off3,rng);                             // 加时赛 ET
+  const maxX = ETmax>=91 ? ETmax+off3 : (S2? 90+off2+S2 : (S1? 45+S1 : reg));
+  // —— 三大阶段整段背景：上半场青 / 下半场蓝 / 加时紫；补时段(45+/90+)用更深同色突出 ——
+  const TEAL="#2dd4b2", BLUE="#60a5fa", VIOLET="#b083f0";
+  const H1=45.5+S1;                                   // 上半场右边界(含45+)
+  const B2=ETmax>=91 ? 90.5+off3 : maxX+0.5;          // 下半场右边界(含90+)
+  const regions=[[0,H1,"rgba(45,212,178,.06)"],[H1,B2,"rgba(96,165,250,.06)"]];
+  if(ETmax>=91) regions.push([90.5+off3,maxX+0.5,"rgba(176,131,240,.12)"]);
+  const subs=[];                                      // 补时段加深 + 标签
+  if(S1) subs.push([45.5,45.5+S1,"rgba(45,212,178,.13)","45+"]);
+  if(S2) subs.push([90.5+off2,90.5+off2+S2,"rgba(96,165,250,.15)","90+"]);
+  const marks=[[0.5,"上半场","1st half",TEAL]];        // 各阶段开始处提示（同色标题）
+  if(S1) marks.push([45.5+S1,"下半场","2nd half",BLUE]);
+  if(ETmax>=91) marks.push([90.5+off3,"加时赛","Extra time",VIOLET]);
+  const BREAKS=[[22.5],[68.5+off2]];                  // 上/下半场补水时间
+  const clampX=(x,a,v)=>Math.max(a.left,Math.min(a.right,x.getPixelForValue(v)));
+  const plug={id:"phases",
+    beforeDatasetsDraw(ch){ const {ctx,chartArea:a,scales:{x}}=ch; ctx.save();
+      [...regions,...subs].forEach(([x0,x1,cl])=>{ const xl=clampX(x,a,x0), xr=clampX(x,a,x1);
+        if(xr>xl){ ctx.fillStyle=cl; ctx.fillRect(xl,a.top,xr-xl,a.bottom-a.top); } });
+      ctx.restore();
+    },
+    afterDatasetsDraw(ch){ const {ctx,chartArea:a,scales:{x}}=ch; ctx.save();
+      ctx.textAlign="center";
+      subs.forEach(([x0,x1,cl,tx])=>{ const cx=(x.getPixelForValue(x0)+x.getPixelForValue(x1))/2;
+        ctx.fillStyle="#b9c3da"; ctx.font="bold 8.5px sans-serif"; ctx.fillText(tx+" 补时",cx,a.top-13);
+        ctx.fillStyle="#8291ad"; ctx.font="7.5px sans-serif"; ctx.fillText("Stoppage",cx,a.top-4); });
+      marks.forEach(([xat,zh,en,col])=>{ const px=x.getPixelForValue(xat); if(px<a.left-2||px>a.right+2) return;
+        ctx.strokeStyle="rgba(180,190,210,.28)"; ctx.setLineDash([2,3]); ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(px,a.top); ctx.lineTo(px,a.bottom); ctx.stroke(); ctx.setLineDash([]);
+        ctx.textAlign="left"; ctx.fillStyle=col; ctx.font="bold 9.5px sans-serif"; ctx.fillText(" "+zh,px,a.top+12);
+        ctx.fillStyle="#8291ad"; ctx.font="7.5px sans-serif"; ctx.fillText(" "+en,px,a.top+21); });
+      BREAKS.forEach(([m])=>{ const px=x.getPixelForValue(m); if(px<a.left||px>a.right) return;
+        ctx.strokeStyle="rgba(110,167,255,.45)"; ctx.setLineDash([4,4]); ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(px,a.top); ctx.lineTo(px,a.bottom); ctx.stroke(); ctx.setLineDash([]);
+        ctx.textAlign="center"; ctx.fillStyle="#9bb6e8"; ctx.font="10px sans-serif"; ctx.fillText("💧 补水",px,a.top-14);
+        ctx.fillStyle="#6f7da0"; ctx.font="8.5px sans-serif"; ctx.fillText("Hydration",px,a.top-4); });
+      ctx.restore();
+    }
+  };
   const ctx=cv.getContext("2d");
   const grad=ctx.createLinearGradient(0,0,0,200);
   grad.addColorStop(0,"rgba(231,178,59,.34)"); grad.addColorStop(1,"rgba(231,178,59,0)");
   if(minuteCh) minuteCh.destroy();
   const tickVals=[15,30,45];
-  for(const v of [60,75,90]) if(v<=maxM) tickVals.push(v+shift);
-  minuteCh=new Chart(cv,{type:"line",plugins:[breaksPlugin],
+  for(const v of [60,75,90]) if(v<=reg) tickVals.push(v+off2);
+  minuteCh=new Chart(cv,{type:"line",plugins:[plug],
     data:{datasets:[{data,spanGaps:false,borderColor:"#E7B23B",borderWidth:2,fill:true,backgroundColor:grad,
       tension:.35,pointRadius:0,pointHoverRadius:4,pointHoverBackgroundColor:"#FCE79A",pointHoverBorderColor:"#fff"}]},
     options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:22}},
@@ -931,7 +952,7 @@ function renderMinuteLine(){
         x:{type:"linear",min:0,max:maxX,grid:{display:false},
            afterBuildTicks:sc=>{ sc.ticks=tickVals.map(value=>({value})); },
            ticks:{color:"#7a849c",font:{family:"'Space Mono'",size:10},maxRotation:0,autoSkip:false,
-             callback:v=>{ if(v<=45.5) return v+"'"; return Math.round(v-shift)+"'"; }}},
+             callback:v=>{ if(v<=45.5) return v+"'"; return Math.round(v-off2)+"'"; }}},
         y:{beginAtZero:true,grid:{color:"rgba(39,48,75,.5)"},
            ticks:{precision:0,color:"#7a849c",font:{family:"'Space Mono'",size:10},maxTicksLimit:5}}}}});
 }
