@@ -382,7 +382,7 @@
   .tbl td .pname,.tbl td .psub,.tbl td>.cmut{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .tbl tbody tr:hover{background:rgba(26,34,56,.5)}
   .tbl .gv{font-family:'Space Mono',monospace;font-weight:800;font-size:19px;text-align:center;padding-left:4px;padding-right:4px;text-shadow:0 0 12px currentColor}
-  .tbl th.gcol{padding-left:4px;padding-right:4px}
+  .tbl th.gcol{padding-left:4px;padding-right:4px;text-align:center}
   .tbl thead th .thzh{white-space:nowrap}
   .tbl thead th .then{display:block;font-size:9.5px;color:#9aa3bd;font-weight:400;letter-spacing:0;margin-top:2px}
   .natmeta{margin-top:2px}
@@ -407,6 +407,12 @@
     .charts{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  /* —— 工具类：替代重复的内联 style —— */
+  .spt{padding-top:6px}
+  .hide{display:none}
+  .snsub{display:block;margin-top:3px;color:#8a93ab}
+  .mnsub{display:block;margin-top:2px}
+  .footmono{font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85}
 </style>
 </head>
 <body>
@@ -466,7 +472,7 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>助攻<b>榜</b><span class="enh">Top Assists</span>
       <div class="boardctl">
@@ -479,7 +485,7 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>进球<b>来自哪里</b><span class="enh">Goal Origins</span></h2></div>
     <div class="charts">
@@ -527,10 +533,10 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>全部<b>球员查询</b><span class="enh">All Players</span></h2></div>
-    <p class="subnote">48 队 1248 名球员全名册，可搜索筛选；点「全部 All」含 0 球球员，进球数旁 <sup class="penmk">P</sup> 为点球数。<span style="display:block;margin-top:3px;color:#8a93ab">All 1,248 players across 48 teams — searchable; “All” includes 0-goal players, <sup class="penmk">P</sup> marks penalties.</span></p>
+    <p class="subnote">48 队 1248 名球员全名册，可搜索筛选；点「全部 All」含 0 球球员，进球数旁 <sup class="penmk">P</sup> 为点球数。<span class="snsub">All 1,248 players across 48 teams — searchable; “All” includes 0-goal players, <sup class="penmk">P</sup> marks penalties.</span></p>
     <div class="filters">
       <div class="combo" data-cat="player"><input class="cinp" autocomplete="off" placeholder="球员 Player"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
       <div class="combo" data-cat="nation"><input class="cinp" autocomplete="off" placeholder="国家队 Nation Team"><button class="cclr" type="button" tabindex="-1" title="清除">×</button><div class="cmenu"></div></div>
@@ -550,7 +556,7 @@
           <thead><tr>
             <th data-k="player"><span class="thzh">球员</span><span class="then">Player</span></th>
             <th data-k="teamZh"><span class="thzh">国家队</span><span class="then">Nation</span></th>
-            <th data-k="goals" class="gcol" style="text-align:center"><span class="thzh">进球 <span class="ar">▼</span></span><span class="then">Goals</span></th>
+            <th data-k="goals" class="gcol"><span class="thzh">进球 <span class="ar">▼</span></span><span class="then">Goals</span></th>
             <th data-k="club"><span class="thzh">俱乐部 / 联赛</span><span class="then">Club / League</span></th>
           </tr></thead>
           <tbody id="tbody"></tbody>
@@ -561,21 +567,21 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>单场<b>多球</b><span class="enh">Multi-goal Players per Game</span></h2></div>
     <div class="toggle mgtabbar" id="mgtabs">
-      <button data-mg="2">梅开二度</button>
-      <button class="on" data-mg="3">帽子戏法</button>
-      <button data-mg="4">大四喜</button>
-      <button data-mg="5">五子登科</button>
+      <button type="button" data-mg="2">梅开二度</button>
+      <button type="button" class="on" data-mg="3">帽子戏法</button>
+      <button type="button" data-mg="4">大四喜</button>
+      <button type="button" data-mg="5">五子登科</button>
     </div>
     <div class="mgcap" id="mgcap"></div>
     <div class="mggrid" id="mgGrid"></div>
   </div>
 </section>
 
-<section style="padding-top:6px;display:none">
+<section class="spt hide">
   <div class="wrap">
     <div class="shead"><h2>进球<b>大战</b><span class="enh">Goal Fests</span></h2></div>
     <div class="boardctl">
@@ -586,14 +592,14 @@
   </div>
 </section>
 
-<section style="padding-top:6px">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>进球<b>时间分布</b><span class="enh">Goal Timing</span></h2></div>
-    <p class="subnote">全部进球按比赛阶段分布（含乌龙球），并标出全届最早与最晚的进球。<span style="display:block;margin-top:3px;color:#8a93ab">All goals by match phase (own goals included), plus the earliest and latest goal of the tournament.</span></p>
+    <p class="subnote">全部进球按比赛阶段分布（含乌龙球），并标出全届最早与最晚的进球。<span class="snsub">All goals by match phase (own goals included), plus the earliest and latest goal of the tournament.</span></p>
     <div class="minutecard">
       <div class="minutehd">每分钟进球 <span class="mhd-en">By Minute</span></div>
       <div class="minutewrap"><canvas id="minuteChart"></canvas></div>
-      <div class="minutenote">每分钟进球（3 分钟一档）；上半场补时（45+）、下半场补时（90+）、加时赛（ET）各自单独成段并标注、首尾相连<span style="display:block;margin-top:2px">Goals per minute (3-min bins); first-half (45+) & second-half (90+) stoppage and extra time (ET) each shown as its own marked, connected segment</span></div>
+      <div class="minutenote">每分钟进球（3 分钟一档）；上半场补时（45+）、下半场补时（90+）、加时赛（ET）各自单独成段并标注、首尾相连<span class="mnsub">Goals per minute (3-min bins); first-half (45+) & second-half (90+) stoppage and extra time (ET) each shown as its own marked, connected segment</span></div>
     </div>
     <div class="timewrap">
       <div class="timebars" id="timeBars"></div>
@@ -605,17 +611,17 @@
   </div>
 </section>
 
-<section style="padding-top:6px;display:none">
+<section class="spt hide">
   <div class="wrap">
     <div class="shead"><h2>乌龙<b>球</b><span class="enh">Own Goals</span></h2></div>
-    <p class="subnote">本届世界杯所有乌龙球——球员将球攻入自家球门，利于对手。<span style="display:block;margin-top:3px;color:#8a93ab">Every own goal of the tournament — credited to the opponent.</span></p>
+    <p class="subnote">本届世界杯所有乌龙球——球员将球攻入自家球门，利于对手。<span class="snsub">Every own goal of the tournament — credited to the opponent.</span></p>
     <div class="oggrid" id="ogList"></div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div style="font-family:'Space Mono',monospace;font-size:11px;color:#5e6a85;letter-spacing:.04em;opacity:.85">
+    <div class="footmono">
       <span id="buildVer">v1.11.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
