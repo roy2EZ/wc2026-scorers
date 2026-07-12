@@ -8,6 +8,13 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.12.2
+
+- 全部球员查询：进球数筛选默认改为 **1+**（只看进过球的），点「全部 All」含 0 球。
+  All Players goal filter now defaults to 1+.
+- 中文名修正：João Neves→**若昂·内维斯**（与鲁本·内维斯区分）、Martin Ødegaard→**厄德高**（去掉「马丁」）、Charles De Ketelaere→**德凯特拉雷（CDK）**。
+  Name fixes: João Neves, Ødegaard, De Ketelaere (CDK).
+
 ## v1.12.1
 
 - 「进球大战 Goal Fests」板块隐藏（代码保留，可随时恢复）。

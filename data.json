@@ -1,11 +1,11 @@
 {
- "version": "v1.12.1",
- "updated": "2026-07-11T20:47:18-07:00",
+ "version": "v1.12.2",
+ "updated": "2026-07-11T23:34:00-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 171,
- "totalGoals": 274,
+ "count": 173,
+ "totalGoals": 278,
  "totalPens": 14,
- "matchesWithGoals": 91,
+ "matchesWithGoals": 92,
  "schedule": {
   "total": 104,
   "played": 100,
@@ -72,7 +72,7 @@
     "n": 2,
     "pens": 0,
     "player": "Charles De Ketelaere",
-    "nameZh": "查尔斯·德·克特拉雷",
+    "nameZh": "德凯特拉雷（CDK）",
     "nation": "Belgium",
     "nationZh": "比利时",
     "oppo": "USA",
@@ -1079,7 +1079,7 @@
     "t2": "Switzerland",
     "t2Zh": "瑞士",
     "ft": "3-1",
-    "aet": false,
+    "aet": true,
     "ground": "Kansas City",
     "cityZh": "堪萨斯城",
     "hostFlag": "🇺🇸",
@@ -1232,7 +1232,7 @@
      },
      {
       "player": "Charles De Ketelaere",
-      "nameZh": "查尔斯·德·克特拉雷",
+      "nameZh": "德凯特拉雷（CDK）",
       "nation": "Belgium",
       "nationZh": "比利时",
       "clubZh": "亚特兰大",
@@ -1431,7 +1431,7 @@
     "goals": [
      {
       "player": "Charles De Ketelaere",
-      "nameZh": "查尔斯·德·克特拉雷",
+      "nameZh": "德凯特拉雷（CDK）",
       "nation": "Belgium",
       "nationZh": "比利时",
       "clubZh": "亚特兰大",
@@ -1457,7 +1457,7 @@
      },
      {
       "player": "Charles De Ketelaere",
-      "nameZh": "查尔斯·德·克特拉雷",
+      "nameZh": "德凯特拉雷（CDK）",
       "nation": "Belgium",
       "nationZh": "比利时",
       "clubZh": "亚特兰大",
@@ -5637,7 +5637,7 @@
     "goals": [
      {
       "player": "Joao Neves",
-      "nameZh": "内维斯",
+      "nameZh": "若昂·内维斯",
       "nation": "Portugal",
       "nationZh": "葡萄牙",
       "clubZh": "巴黎圣日耳曼",
@@ -7104,17 +7104,6 @@
     "num": 4
    },
    {
-    "t1": "Argentina",
-    "t1Zh": "阿根廷",
-    "t2": "Switzerland",
-    "t2Zh": "瑞士",
-    "ft": "3-1",
-    "total": 4,
-    "date": "2026-07-11",
-    "ground": "Kansas City",
-    "num": 100
-   },
-   {
     "t1": "Belgium",
     "t1Zh": "比利时",
     "t2": "Senegal",
@@ -7460,7 +7449,7 @@
   },
   {
    "player": "Charles De Ketelaere",
-   "nameZh": "查尔斯·德·克特拉雷",
+   "nameZh": "德凯特拉雷（CDK）",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",
@@ -7850,6 +7839,23 @@
    "assists": 0
   },
   {
+   "player": "Dan Ndoye",
+   "nameZh": "丹·恩多耶",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Switzerland",
+   "nationZh": "瑞士",
+   "goals": 2,
+   "pens": 0,
+   "club": "Nottingham Forest FC",
+   "clubZh": "诺丁汉森林",
+   "league": "英超",
+   "club_id": "nottingham-forest-fc",
+   "id": "SUI-11",
+   "assists": 0
+  },
+  {
    "player": "Daniel Munoz",
    "nameZh": "丹尼尔·穆尼奥斯",
    "num": 2,
@@ -7915,6 +7921,23 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "SEN-21",
+   "assists": 0
+  },
+  {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 2,
+   "pens": 1,
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22",
    "assists": 0
   },
   {
@@ -8258,6 +8281,23 @@
    "assists": 3
   },
   {
+   "player": "Alexis Mac Allister",
+   "nameZh": "麦卡利斯特",
+   "num": 20,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "ARG-20",
+   "assists": 0
+  },
+  {
    "player": "Alexis Saelemaekers",
    "nameZh": "赛勒梅克斯",
    "num": 22,
@@ -8544,23 +8584,6 @@
    "league": "苏超",
    "club_id": "celtic-fc",
    "id": "JPN-11",
-   "assists": 0
-  },
-  {
-   "player": "Dan Ndoye",
-   "nameZh": "丹·恩多耶",
-   "num": 11,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Switzerland",
-   "nationZh": "瑞士",
-   "goals": 1,
-   "pens": 0,
-   "club": "Nottingham Forest FC",
-   "clubZh": "诺丁汉森林",
-   "league": "英超",
-   "club_id": "nottingham-forest-fc",
-   "id": "SUI-11",
    "assists": 0
   },
   {
@@ -9075,7 +9098,7 @@
   },
   {
    "player": "Joao Neves",
-   "nameZh": "内维斯",
+   "nameZh": "若昂·内维斯",
    "num": 15,
    "pos": "MF",
    "posZh": "中场",
@@ -9122,6 +9145,23 @@
    "league": "罗马尼亚甲",
    "club_id": "universitatea-cluj",
    "id": "BIH-25",
+   "assists": 0
+  },
+  {
+   "player": "Julian J. Alvarez",
+   "nameZh": "朱利安·阿尔瓦雷斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Atlético De Madrid",
+   "clubZh": "马德里竞技",
+   "league": "西甲",
+   "club_id": "atletico-de-madrid",
+   "id": "ARG-9",
    "assists": 0
   },
   {
@@ -9292,23 +9332,6 @@
    "league": "西甲",
    "club_id": "barcelona",
    "id": "ESP-19",
-   "assists": 0
-  },
-  {
-   "player": "Lautaro L. Martinez",
-   "nameZh": "劳塔罗·马丁内斯",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 1,
-   "pens": 1,
-   "club": "Inter Milan",
-   "clubZh": "国际米兰",
-   "league": "意甲",
-   "club_id": "fc-internazionale-milano",
-   "id": "ARG-22",
    "assists": 0
   },
   {
@@ -10318,7 +10341,7 @@
   },
   {
    "player": "Martin Ødegaard",
-   "nameZh": "马丁·厄德高",
+   "nameZh": "厄德高",
    "num": 10,
    "pos": "MF",
    "posZh": "中场",
@@ -10787,7 +10810,7 @@
   },
   {
    "player": "Charles De Ketelaere",
-   "nameZh": "查尔斯·德·克特拉雷",
+   "nameZh": "德凯特拉雷（CDK）",
    "num": 17,
    "pos": "FW",
    "posZh": "前锋",
@@ -11154,6 +11177,22 @@
    "id": "JPN-15"
   },
   {
+   "player": "Dan Ndoye",
+   "nameZh": "丹·恩多耶",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Switzerland",
+   "nationZh": "瑞士",
+   "goals": 2,
+   "pens": 0,
+   "club": "Nottingham Forest FC",
+   "clubZh": "诺丁汉森林",
+   "league": "英超",
+   "club_id": "nottingham-forest-fc",
+   "id": "SUI-11"
+  },
+  {
    "player": "Daniel Munoz",
    "nameZh": "丹尼尔·穆尼奥斯",
    "num": 2,
@@ -11216,6 +11255,22 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "SEN-21"
+  },
+  {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 2,
+   "pens": 1,
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22"
   },
   {
    "player": "Leandro Trossard",
@@ -11538,6 +11593,22 @@
    "id": "SWE-9"
   },
   {
+   "player": "Alexis Mac Allister",
+   "nameZh": "麦卡利斯特",
+   "num": 20,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Liverpool",
+   "clubZh": "利物浦",
+   "league": "英超",
+   "club_id": "liverpool",
+   "id": "ARG-20"
+  },
+  {
    "player": "Alexis Saelemaekers",
    "nameZh": "赛勒梅克斯",
    "num": 22,
@@ -11808,22 +11879,6 @@
    "league": "苏超",
    "club_id": "celtic-fc",
    "id": "JPN-11"
-  },
-  {
-   "player": "Dan Ndoye",
-   "nameZh": "丹·恩多耶",
-   "num": 11,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Switzerland",
-   "nationZh": "瑞士",
-   "goals": 1,
-   "pens": 0,
-   "club": "Nottingham Forest FC",
-   "clubZh": "诺丁汉森林",
-   "league": "英超",
-   "club_id": "nottingham-forest-fc",
-   "id": "SUI-11"
   },
   {
    "player": "Deroy D. Duarte",
@@ -12307,7 +12362,7 @@
   },
   {
    "player": "Joao Neves",
-   "nameZh": "内维斯",
+   "nameZh": "若昂·内维斯",
    "num": 15,
    "pos": "MF",
    "posZh": "中场",
@@ -12352,6 +12407,22 @@
    "league": "罗马尼亚甲",
    "club_id": "universitatea-cluj",
    "id": "BIH-25"
+  },
+  {
+   "player": "Julian J. Alvarez",
+   "nameZh": "朱利安·阿尔瓦雷斯",
+   "num": 9,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 1,
+   "pens": 0,
+   "club": "Atlético De Madrid",
+   "clubZh": "马德里竞技",
+   "league": "西甲",
+   "club_id": "atletico-de-madrid",
+   "id": "ARG-9"
   },
   {
    "player": "Julio Enciso",
@@ -12512,22 +12583,6 @@
    "league": "西甲",
    "club_id": "barcelona",
    "id": "ESP-19"
-  },
-  {
-   "player": "Lautaro L. Martinez",
-   "nameZh": "劳塔罗·马丁内斯",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 1,
-   "pens": 1,
-   "club": "Inter Milan",
-   "clubZh": "国际米兰",
-   "league": "意甲",
-   "club_id": "fc-internazionale-milano",
-   "id": "ARG-22"
   },
   {
    "player": "Leo Ostigard",
@@ -14352,22 +14407,6 @@
    "league": "墨超",
    "club_id": "deportivo-toluca-fc",
    "id": "MEX-10"
-  },
-  {
-   "player": "Alexis Mac Allister",
-   "nameZh": "麦卡利斯特",
-   "num": 20,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "Liverpool",
-   "clubZh": "利物浦",
-   "league": "英超",
-   "club_id": "liverpool",
-   "id": "ARG-20"
   },
   {
    "player": "Alfie Jones",
@@ -22066,22 +22105,6 @@
    "id": "FRA-5"
   },
   {
-   "player": "Julian J. Alvarez",
-   "nameZh": "朱利安·阿尔瓦雷斯",
-   "num": 9,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 0,
-   "pens": 0,
-   "club": "Atlético De Madrid",
-   "clubZh": "马德里竞技",
-   "league": "西甲",
-   "club_id": "atletico-de-madrid",
-   "id": "ARG-9"
-  },
-  {
    "player": "Julian Ryerson",
    "nameZh": "朱利安·瑞尔森",
    "num": 26,
@@ -24003,7 +24026,7 @@
   },
   {
    "player": "Martin Ødegaard",
-   "nameZh": "马丁·厄德高",
+   "nameZh": "厄德高",
    "num": 10,
    "pos": "MF",
    "posZh": "中场",

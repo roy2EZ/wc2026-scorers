@@ -622,14 +622,14 @@
 <footer>
   <div class="wrap">
     <div class="footmono">
-      <span id="buildVer">v1.12.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.12.2</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.12.1", BUILD_TIME="2026-07-11 20:47";
+const APP_VERSION="v1.12.2", BUILD_TIME="2026-07-11 23:33";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -1278,7 +1278,7 @@ document.querySelector(".charts").addEventListener("click",e=>{
 });
 
 const tbody=document.getElementById("tbody"), rowcount=document.getElementById("rowcount");
-let minG=0,sortK="goals",sortDir=-1;
+let minG=1,sortK="goals",sortDir=-1;   // 默认只看进过球的(1+)，可点「全部 All」含0球
 const F={player:"",club:"",nation:"",league:""};   // 四个 combobox 的筛选值（子串匹配）
 
 // 表格行背景：进球≥2 时按档位上一层淡渐变，与领跑榜同色系但更克制；0–1 球保持干净
