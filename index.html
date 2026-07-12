@@ -198,8 +198,8 @@
   .feed{display:flex;flex-direction:column;gap:10px;max-width:660px}
   .feedday{font-size:12.5px;font-weight:800;color:#E7B23B;margin:6px 0 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .feedday .fdtag{font-size:10.5px;font-weight:600;color:#8a93ab}
-  .feedday-btn{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-family:'Noto Sans SC';font-size:12.5px;font-weight:800;color:var(--dc,#E7B23B);background:color-mix(in srgb,var(--dc,#E7B23B) 9%,transparent);border:1px solid color-mix(in srgb,var(--dc,#E7B23B) 30%,transparent);border-radius:10px;padding:9px 13px;cursor:pointer}
-  .feedday-btn:hover{background:color-mix(in srgb,var(--dc,#E7B23B) 16%,transparent)}
+  .feedday-btn{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-family:'Noto Sans SC';font-size:12.5px;font-weight:800;color:var(--dc,#E7B23B);background:rgba(var(--dcr,231,178,59),.09);border:1px solid rgba(var(--dcr,231,178,59),.30);border-radius:10px;padding:9px 13px;cursor:pointer}
+  .feedday-btn:hover{background:rgba(var(--dcr,231,178,59),.16)}
   .feedday-btn .fdarrow{font-size:10px}
   .feedday-btn .fdcount{font-size:10.5px;font-weight:600;color:#8a93ab;margin-left:auto}
   .feedday-btn .fdtag2{font-size:10px;font-weight:600;color:#8a93ab}
@@ -207,8 +207,8 @@
   .feedmore:hover{background:rgba(231,178,59,.18)}
   .feedday-body{display:flex;flex-direction:column;gap:10px;margin-top:6px}
   .feedday-body[hidden]{display:none}
-  .fday-grp.open{border:1px solid color-mix(in srgb,var(--dc,#E7B23B) 32%,transparent);border-radius:12px;background:color-mix(in srgb,var(--dc,#E7B23B) 5%,transparent);overflow:hidden}
-  .fday-grp.open .feedday-btn{width:100%;background:color-mix(in srgb,var(--dc,#E7B23B) 14%,transparent);border:0;border-bottom:1px dashed color-mix(in srgb,var(--dc,#E7B23B) 32%,transparent);border-radius:0}
+  .fday-grp.open{border:1px solid rgba(var(--dcr,231,178,59),.32);border-radius:12px;background:rgba(var(--dcr,231,178,59),.05);overflow:hidden}
+  .fday-grp.open .feedday-btn{width:100%;background:rgba(var(--dcr,231,178,59),.14);border:0;border-bottom:1px dashed rgba(var(--dcr,231,178,59),.32);border-radius:0}
   .fday-grp.open .feedday-body{margin-top:0;padding:12px}
   #feedOlder{display:flex;flex-direction:column;gap:16px;margin-top:14px}
   #feedOlder[hidden]{display:none}
@@ -863,7 +863,9 @@ function renderFeed(){
     if(r.includes("final"))return[8,"#E5122E"];
     return[0,"#E7B23B"]; };
   const dayColor=ms=>{ let best=[-1,"#E7B23B"]; ms.forEach(m=>{const s=STAGECLR(m); if(s[0]>best[0])best=s;}); return best[1]; };
-  const dayBlock=(d,i,open)=>`<div class="fday-grp${open?' open':''}" style="--dc:${dayColor(d.matches)}"><button type="button" class="feedday-btn${open?' open':''}" data-day="${i}"><span class="fdarrow">${open?"▾":"▸"}</span>📅 ${fmtMDen(d.date)}${i===0?' <span class="fdtag2">最新 Latest</span>':""}<span class="fdcount">${d.matches.length} 场</span></button><div class="feedday-body" id="fday-${i}"${open?"":" hidden"}>${d.matches.map(grp).join("")}</div></div>`;
+  const hexRGB=h=>{ h=(h||"").replace("#",""); return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16)).join(","); };  // "#2FD0BB"→"47,208,187"
+  const dayBlock=(d,i,open)=>{ const dc=dayColor(d.matches);
+    return `<div class="fday-grp${open?' open':''}" style="--dc:${dc};--dcr:${hexRGB(dc)}"><button type="button" class="feedday-btn${open?' open':''}" data-day="${i}"><span class="fdarrow">${open?"▾":"▸"}</span>📅 ${fmtMDen(d.date)}${i===0?' <span class="fdtag2">最新 Latest</span>':""}<span class="fdcount">${d.matches.length} 场</span></button><div class="feedday-body" id="fday-${i}"${open?"":" hidden"}>${d.matches.map(grp).join("")}</div></div>`; };
   let html=dayBlock(days[0],0,true);   // 今天：默认展开，可点收起
   if(days.length>1){
     html+=`<button type="button" class="feedmore" id="feedMore">▾ 查看更早的比赛日 Earlier days (${days.length-1})</button>`;
