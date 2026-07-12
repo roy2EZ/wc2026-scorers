@@ -1,6 +1,6 @@
 {
  "version": "v1.12.2",
- "updated": "2026-07-12T06:41:22+00:00",
+ "updated": "2026-07-12T17:01:33+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 173,
  "totalGoals": 278,
@@ -7292,7 +7292,7 @@
    "league": "美职联",
    "club_id": "inter-miami",
    "id": "ARG-10",
-   "assists": 0
+   "assists": 2
   },
   {
    "player": "Erling Haaland",
@@ -10255,6 +10255,23 @@
    "assists": 4
   },
   {
+   "player": "Martin Ødegaard",
+   "nameZh": "厄德高",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Norway",
+   "nationZh": "挪威",
+   "goals": 0,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "NOR-10",
+   "assists": 4
+  },
+  {
    "player": "Kylian Mbappe",
    "nameZh": "姆巴佩",
    "num": 10,
@@ -10306,6 +10323,23 @@
    "assists": 3
   },
   {
+   "player": "Anthony Gordon",
+   "nameZh": "安东尼·戈登",
+   "num": 18,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "ENG-18",
+   "assists": 3
+  },
+  {
    "player": "Bukayo Saka",
    "nameZh": "萨卡",
    "num": 7,
@@ -10340,23 +10374,6 @@
    "assists": 3
   },
   {
-   "player": "Martin Ødegaard",
-   "nameZh": "厄德高",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Norway",
-   "nationZh": "挪威",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "NOR-10",
-   "assists": 3
-  },
-  {
    "player": "Roberto R. Alvarado",
    "nameZh": "罗伯托·阿尔瓦拉多",
    "num": 25,
@@ -10372,6 +10389,23 @@
    "club_id": "cd-guadalajara",
    "id": "MEX-25",
    "assists": 3
+  },
+  {
+   "player": "Lionel Messi",
+   "nameZh": "梅西",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 8,
+   "pens": 0,
+   "club": "Inter Miami",
+   "clubZh": "迈阿密国际",
+   "league": "美职联",
+   "club_id": "inter-miami",
+   "id": "ARG-10",
+   "assists": 2
   },
   {
    "player": "Ousmane Dembele",
@@ -10510,23 +10544,6 @@
    "assists": 2
   },
   {
-   "player": "Anthony Gordon",
-   "nameZh": "安东尼·戈登",
-   "num": 18,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Newcastle United",
-   "clubZh": "纽卡斯尔",
-   "league": "英超",
-   "club_id": "newcastle-united",
-   "id": "ENG-18",
-   "assists": 2
-  },
-  {
    "player": "Denzel Dumfries",
    "nameZh": "邓弗里斯",
    "num": 22,
@@ -10609,23 +10626,6 @@
    "league": "挪威超",
    "club_id": "fk-bod-glimt",
    "id": "NOR-6",
-   "assists": 2
-  },
-  {
-   "player": "Ryan Gravenberch",
-   "nameZh": "瑞安·格雷文伯奇",
-   "num": 8,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Netherlands",
-   "nationZh": "荷兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Liverpool",
-   "clubZh": "利物浦",
-   "league": "英超",
-   "club_id": "liverpool",
-   "id": "NED-8",
    "assists": 2
   }
  ],
