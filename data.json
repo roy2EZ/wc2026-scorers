@@ -1,6 +1,6 @@
 {
- "version": "v1.12.0",
- "updated": "2026-07-12T03:38:20+00:00",
+ "version": "v1.12.1",
+ "updated": "2026-07-11T20:47:18-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 171,
  "totalGoals": 274,
@@ -8,11 +8,11 @@
  "matchesWithGoals": 91,
  "schedule": {
   "total": 104,
-  "played": 99,
-  "stageEn": "Quarter-finals",
-  "stageZh": "八强",
+  "played": 100,
+  "stageEn": "Semi-finals",
+  "stageZh": "四强",
   "lastDate": "2026-07-11",
-  "nextDate": "2026-07-11"
+  "nextDate": "2026-07-14"
  },
  "funstats": {
   "multiGoals": [
@@ -500,12 +500,12 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 43,
+   "6-22": 44,
    "23-45": 68,
-   "46-68": 73,
+   "46-68": 74,
    "69-90": 59,
    "90+": 31,
-   "ET": 5
+   "ET": 7
   },
   "minuteCounts": [
    0,
@@ -518,7 +518,7 @@
    8,
    0,
    3,
-   5,
+   6,
    1,
    1,
    1,
@@ -575,7 +575,7 @@
    4,
    1,
    6,
-   5,
+   6,
    4,
    3,
    1,
@@ -797,6 +797,7 @@
    0,
    0,
    1,
+   1,
    0,
    0,
    0,
@@ -805,8 +806,7 @@
    0,
    0,
    0,
-   0,
-   0,
+   1,
    0,
    0,
    0,
@@ -1068,6 +1068,78 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-11",
+    "num": 100,
+    "group": "",
+    "round": "Quarter-final",
+    "mday": null,
+    "t1": "Argentina",
+    "t1Zh": "阿根廷",
+    "t2": "Switzerland",
+    "t2Zh": "瑞士",
+    "ft": "3-1",
+    "aet": false,
+    "ground": "Kansas City",
+    "cityZh": "堪萨斯城",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Alexis Mac Allister",
+      "nameZh": "麦卡利斯特",
+      "nation": "Argentina",
+      "nationZh": "阿根廷",
+      "clubZh": "利物浦",
+      "club": "Liverpool",
+      "league": "英超",
+      "minute": "10'",
+      "min": 10,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Dan Ndoye",
+      "nameZh": "丹·恩多耶",
+      "nation": "Switzerland",
+      "nationZh": "瑞士",
+      "clubZh": "诺丁汉森林",
+      "club": "Nottingham Forest FC",
+      "league": "英超",
+      "minute": "67'",
+      "min": 67,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Julian J. Alvarez",
+      "nameZh": "朱利安·阿尔瓦雷斯",
+      "nation": "Argentina",
+      "nationZh": "阿根廷",
+      "clubZh": "马德里竞技",
+      "club": "Atlético De Madrid",
+      "league": "西甲",
+      "minute": "112'",
+      "min": 112,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Lautaro L. Martinez",
+      "nameZh": "劳塔罗·马丁内斯",
+      "nation": "Argentina",
+      "nationZh": "阿根廷",
+      "clubZh": "国际米兰",
+      "club": "Inter Milan",
+      "league": "意甲",
+      "minute": "120+1'",
+      "min": 121,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-11",
     "num": 99,
@@ -7030,6 +7102,17 @@
     "date": "2026-06-12",
     "ground": "Los Angeles",
     "num": 4
+   },
+   {
+    "t1": "Argentina",
+    "t1Zh": "阿根廷",
+    "t2": "Switzerland",
+    "t2Zh": "瑞士",
+    "ft": "3-1",
+    "total": 4,
+    "date": "2026-07-11",
+    "ground": "Kansas City",
+    "num": 100
    },
    {
     "t1": "Belgium",

@@ -8,6 +8,11 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.12.1
+
+- 「进球大战 Goal Fests」板块隐藏（代码保留，可随时恢复）。
+  Hid the Goal Fests section again (code kept).
+
 ## v1.12.0
 
 - **加时赛比分修正**：进入加时的淘汰赛，最新赛果现在显示**加时后最终比分**（`et`）而非 90 分钟比分（`ft`），并标记加时——此前会出现"比分与进球对不上"（如挪威-英格兰显示 1-1 却有 3 个进球，实为 1-2）。
