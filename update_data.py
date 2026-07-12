@@ -420,6 +420,7 @@ def main():
     for idx,mt in enumerate(all_matches):
         ft=mt.get("score",{}).get("ft")
         if not ft: continue
+        fin=mt.get("score",{}).get("et") or ft   # 进加时的比赛用加时后最终比分(et)，否则用 ft
         t1,t2=mt.get("team1"),mt.get("team2"); glist=[]
         for side,team,oppo in (("goals1",t1,t2),("goals2",t2,t1)):
             for g in mt.get(side,[]):
@@ -439,7 +440,7 @@ def main():
             "group":mt.get("group","") or "","round":mt.get("round","") or "",
             "mday":(grp_round.get((mt.get("group"),mt.get("date"),mt.get("team1"),mt.get("team2"))) if mt.get("group") else None),
             "t1":canon_nat(t1),"t1Zh":nat_zh(t1),"t2":canon_nat(t2),"t2Zh":nat_zh(t2),
-            "ft":f"{ft[0]}-{ft[1]}","ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,
+            "ft":f"{fin[0]}-{fin[1]}","aet":bool(mt.get("score",{}).get("et")),"ground":grd,"cityZh":CITY_ZH.get(grd,""),"hostFlag":hf,"hostZh":hz,
             "shootout":(mt.get("score",{}).get("p") or None),"goals":glist})
     goalFeed.sort(key=lambda m:(m["date"],m["num"]), reverse=True)
     funstats={"multiGoals":multi,"timeBuckets":buckets,"minuteCounts":minuteCounts,"stoppage1":stoppage1,

@@ -581,7 +581,7 @@
   </div>
 </section>
 
-<section class="spt hide">
+<section class="spt">
   <div class="wrap">
     <div class="shead"><h2>进球<b>大战</b><span class="enh">Goal Fests</span></h2></div>
     <div class="boardctl">
@@ -622,14 +622,14 @@
 <footer>
   <div class="wrap">
     <div class="footmono">
-      <span id="buildVer">v1.11.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.12.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.11.1", BUILD_TIME="2026-07-11 15:00";
+const APP_VERSION="v1.12.0", BUILD_TIME="2026-07-11 20:24";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -826,6 +826,22 @@ function renderFun(){ renderFeed(); renderMulti(); renderTiming(); renderMinuteL
 // 各国家队"国旗主色"（深底可读的亮色版），用于进球时间/比分着色
 const NATCOLOR={Algeria:"#2BB673",Argentina:"#75AADB",Australia:"#FFCD00",Austria:"#F0454F",Belgium:"#FF4B4B","Bosnia & Herzegovina":"#3F6FE0",Brazil:"#2BC04A","Cape Verde":"#3F6FE0",Canada:"#FF3B47",Colombia:"#FCD93A","DR Congo":"#34A7E0","Ivory Coast":"#FF8A3D",Croatia:"#FF4B4B","Curaçao":"#3F6FE0",Czechia:"#4F7FE0",Ecuador:"#FFD93A",Egypt:"#FF4B4B",England:"#FF4B5C",France:"#5A7FF0",Germany:"#FFCE3A",Ghana:"#2BC04A",Haiti:"#3F6FE0",Iran:"#2BB673",Iraq:"#FF4B4B",Japan:"#FF4B5C",Jordan:"#FF6B6B","South Korea":"#5A7FF0",Mexico:"#2BC04A",Morocco:"#FF4B4B",Netherlands:"#FF7A2D","New Zealand":"#5A8FF0",Norway:"#FF5C6E",Panama:"#4F8FE0",Paraguay:"#FF5B5B",Portugal:"#E84B4B",Qatar:"#C45A86","Saudi Arabia":"#2BB673",Scotland:"#4F8FE0",Senegal:"#2BC04A","South Africa":"#2BB673",Spain:"#E84B4B",Sweden:"#4F9FE0",Switzerland:"#FF4B4B",Tunisia:"#FF5B5B","Türkiye":"#FF4B5C",Uruguay:"#5AB4E0",USA:"#5A7FF0",Uzbekistan:"#34B7C0"};
 const natColor=n=>NATCOLOR[n]||"#FFC53D";
+// —— 主客场配色：两队旗色太接近时，客队改用国旗/客场的另一色拉开区分 ——
+const NATCOLOR2={Algeria:"#E5323B",Argentina:"#F6C244",Australia:"#2A4B9B",Austria:"#E9EDF5",Belgium:"#F6C21E","Bosnia & Herzegovina":"#F6C21E",Brazil:"#F6D21E","Cape Verde":"#E5323B",Canada:"#E9EDF5",Colombia:"#2A5BC0","DR Congo":"#F6C21E","Ivory Coast":"#2BB673",Croatia:"#2A5BC0","Curaçao":"#F6C21E",Czechia:"#E5323B",Ecuador:"#2A5BC0",Egypt:"#E9EDF5",England:"#2A4B9B",France:"#E5323B",Germany:"#E5323B",Ghana:"#F6D21E",Haiti:"#E5323B",Iran:"#E5323B",Iraq:"#2BB673",Japan:"#2A4B9B",Jordan:"#2BB673","South Korea":"#E5323B",Mexico:"#E5323B",Morocco:"#2BB673",Netherlands:"#2A5BC0","New Zealand":"#E5323B",Norway:"#3F6FE0",Panama:"#E5323B",Paraguay:"#2A5BC0",Portugal:"#2BB673",Qatar:"#E9EDF5","Saudi Arabia":"#E9EDF5",Scotland:"#E9EDF5",Senegal:"#F6D21E","South Africa":"#F6C21E",Spain:"#F6C21E",Sweden:"#F6C21E",Switzerland:"#E9EDF5",Tunisia:"#E9EDF5","Türkiye":"#E9EDF5",Uruguay:"#F6C244",USA:"#E5323B",Uzbekistan:"#E5323B"};
+const _hx=h=>{h=(h||"#000000").replace("#","");return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];};
+const colorDist=(a,b)=>{const A=_hx(a),B=_hx(b);return Math.hypot(A[0]-B[0],A[1]-B[1],A[2]-B[2]);};
+const _dark=(h,f)=>"#"+_hx(h).map(v=>Math.max(0,Math.round(v*(1-f))).toString(16).padStart(2,"0")).join("");
+const rgbaOf=(h,a)=>`rgba(${_hx(h).join(",")},${a})`;
+const CLASH=100;   // 旗色距离阈值：小于则视为太接近
+function pairColors(t1,t2){
+  const p1=natColor(t1),p2=natColor(t2);
+  if(colorDist(p1,p2)>=CLASH) return [p1,p2];               // 不冲突：两队都用主色
+  const s1=NATCOLOR2[t1],s2=NATCOLOR2[t2];
+  if(s2&&colorDist(p1,s2)>=CLASH) return [p1,s2];           // 优先客队(t2)换副色
+  if(s1&&colorDist(s1,p2)>=CLASH) return [s1,p2];           // 否则主队(t1)换
+  if(s1&&s2&&colorDist(s1,s2)>=CLASH) return [s1,s2];       // 两队都换
+  return [p1,_dark(p2,0.5)];                                // 兜底：把客队压暗制造明暗差
+}
 // 过长国家英文名的显示缩写
 const NAT_EN_SHORT={"Bosnia & Herzegovina":"Bosnia"};
 const natEn=n=>NAT_EN_SHORT[n]||n;
@@ -833,7 +849,7 @@ function renderFeed(){
   const el=document.getElementById("goalFeed"); if(!el) return;
   const ms=(FUN&&FUN.goalFeed)||[];
   if(!ms.length){ el.innerHTML='<div class="note" style="padding:14px">暂无赛果 · No results yet</div>'; return; }
-  const grp=m=>{ const stageHtml=m.group?`<span class="fgstage">Round ${m.mday||"?"}</span><span class="fgstage">${m.group}</span>`:(m.round?`<span class="fgstage">${m.round}</span>`:""); const sc=(m.ft||"").split("-"); const c1=natColor(m.t1), c2=natColor(m.t2);
+  const grp=m=>{ const stageHtml=m.group?`<span class="fgstage">Round ${m.mday||"?"}</span><span class="fgstage">${m.group}</span>`:(m.round?`<span class="fgstage">${m.round}</span>`:""); const sc=(m.ft||"").split("-"); const [c1,c2]=pairColors(m.t1,m.t2);
     return `<div class="fgrp">
     <div class="fgh">
       <div class="fgh-l"><span class="fgnum">Match ${m.num}</span>${stageHtml}${m.hostFlag?`<span class="fgloc">${m.hostFlag} ${m.ground}${m.cityZh?`<span class="fgloc-zh">${m.cityZh}</span>`:""}</span>`:""}</div>
@@ -844,11 +860,11 @@ function renderFeed(){
         ${m.shootout?`<span class="fgpdiv"></span><span class="fgpenl">🥅<span class="fgptx"><b>点球</b><i>Penalty</i></span></span><b class="fgpens"><span style="color:${c1}">${m.shootout[0]}</span><span class="fgsc">:</span><span style="color:${c2}">${m.shootout[1]}</span></b>`:""}
       </div>
     </div>
-    ${m.goals.length?m.goals.map(x=>`<div class="feedrow${x.og?' og':''}">
-       <span class="fmin" style="color:${natColor(x.nation)}">${x.minute||"—"}</span>
+    ${m.goals.length?m.goals.map(x=>{const rc=x.nation===m.t1?c1:(x.nation===m.t2?c2:natColor(x.nation));return `<div class="feedrow${x.og?' og':''}" style="background:linear-gradient(90deg,${rgbaOf(rc,.18)},${rgbaOf(rc,.04)} 42%,transparent 72%)">
+       <span class="fmin" style="color:${rc}">${x.minute||"—"}</span>
        <span class="fnat"><span class="flag">${fl(x.nation)}</span><span class="tx"><b>${x.nationZh}</b><i>${natEn(x.nation)}</i></span></span>
        <span class="fpl"><span class="fpz"><b>${x.nameZh||x.player}</b>${x.pen?'<i class="pip pen" title="点球 Penalty">⚽</i><span class="fpenlbl">点球 Penalty</span>':''}${x.og?'<span class="fmark ogm">乌龙 OG</span>':''}</span><i>${x.player}</i>${x.clubZh?`<span class="fclub">${lfl(x.league)?lfl(x.league)+' ':''}${x.clubZh} <span class="fcen">${cabbr(x.club)}</span></span>`:""}</span>
-     </div>`).join(""):`<div class="fnogoal">🚫 本场无进球 · No goals</div>`}
+     </div>`;}).join(""):(m.shootout?"":`<div class="fnogoal">🚫 本场无进球 · No goals</div>`)}
   </div>`; };
   // 按日期分组（goalFeed 已按日期倒序）
   const days=[]; let cur=null;

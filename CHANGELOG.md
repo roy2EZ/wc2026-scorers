@@ -8,6 +8,19 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.12.0
+
+- **加时赛比分修正**：进入加时的淘汰赛，最新赛果现在显示**加时后最终比分**（`et`）而非 90 分钟比分（`ft`），并标记加时——此前会出现"比分与进球对不上"（如挪威-英格兰显示 1-1 却有 3 个进球，实为 1-2）。
+  Knockout matches that went to extra time now show the final (a.e.t.) score, not the 90-minute score, fixing score/goal mismatches.
+- **最新赛果·两队配色区分（主客场逻辑）**：两队旗色太接近时（RGB 距离 < 100），客队自动改用国旗/客场副色拉开对比（如挪威留红、英格兰换藏青；巴西绿/墨西哥红）；每条进球行的背景也按进球方队色淡染，一眼分辨谁进的。
+  Latest Results now distinguishes the two teams' colors like home/away kits when their flag colors clash, and tints each goal row by the scoring team's color.
+- **点球大战场次不再显示"本场无进球"**：0-0 进点球的淘汰赛只显示点球比分；仅小组赛真 0-0 平局才显示"本场无进球"占位。
+  Shootout matches no longer show the "No goals" placeholder — only genuine goalless group-stage draws do.
+- **「进球大战 Goal Fests」板块加回**：位于单场多球与进球时间分布之间。
+  Restored the Goal Fests section (between Multi-goal and Goal Timing).
+- README：功能表 Goal Origins 移到助攻榜之后，与网站板块顺序一致。
+  README feature order aligned with the site (Goal Origins after Top Assists).
+
 ## v1.11.1
 
 - **进球时间分布·折线图重构为五阶段**：上半场 → **45+ 补时** → 下半场 → **90+ 补时** → **加时赛 ET**，各阶段整段背景着色区分（上半场青 / 下半场蓝 / 加时紫），补时段用更深同色并标注「补时 Stoppage」，「上半场 / 下半场 / 加时赛」阶段提示词同色显示；曲线从开场（0'）连续起步、各段首尾相连。90+ 补时与真正的加时赛（91-120'）在数据层彻底分开统计。
