@@ -487,7 +487,7 @@
         <div class="chead stack"><h3 id="natTitle">按国家队</h3>
           <div class="selrow">
             <div class="toggle chart-metric" data-chart="nation"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
-            <select class="miniSel topn" id="topNatSel">
+            <select class="miniSel topn" id="topNatSel" title="国家队图表显示数量 Top N nations">
               <option value="10" selected>Top 10</option>
               <option value="15">Top 15</option>
               <option value="20">Top 20</option>
@@ -500,7 +500,7 @@
         <div class="chead stack"><h3 id="leagueTitle">按联赛</h3>
           <div class="selrow">
             <div class="toggle chart-metric" data-chart="league"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
-            <select class="miniSel topn" id="topLeagueSel">
+            <select class="miniSel topn" id="topLeagueSel" title="联赛图表显示数量 Top N leagues">
               <option value="10" selected>Top 10</option>
               <option value="15">Top 15</option>
               <option value="20">Top 20</option>
@@ -513,8 +513,8 @@
         <div class="chead stack"><h3 id="clubTitle">按俱乐部</h3>
           <div class="selrow">
             <div class="toggle chart-metric" data-chart="club"><button type="button" class="on" data-m="goals">进球数</button><button type="button" data-m="scorers">进球人数</button></div>
-            <select id="clubLeagueSel" class="miniSel"></select>
-            <select class="miniSel topn" id="topClubSel">
+            <select id="clubLeagueSel" class="miniSel" title="按联赛筛选俱乐部 Filter clubs by league"></select>
+            <select class="miniSel topn" id="topClubSel" title="俱乐部图表显示数量 Top N clubs">
               <option value="10" selected>Top 10</option>
               <option value="15">Top 15</option>
               <option value="20">Top 20</option>
