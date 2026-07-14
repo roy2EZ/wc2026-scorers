@@ -1,18 +1,18 @@
 {
  "version": "v1.12.2",
- "updated": "2026-07-14T20:15:09+00:00",
+ "updated": "2026-07-14T21:31:14+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 173,
- "totalGoals": 278,
- "totalPens": 14,
- "matchesWithGoals": 92,
+ "totalGoals": 280,
+ "totalPens": 15,
+ "matchesWithGoals": 93,
  "schedule": {
   "total": 104,
-  "played": 100,
+  "played": 101,
   "stageEn": "Semi-finals",
   "stageZh": "四强",
-  "lastDate": "2026-07-11",
-  "nextDate": "2026-07-14"
+  "lastDate": "2026-07-14",
+  "nextDate": "2026-07-15"
  },
  "funstats": {
   "multiGoals": [
@@ -500,9 +500,9 @@
   ],
   "timeBuckets": {
    "1-5": 9,
-   "6-22": 44,
+   "6-22": 45,
    "23-45": 68,
-   "46-68": 74,
+   "46-68": 75,
    "69-90": 59,
    "90+": 31,
    "ET": 7
@@ -530,7 +530,7 @@
    2,
    1,
    7,
-   0,
+   1,
    1,
    1,
    1,
@@ -566,7 +566,7 @@
    4,
    3,
    3,
-   2,
+   3,
    5,
    7,
    2,
@@ -1068,6 +1068,52 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-14",
+    "num": 101,
+    "group": "",
+    "round": "Semi-final",
+    "mday": null,
+    "t1": "France",
+    "t1Zh": "法国",
+    "t2": "Spain",
+    "t2Zh": "西班牙",
+    "ft": "0-2",
+    "aet": false,
+    "ground": "Dallas",
+    "cityZh": "达拉斯",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Mikel Oyarzabal",
+      "nameZh": "奥亚萨瓦尔",
+      "nation": "Spain",
+      "nationZh": "西班牙",
+      "clubZh": "皇家社会",
+      "club": "Real Sociedad",
+      "league": "西甲",
+      "minute": "22'",
+      "min": 22,
+      "pen": true,
+      "og": false
+     },
+     {
+      "player": "Pedro Porro",
+      "nameZh": "佩德罗·波罗",
+      "nation": "Spain",
+      "nationZh": "西班牙",
+      "clubZh": "托特纳姆热刺",
+      "club": "Tottenham Hotspur FC",
+      "league": "英超",
+      "minute": "58'",
+      "min": 58,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-11",
     "num": 100,
@@ -7346,6 +7392,23 @@
    "assists": 0
   },
   {
+   "player": "Mikel Oyarzabal",
+   "nameZh": "奥亚萨瓦尔",
+   "num": 21,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 5,
+   "pens": 1,
+   "club": "Real Sociedad",
+   "clubZh": "皇家社会",
+   "league": "西甲",
+   "club_id": "real-sociedad",
+   "id": "ESP-21",
+   "assists": 0
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -7394,23 +7457,6 @@
    "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "MEX-16",
-   "assists": 0
-  },
-  {
-   "player": "Mikel Oyarzabal",
-   "nameZh": "奥亚萨瓦尔",
-   "num": 21,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 4,
-   "pens": 0,
-   "club": "Real Sociedad",
-   "clubZh": "皇家社会",
-   "league": "西甲",
-   "club_id": "real-sociedad",
-   "id": "ESP-21",
    "assists": 0
   },
   {
@@ -8074,6 +8120,23 @@
    "league": "西甲",
    "club_id": "villarreal",
    "id": "SEN-26",
+   "assists": 0
+  },
+  {
+   "player": "Pedro Porro",
+   "nameZh": "佩德罗·波罗",
+   "num": 12,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 2,
+   "pens": 0,
+   "club": "Tottenham Hotspur FC",
+   "clubZh": "托特纳姆热刺",
+   "league": "英超",
+   "club_id": "tottenham-hotspur-fc",
+   "id": "ESP-12",
    "assists": 0
   },
   {
@@ -9862,23 +9925,6 @@
    "assists": 0
   },
   {
-   "player": "Pedro Porro",
-   "nameZh": "佩德罗·波罗",
-   "num": 12,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 1,
-   "pens": 0,
-   "club": "Tottenham Hotspur FC",
-   "clubZh": "托特纳姆热刺",
-   "league": "英超",
-   "club_id": "tottenham-hotspur-fc",
-   "id": "ESP-12",
-   "assists": 0
-  },
-  {
    "player": "Petar Musa",
    "nameZh": "穆萨",
    "num": 26,
@@ -10713,6 +10759,22 @@
    "id": "ENG-10"
   },
   {
+   "player": "Mikel Oyarzabal",
+   "nameZh": "奥亚萨瓦尔",
+   "num": 21,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 5,
+   "pens": 1,
+   "club": "Real Sociedad",
+   "clubZh": "皇家社会",
+   "league": "西甲",
+   "club_id": "real-sociedad",
+   "id": "ESP-21"
+  },
+  {
    "player": "Ousmane Dembele",
    "nameZh": "登贝莱",
    "num": 7,
@@ -10759,22 +10821,6 @@
    "league": "沙特联",
    "club_id": "al-qadsiah-fc",
    "id": "MEX-16"
-  },
-  {
-   "player": "Mikel Oyarzabal",
-   "nameZh": "奥亚萨瓦尔",
-   "num": 21,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 4,
-   "pens": 0,
-   "club": "Real Sociedad",
-   "clubZh": "皇家社会",
-   "league": "西甲",
-   "club_id": "real-sociedad",
-   "id": "ESP-21"
   },
   {
    "player": "Vinicius Junior",
@@ -11399,6 +11445,22 @@
    "league": "西甲",
    "club_id": "villarreal",
    "id": "SEN-26"
+  },
+  {
+   "player": "Pedro Porro",
+   "nameZh": "佩德罗·波罗",
+   "num": 12,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 2,
+   "pens": 0,
+   "club": "Tottenham Hotspur FC",
+   "clubZh": "托特纳姆热刺",
+   "league": "英超",
+   "club_id": "tottenham-hotspur-fc",
+   "id": "ESP-12"
   },
   {
    "player": "Ramin Rezaeian",
@@ -13079,22 +13141,6 @@
    "league": "斯洛文尼亚甲",
    "club_id": "nk-maribor",
    "id": "TUN-4"
-  },
-  {
-   "player": "Pedro Porro",
-   "nameZh": "佩德罗·波罗",
-   "num": 12,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Spain",
-   "nationZh": "西班牙",
-   "goals": 1,
-   "pens": 0,
-   "club": "Tottenham Hotspur FC",
-   "clubZh": "托特纳姆热刺",
-   "league": "英超",
-   "club_id": "tottenham-hotspur-fc",
-   "id": "ESP-12"
   },
   {
    "player": "Petar Musa",
