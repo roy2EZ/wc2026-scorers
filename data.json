@@ -1,18 +1,18 @@
 {
  "version": "v1.12.2",
- "updated": "2026-07-15T20:12:26+00:00",
+ "updated": "2026-07-15T21:30:08+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 173,
- "totalGoals": 280,
+ "count": 174,
+ "totalGoals": 283,
  "totalPens": 15,
- "matchesWithGoals": 93,
+ "matchesWithGoals": 94,
  "schedule": {
   "total": 104,
-  "played": 101,
-  "stageEn": "Semi-finals",
-  "stageZh": "四强",
-  "lastDate": "2026-07-14",
-  "nextDate": "2026-07-15"
+  "played": 102,
+  "stageEn": "Third place",
+  "stageZh": "季军赛",
+  "lastDate": "2026-07-15",
+  "nextDate": "2026-07-18"
  },
  "funstats": {
   "multiGoals": [
@@ -502,10 +502,10 @@
    "1-5": 9,
    "6-22": 45,
    "23-45": 68,
-   "46-68": 75,
-   "69-90": 59,
+   "46-68": 76,
+   "69-90": 60,
    "90+": 31,
-   "ET": 7
+   "ET": 8
   },
   "minuteCounts": [
    0,
@@ -563,7 +563,7 @@
    0,
    3,
    6,
-   4,
+   5,
    3,
    3,
    3,
@@ -594,7 +594,7 @@
    4,
    3,
    1,
-   4,
+   5,
    1,
    3,
    4,
@@ -777,7 +777,7 @@
    0,
    0,
    0,
-   1,
+   2,
    1,
    0,
    0,
@@ -1068,6 +1068,65 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-15",
+    "num": 102,
+    "group": "",
+    "round": "Semi-final",
+    "mday": null,
+    "t1": "England",
+    "t1Zh": "英格兰",
+    "t2": "Argentina",
+    "t2Zh": "阿根廷",
+    "ft": "1-2",
+    "aet": false,
+    "ground": "Atlanta",
+    "cityZh": "亚特兰大",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Anthony Gordon",
+      "nameZh": "安东尼·戈登",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "纽卡斯尔",
+      "club": "Newcastle United",
+      "league": "英超",
+      "minute": "55'",
+      "min": 55,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Enzo E. Fernandez",
+      "nameZh": "恩佐·费尔南德斯",
+      "nation": "Argentina",
+      "nationZh": "阿根廷",
+      "clubZh": "切尔西",
+      "club": "Chelsea FC",
+      "league": "英超",
+      "minute": "86'",
+      "min": 86,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Lautaro L. Martinez",
+      "nameZh": "劳塔罗·马丁内斯",
+      "nation": "Argentina",
+      "nationZh": "阿根廷",
+      "clubZh": "国际米兰",
+      "club": "Inter Milan",
+      "league": "意甲",
+      "minute": "92'",
+      "min": 92,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-14",
     "num": 101,
@@ -7664,6 +7723,23 @@
    "assists": 0
   },
   {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 3,
+   "pens": 1,
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22",
+   "assists": 0
+  },
+  {
    "player": "Matheus Cunha",
    "nameZh": "库尼亚",
    "num": 9,
@@ -7936,6 +8012,23 @@
    "assists": 0
   },
   {
+   "player": "Enzo E. Fernandez",
+   "nameZh": "恩佐·费尔南德斯",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 2,
+   "pens": 0,
+   "club": "Chelsea FC",
+   "clubZh": "切尔西",
+   "league": "英超",
+   "club_id": "chelsea-fc",
+   "id": "ARG-24",
+   "assists": 0
+  },
+  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -7967,23 +8060,6 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "SEN-21",
-   "assists": 0
-  },
-  {
-   "player": "Lautaro L. Martinez",
-   "nameZh": "劳塔罗·马丁内斯",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 2,
-   "pens": 1,
-   "club": "Inter Milan",
-   "clubZh": "国际米兰",
-   "league": "意甲",
-   "club_id": "fc-internazionale-milano",
-   "id": "ARG-22",
    "assists": 0
   },
   {
@@ -8463,6 +8539,23 @@
    "assists": 0
   },
   {
+   "player": "Anthony Gordon",
+   "nameZh": "安东尼·戈登",
+   "num": 18,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "ENG-18",
+   "assists": 3
+  },
+  {
    "player": "Antonio Nusa",
    "nameZh": "安东尼奥·努萨",
    "num": 20,
@@ -8715,23 +8808,6 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14",
-   "assists": 0
-  },
-  {
-   "player": "Enzo E. Fernandez",
-   "nameZh": "恩佐·费尔南德斯",
-   "num": 24,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 1,
-   "pens": 0,
-   "club": "Chelsea FC",
-   "clubZh": "切尔西",
-   "league": "英超",
-   "club_id": "chelsea-fc",
-   "id": "ARG-24",
    "assists": 0
   },
   {
@@ -10376,7 +10452,7 @@
    "posZh": "前锋",
    "nation": "England",
    "nationZh": "英格兰",
-   "goals": 0,
+   "goals": 1,
    "pens": 0,
    "club": "Newcastle United",
    "clubZh": "纽卡斯尔",
@@ -11015,6 +11091,22 @@
    "id": "GER-7"
   },
   {
+   "player": "Lautaro L. Martinez",
+   "nameZh": "劳塔罗·马丁内斯",
+   "num": 22,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 3,
+   "pens": 1,
+   "club": "Inter Milan",
+   "clubZh": "国际米兰",
+   "league": "意甲",
+   "club_id": "fc-internazionale-milano",
+   "id": "ARG-22"
+  },
+  {
    "player": "Matheus Cunha",
    "nameZh": "库尼亚",
    "num": 9,
@@ -11271,6 +11363,22 @@
    "id": "EGY-8"
   },
   {
+   "player": "Enzo E. Fernandez",
+   "nameZh": "恩佐·费尔南德斯",
+   "num": 24,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "Argentina",
+   "nationZh": "阿根廷",
+   "goals": 2,
+   "pens": 0,
+   "club": "Chelsea FC",
+   "clubZh": "切尔西",
+   "league": "英超",
+   "club_id": "chelsea-fc",
+   "id": "ARG-24"
+  },
+  {
    "player": "Ermin Mahmic",
    "nameZh": "埃尔敏·马赫米奇",
    "num": 26,
@@ -11301,22 +11409,6 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "SEN-21"
-  },
-  {
-   "player": "Lautaro L. Martinez",
-   "nameZh": "劳塔罗·马丁内斯",
-   "num": 22,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 2,
-   "pens": 1,
-   "club": "Inter Milan",
-   "clubZh": "国际米兰",
-   "league": "意甲",
-   "club_id": "fc-internazionale-milano",
-   "id": "ARG-22"
   },
   {
    "player": "Leandro Trossard",
@@ -11767,6 +11859,22 @@
    "id": "CRO-11"
   },
   {
+   "player": "Anthony Gordon",
+   "nameZh": "安东尼·戈登",
+   "num": 18,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Newcastle United",
+   "clubZh": "纽卡斯尔",
+   "league": "英超",
+   "club_id": "newcastle-united",
+   "id": "ENG-18"
+  },
+  {
    "player": "Antonio Nusa",
    "nameZh": "安东尼奥·努萨",
    "num": 20,
@@ -12005,22 +12113,6 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
-  },
-  {
-   "player": "Enzo E. Fernandez",
-   "nameZh": "恩佐·费尔南德斯",
-   "num": 24,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "Argentina",
-   "nationZh": "阿根廷",
-   "goals": 1,
-   "pens": 0,
-   "club": "Chelsea FC",
-   "clubZh": "切尔西",
-   "league": "英超",
-   "club_id": "chelsea-fc",
-   "id": "ARG-24"
   },
   {
    "player": "Fabian",
@@ -15173,22 +15265,6 @@
    "league": "比甲",
    "club_id": "royal-antwerp-fc",
    "id": "ECU-8"
-  },
-  {
-   "player": "Anthony Gordon",
-   "nameZh": "安东尼·戈登",
-   "num": 18,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Newcastle United",
-   "clubZh": "纽卡斯尔",
-   "league": "英超",
-   "club_id": "newcastle-united",
-   "id": "ENG-18"
   },
   {
    "player": "Anthony Ralston",
