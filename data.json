@@ -1,6 +1,6 @@
 {
  "version": "v1.12.2",
- "updated": "2026-07-15T05:54:52+00:00",
+ "updated": "2026-07-15T08:26:49+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 173,
  "totalGoals": 280,
@@ -10590,6 +10590,23 @@
    "assists": 2
   },
   {
+   "player": "Dani Olmo",
+   "nameZh": "达尼·奥尔莫",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "Spain",
+   "nationZh": "西班牙",
+   "goals": 0,
+   "pens": 0,
+   "club": "Barcelona",
+   "clubZh": "巴塞罗那",
+   "league": "西甲",
+   "club_id": "barcelona",
+   "id": "ESP-10",
+   "assists": 2
+  },
+  {
    "player": "Denzel Dumfries",
    "nameZh": "邓弗里斯",
    "num": 22,
@@ -10604,23 +10621,6 @@
    "league": "意甲",
    "club_id": "fc-internazionale-milano",
    "id": "NED-22",
-   "assists": 2
-  },
-  {
-   "player": "Joshua Kimmich",
-   "nameZh": "基米希",
-   "num": 6,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "Germany",
-   "nationZh": "德国",
-   "goals": 0,
-   "pens": 0,
-   "club": "FC Bayern München",
-   "clubZh": "拜仁慕尼黑",
-   "league": "德甲",
-   "club_id": "fc-bayern-munchen",
-   "id": "GER-6",
    "assists": 2
   },
   {
