@@ -34,7 +34,7 @@ NATION_ZH={"Argentina":"阿根廷","Canada":"加拿大","USA":"美国","United S
  "Sweden":"瑞典","New Zealand":"新西兰","Norway":"挪威","France":"法国","England":"英格兰","Switzerland":"瑞士",
  "Morocco":"摩洛哥","Brazil":"巴西","Netherlands":"荷兰","Spain":"西班牙","Uruguay":"乌拉圭","Japan":"日本",
  "Mexico":"墨西哥","Czechia":"捷克","Czech Republic":"捷克","South Korea":"韩国","Korea Republic":"韩国",
- "Bosnia & Herzegovina":"波黑","Bosnia and Herzegovina":"波黑","Paraguay":"巴拉圭","Qatar":"卡塔尔",
+ "Bosnia & Herzegovina":"波黑","Bosnia and Herzegovina":"波黑","Bosnia-Herzegovina":"波黑","Paraguay":"巴拉圭","Qatar":"卡塔尔",
  "Turkey":"土耳其","Türkiye":"土耳其","Turkiye":"土耳其",
  "Scotland":"苏格兰","Australia":"澳大利亚","Curaçao":"库拉索","Curacao":"库拉索","Ivory Coast":"科特迪瓦",
  "Tunisia":"突尼斯","Saudi Arabia":"沙特阿拉伯","Iraq":"伊拉克","Egypt":"埃及","Senegal":"塞内加尔","Iran":"伊朗",
@@ -77,25 +77,53 @@ def _uget(u,t=25):
     return json.load(urllib.request.urlopen(req,timeout=t))
 def _espn_minute(s):
     return (s or "").replace("'","").strip()   # "45'+5'"→"45+5"，"22'"→"22"
-# ESPN 官方赛事榜（含 goalsLeaders/assistsLeaders），用于助攻榜。每条 athlete/team 均为 $ref。
-ESPN_LEADERS="https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/seasons/2026/types/0/leaders"
-def fetch_espn_assist_leaders(top=25):
-    """返回 [(name, nation, assists)]，按助攻降序；非致命，失败/异常返回 []。
-    只拉 athlete $ref（同时含 displayName 与 citizenship=国家），不再拉 team，省一半请求。"""
-    lead=_uget(ESPN_LEADERS)
-    cats={c.get("name"):c for c in lead.get("categories",[])}
-    al=(cats.get("assistsLeaders") or {}).get("leaders",[]) or []
-    out=[]
-    for l in al[:top]:
-        v=int(l.get("value") or 0)
-        if v<=0: continue
-        aref=(l.get("athlete") or {}).get("$ref")
-        if not aref: continue
-        try: a=_uget(aref)
-        except Exception: continue
-        nm=a.get("displayName") or a.get("fullName")
-        if nm: out.append((nm, a.get("citizenship") or "", v))
-    return out
+# 助攻：像进球一样【逐场累加】。
+# 注意：ESPN 的 assistsLeaders/球员赛季统计是【滞后的聚合榜】（曾出现梅西实际 4 助攻却只报 2、且只算 6 场），
+# 且只有前 25 名——榜外球员会被误记 0。因此改为读每场 summary 里每名球员的 goalAssists 逐场累加。
+def espn_match_assists(all_matches, today, prev_src):
+    """逐场抓每名球员的 goalAssists。prev_src = 上次 data.json 缓存的 {matchKey:[[name,nation,n],...]}，
+    已抓过的比赛直接复用，只抓新完赛的场次（保证每场新比赛后同步、又不必每轮重抓上百场）。
+    返回 (src, 本次新抓场数)。非致命。"""
+    src=dict(prev_src or {})
+    todo=[]
+    for mt in all_matches:
+        if not (mt.get("score") or {}).get("ft"): continue
+        d=mt.get("date","")
+        if not d or d>today: continue
+        k=f'{d}|{mt.get("team1")}|{mt.get("team2")}'
+        if k not in src: todo.append((k,d,mt))
+    if not todo: return src,0
+    bydate={}
+    for k,d,mt in todo: bydate.setdefault(d,[]).append((k,mt))
+    fetched=0
+    for d,items in sorted(bydate.items()):
+        try: sb=_uget(f"{ESPN_BASE}/scoreboard?dates={d.replace('-','')}")
+        except Exception as ex:
+            print(f"  助攻: scoreboard {d} 失败: {ex}"); continue
+        idx={}
+        for e in sb.get("events",[]):
+            comp=(e.get("competitions") or [{}])[0]
+            nm2=[team_key((c.get("team") or {}).get("displayName")) for c in comp.get("competitors",[])]
+            if len(nm2)==2: idx[frozenset(nm2)]=e.get("id")
+        for k,mt in items:
+            eid=idx.get(frozenset((team_key(mt.get("team1")),team_key(mt.get("team2")))))
+            if not eid: continue
+            try: s=_uget(f"{ESPN_BASE}/summary?event={eid}")
+            except Exception as ex:
+                print(f"  助攻: summary 失败 {k}: {ex}"); continue
+            rows=[]
+            for r in s.get("rosters",[]):
+                nat=(r.get("team") or {}).get("displayName") or ""
+                for p in (r.get("roster") or []):
+                    nm=(p.get("athlete") or {}).get("displayName") or ""
+                    if not nm: continue
+                    for st in (p.get("stats") or []):
+                        if st.get("name")=="goalAssists":
+                            v=int(float(st.get("value") or 0))
+                            if v>0: rows.append([nm,nat,v])
+                            break
+            src[k]=rows; fetched+=1
+    return src,fetched
 def merge_espn(all_matches, today):
     """openfootball 里有日期、无 ft 且已到日期的比赛，用 ESPN 已完赛结果+进球补齐。非致命。"""
     missing=[m for m in all_matches if not (m.get("score") or {}).get("ft") and m.get("date") and m["date"]<=today]
@@ -448,25 +476,27 @@ def main():
               "goalFeed":goalFeed,
               "earliest":earliest,"latest":latest,"bigMatches":bigm}
 
-    # 助攻榜：直接引用 ESPN 官方赛事 assistsLeaders（权威、无需逐场累加）；解析到球员库拿中文名/俱乐部。非致命。
-    assists=[]
+    # 助攻：逐场累加全部球员（与进球同口径）。缓存已抓场次，新比赛结束后自动增量同步。
+    assists=[]; asrc=prev.get("assistSrc") or {}
     try:
-        unresolved_a=[]
-        for nm,nation,v in fetch_espn_assist_leaders():
-            pid=resolve(nm,nation); p=by_id.get(pid) if pid else None
-            if p:
-                rec=expand(p, goals_by_id.get(p["id"],0), pens_by_id.get(p["id"],0))
-            else:
-                unresolved_a.append(f"{nm}({nation})")
-                rec={"player":nm,"nameZh":"","num":"","pos":"","posZh":"",
-                     "nation":canon_nat(nation),"nationZh":nat_zh(nation),
-                     "goals":0,"pens":0,"club":"—","clubZh":"","league":"—","club_id":"","id":""}
-            rec["assists"]=v; assists.append(rec)
+        asrc,nfetch=espn_match_assists(all_matches, datetime.now(timezone.utc).strftime("%Y-%m-%d"), asrc)
+        # 每轮都重新解析姓名→球员id（这样以后补了名字映射，历史场次也会自动生效）
+        ast_by_id={}; unresolved_a=set()
+        for rows in asrc.values():
+            for nm,nat,v in rows:
+                pid=resolve(nm,nat)
+                if pid: ast_by_id[pid]=ast_by_id.get(pid,0)+v
+                else: unresolved_a.add(f"{nm}({nat})")
+        for pid,v in ast_by_id.items():
+            p=by_id.get(pid)
+            if not p: continue
+            rec=expand(p, goals_by_id.get(pid,0), pens_by_id.get(pid,0)); rec["assists"]=v
+            assists.append(rec)
         assists.sort(key=lambda x:(-x["assists"], -x["goals"], x["player"]))
-        print(f"助攻榜：{len(assists)} 人（ESPN assistsLeaders）"
-              + (f"；未匹配到球员库: {', '.join(unresolved_a)}" if unresolved_a else "；全部已匹配"))
+        print(f"助攻：逐场累加 {len(asrc)} 场（本次新抓 {nfetch} 场）→ {len(assists)} 人有助攻"
+              + (f"；未匹配 {len(unresolved_a)} 人: {', '.join(sorted(unresolved_a)[:8])}" if unresolved_a else "；全部已匹配"))
     except Exception as ex:
-        print("助攻榜抓取失败（非致命，跳过）：", ex); assists=[]
+        print("助攻统计失败（非致命，保留上次结果）：", ex); assists=[]
 
     # 把助攻数回填进 scorers：射手榜同进球档内按“助攻多者靠前”（贴近 FIFA 金靴并列规则第2顺位）
     amap={r["id"]:r["assists"] for r in assists if r.get("id")}
@@ -479,6 +509,7 @@ def main():
          "totalPens":sum(s["pens"] for s in scorers),
          "matchesWithGoals":matches_with_goals,"schedule":schedule,"funstats":funstats,"scorers":scorers,
          "assists":assists,"assistsCount":len(assists),
+         "assistSrc":asrc,   # 逐场助攻原始缓存(名字/国家/数)，供下轮增量：已抓过的场次不再重抓
          "rosterCount":len(roster),"roster":roster}
     json.dump(out,open(DATA_F,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 

@@ -8,6 +8,13 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.13.0
+
+- **助攻数据修复：改为逐场累加全部球员（与进球同口径）**。此前助攻取自 ESPN 的**聚合榜单**，有两个致命问题：① 该榜**滞后**（梅西实际 4 助攻却只报 2，且只算了 6 场／实际 7 场）；② 只有**前 25 名**，榜外球员一律被记成 0 助攻。现改为读每场比赛 summary 里每名球员的 `goalAssists` 逐场累加——助攻榜从 25 人扩到 **155 人**，梅西修正为 **4 助攻**，射手榜「同分按助攻排序」也随之变准。已抓场次缓存在 `assistSrc`，**每有新比赛只增量抓新场次**，不拖慢定时更新。
+  Assists are now accumulated per match for every player (like goals), replacing ESPN's aggregate leaderboard which was both stale (Messi showed 2 instead of 4) and capped at the top 25 (everyone else silently recorded 0). Fetched matches are cached so each run only pulls newly finished ones.
+- 修复 5 名球员助攻被丢弃：新增国名映射 `Bosnia-Herzegovina`（此前查不到波黑球员），并为 Gabriel Magalhães、Lee Kang-In 补固定映射。现在**全部已匹配、0 丢失**。
+  Fixed 5 players whose assists were dropped (Bosnia nation alias + two name mappings); all names now resolve.
+
 ## v1.12.2
 
 - 全部球员查询：进球数筛选默认改为 **1+**（只看进过球的），点「全部 All」含 0 球。
