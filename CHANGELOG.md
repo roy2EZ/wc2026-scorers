@@ -8,6 +8,11 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.13.1
+
+- 射手榜每位球员的进球 ⚽ 下方显示**助攻数**（「4 Assists 助攻」）；助攻榜不再重复显示进球数，只留助攻。两个榜互补、排版对齐。
+  Top Scorers now shows each player's assists under the goal pips; the Assists board no longer repeats the goal count.
+
 ## v1.13.0
 
 - **助攻数据修复：改为逐场累加全部球员（与进球同口径）**。此前助攻取自 ESPN 的**聚合榜单**，有两个致命问题：① 该榜**滞后**（梅西实际 4 助攻却只报 2，且只算了 6 场／实际 7 场）；② 只有**前 25 名**，榜外球员一律被记成 0 助攻。现改为读每场比赛 summary 里每名球员的 `goalAssists` 逐场累加——助攻榜从 25 人扩到 **155 人**，梅西修正为 **4 助攻**，射手榜「同分按助攻排序」也随之变准。已抓场次缓存在 `assistSrc`，**每有新比赛只增量抓新场次**，不拖慢定时更新。

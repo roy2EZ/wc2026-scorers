@@ -132,6 +132,12 @@
   .score .aslbl i{font-style:normal;font-size:9.5px;color:#8a93ab;font-weight:500}
   .score .aslbl em{font-style:normal;font-size:9.5px;color:#7f8aa3;font-weight:600;margin-top:2px}
   @media(max-width:560px){ .score .aslbl{width:78px} }
+  /* 射手榜：进球 ⚽ 图标下方显示助攻数（与助攻榜的标签列同宽） */
+  .score .pipcol{display:flex;flex-direction:column;gap:3px;width:104px}
+  .score .pipcol .pips{width:100%}
+  .score .asnote{font-style:normal;font-size:11.5px;color:#c3cbdd;font-weight:700;white-space:nowrap}
+  .score .asnote span{color:#8a93ab;font-weight:500;font-size:10px}
+  @media(max-width:560px){ .score .pipcol{width:78px} .score .asnote{font-size:10px} }
   .asrc{margin-top:14px;font-family:'Noto Sans SC';font-size:11.5px;color:#8a93ab}
   .pip{font-style:normal;font-size:13px;line-height:1;width:18px;height:18px;
     display:inline-flex;align-items:center;justify-content:center}
@@ -622,14 +628,14 @@
 <footer>
   <div class="wrap">
     <div class="footmono">
-      <span id="buildVer">v1.13.0</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
+      <span id="buildVer">v1.13.1</span> · build <span id="buildTime">—</span> · data updated <span id="dataVer">—</span>
     </div>
   </div>
 </footer>
 
 <script>
 let DATA = [];                          // 数据来自 data.json（加载完成前为空）
-const APP_VERSION="v1.13.0", BUILD_TIME="2026-07-16 00:39";
+const APP_VERSION="v1.13.1", BUILD_TIME="2026-07-16 00:46";
 let TABLE_DATA = [];                    // 全员名册（含0球），来自 data.json.roster
 const NATIONZH={};  // data.json 的 scorers 已自带 nationZh，此处仅作兜底键
 
@@ -772,7 +778,7 @@ function renderBoard(){
        ${rankCell}
        ${team}
        <span class="who"><div class="who-in"><div class="nm">${pzr(d)}</div><div class="nm-en">${d.player}</div><div class="cl">${lfl(d.league)?lfl(d.league)+' ':''}${czr(d)}</div><div class="cl-en">${cabbr(d.club)}</div></div></span>
-       <span class="score"><b class="balls" style="color:${st.strong}">${d.goals}</b><span class="pips">${pips}</span></span></div>`;});
+       <span class="score"><b class="balls" style="color:${st.strong}">${d.goals}</b><span class="pipcol"><span class="pips">${pips}</span>${d.assists?`<em class="asnote">${d.assists} <span>Assists</span> 助攻</em>`:""}</span></span></div>`;});
   // 按进球数分组：同进球数同一行（最多2列），不同进球数另起
   const groups=[]; let cur=null;
   rows.forEach((d,i)=>{ if(!cur||cur.g!==d.goals){cur={g:d.goals,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
@@ -811,7 +817,7 @@ function renderAssists(){
        ${rankCell}
        ${team}
        <span class="who"><div class="who-in"><div class="nm">${pzr(d)}</div><div class="nm-en">${d.player}</div><div class="cl">${lfl(d.league)?lfl(d.league)+' ':''}${czr(d)}</div><div class="cl-en">${cabbr(d.club)}</div></div></span>
-       <span class="score"><b class="balls" style="color:${st.strong}">${d.assists}</b><span class="aslbl"><b>助攻</b><i>Assists</i>${d.goals?`<em>${d.goals} 球 G</em>`:""}</span></span></div>`;});
+       <span class="score"><b class="balls" style="color:${st.strong}">${d.assists}</b><span class="aslbl"><b>助攻</b><i>Assists</i></span></span></div>`;});
   const groups=[]; let cur=null;
   rows.forEach((d,i)=>{ if(!cur||cur.g!==d.assists){cur={g:d.assists,items:[]};groups.push(cur);} cur.items.push(rowHTML[i]); });
   el.innerHTML=groups.map(grp=>{ const n=grp.items.length;
