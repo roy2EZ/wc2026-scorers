@@ -1,21 +1,34 @@
 {
  "version": "v1.13.1",
- "updated": "2026-07-18T22:53:36+00:00",
+ "updated": "2026-07-18T23:13:06+00:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
- "count": 174,
- "totalGoals": 283,
- "totalPens": 15,
- "matchesWithGoals": 94,
+ "count": 177,
+ "totalGoals": 293,
+ "totalPens": 16,
+ "matchesWithGoals": 95,
  "schedule": {
   "total": 104,
-  "played": 102,
-  "stageEn": "Third place",
-  "stageZh": "季军赛",
-  "lastDate": "2026-07-15",
-  "nextDate": "2026-07-18"
+  "played": 103,
+  "stageEn": "Final",
+  "stageZh": "决赛",
+  "lastDate": "2026-07-18",
+  "nextDate": "2026-07-19"
  },
  "funstats": {
   "multiGoals": [
+   {
+    "n": 3,
+    "pens": 1,
+    "player": "Bukayo Saka",
+    "nameZh": "萨卡",
+    "nation": "England",
+    "nationZh": "英格兰",
+    "oppo": "France",
+    "oppoZh": "法国",
+    "score": "6-4",
+    "date": "2026-07-18",
+    "ground": "Miami"
+   },
    {
     "n": 3,
     "pens": 0,
@@ -54,6 +67,19 @@
     "score": "3-0",
     "date": "2026-06-16",
     "ground": "Kansas City"
+   },
+   {
+    "n": 2,
+    "pens": 0,
+    "player": "Kylian Mbappe",
+    "nameZh": "姆巴佩",
+    "nation": "France",
+    "nationZh": "法国",
+    "oppo": "England",
+    "oppoZh": "英格兰",
+    "score": "4-6",
+    "date": "2026-07-18",
+    "ground": "Miami"
    },
    {
     "n": 2,
@@ -499,19 +525,19 @@
    }
   ],
   "timeBuckets": {
-   "1-5": 9,
-   "6-22": 45,
-   "23-45": 68,
-   "46-68": 76,
-   "69-90": 60,
-   "90+": 31,
+   "1-5": 10,
+   "6-22": 46,
+   "23-45": 70,
+   "46-68": 79,
+   "69-90": 61,
+   "90+": 33,
    "ET": 8
   },
   "minuteCounts": [
    0,
    0,
    3,
-   2,
+   3,
    2,
    2,
    4,
@@ -526,7 +552,7 @@
    2,
    1,
    4,
-   0,
+   1,
    2,
    1,
    7,
@@ -545,7 +571,7 @@
    1,
    0,
    6,
-   0,
+   1,
    3,
    4,
    1,
@@ -556,13 +582,13 @@
    3,
    2,
    3,
-   1,
+   2,
    2,
    4,
    2,
    0,
    3,
-   6,
+   7,
    5,
    3,
    3,
@@ -574,7 +600,7 @@
    1,
    4,
    1,
-   6,
+   7,
    6,
    4,
    3,
@@ -595,7 +621,7 @@
    3,
    1,
    5,
-   1,
+   2,
    3,
    4,
    3,
@@ -642,7 +668,7 @@
   ],
   "stoppage1": [
    0,
-   2,
+   3,
    1,
    3,
    0,
@@ -669,9 +695,9 @@
    4,
    6,
    4,
-   4,
+   5,
    1,
-   3,
+   4,
    1,
    1,
    0,
@@ -1068,6 +1094,156 @@
    }
   ],
   "goalFeed": [
+   {
+    "date": "2026-07-18",
+    "num": 103,
+    "group": "",
+    "round": "Match for third place",
+    "mday": null,
+    "t1": "France",
+    "t1Zh": "法国",
+    "t2": "England",
+    "t2Zh": "英格兰",
+    "ft": "4-6",
+    "aet": false,
+    "ground": "Miami",
+    "cityZh": "迈阿密",
+    "hostFlag": "🇺🇸",
+    "hostZh": "美国",
+    "shootout": null,
+    "goals": [
+     {
+      "player": "Declan Rice",
+      "nameZh": "赖斯",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "3'",
+      "min": 3,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Ezri Konsa",
+      "nameZh": "埃兹里·孔萨",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "阿斯顿维拉",
+      "club": "Aston Villa FC",
+      "league": "英超",
+      "minute": "18'",
+      "min": 18,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Bukayo Saka",
+      "nameZh": "萨卡",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "37'",
+      "min": 37,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Bukayo Saka",
+      "nameZh": "萨卡",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "45+1'",
+      "min": 46,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Kylian Mbappe",
+      "nameZh": "姆巴佩",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "48'",
+      "min": 48,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Bradley Barcola",
+      "nameZh": "巴尔科拉",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "巴黎圣日耳曼",
+      "club": "Paris Saint-Germain",
+      "league": "法甲",
+      "minute": "54'",
+      "min": 54,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Kylian Mbappe",
+      "nameZh": "姆巴佩",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "66'",
+      "min": 66,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Bukayo Saka",
+      "nameZh": "萨卡",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "阿森纳",
+      "club": "Arsenal",
+      "league": "英超",
+      "minute": "87'",
+      "min": 87,
+      "pen": true,
+      "og": false
+     },
+     {
+      "player": "Ousmane Dembele",
+      "nameZh": "登贝莱",
+      "nation": "France",
+      "nationZh": "法国",
+      "clubZh": "巴黎圣日耳曼",
+      "club": "Paris Saint-Germain",
+      "league": "法甲",
+      "minute": "90+6'",
+      "min": 96,
+      "pen": false,
+      "og": false
+     },
+     {
+      "player": "Jude Bellingham",
+      "nameZh": "贝林厄姆",
+      "nation": "England",
+      "nationZh": "英格兰",
+      "clubZh": "皇家马德里",
+      "club": "Real Madrid",
+      "league": "西甲",
+      "minute": "90+8'",
+      "min": 98,
+      "pen": false,
+      "og": false
+     }
+    ]
+   },
    {
     "date": "2026-07-15",
     "num": 102,
@@ -7000,6 +7176,17 @@
   },
   "bigMatches": [
    {
+    "t1": "France",
+    "t1Zh": "法国",
+    "t2": "England",
+    "t2Zh": "英格兰",
+    "ft": "4-6",
+    "total": 10,
+    "date": "2026-07-18",
+    "ground": "Miami",
+    "num": 103
+   },
+   {
     "t1": "Germany",
     "t1Zh": "德国",
     "t2": "Curaçao",
@@ -7373,14 +7560,14 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 8,
+   "goals": 10,
    "pens": 1,
    "club": "Real Madrid",
    "clubZh": "皇家马德里",
    "league": "西甲",
    "club_id": "real-madrid",
    "id": "FRA-10",
-   "assists": 3
+   "assists": 4
   },
   {
    "player": "Lionel Messi",
@@ -7417,6 +7604,23 @@
    "assists": 0
   },
   {
+   "player": "Jude Bellingham",
+   "nameZh": "贝林厄姆",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 7,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "ENG-10",
+   "assists": 1
+  },
+  {
    "player": "Harry Kane",
    "nameZh": "凯恩",
    "num": 9,
@@ -7434,21 +7638,21 @@
    "assists": 1
   },
   {
-   "player": "Jude Bellingham",
-   "nameZh": "贝林厄姆",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
+   "player": "Ousmane Dembele",
+   "nameZh": "登贝莱",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
    "goals": 6,
    "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "ENG-10",
-   "assists": 1
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-7",
+   "assists": 2
   },
   {
    "player": "Mikel Oyarzabal",
@@ -7466,23 +7670,6 @@
    "club_id": "real-sociedad",
    "id": "ESP-21",
    "assists": 1
-  },
-  {
-   "player": "Ousmane Dembele",
-   "nameZh": "登贝莱",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 5,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-7",
-   "assists": 2
   },
   {
    "player": "Ismaila Sarr",
@@ -7536,6 +7723,23 @@
    "assists": 1
   },
   {
+   "player": "Bradley Barcola",
+   "nameZh": "巴尔科拉",
+   "num": 12,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 3,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-12",
+   "assists": 1
+  },
+  {
    "player": "Brian Brobbey",
    "nameZh": "布罗比",
    "num": 19,
@@ -7551,6 +7755,23 @@
    "club_id": "sunderland",
    "id": "NED-19",
    "assists": 0
+  },
+  {
+   "player": "Bukayo Saka",
+   "nameZh": "萨卡",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 3,
+   "pens": 1,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-7",
+   "assists": 3
   },
   {
    "player": "Charles De Ketelaere",
@@ -7874,23 +8095,6 @@
    "club_id": "girona-fc",
    "id": "MAR-8",
    "assists": 0
-  },
-  {
-   "player": "Bradley Barcola",
-   "nameZh": "巴尔科拉",
-   "num": 12,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 2,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-12",
-   "assists": 1
   },
   {
    "player": "Breel Embolo",
@@ -8743,6 +8947,23 @@
    "assists": 0
   },
   {
+   "player": "Declan Rice",
+   "nameZh": "赖斯",
+   "num": 4,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-4",
+   "assists": 2
+  },
+  {
    "player": "Deroy D. Duarte",
    "nameZh": "德罗伊·杜阿尔特",
    "num": 14,
@@ -8808,6 +9029,23 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14",
+   "assists": 0
+  },
+  {
+   "player": "Ezri Konsa",
+   "nameZh": "埃兹里·孔萨",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Aston Villa FC",
+   "clubZh": "阿斯顿维拉",
+   "league": "英超",
+   "club_id": "aston-villa-fc",
+   "id": "ENG-2",
    "assists": 0
   },
   {
@@ -9641,7 +9879,7 @@
    "league": "西甲",
    "club_id": "barcelona",
    "id": "ENG-11",
-   "assists": 0
+   "assists": 1
   },
   {
    "player": "Martin Baturina",
@@ -10340,7 +10578,24 @@
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
    "id": "FRA-11",
-   "assists": 5
+   "assists": 7
+  },
+  {
+   "player": "Kylian Mbappe",
+   "nameZh": "姆巴佩",
+   "num": 10,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 10,
+   "pens": 1,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "FRA-10",
+   "assists": 4
   },
   {
    "player": "Lionel Messi",
@@ -10411,20 +10666,20 @@
    "assists": 4
   },
   {
-   "player": "Kylian Mbappe",
-   "nameZh": "姆巴佩",
-   "num": 10,
+   "player": "Bukayo Saka",
+   "nameZh": "萨卡",
+   "num": 7,
    "pos": "FW",
    "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 8,
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 3,
    "pens": 1,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "FRA-10",
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-7",
    "assists": 3
   },
   {
@@ -10479,23 +10734,6 @@
    "assists": 3
   },
   {
-   "player": "Bukayo Saka",
-   "nameZh": "萨卡",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ENG-7",
-   "assists": 3
-  },
-  {
    "player": "Florian Wirtz",
    "nameZh": "维尔茨",
    "num": 17,
@@ -10537,7 +10775,7 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 5,
+   "goals": 6,
    "pens": 0,
    "club": "Paris Saint-Germain",
    "clubZh": "巴黎圣日耳曼",
@@ -10646,6 +10884,23 @@
    "league": "法甲",
    "club_id": "paris-saint-germain",
    "id": "MAR-2",
+   "assists": 2
+  },
+  {
+   "player": "Declan Rice",
+   "nameZh": "赖斯",
+   "num": 4,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-4",
    "assists": 2
   },
   {
@@ -10921,6 +11176,23 @@
    "assists": 2
   },
   {
+   "player": "Jude Bellingham",
+   "nameZh": "贝林厄姆",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 7,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "ENG-10",
+   "assists": 1
+  },
+  {
    "player": "Harry Kane",
    "nameZh": "凯恩",
    "num": 9,
@@ -10935,23 +11207,6 @@
    "league": "德甲",
    "club_id": "fc-bayern-munchen",
    "id": "ENG-9",
-   "assists": 1
-  },
-  {
-   "player": "Jude Bellingham",
-   "nameZh": "贝林厄姆",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 6,
-   "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "ENG-10",
    "assists": 1
   },
   {
@@ -11023,6 +11278,23 @@
    "assists": 1
   },
   {
+   "player": "Bradley Barcola",
+   "nameZh": "巴尔科拉",
+   "num": 12,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 3,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-12",
+   "assists": 1
+  },
+  {
    "player": "Charles De Ketelaere",
    "nameZh": "德凯特拉雷（CDK）",
    "num": 17,
@@ -11088,23 +11360,6 @@
    "league": "意甲",
    "club_id": "ssc-napoli",
    "id": "BEL-9",
-   "assists": 1
-  },
-  {
-   "player": "Bradley Barcola",
-   "nameZh": "巴尔科拉",
-   "num": 12,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 2,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-12",
    "assists": 1
   },
   {
@@ -11428,6 +11683,23 @@
    "league": "墨超",
    "club_id": "cd-guadalajara",
    "id": "MEX-7",
+   "assists": 1
+  },
+  {
+   "player": "Marcus Rashford",
+   "nameZh": "拉什福德",
+   "num": 11,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Barcelona",
+   "clubZh": "巴塞罗那",
+   "league": "西甲",
+   "club_id": "barcelona",
+   "id": "ENG-11",
    "assists": 1
   },
   {
@@ -11890,20 +12162,20 @@
    "assists": 1
   },
   {
-   "player": "Declan Rice",
-   "nameZh": "赖斯",
+   "player": "Dayot Upamecano",
+   "nameZh": "达约特·乌帕梅卡诺",
    "num": 4,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "France",
+   "nationZh": "法国",
    "goals": 0,
    "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ENG-4",
+   "club": "FC Bayern München",
+   "clubZh": "拜仁慕尼黑",
+   "league": "德甲",
+   "club_id": "fc-bayern-munchen",
+   "id": "FRA-4",
    "assists": 1
   },
   {
@@ -11921,6 +12193,23 @@
    "league": "意甲",
    "club_id": "uc-sampdoria",
    "id": "BIH-3",
+   "assists": 1
+  },
+  {
+   "player": "Eberechi Eze",
+   "nameZh": "埃贝雷奇·埃兹",
+   "num": 21,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 0,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-21",
    "assists": 1
   },
   {
@@ -12961,7 +13250,7 @@
    "assists": 1
   }
  ],
- "assistsCount": 155,
+ "assistsCount": 158,
  "assistSrc": {
   "2026-06-11|Mexico|South Africa": [
    [
@@ -14104,6 +14393,38 @@
     "Argentina",
     2
    ]
+  ],
+  "2026-07-18|France|England": [
+   [
+    "Kylian Mbappé",
+    "France",
+    1
+   ],
+   [
+    "Michael Olise",
+    "France",
+    2
+   ],
+   [
+    "Dayot Upamecano",
+    "France",
+    1
+   ],
+   [
+    "Declan Rice",
+    "England",
+    1
+   ],
+   [
+    "Eberechi Eze",
+    "England",
+    1
+   ],
+   [
+    "Marcus Rashford",
+    "England",
+    1
+   ]
   ]
  },
  "rosterCount": 1248,
@@ -14116,7 +14437,7 @@
    "posZh": "前锋",
    "nation": "France",
    "nationZh": "法国",
-   "goals": 8,
+   "goals": 10,
    "pens": 1,
    "club": "Real Madrid",
    "clubZh": "皇家马德里",
@@ -14157,6 +14478,22 @@
    "id": "NOR-9"
   },
   {
+   "player": "Jude Bellingham",
+   "nameZh": "贝林厄姆",
+   "num": 10,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 7,
+   "pens": 0,
+   "club": "Real Madrid",
+   "clubZh": "皇家马德里",
+   "league": "西甲",
+   "club_id": "real-madrid",
+   "id": "ENG-10"
+  },
+  {
    "player": "Harry Kane",
    "nameZh": "凯恩",
    "num": 9,
@@ -14173,20 +14510,20 @@
    "id": "ENG-9"
   },
   {
-   "player": "Jude Bellingham",
-   "nameZh": "贝林厄姆",
-   "num": 10,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
+   "player": "Ousmane Dembele",
+   "nameZh": "登贝莱",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
    "goals": 6,
    "pens": 0,
-   "club": "Real Madrid",
-   "clubZh": "皇家马德里",
-   "league": "西甲",
-   "club_id": "real-madrid",
-   "id": "ENG-10"
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-7"
   },
   {
    "player": "Mikel Oyarzabal",
@@ -14203,22 +14540,6 @@
    "league": "西甲",
    "club_id": "real-sociedad",
    "id": "ESP-21"
-  },
-  {
-   "player": "Ousmane Dembele",
-   "nameZh": "登贝莱",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 5,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-7"
   },
   {
    "player": "Ismaila Sarr",
@@ -14269,6 +14590,22 @@
    "id": "BRA-7"
   },
   {
+   "player": "Bradley Barcola",
+   "nameZh": "巴尔科拉",
+   "num": 12,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "France",
+   "nationZh": "法国",
+   "goals": 3,
+   "pens": 0,
+   "club": "Paris Saint-Germain",
+   "clubZh": "巴黎圣日耳曼",
+   "league": "法甲",
+   "club_id": "paris-saint-germain",
+   "id": "FRA-12"
+  },
+  {
    "player": "Brian Brobbey",
    "nameZh": "布罗比",
    "num": 19,
@@ -14283,6 +14620,22 @@
    "league": "英超",
    "club_id": "sunderland",
    "id": "NED-19"
+  },
+  {
+   "player": "Bukayo Saka",
+   "nameZh": "萨卡",
+   "num": 7,
+   "pos": "FW",
+   "posZh": "前锋",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 3,
+   "pens": 1,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-7"
   },
   {
    "player": "Charles De Ketelaere",
@@ -14587,22 +14940,6 @@
    "league": "西甲",
    "club_id": "girona-fc",
    "id": "MAR-8"
-  },
-  {
-   "player": "Bradley Barcola",
-   "nameZh": "巴尔科拉",
-   "num": 12,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "France",
-   "nationZh": "法国",
-   "goals": 2,
-   "pens": 0,
-   "club": "Paris Saint-Germain",
-   "clubZh": "巴黎圣日耳曼",
-   "league": "法甲",
-   "club_id": "paris-saint-germain",
-   "id": "FRA-12"
   },
   {
    "player": "Breel Embolo",
@@ -15405,6 +15742,22 @@
    "id": "JPN-11"
   },
   {
+   "player": "Declan Rice",
+   "nameZh": "赖斯",
+   "num": 4,
+   "pos": "MF",
+   "posZh": "中场",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Arsenal",
+   "clubZh": "阿森纳",
+   "league": "英超",
+   "club_id": "arsenal",
+   "id": "ENG-4"
+  },
+  {
    "player": "Deroy D. Duarte",
    "nameZh": "德罗伊·杜阿尔特",
    "num": 14,
@@ -15467,6 +15820,22 @@
    "league": "土超",
    "club_id": "basaksehir-fk",
    "id": "UZB-14"
+  },
+  {
+   "player": "Ezri Konsa",
+   "nameZh": "埃兹里·孔萨",
+   "num": 2,
+   "pos": "DF",
+   "posZh": "后卫",
+   "nation": "England",
+   "nationZh": "英格兰",
+   "goals": 1,
+   "pens": 0,
+   "club": "Aston Villa FC",
+   "clubZh": "阿斯顿维拉",
+   "league": "英超",
+   "club_id": "aston-villa-fc",
+   "id": "ENG-2"
   },
   {
    "player": "Fabian",
@@ -19709,22 +20078,6 @@
    "id": "POR-8"
   },
   {
-   "player": "Bukayo Saka",
-   "nameZh": "萨卡",
-   "num": 7,
-   "pos": "FW",
-   "posZh": "前锋",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ENG-7"
-  },
-  {
    "player": "Bumkeun",
    "nameZh": "宋范根",
    "num": 12,
@@ -20747,22 +21100,6 @@
    "league": "英超",
    "club_id": "crystal-palace",
    "id": "ENG-13"
-  },
-  {
-   "player": "Declan Rice",
-   "nameZh": "赖斯",
-   "num": 4,
-   "pos": "MF",
-   "posZh": "中场",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Arsenal",
-   "clubZh": "阿森纳",
-   "league": "英超",
-   "club_id": "arsenal",
-   "id": "ENG-4"
   },
   {
    "player": "Deiver Machado",
@@ -21899,22 +22236,6 @@
    "league": "德甲",
    "club_id": "bayer-04-leverkusen",
    "id": "ARG-14"
-  },
-  {
-   "player": "Ezri Konsa",
-   "nameZh": "埃兹里·孔萨",
-   "num": 2,
-   "pos": "DF",
-   "posZh": "后卫",
-   "nation": "England",
-   "nationZh": "英格兰",
-   "goals": 0,
-   "pens": 0,
-   "club": "Aston Villa FC",
-   "clubZh": "阿斯顿维拉",
-   "league": "英超",
-   "club_id": "aston-villa-fc",
-   "id": "ENG-2"
   },
   {
    "player": "Fabian Balbuena",
