@@ -5,9 +5,11 @@ name: Update WC2026 scorers
 #   UTC 16:00–23:30
 #   UTC 00:00–06:00 (次日)
 on:
-  schedule:
-    - cron: "*/30 16-23 * * *"
-    - cron: "*/30 0-6 * * *"
+  # 世界杯已结束（2026-07-19 收官），暂停每日自动抓取。
+  # 如需恢复自动更新，取消下面 schedule 三行的注释即可。
+  # schedule:
+  #   - cron: "*/30 16-23 * * *"
+  #   - cron: "*/30 0-6 * * *"
   workflow_dispatch: {}
 
 permissions:
