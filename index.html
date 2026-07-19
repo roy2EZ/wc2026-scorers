@@ -80,6 +80,7 @@
   .goalstat .gwords .zh{font-size:12px;color:var(--mut);font-weight:500}
   .stat .lab{font-size:12px;letter-spacing:.06em;color:var(--mut);margin-top:8px}
   .stat.sched .num{font-size:clamp(20px,3vw,30px);letter-spacing:-.02em;white-space:normal;line-height:1.05}
+  .stat.sched .lab .en{font-size:11px;white-space:nowrap}
   .stat.sched .schzh{color:#7ef0c0;font-weight:700;letter-spacing:.02em}
   .stat.sched::before{background:linear-gradient(180deg,#37e0a0,#19b4d8)}
 
@@ -433,7 +434,7 @@
     <p class="updated" id="updated"></p>
 
     <div class="scoreboard">
-      <div class="stat sched"><div class="num" id="s-stage">—</div><div class="lab" id="s-sched"><span class="en">games</span><span class="zh">比赛进程</span></div></div>
+      <div class="stat sched"><div class="num" id="s-stage">—</div><div class="lab" id="s-sched"><span class="en">Games Progress</span><span class="zh">比赛进程</span></div></div>
       <div class="stat goalstat"><div class="num" id="s-goals">0</div><div class="lab"><span class="en">Total</span><span class="zh">总进球数</span></div></div>
       <div class="stat"><div class="num" id="s-players">0</div><div class="lab"><span class="en">Scorers</span><span class="zh">进球球员</span></div></div>
       <div class="stat"><div class="num" id="s-leagues">0</div><div class="lab"><span class="en">Leagues</span><span class="zh">涉及联赛</span></div></div>
@@ -711,11 +712,13 @@ function renderSchedule(){
   const stageEl=document.getElementById("s-stage"), schEl=document.getElementById("s-sched");
   if(!stageEl||!schEl) return;
   if(SCHEDULE){
+    const enStage = SCHEDULE.stageEn ? `<br><span class="schzh">${SCHEDULE.stageEn}</span>` : "";
+    const zhStage = SCHEDULE.stageZh ? `<br><span class="schzh">${SCHEDULE.stageZh}</span>` : "";
     stageEl.textContent=`${SCHEDULE.played}/${SCHEDULE.total}`;
-    schEl.innerHTML=`<span class="en">games · <span class="schzh">${SCHEDULE.stageEn||""}</span></span><span class="zh">比赛进程</span>`;
+    schEl.innerHTML=`<span class="en">Games Progress${enStage}</span><span class="zh">比赛进程${zhStage}</span>`;
   }else{
     stageEl.textContent="—";
-    schEl.innerHTML=`<span class="en">games</span><span class="zh">比赛进程</span>`;
+    schEl.innerHTML=`<span class="en">Games Progress</span><span class="zh">比赛进程</span>`;
   }
 }
 let lastUpdated=null, dataUpdatedRaw=null, dataVersion=null;
