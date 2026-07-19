@@ -8,6 +8,13 @@ The version in `VERSION` is the single source of truth; `update_data.py` reads i
 
 ---
 
+## v1.13.2
+
+- 恢复「进球大战 Goal Fests」板块（位于单场多球与进球时间分布之间）。
+  Restored the Goal Fests section.
+- 射手榜配图压缩 4.9M → 402K（缩到 1456px + pngquant，肉眼几乎无差），首屏加载更快。
+  Compressed the goalscorers photo 4.9M → 402K.
+
 ## v1.13.1
 
 - 射手榜每位球员的进球 ⚽ 下方显示**助攻数**（「4 Assists 助攻」）；助攻榜不再重复显示进球数，只留助攻。两个榜互补、排版对齐。

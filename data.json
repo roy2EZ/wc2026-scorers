@@ -1,6 +1,6 @@
 {
- "version": "v1.13.1",
- "updated": "2026-07-18T23:56:27+00:00",
+ "version": "v1.13.2",
+ "updated": "2026-07-18T19:09:22-07:00",
  "source": "openfootball/worldcup.json + FIFA squad lists (id-based), auto-generated",
  "count": 177,
  "totalGoals": 293,
