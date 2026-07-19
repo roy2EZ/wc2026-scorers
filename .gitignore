@@ -1,2 +1,5 @@
 # macOS
 .DS_Store
+
+# Local dev (Claude Code preview config / local settings)
+.claude/
